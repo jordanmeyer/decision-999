@@ -1,0 +1,10 @@
+{
+  "name": "decision-999",
+  "interface": {"displayName": "Decision 999"},
+  "plugins": [{
+    "name": "duke-designer",
+    "source": {"source": "local", "path": "./plugins/duke-designer"},
+    "policy": {"installation": "AVAILABLE", "authentication": "ON_INSTALL"},
+    "category": "Productivity"
+  }]
+}
