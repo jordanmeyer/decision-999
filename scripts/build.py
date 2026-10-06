@@ -266,7 +266,7 @@ def build(root=ROOT, base=None):
                                               for name in ('layout', 'home', 'plugin', 'install', 'plugins'))
     # Content hashes bust browser caches (GitHub Pages serves max-age=600) whenever the CSS or JavaScript changes.
     versions = {k: hashlib.sha256((root / f'site/{name}').read_bytes()).hexdigest()[:8] for k, name in (('css', 'style.css'), ('js', 'main.js'))}
-    shared = {k: escape(config[k]) for k in ('name', 'course', 'repo')} | {'base': base} | versions
+    shared = {k: escape(config[k]) for k in ('name', 'repo')} | {'base': base} | versions
 
     def write(path, title, description, content, url, image=''):
         path.parent.mkdir(parents=True, exist_ok=True)

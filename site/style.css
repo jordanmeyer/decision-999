@@ -30,9 +30,7 @@ img { display: block; max-width: 100%; height: auto; }
 
 .masthead { border-bottom: 1px solid var(--line); }
 .masthead-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 2rem; padding-block: 1.25rem; }
-.brand { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 1rem; text-decoration: none; }
-.brand-name { font: 1.75rem/1.1 var(--serif); color: var(--navy); }
-.brand-course { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.brand { font: 1.75rem/1.1 var(--serif); color: var(--navy); text-decoration: none; }
 .masthead nav { display: flex; gap: 2rem; }
 .masthead nav a { padding-block: 0.5rem; font-size: 0.875rem; font-weight: 600; text-decoration: none; }
 .masthead nav a:hover { text-decoration: underline; }
@@ -50,7 +48,7 @@ img { display: block; max-width: 100%; height: auto; }
 
 .hero { padding-block: 3.5rem 4rem; }
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); align-items: center; gap: 3rem 4rem; }
-.hero h1 { margin-block: 1.5rem 1.25rem; font-size: clamp(2.75rem, 5vw, 4.25rem); }
+.hero h1 { margin-block: 0 1.25rem; font-size: clamp(2.75rem, 5vw, 4.25rem); }
 .hero .actions { margin-top: 2rem; }
 .asks { padding: 2rem 2.25rem 1rem; background: var(--navy); color: var(--white); }
 .asks-title { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dandelion); }

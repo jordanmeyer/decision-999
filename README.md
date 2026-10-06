@@ -1,6 +1,6 @@
 # Build with AI
 
-A curated collection of plugins developed and tested by MBA students for ChatGPT, Claude, and other AI agents. This repository holds the catalog and website. The collection is maintained by the course team; individual listings identify their authors and evidence. The course name and number are configured in `site/config.json`.
+A curated collection of plugins developed and tested by MBA students for ChatGPT, Claude, and other AI agents. This repository holds the catalog and website. The collection is maintained by the course team; individual listings identify their authors and evidence. The site name is configured in `site/config.json`.
 
 [Website](https://jordanmeyer.github.io/decision-999/) · [Maintainer guide](docs/MAINTAINING.md) · [Validation](docs/VALIDATION.md)
 
@@ -36,7 +36,7 @@ Each `plugins/<name>/plugin.json` is a portable [Agent Plugins](https://agent-pl
 
 `site/clients.json` lists the apps that load the plugin format, with each app's logo, install steps, and setup-guide link. It drives the home page's logo row, the Claude and ChatGPT install panels, and the install page (`/install/`). Logos are the vendor-supplied files from agent-plugins.org and agentskills.io.
 
-`site/` holds the templates, styles, licensed fonts, and `config.json`, the single place for the site name, course label, repository, marketplace name, and URL. Changing the marketplace name or repository changes every install command, so settle them before anyone installs.
+`site/` holds the templates, styles, licensed fonts, and `config.json`, the single place for the site name, repository, marketplace name, and URL. Changing the marketplace name or repository changes every install command, so settle them before anyone installs.
 
 ## Local development
 
