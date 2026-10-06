@@ -47,6 +47,17 @@ def text(value):
     return isinstance(value, str) and value.strip()
 
 
+def check_links(folder):
+    """Relative Markdown links must resolve inside the folder, so it works wherever it is copied or installed."""
+    for doc in folder.rglob('*.md'):
+        for target in re.findall(r'\]\(([^\s)]+)\)', doc.read_text()):
+            url = urlsplit(target)
+            if url.scheme or not url.path:
+                continue
+            linked = doc.parent / unquote(url.path)
+            require(inside(linked, folder) and linked.exists(), f'{doc}: link {target} is missing or leaves {folder.name}/')
+
+
 def load(root, config):
     """Read and validate every plugin manifest. The manifests are the only registry."""
     plugins = []
@@ -67,20 +78,17 @@ def load(root, config):
         require(listing.get('results') and all(set(r) == {'value', 'label'} for r in listing['results']), f'{where}: results need value and label')
         shots = [bundled(package, s, where, '.png') for s in ui.get('screenshots', [])]
         require(shots and len(shots) == len(listing.get('screenshotAlt', [])), f'{where}: each screenshot needs screenshotAlt text')
-        example = listing.get('example') and bundled(package, listing['example'], where, '.html')
         skills = sorted((package / 'skills').glob('*/SKILL.md'))
         require(skills, f'{where}: no skills/*/SKILL.md')
         for skill in skills:
             require(re.match(r'---\nname: .+\ndescription: .+\n---', skill.read_text()), f'{skill}: missing name/description front matter')
-        for doc in package.rglob('*.md'):
-            for target in re.findall(r'\]\(([^\s)]+)\)', doc.read_text()):
-                url = urlsplit(target)
-                if url.scheme or not url.path:
-                    continue
-                linked = doc.parent / unquote(url.path)
-                require(inside(linked, package) and linked.exists(), f'{doc}: link {target} is missing or leaves the plugin')
-        require(not any(p.is_symlink() for p in package.rglob('*')), f'{where}: plugins may not contain symlinks')
-        plugins.append({'name': name, 'manifest': manifest, 'ui': ui, 'listing': listing, 'shots': shots, 'example': example})
+        evidence = root / 'evidence' / name  # listing material that installs should not download
+        for folder in (package, evidence):
+            if folder.is_dir():
+                check_links(folder)
+                require(not any(p.is_symlink() for p in folder.rglob('*')), f'{folder}: symlinks are not allowed')
+        plugins.append({'name': name, 'manifest': manifest, 'ui': ui, 'listing': listing, 'shots': shots,
+                        'example': evidence / 'example.html', 'record': evidence / 'EVIDENCE.md'})
     require(plugins, 'No plugins/*/plugin.json found')
     return plugins
 
@@ -167,15 +175,13 @@ def card(plugin, base):
         </article>'''
 
 
-def listing_page(plugin, config, base, root):
+def listing_page(plugin, config, base):
     ui, listing, m = plugin['ui'], plugin['listing'], plugin['manifest']
     href, tree = f"{base}plugins/{plugin['name']}/", f"https://github.com/{config['repo']}/tree/main/plugins/{plugin['name']}"
-    shots = ''.join(f'<a class="shot-preview" href="{href + s.name}">{image(s, href + s.name, alt)}'
-                    f'<span>View full {png_size(s)[0]}px capture</span></a>'
-                    for s, alt in zip(plugin['shots'], listing['screenshotAlt']))
-    example = f' <a href="{href}example.html">Open the full page</a>.' if plugin['example'] else ''
-    evidence = (f'<p><a class="text-link" href="{tree.replace("/tree/", "/blob/")}/EVIDENCE.md">Read the review record and reproduction instructions</a></p>'
-                if (root / 'plugins' / plugin['name'] / 'EVIDENCE.md').is_file() else '')
+    shots = ''.join(image(s, href + s.name, alt) for s, alt in zip(plugin['shots'], listing['screenshotAlt']))
+    example = f' <a href="{href}example.html">Open the full page</a>.' if plugin['example'].is_file() else ''
+    record = f"https://github.com/{config['repo']}/blob/main/evidence/{plugin['name']}/EVIDENCE.md"
+    evidence = f'<p><a class="text-link" href="{record}">Read the full review record</a></p>' if plugin['record'].is_file() else ''
     return {
         'base': base, 'display': escape(ui['displayName']), 'label': escape(listing['label']),
         'short': escape(ui['shortDescription']), 'long': escape(ui['longDescription']), 'category': escape(ui['category']),
@@ -246,19 +252,19 @@ def build(root=ROOT, base=None):
                                           image=f'\n  <meta property="og:image" content="{image}">' if image else ''))
         return path
 
-    pages = [write(dist / 'index.html', f"{config['name']} · {config['description']}", config['description'],
+    pages = [write(dist / 'index.html', f"{config['name']} · {config['tagline']}", config['description'],
                    home.substitute(shared, cards='\n        '.join(card(p, base) for p in plugins), install=install(config)), config['url'])]
     for plugin in plugins:
         folder = dist / 'plugins' / plugin['name']
         folder.mkdir(parents=True)
         for shot in plugin['shots']:
             shutil.copy2(shot, folder / shot.name)
-        if plugin['example']:
+        if plugin['example'].is_file():
             shutil.copy2(plugin['example'], folder / 'example.html')
             pages.append(folder / 'example.html')
         ui, url = plugin['ui'], plugin['manifest']['homepage']
         pages.append(write(folder / 'index.html', f"{ui['displayName']} · {config['name']}", ui['shortDescription'],
-                           detail.substitute(listing_page(plugin, config, base, root)), url, url + plugin['shots'][0].name))
+                           detail.substitute(listing_page(plugin, config, base)), url, url + plugin['shots'][0].name))
     validate(dist, base, pages + [dist / 'style.css'])
     print(f'Built {len(plugins)} listing(s) and catalogs for Claude and Codex/ChatGPT.')
 

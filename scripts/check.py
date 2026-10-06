@@ -34,7 +34,7 @@ def second(manifest):
 
 with tempfile.TemporaryDirectory() as temporary, redirect_stdout(io.StringIO()):
     root = Path(temporary)
-    for folder in ('plugins', 'site'):
+    for folder in ('plugins', 'site', 'evidence'):
         shutil.copytree(ROOT / folder, root / folder)
     build(root)  # without the sibling source project or any committed catalog
     manifest, skill = root / 'plugins/duke-designer/plugin.json', root / 'plugins/duke-designer/skills/duke-designer/SKILL.md'
@@ -46,7 +46,7 @@ with tempfile.TemporaryDirectory() as temporary, redirect_stdout(io.StringIO()):
     rejects(root, 'must be a .png file inside the plugin')
     manifest.write_text(original)
     skill.write_text(instructions + '\n[outside](../../../../README.md)\n')
-    rejects(root, 'leaves the plugin')
+    rejects(root, 'is missing or leaves duke-designer/')
     skill.write_text(instructions)
     shutil.copytree(root / 'plugins/duke-designer', root / 'plugins/second-example')
     edit(root / 'plugins/second-example/plugin.json', second)

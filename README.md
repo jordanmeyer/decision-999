@@ -30,6 +30,8 @@ Then install a plugin by name, for example `duke-designer@decision-999`. Each pl
 
 Each `plugins/<name>/plugin.json` is a portable [Agent Plugins](https://agent-plugins.org/specification) manifest and the only registry. Its `extensions.com.openai.interface` holds the listing fields OpenAI's plugin directory reads: display name, descriptions, developer, category, example prompt, and screenshots. `extensions.io.github.jordanmeyer` holds the course fields: label, audience, evidence, method, and limits.
 
+`evidence/<name>/` holds what a listing cites but an install does not need: `EVIDENCE.md`, review records, and an optional self-contained `example.html`.
+
 `scripts/build.py` validates every manifest. It writes the Codex/ChatGPT catalog (`.agents/plugins/marketplace.json`), the Claude catalog (`.claude-plugin/marketplace.json`), and each plugin's `.claude-plugin/plugin.json`, then renders the site into `dist/`. Commit the generated catalogs; `scripts/check.py` fails when they are stale. Never edit them by hand.
 
 `site/` holds the templates, styles, licensed fonts, and `config.json`, the single place for the site name, course label, repository, marketplace name, and URL. Changing the marketplace name or repository changes every install command, so settle them before anyone installs.

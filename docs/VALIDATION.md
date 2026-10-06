@@ -8,17 +8,17 @@ The current listing uses existing results from the Codex chat “Review design s
 
 | Artifact | Final verdict | Resolved implementation findings |
 | --- | --- | --- |
-| AI and leadership symposium | [Event round 3 PASS](../plugins/duke-designer/assets/evidence/assessment/reviews/event/round-3.md) | E1 narrow enlarged layout overflow; E2 unreadable enlarged registration labels |
-| Responsible AI research initiative | [Research round 2 PASS](../plugins/duke-designer/assets/evidence/assessment/reviews/research/round-2.md) | R1 enlarged text escaped its navy panel |
-| MBA AI/product student organization | [Student organization round 2 PASS](../plugins/duke-designer/assets/evidence/assessment/reviews/student-organization/round-2.md) | S1 control accessible name omitted visible label; S2 narrow enlarged layout overflow |
+| AI and leadership symposium | [Event round 3 PASS](../evidence/duke-designer/assessment/reviews/event/round-3.md) | E1 narrow enlarged layout overflow; E2 unreadable enlarged registration labels |
+| Responsible AI research initiative | [Research round 2 PASS](../evidence/duke-designer/assessment/reviews/research/round-2.md) | R1 enlarged text escaped its navy panel |
+| MBA AI/product student organization | [Student organization round 2 PASS](../evidence/duke-designer/assessment/reviews/student-organization/round-2.md) | S1 control accessible name omitted visible label; S2 narrow enlarged layout overflow |
 
 The counts are three reviewed artifacts, three final passes after revisions and five resolved implementation defects. They are not a first-attempt success rate, repeated-generation benchmark, model comparison or measure of general skill accuracy. No cost or timing result is claimed. No Claude API call or newly generated Claude session was used for this import; the unused generation runner was removed.
 
 The original reports record Chrome 154.0.8037.97, desktop/mobile review, 320px reflow, doubled computed text and 200% root text, keyboard interactions, visible focus and relevant completion states. The exact matrix varies by artifact. These text-enlargement simulations are not a native-browser-zoom test, and the review does not certify screen-reader, physical-device or cross-browser behavior.
 
-On October 6, a separate documentation review verified all 45 entries in [provenance.json](../plugins/duke-designer/assets/evidence/provenance.json) and all 12 public HTML/CSS/JavaScript/font hashes against the preserved [final-verification.json](../plugins/duke-designer/assets/evidence/assessment/final-verification.json). Every hash matched. The evidence importer also compared all 517 sibling files with the original inventory; all remained unchanged, and the two listing screenshots were byte-identical to the source captures. This is an import integrity check, not a new rendering verdict. The source reports preserve earlier failures and the exact versions their final passes cover.
+On October 6, a separate documentation review verified all 45 entries in [provenance.json](../evidence/duke-designer/provenance.json) and all 12 public HTML/CSS/JavaScript/font hashes against the preserved [final-verification.json](../evidence/duke-designer/assessment/final-verification.json). Every hash matched. The evidence importer also compared all 517 sibling files with the original inventory; all remained unchanged, and the two listing screenshots were byte-identical to the source captures. This is an import integrity check, not a new rendering verdict. The source reports preserve earlier failures and the exact versions their final passes cover.
 
-The listing screenshots are unchanged final event-review captures. Its downloadable single-file example embeds original CSS and font data and relocates the unchanged script; it is a packaging derivative of the passed source, not a separately scored evaluation. The prompt describes the fictional Duke AI and leadership symposium and restates the original brief; it is not a verbatim original transcript or a promise of identical output. [EVIDENCE.md](../plugins/duke-designer/EVIDENCE.md) records these distinctions, optional scratch-copy browser checks and the retained evidence's limits.
+Through 0.2.0 the listing screenshots were the unchanged full-page event-review captures; 0.2.1 shows display crops of their tops and keeps the originals in the evidence folder. Its downloadable single-file example embeds original CSS and font data and relocates the unchanged script; it is a packaging derivative of the passed source, not a separately scored evaluation. The prompt describes the fictional Duke AI and leadership symposium and restates the original brief; it is not a verbatim original transcript or a promise of identical output. [EVIDENCE.md](../evidence/duke-designer/EVIDENCE.md) records these distinctions, optional scratch-copy browser checks and the retained evidence's limits.
 
 ## Current directory integration
 
@@ -53,3 +53,11 @@ Future changes must record their own relevant checks and deployment. The histori
 ## Curated collection wording update
 
 On October 6, removed the public plugin submission section, navigation link and unused styles. The home page now says “Developed and tested by MBA students.” Metadata and the maintainer guide describe a curated collection; the current example retains its accurate instructor-built label. Build, catalog freshness, focused checks, local manifest validation and whitespace checks pass. Desktop and 320px browser inspection confirmed only Plugins/Install navigation, the requested lead, no submission content and no horizontal page overflow.
+
+## Marketplace presentation and lean package (0.2.1)
+
+On October 6, the review evidence, full-page captures, single-file example and its font license moved from `plugins/duke-designer/` to `evidence/duke-designer/`, so an install downloads about 0.4 MB instead of 5.6 MB. All 45 provenance entries were rewritten to paths relative to that folder and every SHA-256 still matches. The listing now uses 1440×900 and 390×844 crops of the top of each capture, made with macOS `sips`.
+
+The home page was rewritten for AI users looking for help with work they would hire an MBA to do, following the structure of OpenAI's ChatGPT plugins page. Listing evidence now reads “3 of 3 example pages passed independent review” and “5 defects caught in review and fixed,” with a three-sentence method; the counts are unchanged. No model or API call was made.
+
+`python3 scripts/build.py`, `python3 scripts/check.py`, and `claude plugin validate` on the repository and the plugin pass. Local browser review at 1440px, 375px and 320px found no horizontal overflow on the home or listing page.

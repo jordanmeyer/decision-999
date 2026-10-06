@@ -22,6 +22,10 @@ The current task fills the listing with existing results from the Codex chat “
 - [x] (2026-10-06) Parent inspected real home/listing/example at 1440px and 320px, loaded images/fonts, checked keyboard copy feedback and example registration/reset focus; no browser errors or narrow overflow.
 - [x] (2026-10-06) Completed independent asset/code review without blocking findings and documented fresh-install and clipboard-read limitations.
 - [x] (2026-10-06) Published commit `78c67f55c61ee7bce7106ff67917d8551d18076b`; exact-commit deployment run 37531184205 succeeded. All 12 deployed files matched the build byte-for-byte; live home/listing/example and evidence links passed browser inspection without errors. Fresh installation was not repeated and remains a documented limitation, not a new evaluation requirement for this asset import.
+- [x] (2026-10-06) Moved review evidence, full-page captures, the single-file example and its font license from `plugins/duke-designer/` to `evidence/duke-designer/` (package 5.6 MB → 0.4 MB); all 45 provenance hashes match at the new relative paths. Bumped the plugin to 0.2.1.
+- [x] (2026-10-06) Replaced full-page listing screenshots with 1440×900 and 390×844 top crops; the originals sit at their review paths under `evidence/duke-designer/assessment/reviews/event/round-3/`.
+- [x] (2026-10-06) Repositioned the home page as a marketplace for AI users who want MBA-level work done: value headline, example requests, featured listing, why MBA-built plugins differ, and a three-step how-it-works with install steps. Rewrote evidence as two plain results and a short method; trimmed the example prompt and limits; shortened the home title.
+- [x] (2026-10-06) Build, `check.py` and `claude plugin validate` (catalog and plugin) pass; local desktop, 375px and 320px review found no horizontal overflow.
 
 ## Surprises & Discoveries
 
@@ -43,6 +47,9 @@ Claude and Codex read different catalog locations. The build generates `.claude-
 - Decision: Describe three reviewed examples, three final passes after revisions and five resolved defects, without cost, duration, model-comparison or one-shot claims. Rationale: these counts are supported by specific reports; broader performance metrics are not. Date: 2026-10-06.
 - Decision: Retain final-source browser scripts with only their Playwright import adapted, and run reproductions in scratch copies. Rationale: this preserves useful repeatability without replacing historical evidence or introducing a new evaluation framework. Date: 2026-10-06.
 
+- Decision: Present the home page to AI users looking for help with work they might hire an MBA to do, modeled on OpenAI's ChatGPT plugins page (value line, example requests, benefits, three steps). Rationale: maintainer direction; the distinctive claim is that these plugins carry a professional's method rather than connecting another app. The demo shows the intended future state. Date: 2026-10-06.
+- Decision: Keep installable packages to what an install needs and put listing evidence in `evidence/<name>/`, which the build reads by convention for `EVIDENCE.md` and an optional `example.html`. Rationale: every install downloads the whole plugin folder. Date: 2026-10-06.
+
 ## Outcomes & Retrospective
 
 
@@ -55,7 +62,7 @@ The workspace is `/Users/jordan/Projects/decision-999`. `site/config.json` owns 
 
 `plugins/duke-designer/plugin.json` supplies package version, vendor-facing metadata and course listing fields. `extensions.com.openai.interface` contains the displayed title, prompt and screenshot paths. `extensions.io.github.jordanmeyer` contains the evidence counts, method, audience, limits and example path. The packaged skill remains at `skills/duke-designer/SKILL.md`; it is guidance for artifact creation, not a bundled renderer or permission to use institutional marks.
 
-`assets/desktop.png` and `assets/mobile.png` are the existing final event-review screenshots. `assets/example.html` is the downloadable single-file event derivative. `assets/evidence/` holds preserved sources and review evidence; `EVIDENCE.md` describes scope, provenance and reproduction. The original source at `/Users/jordan/Projects/duke-designer` is read only. It is not needed to build the directory.
+`plugins/duke-designer/assets/desktop.png` and `mobile.png` are display crops of the final event-review captures. Everything an install does not need lives in `evidence/duke-designer/`: the preserved sources, reports and full-page captures, the single-file `example.html`, and `EVIDENCE.md`, which describes scope, provenance and reproduction. The original source at `/Users/jordan/Projects/duke-designer` is read only. It is not needed to build the directory.
 
 `scripts/build.py` reads package manifests, generates host catalogs and renders `site/layout.html`, `site/home.html` and `site/plugin.html` into ignored `dist/`. `scripts/check.py` checks clean builds and package/site boundaries. `scripts/serve.py` previews the configured base path. The existing GitHub workflow deploys `dist/` from main. The coordinating agent owns publication and must record the new exact-commit outcome.
 
@@ -89,7 +96,7 @@ From `/Users/jordan/Projects/decision-999`, run:
 
 The first two commands should report a completed listing/catalog build and passing focused checks; the Claude command validates files locally and should report validation passed. It is not a generation session or API evaluation. Open `http://localhost:8000/decision-999/` and `http://localhost:8000/decision-999/plugins/duke-designer/` for browser checks.
 
-For optional repeated checks of the historical source, follow the scratch-copy commands in `plugins/duke-designer/EVIDENCE.md`. Those scripts inspect existing pages using Node.js, Playwright and Google Chrome, generate new screenshots/check records only in scratch space, and make no model calls. They are unnecessary merely to establish that the retained historical reports say PASS.
+For optional repeated checks of the historical source, follow the scratch-copy commands in `evidence/duke-designer/EVIDENCE.md`. Those scripts inspect existing pages using Node.js, Playwright and Google Chrome, generate new screenshots/check records only in scratch space, and make no model calls. They are unnecessary merely to establish that the retained historical reports say PASS.
 
 ## Validation and Acceptance
 
