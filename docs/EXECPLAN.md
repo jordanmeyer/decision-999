@@ -12,9 +12,10 @@ Build an independent demonstration where visitors discover a real reusable Codex
 - [x] (2026-10-06) Copied the complete 16-file skill, including reference illustrations and CSS tokens.
 - [x] (2026-10-06) Packaged and locally installed with CLI 0.145.0 in isolated configuration.
 - [x] (2026-10-06) Implemented website, catalog join, focused validators, documentation and Actions workflow.
-- [ ] Check desktop/mobile rendering, keyboard/copy behavior, neutral output, and clean-checkout build.
-- [ ] Create public repository, push main, enable Pages, and verify deployment for the pushed commit.
-- [ ] Independently review requirements and test published installation in a fresh external directory.
+- [x] (2026-10-06) Checked desktop/mobile rendering, 200% text, keyboard/copy success and simulated failure, neutral output, and clean-clone build.
+- [x] (2026-10-06) Created public repository, pushed main, enabled Actions Pages, verified exact-commit deployment and live assets.
+- [x] (2026-10-06) Independent reviewer cleared requirements; fresh published installation/session read installed resources and produced a rendered HTML example.
+- [x] (2026-10-06) Prepared final validation record, removed disposable fixtures and test login, and completed simplification review.
 
 ## Surprises & Discoveries
 
@@ -29,7 +30,7 @@ The source is a guidance-only skill: no scripts, font files, host-specific helpe
 
 ## Outcomes & Retrospective
 
-Discovery complete. Publication and executable smoke-test evidence remain pending. No changes have been made to the sibling source.
+The working marketplace is published at https://jordanmeyer.github.io/decision-999/. Public-source installation and a fresh installed-skill session succeeded. The independent reviewer found one escaping README link; it is fixed. Build, browser, isolation and source-preservation checks passed, including all 517 original sibling files. Full evidence is in docs/VALIDATION.md. Final handoff identifies the deployment of the final evidence commit; every published source change must pass the same workflow.
 
 ## Context and Orientation
 
@@ -84,3 +85,5 @@ Use Python 3.9+ standard library and a modern browser. Site assets are local, wi
 Revision note (2026-10-06): Created after inspecting the brief, actual source skill, installed CLI, official packaging guidance and available publication access.
 
 Revision note (2026-10-06): Local and published registration/install passed with distinct clean homes. Public repository created, initial main pushed, and Pages switched to Actions. Reviewer found a repository-relative README link that escaped the installed package; changed it to an absolute repository URL. Desktop, 390px and 320px layouts inspected without overflow; keyboard copy succeeded. Fresh-session smoke test and live deployment remain in progress.
+
+Revision note (2026-10-06): Recorded successful published installation, fresh-session resource reads, desktop smoke rendering, independent review, Pages delivery, homepage, all-live-asset equality, and unchanged source hashes. Nested sandbox failure was resolved by an outer approved launch with the child sandbox retained. Temporary test login was removed. Final evidence commit remains to be deployed.
