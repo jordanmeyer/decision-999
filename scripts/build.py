@@ -1,5 +1,6 @@
 """Generate the host catalogs and the static directory site from plugins/*/plugin.json."""
 import argparse
+import hashlib
 from html import escape
 from html.parser import HTMLParser
 import json
@@ -244,7 +245,9 @@ def build(root=ROOT, base=None):
     for name in ('style.css', 'main.js'):
         shutil.copy2(root / 'site' / name, dist / name)
     layout, home, detail = (Template((root / f'site/{name}.html').read_text()) for name in ('layout', 'home', 'plugin'))
-    shared = {k: escape(config[k]) for k in ('name', 'course', 'repo')} | {'base': base}
+    # Content hashes bust browser caches (GitHub Pages serves max-age=600) whenever the CSS or JavaScript changes.
+    versions = {k: hashlib.sha256((root / f'site/{name}').read_bytes()).hexdigest()[:8] for k, name in (('css', 'style.css'), ('js', 'main.js'))}
+    shared = {k: escape(config[k]) for k in ('name', 'course', 'repo')} | {'base': base} | versions
 
     def write(path, title, description, content, url, image=''):
         path.parent.mkdir(parents=True, exist_ok=True)
