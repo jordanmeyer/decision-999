@@ -71,3 +71,7 @@ Install steps come from each app's documentation as read on October 6. Claude, C
 ## Plugin directory
 
 `/plugins/` lists every plugin as a card with a search box (the `/` key focuses it) and category buttons built from each listing's `category`; the header's Plugins link, the home page's Browse plugins button, and listing breadcrumbs now lead there. Search matches the name, descriptions, category, developer, label, audience and keywords. Without JavaScript the cards still show and the search controls stay hidden. Checked locally: “brand guidelines” keeps Duke Designer, “comps” shows the empty state, Clear restores all and focuses the search, and the Design button sets `aria-pressed`. No horizontal overflow at 1440px, 375px or 320px on any page.
+
+## About page
+
+`/about/` presents the course from the course outline, reframed around plugins: the six-session arc and milestones, the four build levels, the proof each plugin ships with, and the public/synthetic-data policy, ending with the fact that reviewed plugins are free for anyone to install. It names no institution, uses the configured site name, and is linked from the header. Checked at 1440px, 375px and 320px with no horizontal overflow.

@@ -32,7 +32,7 @@ Each `plugins/<name>/plugin.json` is a portable [Agent Plugins](https://agent-pl
 
 `evidence/<name>/` holds what a listing cites but an install does not need: `EVIDENCE.md`, review records, and an optional self-contained `example.html`.
 
-`scripts/build.py` validates every manifest. It writes the Codex/ChatGPT catalog (`.agents/plugins/marketplace.json`), the Claude catalog (`.claude-plugin/marketplace.json`), and each plugin's `.claude-plugin/plugin.json`, then renders the site into `dist/`: the home page, a searchable plugin directory at `/plugins/` (filtered by each listing's category), one page per plugin, and the install page. Commit the generated catalogs; `scripts/check.py` fails when they are stale. Never edit them by hand.
+`scripts/build.py` validates every manifest. It writes the Codex/ChatGPT catalog (`.agents/plugins/marketplace.json`), the Claude catalog (`.claude-plugin/marketplace.json`), and each plugin's `.claude-plugin/plugin.json`, then renders the site into `dist/`: the home page, a searchable plugin directory at `/plugins/` (filtered by each listing's category), one page per plugin, the install page, and an about page for the course (`site/about.html`, adapted from the course outline). Commit the generated catalogs; `scripts/check.py` fails when they are stale. Never edit them by hand.
 
 `site/clients.json` lists the apps that load the plugin format, with each app's logo, install steps, and setup-guide link. It drives the home page's logo row, the Claude and ChatGPT install panels, and the install page (`/install/`). Logos are the vendor-supplied files from agent-plugins.org and agentskills.io.
 

@@ -262,8 +262,8 @@ def build(root=ROOT, base=None):
     shutil.copytree(root / 'site/assets', dist / 'assets')
     for name in ('style.css', 'main.js'):
         shutil.copy2(root / 'site' / name, dist / name)
-    layout, home, detail, setup, directory = (Template((root / f'site/{name}.html').read_text())
-                                              for name in ('layout', 'home', 'plugin', 'install', 'plugins'))
+    layout, home, detail, setup, directory, about = (Template((root / f'site/{name}.html').read_text())
+                                                     for name in ('layout', 'home', 'plugin', 'install', 'plugins', 'about'))
     # Content hashes bust browser caches (GitHub Pages serves max-age=600) whenever the CSS or JavaScript changes.
     versions = {k: hashlib.sha256((root / f'site/{name}').read_bytes()).hexdigest()[:8] for k, name in (('css', 'style.css'), ('js', 'main.js'))}
     shared = {k: escape(config[k]) for k in ('name', 'repo')} | {'base': base} | versions
@@ -296,6 +296,9 @@ def build(root=ROOT, base=None):
         ui, url = plugin['ui'], plugin['manifest']['homepage']
         pages.append(write(folder / 'index.html', f"{ui['displayName']} · {config['name']}", ui['shortDescription'],
                            detail.substitute(listing_page(plugin, config, base, clients)), url, url + plugin['shots'][0].name))
+    pages.append(write(dist / 'about/index.html', f"About · {config['name']}",
+                       f"{config['name']} is an MBA course where students turn their expertise into tested plugins for AI agents.",
+                       about.substitute(shared), config['url'] + 'about/'))
     categories = sorted({p['ui']['category'] for p in plugins})
     chips = [('', 'All', len(plugins))] + [(c, c, sum(p['ui']['category'] == c for p in plugins)) for c in categories]
     def searchable(p):

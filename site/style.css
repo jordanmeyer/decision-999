@@ -89,6 +89,37 @@ img { display: block; max-width: 100%; height: auto; }
 .directory-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr)); gap: 1.5rem; }
 .empty { padding-block: 2rem; color: var(--muted); }
 .link-button { border: 0; padding: 0; background: none; color: var(--navy); font: inherit; font-weight: 600; text-decoration: underline; cursor: pointer; }
+.eyebrow { font: 600 0.7rem/1.4 var(--sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.about-hero { padding-block: 4rem 0; }
+.about-hero h1 { max-width: 21ch; margin-block: 1rem 1.25rem; font-size: clamp(2.75rem, 5.5vw, 4.5rem); }
+.about-hero .actions { margin-top: 2rem; }
+.stats { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-block: 3.5rem 4rem; }
+.quote { display: grid; gap: 1rem; }
+.quote blockquote { max-width: 34ch; margin-top: 0.5rem; font: clamp(1.6rem, 3vw, 2.25rem)/1.3 var(--serif); color: var(--navy); }
+.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 1rem 4rem; padding-block: 5rem; }
+.split p + p { margin-top: 1rem; }
+.arc { padding-bottom: 5rem; }
+.arc ol, .levels { margin: 0; padding: 0; list-style: none; }
+.arc li { display: grid; grid-template-columns: 3rem minmax(0, 1.3fr) minmax(0, 1fr); gap: 0.5rem 2rem; padding-block: 1.25rem; border-top: 1px solid var(--line); }
+.arc li:last-child { border-bottom: 1px solid var(--line); }
+.arc-number { font: 2rem/1 var(--serif); color: var(--navy); }
+.arc h3 { margin-bottom: 0.35rem; font-size: 1.35rem; }
+.arc li p { font-size: 0.9375rem; color: var(--muted); }
+.arc .milestone { color: var(--ink); }
+.milestone span { display: block; margin-bottom: 0.2rem; font: 600 0.7rem/1.4 var(--sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.levels-section { padding-bottom: 5rem; }
+.levels { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2rem; }
+.levels li { display: grid; align-content: start; gap: 0.5rem; border-top: 2px solid var(--navy); padding-top: 1.25rem; }
+.levels li p:not(.eyebrow) { font-size: 0.9375rem; color: var(--muted); }
+.levels .example { margin-top: 0.25rem; font-style: italic; }
+.columns.proof { grid-template-columns: repeat(auto-fit, minmax(min(11rem, 100%), 1fr)); gap: 2rem; }
+.cta-band { background: var(--navy); color: var(--white); }
+.cta-band h2, .cta-band a { color: var(--white); }
+.cta-band .note { font-size: 0.875rem; color: var(--hatteras); }
+.cta-band .actions { margin-top: 2rem; }
+.cta-band :focus-visible { outline-color: var(--dandelion); }
+.button.light { background: var(--white); color: var(--navy); }
+.button.light:hover { background: var(--dandelion); color: var(--navy); }
 .fine { max-width: none; padding-bottom: 4rem; font-size: 0.8125rem; color: var(--muted); }
 .catalog { padding-bottom: 5rem; }
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr)); gap: 1.5rem; }
@@ -167,7 +198,10 @@ img { display: block; max-width: 100%; height: auto; }
   .cards > .card:first-child { grid-template-columns: 1fr; }
   .cards > .card:first-child .card-shot { order: 0; padding: 1.5rem 1.5rem 0; }
   .cards > .card:first-child .card-shot img { border-right: 1px solid var(--hatteras); }
-  .hero-grid, .columns, .steps, .listing-body { grid-template-columns: 1fr; }
+  .hero-grid, .columns, .steps, .listing-body, .split, .levels { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .arc li { grid-template-columns: 2.5rem minmax(0, 1fr); }
+  .arc .milestone { grid-column: 2; }
   .columns, .steps { gap: 1.5rem; }
   .listing-body { gap: 3rem; }
 }
