@@ -93,8 +93,6 @@ img { display: block; max-width: 100%; height: auto; }
 .command button:hover { background: var(--dandelion); }
 .command button:focus-visible { outline-color: var(--dandelion); }
 
-.submit { display: grid; grid-template-columns: 1fr 1.5fr; gap: 1rem 4rem; padding-block: 4rem 5rem; border-top: 1px solid var(--line); }
-.submit .text-link { display: inline-block; margin-top: 1rem; }
 
 .footer { border-top: 1px solid var(--line); font-size: 0.8125rem; color: var(--muted); }
 .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 2rem; padding-block: 1.5rem 2rem; }
@@ -127,7 +125,7 @@ img { display: block; max-width: 100%; height: auto; }
   .cards > .card:first-child { grid-template-columns: 1fr; }
   .cards > .card:first-child .card-shot { order: 0; padding: 1.5rem 1.5rem 0; }
   .cards > .card:first-child .card-shot img { border-right: 1px solid var(--hatteras); }
-  .columns, .submit, .listing-body { grid-template-columns: 1fr; }
+  .columns, .listing-body { grid-template-columns: 1fr; }
   .columns { gap: 1.5rem; }
   .listing-body { gap: 3rem; }
 }

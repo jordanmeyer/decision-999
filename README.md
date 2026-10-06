@@ -1,8 +1,8 @@
 # Build with AI
 
-An instructor-built example of a plugin directory for a proposed MBA course. Students would build and test plugins for ChatGPT and Claude. This repository holds the catalog and website; it is an independent demonstration, not an approved course. The course name and number are placeholders in `site/config.json`.
+A curated collection of plugins developed and tested by MBA students for ChatGPT and Claude. This repository holds the catalog and website. The collection is maintained by the course team; individual listings identify their authors and evidence. The course name and number are configured in `site/config.json`.
 
-[Website](https://jordanmeyer.github.io/decision-999/) · [Submit a plugin](docs/CONTRIBUTING.md) · [Validation](docs/VALIDATION.md)
+[Website](https://jordanmeyer.github.io/decision-999/) · [Maintainer guide](docs/MAINTAINING.md) · [Validation](docs/VALIDATION.md)
 
 ## Install
 

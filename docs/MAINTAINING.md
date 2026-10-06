@@ -1,6 +1,6 @@
-# Submit a plugin
+# Maintain the curated catalog
 
-Open one pull request that adds one folder, `plugins/<name>/`. Everything the directory shows comes from that folder. Start by copying `plugins/duke-designer/plugin.json`.
+This guide is for the course team maintaining the curated collection of MBA student work. The team selects which plugins appear in the catalog. Each listing and its evidence live in `plugins/<name>/`; use `plugins/duke-designer/plugin.json` as the manifest reference.
 
 **Package.** Put `plugin.json` at the folder root with the Agent Plugins `$schema`, a lowercase hyphenated `name` matching the folder, a `version` (x.y.z), `description`, `author`, `repository`, and `homepage` set to `https://jordanmeyer.github.io/decision-999/plugins/<name>/`. Put each skill in `skills/<skill>/SKILL.md` with `name` and `description` front matter. Keep every link and resource inside the folder, and have skills write output into the user's project. Add a `README.md` covering installation, how to ask for the skill, prerequisites, and limits.
 
@@ -12,6 +12,6 @@ Open one pull request that adds one folder, `plugins/<name>/`. Everything the di
 
 **Check.** Run `python3 scripts/build.py` and `python3 scripts/check.py`, then commit the regenerated catalogs. Run `claude plugin validate .`. Preview with `python3 scripts/serve.py` at desktop and phone widths. Test installation from your branch in empty configurations by pointing `CLAUDE_CONFIG_DIR` and `CODEX_HOME` at new temporary folders, so your normal setup is untouched.
 
-**Pull request.** Describe what the plugin does, who it is for, data sources and rights, the exact tests and results, and known limits. A reviewer installs the plugin, verifies its evidence and repeats relevant checks before merging; historical artifact review does not require new model generation. Listings must not claim endorsement by an employer, institution, or anyone else.
+**Review.** Describe what the plugin does, who it is for, data sources and rights, the exact tests and results, and known limits. A reviewer installs the plugin, verifies its evidence and repeats relevant checks before publication; historical artifact review does not require new model generation. Listings must not claim endorsement by an employer, institution, or anyone else.
 
-To update a plugin, bump its `version`, repeat checks affected by the change, and update the listing and evidence in the same pull request. A historical PASS applies only to its identified source version.
+To update a plugin, bump its `version`, repeat checks affected by the change, and update the listing and evidence together. A historical PASS applies only to its identified source version.

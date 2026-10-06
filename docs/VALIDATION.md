@@ -49,3 +49,7 @@ The earlier neutral single-page release was published at [jordanmeyer.github.io/
 The earlier 0.1.0 package preserved all 16 original skill files, with only an installed-resource/output-location paragraph added to SKILL.md. Its recorded sibling inventory covered 517 unchanged source files. Two separate fresh Codex configurations verified local and GitHub marketplace installation. The published-source test reported `sourceType: git` and `https://github.com/jordanmeyer/decision-999.git`; a fresh session read SKILL.md, identity/color/typography/web/review references and CSS tokens from its installed cache and generated an external workshop artifact. These are historical portability checks, not fresh installation results for 0.2.0.
 
 Future changes must record their own relevant checks and deployment. The historical installation checks remain separate from the current integration and publication results.
+
+## Curated collection wording update
+
+On October 6, removed the public plugin submission section, navigation link and unused styles. The home page now says “Developed and tested by MBA students.” Metadata and the maintainer guide describe a curated collection; the current example retains its accurate instructor-built label. Build, catalog freshness, focused checks, local manifest validation and whitespace checks pass. Desktop and 320px browser inspection confirmed only Plugins/Install navigation, the requested lead, no submission content and no horizontal page overflow.
