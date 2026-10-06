@@ -10,8 +10,8 @@ Build an independent demonstration where visitors discover a real reusable Codex
 
 - [x] (2026-10-06) Inspected empty working directory, CLI 0.145.0, original skill and all medium references; recorded source hashes outside the project.
 - [x] (2026-10-06) Copied the complete 16-file skill, including reference illustrations and CSS tokens.
-- [ ] Package and locally install the plugin using isolated configuration.
-- [ ] Implement static website, catalog join, focused validators, documentation, and Actions deployment.
+- [x] (2026-10-06) Packaged and locally installed with CLI 0.145.0 in isolated configuration.
+- [x] (2026-10-06) Implemented website, catalog join, focused validators, documentation and Actions workflow.
 - [ ] Check desktop/mobile rendering, keyboard/copy behavior, neutral output, and clean-checkout build.
 - [ ] Create public repository, push main, enable Pages, and verify deployment for the pushed commit.
 - [ ] Independently review requirements and test published installation in a fresh external directory.
@@ -79,6 +79,8 @@ Initial evidence: `codex-cli 0.145.0`; `ssh -T git@github.com` recognized jordan
 
 ## Interfaces and Dependencies
 
-Use Python 3.11+ standard library and a modern browser. Site assets are local, with font licenses retained. Plugin execution needs Codex with plugin commands and the user's artifact-generation tools; guidance does not supply a renderer. No MCP service, database, payment, account system, or extra plugin is required. Git and GitHub authentication are needed only for publishing and remote installation.
+Use Python 3.9+ standard library and a modern browser. Site assets are local, with font licenses retained. Plugin execution needs Codex with plugin commands and the user's artifact-generation tools; guidance does not supply a renderer. No MCP service, database, payment, account system, or extra plugin is required. Git and GitHub authentication are needed only for publishing and remote installation.
 
 Revision note (2026-10-06): Created after inspecting the brief, actual source skill, installed CLI, official packaging guidance and available publication access.
+
+Revision note (2026-10-06): Local and published registration/install passed with distinct clean homes. Public repository created, initial main pushed, and Pages switched to Actions. Reviewer found a repository-relative README link that escaped the installed package; changed it to an absolute repository URL. Desktop, 390px and 320px layouts inspected without overflow; keyboard copy succeeded. Fresh-session smoke test and live deployment remain in progress.

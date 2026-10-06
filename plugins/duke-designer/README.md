@@ -29,4 +29,4 @@ Copied from the complete design skill supplied with the project brief, preservin
 
 The only instruction edit in 0.1.0 adds explicit installed-package path resolution and output placement: resolve bundled links relative to their containing file; write artifacts into the user's project, not the installed skill. There are no runtime dependencies on the original sibling directory, author-specific absolute paths, escaping symlinks, or mandatory host-specific helper commands. General brand guidance and all supported media remain intact.
 
-See the repository's [validation record](../../docs/VALIDATION.md) for installation, smoke-test, and deployment evidence.
+See the repository's [validation record](https://github.com/jordanmeyer/decision-999/blob/main/docs/VALIDATION.md) for installation, smoke-test, and deployment evidence.
