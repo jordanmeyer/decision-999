@@ -1,0 +1,18 @@
+{
+  "name": "decision-999",
+  "owner": {
+    "name": "Jordan Meyer",
+    "url": "https://github.com/jordanmeyer"
+  },
+  "metadata": {
+    "description": "An instructor-built plugin directory for a proposed MBA course."
+  },
+  "plugins": [
+    {
+      "name": "duke-designer",
+      "source": "./plugins/duke-designer",
+      "description": "Webpages, slides, and documents that follow Duke’s public brand guidelines.",
+      "category": "Design"
+    }
+  ]
+}

@@ -21,7 +21,7 @@ jobs:
       - uses: actions/setup-python@v7.0.0
         with:
           python-version: '3.13'
-      - name: Check package and presentation boundaries
+      - name: Check plugins, catalogs, and listings
         run: python3 scripts/check.py
       - name: Configure Pages
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
@@ -30,7 +30,7 @@ jobs:
       - name: Build and validate website
         env:
           PAGE_BASE: ${{ steps.pages.outputs.base_path }}
-        run: python3 scripts/build.py --base "${PAGE_BASE:-/decision-999}/"
+        run: python3 scripts/build.py ${PAGE_BASE:+--base "$PAGE_BASE/"}
       - name: Upload website only
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v5.0.0

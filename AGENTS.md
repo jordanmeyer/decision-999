@@ -1,11 +1,13 @@
-# Decision 999
+# Build with AI plugin directory
 
 Write clear, terse code for a solo maintainer. Use the Python standard library and plain browser code; avoid frameworks, compatibility wrappers and speculative features.
 
-Canonical design guidance: `plugins/duke-designer/skills/duke-designer/SKILL.md`. Read its identity, color, typography and relevant medium references. Do not maintain a second skill copy.
+Canonical design guidance: `plugins/duke-designer/skills/duke-designer/SKILL.md`. Read its identity, color, typography, web and review references before UI changes. Do not maintain a second skill copy.
 
-Website-specific requirements override institutional presentation guidance: title Decision 999, label Independent demonstration, no logos, no case-insensitive `duke` anywhere in `dist/`, including URLs, filenames, hidden text and metadata. Present the real plugin as Brand Design Example. Keep plugin identity and references intact outside the deployment artifact. Link installation through `https://github.com/jordanmeyer/decision-999#example-plugin`.
+The site is an employer-facing directory where MBA students point recruiters to plugins they built; the faculty committee reviewing the course proposal sees the same pages. Until the course is approved, nothing on the site may claim or imply that it is affiliated with or endorsed by Duke. Naming the `duke-designer` plugin and its use of Duke's public brand guidance is fine; institutional logos, seals, and official-sounding claims are not. The site name, course label, repository, marketplace name and URL live only in `site/config.json`.
 
-Build and validate with `python3 scripts/build.py` and `python3 scripts/check.py`. Preview with `python3 scripts/serve.py` at `/decision-999/`. Only `dist/` is deployed. Inspect desktop/narrow output and keyboard/copy behavior after UI changes. Tests should address real boundaries, not mirror trivial implementation. Review surrounding code and make a separate simplification pass.
+`plugins/<name>/plugin.json` (Agent Plugins format) is the only registry and holds each listing. `scripts/build.py` generates `.agents/plugins/marketplace.json`, `.claude-plugin/marketplace.json` and `plugins/<name>/.claude-plugin/plugin.json`; commit them and never edit them by hand. Listing evidence must come from runs anyone can reproduce; never invent results, students, endorsements or adoption.
 
-For significant changes maintain `docs/EXECPLAN.md` according to `~/.codex/PLANS.md`. Preserve the sibling source. Never copy credentials, caches, or generated output into this repository. Deploy only main, using GitHub Actions and ordinary commits.
+Build and validate with `python3 scripts/build.py` and `python3 scripts/check.py`. Preview with `python3 scripts/serve.py`. Run `claude plugin validate .` after catalog changes. Only `dist/` is deployed. Inspect desktop/narrow output and keyboard/copy behavior after UI changes. Tests should address real boundaries, not mirror trivial implementation. Review surrounding code and make a separate simplification pass.
+
+For significant changes maintain `docs/EXECPLAN.md` according to `~/.codex/PLANS.md`. Preserve the sibling source. Never copy credentials, caches, or generated site output into this repository. Deploy only main, using GitHub Actions and ordinary commits.

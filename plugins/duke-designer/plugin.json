@@ -1,6 +1,63 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "duke-designer",
-  "version": "0.1.0",
-  "description": "Design and review webpages, presentations, documents, and visual materials using Duke's public brand guidance."
+  "version": "0.2.0",
+  "description": "Design and review webpages, presentations, documents, and visual materials using Duke's public brand guidance.",
+  "author": {
+    "name": "Jordan Meyer",
+    "url": "https://github.com/jordanmeyer"
+  },
+  "homepage": "https://jordanmeyer.github.io/decision-999/plugins/duke-designer/",
+  "repository": "https://github.com/jordanmeyer/decision-999",
+  "keywords": [
+    "design",
+    "branding",
+    "webpages",
+    "presentations",
+    "documents",
+    "accessibility"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Duke Designer",
+        "shortDescription": "Webpages, slides, and documents that follow Duke’s public brand guidelines.",
+        "longDescription": "Duke Designer gives an AI agent working knowledge of Duke’s published brand guidelines: the color palette with checked contrast pairings, the recommended typefaces, layout guidance for webpages, presentations, and documents, and a review checklist. Ask for an artifact and the agent designs it to the guidelines, then reviews the result before handing it back.",
+        "developerName": "Jordan Meyer",
+        "category": "Design",
+        "defaultPrompt": [
+          "Use duke-designer to create a one-page website for a fictional Duke symposium on AI and leadership, with an agenda, speaker section, and working demonstration registration action. Clearly label all event details and speaker personas as fictional; claim no university affiliation, sponsorship, or endorsement. Use no institutional logos. Save a complete local webpage with index.html and any local assets. Inspect the rendered page on desktop and mobile, including keyboard interaction, 320px reflow and 200% text enlargement."
+        ],
+        "screenshots": [
+          "./assets/desktop.png",
+          "./assets/mobile.png"
+        ]
+      }
+    },
+    "io.github.jordanmeyer": {
+      "label": "Example · Instructor-built",
+      "audience": "Anyone who produces webpages, slides, or documents that should follow Duke’s public brand guidelines, without a designer on hand. The guidance is spread across many pages of the brand site; this plugin packages it in one place for an agent to consult.",
+      "limits": "The skill supplies guidance, not production logos, photography or font files, and relies on your agent’s tools to create and render artifacts. The bundled demonstrations include licensed Open Sans fonts. It covers one brand guide, not brands in general. It grants no permission to use Duke marks and is not an official Duke tool.",
+      "results": [
+        {
+          "value": "3",
+          "label": "Examples independently reviewed"
+        },
+        {
+          "value": "3",
+          "label": "Final passes after revisions"
+        },
+        {
+          "value": "5",
+          "label": "Implementation defects resolved"
+        }
+      ],
+      "method": "Existing Codex builder/reviewer exercise, October 2, 2026: three fictional webpages (event, research initiative, student organization) were built separately and reviewed in Chrome at desktop/mobile widths, including 320px reflow, 200% text enlargement and keyboard interactions. Reviewers requested corrections; final passes were event round 3, research round 2 and student organization round 2. This is iterative artifact review, not a one-shot success rate, model comparison or accessibility certification. The screenshots and event example below come from the final reviewed output; no new model evaluation was run. Source, recorded checks and reproduction instructions are in EVIDENCE.md in the plugin repository.",
+      "screenshotAlt": [
+        "Desktop view of the fictional AI and Leadership Symposium: navy introduction, sample date, agenda, fictional speakers and demonstration registration. Captured in the final independent review at 1440px.",
+        "Mobile view of the same fictional AI and Leadership Symposium, with stacked agenda, speakers and demonstration registration. Captured in the final independent review at 390px."
+      ],
+      "example": "./assets/example.html"
+    }
+  }
 }

@@ -1,16 +1,21 @@
-"""Focused boundary checks: source isolation, public data, and catalog growth."""
+"""Boundary checks: committed catalogs are current, a clean copy builds, bad manifests fail, new plugins list themselves."""
 from contextlib import redirect_stdout
-import copy
 import io
 import json
 from pathlib import Path
 import shutil
 import tempfile
-from build import ROOT, build
+from build import ROOT, build, catalogs, load, read_json
+
+config = read_json(ROOT / 'site/config.json')
+for path, content in catalogs(config, load(ROOT, config)).items():
+    assert (ROOT / path).read_text() == content, f'{path} is stale: run scripts/build.py and commit it'
 
 
-def save(path, value):
-    path.write_text(json.dumps(value))
+def edit(path, change):
+    data = json.loads(path.read_text())
+    change(data)
+    path.write_text(json.dumps(data))
 
 
 def rejects(root, message):
@@ -19,49 +24,36 @@ def rejects(root, message):
     except ValueError as error:
         assert message in str(error), str(error)
     else:
-        raise AssertionError('Unsafe fixture was accepted')
+        raise AssertionError(f'Accepted a plugin that should fail with: {message}')
 
 
-with tempfile.TemporaryDirectory(prefix='decision-999-check-') as temporary:
+def second(manifest):
+    manifest.update(name='second-example', version='2.3.4', homepage=f"{config['url']}plugins/second-example/")
+    manifest['extensions']['com.openai']['interface']['displayName'] = 'Second Example'
+
+
+with tempfile.TemporaryDirectory() as temporary, redirect_stdout(io.StringIO()):
     root = Path(temporary)
-    for folder in ('.agents', 'plugins', 'site'):
+    for folder in ('plugins', 'site'):
         shutil.copytree(ROOT / folder, root / folder)
-    with redirect_stdout(io.StringIO()):
-        build(root)
-        metadata = root / 'site/presentation.json'
-        original = json.loads(metadata.read_text())
-        save(metadata, {})
-        rejects(root, 'Missing neutral presentation')
-        changed = copy.deepcopy(original)
-        changed['duke-designer']['summary'] = 'Hidden DUKE text'
-        save(metadata, changed)
-        rejects(root, 'Restricted presentation text')
-        save(metadata, original)
-        catalog_path = root / '.agents/plugins/marketplace.json'
-        catalog = json.loads(catalog_path.read_text())
-        bad = copy.deepcopy(catalog)
-        bad['plugins'][0]['source']['path'] = './plugins/../../escape'
-        save(catalog_path, bad)
-        rejects(root, 'escapes')
-        save(catalog_path, catalog)
-        css = root / 'site/style.css'
-        original_css = css.read_text()
-        css.write_text(original_css + '\n/* DUKE */')
-        rejects(root, 'Restricted website text')
-        css.write_text(original_css)
-        package = root / 'plugins/test-example'
-        shutil.copytree(root / 'plugins/duke-designer', package)
-        manifest = json.loads((package / 'plugin.json').read_text())
-        manifest.update(name='test-example', version='2.3.4')
-        save(package / 'plugin.json', manifest)
-        entry = copy.deepcopy(catalog['plugins'][0])
-        entry.update(name='test-example', source={'source': 'local', 'path': './plugins/test-example'})
-        catalog['plugins'].append(entry)
-        save(catalog_path, catalog)
-        original['test-example'] = dict(original['duke-designer'], slug='test-example', title='Second example')
-        save(metadata, original)
-        build(root)
-        result = (root / 'dist/index.html').read_text()
-        assert 'Second example' in result and 'Version 2.3.4' in result
-        assert result.count('class="plugin-card"') == 2
-print('Passed: isolated build, missing presentation, restricted copy, escaping path, output leak, automatic second listing.')
+    build(root)  # without the sibling source project or any committed catalog
+    manifest, skill = root / 'plugins/duke-designer/plugin.json', root / 'plugins/duke-designer/skills/duke-designer/SKILL.md'
+    original, instructions = manifest.read_text(), skill.read_text()
+    edit(manifest, lambda m: m['extensions'][config['extension']].pop('limits'))
+    rejects(root, 'limits must be text')
+    manifest.write_text(original)
+    edit(manifest, lambda m: m['extensions']['com.openai']['interface'].update(screenshots=['./../../site/assets/x.png']))
+    rejects(root, 'must be a .png file inside the plugin')
+    manifest.write_text(original)
+    skill.write_text(instructions + '\n[outside](../../../../README.md)\n')
+    rejects(root, 'leaves the plugin')
+    skill.write_text(instructions)
+    shutil.copytree(root / 'plugins/duke-designer', root / 'plugins/second-example')
+    edit(root / 'plugins/second-example/plugin.json', second)
+    build(root)
+    home = (root / 'dist/index.html').read_text()
+    assert home.count('class="card"') == 2 and 'Second Example' in home
+    assert 'Version 2.3.4' in (root / 'dist/plugins/second-example/index.html').read_text()
+    for catalog in ('.agents/plugins/marketplace.json', '.claude-plugin/marketplace.json'):
+        assert [p['name'] for p in read_json(root / catalog)['plugins']] == ['duke-designer', 'second-example']
+print('Passed: catalogs current, clean build, missing listing text, escaping screenshot and skill link, automatic second listing.')

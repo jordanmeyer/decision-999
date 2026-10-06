@@ -1,32 +1,49 @@
-# Duke designer plugin
+# Duke Designer
 
-Version 0.1.0. This package contains the complete `duke-designer` skill: public Duke brand guidance for webpages, presentations, documents, and visual materials. It is an independent example, not institutional approval or permission to use a mark. The marketplace website calls this package **Brand Design Example**.
+Version 0.2.0. The complete `duke-designer` skill: Duke's public brand guidance for webpages, presentations, documents, and visual materials. It is an independent, instructor-built example. It is not an official Duke tool and grants no permission to use Duke marks.
 
-## Install and invoke
+## Install
 
-Use Codex with plugin commands (locally verified with CLI 0.145.0):
+Claude on the web or desktop: **Customize › Plugins › Add › Add marketplace**, enter `jordanmeyer/decision-999`, then add the plugin from **Discover**.
+
+Claude Code:
+
+```sh
+claude plugin marketplace add jordanmeyer/decision-999
+claude plugin install duke-designer@decision-999
+```
+
+Codex (ChatGPT):
 
 ```sh
 codex plugin marketplace add jordanmeyer/decision-999
 codex plugin add duke-designer@decision-999
 ```
 
-Start a fresh Codex session after installation. Invoke the actual skill as `$duke-designer`, for example:
+Start a new session after installing. Ask in plain language, for example the listing's example prompt:
 
-> Use $duke-designer to create a neutral workshop overview in HTML. Apply the bundled colors and typography, use no logos, and label the page as an independent demonstration. Write the result into my current project.
+> Use duke-designer to create a one-page website for a fictional Duke symposium on AI and leadership, with an agenda, speaker section, and working demonstration registration action. Clearly label all event details and speaker personas as fictional; claim no university affiliation, sponsorship, or endorsement. Use no institutional logos. Save a complete local webpage with index.html and any local assets. Inspect the rendered page on desktop and mobile, including keyboard interaction, 320px reflow and 200% text enlargement.
 
-Review the package before installation. Registering a marketplace and installing a plugin are separate actions. No MCP server or additional authentication service is included. Availability of repository marketplaces varies across Codex surfaces; the commands above target the CLI.
+To call the skill directly, use `/duke-designer:duke-designer` in Claude or `$duke-designer` in Codex.
 
 ## Contents and prerequisites
 
-`skills/duke-designer/SKILL.md` is the entry point. It links to all 11 textual references, three instructional PNG diagrams, and one optional CSS token file. All 16 original files are included. Reference diagrams are not production logos and must not be cropped into output. Source URLs, access dates, limitations and original notices remain in `references/sources.md`.
+`skills/duke-designer/SKILL.md` is the entry point. It links to 11 text references, three instructional PNG diagrams, and an optional CSS token file. Reference diagrams are not production logos and must not be cropped into output. Source URLs, access dates, limitations, and notices are in `references/sources.md`.
 
-The skill supplies guidance. It uses the agent's existing artifact creation and rendering tools; it does not bundle a browser, slide/document renderer, production marks, photography, or fonts. A requested format may require tools such as a browser or document renderer on the host. Restricted official templates require legitimately supplied access or assets; they are optional for general work. Fonts must be obtained under their own licenses.
+The skill supplies guidance only. It uses the agent's own tools to create and render files and bundles no browser, document renderer, production marks, photography, or fonts. Restricted official templates need legitimately supplied access. Fonts must be obtained under their own licenses.
+
+`plugin.json` follows the [Agent Plugins](https://agent-plugins.org/specification) format. Its `extensions` hold the directory listing. `.claude-plugin/plugin.json` is generated from it by the repository build for Claude; do not edit it by hand.
+
+## Evidence
+
+The listing reuses the October 2, 2026 Codex builder/reviewer exercise from the “Review design skill” chat. Three fictional webpages received independent review and corrections: the event passed in round 3, research in round 2, and student organization in round 2. Five implementation defects were resolved across those artifacts.
+
+These are final passes after iterative work, not a one-shot success rate, repeated-generation benchmark, model comparison, or accessibility certification. No cost or timing result is claimed. No new Claude generation or API evaluation is required.
+
+Read [EVIDENCE.md](EVIDENCE.md) for the exact reports, reviewed source hashes, unchanged final screenshots, limitations, and commands to repeat browser checks on the preserved source. The listing's fictional AI and leadership symposium prompt restates the original brief; it is not a verbatim transcript or a promise of identical output. The downloadable single-file event example packages the reviewed source and is identified as a derivative.
 
 ## Portability and provenance
 
-Copied from the complete design skill supplied with the project brief, preserving its organization and references checked on 2026-10-02. No source-repository scripts, caches, examples, credentials or unrelated projects were copied.
+Copied from the complete design skill supplied with the project, preserving its organization and references checked on 2026-10-02. The portable skill excludes source-repository scripts, caches, credentials and unrelated projects. Separately, the package includes selected reviewed examples and their evidence under `assets/evidence/`, with provenance and font licenses. The only instruction edit is in `SKILL.md`: it resolves bundled links relative to the installed skill and writes artifacts into the user's project, not the plugin. The skill has no runtime dependency on the original directory, author-specific absolute paths, or escaping symlinks. Historical review reports retain their original context; the optional reproduction scripts use an installed Playwright package and Google Chrome, as documented in EVIDENCE.md.
 
-The only instruction edit in 0.1.0 adds explicit installed-package path resolution and output placement: resolve bundled links relative to their containing file; write artifacts into the user's project, not the installed skill. There are no runtime dependencies on the original sibling directory, author-specific absolute paths, escaping symlinks, or mandatory host-specific helper commands. General brand guidance and all supported media remain intact.
-
-See the repository's [validation record](https://github.com/jordanmeyer/decision-999/blob/main/docs/VALIDATION.md) for installation, smoke-test, and deployment evidence.
+0.2.0 adds directory listing metadata, generated Claude manifests, real screenshots, and preserved Codex review evidence. The unused Claude generation runner was removed. The skill itself is unchanged.

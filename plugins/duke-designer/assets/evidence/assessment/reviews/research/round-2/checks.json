@@ -1,0 +1,220 @@
+{
+  "hashes": {
+    "index.html": "a732b44d1e9ce5f39949a212cb6080aa0787698446ed51a5bb6dfbc76e917bbb",
+    "styles.css": "aa56e61cb7ed0398674ff62e61c77226aeccac1a060a2026b42195d5901cb0c0",
+    "script.js": "7464d554bc2c3922413f9167591f7755c938ad3d54e92c7f43b0a2c6a4f3c2b0",
+    "assets/open-sans.ttf": "36643644f318a812aab2d2ed3bb98f8cf0872527f835fe9398d95fe6b9adb878"
+  },
+  "checks": [
+    {
+      "width": 1440,
+      "method": "default",
+      "pageWidth": 1440,
+      "note": {
+        "width": 483,
+        "scroll": 483
+      },
+      "overflow": [
+        {
+          "tag": "SUMMARY",
+          "class": "",
+          "width": 146,
+          "scroll": 154,
+          "text": "Read study outline +"
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "method": "computed",
+      "pageWidth": 1440,
+      "note": {
+        "width": 483,
+        "scroll": 483
+      },
+      "overflow": [
+        {
+          "tag": "SUMMARY",
+          "class": "",
+          "width": 281,
+          "scroll": 298,
+          "text": "Read study outline +"
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "method": "root",
+      "pageWidth": 1440,
+      "note": {
+        "width": 1240,
+        "scroll": 1240
+      },
+      "overflow": [
+        {
+          "tag": "SUMMARY",
+          "class": "",
+          "width": 291,
+          "scroll": 307,
+          "text": "Read study outline +"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "method": "default",
+      "pageWidth": 390,
+      "note": {
+        "width": 350,
+        "scroll": 350
+      },
+      "overflow": [
+        {
+          "tag": "SUMMARY",
+          "class": "",
+          "width": 146,
+          "scroll": 154,
+          "text": "Read study outline +"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "method": "computed",
+      "pageWidth": 390,
+      "note": {
+        "width": 350,
+        "scroll": 350
+      },
+      "overflow": [
+        {
+          "tag": "SUMMARY",
+          "class": "",
+          "width": 281,
+          "scroll": 298,
+          "text": "Read study outline +"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "method": "root",
+      "pageWidth": 390,
+      "note": {
+        "width": 310,
+        "scroll": 310
+      },
+      "overflow": [
+        {
+          "tag": "SUMMARY",
+          "class": "",
+          "width": 291,
+          "scroll": 307,
+          "text": "Read study outline +"
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "method": "default",
+      "pageWidth": 320,
+      "note": {
+        "width": 280,
+        "scroll": 280
+      },
+      "overflow": [
+        {
+          "tag": "SUMMARY",
+          "class": "",
+          "width": 146,
+          "scroll": 154,
+          "text": "Read study outline +"
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "method": "computed",
+      "pageWidth": 320,
+      "note": {
+        "width": 280,
+        "scroll": 280
+      },
+      "overflow": []
+    },
+    {
+      "width": 320,
+      "method": "root",
+      "pageWidth": 320,
+      "note": {
+        "width": 240,
+        "scroll": 240
+      },
+      "overflow": []
+    }
+  ],
+  "errors": [],
+  "interactions": [
+    {
+      "theme": "accountability",
+      "count": "Showing 2 proposals for Accountability",
+      "visible": 2,
+      "pressed": 1
+    },
+    {
+      "theme": "judgment",
+      "count": "Showing 1 proposal for Human judgment",
+      "visible": 1,
+      "pressed": 1
+    },
+    {
+      "theme": "participation",
+      "count": "Showing 1 proposal for Participation",
+      "visible": 1,
+      "pressed": 1
+    },
+    {
+      "theme": "all",
+      "count": "Showing all 4 proposals",
+      "visible": 4,
+      "pressed": 1
+    },
+    {
+      "outline": 0,
+      "opened": true,
+      "closed": true,
+      "focus": {
+        "visible": true,
+        "outline": "rgb(1, 33, 105) solid 3px"
+      }
+    },
+    {
+      "outline": 1,
+      "opened": true,
+      "closed": true,
+      "focus": {
+        "visible": true,
+        "outline": "rgb(1, 33, 105) solid 3px"
+      }
+    },
+    {
+      "outline": 2,
+      "opened": true,
+      "closed": true,
+      "focus": {
+        "visible": true,
+        "outline": "rgb(1, 33, 105) solid 3px"
+      }
+    },
+    {
+      "outline": 3,
+      "opened": true,
+      "closed": true,
+      "focus": {
+        "visible": true,
+        "outline": "rgb(1, 33, 105) solid 3px"
+      }
+    }
+  ],
+  "browser": "154.0.8037.97"
+}

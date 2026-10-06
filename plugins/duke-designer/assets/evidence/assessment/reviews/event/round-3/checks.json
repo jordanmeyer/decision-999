@@ -1,0 +1,174 @@
+{
+  "browser": "154.0.8037.97",
+  "errors": [],
+  "cases": [
+    {
+      "width": 1440,
+      "mode": "normal",
+      "initial": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": [],
+        "fontStatus": [
+          "loaded"
+        ]
+      },
+      "textUnchanged": true
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "initial": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": [],
+        "fontStatus": [
+          "loaded"
+        ]
+      },
+      "textUnchanged": true
+    },
+    {
+      "width": 390,
+      "mode": "computed",
+      "initial": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": [],
+        "fontStatus": [
+          "loaded"
+        ]
+      },
+      "textUnchanged": true,
+      "completion": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": [],
+        "fontStatus": [
+          "loaded"
+        ],
+        "focus": "confirmation-title",
+        "text": "Selected sample format: Online."
+      },
+      "retry": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": [],
+        "fontStatus": [
+          "loaded"
+        ],
+        "focus": "attendance",
+        "selected": "Online"
+      },
+      "secondChoice": "Selected sample format: In person."
+    },
+    {
+      "width": 320,
+      "mode": "computed",
+      "initial": {
+        "width": 320,
+        "scroll": 320,
+        "overflow": [],
+        "fontStatus": [
+          "loaded"
+        ]
+      },
+      "textUnchanged": true,
+      "completion": {
+        "width": 320,
+        "scroll": 320,
+        "overflow": [],
+        "fontStatus": [
+          "loaded"
+        ],
+        "focus": "confirmation-title",
+        "text": "Selected sample format: Online."
+      },
+      "retry": {
+        "width": 320,
+        "scroll": 320,
+        "overflow": [],
+        "fontStatus": [
+          "loaded"
+        ],
+        "focus": "attendance",
+        "selected": "Online"
+      },
+      "secondChoice": "Selected sample format: In person."
+    },
+    {
+      "width": 390,
+      "mode": "root",
+      "initial": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": [],
+        "fontStatus": [
+          "loaded"
+        ]
+      },
+      "textUnchanged": true,
+      "completion": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": [],
+        "fontStatus": [
+          "loaded"
+        ],
+        "focus": "confirmation-title",
+        "text": "Selected sample format: Online."
+      },
+      "retry": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": [],
+        "fontStatus": [
+          "loaded"
+        ],
+        "focus": "attendance",
+        "selected": "Online"
+      },
+      "secondChoice": "Selected sample format: In person."
+    },
+    {
+      "width": 320,
+      "mode": "root",
+      "initial": {
+        "width": 320,
+        "scroll": 320,
+        "overflow": [],
+        "fontStatus": [
+          "loaded"
+        ]
+      },
+      "textUnchanged": true,
+      "completion": {
+        "width": 320,
+        "scroll": 320,
+        "overflow": [],
+        "fontStatus": [
+          "loaded"
+        ],
+        "focus": "confirmation-title",
+        "text": "Selected sample format: Online."
+      },
+      "retry": {
+        "width": 320,
+        "scroll": 320,
+        "overflow": [],
+        "fontStatus": [
+          "loaded"
+        ],
+        "focus": "attendance",
+        "selected": "Online"
+      },
+      "secondChoice": "Selected sample format: In person."
+    }
+  ],
+  "hashes": {
+    "index.html": "06ab2df653666fd0c46a3c2431a94f5a0b030fb7f9f914a900539f8d34c2e1d0",
+    "style.css": "c28c6040c4b4336039b004e92dcfe9656783ead22e405cf9b73dc9f950b0fdca",
+    "script.js": "dae4cb7c98bb537cdc4eeb71a012db889c4b15c0c2e1c56f6c30b7b4b3d5dd0d",
+    "assets/open-sans.ttf": "36643644f318a812aab2d2ed3bb98f8cf0872527f835fe9398d95fe6b9adb878"
+  }
+}

@@ -1,0 +1,1192 @@
+{
+  "versions": {
+    "index.html": "919097077a2193ec34b7607ae98ae03a2893b765d7c7f441586b6c83b477cd43",
+    "styles.css": "79fb926ff7cdd8d262be5a89ce0a57a9135b810bbae68c01ddc213d1592eb31d",
+    "script.js": "60ec1d148e2bcdd96f62fa08438c89e491a3742a3a70deb79b1e0f8bdac24bf6",
+    "assets/open-sans.ttf": "36643644f318a812aab2d2ed3bb98f8cf0872527f835fe9398d95fe6b9adb878"
+  },
+  "checks": [
+    {
+      "name": "1440-normal",
+      "checks": [
+        {
+          "initial": {
+            "width": 1440,
+            "scroll": 1440,
+            "fonts": [
+              {
+                "family": "Open Sans",
+                "status": "loaded"
+              }
+            ],
+            "overflow": [],
+            "internal": []
+          }
+        },
+        {
+          "filter": "workshop",
+          "visible": 2,
+          "expected": 2,
+          "status": "Showing 2 sample events."
+        },
+        {
+          "filter": "conversation",
+          "visible": 1,
+          "expected": 1,
+          "status": "Showing 1 sample events."
+        },
+        {
+          "filter": "all",
+          "visible": 3,
+          "expected": 3,
+          "status": "Showing 3 sample events."
+        },
+        {
+          "save": 0,
+          "state": true,
+          "pressed": "true",
+          "snapshot": "- 'button \"Save event: Prototype an AI assistant worth using\" [pressed]': Save event",
+          "status": "Saved: Prototype an AI assistant worth using. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 0,
+          "state": false,
+          "pressed": "false",
+          "snapshot": "- 'button \"Save event: Prototype an AI assistant worth using\"': Save event",
+          "status": "Removed: Prototype an AI assistant worth using. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 1,
+          "state": true,
+          "pressed": "true",
+          "snapshot": "- 'button \"Save event: When should a product say I don’t know\" [pressed]': Save event",
+          "status": "Saved: When should a product say “I don’t know”?. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 1,
+          "state": false,
+          "pressed": "false",
+          "snapshot": "- 'button \"Save event: When should a product say I don’t know\"': Save event",
+          "status": "Removed: When should a product say “I don’t know”?. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 2,
+          "state": true,
+          "pressed": "true",
+          "snapshot": "- 'button \"Save event: From promising demo to product decision\" [pressed]': Save event",
+          "status": "Saved: From promising demo to product decision. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 2,
+          "state": false,
+          "pressed": "false",
+          "snapshot": "- 'button \"Save event: From promising demo to product decision\"': Save event",
+          "status": "Removed: From promising demo to product decision. Demo only; this does not reserve a place."
+        },
+        {
+          "arrowSelect": "decide"
+        },
+        {
+          "interest": "build",
+          "selected": "build",
+          "result": "Try a prototype lab.\n\nStart with “Prototype an AI assistant worth using.” Bring a product problem you’re curious about; no code is needed for this sample workshop.\n\nExplore the sample calendar →\n\nDemo complete. No membership has been created.",
+          "group": "- group \"I’m most interested in\":\n  - text: I’m most interested in\n  - radio \"Building with AI\" [checked]\n  - text: Building with AI\n  - radio \"Responsible product decisions\"\n  - text: Responsible product decisions\n  - radio \"Finding a product community\"\n  - text: Finding a product community"
+        },
+        {
+          "interest": "decide",
+          "selected": "decide",
+          "result": "Start with a case circle.\n\nThe sample conversation “When should a product say ‘I don’t know’?” is a place to explore uncertainty and user trust with peers.\n\nExplore the sample calendar →\n\nDemo complete. No membership has been created.",
+          "group": "- group \"I’m most interested in\":\n  - text: I’m most interested in\n  - radio \"Building with AI\"\n  - text: Building with AI\n  - radio \"Responsible product decisions\" [checked]\n  - text: Responsible product decisions\n  - radio \"Finding a product community\"\n  - text: Finding a product community"
+        },
+        {
+          "interest": "connect",
+          "selected": "connect",
+          "result": "Make space for a peer session.\n\nIn this fictional club, an open peer session would help you find a learning partner or practice a product conversation.\n\nExplore the activities →\n\nDemo complete. No membership has been created.",
+          "group": "- group \"I’m most interested in\":\n  - text: I’m most interested in\n  - radio \"Building with AI\"\n  - text: Building with AI\n  - radio \"Responsible product decisions\"\n  - text: Responsible product decisions\n  - radio \"Finding a product community\" [checked]\n  - text: Finding a product community"
+        },
+        {
+          "faq": 0,
+          "opened": ""
+        },
+        {
+          "faq": 0,
+          "closed": null
+        },
+        {
+          "faq": 1,
+          "opened": ""
+        },
+        {
+          "faq": 1,
+          "closed": null
+        },
+        {
+          "faq": 2,
+          "opened": ""
+        },
+        {
+          "faq": 2,
+          "closed": null
+        },
+        {
+          "after": {
+            "width": 1440,
+            "scroll": 1440,
+            "fonts": [
+              {
+                "family": "Open Sans",
+                "status": "loaded"
+              }
+            ],
+            "overflow": [],
+            "internal": []
+          }
+        },
+        {
+          "radioStyle": {
+            "accent": "rgb(1, 33, 105)",
+            "outline": "rgb(0, 0, 0) none 3px",
+            "width": "15.8281px",
+            "height": "15.8281px"
+          },
+          "legend": "I’m most interested in"
+        },
+        {
+          "reload": {
+            "saved": 0,
+            "resultHidden": true
+          }
+        },
+        {
+          "tab": [
+            {
+              "tag": "A",
+              "text": "Skip to content",
+              "outline": "rgb(1, 33, 105) solid 3px"
+            },
+            {
+              "tag": "A",
+              "text": "AI + Product ClubA concept for Duke MBA students",
+              "outline": "rgb(1, 33, 105) solid 3px"
+            },
+            {
+              "tag": "A",
+              "text": "Our purpose",
+              "outline": "rgb(1, 33, 105) solid 3px"
+            },
+            {
+              "tag": "A",
+              "text": "What’s on",
+              "outline": "rgb(1, 33, 105) solid 3px"
+            },
+            {
+              "tag": "A",
+              "text": "Get involved ↗",
+              "outline": "rgb(1, 33, 105) solid 3px"
+            },
+            {
+              "tag": "A",
+              "text": "Find your way in ↗",
+              "outline": "rgb(1, 33, 105) solid 3px"
+            },
+            {
+              "tag": "A",
+              "text": "Explore our activities →",
+              "outline": "rgb(1, 33, 105) solid 3px"
+            },
+            {
+              "tag": "BUTTON",
+              "text": "All events",
+              "value": "",
+              "outline": "rgb(1, 33, 105) solid 3px"
+            },
+            {
+              "tag": "BUTTON",
+              "text": "Workshops",
+              "value": "",
+              "outline": "rgb(1, 33, 105) solid 3px"
+            },
+            {
+              "tag": "BUTTON",
+              "text": "Conversations",
+              "value": "",
+              "outline": "rgb(1, 33, 105) solid 3px"
+            },
+            {
+              "tag": "BUTTON",
+              "text": "Save event +",
+              "value": "",
+              "outline": "rgb(1, 33, 105) solid 3px"
+            },
+            {
+              "tag": "BUTTON",
+              "text": "Save event +",
+              "value": "",
+              "outline": "rgb(1, 33, 105) solid 3px"
+            },
+            {
+              "tag": "BUTTON",
+              "text": "Save event +",
+              "value": "",
+              "outline": "rgb(1, 33, 105) solid 3px"
+            },
+            {
+              "tag": "INPUT",
+              "text": "",
+              "value": "build",
+              "outline": "rgb(1, 33, 105) solid 3px"
+            },
+            {
+              "tag": "BUTTON",
+              "text": "Show my first step →",
+              "value": "",
+              "outline": "rgb(1, 33, 105) solid 3px"
+            },
+            {
+              "tag": "SUMMARY",
+              "text": "Do I need a technical background?",
+              "outline": "rgb(1, 33, 105) solid 3px"
+            },
+            {
+              "tag": "SUMMARY",
+              "text": "What would being a member involve?",
+              "outline": "rgb(1, 33, 105) solid 3px"
+            },
+            {
+              "tag": "SUMMARY",
+              "text": "Can I join this organization now?",
+              "outline": "rgb(1, 33, 105) solid 3px"
+            },
+            {
+              "tag": "A",
+              "text": "Back to top ↑",
+              "outline": "rgb(255, 217, 96) solid 3px"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "390-normal",
+      "checks": [
+        {
+          "initial": {
+            "width": 390,
+            "scroll": 390,
+            "fonts": [
+              {
+                "family": "Open Sans",
+                "status": "loaded"
+              }
+            ],
+            "overflow": [],
+            "internal": []
+          }
+        },
+        {
+          "filter": "workshop",
+          "visible": 2,
+          "expected": 2,
+          "status": "Showing 2 sample events."
+        },
+        {
+          "filter": "conversation",
+          "visible": 1,
+          "expected": 1,
+          "status": "Showing 1 sample events."
+        },
+        {
+          "filter": "all",
+          "visible": 3,
+          "expected": 3,
+          "status": "Showing 3 sample events."
+        },
+        {
+          "save": 0,
+          "state": true,
+          "pressed": "true",
+          "snapshot": "- 'button \"Save event: Prototype an AI assistant worth using\" [pressed]': Save event",
+          "status": "Saved: Prototype an AI assistant worth using. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 0,
+          "state": false,
+          "pressed": "false",
+          "snapshot": "- 'button \"Save event: Prototype an AI assistant worth using\"': Save event",
+          "status": "Removed: Prototype an AI assistant worth using. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 1,
+          "state": true,
+          "pressed": "true",
+          "snapshot": "- 'button \"Save event: When should a product say I don’t know\" [pressed]': Save event",
+          "status": "Saved: When should a product say “I don’t know”?. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 1,
+          "state": false,
+          "pressed": "false",
+          "snapshot": "- 'button \"Save event: When should a product say I don’t know\"': Save event",
+          "status": "Removed: When should a product say “I don’t know”?. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 2,
+          "state": true,
+          "pressed": "true",
+          "snapshot": "- 'button \"Save event: From promising demo to product decision\" [pressed]': Save event",
+          "status": "Saved: From promising demo to product decision. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 2,
+          "state": false,
+          "pressed": "false",
+          "snapshot": "- 'button \"Save event: From promising demo to product decision\"': Save event",
+          "status": "Removed: From promising demo to product decision. Demo only; this does not reserve a place."
+        },
+        {
+          "arrowSelect": "decide"
+        },
+        {
+          "interest": "build",
+          "selected": "build",
+          "result": "Try a prototype lab.\n\nStart with “Prototype an AI assistant worth using.” Bring a product problem you’re curious about; no code is needed for this sample workshop.\n\nExplore the sample calendar →\n\nDemo complete. No membership has been created.",
+          "group": "- group \"I’m most interested in\":\n  - text: I’m most interested in\n  - radio \"Building with AI\" [checked]\n  - text: Building with AI\n  - radio \"Responsible product decisions\"\n  - text: Responsible product decisions\n  - radio \"Finding a product community\"\n  - text: Finding a product community"
+        },
+        {
+          "interest": "decide",
+          "selected": "decide",
+          "result": "Start with a case circle.\n\nThe sample conversation “When should a product say ‘I don’t know’?” is a place to explore uncertainty and user trust with peers.\n\nExplore the sample calendar →\n\nDemo complete. No membership has been created.",
+          "group": "- group \"I’m most interested in\":\n  - text: I’m most interested in\n  - radio \"Building with AI\"\n  - text: Building with AI\n  - radio \"Responsible product decisions\" [checked]\n  - text: Responsible product decisions\n  - radio \"Finding a product community\"\n  - text: Finding a product community"
+        },
+        {
+          "interest": "connect",
+          "selected": "connect",
+          "result": "Make space for a peer session.\n\nIn this fictional club, an open peer session would help you find a learning partner or practice a product conversation.\n\nExplore the activities →\n\nDemo complete. No membership has been created.",
+          "group": "- group \"I’m most interested in\":\n  - text: I’m most interested in\n  - radio \"Building with AI\"\n  - text: Building with AI\n  - radio \"Responsible product decisions\"\n  - text: Responsible product decisions\n  - radio \"Finding a product community\" [checked]\n  - text: Finding a product community"
+        },
+        {
+          "faq": 0,
+          "opened": ""
+        },
+        {
+          "faq": 0,
+          "closed": null
+        },
+        {
+          "faq": 1,
+          "opened": ""
+        },
+        {
+          "faq": 1,
+          "closed": null
+        },
+        {
+          "faq": 2,
+          "opened": ""
+        },
+        {
+          "faq": 2,
+          "closed": null
+        },
+        {
+          "after": {
+            "width": 390,
+            "scroll": 390,
+            "fonts": [
+              {
+                "family": "Open Sans",
+                "status": "loaded"
+              }
+            ],
+            "overflow": [],
+            "internal": []
+          }
+        },
+        {
+          "radioStyle": {
+            "accent": "rgb(1, 33, 105)",
+            "outline": "rgb(0, 0, 0) none 3px",
+            "width": "15.8281px",
+            "height": "15.8281px"
+          },
+          "legend": "I’m most interested in"
+        },
+        {
+          "reload": {
+            "saved": 0,
+            "resultHidden": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "320-normal",
+      "checks": [
+        {
+          "initial": {
+            "width": 320,
+            "scroll": 320,
+            "fonts": [
+              {
+                "family": "Open Sans",
+                "status": "loaded"
+              }
+            ],
+            "overflow": [],
+            "internal": []
+          }
+        },
+        {
+          "filter": "workshop",
+          "visible": 2,
+          "expected": 2,
+          "status": "Showing 2 sample events."
+        },
+        {
+          "filter": "conversation",
+          "visible": 1,
+          "expected": 1,
+          "status": "Showing 1 sample events."
+        },
+        {
+          "filter": "all",
+          "visible": 3,
+          "expected": 3,
+          "status": "Showing 3 sample events."
+        },
+        {
+          "save": 0,
+          "state": true,
+          "pressed": "true",
+          "snapshot": "- 'button \"Save event: Prototype an AI assistant worth using\" [pressed]': Save event",
+          "status": "Saved: Prototype an AI assistant worth using. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 0,
+          "state": false,
+          "pressed": "false",
+          "snapshot": "- 'button \"Save event: Prototype an AI assistant worth using\"': Save event",
+          "status": "Removed: Prototype an AI assistant worth using. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 1,
+          "state": true,
+          "pressed": "true",
+          "snapshot": "- 'button \"Save event: When should a product say I don’t know\" [pressed]': Save event",
+          "status": "Saved: When should a product say “I don’t know”?. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 1,
+          "state": false,
+          "pressed": "false",
+          "snapshot": "- 'button \"Save event: When should a product say I don’t know\"': Save event",
+          "status": "Removed: When should a product say “I don’t know”?. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 2,
+          "state": true,
+          "pressed": "true",
+          "snapshot": "- 'button \"Save event: From promising demo to product decision\" [pressed]': Save event",
+          "status": "Saved: From promising demo to product decision. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 2,
+          "state": false,
+          "pressed": "false",
+          "snapshot": "- 'button \"Save event: From promising demo to product decision\"': Save event",
+          "status": "Removed: From promising demo to product decision. Demo only; this does not reserve a place."
+        },
+        {
+          "arrowSelect": "decide"
+        },
+        {
+          "interest": "build",
+          "selected": "build",
+          "result": "Try a prototype lab.\n\nStart with “Prototype an AI assistant worth using.” Bring a product problem you’re curious about; no code is needed for this sample workshop.\n\nExplore the sample calendar →\n\nDemo complete. No membership has been created.",
+          "group": "- group \"I’m most interested in\":\n  - text: I’m most interested in\n  - radio \"Building with AI\" [checked]\n  - text: Building with AI\n  - radio \"Responsible product decisions\"\n  - text: Responsible product decisions\n  - radio \"Finding a product community\"\n  - text: Finding a product community"
+        },
+        {
+          "interest": "decide",
+          "selected": "decide",
+          "result": "Start with a case circle.\n\nThe sample conversation “When should a product say ‘I don’t know’?” is a place to explore uncertainty and user trust with peers.\n\nExplore the sample calendar →\n\nDemo complete. No membership has been created.",
+          "group": "- group \"I’m most interested in\":\n  - text: I’m most interested in\n  - radio \"Building with AI\"\n  - text: Building with AI\n  - radio \"Responsible product decisions\" [checked]\n  - text: Responsible product decisions\n  - radio \"Finding a product community\"\n  - text: Finding a product community"
+        },
+        {
+          "interest": "connect",
+          "selected": "connect",
+          "result": "Make space for a peer session.\n\nIn this fictional club, an open peer session would help you find a learning partner or practice a product conversation.\n\nExplore the activities →\n\nDemo complete. No membership has been created.",
+          "group": "- group \"I’m most interested in\":\n  - text: I’m most interested in\n  - radio \"Building with AI\"\n  - text: Building with AI\n  - radio \"Responsible product decisions\"\n  - text: Responsible product decisions\n  - radio \"Finding a product community\" [checked]\n  - text: Finding a product community"
+        },
+        {
+          "faq": 0,
+          "opened": ""
+        },
+        {
+          "faq": 0,
+          "closed": null
+        },
+        {
+          "faq": 1,
+          "opened": ""
+        },
+        {
+          "faq": 1,
+          "closed": null
+        },
+        {
+          "faq": 2,
+          "opened": ""
+        },
+        {
+          "faq": 2,
+          "closed": null
+        },
+        {
+          "after": {
+            "width": 320,
+            "scroll": 320,
+            "fonts": [
+              {
+                "family": "Open Sans",
+                "status": "loaded"
+              }
+            ],
+            "overflow": [],
+            "internal": []
+          }
+        },
+        {
+          "radioStyle": {
+            "accent": "rgb(1, 33, 105)",
+            "outline": "rgb(0, 0, 0) none 3px",
+            "width": "15.8281px",
+            "height": "15.8281px"
+          },
+          "legend": "I’m most interested in"
+        },
+        {
+          "reload": {
+            "saved": 0,
+            "resultHidden": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "390-root",
+      "checks": [
+        {
+          "initial": {
+            "width": 390,
+            "scroll": 390,
+            "fonts": [
+              {
+                "family": "Open Sans",
+                "status": "loaded"
+              }
+            ],
+            "overflow": [],
+            "internal": []
+          }
+        },
+        {
+          "filter": "workshop",
+          "visible": 2,
+          "expected": 2,
+          "status": "Showing 2 sample events."
+        },
+        {
+          "filter": "conversation",
+          "visible": 1,
+          "expected": 1,
+          "status": "Showing 1 sample events."
+        },
+        {
+          "filter": "all",
+          "visible": 3,
+          "expected": 3,
+          "status": "Showing 3 sample events."
+        },
+        {
+          "save": 0,
+          "state": true,
+          "pressed": "true",
+          "snapshot": "- 'button \"Save event: Prototype an AI assistant worth using\" [pressed]': Save event",
+          "status": "Saved: Prototype an AI assistant worth using. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 0,
+          "state": false,
+          "pressed": "false",
+          "snapshot": "- 'button \"Save event: Prototype an AI assistant worth using\"': Save event",
+          "status": "Removed: Prototype an AI assistant worth using. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 1,
+          "state": true,
+          "pressed": "true",
+          "snapshot": "- 'button \"Save event: When should a product say I don’t know\" [pressed]': Save event",
+          "status": "Saved: When should a product say “I don’t know”?. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 1,
+          "state": false,
+          "pressed": "false",
+          "snapshot": "- 'button \"Save event: When should a product say I don’t know\"': Save event",
+          "status": "Removed: When should a product say “I don’t know”?. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 2,
+          "state": true,
+          "pressed": "true",
+          "snapshot": "- 'button \"Save event: From promising demo to product decision\" [pressed]': Save event",
+          "status": "Saved: From promising demo to product decision. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 2,
+          "state": false,
+          "pressed": "false",
+          "snapshot": "- 'button \"Save event: From promising demo to product decision\"': Save event",
+          "status": "Removed: From promising demo to product decision. Demo only; this does not reserve a place."
+        },
+        {
+          "arrowSelect": "decide"
+        },
+        {
+          "interest": "build",
+          "selected": "build",
+          "result": "Try a prototype lab.\n\nStart with “Prototype an AI assistant worth using.” Bring a product problem you’re curious about; no code is needed for this sample workshop.\n\nExplore the sample calendar →\n\nDemo complete. No membership has been created.",
+          "group": "- group \"I’m most interested in\":\n  - text: I’m most interested in\n  - radio \"Building with AI\" [checked]\n  - text: Building with AI\n  - radio \"Responsible product decisions\"\n  - text: Responsible product decisions\n  - radio \"Finding a product community\"\n  - text: Finding a product community"
+        },
+        {
+          "interest": "decide",
+          "selected": "decide",
+          "result": "Start with a case circle.\n\nThe sample conversation “When should a product say ‘I don’t know’?” is a place to explore uncertainty and user trust with peers.\n\nExplore the sample calendar →\n\nDemo complete. No membership has been created.",
+          "group": "- group \"I’m most interested in\":\n  - text: I’m most interested in\n  - radio \"Building with AI\"\n  - text: Building with AI\n  - radio \"Responsible product decisions\" [checked]\n  - text: Responsible product decisions\n  - radio \"Finding a product community\"\n  - text: Finding a product community"
+        },
+        {
+          "interest": "connect",
+          "selected": "connect",
+          "result": "Make space for a peer session.\n\nIn this fictional club, an open peer session would help you find a learning partner or practice a product conversation.\n\nExplore the activities →\n\nDemo complete. No membership has been created.",
+          "group": "- group \"I’m most interested in\":\n  - text: I’m most interested in\n  - radio \"Building with AI\"\n  - text: Building with AI\n  - radio \"Responsible product decisions\"\n  - text: Responsible product decisions\n  - radio \"Finding a product community\" [checked]\n  - text: Finding a product community"
+        },
+        {
+          "faq": 0,
+          "opened": ""
+        },
+        {
+          "faq": 0,
+          "closed": null
+        },
+        {
+          "faq": 1,
+          "opened": ""
+        },
+        {
+          "faq": 1,
+          "closed": null
+        },
+        {
+          "faq": 2,
+          "opened": ""
+        },
+        {
+          "faq": 2,
+          "closed": null
+        },
+        {
+          "after": {
+            "width": 390,
+            "scroll": 390,
+            "fonts": [
+              {
+                "family": "Open Sans",
+                "status": "loaded"
+              }
+            ],
+            "overflow": [],
+            "internal": []
+          }
+        },
+        {
+          "radioStyle": {
+            "accent": "rgb(1, 33, 105)",
+            "outline": "rgb(0, 0, 0) none 3px",
+            "width": "31.6719px",
+            "height": "31.6719px"
+          },
+          "legend": "I’m most interested in"
+        },
+        {
+          "reload": {
+            "saved": 0,
+            "resultHidden": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "320-root",
+      "checks": [
+        {
+          "initial": {
+            "width": 320,
+            "scroll": 320,
+            "fonts": [
+              {
+                "family": "Open Sans",
+                "status": "loaded"
+              }
+            ],
+            "overflow": [],
+            "internal": []
+          }
+        },
+        {
+          "filter": "workshop",
+          "visible": 2,
+          "expected": 2,
+          "status": "Showing 2 sample events."
+        },
+        {
+          "filter": "conversation",
+          "visible": 1,
+          "expected": 1,
+          "status": "Showing 1 sample events."
+        },
+        {
+          "filter": "all",
+          "visible": 3,
+          "expected": 3,
+          "status": "Showing 3 sample events."
+        },
+        {
+          "save": 0,
+          "state": true,
+          "pressed": "true",
+          "snapshot": "- 'button \"Save event: Prototype an AI assistant worth using\" [pressed]': Save event",
+          "status": "Saved: Prototype an AI assistant worth using. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 0,
+          "state": false,
+          "pressed": "false",
+          "snapshot": "- 'button \"Save event: Prototype an AI assistant worth using\"': Save event",
+          "status": "Removed: Prototype an AI assistant worth using. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 1,
+          "state": true,
+          "pressed": "true",
+          "snapshot": "- 'button \"Save event: When should a product say I don’t know\" [pressed]': Save event",
+          "status": "Saved: When should a product say “I don’t know”?. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 1,
+          "state": false,
+          "pressed": "false",
+          "snapshot": "- 'button \"Save event: When should a product say I don’t know\"': Save event",
+          "status": "Removed: When should a product say “I don’t know”?. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 2,
+          "state": true,
+          "pressed": "true",
+          "snapshot": "- 'button \"Save event: From promising demo to product decision\" [pressed]': Save event",
+          "status": "Saved: From promising demo to product decision. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 2,
+          "state": false,
+          "pressed": "false",
+          "snapshot": "- 'button \"Save event: From promising demo to product decision\"': Save event",
+          "status": "Removed: From promising demo to product decision. Demo only; this does not reserve a place."
+        },
+        {
+          "arrowSelect": "decide"
+        },
+        {
+          "interest": "build",
+          "selected": "build",
+          "result": "Try a prototype lab.\n\nStart with “Prototype an AI assistant worth using.” Bring a product problem you’re curious about; no code is needed for this sample workshop.\n\nExplore the sample calendar →\n\nDemo complete. No membership has been created.",
+          "group": "- group \"I’m most interested in\":\n  - text: I’m most interested in\n  - radio \"Building with AI\" [checked]\n  - text: Building with AI\n  - radio \"Responsible product decisions\"\n  - text: Responsible product decisions\n  - radio \"Finding a product community\"\n  - text: Finding a product community"
+        },
+        {
+          "interest": "decide",
+          "selected": "decide",
+          "result": "Start with a case circle.\n\nThe sample conversation “When should a product say ‘I don’t know’?” is a place to explore uncertainty and user trust with peers.\n\nExplore the sample calendar →\n\nDemo complete. No membership has been created.",
+          "group": "- group \"I’m most interested in\":\n  - text: I’m most interested in\n  - radio \"Building with AI\"\n  - text: Building with AI\n  - radio \"Responsible product decisions\" [checked]\n  - text: Responsible product decisions\n  - radio \"Finding a product community\"\n  - text: Finding a product community"
+        },
+        {
+          "interest": "connect",
+          "selected": "connect",
+          "result": "Make space for a peer session.\n\nIn this fictional club, an open peer session would help you find a learning partner or practice a product conversation.\n\nExplore the activities →\n\nDemo complete. No membership has been created.",
+          "group": "- group \"I’m most interested in\":\n  - text: I’m most interested in\n  - radio \"Building with AI\"\n  - text: Building with AI\n  - radio \"Responsible product decisions\"\n  - text: Responsible product decisions\n  - radio \"Finding a product community\" [checked]\n  - text: Finding a product community"
+        },
+        {
+          "faq": 0,
+          "opened": ""
+        },
+        {
+          "faq": 0,
+          "closed": null
+        },
+        {
+          "faq": 1,
+          "opened": ""
+        },
+        {
+          "faq": 1,
+          "closed": null
+        },
+        {
+          "faq": 2,
+          "opened": ""
+        },
+        {
+          "faq": 2,
+          "closed": null
+        },
+        {
+          "after": {
+            "width": 320,
+            "scroll": 320,
+            "fonts": [
+              {
+                "family": "Open Sans",
+                "status": "loaded"
+              }
+            ],
+            "overflow": [],
+            "internal": []
+          }
+        },
+        {
+          "radioStyle": {
+            "accent": "rgb(1, 33, 105)",
+            "outline": "rgb(0, 0, 0) none 3px",
+            "width": "31.6719px",
+            "height": "31.6719px"
+          },
+          "legend": "I’m most interested in"
+        },
+        {
+          "reload": {
+            "saved": 0,
+            "resultHidden": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "390-computed",
+      "checks": [
+        {
+          "initial": {
+            "width": 390,
+            "scroll": 390,
+            "fonts": [
+              {
+                "family": "Open Sans",
+                "status": "loaded"
+              }
+            ],
+            "overflow": [],
+            "internal": []
+          }
+        },
+        {
+          "filter": "workshop",
+          "visible": 2,
+          "expected": 2,
+          "status": "Showing 2 sample events."
+        },
+        {
+          "filter": "conversation",
+          "visible": 1,
+          "expected": 1,
+          "status": "Showing 1 sample events."
+        },
+        {
+          "filter": "all",
+          "visible": 3,
+          "expected": 3,
+          "status": "Showing 3 sample events."
+        },
+        {
+          "save": 0,
+          "state": true,
+          "pressed": "true",
+          "snapshot": "- 'button \"Save event: Prototype an AI assistant worth using\" [pressed]': Save event",
+          "status": "Saved: Prototype an AI assistant worth using. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 0,
+          "state": false,
+          "pressed": "false",
+          "snapshot": "- 'button \"Save event: Prototype an AI assistant worth using\"': Save event",
+          "status": "Removed: Prototype an AI assistant worth using. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 1,
+          "state": true,
+          "pressed": "true",
+          "snapshot": "- 'button \"Save event: When should a product say I don’t know\" [pressed]': Save event",
+          "status": "Saved: When should a product say “I don’t know”?. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 1,
+          "state": false,
+          "pressed": "false",
+          "snapshot": "- 'button \"Save event: When should a product say I don’t know\"': Save event",
+          "status": "Removed: When should a product say “I don’t know”?. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 2,
+          "state": true,
+          "pressed": "true",
+          "snapshot": "- 'button \"Save event: From promising demo to product decision\" [pressed]': Save event",
+          "status": "Saved: From promising demo to product decision. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 2,
+          "state": false,
+          "pressed": "false",
+          "snapshot": "- 'button \"Save event: From promising demo to product decision\"': Save event",
+          "status": "Removed: From promising demo to product decision. Demo only; this does not reserve a place."
+        },
+        {
+          "arrowSelect": "decide"
+        },
+        {
+          "interest": "build",
+          "selected": "build",
+          "result": "Try a prototype lab.\n\nStart with “Prototype an AI assistant worth using.” Bring a product problem you’re curious about; no code is needed for this sample workshop.\n\nExplore the sample calendar →\n\nDemo complete. No membership has been created.",
+          "group": "- group \"I’m most interested in\":\n  - text: I’m most interested in\n  - radio \"Building with AI\" [checked]\n  - text: Building with AI\n  - radio \"Responsible product decisions\"\n  - text: Responsible product decisions\n  - radio \"Finding a product community\"\n  - text: Finding a product community"
+        },
+        {
+          "interest": "decide",
+          "selected": "decide",
+          "result": "Start with a case circle.\n\nThe sample conversation “When should a product say ‘I don’t know’?” is a place to explore uncertainty and user trust with peers.\n\nExplore the sample calendar →\n\nDemo complete. No membership has been created.",
+          "group": "- group \"I’m most interested in\":\n  - text: I’m most interested in\n  - radio \"Building with AI\"\n  - text: Building with AI\n  - radio \"Responsible product decisions\" [checked]\n  - text: Responsible product decisions\n  - radio \"Finding a product community\"\n  - text: Finding a product community"
+        },
+        {
+          "interest": "connect",
+          "selected": "connect",
+          "result": "Make space for a peer session.\n\nIn this fictional club, an open peer session would help you find a learning partner or practice a product conversation.\n\nExplore the activities →\n\nDemo complete. No membership has been created.",
+          "group": "- group \"I’m most interested in\":\n  - text: I’m most interested in\n  - radio \"Building with AI\"\n  - text: Building with AI\n  - radio \"Responsible product decisions\"\n  - text: Responsible product decisions\n  - radio \"Finding a product community\" [checked]\n  - text: Finding a product community"
+        },
+        {
+          "faq": 0,
+          "opened": ""
+        },
+        {
+          "faq": 0,
+          "closed": null
+        },
+        {
+          "faq": 1,
+          "opened": ""
+        },
+        {
+          "faq": 1,
+          "closed": null
+        },
+        {
+          "faq": 2,
+          "opened": ""
+        },
+        {
+          "faq": 2,
+          "closed": null
+        },
+        {
+          "after": {
+            "width": 390,
+            "scroll": 390,
+            "fonts": [
+              {
+                "family": "Open Sans",
+                "status": "loaded"
+              }
+            ],
+            "overflow": [],
+            "internal": []
+          }
+        },
+        {
+          "radioStyle": {
+            "accent": "rgb(1, 33, 105)",
+            "outline": "rgb(0, 0, 0) none 3px",
+            "width": "31.6719px",
+            "height": "31.6719px"
+          },
+          "legend": "I’m most interested in"
+        },
+        {
+          "reload": {
+            "saved": 0,
+            "resultHidden": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "320-computed",
+      "checks": [
+        {
+          "initial": {
+            "width": 320,
+            "scroll": 320,
+            "fonts": [
+              {
+                "family": "Open Sans",
+                "status": "loaded"
+              }
+            ],
+            "overflow": [],
+            "internal": []
+          }
+        },
+        {
+          "filter": "workshop",
+          "visible": 2,
+          "expected": 2,
+          "status": "Showing 2 sample events."
+        },
+        {
+          "filter": "conversation",
+          "visible": 1,
+          "expected": 1,
+          "status": "Showing 1 sample events."
+        },
+        {
+          "filter": "all",
+          "visible": 3,
+          "expected": 3,
+          "status": "Showing 3 sample events."
+        },
+        {
+          "save": 0,
+          "state": true,
+          "pressed": "true",
+          "snapshot": "- 'button \"Save event: Prototype an AI assistant worth using\" [pressed]': Save event",
+          "status": "Saved: Prototype an AI assistant worth using. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 0,
+          "state": false,
+          "pressed": "false",
+          "snapshot": "- 'button \"Save event: Prototype an AI assistant worth using\"': Save event",
+          "status": "Removed: Prototype an AI assistant worth using. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 1,
+          "state": true,
+          "pressed": "true",
+          "snapshot": "- 'button \"Save event: When should a product say I don’t know\" [pressed]': Save event",
+          "status": "Saved: When should a product say “I don’t know”?. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 1,
+          "state": false,
+          "pressed": "false",
+          "snapshot": "- 'button \"Save event: When should a product say I don’t know\"': Save event",
+          "status": "Removed: When should a product say “I don’t know”?. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 2,
+          "state": true,
+          "pressed": "true",
+          "snapshot": "- 'button \"Save event: From promising demo to product decision\" [pressed]': Save event",
+          "status": "Saved: From promising demo to product decision. Demo only; this does not reserve a place."
+        },
+        {
+          "save": 2,
+          "state": false,
+          "pressed": "false",
+          "snapshot": "- 'button \"Save event: From promising demo to product decision\"': Save event",
+          "status": "Removed: From promising demo to product decision. Demo only; this does not reserve a place."
+        },
+        {
+          "arrowSelect": "decide"
+        },
+        {
+          "interest": "build",
+          "selected": "build",
+          "result": "Try a prototype lab.\n\nStart with “Prototype an AI assistant worth using.” Bring a product problem you’re curious about; no code is needed for this sample workshop.\n\nExplore the sample calendar →\n\nDemo complete. No membership has been created.",
+          "group": "- group \"I’m most interested in\":\n  - text: I’m most interested in\n  - radio \"Building with AI\" [checked]\n  - text: Building with AI\n  - radio \"Responsible product decisions\"\n  - text: Responsible product decisions\n  - radio \"Finding a product community\"\n  - text: Finding a product community"
+        },
+        {
+          "interest": "decide",
+          "selected": "decide",
+          "result": "Start with a case circle.\n\nThe sample conversation “When should a product say ‘I don’t know’?” is a place to explore uncertainty and user trust with peers.\n\nExplore the sample calendar →\n\nDemo complete. No membership has been created.",
+          "group": "- group \"I’m most interested in\":\n  - text: I’m most interested in\n  - radio \"Building with AI\"\n  - text: Building with AI\n  - radio \"Responsible product decisions\" [checked]\n  - text: Responsible product decisions\n  - radio \"Finding a product community\"\n  - text: Finding a product community"
+        },
+        {
+          "interest": "connect",
+          "selected": "connect",
+          "result": "Make space for a peer session.\n\nIn this fictional club, an open peer session would help you find a learning partner or practice a product conversation.\n\nExplore the activities →\n\nDemo complete. No membership has been created.",
+          "group": "- group \"I’m most interested in\":\n  - text: I’m most interested in\n  - radio \"Building with AI\"\n  - text: Building with AI\n  - radio \"Responsible product decisions\"\n  - text: Responsible product decisions\n  - radio \"Finding a product community\" [checked]\n  - text: Finding a product community"
+        },
+        {
+          "faq": 0,
+          "opened": ""
+        },
+        {
+          "faq": 0,
+          "closed": null
+        },
+        {
+          "faq": 1,
+          "opened": ""
+        },
+        {
+          "faq": 1,
+          "closed": null
+        },
+        {
+          "faq": 2,
+          "opened": ""
+        },
+        {
+          "faq": 2,
+          "closed": null
+        },
+        {
+          "after": {
+            "width": 320,
+            "scroll": 320,
+            "fonts": [
+              {
+                "family": "Open Sans",
+                "status": "loaded"
+              }
+            ],
+            "overflow": [],
+            "internal": []
+          }
+        },
+        {
+          "radioStyle": {
+            "accent": "rgb(1, 33, 105)",
+            "outline": "rgb(0, 0, 0) none 3px",
+            "width": "31.6719px",
+            "height": "31.6719px"
+          },
+          "legend": "I’m most interested in"
+        },
+        {
+          "reload": {
+            "saved": 0,
+            "resultHidden": true
+          }
+        }
+      ]
+    }
+  ],
+  "errors": [
+    "Failed to load resource: the server responded with a status of 404 (File not found)"
+  ],
+  "browser": "154.0.8037.97"
+}

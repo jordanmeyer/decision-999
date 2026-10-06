@@ -1,21 +1,21 @@
-"""Preview the generated website at its actual project path."""
+"""Preview the generated site at its real project path."""
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
-from pathlib import Path
+from build import ROOT, read_json
+from urllib.parse import urlsplit
 
-DIST = Path(__file__).resolve().parents[1] / 'dist'
+BASE = urlsplit(read_json(ROOT / 'site/config.json')['url']).path
 
 
 class Handler(SimpleHTTPRequestHandler):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, directory=str(ROOT / 'dist'), **kwargs)
+
     def do_GET(self):
-        if not self.path.startswith('/decision-999/'):
-            self.send_error(404)
-            return
-        self.path = self.path[len('/decision-999'):]
+        if not self.path.startswith(BASE):
+            return self.send_error(404)
+        self.path = self.path[len(BASE) - 1:]
         super().do_GET()
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, directory=str(DIST), **kwargs)
 
-
-print('Preview: http://localhost:8000/decision-999/', flush=True)
+print(f'Preview: http://localhost:8000{BASE}', flush=True)
 ThreadingHTTPServer(('127.0.0.1', 8000), Handler).serve_forever()

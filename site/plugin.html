@@ -1,0 +1,37 @@
+    <nav class="wrap crumbs" aria-label="Breadcrumb"><a href="${base}#plugins">Plugins</a> <span aria-hidden="true">›</span> <span aria-current="page">${display}</span></nav>
+    <header class="wrap listing-head">
+      <p class="label">${label}</p>
+      <h1>${display}</h1>
+      <p class="lead">${short}</p>
+      <p class="meta">${category} · Version ${version} · By ${developer}</p>
+      <p class="actions"><a class="button" href="#install">Install</a><a class="text-link" href="${source}">View source</a></p>
+    </header>
+    <figure class="wrap shots">
+      <div class="shot-row">${shots}</div>
+      <figcaption>Previews of the final reviewed output. Select a capture to see the full image.${example}</figcaption>
+    </figure>
+    <div class="wrap listing-body">
+      <div class="listing-main">
+        <section aria-labelledby="overview"><h2 id="overview">Overview</h2><p>${long}</p></section>
+        <section aria-labelledby="try"><h2 id="try">Try asking</h2>${prompts}</section>
+        <section aria-labelledby="audience"><h2 id="audience">Who it’s for</h2><p>${audience}</p></section>
+        <section aria-labelledby="evidence"><h2 id="evidence">Evidence</h2>${results}<p class="method">${method}</p>${evidence}</section>
+        <section aria-labelledby="limits"><h2 id="limits">Limits</h2><p>${limits}</p></section>
+      </div>
+      <aside class="listing-side">
+        <section id="install" class="side-block" aria-labelledby="install-title">
+          <h2 id="install-title">Install</h2>
+          ${install}
+        </section>
+        <section class="side-block" aria-labelledby="details-title">
+          <h2 id="details-title">Details</h2>
+          <dl class="details">
+            <div><dt>Version</dt><dd>${version}</dd></div>
+            <div><dt>Category</dt><dd>${category}</dd></div>
+            <div><dt>Developer</dt><dd>${developer}</dd></div>
+            <div><dt>Source</dt><dd><a href="${source}">GitHub</a></dd></div>
+            <div><dt>Documentation</dt><dd><a href="${readme}">README</a></dd></div>
+          </dl>
+        </section>
+      </aside>
+    </div>

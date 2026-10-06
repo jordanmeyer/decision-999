@@ -1,0 +1,41 @@
+    <section class="hero">
+      <div class="wrap">
+        <p class="status">Independent demonstration</p>
+        <h1>Plugins for ChatGPT and&nbsp;Claude.</h1>
+        <p class="lead">A proposed MBA course in building tools for real work.</p>
+        <p class="intro">Each plugin packages a way of working that an AI agent can repeat. Every listing shows what the plugin does, how it was tested, and how to install it.</p>
+      </div>
+    </section>
+    <section id="plugins" class="wrap catalog" aria-labelledby="plugins-title">
+      <div class="section-head">
+        <h2 id="plugins-title">Featured</h2>
+        <p>An instructor-built example of the proposed student work.</p>
+      </div>
+      <div class="cards">
+        ${cards}
+      </div>
+    </section>
+    <section class="band" aria-labelledby="standard-title">
+      <div class="wrap">
+        <h2 id="standard-title">What every listing shows</h2>
+        <div class="columns">
+          <div><h3>Who it’s for</h3><p>The person the plugin serves and the task it helps them complete.</p></div>
+          <div><h3>Evidence</h3><p>Recorded results, the method used to check them, and instructions for reproducing the checks.</p></div>
+          <div><h3>Limits</h3><p>Where it fails, what it should not be trusted with, and what a team would need before relying on it.</p></div>
+        </div>
+      </div>
+    </section>
+    <section id="install" class="wrap install" aria-labelledby="install-title">
+      <div class="section-head">
+        <h2 id="install-title">Install</h2>
+        <p>Add this catalog once. Its plugins then sit alongside the others in your app.</p>
+      </div>
+      ${install}
+    </section>
+    <section id="submit" class="wrap submit" aria-labelledby="submit-title">
+      <h2 id="submit-title">Submit a plugin</h2>
+      <div>
+        <p>The proposed submission format is a pull request with the plugin, its listing, and its test results. A listing goes live after review.</p>
+        <a class="text-link" href="https://github.com/${repo}/blob/main/docs/CONTRIBUTING.md">Read the submission guide</a>
+      </div>
+    </section>

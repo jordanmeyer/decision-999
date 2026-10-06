@@ -1,26 +1,42 @@
-# Decision 999
+# Build with AI
 
-An independent demonstration of a Codex plugin marketplace: discover, install, and contribute reusable agent capabilities. This is a placeholder project, not an approved course or an institutional service.
+An instructor-built example of a plugin directory for a proposed MBA course. Students would build and test plugins for ChatGPT and Claude. This repository holds the catalog and website; it is an independent demonstration, not an approved course. The course name and number are placeholders in `site/config.json`.
 
-[Website](https://jordanmeyer.github.io/decision-999/) · [Contribute a plugin](docs/CONTRIBUTING.md) · [Validation](docs/VALIDATION.md)
+[Website](https://jordanmeyer.github.io/decision-999/) · [Submit a plugin](docs/CONTRIBUTING.md) · [Validation](docs/VALIDATION.md)
 
-## Get started
+## Install
 
-With a Codex CLI that supports plugins:
+Claude on the web or desktop: **Customize › Plugins › Add › Add marketplace**, then enter `jordanmeyer/decision-999`. The catalog's plugins appear in **Discover**.
+
+Claude Code:
+
+```sh
+claude plugin marketplace add jordanmeyer/decision-999
+```
+
+Codex (ChatGPT):
 
 ```sh
 codex plugin marketplace add jordanmeyer/decision-999
 ```
 
-This registers the marketplace. Inspect a package and follow its separate installation instructions next.
+Then install a plugin by name, for example `duke-designer@decision-999`. Each plugin's README covers its own use.
 
-## Example plugin
+## Plugins
 
-**Brand Design Example** is the website title for the real [`duke-designer` package](plugins/duke-designer/README.md). It applies one specific public brand guide to webpages, presentations, documents, and visual review. It does not promise support for arbitrary brand systems. Open its README for installation and the actual skill invocation.
+- [Duke Designer](plugins/duke-designer/README.md): webpages, slides, and documents that follow Duke's public brand guidelines. Instructor-built example.
+
+## How it works
+
+Each `plugins/<name>/plugin.json` is a portable [Agent Plugins](https://agent-plugins.org/specification) manifest and the only registry. Its `extensions.com.openai.interface` holds the listing fields OpenAI's plugin directory reads: display name, descriptions, developer, category, example prompt, and screenshots. `extensions.io.github.jordanmeyer` holds the course fields: label, audience, evidence, method, and limits.
+
+`scripts/build.py` validates every manifest. It writes the Codex/ChatGPT catalog (`.agents/plugins/marketplace.json`), the Claude catalog (`.claude-plugin/marketplace.json`), and each plugin's `.claude-plugin/plugin.json`, then renders the site into `dist/`. Commit the generated catalogs; `scripts/check.py` fails when they are stale. Never edit them by hand.
+
+`site/` holds the templates, styles, licensed fonts, and `config.json`, the single place for the site name, course label, repository, marketplace name, and URL. Changing the marketplace name or repository changes every install command, so settle them before anyone installs.
 
 ## Local development
 
-Python 3.9+ is sufficient; the build has no third-party dependencies.
+Python 3.9+ with no third-party packages:
 
 ```sh
 python3 scripts/build.py
@@ -28,20 +44,8 @@ python3 scripts/check.py
 python3 scripts/serve.py
 ```
 
-Open [the local preview](http://localhost:8000/decision-999/). The build generates only `dist/`, which is ignored by Git. Self-hosted EB Garamond and Open Sans have their SIL Open Font License notices in `site/assets/`; the site needs no external font or catalog requests.
+Open [the local preview](http://localhost:8000/decision-999/). With Claude Code installed, also run `claude plugin validate .` after catalog changes.
 
-## Repository map
+## Deployment
 
-- `.agents/plugins/marketplace.json` is the real package catalog; paths are relative to the repository root.
-- `plugins/` contains distributable packages and their complete resources.
-- `site/presentation.json` supplies explicit neutral website fields for each catalog entry. Versions always come from package manifests.
-- `site/` and `scripts/` contain the static page and standard-library build/validation.
-- `.github/workflows/deploy.yml` validates changes and deploys only `dist/` from `main` through GitHub Actions.
-
-The canonical design reference is the copied skill at `plugins/duke-designer/skills/duke-designer/SKILL.md`. Marketplace-specific neutral naming and no-logo rules live in `AGENTS.md`. Plugin names, brand references, and package instructions stay outside the deployed website.
-
-## Deployment and maintenance
-
-Pages uses **GitHub Actions**, not branch-based publishing. Push ordinary commits to `main` to validate and deploy. Pull requests validate without deploying; manual deployment also requires `main`. The first push may precede Pages enablement: enable Actions as the publishing source, then run **Validate and deploy Pages** again. The repository homepage should match the canonical address reported by Pages; preserve any inherited root-site custom domain.
-
-To update a plugin, edit its canonical package, bump `plugin.json` version, check the public presentation, run both local checks, and test a fresh installation before pushing. Read the contributor guide for the full workflow. See [official packaging guidance](https://developers.openai.com/plugins/build/plugins) and [CLI command reference](https://learn.chatgpt.com/docs/developer-commands?surface=cli).
+GitHub Actions validates every push and pull request and deploys only `dist/` from `main` to GitHub Pages. Self-hosted EB Garamond and Open Sans keep their SIL Open Font License notices in `site/assets/`.

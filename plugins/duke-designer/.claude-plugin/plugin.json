@@ -1,0 +1,19 @@
+{
+  "name": "duke-designer",
+  "version": "0.2.0",
+  "description": "Design and review webpages, presentations, documents, and visual materials using Duke's public brand guidance.",
+  "author": {
+    "name": "Jordan Meyer",
+    "url": "https://github.com/jordanmeyer"
+  },
+  "homepage": "https://jordanmeyer.github.io/decision-999/plugins/duke-designer/",
+  "repository": "https://github.com/jordanmeyer/decision-999",
+  "keywords": [
+    "design",
+    "branding",
+    "webpages",
+    "presentations",
+    "documents",
+    "accessibility"
+  ]
+}

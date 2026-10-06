@@ -1,89 +1,118 @@
-# Publish Decision 999
+# Complete the plugin directory with existing reviewed examples
 
-This living plan follows the user's `~/.codex/PLANS.md`. Keep progress, discoveries, decisions, and outcomes current.
+This ExecPlan is a living document maintained according to `~/.codex/PLANS.md`. Keep Progress, Surprises & Discoveries, Decision Log, and Outcomes & Retrospective current.
 
 ## Purpose / Big Picture
 
-Build an independent demonstration where visitors discover a real reusable Codex design plugin, register its marketplace, inspect installation instructions, and learn how to contribute. Publish the source at `jordanmeyer/decision-999` and the generated static website through GitHub Pages. The website must contain no institutional names or logos; the plugin preserves its original identity and guidance.
+
+An MBA student should be able to send an employer a useful listing for a plugin they built. The faculty committee sees the same directory, initially populated by one instructor-built example, Duke Designer. Each listing explains the capability, shows actual output, offers installation steps, and identifies the evidence and limits behind its claims.
+
+The current task fills the listing with existing results from the Codex chat “Review design skill,” not newly generated examples. Visitors will see the final fictional AI and leadership symposium at desktop and mobile sizes and can inspect the source and independent review history. Complete integration and report its checks, then verify publication under the original project scope. Do not alter the sibling source, call the Claude API, or create Claude generation sessions. The coordinating agent owns commits and publication.
 
 ## Progress
 
-- [x] (2026-10-06) Inspected empty working directory, CLI 0.145.0, original skill and all medium references; recorded source hashes outside the project.
-- [x] (2026-10-06) Copied the complete 16-file skill, including reference illustrations and CSS tokens.
-- [x] (2026-10-06) Packaged and locally installed with CLI 0.145.0 in isolated configuration.
-- [x] (2026-10-06) Implemented website, catalog join, focused validators, documentation and Actions workflow.
-- [x] (2026-10-06) Checked desktop/mobile rendering, 200% text, keyboard/copy success and simulated failure, neutral output, and clean-clone build.
-- [x] (2026-10-06) Created public repository, pushed main, enabled Actions Pages, verified exact-commit deployment and live assets.
-- [x] (2026-10-06) Independent reviewer cleared requirements; fresh published installation/session read installed resources and produced a rendered HTML example.
-- [x] (2026-10-06) Prepared final validation record, removed disposable fixtures and test login, and completed simplification review.
+
+- [x] (2026-10-06) Implemented the directory layout and manifest-driven listing, with site identity in `site/config.json` and generated Codex/Claude catalogs.
+- [x] (2026-10-06) Previously checked the layout in a scratch copy at 1440, 375 and 320 pixels with clearly marked placeholder images; checked keyboard copy success/failure, local Codex and Claude Code installation, and Claude manifest validation. These checks predate the real evidence import.
+- [x] (2026-10-06) Located the completed October 2 Codex builder/reviewer exercise: event round 3 PASS, research round 2 PASS, student organization round 2 PASS.
+- [x] (2026-10-06) Imported reviewed sources, final screenshots, reports and reproduction scripts into the plugin; documented provenance in `EVIDENCE.md` and `assets/evidence/provenance.json`.
+- [x] (2026-10-06) Independently verified all 45 imported provenance entries and 12 final public-file hashes against the preserved records; the evidence importer confirmed all 517 sibling files unchanged and screenshot byte equality.
+- [x] (2026-10-06) Replaced the unrelated pricing-workshop prompt and removed the unused Claude generation runner. Reconciled the package README and validation record with actual iterative Codex evidence.
+- [x] (2026-10-06) Built and checked the integrated repository; catalogs, local manifest validation and whitespace checks pass.
+- [x] (2026-10-06) Parent inspected real home/listing/example at 1440px and 320px, loaded images/fonts, checked keyboard copy feedback and example registration/reset focus; no browser errors or narrow overflow.
+- [x] (2026-10-06) Completed independent asset/code review without blocking findings and documented fresh-install and clipboard-read limitations.
+- [ ] Coordinating agent publishes the implementation, verifies the exact-commit deployment and live output, and records the result. Fresh installation remains unverified for this integrated package.
 
 ## Surprises & Discoveries
 
-The source is a guidance-only skill: no scripts, font files, host-specific helpers, or required dependencies outside its own directory. Its relative reference links already work. GitHub CLI is absent, the connector authenticates as jordanmeyer but lacks repository creation/Pages management, and the in-app browser needs sign-in. SSH authentication to GitHub succeeds as jordanmeyer. The target repository returned 404 from the authenticated connector; confirm absence in the signed-in UI before creating it.
+
+The original source already contains completed independent reviews, including failed rounds and corrections. Event findings E1/E2, research R1 and student-organization S1/S2 are implementation defects resolved by the final versions. The final reports identify exact source hashes; a PASS is a bounded verdict on that artifact, not general skill accuracy or a first-attempt success rate.
+
+The source screenshots are full-page captures, 1440×3891 and 390×5693 pixels. Listing presentation must make their content understandable without misrepresenting them as newly generated images. The downloadable single-file event page embeds original CSS/font data and relocates the unchanged script; it needs packaging checks independently of the source's historical PASS.
+
+Claude and Codex read different catalog locations. The build generates `.claude-plugin/marketplace.json`, per-plugin `.claude-plugin/plugin.json`, and `.agents/plugins/marketplace.json` from root plugin manifests. Earlier local Claude Code 2.1.86 validation required omitting unsupported top-level description/displayName fields. Keep these generated files owned by the build.
 
 ## Decision Log
 
-- Decision: Use Python's standard library for the build and plain HTML/CSS/JavaScript for the site. Rationale: no dependency installation or framework is needed for one catalog and one copy control. Date: 2026-10-06.
-- Decision: Keep the complete original guidance, adding only installed-resource/output location instructions. Rationale: preserve supported media and provenance while making portability explicit. Date: 2026-10-06.
-- Decision: Use the original navy and warm neutral palette with EB Garamond/Open Sans. Rationale: follow the copied skill's actual system, using licensed fonts with retained notices. Date: 2026-10-06.
-- Decision: Use browser repository/Pages settings and existing SSH for publication if CLI authentication is unavailable. Rationale: reuse existing account access without new credentials. Date: 2026-10-06.
+
+- Decision: Keep employers as the primary audience and show the same site to the committee. Rationale: the listing is intended as a portfolio link; one instructor example honestly demonstrates the proposed course. Date: 2026-10-06, maintainer direction.
+- Decision: Use “Build with AI” and “MBA course · number pending” from `site/config.json`. Rationale: the final course name and number are unknown. Repository and marketplace remain `decision-999`. Date: 2026-10-06.
+- Decision: Permit the Duke Designer name and factual discussion of public guidance while prohibiting claims of affiliation or endorsement and institutional logos. Rationale: this is the maintainer's replacement for the original website-wide name prohibition. Date: 2026-10-06.
+- Decision: Keep `plugins/<name>/plugin.json` as the sole listing source and generate host catalogs. Rationale: one package folder contains contributor data, while hosts receive the formats they understand. Date: 2026-10-06.
+- Decision: Reuse the existing Codex assessment and retire the Claude generation runner. Rationale: the user explicitly requested the completed review results and no Claude API calls or generated Claude sessions. No new evaluation is needed to establish those historical findings. Date: 2026-10-06.
+- Decision: Describe three reviewed examples, three final passes after revisions and five resolved defects, without cost, duration, model-comparison or one-shot claims. Rationale: these counts are supported by specific reports; broader performance metrics are not. Date: 2026-10-06.
+- Decision: Retain final-source browser scripts with only their Playwright import adapted, and run reproductions in scratch copies. Rationale: this preserves useful repeatability without replacing historical evidence or introducing a new evaluation framework. Date: 2026-10-06.
 
 ## Outcomes & Retrospective
 
-The working marketplace is published at https://jordanmeyer.github.io/decision-999/. Public-source installation and a fresh installed-skill session succeeded. The independent reviewer found one escaping README link; it is fixed. Build, browser, isolation and source-preservation checks passed, including all 517 original sibling files. Full evidence is in docs/VALIDATION.md. Final handoff identifies the deployment of the final evidence commit; every published source change must pass the same workflow.
+
+The evidence gap is filled by existing work. The plugin now includes traceable sources and review history, and its documentation no longer asks the user to run an unrelated Claude generation benchmark. Current build, catalogs, local manifest validation and browser integration checks passed. Historical scratch installs are separate; fresh installation of this integration was not repeated due an environment-isolation constraint. Publication remains pending, and the older deployment does not prove this listing is live.
 
 ## Context and Orientation
 
-The project root is `/Users/jordan/Projects/decision-999`. The source lives next door at `../duke-designer/.agents/skills/duke-designer`. The copied canonical skill is `plugins/duke-designer/skills/duke-designer/SKILL.md`. Its references explain color, typography, hierarchy, responsive layout, accessibility, and several artifact formats. The deployment artifact means the generated `dist/` directory uploaded to Pages; it must exclude plugin files and machine metadata.
 
-The catalog at `.agents/plugins/marketplace.json` is the sole registry of packages. Each `source.path` resolves from the repository root. Each root `plugin.json` supplies its real version. `site/presentation.json` maps machine names to explicitly approved public fields; the build must reject missing entries rather than display raw metadata.
+The workspace is `/Users/jordan/Projects/decision-999`. `site/config.json` owns the display identity, course label, repository, marketplace name, canonical URL/base path and namespace for course listing fields. The current base path is `/decision-999/`.
+
+`plugins/duke-designer/plugin.json` supplies package version, vendor-facing metadata and course listing fields. `extensions.com.openai.interface` contains the displayed title, prompt and screenshot paths. `extensions.io.github.jordanmeyer` contains the evidence counts, method, audience, limits and example path. The packaged skill remains at `skills/duke-designer/SKILL.md`; it is guidance for artifact creation, not a bundled renderer or permission to use institutional marks.
+
+`assets/desktop.png` and `assets/mobile.png` are the existing final event-review screenshots. `assets/example.html` is the downloadable single-file event derivative. `assets/evidence/` holds preserved sources and review evidence; `EVIDENCE.md` describes scope, provenance and reproduction. The original source at `/Users/jordan/Projects/duke-designer` is read only. It is not needed to build the directory.
+
+`scripts/build.py` reads package manifests, generates host catalogs and renders `site/layout.html`, `site/home.html` and `site/plugin.html` into ignored `dist/`. `scripts/check.py` checks clean builds and package/site boundaries. `scripts/serve.py` previews the configured base path. The existing GitHub workflow deploys `dist/` from main. The coordinating agent owns publication and must record the new exact-commit outcome.
 
 ## Plan of Work
 
-### Milestone 1: A portable, installable package
 
-Add root `plugin.json` and the catalog. Add a portability paragraph to the copied skill telling agents to resolve references against its installed directory and write output into the user's project. Document prerequisites, provenance, actual skill invocation and installation commands in `plugins/duke-designer/README.md`. Register and install locally using a fresh temporary Codex configuration outside either source directory. Expect the installed skill and all 16 files in the cache. Use a compatibility manifest only if the installed client proves it necessary.
+### Milestone 1: Reuse exact reviewed evidence
 
-### Milestone 2: A real static marketplace
 
-Create `site/index.html`, `site/style.css`, `site/main.js`, `site/presentation.json`, and neutral licensed fonts under `site/assets/`. The page contains a text title, independent-demonstration label, dynamically generated plugin cards/details, registration command, installation link to the repository's `#example-plugin` anchor, and contributor/source links. Use navy #012169, white, warm #FCF7E5, graphite #666666, readable type and a 0.5rem spacing rhythm. No logo or favicon artwork is needed.
+This milestone is complete. Preserve the event round-3, research round-2 and student-organization round-2 sources, reports and checks. Keep their prior failed rounds so the iterative process is visible. Verify copied hashes against provenance and the final-verification record. The current prompt must describe the fictional Duke AI and leadership symposium, agenda, speakers, demonstration registration and rendered review. It restates the source brief; do not claim it is an exact original transcript.
 
-Write `scripts/build.py` to validate catalog identities, package paths, bundled Markdown references, metadata, and presentation data; render every catalog entry; copy only website assets; then reject restricted text and broken local URLs/anchors in output. `scripts/serve.py` serves the generated directory under `/decision-999/` for realistic local checks. Add focused regression checks for missing presentation, path escape, restricted text, and adding a second valid package without page edits. Generated files are ignored by Git.
+### Milestone 2: Integrate and inspect the listing
 
-### Milestone 3: Verify and publish
 
-Add `README.md`, `docs/CONTRIBUTING.md`, `docs/VALIDATION.md`, and `AGENTS.md`. The workflow validates pull requests and builds main, but only main can deploy. Use official checkout, configure-pages, upload-pages-artifact and deploy-pages actions; deployment requires successful build, pages write and identity-token write permissions. Push the initial main branch, enable Actions-based Pages through repository settings, then dispatch deployment. Wait for success tied to the exact commit. Verify rendered live content/assets and set the repository homepage to GitHub's actual canonical URL, preserving inherited custom domains.
+This milestone is complete; current results are recorded in `docs/VALIDATION.md`. Build using the real images and evidence fields. Validate generated catalogs and local links, then inspect both the home page and `/decision-999/plugins/duke-designer/` at desktop and 320/390px widths. Follow the evidence and example links. Check the single-file example's local loading and demonstration registration. Verify that counts and method text describe iterative review and that neither page implies institutional endorsement. Test keyboard copy and its failure feedback. Record observed results in `docs/VALIDATION.md`, distinguishing historical source review from current integration checks.
 
-### Milestone 4: Published-source proof and review
+### Milestone 3: Publication and handoff
 
-Register `jordanmeyer/decision-999` and install in a second unused temporary Codex configuration, from an external working directory. Inspect JSON marketplace and plugin listings to prove the remote Git source and installed path. Run a new session invoking `$duke-designer` to create a neutral HTML artifact, and retain sanitized evidence that it read bundled resources at the installed path. A separate reviewer checks fidelity, portability, branding and deployment. Resolve blocking findings, recheck sibling hashes and record the final commit/run/URLs.
+
+Review surrounding code and documentation for stale pricing-workshop prompts, removed runner references, duplicate registries and unsupported benchmark claims. Keep the standard-library build and plain browser implementation. Report completed local checks and remaining limits. The coordinating agent should publish through the existing main-branch workflow, verify the exact pushed commit and live URLs/assets, and record the deployment. Fresh remote installation remains blocked by the current isolation constraint; do not report it as passed or reuse old installation results as new proof.
 
 ## Concrete Steps
 
-From the project root, run `python3 scripts/build.py`, then `python3 scripts/check.py`. Both must exit zero. Run `python3 scripts/serve.py` and open `http://localhost:8000/decision-999/`. Inspect 1440, 390 and 320 pixel widths, 200% text, tab navigation, copy success/failure, anchors and console errors.
 
-For installation use `codex plugin marketplace add <source> --json` and `codex plugin add duke-designer@decision-999 --json`. Pass a fresh temporary `CODEX_HOME` to each command as documented by Codex; never modify the normal configuration. Inspect with `codex plugin marketplace list --json` and `codex plugin list --marketplace decision-999 --available --json`. Use existing login only for the fresh session if needed, without exposing credentials in logs or committing them.
+From `/Users/jordan/Projects/decision-999`, run:
 
-Initialize Git in this directory with `git init -b main`, commit reviewed source, add only the intended `git@github.com:jordanmeyer/decision-999.git` origin, and push without force. Use the signed-in GitHub UI for missing creation/Pages APIs. No changes to other repositories or account settings are authorized.
+    python3 scripts/build.py
+    python3 scripts/check.py
+    claude plugin validate .
+    python3 scripts/serve.py
+
+The first two commands should report a completed listing/catalog build and passing focused checks; the Claude command validates files locally and should report validation passed. It is not a generation session or API evaluation. Open `http://localhost:8000/decision-999/` and `http://localhost:8000/decision-999/plugins/duke-designer/` for browser checks.
+
+For optional repeated checks of the historical source, follow the scratch-copy commands in `plugins/duke-designer/EVIDENCE.md`. Those scripts inspect existing pages using Node.js, Playwright and Google Chrome, generate new screenshots/check records only in scratch space, and make no model calls. They are unnecessary merely to establish that the retained historical reports say PASS.
 
 ## Validation and Acceptance
 
-Accept only when Pages visibly renders the expected neutral page, assets load under the project base path, interactive behavior works, deployed text has zero case-insensitive restricted-name matches, and the published plugin installs and uses packaged resources from an unrelated working directory. A clean copy of this repository must build without the sibling. A second catalog entry with its presentation data must render automatically. Recompute the source tree hashes and compare against `/tmp/decision-999-source-hashes.json`.
+
+Accept local integration when clean build/check and local manifest validation pass; real images, examples and links load; desktop/narrow layouts remain readable without horizontal page scrolling; and keyboard actions and copy feedback work. The listing must accurately identify all three final review rounds and its fictional instructor example. The preserved public-file hashes must match the final reports. Verify that no source-tree changes were made and that no Claude generation occurred. Do not describe local work as published until the new deployment and live checks succeed.
 
 ## Idempotence and Recovery
 
-Build recreates only ignored `dist/`. Test fixtures live in temporary directories. Each install test uses its own temporary home, preserving normal configuration. Inspect before creating a remote; preserve existing intended history and never force-push. After failed deployment, inspect logs, fix in ordinary commits, and dispatch again. Authentication is the only known external prerequisite; keep dependent work pending if the user has not signed in.
+
+Build regenerates `dist/` and catalogs; do not hand-edit those generated files. Repeating checks must not change the preserved evidence. Use a disposable scratch copy for browser reproduction so new results cannot overwrite the October 2 record. If a copied hash differs, recopy only the identified source file and update provenance only for an intentional documented adaptation. Never edit the sibling to make a test pass.
 
 ## Artifacts and Notes
 
-Initial evidence: `codex-cli 0.145.0`; `ssh -T git@github.com` recognized jordanmeyer; connector returned target repository 404. Complete validation evidence belongs in `docs/VALIDATION.md`; temporary raw logs stay outside the repository.
+
+Verified import output on October 6:
+
+    Verified 45 provenance entries and all 12 final public-file hashes.
+
+The final source verdicts are event round 3 PASS, research round 2 PASS and student organization round 2 PASS. These cover reviewed artifact versions after corrections, with exact matrices and limitations in each report. Historical deployment run 37510840758 belongs to the earlier neutral single-page release, not this directory redesign.
 
 ## Interfaces and Dependencies
 
-Use Python 3.9+ standard library and a modern browser. Site assets are local, with font licenses retained. Plugin execution needs Codex with plugin commands and the user's artifact-generation tools; guidance does not supply a renderer. No MCP service, database, payment, account system, or extra plugin is required. Git and GitHub authentication are needed only for publishing and remote installation.
 
-Revision note (2026-10-06): Created after inspecting the brief, actual source skill, installed CLI, official packaging guidance and available publication access.
+Build and focused checks require Python 3.9+ standard library. Local host-manifest validation requires Claude Code but no model session. Optional reproduction requires Node.js, the Playwright package and installed Google Chrome; the skill itself has no dependency on those reproduction tools. No Claude API key, new generation runner, database or evaluation service is needed.
 
-Revision note (2026-10-06): Local and published registration/install passed with distinct clean homes. Public repository created, initial main pushed, and Pages switched to Actions. Reviewer found a repository-relative README link that escaped the installed package; changed it to an absolute repository URL. Desktop, 390px and 320px layouts inspected without overflow; keyboard copy succeeded. Fresh-session smoke test and live deployment remain in progress.
-
-Revision note (2026-10-06): Recorded successful published installation, fresh-session resource reads, desktop smoke rendering, independent review, Pages delivery, homepage, all-live-asset equality, and unchanged source hashes. Nested sandbox failure was resolved by an outer approved launch with the child sandbox retained. Temporary test login was removed. Final evidence commit remains to be deployed.
+Revision note (2026-10-06): Reconciled the directory plan with the user's direction to reuse the completed Codex review exercise. Removed the blocked Claude-generation milestone, unrelated prompt and benchmark assumptions; separated completed local integration from coordinating-agent publication and retained the fresh-install limitation.

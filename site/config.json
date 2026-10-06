@@ -1,0 +1,10 @@
+{
+  "name": "Build with AI",
+  "course": "MBA course · number pending",
+  "description": "An instructor-built plugin directory for a proposed MBA course.",
+  "url": "https://jordanmeyer.github.io/decision-999/",
+  "repo": "jordanmeyer/decision-999",
+  "marketplace": "decision-999",
+  "owner": {"name": "Jordan Meyer", "url": "https://github.com/jordanmeyer"},
+  "extension": "io.github.jordanmeyer"
+}
