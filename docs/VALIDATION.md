@@ -74,4 +74,4 @@ Install steps come from each app's documentation as read on October 6. Claude, C
 
 ## About page
 
-`/about/` presents the course from the course outline, reframed around plugins: the six-session arc and milestones, the four build levels, the proof each plugin ships with, and the public/synthetic-data policy, ending with the fact that reviewed plugins are free for anyone to install. It names no institution, uses the configured site name, and is linked from the header. Checked at 1440px, 375px and 320px with no horizontal overflow.
+`/about/` is written for people deciding whether to use the plugins. It presents them as the result of the course and of the builders' industry experience: who builds them and the kinds of work they come from (the course outline's project areas), how every plugin is made (real problem with a baseline, sourced claims, 20-case tests and red-teaming, publication with limits), a short note on the course and its data policy, and a call to install. It names no institution and uses the configured site name. Checked at 1440px, 375px and 320px with no horizontal overflow.
