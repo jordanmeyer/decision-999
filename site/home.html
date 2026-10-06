@@ -20,13 +20,9 @@
     <section class="compat" aria-labelledby="compat-title">
       <div class="wrap compat-inner">
         <h2 id="compat-title" class="compat-title">Compatible with</h2>
-        <div class="marquee">
-          <ul class="marquee-track">${compatible}</ul>
-          <ul class="marquee-track" aria-hidden="true">${compatible}</ul>
-        </div>
-        <button type="button" class="marquee-toggle" hidden>Pause</button>
+        <ul class="logos">${logos}</ul>
+        <a class="compat-more" href="${base}install/">and ${more} more</a>
       </div>
-      <p class="wrap compat-note">Built on the open <a href="https://agent-plugins.org/compatible-clients">Agent Plugins</a> standard, plus Claude’s plugin format.</p>
     </section>
     <section id="plugins" class="wrap catalog" aria-labelledby="plugins-title">
       <div class="section-head">
@@ -55,4 +51,5 @@
         <li><h3>Review and refine</h3><p>Check the result against the listing’s limits and ask for changes in the same conversation.</p></li>
       </ol>
       ${install}
+      <p class="install-more">Using another app? <a href="${base}install/">See install steps for every compatible app</a>.</p>
     </section>

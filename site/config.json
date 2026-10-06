@@ -7,6 +7,5 @@
   "repo": "jordanmeyer/decision-999",
   "marketplace": "decision-999",
   "owner": {"name": "Jordan Meyer", "url": "https://github.com/jordanmeyer"},
-  "extension": "io.github.jordanmeyer",
-  "compatible": ["ChatGPT", "Claude", "Codex", "GitHub Copilot", "VS Code", "Cursor", "Kiro", "Grok Bot", "OpenHands", "Hermes Agent", "OpenClaw", "NanoClaw"]
+  "extension": "io.github.jordanmeyer"
 }

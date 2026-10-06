@@ -62,6 +62,8 @@ The home page was rewritten for AI users looking for help with work they would h
 
 `python3 scripts/build.py`, `python3 scripts/check.py`, and `claude plugin validate` on the repository and the plugin pass. Local browser review at 1440px, 375px and 320px found no horizontal overflow on the home or listing page.
 
-## Compatibility strip
+## Compatible apps and install page
 
-The home page lists the ten clients on agent-plugins.org's compatible-clients page (ChatGPT and Codex shown separately) plus Claude, from `compatible` in `site/config.json`. “Compatible” means the package format loads there; install steps are tested only for Claude Code and the Codex CLI. The names are plain text, not vendor logos. The strip scrolls only when JavaScript runs and the visitor allows motion, pauses on hover or with its Pause button, and otherwise shows a static wrapped list; screen readers get the list once. Checked at 1440px and 375px with no horizontal overflow.
+The home page shows a static, grayscale row of five logos (ChatGPT, Claude, GitHub, VS Code, Cursor) and an “and 6 more” link to `/install/`, which gives steps for all 11 apps: the ten on agent-plugins.org's compatible-clients page plus Claude. The data is in `site/clients.json`. The ten logos are the vendor-supplied `light.svg` files from agent-plugins.org and Claude's is the slate wordmark from agentskills.io, all downloaded with the maintainer's approval on October 6; none contains scripts or external references.
+
+Install steps come from each app's documentation as read on October 6. Claude, Codex, GitHub Copilot, VS Code, Cursor (team marketplaces only) and Kiro document adding a GitHub repository; Copilot CLI and VS Code read our `.claude-plugin/marketplace.json`. OpenHands, Hermes Agent, OpenClaw, NanoClaw and Grok Bot install single plugin folders, so their cards point to the plugin folder and the app's setup guide rather than an unverified command. Only Claude Code and the Codex CLI are tested, and the page says so. Checked at 1440px, 375px and 320px with no horizontal overflow; all logos load.

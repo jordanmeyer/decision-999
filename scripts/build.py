@@ -132,28 +132,44 @@ def command(lines, label, kind='Terminal'):
             f'<button type="button" data-copy hidden aria-label="Copy {label}">Copy</button></div><pre><code>{code}</code></pre></div>')
 
 
-def install(config, plugin=None):
-    repo, market = config['repo'], config['marketplace']
-    claude, codex = [f'claude plugin marketplace add {repo}'], [f'codex plugin marketplace add {repo}']
-    if plugin:
-        claude.append(f"claude plugin install {plugin['name']}@{market}")
-        codex.append(f"codex plugin add {plugin['name']}@{market}")
-    then = f"Then add {escape(plugin['ui']['displayName'])} from <b>Discover</b>." if plugin else 'Its plugins then appear in <b>Discover</b>.'
-    return f'''<div class="hosts">
-        <div class="host">
-          <h3>Claude</h3>
-          <p>On the web or in the desktop app, open <b>Customize › Plugins › Add › Add marketplace</b> and enter:</p>
-          {command([repo], 'the repository name', 'Repository')}
-          <p>{then}</p>
-          <p>In Claude Code:</p>
-          {command(claude, 'the Claude Code commands')}
-        </div>
-        <div class="host">
-          <h3>ChatGPT</h3>
-          <p>In the Codex CLI, OpenAI’s coding agent included with ChatGPT plans:</p>
-          {command(codex, 'the Codex commands')}
-        </div>
-      </div>'''
+def load_clients(root):
+    """Apps that load the plugin format, from site/clients.json, with each logo's aspect ratio for layout."""
+    clients = read_json(root / 'site/clients.json')
+    for client in clients:
+        svg = root / 'site/assets/logos' / client['logo']
+        require(svg.is_file(), f"site/clients.json: missing logo {client['logo']}")
+        box = re.search(r'viewBox="([^"]+)"', svg.read_text())
+        require(box, f'{svg}: SVG needs a viewBox')
+        width, height = map(float, box[1].split()[2:])
+        client |= {'slug': re.sub(r'[^a-z0-9]+', '-', client['name'].lower()).strip('-'), 'ratio': width / height}
+    return clients
+
+
+def logo(client, base, height, alt=''):
+    return (f'<img src="{base}assets/logos/{client["logo"]}" alt="{escape(alt)}" '
+            f'width="{round(height * client["ratio"])}" height="{height}">')
+
+
+def hosts(clients, config, base, plugin, heading='h3', guide=False):
+    """Install panels. Lines that need a plugin name are dropped where no plugin is chosen."""
+    def fill(text, client):
+        return text.format(repo=config['repo'], marketplace=config['marketplace'], plugin=plugin or '', name=client['name'])
+
+    panels = []
+    for client in clients:
+        parts = [logo(client, base, 26), f'<{heading} id="{client["slug"]}">{escape(client["name"])}</{heading}>']
+        if client.get('tested'):
+            parts.append(f'<p class="label">{escape(client["tested"])}</p>')
+        for step in client['steps']:
+            parts.append(f'<p>{fill(step["text"], client)}</p>')  # site-authored copy may contain <b>
+            lines = [fill(line, client) for line in step.get('code', []) if plugin or '{plugin}' not in line]
+            if lines:
+                kind = step.get('kind', 'Terminal')
+                parts.append(command(lines, f"the {escape(client['name'])} {'commands' if kind == 'Terminal' else kind}", kind))
+        if guide:
+            parts.append(f'<a class="text-link" href="{client["guide"]}">Setup guide</a>')
+        panels.append('<div class="host">\n          ' + '\n          '.join(parts) + '\n        </div>')
+    return '<div class="hosts">\n        ' + '\n        '.join(panels) + '\n      </div>'
 
 
 def results(items):
@@ -176,7 +192,7 @@ def card(plugin, base):
         </article>'''
 
 
-def listing_page(plugin, config, base):
+def listing_page(plugin, config, base, clients):
     ui, listing, m = plugin['ui'], plugin['listing'], plugin['manifest']
     href, tree = f"{base}plugins/{plugin['name']}/", f"https://github.com/{config['repo']}/tree/main/plugins/{plugin['name']}"
     shots = ''.join(image(s, href + s.name, alt) for s, alt in zip(plugin['shots'], listing['screenshotAlt']))
@@ -189,7 +205,8 @@ def listing_page(plugin, config, base):
         'developer': escape(ui['developerName']), 'version': escape(m['version']), 'source': tree,
         'readme': f"https://github.com/{config['repo']}/blob/main/plugins/{plugin['name']}/README.md",
         'shots': shots, 'example': example, 'evidence': evidence, 'audience': escape(listing['audience']), 'limits': escape(listing['limits']),
-        'method': escape(listing['method']), 'results': results(listing['results']), 'install': install(config, plugin),
+        'method': escape(listing['method']), 'results': results(listing['results']),
+        'install': hosts([c for c in clients if c.get('primary')], config, base, plugin['name']),
         'prompts': ''.join(f'<blockquote class="prompt"><p>{escape(p)}</p></blockquote>' for p in ui['defaultPrompt']),
     }
 
@@ -235,6 +252,7 @@ def build(root=ROOT, base=None):
     base = base or urlsplit(config['url']).path
     require(re.fullmatch(r'/(?:[\w.-]+/)*', base), 'Base must be an absolute directory path')
     plugins = load(root, config)
+    clients = load_clients(root)
     for path, content in catalogs(config, plugins).items():
         (root / path).parent.mkdir(parents=True, exist_ok=True)
         (root / path).write_text(content)
@@ -244,7 +262,7 @@ def build(root=ROOT, base=None):
     shutil.copytree(root / 'site/assets', dist / 'assets')
     for name in ('style.css', 'main.js'):
         shutil.copy2(root / 'site' / name, dist / name)
-    layout, home, detail = (Template((root / f'site/{name}.html').read_text()) for name in ('layout', 'home', 'plugin'))
+    layout, home, detail, setup = (Template((root / f'site/{name}.html').read_text()) for name in ('layout', 'home', 'plugin', 'install'))
     # Content hashes bust browser caches (GitHub Pages serves max-age=600) whenever the CSS or JavaScript changes.
     versions = {k: hashlib.sha256((root / f'site/{name}').read_bytes()).hexdigest()[:8] for k, name in (('css', 'style.css'), ('js', 'main.js'))}
     shared = {k: escape(config[k]) for k in ('name', 'course', 'repo')} | {'base': base} | versions
@@ -255,9 +273,17 @@ def build(root=ROOT, base=None):
                                           image=f'\n  <meta property="og:image" content="{image}">' if image else ''))
         return path
 
+    featured = [c for c in clients if c.get('featured')]
+    strip = ''.join(f'<li>{logo(c, base, 24, c["name"])}</li>' for c in featured)
     pages = [write(dist / 'index.html', f"{config['name']} · {config['tagline']}", config['description'],
-                   home.substitute(shared, cards='\n        '.join(card(p, base) for p in plugins), install=install(config),
-                                 compatible=''.join(f'<li>{escape(n)}</li>' for n in config['compatible'])), config['url'])]
+                   home.substitute(shared, cards='\n        '.join(card(p, base) for p in plugins), logos=strip,
+                                   more=len(clients) - len(featured), install=hosts([c for c in clients if c.get('primary')], config, base, None)),
+                   config['url'])]
+    example = plugins[0]
+    pages.append(write(dist / 'install/index.html', f"Install · {config['name']}", f"Install the {config['name']} plugins in your AI agent.",
+                       setup.substitute(shared, example=escape(example['ui']['displayName']), count=len(clients),
+                                        clients=hosts(clients, config, base, example['name'], 'h2', guide=True)),
+                       config['url'] + 'install/'))
     for plugin in plugins:
         folder = dist / 'plugins' / plugin['name']
         folder.mkdir(parents=True)
@@ -268,7 +294,7 @@ def build(root=ROOT, base=None):
             pages.append(folder / 'example.html')
         ui, url = plugin['ui'], plugin['manifest']['homepage']
         pages.append(write(folder / 'index.html', f"{ui['displayName']} · {config['name']}", ui['shortDescription'],
-                           detail.substitute(listing_page(plugin, config, base)), url, url + plugin['shots'][0].name))
+                           detail.substitute(listing_page(plugin, config, base, clients)), url, url + plugin['shots'][0].name))
     validate(dist, base, pages + [dist / 'style.css'])
     print(f'Built {len(plugins)} listing(s) and catalogs for Claude and Codex/ChatGPT.')
 

@@ -34,6 +34,8 @@ Each `plugins/<name>/plugin.json` is a portable [Agent Plugins](https://agent-pl
 
 `scripts/build.py` validates every manifest. It writes the Codex/ChatGPT catalog (`.agents/plugins/marketplace.json`), the Claude catalog (`.claude-plugin/marketplace.json`), and each plugin's `.claude-plugin/plugin.json`, then renders the site into `dist/`. Commit the generated catalogs; `scripts/check.py` fails when they are stale. Never edit them by hand.
 
+`site/clients.json` lists the apps that load the plugin format, with each app's logo, install steps, and setup-guide link. It drives the home page's logo row, the Claude and ChatGPT install panels, and the install page (`/install/`). Logos are the vendor-supplied files from agent-plugins.org and agentskills.io.
+
 `site/` holds the templates, styles, licensed fonts, and `config.json`, the single place for the site name, course label, repository, marketplace name, and URL. Changing the marketplace name or repository changes every install command, so settle them before anyone installs.
 
 ## Local development
