@@ -177,9 +177,9 @@ def results(items):
         f'<div><dt>{escape(r["label"])}</dt><dd>{escape(r["value"])}</dd></div>' for r in items) + '</dl>'
 
 
-def card(plugin, base):
+def card(plugin, base, attrs=''):
     ui, listing, href = plugin['ui'], plugin['listing'], f"{base}plugins/{plugin['name']}/"
-    return f'''<article class="card">
+    return f'''<article class="card"{attrs}>
           <a class="card-shot" href="{href}" tabindex="-1" aria-hidden="true">{image(plugin['shots'][0], href + plugin['shots'][0].name)}</a>
           <div class="card-body">
             <p class="label">{escape(listing['label'])}</p>
@@ -262,7 +262,8 @@ def build(root=ROOT, base=None):
     shutil.copytree(root / 'site/assets', dist / 'assets')
     for name in ('style.css', 'main.js'):
         shutil.copy2(root / 'site' / name, dist / name)
-    layout, home, detail, setup = (Template((root / f'site/{name}.html').read_text()) for name in ('layout', 'home', 'plugin', 'install'))
+    layout, home, detail, setup, directory = (Template((root / f'site/{name}.html').read_text())
+                                              for name in ('layout', 'home', 'plugin', 'install', 'plugins'))
     # Content hashes bust browser caches (GitHub Pages serves max-age=600) whenever the CSS or JavaScript changes.
     versions = {k: hashlib.sha256((root / f'site/{name}').read_bytes()).hexdigest()[:8] for k, name in (('css', 'style.css'), ('js', 'main.js'))}
     shared = {k: escape(config[k]) for k in ('name', 'course', 'repo')} | {'base': base} | versions
@@ -295,6 +296,18 @@ def build(root=ROOT, base=None):
         ui, url = plugin['ui'], plugin['manifest']['homepage']
         pages.append(write(folder / 'index.html', f"{ui['displayName']} · {config['name']}", ui['shortDescription'],
                            detail.substitute(listing_page(plugin, config, base, clients)), url, url + plugin['shots'][0].name))
+    categories = sorted({p['ui']['category'] for p in plugins})
+    chips = [('', 'All', len(plugins))] + [(c, c, sum(p['ui']['category'] == c for p in plugins)) for c in categories]
+    def searchable(p):
+        ui, listing, m = p['ui'], p['listing'], p['manifest']
+        words = [ui[k] for k in ('displayName', 'shortDescription', 'longDescription', 'category', 'developerName')]
+        return escape(' '.join(words + [listing['label'], listing['audience'], p['name']] + m.get('keywords', [])).lower())
+    pages.append(write(dist / 'plugins/index.html', f"Plugins · {config['name']}", config['description'], directory.substitute(
+        shared, count=f"{len(plugins)} plugin{'s' * (len(plugins) != 1)}",
+        chips=''.join(f'<button type="button" data-category="{escape(c)}" aria-pressed="{str(not c).lower()}">{escape(label)} <span>{n}</span></button>'
+                      for c, label, n in chips),
+        cards='\n        '.join(card(p, base, f' data-category="{escape(p["ui"]["category"])}" data-search="{searchable(p)}"') for p in plugins)),
+        config['url'] + 'plugins/'))
     validate(dist, base, pages + [dist / 'style.css'])
     print(f'Built {len(plugins)} listing(s) and catalogs for Claude and Codex/ChatGPT.')
 

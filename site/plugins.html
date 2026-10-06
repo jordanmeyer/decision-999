@@ -1,0 +1,15 @@
+    <header class="wrap page-head">
+      <h1>Plugins</h1>
+      <p class="lead">Built and tested by MBA students for ChatGPT, Claude, and other AI agents.</p>
+    </header>
+    <section class="wrap directory" aria-label="Plugin directory" data-directory>
+      <div class="toolbar" hidden>
+        <label class="search"><span class="sr-only">Search plugins</span><input type="search" placeholder="Search plugins" autocomplete="off"><kbd aria-hidden="true">/</kbd></label>
+        <div class="chips" role="group" aria-label="Filter by category">${chips}</div>
+      </div>
+      <p class="result-count" role="status">${count}</p>
+      <div class="directory-grid">
+        ${cards}
+      </div>
+      <p class="empty" hidden>No plugins match. <button type="button" class="link-button" data-clear>Clear the search</button></p>
+    </section>

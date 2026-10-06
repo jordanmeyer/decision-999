@@ -22,6 +22,7 @@ a { color: var(--navy); text-underline-offset: 0.2em; }
 a:hover { color: var(--royal); }
 :focus-visible { outline: 3px solid var(--navy); outline-offset: 3px; }
 img { display: block; max-width: 100%; height: auto; }
+[hidden] { display: none !important; }
 .wrap { width: min(100% - 4rem, 72rem); margin-inline: auto; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .skip { position: absolute; left: 1rem; top: -10rem; z-index: 2; padding: 0.75rem 1rem; background: var(--white); }
@@ -74,6 +75,22 @@ img { display: block; max-width: 100%; height: auto; }
 .clients .hosts { grid-template-columns: repeat(auto-fill, minmax(min(26rem, 100%), 1fr)); }
 .clients .host h2 { font-size: 1.75rem; }
 .clients .host .text-link { justify-self: start; margin-top: auto; }
+.directory { padding-bottom: 5rem; }
+.toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; margin-bottom: 1.25rem; }
+.search { position: relative; flex: 1 1 22rem; }
+.search input { width: 100%; padding: 0.8rem 3rem 0.8rem 1rem; border: 1px solid var(--line); border-radius: 0; background: var(--white); color: var(--ink); font: 1rem/1.4 var(--sans); }
+.search input:focus-visible { border-color: var(--navy); outline-offset: 0; }
+.search kbd { position: absolute; top: 50%; right: 0.85rem; transform: translateY(-50%); border: 1px solid var(--line); padding: 0 0.4rem; color: var(--muted); font: 0.75rem/1.5 var(--mono); }
+.chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.chips button { border: 1px solid var(--line); padding: 0.5rem 0.9rem; background: var(--white); color: var(--navy); font: 600 0.8125rem/1.4 var(--sans); cursor: pointer; }
+.chips button span { margin-left: 0.25rem; color: var(--muted); font-weight: 400; }
+.chips button:hover { border-color: var(--navy); }
+.chips button[aria-pressed="true"] { border-color: var(--navy); background: var(--navy); color: var(--white); }
+.chips button[aria-pressed="true"] span { color: var(--hatteras); }
+.result-count { margin-bottom: 1rem; font-size: 0.8125rem; color: var(--muted); }
+.directory-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr)); gap: 1.5rem; }
+.empty { padding-block: 2rem; color: var(--muted); }
+.link-button { border: 0; padding: 0; background: none; color: var(--navy); font: inherit; font-weight: 600; text-decoration: underline; cursor: pointer; }
 .fine { max-width: none; padding-bottom: 4rem; font-size: 0.8125rem; color: var(--muted); }
 .catalog { padding-bottom: 5rem; }
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr)); gap: 1.5rem; }
