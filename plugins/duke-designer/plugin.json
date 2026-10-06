@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "duke-designer",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Design and review webpages, presentations, documents, and visual materials using Duke's public brand guidance.",
   "author": {
     "name": "Jordan Meyer",
@@ -26,7 +26,7 @@
         "developerName": "Jordan Meyer",
         "category": "Design",
         "defaultPrompt": [
-          "Use duke-designer to build a one-page website for a fictional Duke symposium on AI and leadership, with an agenda, speakers, and a demo registration form. Label it fictional, claim no university affiliation, and use no logos."
+          "Use duke-designer to build a one-page website for our spring symposium on AI and leadership. Use the agenda and speaker bios I’ve attached, add a registration button that links to our sign-up form, and make sure it looks good on phones."
         ],
         "screenshots": [
           "./assets/desktop.png",

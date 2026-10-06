@@ -1,6 +1,6 @@
 # Duke Designer
 
-Version 0.2.1. The complete `duke-designer` skill: Duke's public brand guidance for webpages, presentations, documents, and visual materials. It is an independent, instructor-built example. It is not an official Duke tool and grants no permission to use Duke marks.
+Version 0.2.2. The complete `duke-designer` skill: Duke's public brand guidance for webpages, presentations, documents, and visual materials. It is an independent, instructor-built example. It is not an official Duke tool and grants no permission to use Duke marks.
 
 ## Install
 
@@ -22,7 +22,7 @@ codex plugin add duke-designer@decision-999
 
 Start a new session after installing. Ask in plain language, for example the listing's example prompt:
 
-> Use duke-designer to build a one-page website for a fictional Duke symposium on AI and leadership, with an agenda, speakers, and a demo registration form. Label it fictional, claim no university affiliation, and use no logos.
+> Use duke-designer to build a one-page website for our spring symposium on AI and leadership. Use the agenda and speaker bios I’ve attached, add a registration button that links to our sign-up form, and make sure it looks good on phones.
 
 To call the skill directly, use `/duke-designer:duke-designer` in Claude or `$duke-designer` in Codex.
 
@@ -44,4 +44,4 @@ The review reports, preserved sources and full-page captures, the single-file ev
 
 Copied from the complete design skill supplied with the project, preserving its organization and references checked on 2026-10-02. The package excludes source-repository scripts, caches, credentials, and unrelated projects. The only instruction edit is in `SKILL.md`: it resolves bundled links relative to the installed skill and writes artifacts into the user's project, not the plugin. The skill has no runtime dependency on the original directory, author-specific absolute paths, or escaping symlinks.
 
-0.2.0 added directory listing metadata, generated Claude manifests, and screenshots of reviewed output. 0.2.1 moves the review evidence out of the package (from 5.6 MB to about 0.5 MB) and replaces the full-page screenshots with display crops. The skill itself is unchanged.
+0.2.0 added directory listing metadata, generated Claude manifests, and screenshots of reviewed output. 0.2.1 moves the review evidence out of the package (from 5.6 MB to about 0.5 MB) and replaces the full-page screenshots with display crops. 0.2.2 replaces the example prompt with an everyday request. The skill itself is unchanged.

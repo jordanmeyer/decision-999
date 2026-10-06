@@ -24,7 +24,7 @@ The event review's final full-page captures are preserved unchanged at [1440px](
 
 The event page's Open Sans font is distributed under the [SIL Open Font License](OFL.txt), included here and inside the example's HTML comment. Georgia remains a system fallback and is not redistributed. The skill itself bundles no font.
 
-The listing prompt restates the original event brief: a fictional Duke symposium about AI and leadership with an agenda, speakers and demo registration, labeled fictional, claiming no affiliation and using no logos. It leaves out the brief's rendering and accessibility review steps because the skill already tells the agent to inspect its rendered output. It is a practical reuse prompt, not a verbatim transcript or a promise to reproduce the exact composition.
+The listing’s “Try asking” prompt is an everyday request of the kind a Duke student or staff member might make, not the reviewed brief. The reviewed event brief asked for a fictional Duke symposium on AI and leadership with an agenda, speakers and demo registration, labeled fictional, claiming no affiliation and using no logos, with rendered desktop/mobile review; the event reports record it. The screenshots show the output of that reviewed brief, not of the listing prompt.
 
 ## Inspect or reproduce the browser checks
 
