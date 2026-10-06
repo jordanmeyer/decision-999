@@ -13,7 +13,17 @@ claude plugin marketplace add jordanmeyer/decision-999
 claude plugin install duke-designer@decision-999
 ```
 
-Codex (ChatGPT):
+**ChatGPT desktop · Work mode.** With the Codex CLI installed on the same computer, register the catalog:
+
+```sh
+codex plugin marketplace add jordanmeyer/decision-999
+```
+
+Restart ChatGPT desktop, open **Plugins Directory**, choose **Build with AI**, and install Duke Designer. Start a new chat. This is the local desktop route described in the [official setup guide](https://developers.openai.com/plugins/build/plugins#build-your-own-curated-plugin-list).
+
+**Managed ChatGPT workspace.** A workspace admin opens **Admin › Plugins › Add › Import marketplace**. Use `https://github.com/jordanmeyer/decision-999` as Source, leave Path and Branch blank, and authorize GitHub. Review the plugins and set them to **Available** or **Installed**. Members install from their workspace's **Plugins**, then start a new chat. See the [workspace admin guide](https://learn.chatgpt.com/docs/enterprise/plugin-management). These routes require the corresponding desktop or workspace plugin surface; an arbitrary GitHub catalog cannot be assumed installable in an ordinary ChatGPT web chat.
+
+Codex CLI:
 
 ```sh
 codex plugin marketplace add jordanmeyer/decision-999
