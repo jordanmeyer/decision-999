@@ -21,7 +21,7 @@ The current task fills the listing with existing results from the Codex chat “
 - [x] (2026-10-06) Built and checked the integrated repository; catalogs, local manifest validation and whitespace checks pass.
 - [x] (2026-10-06) Parent inspected real home/listing/example at 1440px and 320px, loaded images/fonts, checked keyboard copy feedback and example registration/reset focus; no browser errors or narrow overflow.
 - [x] (2026-10-06) Completed independent asset/code review without blocking findings and documented fresh-install and clipboard-read limitations.
-- [ ] Coordinating agent publishes the implementation, verifies the exact-commit deployment and live output, and records the result. Fresh installation remains unverified for this integrated package.
+- [x] (2026-10-06) Published commit `78c67f55c61ee7bce7106ff67917d8551d18076b`; exact-commit deployment run 37531184205 succeeded. All 12 deployed files matched the build byte-for-byte; live home/listing/example and evidence links passed browser inspection without errors. Fresh installation was not repeated and remains a documented limitation, not a new evaluation requirement for this asset import.
 
 ## Surprises & Discoveries
 
@@ -46,7 +46,7 @@ Claude and Codex read different catalog locations. The build generates `.claude-
 ## Outcomes & Retrospective
 
 
-The evidence gap is filled by existing work. The plugin now includes traceable sources and review history, and its documentation no longer asks the user to run an unrelated Claude generation benchmark. Current build, catalogs, local manifest validation and browser integration checks passed. Historical scratch installs are separate; fresh installation of this integration was not repeated due an environment-isolation constraint. Publication remains pending, and the older deployment does not prove this listing is live.
+The evidence gap is filled by existing work. The plugin now includes traceable sources and review history, and its documentation no longer asks the user to run an unrelated Claude generation benchmark. Current build, catalogs, local manifest validation and browser integration checks passed. Historical scratch installs are separate; fresh installation of this integration was not repeated due an environment-isolation constraint. The requested asset integration is complete and published: exact-commit deployment succeeded, every deployed file matched the local build, and live browser inspection confirmed the listing, screenshots, evidence link and example. No Claude API calls or generation sessions were used.
 
 ## Context and Orientation
 
@@ -75,7 +75,7 @@ This milestone is complete; current results are recorded in `docs/VALIDATION.md`
 ### Milestone 3: Publication and handoff
 
 
-Review surrounding code and documentation for stale pricing-workshop prompts, removed runner references, duplicate registries and unsupported benchmark claims. Keep the standard-library build and plain browser implementation. Report completed local checks and remaining limits. The coordinating agent should publish through the existing main-branch workflow, verify the exact pushed commit and live URLs/assets, and record the deployment. Fresh remote installation remains blocked by the current isolation constraint; do not report it as passed or reuse old installation results as new proof.
+This milestone is complete; deployment and live checks are recorded in `docs/VALIDATION.md`. Review surrounding code and documentation for stale pricing-workshop prompts, removed runner references, duplicate registries and unsupported benchmark claims. Keep the standard-library build and plain browser implementation. Report completed local checks and remaining limits. The coordinating agent should publish through the existing main-branch workflow, verify the exact pushed commit and live URLs/assets, and record the deployment. Fresh remote installation remains blocked by the current isolation constraint; do not report it as passed or reuse old installation results as new proof.
 
 ## Concrete Steps
 
@@ -116,3 +116,5 @@ The final source verdicts are event round 3 PASS, research round 2 PASS and stud
 Build and focused checks require Python 3.9+ standard library. Local host-manifest validation requires Claude Code but no model session. Optional reproduction requires Node.js, the Playwright package and installed Google Chrome; the skill itself has no dependency on those reproduction tools. No Claude API key, new generation runner, database or evaluation service is needed.
 
 Revision note (2026-10-06): Reconciled the directory plan with the user's direction to reuse the completed Codex review exercise. Removed the blocked Claude-generation milestone, unrelated prompt and benchmark assumptions; separated completed local integration from coordinating-agent publication and retained the fresh-install limitation.
+
+Completion note (2026-10-06): Published the reviewed directory and imported assets from main, verified exact-commit run 37531184205, all 12 deployed-file bytes and live rendered output. The requested work is complete; historical and current installation evidence remain explicitly separated.
