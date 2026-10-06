@@ -253,7 +253,8 @@ def build(root=ROOT, base=None):
         return path
 
     pages = [write(dist / 'index.html', f"{config['name']} · {config['tagline']}", config['description'],
-                   home.substitute(shared, cards='\n        '.join(card(p, base) for p in plugins), install=install(config)), config['url'])]
+                   home.substitute(shared, cards='\n        '.join(card(p, base) for p in plugins), install=install(config),
+                                 compatible=''.join(f'<li>{escape(n)}</li>' for n in config['compatible'])), config['url'])]
     for plugin in plugins:
         folder = dist / 'plugins' / plugin['name']
         folder.mkdir(parents=True)

@@ -3,7 +3,7 @@
         <div class="hero-copy">
           <p class="status">Independent demonstration</p>
           <h1>Built by tomorrow’s business&nbsp;leaders.</h1>
-          <p class="lead">MBA students turn real work problems into tested plugins for ChatGPT and Claude.</p>
+          <p class="lead">MBA students turn real work problems into tested plugins for ChatGPT, Claude, and other AI agents.</p>
           <p class="actions"><a class="button" href="#plugins">Browse plugins</a><a class="text-link" href="#install">How to install</a></p>
         </div>
         <aside class="asks" aria-labelledby="asks-title">
@@ -16,6 +16,17 @@
           </ul>
         </aside>
       </div>
+    </section>
+    <section class="compat" aria-labelledby="compat-title">
+      <div class="wrap compat-inner">
+        <h2 id="compat-title" class="compat-title">Compatible with</h2>
+        <div class="marquee">
+          <ul class="marquee-track">${compatible}</ul>
+          <ul class="marquee-track" aria-hidden="true">${compatible}</ul>
+        </div>
+        <button type="button" class="marquee-toggle" hidden>Pause</button>
+      </div>
+      <p class="wrap compat-note">Built on the open <a href="https://agent-plugins.org/compatible-clients">Agent Plugins</a> standard, plus Claude’s plugin format.</p>
     </section>
     <section id="plugins" class="wrap catalog" aria-labelledby="plugins-title">
       <div class="section-head">

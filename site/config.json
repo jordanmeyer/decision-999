@@ -1,11 +1,12 @@
 {
   "name": "Build with AI",
   "course": "MBA course · number pending",
-  "tagline": "Plugins for ChatGPT and Claude",
+  "tagline": "Plugins for AI agents",
   "description": "A curated collection of plugins developed and tested by MBA students.",
   "url": "https://jordanmeyer.github.io/decision-999/",
   "repo": "jordanmeyer/decision-999",
   "marketplace": "decision-999",
   "owner": {"name": "Jordan Meyer", "url": "https://github.com/jordanmeyer"},
-  "extension": "io.github.jordanmeyer"
+  "extension": "io.github.jordanmeyer",
+  "compatible": ["ChatGPT", "Claude", "Codex", "GitHub Copilot", "VS Code", "Cursor", "Kiro", "Grok Bot", "OpenHands", "Hermes Agent", "OpenClaw", "NanoClaw"]
 }

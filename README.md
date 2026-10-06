@@ -1,6 +1,6 @@
 # Build with AI
 
-A curated collection of plugins developed and tested by MBA students for ChatGPT and Claude. This repository holds the catalog and website. The collection is maintained by the course team; individual listings identify their authors and evidence. The course name and number are configured in `site/config.json`.
+A curated collection of plugins developed and tested by MBA students for ChatGPT, Claude, and other AI agents. This repository holds the catalog and website. The collection is maintained by the course team; individual listings identify their authors and evidence. The course name and number are configured in `site/config.json`.
 
 [Website](https://jordanmeyer.github.io/decision-999/) · [Maintainer guide](docs/MAINTAINING.md) · [Validation](docs/VALIDATION.md)
 

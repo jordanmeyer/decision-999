@@ -61,3 +61,7 @@ On October 6, the review evidence, full-page captures, single-file example and i
 The home page was rewritten for AI users looking for help with work they would hire an MBA to do, following the structure of OpenAI's ChatGPT plugins page. Listing evidence now reads “3 of 3 example pages passed independent review” and “5 defects caught in review and fixed,” with a three-sentence method; the counts are unchanged. No model or API call was made.
 
 `python3 scripts/build.py`, `python3 scripts/check.py`, and `claude plugin validate` on the repository and the plugin pass. Local browser review at 1440px, 375px and 320px found no horizontal overflow on the home or listing page.
+
+## Compatibility strip
+
+The home page lists the ten clients on agent-plugins.org's compatible-clients page (ChatGPT and Codex shown separately) plus Claude, from `compatible` in `site/config.json`. “Compatible” means the package format loads there; install steps are tested only for Claude Code and the Codex CLI. The names are plain text, not vendor logos. The strip scrolls only when JavaScript runs and the visitor allows motion, pauses on hover or with its Pause button, and otherwise shows a static wrapped list; screen readers get the list once. Checked at 1440px and 375px with no horizontal overflow.
