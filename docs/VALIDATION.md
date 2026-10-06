@@ -53,9 +53,3 @@ Future changes must record their own relevant checks and deployment. The histori
 ## Curated collection wording update
 
 On October 6, removed the public plugin submission section, navigation link and unused styles. The home page now says “Developed and tested by MBA students.” Metadata and the maintainer guide describe a curated collection; the current example retains its accurate instructor-built label. Build, catalog freshness, focused checks, local manifest validation and whitespace checks pass. Desktop and 320px browser inspection confirmed only Plugins/Install navigation, the requested lead, no submission content and no horizontal page overflow.
-
-## ChatGPT installation instructions
-
-On October 6, checked OpenAI’s [local catalog setup guide](https://developers.openai.com/plugins/build/plugins#build-your-own-curated-plugin-list), [workspace plugin management guide](https://learn.chatgpt.com/docs/enterprise/plugin-management) and [plugin usage guide](https://learn.chatgpt.com/docs/plugins). The site and both READMEs now distinguish ChatGPT desktop Work mode, admin-managed ChatGPT workspace imports and Codex CLI installation. Desktop instructions register the local source, restart the desktop app, select the catalog in Plugins Directory and start a new chat after installation. Workspace instructions identify the admin import and availability steps before member installation. These are documentation-verified routes, not newly executed account imports or installation tests. Build, catalog freshness, focused checks and whitespace validation pass.
-
-Browser inspection confirmed the three desktop installation cards and 320px layout without horizontal page overflow. Keyboard Enter expanded the workspace details with visible focus, and the repository Source copy control reported success. No ChatGPT restart, account import, admin policy change or new plugin installation was performed.

@@ -130,7 +130,6 @@ def install(config, plugin=None):
         claude.append(f"claude plugin install {plugin['name']}@{market}")
         codex.append(f"codex plugin add {plugin['name']}@{market}")
     then = f"Then add {escape(plugin['ui']['displayName'])} from <b>Discover</b>." if plugin else 'Its plugins then appear in <b>Discover</b>.'
-    selection = f"<b>{escape(plugin['ui']['displayName'])}</b>" if plugin else 'a plugin'
     return f'''<div class="hosts">
         <div class="host">
           <h3>Claude</h3>
@@ -142,23 +141,8 @@ def install(config, plugin=None):
         </div>
         <div class="host">
           <h3>ChatGPT</h3>
-          <p><b>Desktop · Work mode</b></p>
-          <p>With the Codex CLI installed, register this catalog on the same computer:</p>
-          {command([codex[0]], 'the ChatGPT desktop catalog command')}
-          <p>Restart ChatGPT desktop. Open <b>Plugins Directory</b>, choose <b>{escape(config['name'])}</b>, and install {selection}. Start a new chat.</p>
-          <p><a href="https://developers.openai.com/plugins/build/plugins#build-your-own-curated-plugin-list">Desktop setup guide</a></p>
-          <details>
-            <summary>Managed ChatGPT workspace</summary>
-            <p>A workspace admin opens <b>Admin › Plugins › Add › Import marketplace</b> and uses this Source:</p>
-            {command([f'https://github.com/{repo}'], 'the workspace repository URL', 'Source')}
-            <p>Leave Path and Branch blank. Authorize GitHub, review the plugins, then set them to <b>Available</b> or <b>Installed</b>. Members install from their workspace’s <b>Plugins</b> and start a new chat.</p>
-            <p><a href="https://learn.chatgpt.com/docs/enterprise/plugin-management">Workspace admin guide</a></p>
-          </details>
-        </div>
-        <div class="host">
-          <h3>Codex CLI</h3>
+          <p>In the Codex CLI, OpenAI’s coding agent included with ChatGPT plans:</p>
           {command(codex, 'the Codex commands')}
-          <p>{'Start a new Codex session after installation.' if plugin else 'Then open a plugin listing for its install command.'}</p>
         </div>
       </div>'''
 
