@@ -124,7 +124,8 @@ def png_size(path):
 
 def image(path, src, alt=''):
     width, height = png_size(path)
-    return f'<img src="{src}" alt="{escape(alt)}" width="{width}" height="{height}">'
+    version = hashlib.sha256(path.read_bytes()).hexdigest()[:8]  # replaced screenshots bypass browser caches
+    return f'<img src="{src}?v={version}" alt="{escape(alt)}" width="{width}" height="{height}">'
 
 
 def command(lines, label, kind='Terminal'):

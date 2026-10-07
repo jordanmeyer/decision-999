@@ -91,7 +91,9 @@
     {
       "source": "examples/student-organization/styles.css",
       "file": "examples/student-organization/styles.css",
-      "sha256": "79fb926ff7cdd8d262be5a89ce0a57a9135b810bbae68c01ddc213d1592eb31d"
+      "sourceSha256": "79fb926ff7cdd8d262be5a89ce0a57a9135b810bbae68c01ddc213d1592eb31d",
+      "sha256": "bac58ad2b92a414da283c2df0e9ec9544d194ee83ba19ded6e80b5defed92de9",
+      "change": "Sample-session panel background changed from Dandelion (#FFD960) to Ginger Beer (#FCF7E5) on October 6 at the maintainer’s request, after review; navy text on Ginger Beer is 13.76:1."
     },
     {
       "source": "examples/student-organization/script.js",
