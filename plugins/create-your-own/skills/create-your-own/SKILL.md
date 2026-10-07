@@ -17,7 +17,7 @@ Resolve links in this skill relative to this file. Write everything you create i
 2. **Capture the judgment.** Read the user's SOP, checklist, or existing skill, then interview them as [From SOP to skill](references/sop-to-skill.md) describes.
 3. **Write the skill** in `drafts/<name>/SKILL.md` in the user's [copy of the repository](references/packaging.md#get-the-repository), starting from the [skill template](assets/SKILL.template.md) and following [From SOP to skill](references/sop-to-skill.md) and [Work across apps](references/portability.md). Revise it with the user until they would hand it to a new colleague.
 4. **Package it** with the [packaging script](scripts/new_plugin.py), as [Package and list](references/packaging.md) describes. From then on, edit the skill inside the plugin.
-5. **Test it** as [Test before listing](references/testing.md) describes: dozens of cases with known answers, in two apps, and someone else trying to break it. Fix the skill and rerun until the results hold, recording every round in the evidence record.
+5. **Test it** as [Test before listing](references/testing.md) describes: multiple cases with known answers or a scoring rubric, followed by thorough review by MBA students. Fix the skill and rerun until the results hold, recording every round in the evidence record.
 6. **Write the listing** from the evidence, add a screenshot, and run the site's build until it passes, as [Package and list](references/packaging.md) describes.
 7. **Hand it off** to the course team.
 

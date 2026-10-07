@@ -1,6 +1,6 @@
 # Create Your Own evidence
 
-Plugin version 0.1.0, with the 0.1.1 and 0.1.2 updates noted at the end. Everything here ran on October 6, 2026, on macOS with Python 3.14.3, Claude Code 2.1.86 and the Codex CLI 0.145.0. No model was run and no API was called: these checks cover packaging and installation, not the quality of skills built with the guide.
+Plugin version 0.1.0, with the 0.1.1–0.1.3 updates noted at the end. Everything here ran on October 6, 2026, on macOS with Python 3.14.3, Claude Code 2.1.86 and the Codex CLI 0.145.0. No model was run and no API was called: these checks cover packaging and installation, not the quality of skills built with the guide.
 
 ## Task and baseline
 
@@ -46,6 +46,10 @@ On October 7, 2026, `packaging.md` gained the listing's new optional `team` fiel
 ## Version 0.1.2
 
 On October 7, 2026, the listing's screenshot was removed (see below), and `packaging.md` now explains that screenshots are optional. The script and templates are unchanged. The site's build, `check.py`, both `claude plugin validate` runs, and the installs in empty settings were repeated for 0.1.2 ([install-test.txt](install-test.txt)).
+
+## Version 0.1.3
+
+On October 7, 2026, the testing guidance changed to multiple cases and thorough review by MBA students, with no fixed case count. Testing in a second app is optional; verified support claims still require testing in that app. The packaging script and templates are unchanged. Earlier results remain evidence for the versions and checks identified above.
 
 ## Screenshot
 

@@ -9,4 +9,4 @@ Skills follow the open [Agent Skills](https://agentskills.io/) format and plugin
 - **Scripts.** Use the Python 3 standard library or plain shell. Install nothing when the script runs, and use the network only when the task needs it, saying so.
 - **Output.** Write into the user's project or a folder they name, never into the installed plugin; installed copies may be read-only and are replaced on update.
 - **Secrets.** No credentials, API keys, personal data, or confidential material anywhere in the plugin. If the task needs an account, the user signs in to their own app; the skill never asks for a password.
-- **Plain instructions.** Don't assume a particular model or app. Write so that a different agent would follow the instructions the same way; testing in two apps confirms it.
+- **Plain instructions.** Don't assume a particular model or app. Write so that a different agent would follow the instructions the same way; test in another app before claiming verified support for it.
