@@ -91,3 +91,7 @@ The home page now runs hero, compatible apps, featured plugin, how it works (wit
 ## Card image and recolored panel
 
 At the maintainer's request, the student-organization page's sample-session panel now uses Ginger Beer (#FCF7E5) instead of Dandelion; navy text on it is 13.76:1. The edit is recorded in `provenance.json` with the reviewed file's hash, the reviewer's capture and the sibling original are unchanged, and the card image was re-rendered from the edited page. Card images are now centered with equal padding instead of anchored to the bottom-right edge, which left a large empty area at mid-size widths (at 1106px: 73px above and below, 40px each side). Image URLs carry a content hash so replaced screenshots are not served from browser caches.
+
+## Second landing page design pass
+
+The header now stays visible on screens wider than 40rem and makes Install a button. The hero adds three facts (compatible apps, free to install, tested before listing), main sections carry copper labels, “How it works” becomes numbered step cards on a gray band, sections alternate white and gray before the navy call to action, cards offer a direct Install button that opens the listing's install panel, and the footer adds the collection's description. Anchors clear the sticky header. Full-page captures at 1440px were reviewed, and every page has no horizontal overflow at 320px.

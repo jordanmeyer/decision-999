@@ -11,7 +11,7 @@
   --mono: ui-monospace, 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
 }
 * { box-sizing: border-box; }
-html { scroll-padding-top: 1.5rem; }
+html { scroll-padding-top: 6rem; }
 body { margin: 0; color: var(--ink); background: var(--white); font: 1rem/1.65 var(--sans); border-top: 4px solid var(--navy); }
 h1, h2, h3, p, figure, blockquote, dl, dd { margin: 0; }
 h1, h2, h3 { color: var(--navy); font-family: var(--serif); font-weight: 400; line-height: 1.1; text-wrap: balance; }
@@ -30,10 +30,13 @@ img { display: block; max-width: 100%; height: auto; }
 .skip { position: absolute; left: 1rem; top: -10rem; z-index: 2; padding: 0.75rem 1rem; background: var(--white); }
 .skip:focus { top: 1rem; }
 
-.masthead { border-bottom: 1px solid var(--line); }
+.masthead { z-index: 10; border-bottom: 1px solid var(--line); background: var(--white); }
+@media (min-width: 40rem) { .masthead { position: sticky; top: 0; } }
 .masthead-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 2rem; padding-block: 1.25rem; }
 .brand { font: 1.75rem/1.1 var(--serif); color: var(--navy); text-decoration: none; }
-.masthead nav { display: flex; gap: 2rem; }
+.masthead nav { display: flex; align-items: center; gap: 2rem; }
+.masthead nav .nav-cta { padding: 0.5rem 1.1rem; background: var(--navy); color: var(--white); }
+.masthead nav .nav-cta:hover { background: var(--royal); color: var(--white); text-decoration: none; }
 .masthead nav a { padding-block: 0.5rem; font-size: 0.875rem; font-weight: 600; text-decoration: none; }
 .masthead nav a:hover { text-decoration: underline; }
 
@@ -45,7 +48,7 @@ img { display: block; max-width: 100%; height: auto; }
 .text-link { font-size: 0.875rem; font-weight: 600; }
 .button { display: inline-block; padding: 0.75rem 1.5rem; background: var(--navy); color: var(--white); font-size: 0.875rem; font-weight: 600; text-decoration: none; }
 .button:hover { background: var(--royal); color: var(--white); }
-.section-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.5rem 2rem; margin-bottom: 2rem; }
+.section-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 0.5rem 2rem; margin-bottom: 2rem; }
 .section-head p { font-size: 0.9375rem; color: var(--muted); }
 
 .hero { padding-block: 4.5rem 5rem; background: var(--navy); color: var(--white); }
@@ -60,6 +63,9 @@ img { display: block; max-width: 100%; height: auto; }
 .hero-search input { flex: 1; min-width: 0; border: 0; border-radius: 0; padding: 1rem 1.1rem; background: var(--white); color: var(--ink); font: 1rem/1.4 var(--sans); }
 .hero-search button { flex: none; border: 0; padding: 0 1.5rem; background: var(--dandelion); color: var(--navy); font: 600 0.9375rem/1 var(--sans); cursor: pointer; }
 .hero-search button:hover { background: var(--persimmon); }
+.hero-proof { display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; margin: 2.25rem 0 0; padding: 1.5rem 0 0; border-top: 1px solid var(--royal); list-style: none; color: var(--hatteras); font-size: 0.875rem; }
+.hero-proof li::before { content: "✓"; margin-right: 0.5rem; color: var(--dandelion); font-weight: 600; }
+.kicker, .section-head .kicker { margin-bottom: 0.6rem; color: var(--copper); font: 600 0.75rem/1.4 var(--sans); letter-spacing: 0.12em; text-transform: uppercase; }
 .hero-links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; margin-top: 1.25rem; font-size: 0.875rem; font-weight: 600; }
 .demo { margin: 0; }
 .demo-window { background: var(--white); color: var(--ink); box-shadow: 0 1.5rem 3.5rem rgb(0 0 0 / 0.3); }
@@ -150,7 +156,8 @@ img { display: block; max-width: 100%; height: auto; }
 .card h3 a { text-decoration: none; }
 .card h3 a:hover { text-decoration: underline; }
 .card-body > p:not(.label, .meta) { color: var(--muted); }
-.card-body .text-link { justify-self: start; }
+.card-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.25rem; margin-top: 0.5rem; }
+.button.small { padding: 0.55rem 1.1rem; font-size: 0.8125rem; }
 .cards > .card:first-child { grid-column: 1 / -1; grid-template-columns: 1fr 1.1fr; }
 .cards > .card:first-child .card-shot { order: 2; padding: 2.5rem; }
 .cards > .card:first-child .card-body { padding: 2.75rem; }
@@ -161,9 +168,16 @@ img { display: block; max-width: 100%; height: auto; }
 .results dd { font: 2.25rem/1.1 var(--serif); color: var(--navy); }
 .results dt { margin-top: 0.35rem; font-size: 0.8125rem; color: var(--muted); }
 
+.how .section-head p { max-width: none; }
+.step-cards { margin: 0; gap: 1.5rem; }
+.steps.step-cards li { border: 1px solid var(--line); border-top: 3px solid var(--navy); padding: 2rem; background: var(--white); }
+.steps.step-cards li::before { content: counter(step); margin-bottom: 1.25rem; color: var(--navy); font: 3rem/1 var(--serif); letter-spacing: 0; }
+.section-head h2, .band .section-head h2 { margin-bottom: 0; }
+.why-section { padding-block: 5rem; }
+.why-section h2 { margin-bottom: 2.5rem; }
 .tasks { padding-block: 5rem; }
 .task-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr)); gap: 1.25rem; margin: 0; padding: 0; list-style: none; }
-.task-grid li { display: grid; align-content: start; gap: 0.75rem; padding: 1.5rem 1.5rem 1.75rem; border: 1px solid var(--line); border-top: 4px solid var(--accent); }
+.task-grid li { background: var(--white); display: grid; align-content: start; gap: 0.75rem; padding: 1.5rem 1.5rem 1.75rem; border: 1px solid var(--line); border-top: 4px solid var(--accent); }
 .task-grid li:nth-child(1) { --accent: var(--shale); }
 .task-grid li:nth-child(2) { --accent: var(--magnolia); }
 .task-grid li:nth-child(3) { --accent: var(--copper); }
@@ -200,9 +214,10 @@ img { display: block; max-width: 100%; height: auto; }
 .command button:focus-visible { outline-color: var(--dandelion); }
 
 .footer { border-top: 1px solid var(--line); font-size: 0.8125rem; color: var(--muted); }
-.footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 2rem; padding-block: 1.5rem 2rem; }
-.footer strong { color: var(--navy); }
-.footer nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
+.footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.5rem 3rem; padding-block: 3rem; }
+.footer-brand { display: grid; gap: 0.5rem; max-width: 24rem; }
+.footer .brand { font-size: 1.5rem; }
+.footer nav { display: grid; justify-items: start; gap: 0.6rem; font-size: 0.875rem; }
 
 .crumbs { padding-top: 1.5rem; font-size: 0.8125rem; color: var(--muted); }
 .listing-head { display: grid; justify-items: start; gap: 1rem; padding-block: 2.5rem; }

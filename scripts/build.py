@@ -195,7 +195,7 @@ def card(plugin, base, attrs=''):
             <p>{escape(ui['shortDescription'])}</p>
             {results(listing['results'][:2])}
             <p class="meta">{escape(ui['category'])} · {escape(ui['developerName'])}</p>
-            <a class="text-link" href="{href}">View listing</a>
+            <p class="card-actions"><a class="button small" href="{href}#install">Install</a><a class="text-link" href="{href}">View listing</a></p>
           </div>
         </article>'''
 
@@ -291,7 +291,7 @@ def build(root=ROOT, base=None):
                                                      for name in ('layout', 'home', 'plugin', 'install', 'plugins', 'about'))
     # Content hashes bust browser caches (GitHub Pages serves max-age=600) whenever the CSS or JavaScript changes.
     versions = {k: hashlib.sha256((root / f'site/{name}').read_bytes()).hexdigest()[:8] for k, name in (('css', 'style.css'), ('js', 'main.js'))}
-    shared = {k: escape(config[k]) for k in ('name', 'repo')} | {'base': base} | versions
+    shared = {k: escape(config[k]) for k in ('name', 'repo')} | {'base': base, 'summary': escape(config['description'])} | versions
 
     def write(path, title, description, content, url, image=''):
         path.parent.mkdir(parents=True, exist_ok=True)
@@ -303,7 +303,7 @@ def build(root=ROOT, base=None):
     strip = ''.join(f'<li>{logo(c, base, 24, c["name"])}</li>' for c in featured)
     pages = [write(dist / 'index.html', f"{config['name']} · {config['tagline']}", config['description'],
                    home.substitute(shared, cards='\n        '.join(card(p, base) for p in plugins), logos=strip, demo=demo(plugins[0], base),
-                                   more=len(clients) - len(featured)),
+                                   more=len(clients) - len(featured), apps=len(clients)),
                    config['url'])]
     example = plugins[0]
     pages.append(write(dist / 'install/index.html', f"Install · {config['name']}", f"Install the {config['name']} plugins in your AI agent.",
