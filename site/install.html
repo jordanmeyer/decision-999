@@ -8,7 +8,7 @@
     </section>
     <section class="wrap install-group" aria-labelledby="catalog-title">
       <div class="section-head">
-        <h2 id="catalog-title">Add the whole collection</h2>
+        <div><p class="kicker">One-time setup</p><h2 id="catalog-title">Add the whole collection</h2></div>
         <p>These apps add the catalog and list its plugins for you. Commands use ${example} as the example.</p>
       </div>
       ${catalog}
@@ -16,11 +16,20 @@
     <section class="band" aria-labelledby="folder-title">
       <div class="wrap">
         <div class="section-head">
-          <h2 id="folder-title">Install one plugin at a time</h2>
+          <div><p class="kicker">Single plugins</p><h2 id="folder-title">Install one plugin at a time</h2></div>
           <p>These apps install a single plugin from its folder. Point the app’s plugin installer at the folder, as its setup guide describes.</p>
         </div>
         <div class="folder-command">${folder}</div>
         <ul class="folder-apps">${folder_apps}</ul>
+        <p class="fine">Steps for Claude Code and the Codex CLI are tested; the rest follow each app’s documentation. Logos are trademarks of their owners. An app listed here can load the plugin format; that does not mean its maker endorses this collection.</p>
       </div>
     </section>
-    <p class="wrap fine">Steps for Claude Code and the Codex CLI are tested; the rest follow each app’s documentation. Logos are trademarks of their owners. An app listed here can load the plugin format; that does not mean its maker endorses this collection.</p>
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="wrap split">
+        <h2 id="cta-title">Next, pick a plugin.</h2>
+        <div>
+          <p>Once the collection is added, every plugin in it is a free install away.</p>
+          <p class="actions"><a class="button light" href="${base}plugins/">Browse the plugins</a><a class="text-link" href="${base}about/">Who builds them</a></p>
+        </div>
+      </div>
+    </section>

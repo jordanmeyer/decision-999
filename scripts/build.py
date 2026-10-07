@@ -336,7 +336,7 @@ def build(root=ROOT, base=None):
         words = [ui[k] for k in ('displayName', 'shortDescription', 'longDescription', 'category', 'developerName')]
         return escape(' '.join(words + [listing['label'], listing['audience'], p['name']] + m.get('keywords', [])).lower())
     pages.append(write(dist / 'plugins/index.html', f"Plugins · {config['name']}", config['description'], directory.substitute(
-        shared, count=f"{len(plugins)} plugin{'s' * (len(plugins) != 1)}",
+        shared, apps=len(clients), count=f"{len(plugins)} plugin{'s' * (len(plugins) != 1)}",
         chips=''.join(f'<button type="button" data-category="{escape(c)}" aria-pressed="{str(not c).lower()}">{escape(label)} <span>{n}</span></button>'
                       for c, label, n in chips),
         cards='\n        '.join(card(p, base, f' data-category="{escape(p["ui"]["category"])}" data-search="{searchable(p)}"') for p in plugins)),

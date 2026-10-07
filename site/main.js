@@ -25,7 +25,8 @@ if (directory) {
   addEventListener('keydown', event => {
     if (event.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) { event.preventDefault(); search.focus(); }
   });
-  directory.querySelector('.toolbar').hidden = false;
+  directory.querySelector('.directory-search').hidden = false;
+  directory.querySelector('.chips').hidden = false;
   search.value = new URLSearchParams(location.search).get('q') || '';
   update();
 }

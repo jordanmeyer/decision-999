@@ -95,3 +95,7 @@ At the maintainer's request, the student-organization page's sample-session pane
 ## Second landing page design pass
 
 The header now stays visible on screens wider than 40rem and makes Install a button. The hero adds three facts (compatible apps, free to install, tested before listing), main sections carry copper labels, “How it works” becomes numbered step cards on a gray band, sections alternate white and gray before the navy call to action, cards offer a direct Install button that opens the listing's install panel, and the footer adds the collection's description. Anchors clear the sticky header. Full-page captures at 1440px were reviewed, and every page has no horizontal overflow at 320px.
+
+## Plugins, about, and install pages restyled
+
+The plugins, about, and install pages now share the landing page's treatment: a navy page header (with the fact row on plugins and about), copper section labels, alternating white and gray sections, and a closing navy call to action. The directory's search box moved into the plugins header; search and category buttons appear only with JavaScript, and `?q=`, the empty state, Clear, category filtering, and the `/` shortcut were rechecked. About's expertise areas use the colored tiles and its four quality steps use numbered cards in a two-by-two grid so each title fits on one line. Full-page captures at 1440px were reviewed, and every page has no horizontal overflow at 320px.

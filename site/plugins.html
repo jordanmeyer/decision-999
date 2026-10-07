@@ -1,15 +1,34 @@
-    <header class="wrap page-head">
-      <h1>Plugins</h1>
-      <p class="lead">Built and tested by MBA students for ChatGPT, Claude, and other AI agents.</p>
-    </header>
-    <section class="wrap directory" aria-label="Plugin directory" data-directory>
-      <div class="toolbar" hidden>
-        <label class="search"><span class="sr-only">Search plugins</span><input type="search" placeholder="Search plugins" autocomplete="off"><kbd aria-hidden="true">/</kbd></label>
-        <div class="chips" role="group" aria-label="Filter by category">${chips}</div>
+    <div data-directory>
+      <section class="page-hero">
+        <div class="wrap">
+          <p class="hero-eyebrow">The collection</p>
+          <h1>Plugins</h1>
+          <p class="lead">Built and tested by MBA students for ChatGPT, Claude, and other AI agents.</p>
+          <label class="search directory-search" hidden><span class="sr-only">Search plugins</span><input type="search" placeholder="Search plugins" autocomplete="off"><kbd aria-hidden="true">/</kbd></label>
+          <ul class="hero-proof">
+            <li>Free to install</li>
+            <li>Tested before listing</li>
+            <li>Works with ${apps} apps</li>
+          </ul>
+        </div>
+      </section>
+      <section class="wrap directory" aria-label="Plugin directory">
+        <div class="toolbar">
+          <div class="chips" role="group" aria-label="Filter by category" hidden>${chips}</div>
+          <p class="result-count" role="status">${count}</p>
+        </div>
+        <div class="directory-grid">
+          ${cards}
+        </div>
+        <p class="empty" hidden>No plugins match. <button type="button" class="link-button" data-clear>Clear the search</button></p>
+      </section>
+    </div>
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="wrap split">
+        <h2 id="cta-title">Install once, use them all.</h2>
+        <div>
+          <p>Add the collection to your AI agent one time. Every plugin in it is free.</p>
+          <p class="actions"><a class="button light" href="${base}install/">Install the collection</a><a class="text-link" href="${base}about/">Who builds them</a></p>
+        </div>
       </div>
-      <p class="result-count" role="status">${count}</p>
-      <div class="directory-grid">
-        ${cards}
-      </div>
-      <p class="empty" hidden>No plugins match. <button type="button" class="link-button" data-clear>Clear the search</button></p>
     </section>
