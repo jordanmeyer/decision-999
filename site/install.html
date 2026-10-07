@@ -1,10 +1,26 @@
-    <header class="wrap page-head">
-      <p class="status">${count} compatible apps</p>
-      <h1>Install the collection</h1>
-      <p class="lead">Add the catalog once in your AI agent, then install any plugin from it.</p>
-      <p class="meta">Commands use ${example} as the example plugin. Steps for Claude Code and the Codex CLI are tested; the rest follow each app’s documentation.</p>
-    </header>
-    <section class="wrap clients" aria-label="Install steps by app">
-      ${clients}
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="hero-eyebrow">Install</p>
+        <h1>Add the collection to your AI&nbsp;agent.</h1>
+        <p class="lead">Works with ${count} apps. Add the catalog once, then install any plugin from it. Choose your app:</p>
+        <ul class="app-picker">${picker}</ul>
+      </div>
     </section>
-    <p class="wrap fine">Logos are trademarks of their owners. An app listed here can load the plugin format; that does not mean its maker endorses this collection.</p>
+    <section class="wrap install-group" aria-labelledby="catalog-title">
+      <div class="section-head">
+        <h2 id="catalog-title">Add the whole collection</h2>
+        <p>These apps add the catalog and list its plugins for you. Commands use ${example} as the example.</p>
+      </div>
+      ${catalog}
+    </section>
+    <section class="band" aria-labelledby="folder-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="folder-title">Install one plugin at a time</h2>
+          <p>These apps install a single plugin from its folder. Point the app’s plugin installer at the folder, as its setup guide describes.</p>
+        </div>
+        <div class="folder-command">${folder}</div>
+        <ul class="folder-apps">${folder_apps}</ul>
+      </div>
+    </section>
+    <p class="wrap fine">Steps for Claude Code and the Codex CLI are tested; the rest follow each app’s documentation. Logos are trademarks of their owners. An app listed here can load the plugin format; that does not mean its maker endorses this collection.</p>

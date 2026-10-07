@@ -79,3 +79,7 @@ Install steps come from each app's documentation as read on October 6. Claude, C
 ## Landing page design pass
 
 The home page now opens with a full-width navy hero: a search box that hands its query to `/plugins/?q=`, and a chat-window illustration pairing the featured plugin's example request with its real desktop screenshot, captioned as an illustration. The featured card shows the phone screenshot instead, so the two images differ. New sections: example requests in six work areas with accents from the extended brand palette, line icons on the three “why” points, and a closing navy call to action; the footer now links every page. Card hover lift respects reduced-motion settings. Full-page captures at 1440px and 500px were reviewed; all five pages have no horizontal overflow at 320px.
+
+## Install page design pass
+
+Install cards now use each app's logo as the heading (its alt text is the accessible name), so the name is no longer repeated; Hermes Agent and Grok Bot, whose logos are icon-only, show their name beside the icon. A navy header holds an app picker linking to every app's steps. Apps that add the whole catalog get full cards with a “Tested” badge where applicable; the five that install one plugin folder share one command and a row of logo tiles linking to their setup guides (`folder: true` in `site/clients.json`). Every picker link resolves, each “Setup guide” link carries an app-specific label, and the home, install, and listing pages have no horizontal overflow at 320px.

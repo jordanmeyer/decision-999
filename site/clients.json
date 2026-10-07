@@ -1,82 +1,143 @@
 [
   {
-    "name": "ChatGPT & Codex", "logo": "chatgpt.svg", "featured": true, "primary": true,
+    "name": "ChatGPT & Codex",
+    "logo": "chatgpt.svg",
+    "featured": true,
+    "primary": true,
     "tested": "Tested in the Codex CLI",
     "guide": "https://developers.openai.com/plugins",
     "steps": [
-      {"text": "In the Codex CLI, OpenAI’s coding agent included with ChatGPT plans:",
-       "code": ["codex plugin marketplace add {repo}", "codex plugin add {plugin}@{marketplace}"]}
+      {
+        "text": "In the Codex CLI, OpenAI’s coding agent included with ChatGPT plans:",
+        "code": [
+          "codex plugin marketplace add {repo}",
+          "codex plugin add {plugin}@{marketplace}"
+        ]
+      }
     ]
   },
   {
-    "name": "Claude", "logo": "claude.svg", "featured": true, "primary": true,
+    "name": "Claude",
+    "logo": "claude.svg",
+    "featured": true,
+    "primary": true,
     "tested": "Tested in Claude Code",
     "guide": "https://claude.com/docs/plugins/overview",
     "steps": [
-      {"text": "On the web or in the desktop app, open <b>Customize › Plugins › Add › Add marketplace</b> and enter:",
-       "code": ["{repo}"], "kind": "Repository"},
-      {"text": "Its plugins then appear in <b>Discover</b>. In Claude Code:",
-       "code": ["claude plugin marketplace add {repo}", "claude plugin install {plugin}@{marketplace}"]}
+      {
+        "text": "On the web or in the desktop app, open <b>Customize › Plugins › Add › Add marketplace</b> and enter:",
+        "code": [
+          "{repo}"
+        ],
+        "kind": "Repository"
+      },
+      {
+        "text": "Its plugins then appear in <b>Discover</b>. In Claude Code:",
+        "code": [
+          "claude plugin marketplace add {repo}",
+          "claude plugin install {plugin}@{marketplace}"
+        ]
+      }
     ]
   },
   {
-    "name": "GitHub Copilot", "logo": "github.svg", "featured": true,
+    "name": "GitHub Copilot",
+    "logo": "github.svg",
+    "featured": true,
     "guide": "https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/plugins-finding-installing",
     "steps": [
-      {"text": "In Copilot CLI. VS Code also picks up plugins installed this way.",
-       "code": ["copilot plugin marketplace add {repo}", "copilot plugin install {plugin}@{marketplace}"]}
+      {
+        "text": "In Copilot CLI. VS Code also picks up plugins installed this way.",
+        "code": [
+          "copilot plugin marketplace add {repo}",
+          "copilot plugin install {plugin}@{marketplace}"
+        ]
+      }
     ]
   },
   {
-    "name": "VS Code", "logo": "vscode.svg", "featured": true,
+    "name": "VS Code",
+    "logo": "vscode.svg",
+    "featured": true,
     "guide": "https://code.visualstudio.com/docs/agent-customization/agent-plugins",
     "steps": [
-      {"text": "Add the catalog to your user settings:",
-       "code": ["\"chat.plugins.marketplaces\": [\"{repo}\"]"], "kind": "settings.json"},
-      {"text": "Then search <b>@agentPlugins</b> in the Extensions view and select <b>Install</b>."}
+      {
+        "text": "Add the catalog to your user settings:",
+        "code": [
+          "\"chat.plugins.marketplaces\": [\"{repo}\"]"
+        ],
+        "kind": "settings.json"
+      },
+      {
+        "text": "Then search <b>@agentPlugins</b> in the Extensions view and select <b>Install</b>."
+      }
     ]
   },
   {
-    "name": "Cursor", "logo": "cursor.svg", "featured": true,
+    "name": "Cursor",
+    "logo": "cursor.svg",
+    "featured": true,
     "guide": "https://cursor.com/docs/plugins",
     "steps": [
-      {"text": "On Teams and Enterprise plans, an admin opens <b>Dashboard › Plugins &amp; MCPs</b>, chooses <b>Import from Repo</b>, and enters:",
-       "code": ["https://github.com/{repo}"], "kind": "Repository"},
-      {"text": "Teammates then install plugins from <b>Customize</b>."}
+      {
+        "text": "On Teams and Enterprise plans, an admin opens <b>Dashboard › Plugins &amp; MCPs</b>, chooses <b>Import from Repo</b>, and enters:",
+        "code": [
+          "https://github.com/{repo}"
+        ],
+        "kind": "Repository"
+      },
+      {
+        "text": "Teammates then install plugins from <b>Customize</b>."
+      }
     ]
   },
   {
-    "name": "Kiro", "logo": "kiro.svg",
+    "name": "Kiro",
+    "logo": "kiro.svg",
     "guide": "https://kiro.dev/docs/powers/installation/",
     "steps": [
-      {"text": "Open the Powers panel, choose <b>Add Custom Power › Import power from GitHub</b>, and enter:",
-       "code": ["https://github.com/{repo}"], "kind": "Repository"},
-      {"text": "Then select <b>Install</b>."}
+      {
+        "text": "Open the Powers panel, choose <b>Add Custom Power › Import power from GitHub</b>, and enter:",
+        "code": [
+          "https://github.com/{repo}"
+        ],
+        "kind": "Repository"
+      },
+      {
+        "text": "Then select <b>Install</b>."
+      }
     ]
   },
   {
-    "name": "OpenHands", "logo": "openhands.svg",
+    "name": "OpenHands",
+    "logo": "openhands.svg",
     "guide": "https://docs.openhands.dev/overview/agent-plugins",
-    "steps": [{"text": "Point {name}’s plugin installer at the plugin’s folder, as described in its setup guide:", "code": ["https://github.com/{repo}/tree/main/plugins/{plugin}"], "kind": "Plugin folder"}]
+    "folder": true
   },
   {
-    "name": "Hermes Agent", "logo": "hermes.svg",
+    "name": "Hermes Agent",
+    "logo": "hermes.svg",
     "guide": "https://hermes-agent.nousresearch.com/docs/developer-guide/plugins#portable-agent-plugins-v1-packages",
-    "steps": [{"text": "Point {name}’s plugin installer at the plugin’s folder, as described in its setup guide:", "code": ["https://github.com/{repo}/tree/main/plugins/{plugin}"], "kind": "Plugin folder"}]
+    "folder": true,
+    "icon": true
   },
   {
-    "name": "OpenClaw", "logo": "openclaw.svg",
+    "name": "OpenClaw",
+    "logo": "openclaw.svg",
     "guide": "https://docs.openclaw.ai/plugins/bundles",
-    "steps": [{"text": "Point {name}’s plugin installer at the plugin’s folder, as described in its setup guide:", "code": ["https://github.com/{repo}/tree/main/plugins/{plugin}"], "kind": "Plugin folder"}]
+    "folder": true
   },
   {
-    "name": "NanoClaw", "logo": "nanoclaw.svg",
+    "name": "NanoClaw",
+    "logo": "nanoclaw.svg",
     "guide": "https://github.com/nanocoai/nanoclaw/blob/main/docs/templates.md",
-    "steps": [{"text": "Point {name}’s plugin installer at the plugin’s folder, as described in its setup guide:", "code": ["https://github.com/{repo}/tree/main/plugins/{plugin}"], "kind": "Plugin folder"}]
+    "folder": true
   },
   {
-    "name": "Grok Bot", "logo": "grok-bot.svg",
+    "name": "Grok Bot",
+    "logo": "grok-bot.svg",
     "guide": "https://docs.x.ai/grok-bot/skills-routines-and-automations",
-    "steps": [{"text": "Point {name}’s plugin installer at the plugin’s folder, as described in its setup guide:", "code": ["https://github.com/{repo}/tree/main/plugins/{plugin}"], "kind": "Plugin folder"}]
+    "folder": true,
+    "icon": true
   }
 ]

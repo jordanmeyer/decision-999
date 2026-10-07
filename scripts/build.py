@@ -150,6 +150,13 @@ def logo(client, base, height, alt=''):
             f'width="{round(height * client["ratio"])}" height="{height}">')
 
 
+def mark(client, base, height):
+    """An app's logo stands in for its name; icon-only logos get the name beside them."""
+    if client.get('icon'):
+        return f'<span class="mark">{logo(client, base, height)}<span>{escape(client["name"])}</span></span>'
+    return logo(client, base, height, client['name'])
+
+
 def hosts(clients, config, base, plugin, heading='h3', guide=False):
     """Install panels. Lines that need a plugin name are dropped where no plugin is chosen."""
     def fill(text, client):
@@ -157,9 +164,8 @@ def hosts(clients, config, base, plugin, heading='h3', guide=False):
 
     panels = []
     for client in clients:
-        parts = [logo(client, base, 26), f'<{heading} id="{client["slug"]}">{escape(client["name"])}</{heading}>']
-        if client.get('tested'):
-            parts.append(f'<p class="label">{escape(client["tested"])}</p>')
+        tested = f'<p class="tested">{escape(client["tested"])}</p>' if client.get('tested') else ''
+        parts = [f'<div class="host-head"><{heading} id="{client["slug"]}" class="host-name">{mark(client, base, 28)}</{heading}>{tested}</div>']
         for step in client['steps']:
             parts.append(f'<p>{fill(step["text"], client)}</p>')  # site-authored copy may contain <b>
             lines = [fill(line, client) for line in step.get('code', []) if plugin or '{plugin}' not in line]
@@ -167,7 +173,7 @@ def hosts(clients, config, base, plugin, heading='h3', guide=False):
                 kind = step.get('kind', 'Terminal')
                 parts.append(command(lines, f"the {escape(client['name'])} {'commands' if kind == 'Terminal' else kind}", kind))
         if guide:
-            parts.append(f'<a class="text-link" href="{client["guide"]}">Setup guide</a>')
+            parts.append(f'<a class="text-link" href="{client["guide"]}" aria-label="{escape(client["name"])} setup guide">Setup guide</a>')
         panels.append('<div class="host">\n          ' + '\n          '.join(parts) + '\n        </div>')
     return '<div class="hosts">\n        ' + '\n        '.join(panels) + '\n      </div>'
 
@@ -301,7 +307,12 @@ def build(root=ROOT, base=None):
     example = plugins[0]
     pages.append(write(dist / 'install/index.html', f"Install · {config['name']}", f"Install the {config['name']} plugins in your AI agent.",
                        setup.substitute(shared, example=escape(example['ui']['displayName']), count=len(clients),
-                                        clients=hosts(clients, config, base, example['name'], 'h2', guide=True)),
+                                        picker=''.join(f'<li><a href="#{c["slug"]}">{mark(c, base, 24)}</a></li>' for c in clients),
+                                        catalog=hosts([c for c in clients if not c.get('folder')], config, base, example['name'], guide=True),
+                                        folder=command([f"https://github.com/{config['repo']}/tree/main/plugins/{example['name']}"], 'the plugin folder', 'Plugin folder'),
+                                        folder_apps=''.join(
+                                            f'<li id="{c["slug"]}">{mark(c, base, 28)}<a class="text-link" href="{c["guide"]}" '
+                                            f'aria-label="{escape(c["name"])} setup guide">Setup guide</a></li>' for c in clients if c.get('folder'))),
                        config['url'] + 'install/'))
     for plugin in plugins:
         folder = dist / 'plugins' / plugin['name']
