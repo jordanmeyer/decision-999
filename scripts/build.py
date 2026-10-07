@@ -177,10 +177,12 @@ def results(items):
         f'<div><dt>{escape(r["label"])}</dt><dd>{escape(r["value"])}</dd></div>' for r in items) + '</dl>'
 
 
-def card(plugin, base, attrs=''):
+def card(plugin, base, attrs='', shot=0):
     ui, listing, href = plugin['ui'], plugin['listing'], f"{base}plugins/{plugin['name']}/"
+    path = plugin['shots'][shot]
+    width, height = png_size(path)
     return f'''<article class="card"{attrs}>
-          <a class="card-shot" href="{href}" tabindex="-1" aria-hidden="true">{image(plugin['shots'][0], href + plugin['shots'][0].name)}</a>
+          <a class="card-shot{' portrait' * (height > width)}" href="{href}" tabindex="-1" aria-hidden="true">{image(path, href + path.name)}</a>
           <div class="card-body">
             <p class="label">{escape(listing['label'])}</p>
             <h3><a href="{href}">{escape(ui['displayName'])}</a></h3>
@@ -190,6 +192,21 @@ def card(plugin, base, attrs=''):
             <a class="text-link" href="{href}">View listing</a>
           </div>
         </article>'''
+
+
+def demo(plugin, base):
+    """Hero illustration: the listing's example request beside a real screenshot of the plugin's output."""
+    ui, href, shot = plugin['ui'], f"{base}plugins/{plugin['name']}/", plugin['shots'][0]
+    return f'''<figure class="demo">
+          <div class="demo-window">
+            <div class="demo-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="demo-body">
+              <p class="bubble">{escape(ui['defaultPrompt'][0])}</p>
+              <div class="reply"><p class="label">{escape(ui['displayName'])}</p>{image(shot, href + shot.name, plugin['listing']['screenshotAlt'][0])}</div>
+            </div>
+          </div>
+          <figcaption>Illustration with real output from <a href="{href}">{escape(ui['displayName'])}</a>.</figcaption>
+        </figure>'''
 
 
 def listing_page(plugin, config, base, clients):
@@ -277,7 +294,8 @@ def build(root=ROOT, base=None):
     featured = [c for c in clients if c.get('featured')]
     strip = ''.join(f'<li>{logo(c, base, 24, c["name"])}</li>' for c in featured)
     pages = [write(dist / 'index.html', f"{config['name']} · {config['tagline']}", config['description'],
-                   home.substitute(shared, cards='\n        '.join(card(p, base) for p in plugins), logos=strip,
+                   home.substitute(shared, cards='\n        '.join(card(p, base, shot=-1 if i == 0 else 0) for i, p in enumerate(plugins)),  # hero shows the first screenshot
+                                   logos=strip, demo=demo(plugins[0], base),
                                    more=len(clients) - len(featured), install=hosts([c for c in clients if c.get('primary')], config, base, None)),
                    config['url'])]
     example = plugins[0]

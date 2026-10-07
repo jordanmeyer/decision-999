@@ -1,19 +1,17 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div class="hero-copy">
+          <p class="hero-eyebrow">Plugins for AI agents</p>
           <h1>Built by tomorrow’s business&nbsp;leaders.</h1>
           <p class="lead">MBA students turn real work problems into tested plugins for ChatGPT, Claude, and other AI agents.</p>
-          <p class="actions"><a class="button" href="${base}plugins/">Browse plugins</a><a class="text-link" href="#install">How to install</a></p>
+          <form class="hero-search" action="${base}plugins/" role="search">
+            <label for="hero-q" class="sr-only">Search plugins</label>
+            <input id="hero-q" name="q" type="search" placeholder="Search plugins" autocomplete="off">
+            <button type="submit">Search</button>
+          </form>
+          <p class="hero-links"><a href="${base}plugins/">Browse all plugins</a><a href="${base}install/">How to install</a></p>
         </div>
-        <aside class="asks" aria-labelledby="asks-title">
-          <p id="asks-title" class="asks-title">Ask your AI to</p>
-          <ul>
-            <li><span>Strategy</span> Turn these expert-call notes into a hypothesis tree, with every claim tied to a quote.</li>
-            <li><span>Finance</span> Build a comps table from these 10-K filings and flag the non-GAAP adjustments.</li>
-            <li><span>Operations</span> Triage this week’s shipment exceptions and draft a reply to each carrier.</li>
-            <li><span>Design</span> Turn this outline into a one-page event site that follows our brand guidelines.</li>
-          </ul>
-        </aside>
+        ${demo}
       </div>
     </section>
     <section class="compat" aria-labelledby="compat-title">
@@ -32,13 +30,36 @@
         ${cards}
       </div>
     </section>
+    <section class="wrap tasks" aria-labelledby="tasks-title">
+      <div class="section-head">
+        <h2 id="tasks-title">Hand off the work</h2>
+        <p>The analysis, writing, and review that fill a business week.</p>
+      </div>
+      <ul class="task-grid">
+        <li><span>Strategy</span><p>“Turn these expert-call notes into a hypothesis tree, with every claim tied to a quote.”</p></li>
+        <li><span>Finance</span><p>“Build a comps table from these 10-K filings and flag the non-GAAP adjustments.”</p></li>
+        <li><span>Operations</span><p>“Triage this week’s shipment exceptions and draft a reply to each carrier.”</p></li>
+        <li><span>Healthcare</span><p>“Assemble the prior-authorization packet from these notes and flag anything missing.”</p></li>
+        <li><span>Sales</span><p>“Prep me for Thursday’s meeting with this account, with every claim sourced.”</p></li>
+        <li><span>Design</span><p>“Turn this outline into a one-page event site that follows our brand guidelines.”</p></li>
+      </ul>
+    </section>
     <section class="band" aria-labelledby="why-title">
       <div class="wrap">
         <h2 id="why-title">Most plugins connect your AI to an app. These bring business&nbsp;judgment.</h2>
-        <div class="columns">
-          <div><h3>Built by people who did the work</h3><p>Each plugin packages a task its builder handled in consulting, finance, healthcare, or operations, done the way a strong professional would do it.</p></div>
-          <div><h3>Tested before it’s listed</h3><p>Every listing shows how the plugin was checked and what the checks found, so you can judge it before you install it.</p></div>
-          <div><h3>Clear about limits</h3><p>Every listing says where the plugin falls short and where a person should still review the work.</p></div>
+        <div class="columns why">
+          <div>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="1.5"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 12.5h18"/></svg>
+            <h3>Built by people who did the work</h3><p>Each plugin packages a task its builder handled in consulting, finance, healthcare, or operations, done the way a strong professional would do it.</p>
+          </div>
+          <div>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.5 2.5L16 9.5"/></svg>
+            <h3>Tested before it’s listed</h3><p>Every listing shows how the plugin was checked and what the checks found, so you can judge it before you install it.</p>
+          </div>
+          <div>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg>
+            <h3>Clear about limits</h3><p>Every listing says where the plugin falls short and where a person should still review the work.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -51,4 +72,13 @@
       </ol>
       ${install}
       <p class="install-more">Using another app? <a href="${base}install/">See install steps for every compatible app</a>.</p>
+    </section>
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="wrap split">
+        <h2 id="cta-title">Put MBA expertise to work.</h2>
+        <div>
+          <p>Every plugin is free. Add the collection once, then install the ones you need.</p>
+          <p class="actions"><a class="button light" href="${base}plugins/">Browse the plugins</a><a class="text-link" href="${base}about/">Who builds them</a></p>
+        </div>
+      </div>
     </section>

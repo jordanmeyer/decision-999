@@ -75,3 +75,7 @@ Install steps come from each app's documentation as read on October 6. Claude, C
 ## About page
 
 `/about/` is written for people deciding whether to use the plugins. It presents them as the result of the course and of the builders' industry experience: who builds them and the kinds of work they come from (the course outline's project areas), how every plugin is made (real problem with a baseline, sourced claims, tests on dozens of known-answer cases and red-teaming, publication with limits), a short note on the course and its data policy, and a call to install. It names no institution and uses the configured site name. Checked at 1440px, 375px and 320px with no horizontal overflow.
+
+## Landing page design pass
+
+The home page now opens with a full-width navy hero: a search box that hands its query to `/plugins/?q=`, and a chat-window illustration pairing the featured plugin's example request with its real desktop screenshot, captioned as an illustration. The featured card shows the phone screenshot instead, so the two images differ. New sections: example requests in six work areas with accents from the extended brand palette, line icons on the three “why” points, and a closing navy call to action; the footer now links every page. Card hover lift respects reduced-motion settings. Full-page captures at 1440px and 500px were reviewed; all five pages have no horizontal overflow at 320px.

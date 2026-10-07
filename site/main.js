@@ -26,6 +26,8 @@ if (directory) {
     if (event.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) { event.preventDefault(); search.focus(); }
   });
   directory.querySelector('.toolbar').hidden = false;
+  search.value = new URLSearchParams(location.search).get('q') || '';
+  update();
 }
 for (const button of document.querySelectorAll('[data-copy]')) {
   button.hidden = false;
