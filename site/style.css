@@ -157,7 +157,11 @@ img { display: block; max-width: 100%; height: auto; }
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(26rem, 100%), 1fr)); gap: 1.5rem; }
 .card { display: grid; grid-template-rows: auto 1fr; border: 1px solid var(--line); border-top: 3px solid var(--navy); transition: box-shadow 0.2s, transform 0.2s; }
 .card:hover { box-shadow: 0 1rem 2.5rem rgb(0 0 0 / 0.12); transform: translateY(-3px); }
-.card-shot { display: flex; align-items: center; justify-content: center; padding: 1.5rem; background: var(--quiet); }
+.card-shot { display: flex; align-items: center; justify-content: center; padding: 1.5rem; background: var(--quiet); text-decoration: none; }
+/* A card without a screenshot shows its first example request, in the same 16:9 frame. */
+.card-prompt { display: grid; align-items: center; width: 100%; aspect-ratio: 16 / 9; }
+.card-prompt .bubble { justify-self: end; max-width: 85%; background: var(--white); color: var(--ink); box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 0.08); }
+.card-prompt .bubble span { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 4; }  /* fits the frame on the narrowest card */
 .card-shot img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: top; border: 1px solid var(--hatteras); box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 0.08); }
 .card-body { display: flex; flex-direction: column; align-items: flex-start; gap: 0.75rem; padding: 1.75rem; }
 .card h3 { font-size: 2rem; }
@@ -235,7 +239,7 @@ img { display: block; max-width: 100%; height: auto; }
 .to-top::after { content: " ↑"; }
 
 .crumbs { margin-bottom: 1.75rem; font-size: 0.8125rem; color: var(--hatteras); }
-.listing-hero { padding-bottom: 9.5rem; }
+.listing-hero:has(+ .shots) { padding-bottom: 9.5rem; }  /* room for the screenshots to overlap */
 .listing-hero h1 { margin-block: 1rem 0.75rem; }
 .page-hero .meta { margin-top: 0.75rem; color: var(--hatteras); }
 .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; margin-top: 0.5rem; }
@@ -293,7 +297,7 @@ img { display: block; max-width: 100%; height: auto; }
   .process li::before { margin-bottom: 1rem; padding-bottom: 0.75rem; font-size: 2.25rem; }
   .card .summary, .card .results dt { -webkit-line-clamp: unset; }  /* stacked cards have nothing to line up with */
   .cards > .card:only-child h3 { font-size: 2.25rem; }
-  .listing-hero { padding-bottom: 6rem; }
+  .listing-hero:has(+ .shots) { padding-bottom: 6rem; }
   .shots { margin-top: -4rem; }
   .shot-row { flex-direction: column; align-items: center; }
   .shot-row > *, .shot-row > :only-child { flex: none; width: 100%; }

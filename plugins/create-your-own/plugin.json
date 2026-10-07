@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "create-your-own",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "The development guide and packaging script the course uses to turn an SOP or SKILL.md into a tested agent plugin that works across AI apps.",
   "author": {
     "name": "Jordan Meyer"
@@ -20,9 +20,7 @@
           "Use create-your-own to turn the attached SOP for reviewing vendor invoices into a plugin. Interview me about where new analysts usually slip, draft the skill, and package it so I can start testing.",
           "Use create-your-own to package my meeting-brief skill as a plugin for the directory, and tell me what’s still missing before it can be listed."
         ],
-        "screenshots": [
-          "./assets/desktop.png"
-        ]
+        "screenshots": []
       }
     },
     "io.github.jordanmeyer": {
@@ -44,9 +42,7 @@
       ],
       "method": "On October 6, 2026, this plugin was packaged from its own skill with the bundled script, then its listing was written by hand. It passed the site’s checks and claude plugin validate, and installed from a local copy of the catalog in Claude Code 2.1.86 and the Codex CLI 0.145.0 with empty settings. A synthetic sample skill was packaged and completed one item at a time to confirm that the site’s build names each unfinished item in turn. No model was run: these checks cover packaging and installation, not the quality of skills built with the guide.",
       "limits": "Scaffolding only: it guides the work and packages the result, but a plugin is only as good as your expertise and your tests. Packaging needs Python 3 and your own copy of this directory’s repository. The course team decides what is listed here after review. Use public or synthetic data only.",
-      "screenshotAlt": [
-        "A terminal session: the packaging script creates the plugin folder and its evidence record and lists what to fill in, then the site’s build stops and names the first empty listing field."
-      ]
+      "screenshotAlt": []
     }
   }
 }

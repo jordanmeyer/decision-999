@@ -1,6 +1,6 @@
 # Create Your Own evidence
 
-Plugin version 0.1.0, with a 0.1.1 update noted at the end. Everything here ran on October 6, 2026, on macOS with Python 3.14.3, Claude Code 2.1.86 and the Codex CLI 0.145.0. No model was run and no API was called: these checks cover packaging and installation, not the quality of skills built with the guide.
+Plugin version 0.1.0, with the 0.1.1 and 0.1.2 updates noted at the end. Everything here ran on October 6, 2026, on macOS with Python 3.14.3, Claude Code 2.1.86 and the Codex CLI 0.145.0. No model was run and no API was called: these checks cover packaging and installation, not the quality of skills built with the guide.
 
 ## Task and baseline
 
@@ -22,7 +22,7 @@ The task is packaging a skill for this directory: copying it into a plugin folde
 | 2. Setup mistakes | 6 of 6 stopped with a message saying what to fix, and none created a folder. |
 | 3. Build walkthrough | 13 of 13 unfinished items were named, one per run, until the build passed: seven blank listing fields, the example requests, the results, the missing screenshot file, its description, and the TODOs left in the README and evidence record. |
 | 4. Site checks and validators | Passed. |
-| 5. Installs in empty settings | 2 of 2. Claude Code and the Codex CLI each installed the plugin, enabled, with `skills/create-your-own/SKILL.md` in its plugin cache: version 0.1.0 on October 6 and 0.1.1 on October 7. |
+| 5. Installs in empty settings | 2 of 2. Claude Code and the Codex CLI each installed the plugin, enabled, with `skills/create-your-own/SKILL.md` in its plugin cache: version 0.1.0 on October 6, then 0.1.1 and 0.1.2 on October 7. |
 
 The listing's results come from rows 5, 2 and 3.
 
@@ -41,11 +41,15 @@ The listing's results come from rows 5, 2 and 3.
 
 ## Version 0.1.1
 
-On October 7, 2026, `packaging.md` gained the listing's new optional `team` field and guidance for `developerName` on team plugins; nothing else in the package changed. The script and templates are unchanged, so the packaging, setup-mistake and walkthrough transcripts still apply. The site's build, `check.py`, both `claude plugin validate` runs, and the installs in empty settings were repeated for 0.1.1 ([install-test.txt](install-test.txt)).
+On October 7, 2026, `packaging.md` gained the listing's new optional `team` field and guidance for `developerName` on team plugins; nothing else in the package changed. The script and templates are unchanged, so the packaging, setup-mistake and walkthrough transcripts still apply. The site's build, `check.py`, both `claude plugin validate` runs, and the installs in empty settings were repeated for 0.1.1.
+
+## Version 0.1.2
+
+On October 7, 2026, the listing's screenshot was removed (see below), and `packaging.md` now explains that screenshots are optional. The script and templates are unchanged. The site's build, `check.py`, both `claude plugin validate` runs, and the installs in empty settings were repeated for 0.1.2 ([install-test.txt](install-test.txt)).
 
 ## Screenshot
 
-`plugins/create-your-own/assets/desktop.png` is [screenshot.html](screenshot.html) rendered at 1440×900 by headless Chrome: the text of `scaffold-run.txt` without its `[exit]` markers, set in a terminal style. It is a rendering of the recorded output, not a capture of a terminal window.
+Versions 0.1.0 and 0.1.1 showed `assets/desktop.png`, a 1440×900 rendering of `scaffold-run.txt` set in a terminal style. It was not legible at listing size, so 0.1.2 removes it; the listing has no screenshot, and its directory card shows the first example request. The transcript itself remains here.
 
 ## Reproduce
 

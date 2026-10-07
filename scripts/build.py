@@ -88,9 +88,9 @@ def load(root, config):
                 f'{where}: fill in {ext}.results with value and label pairs from the evidence record')
         shots = [bundled(package, s, where, '.png') for s in ui.get('screenshots', [])]
         alts = listing.get('screenshotAlt', [])
-        require(shots, f'{where}: add at least one screenshot to interface.screenshots')
         require(len(alts) == len(shots) and all(map(text, alts)), f'{where}: fill in {ext}.screenshotAlt with one description per screenshot')
-        cover = bundled(package, listing['cover'], where, '.png') if 'cover' in listing else shots[0]  # card image
+        # Screenshots are optional; without one, the card shows the first example request instead of an image.
+        cover = bundled(package, listing['cover'], where, '.png') if 'cover' in listing else next(iter(shots), None)
         require('team' not in listing or (listing['team'] and all(map(text, listing['team']))), f'{where}: fill in {ext}.team with each builder’s name')
         team = listing.get('team') or [ui['developerName']]  # who built it, named on the listing page but not the card
         skills = sorted((package / 'skills').glob('*/SKILL.md'))
@@ -215,7 +215,8 @@ def results(items):
 def card(plugin, base, attrs=''):
     ui, listing, href, cover = plugin['ui'], plugin['listing'], f"{base}plugins/{plugin['name']}/", plugin['cover']
     return f'''<article class="card"{attrs}>
-          <a class="card-shot" href="{href}" tabindex="-1" aria-hidden="true">{image(cover, href + cover.name)}</a>
+          <a class="card-shot" href="{href}" tabindex="-1" aria-hidden="true">{image(cover, href + cover.name) if cover else
+            f'<span class="card-prompt"><span class="bubble"><span>{escape(ui["defaultPrompt"][0])}</span></span></span>'}</a>
           <div class="card-body">
             <p class="label">{escape(listing['label'])}</p>
             <h3><a href="{href}">{escape(ui['displayName'])}</a></h3>
@@ -247,8 +248,10 @@ def demo(plugin, base):
 def listing_page(plugin, config, base, clients):
     ui, listing, m = plugin['ui'], plugin['listing'], plugin['manifest']
     href, tree = f"{base}plugins/{plugin['name']}/", f"https://github.com/{config['repo']}/tree/main/plugins/{plugin['name']}"
-    shots = ''.join(framed(s, href + s.name, alt) for s, alt in zip(plugin['shots'], listing['screenshotAlt']))
     example = f' <a href="{href}example.html">Open the full page</a>.' if plugin['example'].is_file() else ''
+    shots = (f'<figure class="wrap shots">\n      <div class="shot-row">'
+             + ''.join(framed(s, href + s.name, alt) for s, alt in zip(plugin['shots'], listing['screenshotAlt']))
+             + f'</div>\n      <figcaption>Real output from this plugin.{example}</figcaption>\n    </figure>') if plugin['shots'] else ''
     record = f"https://github.com/{config['repo']}/blob/main/evidence/{plugin['name']}/EVIDENCE.md"
     evidence = f'<p><a class="text-link" href="{record}">Read the full review record</a></p>' if plugin['record'].is_file() else ''
     return {
@@ -256,7 +259,7 @@ def listing_page(plugin, config, base, clients):
         'short': escape(ui['shortDescription']), 'long': escape(ui['longDescription']), 'category': escape(ui['category']),
         'team': ''.join(f'<li>{escape(person)}</li>' for person in plugin['team']), 'version': escape(m['version']), 'source': tree,
         'readme': f"https://github.com/{config['repo']}/blob/main/plugins/{plugin['name']}/README.md",
-        'shots': shots, 'example': example, 'evidence': evidence, 'audience': escape(listing['audience']), 'limits': escape(listing['limits']),
+        'shots': shots, 'evidence': evidence, 'audience': escape(listing['audience']), 'limits': escape(listing['limits']),
         'method': escape(listing['method']), 'results': results(listing['results']),
         'install': hosts([c for c in clients if c.get('primary')], config, base, plugin['name']),
         'prompts': ''.join(f'<blockquote class="prompt"><p>{escape(p)}</p></blockquote>' for p in ui['defaultPrompt']),
@@ -336,7 +339,7 @@ def build(root=ROOT, base=None):
     strip = ''.join(f'<li>{logo(c, base, 24, c["name"])}</li>' for c in featured)
     pages = [write(dist / 'index.html', f"{config['name']} · {config['tagline']}", config['description'],
                    home.substitute(shared, cards='\n        '.join(card(p, base) for p in plugins if p['name'] in config['featured']),
-                                   logos=strip, demo=demo(plugins[0], base),
+                                   logos=strip, demo=demo(next(p for p in plugins if p['shots']), base),
                                    more=len(clients) - len(featured), apps=len(clients)),
                    config['url'])]
     example = plugins[0]
@@ -351,14 +354,14 @@ def build(root=ROOT, base=None):
     for plugin in plugins:
         folder = dist / 'plugins' / plugin['name']
         folder.mkdir(parents=True)
-        for shot in {*plugin['shots'], plugin['cover']}:
+        for shot in {*plugin['shots'], plugin['cover']} - {None}:
             shutil.copy2(shot, folder / shot.name)
         if plugin['example'].is_file():
             shutil.copy2(plugin['example'], folder / 'example.html')
             pages.append(folder / 'example.html')
         ui, url = plugin['ui'], plugin['manifest']['homepage']
         pages.append(write(folder / 'index.html', f"{ui['displayName']} · {config['name']}", ui['shortDescription'],
-                           detail.substitute(listing_page(plugin, config, base, clients)), url, url + plugin['shots'][0].name))
+                           detail.substitute(listing_page(plugin, config, base, clients)), url, url + plugin['shots'][0].name if plugin['shots'] else ''))
     pages.append(write(dist / 'about/index.html', f"About · {config['name']}",
                        f"{config['name']} is an MBA course where students turn their expertise into tested plugins for AI agents.",
                        about.substitute(shared), config['url'] + 'about/'))

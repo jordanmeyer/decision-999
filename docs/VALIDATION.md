@@ -206,3 +206,15 @@ Logo rows avoid orphans:
 Measured at 320, 390, 500, 545, 640, 700, 768, 900, 930, 960, 1024, 1080 and 1440px, the logo rows never broke 4+1, the install header's top and bottom padding were equal at every width, and nothing overflowed.
 
 The closing call-to-action band pinned its heading to the top while the text and buttons beside it ran deeper, leaving dead space under the heading. The heading is now centred on that block, the gap above the buttons is 1.5rem, and the band pads its content equally above and below: 72px at 1440px, 61px at 1024px and 48px on phones. This was measured on every page; on phones the band stacks.
+
+## Optional screenshots
+
+Screenshots are now optional; Create Your Own's terminal rendering was not legible at listing size.
+
+- **Listing page:** a listing without screenshots has no image block, and its header uses normal padding. The deeper padding applies only when screenshots follow (`.listing-hero:has(+ .shots)`).
+- **Directory card:** the card shows the plugin's first example request as a chat bubble in the same 16:9 frame, limited to four lines, so cards in a row still line up. Measured at 320–1440px on the home page and directory, the bubble stayed inside its frame and side-by-side card bodies started at the same height.
+- **Link preview:** the `og:image` tag is omitted when there are no screenshots.
+- **Home illustration:** it uses the first plugin with a screenshot.
+- **Validation:** `check.py` now builds its second test listing without screenshots and asserts that it has no image block and that its card shows the request.
+
+Create Your Own 0.1.2 removes its screenshot, and its packaging guide explains when to leave screenshots out. Its build, validators and installs in empty settings were repeated.

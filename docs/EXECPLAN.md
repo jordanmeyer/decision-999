@@ -29,6 +29,7 @@ The current task fills the listing with existing results from the Codex chat “
 - [x] (2026-10-06) Site-wide polish pass against the design skill: section labels pass contrast on every surface, one section rhythm, navy listing header with framed screenshots, navy footer, word-boundary command wrapping, and a 1440×810 card image (plugin 0.2.4).
 - [x] (2026-10-06) Added Create Your Own 0.1.0, the course scaffolding: a development guide (SOP to skill, cross-app portability, testing, packaging), templates, and `new_plugin.py`, which packages a skill folder for this site. It was packaged with its own script and installed in empty Claude Code and Codex settings. `site/config.json` `featured` now orders the home page and catalogs.
 - [x] (2026-10-07) Renamed Duke Designer to Campus Designer 0.3.0: plugin, skill and evidence folders, install name, listing address, example request and footer credit. Preserved review records keep the original name.
+- [x] (2026-10-07) Made listing screenshots optional: no image block on the listing, and the directory card shows the first example request instead. Create Your Own 0.1.2 drops its illegible terminal image.
 
 ## Surprises & Discoveries
 

@@ -39,7 +39,7 @@ Under `extensions` › `com.openai` › `interface`:
 | `developerName` | The name apps show as the developer, set from `--developer`. For a team, use the team's name. |
 | `category` | A short label for the directory's filters, such as Finance or Operations |
 | `defaultPrompt` | One or two realistic requests that name the plugin, such as “Use `<name>` to …” |
-| `screenshots` | Set to `./assets/desktop.png`; add that file (see below) |
+| `screenshots` | Set to `./assets/desktop.png`; add that file, or empty the list if the output isn't visual (see below) |
 
 Under the site's own entry in `extensions`, which the script creates:
 
@@ -51,9 +51,9 @@ Under the site's own entry in `extensions`, which the script creates:
 | `results` | Two or three pairs copied from the evidence record, such as `{"value": "38 of 40", "label": "Test cases matched the known answer in Claude Code"}` |
 | `method` | One paragraph: what was tested, when, in which apps, and what the tests do not show |
 | `limits` | Where it falls short, and where a person must approve the work |
-| `screenshotAlt` | A description of each screenshot, in the same order |
+| `screenshotAlt` | A description of each screenshot, in the same order; empty when there are none |
 
-The screenshot is a PNG of real output, cropped to 1440×900 for a desktop view. Phone views (390×844) can be added as more entries in `screenshots` and `screenshotAlt`; the listing shows landscape images in a browser frame and portrait ones in a phone frame. An optional `cover`, such as `./assets/cover.png` at 16:9, replaces the first screenshot on the directory card.
+Add a screenshot only when it shows the output legibly. Without one, the listing shows no image and the directory card shows the first example request instead. A screenshot is a PNG of real output, cropped to 1440×900 for a desktop view. Phone views (390×844) can be added as more entries in `screenshots` and `screenshotAlt`; the listing shows landscape images in a browser frame and portrait ones in a phone frame. An optional `cover`, such as `./assets/cover.png` at 16:9, replaces the first screenshot on the directory card.
 
 Then replace every TODO in `README.md`.
 
