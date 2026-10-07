@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "duke-designer",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Design and review webpages, presentations, documents, and visual materials using Duke's public brand guidance.",
   "author": {
     "name": "Jordan Meyer",

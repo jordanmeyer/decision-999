@@ -1,11 +1,13 @@
-    <nav class="wrap crumbs" aria-label="Breadcrumb"><a href="${base}plugins/">Plugins</a> <span aria-hidden="true">›</span> <span aria-current="page">${display}</span></nav>
-    <header class="wrap listing-head">
-      <p class="label">${label}</p>
-      <h1>${display}</h1>
-      <p class="lead">${short}</p>
-      <p class="meta">${category} · Version ${version} · By ${developer}</p>
-      <p class="actions"><a class="button" href="#install">Install</a><a class="text-link" href="${source}">View source</a></p>
-    </header>
+    <section class="page-hero listing-hero">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="${base}plugins/">Plugins</a> <span aria-hidden="true">›</span> <span aria-current="page">${display}</span></nav>
+        <p class="label">${label}</p>
+        <h1>${display}</h1>
+        <p class="lead">${short}</p>
+        <p class="meta">${category} · Version ${version} · By ${developer}</p>
+        <p class="actions"><a class="button light" href="#install">Install</a><a class="text-link" href="${source}">View source</a></p>
+      </div>
+    </section>
     <figure class="wrap shots">
       <div class="shot-row">${shots}</div>
       <figcaption>Real output from this plugin.${example}</figcaption>

@@ -26,6 +26,7 @@ The current task fills the listing with existing results from the Codex chat “
 - [x] (2026-10-06) Replaced full-page listing screenshots with 1440×900 and 390×844 top crops; the originals sit at their review paths under `evidence/duke-designer/assessment/reviews/event/round-3/`.
 - [x] (2026-10-06) Repositioned the home page as a marketplace for AI users who want MBA-level work done: value headline, example requests, featured listing, why MBA-built plugins differ, and a three-step how-it-works with install steps. Rewrote evidence as two plain results and a short method; trimmed the example prompt and limits; shortened the home title.
 - [x] (2026-10-06) Build, `check.py` and `claude plugin validate` (catalog and plugin) pass; local desktop, 375px and 320px review found no horizontal overflow.
+- [x] (2026-10-06) Site-wide polish pass against the design skill: section labels pass contrast on every surface, one section rhythm, navy listing header with framed screenshots, navy footer, word-boundary command wrapping, and a 1440×810 card image (plugin 0.2.4).
 
 ## Surprises & Discoveries
 
@@ -33,6 +34,8 @@ The current task fills the listing with existing results from the Codex chat “
 The original source already contains completed independent reviews, including failed rounds and corrections. Event findings E1/E2, research R1 and student-organization S1/S2 are implementation defects resolved by the final versions. The final reports identify exact source hashes; a PASS is a bounded verdict on that artifact, not general skill accuracy or a first-attempt success rate.
 
 The source screenshots are full-page captures, 1440×3891 and 390×5693 pixels. Listing presentation must make their content understandable without misrepresenting them as newly generated images. The downloadable single-file event page embeds original CSS/font data and relocates the unchanged script; it needs packaging checks independently of the source's historical PASS.
+
+Copper section labels measured 4.13:1 on Whisper Gray bands, below the 4.5:1 AA threshold the skill applies to small text; copper passes only on white (4.62:1). Labels are now navy with a copper rule.
 
 Claude and Codex read different catalog locations. The build generates `.claude-plugin/marketplace.json`, per-plugin `.claude-plugin/plugin.json`, and `.agents/plugins/marketplace.json` from root plugin manifests. Earlier local Claude Code 2.1.86 validation required omitting unsupported top-level description/displayName fields. Keep these generated files owned by the build.
 

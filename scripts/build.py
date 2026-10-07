@@ -16,6 +16,7 @@ NAV = (('plugins', 'Plugins'), ('install', 'Install'), ('about', 'About'))
 SCHEMA = 'https://agent-plugins.org/schemas/1.0.0/plugin.schema.json'
 INTERFACE = ('displayName', 'shortDescription', 'longDescription', 'developerName', 'category')
 LISTING = ('label', 'audience', 'limits', 'method')
+WINDOW_BAR = '<div class="window-bar" aria-hidden="true"><span></span><span></span><span></span></div>'
 
 
 def read_json(path):
@@ -129,8 +130,16 @@ def image(path, src, alt=''):
     return f'<img src="{src}?v={version}" alt="{escape(alt)}" width="{width}" height="{height}">'
 
 
+def framed(path, src, alt):
+    """A screenshot in a phone (portrait) or browser window (landscape) frame; --r sizes frames in a row to one height."""
+    width, height = png_size(path)
+    kind, chrome = ('phone', '') if height > width else ('window', WINDOW_BAR)
+    return f'<div class="{kind}" style="--r: {width / height:.3f}">{chrome}{image(path, src, alt)}</div>'
+
+
 def command(lines, label, kind='Terminal'):
-    code = '\n'.join(f'<span>{escape(line)}</span>' for line in lines)
+    # Each word is unbreakable unless it alone is wider than the block, so lines wrap between words, not at hyphens.
+    code = '\n'.join('<span>' + ' '.join(f'<span>{escape(word)}</span>' for word in line.split(' ')) + '</span>' for line in lines)
     return (f'<div class="command"><div class="command-bar"><span>{kind}</span>'
             f'<button type="button" data-copy hidden aria-label="Copy {label}">Copy</button></div><pre><code>{code}</code></pre></div>')
 
@@ -207,8 +216,8 @@ def demo(plugin, base):
     # In conversation people name the plugin, not its package id: "Use the duke designer plugin to ..."
     prompt = ui['defaultPrompt'][0].replace(f"Use {plugin['name']} to", f"Use the {plugin['name'].replace('-', ' ')} plugin to", 1)
     return f'''<figure class="demo">
-          <div class="demo-window">
-            <div class="demo-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="window">
+            {WINDOW_BAR}
             <div class="demo-body">
               <p class="bubble">{escape(prompt)}</p>
               <div class="reply"><p class="label">{escape(ui['displayName'])}</p>{image(shot, href + shot.name, plugin['listing']['screenshotAlt'][0])}</div>
@@ -221,7 +230,7 @@ def demo(plugin, base):
 def listing_page(plugin, config, base, clients):
     ui, listing, m = plugin['ui'], plugin['listing'], plugin['manifest']
     href, tree = f"{base}plugins/{plugin['name']}/", f"https://github.com/{config['repo']}/tree/main/plugins/{plugin['name']}"
-    shots = ''.join(image(s, href + s.name, alt) for s, alt in zip(plugin['shots'], listing['screenshotAlt']))
+    shots = ''.join(framed(s, href + s.name, alt) for s, alt in zip(plugin['shots'], listing['screenshotAlt']))
     example = f' <a href="{href}example.html">Open the full page</a>.' if plugin['example'].is_file() else ''
     record = f"https://github.com/{config['repo']}/blob/main/evidence/{plugin['name']}/EVIDENCE.md"
     evidence = f'<p><a class="text-link" href="{record}">Read the full review record</a></p>' if plugin['record'].is_file() else ''

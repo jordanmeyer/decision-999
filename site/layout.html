@@ -27,8 +27,12 @@ ${content}
   <footer class="footer">
     <div class="wrap footer-inner">
       <div class="footer-brand"><a class="brand" href="${base}">${name}</a><p>${summary}</p></div>
-      <nav aria-label="Footer"><a href="${base}plugins/">Plugins</a><a href="${base}install/">Install</a><a href="${base}about/">About</a><a href="https://github.com/${repo}">Source on GitHub</a></nav>
+      <nav aria-label="Footer">
+        <div><h2>Directory</h2><a href="${base}plugins/">Plugins</a><a href="${base}install/">Install</a><a href="${base}about/">About</a></div>
+        <div><h2>Project</h2><a href="https://github.com/${repo}">Source on GitHub</a><a href="https://agent-plugins.org/specification">Agent Plugins format</a></div>
+      </nav>
     </div>
+    <p class="wrap footer-base">Designed with the <a href="${base}plugins/duke-designer/">Duke Designer</a> plugin.</p>
   </footer>
   <p id="copy-status" class="sr-only" role="status"></p>
 </body>

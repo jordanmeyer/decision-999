@@ -13,6 +13,7 @@ if (directory) {
     }
     count.textContent = `${shown} plugin${shown === 1 ? '' : 's'}`;
     directory.querySelector('.empty').hidden = shown > 0;
+    directory.querySelector('[data-more]').hidden = Boolean(category || terms.length);
   };
   const choose = value => {
     category = value;

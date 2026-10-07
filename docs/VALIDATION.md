@@ -94,7 +94,7 @@ At the maintainer's request, the student-organization page's sample-session pane
 
 ## Second landing page design pass
 
-The header now stays visible on screens wider than 40rem and makes Install a button. The hero adds three facts (compatible apps, free to install, tested before listing), main sections carry copper labels, “How it works” becomes numbered step cards on a gray band, sections alternate white and gray before the navy call to action, cards offer a direct Install button that opens the listing's install panel, and the footer adds the collection's description. Anchors clear the sticky header. Full-page captures at 1440px were reviewed, and every page has no horizontal overflow at 320px.
+The header now stays visible on screens wider than 40rem and makes Install a button. The hero adds three facts (compatible apps, free to install, tested before listing), main sections carry section labels, “How it works” becomes numbered step cards on a gray band, sections alternate white and gray before the navy call to action, cards offer a direct Install button that opens the listing's install panel, and the footer adds the collection's description. Anchors clear the sticky header. Full-page captures at 1440px were reviewed, and every page has no horizontal overflow at 320px.
 
 ## Plugins, about, and install pages restyled
 
@@ -103,3 +103,19 @@ The plugins, about, and install pages now share the landing page's treatment: a 
 ## Header navigation
 
 Install is no longer styled as a button in the header; Plugins, Install, and About are equal links, following the design skill's guidance to use links for navigation and to give selected states a non-color cue. The build marks the page's section with `aria-current` (`page` on the section page, `true` on a listing inside Plugins) and a navy underline beneath the link text, placed inside the white header so it stays visible above the navy page headers; hover shows a lighter underline and keyboard focus keeps the site's 3px ring. Checked on every page at 1440px, 375px, and 320px.
+
+## Site-wide polish pass
+
+A review of every page against the design skill's color, typography, web, and review references found one failure: copper section labels on Whisper Gray bands measured 4.13:1, below AA for small text. Labels are now navy (13.20:1 on gray) led by a short copper rule; the navy headers use the same device in Dandelion. Other changes:
+
+- One section rhythm (`--section`, 3.5–5.5rem) replaces five ad-hoc paddings.
+- The listing page gets the navy page header (breadcrumb, label, title, install button). Its screenshots overlap the header's lower edge in a browser-window frame (landscape) and a phone frame (portrait); the build sizes frames in a row by aspect ratio so they share a height (both 482px at 1440).
+- Install commands wrap only between words, so `duke-designer@decision-999` never splits at its hyphen; copied text is unchanged.
+- The footer is navy, with Directory and Project columns, a link to the Agent Plugins format, and a “Designed with the Duke Designer plugin” credit.
+- The directory ends with a “More plugins every term” tile, hidden while searching or filtering.
+- The install lead no longer orphans “your app:”; a label introduces the app picker.
+- The OpenClaw logo's canvas was trimmed of empty space (artwork unchanged) so it matches the other tiles.
+- The card image was re-rendered at 1440×810 so it ends above the navy purpose band rather than cutting through its text (plugin 0.2.4).
+- Unused `.status`, `.note`, `.install`, and `.listing-head` styles were removed.
+
+Full-page captures at 1440px and 390px were reviewed for all five pages. No page overflows at 320px. Directory search, filtering, Clear, and the closing tile were exercised in the browser, and a real click on Copy produced exactly the two command lines. Build, `check.py`, and `claude plugin validate .` pass.
