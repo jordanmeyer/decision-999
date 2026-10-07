@@ -1,0 +1,52 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "create-your-own",
+  "version": "0.1.0",
+  "description": "The development guide and packaging script the course uses to turn an SOP or SKILL.md into a tested agent plugin that works across AI apps.",
+  "author": {
+    "name": "Jordan Meyer"
+  },
+  "homepage": "https://jordanmeyer.github.io/decision-999/plugins/create-your-own/",
+  "repository": "https://github.com/jordanmeyer/decision-999",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Create Your Own",
+        "shortDescription": "The scaffolding our students use to turn an SOP into a tested plugin that works across AI apps.",
+        "longDescription": "Create Your Own gives your AI agent the course’s development guide. It takes you from a standard operating procedure, or a SKILL.md you already have, to a plugin: it interviews you for the judgment the SOP leaves out, writes a skill that works across agent apps, plans test cases with known answers, and records the evidence and limits a listing needs. A bundled script then packages the skill in the format this directory serves.",
+        "developerName": "Jordan Meyer",
+        "category": "Development",
+        "defaultPrompt": [
+          "Use create-your-own to turn the attached SOP for reviewing vendor invoices into a plugin. Interview me about where new analysts usually slip, draft the skill, and package it so I can start testing.",
+          "Use create-your-own to package my meeting-brief skill as a plugin for the directory, and tell me what’s still missing before it can be listed."
+        ],
+        "screenshots": [
+          "./assets/desktop.png"
+        ]
+      }
+    },
+    "io.github.jordanmeyer": {
+      "label": "Scaffolding · Instructor-built",
+      "audience": "MBA students in the course, and anyone who wants to turn a procedure they know well into a plugin their AI agent can repeat. It’s the same development guide and packaging the course uses, so a finished plugin is ready for this directory’s review.",
+      "results": [
+        {
+          "value": "2 of 2",
+          "label": "Apps that installed it in empty settings"
+        },
+        {
+          "value": "6 of 6",
+          "label": "Setup mistakes the script stopped with a clear message"
+        },
+        {
+          "value": "13 of 13",
+          "label": "Unfinished listing items the site’s build named, one at a time"
+        }
+      ],
+      "method": "On October 6, 2026, this plugin was packaged from its own skill with the bundled script, then its listing was written by hand. It passed the site’s checks and claude plugin validate, and installed from a local copy of the catalog in Claude Code 2.1.86 and the Codex CLI 0.145.0 with empty settings. A synthetic sample skill was packaged and completed one item at a time to confirm that the site’s build names each unfinished item in turn. No model was run: these checks cover packaging and installation, not the quality of skills built with the guide.",
+      "limits": "Scaffolding only: it guides the work and packages the result, but a plugin is only as good as your expertise and your tests. Packaging needs Python 3 and your own copy of this directory’s repository. The course team decides what is listed here after review. Use public or synthetic data only.",
+      "screenshotAlt": [
+        "A terminal session: the packaging script creates the plugin folder and its evidence record and lists what to fill in, then the site’s build stops and names the first empty listing field."
+      ]
+    }
+  }
+}

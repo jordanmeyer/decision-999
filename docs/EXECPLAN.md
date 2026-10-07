@@ -27,6 +27,7 @@ The current task fills the listing with existing results from the Codex chat “
 - [x] (2026-10-06) Repositioned the home page as a marketplace for AI users who want MBA-level work done: value headline, example requests, featured listing, why MBA-built plugins differ, and a three-step how-it-works with install steps. Rewrote evidence as two plain results and a short method; trimmed the example prompt and limits; shortened the home title.
 - [x] (2026-10-06) Build, `check.py` and `claude plugin validate` (catalog and plugin) pass; local desktop, 375px and 320px review found no horizontal overflow.
 - [x] (2026-10-06) Site-wide polish pass against the design skill: section labels pass contrast on every surface, one section rhythm, navy listing header with framed screenshots, navy footer, word-boundary command wrapping, and a 1440×810 card image (plugin 0.2.4).
+- [x] (2026-10-06) Added Create Your Own 0.1.0, the course scaffolding: a development guide (SOP to skill, cross-app portability, testing, packaging), templates, and `new_plugin.py`, which packages a skill folder for this site. It was packaged with its own script and installed in empty Claude Code and Codex settings. `site/config.json` `featured` now orders the home page and catalogs.
 
 ## Surprises & Discoveries
 

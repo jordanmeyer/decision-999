@@ -1,0 +1,26 @@
+$ python3 $REPO/plugins/create-your-own/skills/create-your-own/scripts/new_plugin.py drafts/expense-review --developer "Sample Student"
+Run this from the root of your copy of the directory repository.
+[exit 1]
+$ python3 plugins/create-your-own/skills/create-your-own/scripts/new_plugin.py drafts/empty-folder --developer "Sample Student"
+drafts/empty-folder/SKILL.md not found. Give the folder that holds the skill.
+[exit 1]
+$ python3 plugins/create-your-own/skills/create-your-own/scripts/new_plugin.py drafts/no-front-matter --developer "Sample Student"
+drafts/no-front-matter/SKILL.md must start with front matter: a --- line, a name: line, a description: line, and another --- line.
+[exit 1]
+$ python3 plugins/create-your-own/skills/create-your-own/scripts/new_plugin.py drafts/TODO-lowercase-name --developer "Sample Student"
+drafts/TODO-lowercase-name/SKILL.md: the name must be lowercase words joined by hyphens, at most 64 characters.
+[exit 1]
+$ python3 plugins/create-your-own/skills/create-your-own/scripts/new_plugin.py drafts/expense-review --developer "Sample Student"
+Rename the folder drafts/expense-review to expense-reviewer, the name in its SKILL.md.
+[exit 1]
+$ python3 plugins/create-your-own/skills/create-your-own/scripts/new_plugin.py drafts/create-your-own --developer "Sample Student"
+A plugin named create-your-own already exists. Choose another name, or edit that plugin and raise its version.
+[exit 1]
+$ ls plugins evidence
+evidence:
+create-your-own
+duke-designer
+
+plugins:
+create-your-own
+duke-designer

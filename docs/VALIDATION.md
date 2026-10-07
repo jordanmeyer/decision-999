@@ -119,3 +119,27 @@ A review of every page against the design skill's color, typography, web, and re
 - Unused `.status`, `.note`, `.install`, and `.listing-head` styles were removed.
 
 Full-page captures at 1440px and 390px were reviewed for all five pages. No page overflows at 320px. Directory search, filtering, Clear, and the closing tile were exercised in the browser, and a real click on Copy produced exactly the two command lines. Build, `check.py`, and `claude plugin validate .` pass.
+
+## Create Your Own
+
+Create Your Own 0.1.0 is a scaffolding plugin. Its skill walks a student from an SOP or existing skill to a listed plugin. The agent does the file, terminal and git work while the student makes decisions and approves plain-language text. Its four references are the development guide (from SOP to skill, working across apps, testing, packaging and listing). It also has templates for a new skill, README and evidence record, and `scripts/new_plugin.py`. Run from the repository root, the script turns a skill folder (drafted in `drafts/<name>/`, which git ignores) into `plugins/<name>/` and `evidence/<name>/EVIDENCE.md`. It leaves the listing blank and the README and evidence record full of `TODO:` placeholders.
+
+Before release the scaffolding was reviewed for MBA students, and several changes followed:
+
+- **Order of work:** testing now copies the packaged skill into each app's personal skills folder, because `claude plugin validate` rejects a plugin folder until the build writes its Claude manifest.
+- **Build messages:** the build now prints one-line messages that say what to fill in or add, names the file in JSON syntax errors, and requires text in results and screenshot descriptions.
+- **README and TODOs:** the build now requires a README and refuses any README or `EVIDENCE.md` that still contains `TODO:`.
+- **UTF-8:** the build, checks and script read and write UTF-8 explicitly, because Windows Python before 3.15 otherwise fails on curly quotes.
+- **Front matter:** the script uses the build's exact front-matter rule, so a skill it accepts cannot fail the build on front matter.
+
+After the last change, the plugin was packaged again from scratch with the final files and every test was rerun:
+
+- The site's build, `check.py`, and `claude plugin validate` (catalog and plugin) pass.
+- Six setup mistakes each stopped the script with a clear message, and none created a folder.
+- A synthetic sample skill completed one item at a time drew 13 messages, one per run, until the build passed.
+- The plugin installed from the working tree in Claude Code 2.1.86 and the Codex CLI 0.145.0 with empty settings.
+- `check.py` now asserts that a freshly scaffolded plugin is refused until its listing is written.
+
+No model was run; [the evidence record](../evidence/create-your-own/EVIDENCE.md) has the transcripts and limits.
+
+`site/config.json` gains `featured`. Featured plugins appear on the home page in that order and come first in the directory and catalogs, so Duke Designer stays the home page's example. With two featured plugins the home page shows them side by side; a single featured plugin keeps the wide card. Card images are cropped to 16:9 from the top so cards line up whatever their screenshots' shape. A listing with one screenshot shows it at most 60rem wide. Captures at 1440px and 390px were reviewed for the home, directory and both listings.

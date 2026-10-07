@@ -6,5 +6,6 @@
   "repo": "jordanmeyer/decision-999",
   "marketplace": "decision-999",
   "owner": {"name": "Jordan Meyer", "url": "https://github.com/jordanmeyer"},
-  "extension": "io.github.jordanmeyer"
+  "extension": "io.github.jordanmeyer",
+  "featured": ["duke-designer", "create-your-own"]
 }

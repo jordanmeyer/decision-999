@@ -1,0 +1,69 @@
+# A synthetic skill in a scratch copy of the repository. Between builds, one item is completed with placeholder text.
+$ python3 plugins/create-your-own/skills/create-your-own/scripts/new_plugin.py drafts/meeting-brief --developer "Sample Student"
+Created plugins/meeting-brief/
+  README.md
+  plugin.json
+  skills/meeting-brief/SKILL.md
+Created evidence/meeting-brief/EVIDENCE.md
+
+From now on, edit the skill in plugins/meeting-brief/skills/meeting-brief/. Before it can be listed:
+  1. Write the listing in plugins/meeting-brief/plugin.json
+  2. Add a screenshot of real output as plugins/meeting-brief/assets/desktop.png
+  3. Replace every TODO in plugins/meeting-brief/README.md and evidence/meeting-brief/EVIDENCE.md
+  4. Run python3 scripts/build.py until it passes; it names whatever is still missing
+[exit 0]
+$ python3 scripts/build.py
+Build stopped. plugins/meeting-brief/plugin.json: fill in interface.shortDescription
+[exit 1]
+# Filled in interface.shortDescription
+$ python3 scripts/build.py
+Build stopped. plugins/meeting-brief/plugin.json: fill in interface.longDescription
+[exit 1]
+# Filled in interface.longDescription
+$ python3 scripts/build.py
+Build stopped. plugins/meeting-brief/plugin.json: fill in interface.category
+[exit 1]
+# Filled in interface.category
+$ python3 scripts/build.py
+Build stopped. plugins/meeting-brief/plugin.json: fill in io.github.jordanmeyer.label
+[exit 1]
+# Filled in listing.label
+$ python3 scripts/build.py
+Build stopped. plugins/meeting-brief/plugin.json: fill in io.github.jordanmeyer.audience
+[exit 1]
+# Filled in listing.audience
+$ python3 scripts/build.py
+Build stopped. plugins/meeting-brief/plugin.json: fill in io.github.jordanmeyer.limits
+[exit 1]
+# Filled in listing.limits
+$ python3 scripts/build.py
+Build stopped. plugins/meeting-brief/plugin.json: fill in io.github.jordanmeyer.method
+[exit 1]
+# Filled in listing.method
+$ python3 scripts/build.py
+Build stopped. plugins/meeting-brief/plugin.json: fill in interface.defaultPrompt with example requests
+[exit 1]
+# Filled in interface.defaultPrompt
+$ python3 scripts/build.py
+Build stopped. plugins/meeting-brief/plugin.json: fill in io.github.jordanmeyer.results with value and label pairs from the evidence record
+[exit 1]
+# Filled in listing.results
+$ python3 scripts/build.py
+Build stopped. plugins/meeting-brief/plugin.json: add ./assets/desktop.png
+[exit 1]
+# Added plugins/meeting-brief/assets/desktop.png (a copy of another image)
+$ python3 scripts/build.py
+Build stopped. plugins/meeting-brief/plugin.json: fill in io.github.jordanmeyer.screenshotAlt with one description per screenshot
+[exit 1]
+# Filled in listing.screenshotAlt
+$ python3 scripts/build.py
+Build stopped. plugins/meeting-brief/README.md: replace every TODO
+[exit 1]
+# Replaced the TODOs in plugins/meeting-brief/README.md
+$ python3 scripts/build.py
+Build stopped. evidence/meeting-brief/EVIDENCE.md: replace every TODO
+[exit 1]
+# Replaced the TODOs in evidence/meeting-brief/EVIDENCE.md
+$ python3 scripts/build.py
+Built 3 listing(s) and catalogs for Claude and Codex/ChatGPT.
+[exit 0]

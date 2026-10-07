@@ -150,11 +150,11 @@ img { display: block; max-width: 100%; height: auto; }
 .folder-apps li { display: grid; justify-items: start; gap: 1rem; padding: 1.25rem; border: 1px solid var(--line); background: var(--white); }
 .fine { max-width: none; padding-top: 2.5rem; font-size: 0.8125rem; color: var(--muted); }
 .catalog { padding-block: var(--section); }
-.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr)); gap: 1.5rem; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(26rem, 100%), 1fr)); gap: 1.5rem; }
 .card { display: grid; border: 1px solid var(--line); border-top: 3px solid var(--navy); transition: box-shadow 0.2s, transform 0.2s; }
 .card:hover { box-shadow: 0 1rem 2.5rem rgb(0 0 0 / 0.12); transform: translateY(-3px); }
 .card-shot { display: flex; align-items: center; justify-content: center; padding: 1.5rem; background: var(--quiet); }
-.card-shot img { width: 100%; border: 1px solid var(--hatteras); box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 0.08); }
+.card-shot img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: top; border: 1px solid var(--hatteras); box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 0.08); }
 .card-body { display: grid; align-content: start; gap: 0.75rem; padding: 1.75rem; }
 .card h3 { font-size: 2rem; }
 .card h3 a { text-decoration: none; }
@@ -165,10 +165,10 @@ img { display: block; max-width: 100%; height: auto; }
 .card-more h3 { font-size: 1.75rem; }
 .card-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.25rem; margin-top: 0.5rem; }
 .button.small { padding: 0.55rem 1.1rem; font-size: 0.8125rem; }
-.cards > .card:first-child { grid-column: 1 / -1; grid-template-columns: 1fr 1.1fr; }
-.cards > .card:first-child .card-shot { order: 2; padding: 2.5rem; }
-.cards > .card:first-child .card-body { padding: 2.75rem; }
-.cards > .card:first-child h3 { font-size: 2.75rem; }
+.cards > .card:only-child { grid-template-columns: 1fr 1.1fr; }
+.cards > .card:only-child .card-shot { order: 2; padding: 2.5rem; }
+.cards > .card:only-child .card-body { padding: 2.75rem; }
+.cards > .card:only-child h3 { font-size: 2.75rem; }
 
 .results { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(9rem, 100%), 1fr)); gap: 1rem 1.5rem; margin-block: 0.5rem; }
 .results div { display: flex; flex-direction: column-reverse; justify-content: flex-end; border-top: 1px solid var(--line); padding-top: 0.75rem; }
@@ -239,6 +239,7 @@ img { display: block; max-width: 100%; height: auto; }
 .shots { margin-top: -7rem; }
 .shot-row { display: flex; align-items: flex-end; gap: 2rem; }
 .shot-row > * { flex: var(--r) 1 0; min-width: 0; }
+.shot-row > :only-child { flex: 0 1 60rem; }
 .shots figcaption { margin-top: 1.25rem; font-size: 0.8125rem; color: var(--muted); }
 .listing-body { display: grid; grid-template-columns: minmax(0, 1fr) 24rem; align-items: start; gap: 4rem; padding-block: 3.5rem var(--section); }
 .listing-main { display: grid; gap: 3rem; }
@@ -259,8 +260,8 @@ img { display: block; max-width: 100%; height: auto; }
   .card:hover { transform: none; }
 }
 @media (max-width: 56rem) {
-  .cards > .card:first-child { grid-template-columns: 1fr; }
-  .cards > .card:first-child .card-shot { order: 0; padding: 1.5rem; }
+  .cards > .card:only-child { grid-template-columns: 1fr; }
+  .cards > .card:only-child .card-shot { order: 0; padding: 1.5rem; }
   .hero-grid, .columns, .steps, .steps.four, .listing-body, .split { grid-template-columns: minmax(0, 1fr); }
   .columns, .steps { gap: 1.5rem; }
   .listing-body { gap: 3rem; }
@@ -273,12 +274,12 @@ img { display: block; max-width: 100%; height: auto; }
   .wrap { width: calc(100% - 2rem); }
   .masthead nav { gap: 1.5rem; }
   .hero { padding-block: 3rem; }
-  .card-body, .cards > .card:first-child .card-body, .host, .listing-side .host { padding: 1.25rem; }
-  .cards > .card:first-child h3 { font-size: 2.25rem; }
+  .card-body, .cards > .card:only-child .card-body, .host, .listing-side .host { padding: 1.25rem; }
+  .cards > .card:only-child h3 { font-size: 2.25rem; }
   .listing-hero { padding-bottom: 6rem; }
   .shots { margin-top: -4rem; }
   .shot-row { flex-direction: column; align-items: center; }
-  .shot-row > * { flex: none; width: 100%; }
+  .shot-row > *, .shot-row > :only-child { flex: none; width: 100%; }
   .shot-row > .phone { width: min(70%, 16rem); }
   .footer nav { gap: 2rem 3rem; }
 }

@@ -4,6 +4,7 @@ import hashlib
 from html import escape
 from html.parser import HTMLParser
 import json
+import os
 from pathlib import Path
 import re
 import shutil
@@ -20,7 +21,10 @@ WINDOW_BAR = '<div class="window-bar" aria-hidden="true"><span></span><span></sp
 
 
 def read_json(path):
-    return json.loads(path.read_text())
+    try:
+        return json.loads(path.read_text(encoding='utf-8'))
+    except json.JSONDecodeError as error:
+        raise ValueError(f'{os.path.relpath(path)}: not valid JSON ({error})') from None
 
 
 def require(condition, message):
@@ -41,8 +45,9 @@ def get(data, *keys, where):
 
 def bundled(package, value, where, suffix):
     path = package / value
-    require(value.startswith('./') and inside(path, package) and path.is_file() and path.suffix == suffix,
-            f'{where}: {value} must be a {suffix} file inside the plugin')
+    require(value.startswith('./') and inside(path, package) and path.suffix == suffix,
+            f'{where}: {value} must be a {suffix} path inside the plugin, starting with ./')
+    require(path.is_file(), f'{where}: add {value}')
     return path
 
 
@@ -53,12 +58,12 @@ def text(value):
 def check_links(folder):
     """Relative Markdown links must resolve inside the folder, so it works wherever it is copied or installed."""
     for doc in folder.rglob('*.md'):
-        for target in re.findall(r'\]\(([^\s)]+)\)', doc.read_text()):
+        for target in re.findall(r'\]\(([^\s)]+)\)', doc.read_text(encoding='utf-8')):
             url = urlsplit(target)
             if url.scheme or not url.path:
                 continue
             linked = doc.parent / unquote(url.path)
-            require(inside(linked, folder) and linked.exists(), f'{doc}: link {target} is missing or leaves {folder.name}/')
+            require(inside(linked, folder) and linked.exists(), f'{os.path.relpath(doc)}: link {target} is missing or leaves {folder.name}/')
 
 
 def load(root, config):
@@ -72,29 +77,39 @@ def load(root, config):
         require(re.fullmatch(r'\d+\.\d+\.\d+', manifest.get('version', '')), f'{where}: version must be x.y.z')
         require(manifest.get('homepage') == f"{config['url']}plugins/{name}/", f'{where}: homepage must be its listing page')
         ui = get(manifest, 'extensions', 'com.openai', 'interface', where=where)
-        listing = get(manifest, 'extensions', config['extension'], where=where)
+        ext = config['extension']
+        listing = get(manifest, 'extensions', ext, where=where)
         for key in INTERFACE:
-            require(text(ui.get(key)), f'{where}: interface.{key} must be text')
+            require(text(ui.get(key)), f'{where}: fill in interface.{key}')
         for key in LISTING:
-            require(text(listing.get(key)), f'{where}: {config["extension"]}.{key} must be text')
-        require(ui.get('defaultPrompt') and all(map(text, ui['defaultPrompt'])), f'{where}: needs a defaultPrompt')
-        require(listing.get('results') and all(set(r) == {'value', 'label'} for r in listing['results']), f'{where}: results need value and label')
+            require(text(listing.get(key)), f'{where}: fill in {ext}.{key}')
+        require(ui.get('defaultPrompt') and all(map(text, ui['defaultPrompt'])), f'{where}: fill in interface.defaultPrompt with example requests')
+        require(listing.get('results') and all(set(r) == {'value', 'label'} and text(r['value']) and text(r['label']) for r in listing['results']),
+                f'{where}: fill in {ext}.results with value and label pairs from the evidence record')
         shots = [bundled(package, s, where, '.png') for s in ui.get('screenshots', [])]
-        require(shots and len(shots) == len(listing.get('screenshotAlt', [])), f'{where}: each screenshot needs screenshotAlt text')
+        alts = listing.get('screenshotAlt', [])
+        require(shots, f'{where}: add at least one screenshot to interface.screenshots')
+        require(len(alts) == len(shots) and all(map(text, alts)), f'{where}: fill in {ext}.screenshotAlt with one description per screenshot')
         cover = bundled(package, listing['cover'], where, '.png') if 'cover' in listing else shots[0]  # card image
         skills = sorted((package / 'skills').glob('*/SKILL.md'))
         require(skills, f'{where}: no skills/*/SKILL.md')
         for skill in skills:
-            require(re.match(r'---\nname: .+\ndescription: .+\n---', skill.read_text()), f'{skill}: missing name/description front matter')
+            require(re.match(r'---\nname: .+\ndescription: .+\n---', skill.read_text(encoding='utf-8')),
+                    f'{os.path.relpath(skill)}: start with front matter: a --- line, a name: line, a description: line, and another --- line')
         evidence = root / 'evidence' / name  # listing material that installs should not download
         for folder in (package, evidence):
             if folder.is_dir():
                 check_links(folder)
-                require(not any(p.is_symlink() for p in folder.rglob('*')), f'{folder}: symlinks are not allowed')
+                require(not any(p.is_symlink() for p in folder.rglob('*')), f'{os.path.relpath(folder)}: symlinks are not allowed')
+        require((package / 'README.md').is_file(), f'plugins/{name}: add a README.md')
+        for doc in (package / 'README.md', evidence / 'EVIDENCE.md'):
+            require(not doc.is_file() or 'TODO:' not in doc.read_text(encoding='utf-8'), f'{os.path.relpath(doc)}: replace every TODO')  # the templates' placeholder
         plugins.append({'name': name, 'manifest': manifest, 'ui': ui, 'listing': listing, 'shots': shots, 'cover': cover,
                         'example': evidence / 'example.html', 'record': evidence / 'EVIDENCE.md'})
     require(plugins, 'No plugins/*/plugin.json found')
-    return plugins
+    rank = {name: i for i, name in enumerate(config['featured'])}
+    require(rank.keys() <= {p['name'] for p in plugins}, 'site/config.json: featured lists a plugin that does not exist')
+    return sorted(plugins, key=lambda p: (rank.get(p['name'], len(rank)), p['name']))  # featured first, in config order
 
 
 def catalogs(config, plugins):
@@ -150,7 +165,7 @@ def load_clients(root):
     for client in clients:
         svg = root / 'site/assets/logos' / client['logo']
         require(svg.is_file(), f"site/clients.json: missing logo {client['logo']}")
-        box = re.search(r'viewBox="([^"]+)"', svg.read_text())
+        box = re.search(r'viewBox="([^"]+)"', svg.read_text(encoding='utf-8'))
         require(box, f'{svg}: SVG needs a viewBox')
         width, height = map(float, box[1].split()[2:])
         client |= {'slug': re.sub(r'[^a-z0-9]+', '-', client['name'].lower()).strip('-'), 'ratio': width / height}
@@ -260,10 +275,10 @@ class Page(HTMLParser):
 
 def validate(dist, base, files):
     """Every local link, asset and anchor in the generated pages must resolve under the project base path."""
-    pages = {f: Page(f.read_text()) for f in files if f.suffix == '.html'}
+    pages = {f: Page(f.read_text(encoding='utf-8')) for f in files if f.suffix == '.html'}
     for file in files:
         page = pages.get(file)
-        urls = page.urls if page else re.findall(r'url\([\'"]?([^)\'"]+)', file.read_text())
+        urls = page.urls if page else re.findall(r'url\([\'"]?([^)\'"]+)', file.read_text(encoding='utf-8'))
         require(not page or len(page.ids) == len(set(page.ids)), f'{file}: duplicate id')
         for value in urls:
             url = urlsplit(value)
@@ -290,14 +305,14 @@ def build(root=ROOT, base=None):
     clients = load_clients(root)
     for path, content in catalogs(config, plugins).items():
         (root / path).parent.mkdir(parents=True, exist_ok=True)
-        (root / path).write_text(content)
+        (root / path).write_text(content, encoding='utf-8')
 
     dist = root / 'dist'
     shutil.rmtree(dist, ignore_errors=True)
     shutil.copytree(root / 'site/assets', dist / 'assets')
     for name in ('style.css', 'main.js'):
         shutil.copy2(root / 'site' / name, dist / name)
-    layout, home, detail, setup, directory, about = (Template((root / f'site/{name}.html').read_text())
+    layout, home, detail, setup, directory, about = (Template((root / f'site/{name}.html').read_text(encoding='utf-8'))
                                                      for name in ('layout', 'home', 'plugin', 'install', 'plugins', 'about'))
     # Content hashes bust browser caches (GitHub Pages serves max-age=600) whenever the CSS or JavaScript changes.
     versions = {k: hashlib.sha256((root / f'site/{name}').read_bytes()).hexdigest()[:8] for k, name in (('css', 'style.css'), ('js', 'main.js'))}
@@ -310,13 +325,14 @@ def build(root=ROOT, base=None):
                       + f'>{label}</a>' for key, label in NAV)
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(layout.substitute(shared, title=escape(title), description=escape(description), content=content, url=url, nav=nav,
-                                          image=f'\n  <meta property="og:image" content="{image}">' if image else ''))
+                                          image=f'\n  <meta property="og:image" content="{image}">' if image else ''), encoding='utf-8')
         return path
 
     featured = [c for c in clients if c.get('featured')]
     strip = ''.join(f'<li>{logo(c, base, 24, c["name"])}</li>' for c in featured)
     pages = [write(dist / 'index.html', f"{config['name']} · {config['tagline']}", config['description'],
-                   home.substitute(shared, cards='\n        '.join(card(p, base) for p in plugins), logos=strip, demo=demo(plugins[0], base),
+                   home.substitute(shared, cards='\n        '.join(card(p, base) for p in plugins if p['name'] in config['featured']),
+                                   logos=strip, demo=demo(plugins[0], base),
                                    more=len(clients) - len(featured), apps=len(clients)),
                    config['url'])]
     example = plugins[0]
@@ -362,4 +378,7 @@ def build(root=ROOT, base=None):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--base', help='project path, for example /decision-999/ (defaults to the path of site/config.json url)')
-    build(base=parser.parse_args().base)
+    try:
+        build(base=parser.parse_args().base)
+    except ValueError as error:
+        raise SystemExit(f'Build stopped. {error}')

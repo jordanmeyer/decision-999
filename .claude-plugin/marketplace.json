@@ -13,6 +13,12 @@
       "source": "./plugins/duke-designer",
       "description": "Webpages, slides, and documents that follow Duke’s public brand guidelines.",
       "category": "Design"
+    },
+    {
+      "name": "create-your-own",
+      "source": "./plugins/create-your-own",
+      "description": "The scaffolding our students use to turn an SOP into a tested plugin that works across AI apps.",
+      "category": "Development"
     }
   ]
 }

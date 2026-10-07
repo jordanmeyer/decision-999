@@ -25,6 +25,7 @@ Then install a plugin by name, for example `duke-designer@decision-999`. Each pl
 ## Plugins
 
 - [Duke Designer](plugins/duke-designer/README.md): webpages, slides, and documents that follow Duke's public brand guidelines. Instructor-built example.
+- [Create Your Own](plugins/create-your-own/README.md): the development guide and packaging script students use to turn an SOP or `SKILL.md` into a tested plugin for this catalog. Instructor-built scaffolding.
 
 ## How it works
 
@@ -36,7 +37,7 @@ Each `plugins/<name>/plugin.json` is a portable [Agent Plugins](https://agent-pl
 
 `site/clients.json` lists the apps that load the plugin format, with each app's logo, install steps, and setup-guide link. It drives the home page's logo row, the Claude and ChatGPT install panels, and the install page (`/install/`). Logos are the vendor-supplied files from agent-plugins.org and agentskills.io.
 
-`site/` holds the templates, styles, licensed fonts, and `config.json`, the single place for the site name, repository, marketplace name, and URL. Changing the marketplace name or repository changes every install command, so settle them before anyone installs.
+`site/` holds the templates, styles, licensed fonts, and `config.json`, the single place for the site name, repository, marketplace name, URL, and the `featured` plugins (shown on the home page, in that order, and listed first everywhere else). Changing the marketplace name or repository changes every install command, so settle them before anyone installs.
 
 ## Local development
 
