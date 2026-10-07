@@ -99,3 +99,7 @@ The header now stays visible on screens wider than 40rem and makes Install a but
 ## Plugins, about, and install pages restyled
 
 The plugins, about, and install pages now share the landing page's treatment: a navy page header (with the fact row on plugins and about), copper section labels, alternating white and gray sections, and a closing navy call to action. The directory's search box moved into the plugins header; search and category buttons appear only with JavaScript, and `?q=`, the empty state, Clear, category filtering, and the `/` shortcut were rechecked. About's expertise areas use the colored tiles and its four quality steps use numbered cards in a two-by-two grid so each title fits on one line. Full-page captures at 1440px were reviewed, and every page has no horizontal overflow at 320px.
+
+## Header navigation
+
+Install is no longer styled as a button in the header; Plugins, Install, and About are equal links, following the design skill's guidance to use links for navigation and to give selected states a non-color cue. The build marks the page's section with `aria-current` (`page` on the section page, `true` on a listing inside Plugins) and a navy underline beneath the link text, placed inside the white header so it stays visible above the navy page headers; hover shows a lighter underline and keyboard focus keeps the site's 3px ring. Checked on every page at 1440px, 375px, and 320px.

@@ -12,6 +12,7 @@ from string import Template
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
+NAV = (('plugins', 'Plugins'), ('install', 'Install'), ('about', 'About'))
 SCHEMA = 'https://agent-plugins.org/schemas/1.0.0/plugin.schema.json'
 INTERFACE = ('displayName', 'shortDescription', 'longDescription', 'developerName', 'category')
 LISTING = ('label', 'audience', 'limits', 'method')
@@ -294,8 +295,12 @@ def build(root=ROOT, base=None):
     shared = {k: escape(config[k]) for k in ('name', 'repo')} | {'base': base, 'summary': escape(config['description'])} | versions
 
     def write(path, title, description, content, url, image=''):
+        """Render a page; the header marks the section the page belongs to (page itself, or a listing inside it)."""
+        parts = path.relative_to(dist).parts
+        nav = ''.join(f'<a href="{base}{key}/"' + (f' aria-current="{"page" if len(parts) == 2 else "true"}"' if parts[0] == key else '')
+                      + f'>{label}</a>' for key, label in NAV)
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(layout.substitute(shared, title=escape(title), description=escape(description), content=content, url=url,
+        path.write_text(layout.substitute(shared, title=escape(title), description=escape(description), content=content, url=url, nav=nav,
                                           image=f'\n  <meta property="og:image" content="{image}">' if image else ''))
         return path
 

@@ -32,13 +32,12 @@ img { display: block; max-width: 100%; height: auto; }
 
 .masthead { z-index: 10; border-bottom: 1px solid var(--line); background: var(--white); }
 @media (min-width: 40rem) { .masthead { position: sticky; top: 0; } }
-.masthead-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 2rem; padding-block: 1.25rem; }
+.masthead-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem 2rem; padding-block: 1.1rem; }
 .brand { font: 1.75rem/1.1 var(--serif); color: var(--navy); text-decoration: none; }
-.masthead nav { display: flex; align-items: center; gap: 2rem; }
-.masthead nav .nav-cta { padding: 0.5rem 1.1rem; background: var(--navy); color: var(--white); }
-.masthead nav .nav-cta:hover { background: var(--royal); color: var(--white); text-decoration: none; }
-.masthead nav a { padding-block: 0.5rem; font-size: 0.875rem; font-weight: 600; text-decoration: none; }
-.masthead nav a:hover { text-decoration: underline; }
+.masthead nav { display: flex; gap: 2rem; }
+.masthead nav a { padding-block: 0.35rem; border-bottom: 3px solid transparent; font-size: 0.875rem; font-weight: 600; text-decoration: none; }
+.masthead nav a:hover { border-bottom-color: var(--line); color: var(--navy); }
+.masthead nav a[aria-current] { border-bottom-color: var(--navy); }
 
 .status, .label { justify-self: start; display: inline-block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); }
 .status { border: 1px solid var(--line); padding: 0.3rem 0.7rem; }
@@ -259,7 +258,7 @@ img { display: block; max-width: 100%; height: auto; }
   .compat-title { flex-basis: 100%; }
   .logos { flex-basis: 100%; justify-content: flex-start; gap: 1.25rem 1.75rem; }
   .wrap { width: calc(100% - 2rem); }
-  .masthead nav { gap: 1.25rem; }
+  .masthead nav { gap: 1.5rem; }
   .hero { padding-block: 3rem; }
   .card-body, .cards > .card:first-child .card-body, .host, .listing-side .host { padding: 1.25rem; }
   .cards > .card:first-child h3 { font-size: 2.25rem; }
