@@ -1,13 +1,13 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-  "name": "duke-designer",
-  "version": "0.2.4",
+  "name": "campus-designer",
+  "version": "0.3.0",
   "description": "Design and review webpages, presentations, documents, and visual materials using Duke's public brand guidance.",
   "author": {
     "name": "Jordan Meyer",
     "url": "https://github.com/jordanmeyer"
   },
-  "homepage": "https://jordanmeyer.github.io/decision-999/plugins/duke-designer/",
+  "homepage": "https://jordanmeyer.github.io/decision-999/plugins/campus-designer/",
   "repository": "https://github.com/jordanmeyer/decision-999",
   "keywords": [
     "design",
@@ -20,13 +20,13 @@
   "extensions": {
     "com.openai": {
       "interface": {
-        "displayName": "Duke Designer",
+        "displayName": "Campus Designer",
         "shortDescription": "Webpages, slides, and documents that follow Duke’s public brand guidelines.",
-        "longDescription": "Duke Designer gives an AI agent working knowledge of Duke’s published brand guidelines: the color palette with checked contrast pairings, the recommended typefaces, layout guidance for webpages, presentations, and documents, and a review checklist. Ask for an artifact and the agent designs it to the guidelines, then reviews the result before handing it back.",
+        "longDescription": "Campus Designer gives an AI agent working knowledge of Duke’s published brand guidelines: the color palette with checked contrast pairings, the recommended typefaces, layout guidance for webpages, presentations, and documents, and a review checklist. Ask for an artifact and the agent designs it to the guidelines, then reviews the result before handing it back.",
         "developerName": "Jordan Meyer",
         "category": "Design",
         "defaultPrompt": [
-          "Use duke-designer to build a one-page website for our spring symposium on AI and leadership. Use the agenda and speaker bios I’ve attached, add a registration button that links to our sign-up form, and make sure it looks good on phones."
+          "Use campus-designer to build a one-page website for our spring symposium on AI and leadership. Use the agenda and speaker bios I’ve attached, add a registration button that links to our sign-up form, and make sure it looks good on phones."
         ],
         "screenshots": [
           "./assets/desktop.png",

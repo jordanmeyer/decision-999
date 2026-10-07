@@ -5,7 +5,7 @@ This ExecPlan is a living document maintained according to `~/.codex/PLANS.md`. 
 ## Purpose / Big Picture
 
 
-An MBA student should be able to send an employer a useful listing for a plugin they built. The faculty committee sees the same directory, initially populated by one instructor-built example, Duke Designer. Each listing explains the capability, shows actual output, offers installation steps, and identifies the evidence and limits behind its claims.
+An MBA student should be able to send an employer a useful listing for a plugin they built. The faculty committee sees the same directory, initially populated by one instructor-built example, Campus Designer (named Duke Designer until October 7). Each listing explains the capability, shows actual output, offers installation steps, and identifies the evidence and limits behind its claims.
 
 The current task fills the listing with existing results from the Codex chat “Review design skill,” not newly generated examples. Visitors will see the final fictional AI and leadership symposium at desktop and mobile sizes and can inspect the source and independent review history. Complete integration and report its checks, then verify publication under the original project scope. Do not alter the sibling source, call the Claude API, or create Claude generation sessions. The coordinating agent owns commits and publication.
 
@@ -28,6 +28,7 @@ The current task fills the listing with existing results from the Codex chat “
 - [x] (2026-10-06) Build, `check.py` and `claude plugin validate` (catalog and plugin) pass; local desktop, 375px and 320px review found no horizontal overflow.
 - [x] (2026-10-06) Site-wide polish pass against the design skill: section labels pass contrast on every surface, one section rhythm, navy listing header with framed screenshots, navy footer, word-boundary command wrapping, and a 1440×810 card image (plugin 0.2.4).
 - [x] (2026-10-06) Added Create Your Own 0.1.0, the course scaffolding: a development guide (SOP to skill, cross-app portability, testing, packaging), templates, and `new_plugin.py`, which packages a skill folder for this site. It was packaged with its own script and installed in empty Claude Code and Codex settings. `site/config.json` `featured` now orders the home page and catalogs.
+- [x] (2026-10-07) Renamed Duke Designer to Campus Designer 0.3.0: plugin, skill and evidence folders, install name, listing address, example request and footer credit. Preserved review records keep the original name.
 
 ## Surprises & Discoveries
 
@@ -46,6 +47,7 @@ Claude and Codex read different catalog locations. The build generates `.claude-
 - Decision: Keep employers as the primary audience and show the same site to the committee. Rationale: the listing is intended as a portfolio link; one instructor example honestly demonstrates the proposed course. Date: 2026-10-06, maintainer direction.
 - Decision: Use “Build with AI” and “MBA course · number pending” from `site/config.json`. Rationale: the final course name and number are unknown. Repository and marketplace remain `decision-999`. Date: 2026-10-06.
 - Decision: Permit the Duke Designer name and factual discussion of public guidance while prohibiting claims of affiliation or endorsement and institutional logos. Rationale: this is the maintainer's replacement for the original website-wide name prohibition. Date: 2026-10-06.
+- Decision (2026-10-07): Rename Duke Designer to Campus Designer (`campus-designer`), including its install name, address and skill name, so the plugin name does not suggest an official Duke tool. Its descriptions still say, accurately, that it follows Duke’s public brand guidance.
 - Decision: Keep `plugins/<name>/plugin.json` as the sole listing source and generate host catalogs. Rationale: one package folder contains contributor data, while hosts receive the formats they understand. Date: 2026-10-06.
 - Decision: Reuse the existing Codex assessment and retire the Claude generation runner. Rationale: the user explicitly requested the completed review results and no Claude API calls or generated Claude sessions. No new evaluation is needed to establish those historical findings. Date: 2026-10-06.
 - Decision: Describe three reviewed examples, three final passes after revisions and five resolved defects, without cost, duration, model-comparison or one-shot claims. Rationale: these counts are supported by specific reports; broader performance metrics are not. Date: 2026-10-06.
@@ -64,9 +66,9 @@ The evidence gap is filled by existing work. The plugin now includes traceable s
 
 The workspace is `/Users/jordan/Projects/decision-999`. `site/config.json` owns the display identity, course label, repository, marketplace name, canonical URL/base path and namespace for course listing fields. The current base path is `/decision-999/`.
 
-`plugins/duke-designer/plugin.json` supplies package version, vendor-facing metadata and course listing fields. `extensions.com.openai.interface` contains the displayed title, prompt and screenshot paths. `extensions.io.github.jordanmeyer` contains the evidence counts, method, audience, limits and example path. The packaged skill remains at `skills/duke-designer/SKILL.md`; it is guidance for artifact creation, not a bundled renderer or permission to use institutional marks.
+`plugins/campus-designer/plugin.json` supplies package version, vendor-facing metadata and course listing fields. `extensions.com.openai.interface` contains the displayed title, prompt and screenshot paths. `extensions.io.github.jordanmeyer` contains the evidence counts, method, audience, limits and example path. The packaged skill remains at `skills/duke-designer/SKILL.md`; it is guidance for artifact creation, not a bundled renderer or permission to use institutional marks.
 
-`plugins/duke-designer/assets/desktop.png` and `mobile.png` are display crops of the final event-review captures. Everything an install does not need lives in `evidence/duke-designer/`: the preserved sources, reports and full-page captures, the single-file `example.html`, and `EVIDENCE.md`, which describes scope, provenance and reproduction. The original source at `/Users/jordan/Projects/duke-designer` is read only. It is not needed to build the directory.
+`plugins/campus-designer/assets/desktop.png` and `mobile.png` are display crops of the final event-review captures. Everything an install does not need lives in `evidence/campus-designer/`: the preserved sources, reports and full-page captures, the single-file `example.html`, and `EVIDENCE.md`, which describes scope, provenance and reproduction. The original source at `/Users/jordan/Projects/duke-designer` is read only. It is not needed to build the directory.
 
 `scripts/build.py` reads package manifests, generates host catalogs and renders `site/layout.html`, `site/home.html` and `site/plugin.html` into ignored `dist/`. `scripts/check.py` checks clean builds and package/site boundaries. `scripts/serve.py` previews the configured base path. The existing GitHub workflow deploys `dist/` from main. The coordinating agent owns publication and must record the new exact-commit outcome.
 
@@ -100,7 +102,7 @@ From `/Users/jordan/Projects/decision-999`, run:
 
 The first two commands should report a completed listing/catalog build and passing focused checks; the Claude command validates files locally and should report validation passed. It is not a generation session or API evaluation. Open `http://localhost:8000/decision-999/` and `http://localhost:8000/decision-999/plugins/duke-designer/` for browser checks.
 
-For optional repeated checks of the historical source, follow the scratch-copy commands in `evidence/duke-designer/EVIDENCE.md`. Those scripts inspect existing pages using Node.js, Playwright and Google Chrome, generate new screenshots/check records only in scratch space, and make no model calls. They are unnecessary merely to establish that the retained historical reports say PASS.
+For optional repeated checks of the historical source, follow the scratch-copy commands in `evidence/campus-designer/EVIDENCE.md`. Those scripts inspect existing pages using Node.js, Playwright and Google Chrome, generate new screenshots/check records only in scratch space, and make no model calls. They are unnecessary merely to establish that the retained historical reports say PASS.
 
 ## Validation and Acceptance
 

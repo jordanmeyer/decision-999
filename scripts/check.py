@@ -40,7 +40,7 @@ with tempfile.TemporaryDirectory() as temporary, redirect_stdout(io.StringIO()):
     for folder in ('plugins', 'site', 'evidence'):
         shutil.copytree(ROOT / folder, root / folder)
     build(root)  # without the sibling source project or any committed catalog
-    manifest, skill = root / 'plugins/duke-designer/plugin.json', root / 'plugins/duke-designer/skills/duke-designer/SKILL.md'
+    manifest, skill = root / 'plugins/campus-designer/plugin.json', root / 'plugins/campus-designer/skills/campus-designer/SKILL.md'
     original, instructions = manifest.read_text(encoding='utf-8'), skill.read_text(encoding='utf-8')
     edit(manifest, lambda m: m['extensions'][config['extension']].pop('limits'))
     rejects(root, f"fill in {config['extension']}.limits")
@@ -49,9 +49,9 @@ with tempfile.TemporaryDirectory() as temporary, redirect_stdout(io.StringIO()):
     rejects(root, 'must be a .png path inside the plugin')
     manifest.write_text(original, encoding='utf-8')
     skill.write_text(instructions + '\n[outside](../../../../README.md)\n', encoding='utf-8')
-    rejects(root, 'is missing or leaves duke-designer/')
+    rejects(root, 'is missing or leaves campus-designer/')
     skill.write_text(instructions, encoding='utf-8')
-    shutil.copytree(root / 'plugins/duke-designer', root / 'plugins/second-example')
+    shutil.copytree(root / 'plugins/campus-designer', root / 'plugins/second-example')
     edit(root / 'plugins/second-example/plugin.json', second)
     build(root)
     listed = (root / 'dist/plugins/index.html').read_text(encoding='utf-8')

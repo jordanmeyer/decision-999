@@ -9,8 +9,8 @@
   },
   "plugins": [
     {
-      "name": "duke-designer",
-      "source": "./plugins/duke-designer",
+      "name": "campus-designer",
+      "source": "./plugins/campus-designer",
       "description": "Webpages, slides, and documents that follow Duke’s public brand guidelines.",
       "category": "Design"
     },

@@ -5,10 +5,10 @@
   },
   "plugins": [
     {
-      "name": "duke-designer",
+      "name": "campus-designer",
       "source": {
         "source": "local",
-        "path": "./plugins/duke-designer"
+        "path": "./plugins/campus-designer"
       },
       "policy": {
         "installation": "AVAILABLE",

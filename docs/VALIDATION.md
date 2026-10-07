@@ -8,17 +8,17 @@ The current listing uses existing results from the Codex chat “Review design s
 
 | Artifact | Final verdict | Resolved implementation findings |
 | --- | --- | --- |
-| AI and leadership symposium | [Event round 3 PASS](../evidence/duke-designer/assessment/reviews/event/round-3.md) | E1 narrow enlarged layout overflow; E2 unreadable enlarged registration labels |
-| Responsible AI research initiative | [Research round 2 PASS](../evidence/duke-designer/assessment/reviews/research/round-2.md) | R1 enlarged text escaped its navy panel |
-| MBA AI/product student organization | [Student organization round 2 PASS](../evidence/duke-designer/assessment/reviews/student-organization/round-2.md) | S1 control accessible name omitted visible label; S2 narrow enlarged layout overflow |
+| AI and leadership symposium | [Event round 3 PASS](../evidence/campus-designer/assessment/reviews/event/round-3.md) | E1 narrow enlarged layout overflow; E2 unreadable enlarged registration labels |
+| Responsible AI research initiative | [Research round 2 PASS](../evidence/campus-designer/assessment/reviews/research/round-2.md) | R1 enlarged text escaped its navy panel |
+| MBA AI/product student organization | [Student organization round 2 PASS](../evidence/campus-designer/assessment/reviews/student-organization/round-2.md) | S1 control accessible name omitted visible label; S2 narrow enlarged layout overflow |
 
 The counts are three reviewed artifacts, three final passes after revisions and five resolved implementation defects. They are not a first-attempt success rate, repeated-generation benchmark, model comparison or measure of general skill accuracy. No cost or timing result is claimed. No Claude API call or newly generated Claude session was used for this import; the unused generation runner was removed.
 
 The original reports record Chrome 154.0.8037.97, desktop/mobile review, 320px reflow, doubled computed text and 200% root text, keyboard interactions, visible focus and relevant completion states. The exact matrix varies by artifact. These text-enlargement simulations are not a native-browser-zoom test, and the review does not certify screen-reader, physical-device or cross-browser behavior.
 
-On October 6, a separate documentation review verified all 45 entries in [provenance.json](../evidence/duke-designer/provenance.json) and all 12 public HTML/CSS/JavaScript/font hashes against the preserved [final-verification.json](../evidence/duke-designer/assessment/final-verification.json). Every hash matched. The evidence importer also compared all 517 sibling files with the original inventory; all remained unchanged, and the two listing screenshots were byte-identical to the source captures. This is an import integrity check, not a new rendering verdict. The source reports preserve earlier failures and the exact versions their final passes cover.
+On October 6, a separate documentation review verified all 45 entries in [provenance.json](../evidence/campus-designer/provenance.json) and all 12 public HTML/CSS/JavaScript/font hashes against the preserved [final-verification.json](../evidence/campus-designer/assessment/final-verification.json). Every hash matched. The evidence importer also compared all 517 sibling files with the original inventory; all remained unchanged, and the two listing screenshots were byte-identical to the source captures. This is an import integrity check, not a new rendering verdict. The source reports preserve earlier failures and the exact versions their final passes cover.
 
-Through 0.2.0 the listing screenshots were the unchanged full-page event-review captures; 0.2.1 shows display crops of their tops and keeps the originals in the evidence folder. Its downloadable single-file example embeds original CSS and font data and relocates the unchanged script; it is a packaging derivative of the passed source, not a separately scored evaluation. Since 0.2.2 the listing’s example prompt is an everyday request rather than a restatement of the reviewed brief; the screenshots remain output of the reviewed brief. [EVIDENCE.md](../evidence/duke-designer/EVIDENCE.md) records these distinctions, optional scratch-copy browser checks and the retained evidence's limits.
+Through 0.2.0 the listing screenshots were the unchanged full-page event-review captures; 0.2.1 shows display crops of their tops and keeps the originals in the evidence folder. Its downloadable single-file example embeds original CSS and font data and relocates the unchanged script; it is a packaging derivative of the passed source, not a separately scored evaluation. Since 0.2.2 the listing’s example prompt is an everyday request rather than a restatement of the reviewed brief; the screenshots remain output of the reviewed brief. [EVIDENCE.md](../evidence/campus-designer/EVIDENCE.md) records these distinctions, optional scratch-copy browser checks and the retained evidence's limits.
 
 ## Current directory integration
 
@@ -38,7 +38,7 @@ Fresh installation was not repeated because of an environment-isolation constrai
 
 The directory and reviewed assets were committed as `78c67f55c61ee7bce7106ff67917d8551d18076b` and published from `main`. [Deployment run 37531184205](https://github.com/jordanmeyer/decision-999/actions/runs/37531184205) completed successfully for that exact commit on October 6. All 12 deployed files matched the local build byte-for-byte, including the home page, listing, both unchanged screenshots, self-contained example, scripts, stylesheet, fonts and licenses.
 
-Live browser inspection confirmed the updated [home page](https://jordanmeyer.github.io/decision-999/) metadata and copy, the [plugin listing](https://jordanmeyer.github.io/decision-999/plugins/duke-designer/) with both expected screenshot dimensions, and the published evidence link. “Open the full page” navigated to the [self-contained example](https://jordanmeyer.github.io/decision-999/plugins/duke-designer/example.html), which rendered correctly. No browser warnings or errors were recorded. This completes the requested reuse and publication of the existing assessment assets; fresh installation was not repeated.
+Live browser inspection confirmed the updated [home page](https://jordanmeyer.github.io/decision-999/) metadata and copy, the [plugin listing](https://jordanmeyer.github.io/decision-999/plugins/campus-designer/) with both expected screenshot dimensions, and the published evidence link. “Open the full page” navigated to the [self-contained example](https://jordanmeyer.github.io/decision-999/plugins/campus-designer/example.html), which rendered correctly. No browser warnings or errors were recorded. This completes the requested reuse and publication of the existing assessment assets; fresh installation was not repeated.
 
 ## Historical published release
 
@@ -172,3 +172,37 @@ Plugins will be built by teams of five, so names moved off the directory cards a
 The home page no longer has the “Hand off the work” section of example requests; it now runs hero, compatible apps, featured plugins, how it works, why MBA-built, and the closing call to action. The tile styles it used remain for the about page.
 
 The about page merges its two opening sections into one white section labeled “The builders”: the statement, then the paragraph on what the builders did before business school. The six expertise tiles were removed; with the home page examples gone, nothing uses tile styles, so they were deleted.
+
+## Campus Designer
+
+Duke Designer is now Campus Designer 0.3.0 (`campus-designer`), so the plugin's name does not suggest an official Duke tool. The rename covers the plugin, skill and evidence folders (moved with git), the install name, the listing address, the skill's name and title, the example request, the footer credit, `featured`, and `check.py`. Its descriptions still say, accurately, that it follows Duke's public brand guidance, and the screenshots are unchanged. Preserved review records, reports, provenance and earlier transcripts keep the original name; earlier sections of this log keep it too, with their links pointed at the renamed folders. All 45 provenance hashes still match. The build, `check.py` and both `claude plugin validate` runs pass. `campus-designer@decision-999` installed in empty Claude Code 2.1.86 and Codex CLI 0.145.0 settings, and both caches hold `skills/campus-designer/SKILL.md`. The home illustration reads “Use the campus designer plugin to …”. The old listing address, `/plugins/duke-designer/`, no longer exists.
+
+## About page rhythm
+
+Every About section used the same small-label, heading and text-block shape. The strongest statement sat near body size beside an empty right half, the four quality steps were boxes almost identical to the home page's, and the origins split repeated the call to action's layout directly above it. With no new text, the page now varies its compositions:
+
+- **The builders and The course:** side by side in one white section after the header. Each column is a section label over a paragraph in EB Garamond at 1.375rem, and the columns stack on phones. The statement “The hard part of using AI at work isn’t the model. It’s knowing what good work looks like.” and the heading “The course behind them” were removed, so the two columns match.
+- **How every plugin is made:** a four-column strip on Whisper Gray, with copper numerals over navy rules. The numerals are large text at 4.13:1, which passes AA large. The strip uses two columns on tablets and one on phones.
+- **Call to action:** the closing split is unchanged.
+
+Text was trimmed: the step descriptions, the origins sentence (now plural, matching team projects), a shorter header lead, and the call-to-action line. A repeated “free for anyone to use” was dropped. Checked at 1440, 1024, 768, 390 and 320px with no overflow.
+
+The install page header no longer has the grid of app logos and its “Choose from 11 compatible apps” label. In its place, the home page's “Compatible with” line now closes the navy header, below a royal rule, with the same five logos and without the “and 6 more” link. The logos are rendered solid white (14.76:1 on navy) and the label is in Hatteras (11.79:1). Each app's instructions follow with its logo. The picker's markup, build code and styles were removed.
+
+## Header rhythm and logo rows
+
+Measured at 320–1440px, the install header's spacing was a set of unrelated fixed values (56px above, then 16, 16, 40 and 29px, and 64px below), and its logos wrapped 4+1 at 600–900px and 2+2+1 on phones. Page headers now use two tokens:
+
+- **`--hero-pad`:** equal top and bottom padding, 40–56px.
+- **`--hero-gap`:** the space before a header's ruled row, 32–40px. That row always gets 24px under its rule. The Plugins and About fact rows use the same values.
+
+Logo rows avoid orphans:
+
+- From about 930px the label shares the row with all five logos.
+- Below that, the label sits on its own line above one row of five, with logos scaling gently to 18–24px tall.
+- Below 544px, the logos form an even three-column grid (3+2), each scaled to its cell.
+- On the home strip, below 1056px, “and 6 more” moves to the label's line, aligned right, so the logos keep a full row.
+
+Measured at 320, 390, 500, 545, 640, 700, 768, 900, 930, 960, 1024, 1080 and 1440px, the logo rows never broke 4+1, the install header's top and bottom padding were equal at every width, and nothing overflowed.
+
+The closing call-to-action band pinned its heading to the top while the text and buttons beside it ran deeper, leaving dead space under the heading. The heading is now centred on that block, the gap above the buttons is 1.5rem, and the band pads its content equally above and below: 72px at 1440px, 61px at 1024px and 48px on phones. This was measured on every page; on phones the band stacks.

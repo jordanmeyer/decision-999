@@ -1,9 +1,9 @@
 ---
-name: duke-designer
+name: campus-designer
 description: Design or review Duke University-branded webpages, presentations, documents, and visual materials using official Duke guidance. Use for Duke brand application, not as authorization for a unit, athletics, or Duke Health identity.
 ---
 
-# Duke designer
+# Campus designer
 
 Turn the requested content into purposeful, recognizably Duke work. Use the project's tools and conventions. Preserve supplied facts; identify demonstration content. This skill supplies design guidance, not trademark permission or a claim of institutional approval.
 

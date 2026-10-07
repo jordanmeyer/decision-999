@@ -230,7 +230,7 @@ def card(plugin, base, attrs=''):
 def demo(plugin, base):
     """Hero illustration: the listing's example request beside a real screenshot of the plugin's output."""
     ui, href, shot = plugin['ui'], f"{base}plugins/{plugin['name']}/", plugin['shots'][0]
-    # In conversation people name the plugin, not its package id: "Use the duke designer plugin to ..."
+    # In conversation people name the plugin, not its package id: "Use the campus designer plugin to ..."
     prompt = ui['defaultPrompt'][0].replace(f"Use {plugin['name']} to", f"Use the {plugin['name'].replace('-', ' ')} plugin to", 1)
     return f'''<figure class="demo">
           <div class="window">
@@ -341,8 +341,7 @@ def build(root=ROOT, base=None):
                    config['url'])]
     example = plugins[0]
     pages.append(write(dist / 'install/index.html', f"Install · {config['name']}", f"Install the {config['name']} plugins in your AI agent.",
-                       setup.substitute(shared, example=escape(example['ui']['displayName']), count=len(clients),
-                                        picker=''.join(f'<li><a href="#{c["slug"]}">{mark(c, base, 24)}</a></li>' for c in clients),
+                       setup.substitute(shared, example=escape(example['ui']['displayName']), logos=strip,
                                         catalog=hosts([c for c in clients if not c.get('folder')], config, base, example['name'], guide=True),
                                         folder=command([f"https://github.com/{config['repo']}/tree/main/plugins/{example['name']}"], 'the plugin folder', 'Plugin folder'),
                                         folder_apps=''.join(
