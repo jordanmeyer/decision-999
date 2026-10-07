@@ -1,6 +1,6 @@
 # Create Your Own
 
-Version 0.1.0. The development guide and packaging script the course uses to turn a standard operating procedure (SOP), a checklist, or an existing `SKILL.md` into a tested agent plugin that works across AI apps.
+Version 0.1.1. The development guide and packaging script the course uses to turn a standard operating procedure (SOP), a checklist, or an existing `SKILL.md` into a tested agent plugin that works across AI apps.
 
 ## Install
 

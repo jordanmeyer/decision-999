@@ -36,6 +36,7 @@ Under `extensions` › `com.openai` › `interface`:
 | `displayName` | The title shown on the site and in apps. The script derives one from the name. |
 | `shortDescription` | One line, under about 90 characters: the result it produces |
 | `longDescription` | Two to four sentences: what it does, how, and what comes back |
+| `developerName` | The name apps show as the developer, set from `--developer`. For a team, use the team's name. |
 | `category` | A short label for the directory's filters, such as Finance or Operations |
 | `defaultPrompt` | One or two realistic requests that name the plugin, such as “Use `<name>` to …” |
 | `screenshots` | Set to `./assets/desktop.png`; add that file (see below) |
@@ -46,6 +47,7 @@ Under the site's own entry in `extensions`, which the script creates:
 | --- | --- |
 | `label` | The short tag on the directory card, agreed with the course team |
 | `audience` | Who it serves and the problem it solves |
+| `team` | Every team member's name, such as `["Avery Chen", "Priya Raman"]`. The listing page shows them under “Built by”; cards show no names. |
 | `results` | Two or three pairs copied from the evidence record, such as `{"value": "38 of 40", "label": "Test cases matched the known answer in Claude Code"}` |
 | `method` | One paragraph: what was tested, when, in which apps, and what the tests do not show |
 | `limits` | Where it falls short, and where a person must approve the work |

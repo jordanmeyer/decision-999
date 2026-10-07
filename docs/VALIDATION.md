@@ -112,7 +112,7 @@ A review of every page against the design skill's color, typography, web, and re
 - The listing page gets the navy page header (breadcrumb, label, title, install button). Its screenshots overlap the header's lower edge in a browser-window frame (landscape) and a phone frame (portrait); the build sizes frames in a row by aspect ratio so they share a height (both 482px at 1440).
 - Install commands wrap only between words, so `duke-designer@decision-999` never splits at its hyphen; copied text is unchanged.
 - The footer is navy, with Directory and Project columns, a link to the Agent Plugins format, and a “Designed with the Duke Designer plugin” credit.
-- The directory ends with a “More plugins every term” tile, hidden while searching or filtering.
+- The directory ends with a “More plugins every spring” tile, hidden while searching or filtering.
 - The install lead no longer orphans “your app:”; a label introduces the app picker.
 - The OpenClaw logo's canvas was trimmed of empty space (artwork unchanged) so it matches the other tiles.
 - The card image was re-rendered at 1440×810 so it ends above the navy purpose band rather than cutting through its text (plugin 0.2.4).
@@ -146,4 +146,29 @@ No model was run; [the evidence record](../evidence/create-your-own/EVIDENCE.md)
 
 ## Footer
 
-The navy footer merged with the navy call-to-action band above it, separated only by a royal hairline at 1.9:1, and left a dead middle between the brand and two link columns. It now sits on Hatteras, Duke's cool blue-gray, with navy text (11.79:1), graphite secondary text (4.59:1) and a Granite divider. Ginger Beer was tried first, but at that scale it read as a separate palette beside the site's navy, white and Whisper Gray. The brand block repeats the section-label device, a copper rule, above the site name in EB Garamond and its summary. Three equal link columns follow: Directory, Featured (built from `featured` in `site/config.json`) and Project. A bottom bar carries a colophon: a bar of the accent colors the site uses and the Duke Designer credit. “Back to top” targets the body, since a link to the sticky header does not scroll. Checked at 1440px, 390px and 320px (no overflow on any page); keyboard focus shows the site's 3px navy ring, and Back to top returns to the top.
+The navy footer merged with the navy call-to-action band above it, separated only by a royal hairline at 1.9:1, and left a dead middle between the brand and two link columns. It now sits on Hatteras, Duke's cool blue-gray, with navy text (11.79:1), graphite secondary text (4.59:1) and a Granite divider. Ginger Beer was tried first, but at that scale it read as a separate palette beside the site's navy, white and Whisper Gray. The brand block repeats the section-label device, a copper rule, above the site name in EB Garamond and its summary. Three equal link columns follow: Directory, Featured (built from `featured` in `site/config.json`) and Project. A bottom bar carries a colophon: a bar of nine Duke palette colors and the Duke Designer credit. “Back to top” targets the body, since a link to the sticky header does not scroll. Checked at 1440px, 390px and 320px (no overflow on any page); keyboard focus shows the site's 3px navy ring, and Back to top returns to the top.
+
+## Card alignment
+
+Cards in a row stretched to the tallest card's height, and the extra height went to the image panel, so a card with shorter text showed a taller gray panel and a lower title. The image row is now fixed, the text takes the remaining space, and the Install row sits at the bottom, so side-by-side cards share the same image, title, results and button positions (checked at 1440px on the home page and directory). Where cards sit side by side, the description and each result label stop at two lines and the category line at one, ending in an ellipsis; the full text stays in the page for screen readers and appears on the listing. Plugin titles are not clamped, because clipping would also clip the title link's focus ring. On phones, where cards stack, descriptions and labels show in full. No page overflows at 320px.
+
+## Skip link and directory state
+
+The skip link sat under the sticky desktop header (z-index 2 against 10), so it was hidden when focused. It now sits above the header as a navy button. With keyboard Tab it was the topmost element at its position, and Enter moved to `#main`.
+
+The directory keeps its search and category in the address (`?q=` and `?category=`) using `history.replaceState`, so typing adds no history entries, and it restores both on load. These were checked in the browser:
+
+- Typing “sop” and choosing Development updated the address to `?q=sop&category=Development`.
+- Opening the listing and going Back restored the search, the pressed category and the single matching card.
+- Loading that address fresh, as a shared link would, showed the same state.
+- An unknown category falls back to All and is dropped from the address.
+
+The home page search still hands its query to the directory as `?q=`.
+
+## Team names
+
+Plugins will be built by teams of five, so names moved off the directory cards and onto the listing page. Each listing's site entry takes an optional `team`, every member's name. The listing's sidebar shows the names under “Built by” (falling back to `developerName`), and the directory search includes them. The header's “By …” and the Details row for the developer were removed, and cards show only the category. `check.py` now gives its second test listing a five-person team and asserts the names appear on its listing page but not on its card. Rendered with five sample names in a scratch copy; Duke Designer and Create Your Own show “Jordan Meyer”. Create Your Own 0.1.1 adds `team` to its packaging guide; its build, validators and installs in empty settings were repeated.
+
+The home page no longer has the “Hand off the work” section of example requests; it now runs hero, compatible apps, featured plugins, how it works, why MBA-built, and the closing call to action. The tile styles it used remain for the about page.
+
+The about page merges its two opening sections into one white section labeled “The builders”: the statement, then the paragraph on what the builders did before business school. The six expertise tiles were removed; with the home page examples gone, nothing uses tile styles, so they were deleted.

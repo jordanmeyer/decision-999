@@ -4,7 +4,7 @@
         <p class="label">${label}</p>
         <h1>${display}</h1>
         <p class="lead">${short}</p>
-        <p class="meta">${category} · Version ${version} · By ${developer}</p>
+        <p class="meta">${category} · Version ${version}</p>
         <p class="actions"><a class="button light" href="#install">Install</a><a class="text-link" href="${source}">View source</a></p>
       </div>
     </section>
@@ -26,12 +26,15 @@
           ${install}
           <p class="install-more"><a href="${base}install/">Install in another app</a></p>
         </section>
+        <section class="side-block" aria-labelledby="team-title">
+          <h2 id="team-title">Built by</h2>
+          <ul class="team">${team}</ul>
+        </section>
         <section class="side-block" aria-labelledby="details-title">
           <h2 id="details-title">Details</h2>
           <dl class="details">
             <div><dt>Version</dt><dd>${version}</dd></div>
             <div><dt>Category</dt><dd>${category}</dd></div>
-            <div><dt>Developer</dt><dd>${developer}</dd></div>
             <div><dt>Source</dt><dd><a href="${source}">GitHub</a></dd></div>
             <div><dt>Documentation</dt><dd><a href="${readme}">README</a></dd></div>
           </dl>

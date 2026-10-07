@@ -29,7 +29,7 @@ Then install a plugin by name, for example `duke-designer@decision-999`. Each pl
 
 ## How it works
 
-Each `plugins/<name>/plugin.json` is a portable [Agent Plugins](https://agent-plugins.org/specification) manifest and the only registry. Its `extensions.com.openai.interface` holds the listing fields OpenAI's plugin directory reads: display name, descriptions, developer, category, example prompt, and screenshots. `extensions.io.github.jordanmeyer` holds the course fields: label, audience, evidence, method, and limits.
+Each `plugins/<name>/plugin.json` is a portable [Agent Plugins](https://agent-plugins.org/specification) manifest and the only registry. Its `extensions.com.openai.interface` holds the listing fields OpenAI's plugin directory reads: display name, descriptions, developer, category, example prompt, and screenshots. `extensions.io.github.jordanmeyer` holds the course fields: label, audience, evidence, method, limits, and the team members named on the listing page.
 
 `evidence/<name>/` holds what a listing cites but an install does not need: `EVIDENCE.md`, review records, and an optional self-contained `example.html`.
 

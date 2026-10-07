@@ -91,6 +91,8 @@ def load(root, config):
         require(shots, f'{where}: add at least one screenshot to interface.screenshots')
         require(len(alts) == len(shots) and all(map(text, alts)), f'{where}: fill in {ext}.screenshotAlt with one description per screenshot')
         cover = bundled(package, listing['cover'], where, '.png') if 'cover' in listing else shots[0]  # card image
+        require('team' not in listing or (listing['team'] and all(map(text, listing['team']))), f'{where}: fill in {ext}.team with each builder’s name')
+        team = listing.get('team') or [ui['developerName']]  # who built it, named on the listing page but not the card
         skills = sorted((package / 'skills').glob('*/SKILL.md'))
         require(skills, f'{where}: no skills/*/SKILL.md')
         for skill in skills:
@@ -104,7 +106,7 @@ def load(root, config):
         require((package / 'README.md').is_file(), f'plugins/{name}: add a README.md')
         for doc in (package / 'README.md', evidence / 'EVIDENCE.md'):
             require(not doc.is_file() or 'TODO:' not in doc.read_text(encoding='utf-8'), f'{os.path.relpath(doc)}: replace every TODO')  # the templates' placeholder
-        plugins.append({'name': name, 'manifest': manifest, 'ui': ui, 'listing': listing, 'shots': shots, 'cover': cover,
+        plugins.append({'name': name, 'manifest': manifest, 'ui': ui, 'listing': listing, 'shots': shots, 'cover': cover, 'team': team,
                         'example': evidence / 'example.html', 'record': evidence / 'EVIDENCE.md'})
     require(plugins, 'No plugins/*/plugin.json found')
     rank = {name: i for i, name in enumerate(config['featured'])}
@@ -217,9 +219,9 @@ def card(plugin, base, attrs=''):
           <div class="card-body">
             <p class="label">{escape(listing['label'])}</p>
             <h3><a href="{href}">{escape(ui['displayName'])}</a></h3>
-            <p>{escape(ui['shortDescription'])}</p>
+            <p class="summary">{escape(ui['shortDescription'])}</p>
             {results(listing['results'][:2])}
-            <p class="meta">{escape(ui['category'])} · {escape(ui['developerName'])}</p>
+            <p class="meta">{escape(ui['category'])}</p>
             <p class="card-actions"><a class="button small" href="{href}#install">Install</a><a class="text-link" href="{href}">View listing</a></p>
           </div>
         </article>'''
@@ -252,7 +254,7 @@ def listing_page(plugin, config, base, clients):
     return {
         'base': base, 'display': escape(ui['displayName']), 'label': escape(listing['label']),
         'short': escape(ui['shortDescription']), 'long': escape(ui['longDescription']), 'category': escape(ui['category']),
-        'developer': escape(ui['developerName']), 'version': escape(m['version']), 'source': tree,
+        'team': ''.join(f'<li>{escape(person)}</li>' for person in plugin['team']), 'version': escape(m['version']), 'source': tree,
         'readme': f"https://github.com/{config['repo']}/blob/main/plugins/{plugin['name']}/README.md",
         'shots': shots, 'example': example, 'evidence': evidence, 'audience': escape(listing['audience']), 'limits': escape(listing['limits']),
         'method': escape(listing['method']), 'results': results(listing['results']),
@@ -365,7 +367,7 @@ def build(root=ROOT, base=None):
     chips = [('', 'All', len(plugins))] + [(c, c, sum(p['ui']['category'] == c for p in plugins)) for c in categories]
     def searchable(p):
         ui, listing, m = p['ui'], p['listing'], p['manifest']
-        words = [ui[k] for k in ('displayName', 'shortDescription', 'longDescription', 'category', 'developerName')]
+        words = [ui[k] for k in ('displayName', 'shortDescription', 'longDescription', 'category', 'developerName')] + p['team']
         return escape(' '.join(words + [listing['label'], listing['audience'], p['name']] + m.get('keywords', [])).lower())
     pages.append(write(dist / 'plugins/index.html', f"Plugins · {config['name']}", config['description'], directory.substitute(
         shared, apps=len(clients), count=f"{len(plugins)} plugin{'s' * (len(plugins) != 1)}",

@@ -1,6 +1,6 @@
 # Create Your Own evidence
 
-Plugin version 0.1.0. Everything here ran on October 6, 2026, on macOS with Python 3.14.3, Claude Code 2.1.86 and the Codex CLI 0.145.0. No model was run and no API was called: these checks cover packaging and installation, not the quality of skills built with the guide.
+Plugin version 0.1.0, with a 0.1.1 update noted at the end. Everything here ran on October 6, 2026, on macOS with Python 3.14.3, Claude Code 2.1.86 and the Codex CLI 0.145.0. No model was run and no API was called: these checks cover packaging and installation, not the quality of skills built with the guide.
 
 ## Task and baseline
 
@@ -22,7 +22,7 @@ The task is packaging a skill for this directory: copying it into a plugin folde
 | 2. Setup mistakes | 6 of 6 stopped with a message saying what to fix, and none created a folder. |
 | 3. Build walkthrough | 13 of 13 unfinished items were named, one per run, until the build passed: seven blank listing fields, the example requests, the results, the missing screenshot file, its description, and the TODOs left in the README and evidence record. |
 | 4. Site checks and validators | Passed. |
-| 5. Installs in empty settings | 2 of 2. Claude Code and the Codex CLI each installed version 0.1.0, enabled, with `skills/create-your-own/SKILL.md` in its plugin cache. |
+| 5. Installs in empty settings | 2 of 2. Claude Code and the Codex CLI each installed the plugin, enabled, with `skills/create-your-own/SKILL.md` in its plugin cache: version 0.1.0 on October 6 and 0.1.1 on October 7. |
 
 The listing's results come from rows 5, 2 and 3.
 
@@ -38,6 +38,10 @@ The listing's results come from rows 5, 2 and 3.
 - The skills-folder testing route in `testing.md` uses the folders each app documents (`~/.claude/skills/` in Claude Code, `~/.codex/skills/` in Codex). Loading a skill from them was not exercised, because confirming it needs a model session.
 - Claude's web and desktop “Add marketplace” path, ChatGPT outside the Codex CLI, and the other compatible apps were not tested.
 - The script ran only on macOS with Python 3.14. It uses only the standard library and reads and writes UTF-8 explicitly, but other systems were not tested.
+
+## Version 0.1.1
+
+On October 7, 2026, `packaging.md` gained the listing's new optional `team` field and guidance for `developerName` on team plugins; nothing else in the package changed. The script and templates are unchanged, so the packaging, setup-mistake and walkthrough transcripts still apply. The site's build, `check.py`, both `claude plugin validate` runs, and the installs in empty settings were repeated for 0.1.1 ([install-test.txt](install-test.txt)).
 
 ## Screenshot
 

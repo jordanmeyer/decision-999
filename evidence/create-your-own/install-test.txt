@@ -1,6 +1,6 @@
-# October 6, 2026, macOS. CLAUDE_CONFIG_DIR and CODEX_HOME point at new empty folders, shown as $TMP/claude-home
-# and $TMP/codex-home; REPO is this repository's working tree; the commands ran from an empty folder. Paths are
-# shortened to $TMP and $REPO and trailing spaces in the Codex table are trimmed; the output is otherwise as printed.
+# October 7, 2026, macOS, plugin version 0.1.1. CLAUDE_CONFIG_DIR and CODEX_HOME point at new empty folders, shown as
+# $TMP/claude-home and $TMP/codex-home; REPO is this repository's working tree; the commands ran from an empty folder.
+# Paths are shortened to $TMP and $REPO and trailing spaces in the Codex table are trimmed; the output is otherwise as printed.
 $ claude --version
 2.1.86 (Claude Code)
 $ claude plugin marketplace add "$REPO"
@@ -15,7 +15,7 @@ $ claude plugin list
 Installed plugins:
 
   ❯ create-your-own@decision-999
-    Version: 0.1.0
+    Version: 0.1.1
     Scope: user
     Status: ✔ enabled
 
@@ -28,7 +28,7 @@ Installed marketplace root: $REPO
 [exit 0]
 $ codex plugin add create-your-own@decision-999
 Added plugin `create-your-own` from marketplace `decision-999`.
-Installed plugin root: $TMP/codex-home/plugins/cache/decision-999/create-your-own/0.1.0
+Installed plugin root: $TMP/codex-home/plugins/cache/decision-999/create-your-own/0.1.1
 [exit 0]
 $ codex plugin list --marketplace decision-999
 Marketplace `decision-999`
@@ -36,8 +36,8 @@ $REPO/.agents/plugins/marketplace.json
 
 PLUGIN                        STATUS              VERSION  PATH
 duke-designer@decision-999    not installed                $REPO/plugins/duke-designer
-create-your-own@decision-999  installed, enabled  0.1.0    $REPO/plugins/create-your-own
+create-your-own@decision-999  installed, enabled  0.1.1    $REPO/plugins/create-your-own
 [exit 0]
 # Both plugin caches then held skills/create-your-own/SKILL.md:
-#   $TMP/claude-home/plugins/cache/decision-999/create-your-own/0.1.0/skills/create-your-own/SKILL.md
-#   $TMP/codex-home/plugins/cache/decision-999/create-your-own/0.1.0/skills/create-your-own/SKILL.md
+#   $TMP/claude-home/plugins/cache/decision-999/create-your-own/0.1.1/skills/create-your-own/SKILL.md
+#   $TMP/codex-home/plugins/cache/decision-999/create-your-own/0.1.1/skills/create-your-own/SKILL.md

@@ -14,6 +14,12 @@ if (directory) {
     count.textContent = `${shown} plugin${shown === 1 ? '' : 's'}`;
     directory.querySelector('.empty').hidden = shown > 0;
     directory.querySelector('[data-more]').hidden = Boolean(category || terms.length);
+    // Keep the search and category in the address, so Back, reload and shared links show the same results.
+    const url = new URL(location.href);
+    for (const [key, value] of [['q', search.value.trim()], ['category', category]]) {
+      if (value) url.searchParams.set(key, value); else url.searchParams.delete(key);
+    }
+    history.replaceState(null, '', url);
   };
   const choose = value => {
     category = value;
@@ -28,8 +34,9 @@ if (directory) {
   });
   directory.querySelector('.directory-search').hidden = false;
   directory.querySelector('.chips').hidden = false;
-  search.value = new URLSearchParams(location.search).get('q') || '';
-  update();
+  const params = new URLSearchParams(location.search), saved = params.get('category') || '';
+  search.value = params.get('q') || '';
+  choose(chips.some(chip => chip.dataset.category === saved) ? saved : '');
 }
 for (const button of document.querySelectorAll('[data-copy]')) {
   button.hidden = false;

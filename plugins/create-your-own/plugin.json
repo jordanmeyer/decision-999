@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "create-your-own",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The development guide and packaging script the course uses to turn an SOP or SKILL.md into a tested agent plugin that works across AI apps.",
   "author": {
     "name": "Jordan Meyer"

@@ -32,6 +32,7 @@ def rejects(root, message):
 def second(manifest):
     manifest.update(name='second-example', version='2.3.4', homepage=f"{config['url']}plugins/second-example/")
     manifest['extensions']['com.openai']['interface']['displayName'] = 'Second Example'
+    manifest['extensions'][config['extension']]['team'] = [f'Student {letter}' for letter in 'ABCDE']
 
 
 with tempfile.TemporaryDirectory() as temporary, redirect_stdout(io.StringIO()):
@@ -56,7 +57,9 @@ with tempfile.TemporaryDirectory() as temporary, redirect_stdout(io.StringIO()):
     listed = (root / 'dist/plugins/index.html').read_text(encoding='utf-8')
     assert listed.count('class="card"') == len(load(ROOT, config)) + 1 and 'Second Example' in listed
     assert 'Second Example' not in (root / 'dist/index.html').read_text(encoding='utf-8')  # the home page shows featured plugins only
-    assert 'Version 2.3.4' in (root / 'dist/plugins/second-example/index.html').read_text(encoding='utf-8')
+    page = (root / 'dist/plugins/second-example/index.html').read_text(encoding='utf-8')
+    assert 'Version 2.3.4' in page and all(f'<li>Student {letter}</li>' in page for letter in 'ABCDE')
+    assert '>Student A' not in listed  # team members are named on the listing page, not the card
     for catalog in ('.agents/plugins/marketplace.json', '.claude-plugin/marketplace.json'):
         assert [p['name'] for p in read_json(root / catalog)['plugins']][-1] == 'second-example'
     # The scaffold's output must be held back by the build until its listing text is written.
@@ -66,5 +69,5 @@ with tempfile.TemporaryDirectory() as temporary, redirect_stdout(io.StringIO()):
     subprocess.run([sys.executable, ROOT / 'plugins/create-your-own/skills/create-your-own/scripts/new_plugin.py',
                     'drafts/meeting-brief', '--developer', 'Test'], cwd=root, check=True, capture_output=True)
     rejects(root, 'meeting-brief/plugin.json: fill in interface.shortDescription')
-print('Passed: catalogs current, clean build, missing listing text, escaping screenshot and skill link, automatic second listing, '
+print('Passed: catalogs current, clean build, missing listing text, escaping screenshot and skill link, automatic second listing with its team, '
       'scaffolded plugin held until its listing is written.')
