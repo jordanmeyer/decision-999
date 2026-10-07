@@ -316,7 +316,9 @@ def build(root=ROOT, base=None):
                                                      for name in ('layout', 'home', 'plugin', 'install', 'plugins', 'about'))
     # Content hashes bust browser caches (GitHub Pages serves max-age=600) whenever the CSS or JavaScript changes.
     versions = {k: hashlib.sha256((root / f'site/{name}').read_bytes()).hexdigest()[:8] for k, name in (('css', 'style.css'), ('js', 'main.js'))}
-    shared = {k: escape(config[k]) for k in ('name', 'repo')} | {'base': base, 'summary': escape(config['description'])} | versions
+    shared = {k: escape(config[k]) for k in ('name', 'repo', 'tagline')} | {'base': base, 'summary': escape(config['description'])} | versions
+    shared['featured'] = ''.join(f'<a href="{base}plugins/{p["name"]}/">{escape(p["ui"]["displayName"])}</a>'
+                                 for p in plugins if p['name'] in config['featured'])
 
     def write(path, title, description, content, url, image=''):
         """Render a page; the header marks the section the page belongs to (page itself, or a listing inside it)."""
