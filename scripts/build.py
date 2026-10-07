@@ -79,6 +79,7 @@ def load(root, config):
         require(listing.get('results') and all(set(r) == {'value', 'label'} for r in listing['results']), f'{where}: results need value and label')
         shots = [bundled(package, s, where, '.png') for s in ui.get('screenshots', [])]
         require(shots and len(shots) == len(listing.get('screenshotAlt', [])), f'{where}: each screenshot needs screenshotAlt text')
+        cover = bundled(package, listing['cover'], where, '.png') if 'cover' in listing else shots[0]  # card image
         skills = sorted((package / 'skills').glob('*/SKILL.md'))
         require(skills, f'{where}: no skills/*/SKILL.md')
         for skill in skills:
@@ -88,7 +89,7 @@ def load(root, config):
             if folder.is_dir():
                 check_links(folder)
                 require(not any(p.is_symlink() for p in folder.rglob('*')), f'{folder}: symlinks are not allowed')
-        plugins.append({'name': name, 'manifest': manifest, 'ui': ui, 'listing': listing, 'shots': shots,
+        plugins.append({'name': name, 'manifest': manifest, 'ui': ui, 'listing': listing, 'shots': shots, 'cover': cover,
                         'example': evidence / 'example.html', 'record': evidence / 'EVIDENCE.md'})
     require(plugins, 'No plugins/*/plugin.json found')
     return plugins
@@ -183,12 +184,10 @@ def results(items):
         f'<div><dt>{escape(r["label"])}</dt><dd>{escape(r["value"])}</dd></div>' for r in items) + '</dl>'
 
 
-def card(plugin, base, attrs='', shot=0):
-    ui, listing, href = plugin['ui'], plugin['listing'], f"{base}plugins/{plugin['name']}/"
-    path = plugin['shots'][shot]
-    width, height = png_size(path)
+def card(plugin, base, attrs=''):
+    ui, listing, href, cover = plugin['ui'], plugin['listing'], f"{base}plugins/{plugin['name']}/", plugin['cover']
     return f'''<article class="card"{attrs}>
-          <a class="card-shot{' portrait' * (height > width)}" href="{href}" tabindex="-1" aria-hidden="true">{image(path, href + path.name)}</a>
+          <a class="card-shot" href="{href}" tabindex="-1" aria-hidden="true">{image(cover, href + cover.name)}</a>
           <div class="card-body">
             <p class="label">{escape(listing['label'])}</p>
             <h3><a href="{href}">{escape(ui['displayName'])}</a></h3>
@@ -203,11 +202,13 @@ def card(plugin, base, attrs='', shot=0):
 def demo(plugin, base):
     """Hero illustration: the listing's example request beside a real screenshot of the plugin's output."""
     ui, href, shot = plugin['ui'], f"{base}plugins/{plugin['name']}/", plugin['shots'][0]
+    # In conversation people name the plugin, not its package id: "Use the duke designer plugin to ..."
+    prompt = ui['defaultPrompt'][0].replace(f"Use {plugin['name']} to", f"Use the {plugin['name'].replace('-', ' ')} plugin to", 1)
     return f'''<figure class="demo">
           <div class="demo-window">
             <div class="demo-bar" aria-hidden="true"><span></span><span></span><span></span></div>
             <div class="demo-body">
-              <p class="bubble">{escape(ui['defaultPrompt'][0])}</p>
+              <p class="bubble">{escape(prompt)}</p>
               <div class="reply"><p class="label">{escape(ui['displayName'])}</p>{image(shot, href + shot.name, plugin['listing']['screenshotAlt'][0])}</div>
             </div>
           </div>
@@ -300,9 +301,8 @@ def build(root=ROOT, base=None):
     featured = [c for c in clients if c.get('featured')]
     strip = ''.join(f'<li>{logo(c, base, 24, c["name"])}</li>' for c in featured)
     pages = [write(dist / 'index.html', f"{config['name']} · {config['tagline']}", config['description'],
-                   home.substitute(shared, cards='\n        '.join(card(p, base, shot=-1 if i == 0 else 0) for i, p in enumerate(plugins)),  # hero shows the first screenshot
-                                   logos=strip, demo=demo(plugins[0], base),
-                                   more=len(clients) - len(featured), install=hosts([c for c in clients if c.get('primary')], config, base, None)),
+                   home.substitute(shared, cards='\n        '.join(card(p, base) for p in plugins), logos=strip, demo=demo(plugins[0], base),
+                                   more=len(clients) - len(featured)),
                    config['url'])]
     example = plugins[0]
     pages.append(write(dist / 'install/index.html', f"Install · {config['name']}", f"Install the {config['name']} plugins in your AI agent.",
@@ -317,7 +317,7 @@ def build(root=ROOT, base=None):
     for plugin in plugins:
         folder = dist / 'plugins' / plugin['name']
         folder.mkdir(parents=True)
-        for shot in plugin['shots']:
+        for shot in {*plugin['shots'], plugin['cover']}:
             shutil.copy2(shot, folder / shot.name)
         if plugin['example'].is_file():
             shutil.copy2(plugin['example'], folder / 'example.html')

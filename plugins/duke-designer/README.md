@@ -1,6 +1,6 @@
 # Duke Designer
 
-Version 0.2.2. The complete `duke-designer` skill: Duke's public brand guidance for webpages, presentations, documents, and visual materials. It is an independent, instructor-built example. It is not an official Duke tool and grants no permission to use Duke marks.
+Version 0.2.3. The complete `duke-designer` skill: Duke's public brand guidance for webpages, presentations, documents, and visual materials. It is an independent, instructor-built example. It is not an official Duke tool and grants no permission to use Duke marks.
 
 ## Install
 
@@ -28,7 +28,7 @@ To call the skill directly, use `/duke-designer:duke-designer` in Claude or `$du
 
 ## Contents and prerequisites
 
-`skills/duke-designer/SKILL.md` is the entry point. It links to 11 text references, three instructional PNG diagrams, and an optional CSS token file. Reference diagrams are not production logos and must not be cropped into output. Source URLs, access dates, limitations, and notices are in `references/sources.md`. `assets/` holds the two listing screenshots.
+`skills/duke-designer/SKILL.md` is the entry point. It links to 11 text references, three instructional PNG diagrams, and an optional CSS token file. Reference diagrams are not production logos and must not be cropped into output. Source URLs, access dates, limitations, and notices are in `references/sources.md`. `assets/` holds the two listing screenshots and the directory card image.
 
 The skill supplies guidance only. It uses the agent's own tools to create and render files and bundles no browser, document renderer, production marks, photography, or fonts. Restricted official templates need legitimately supplied access. Fonts must be obtained under their own licenses.
 
@@ -44,4 +44,4 @@ The review reports, preserved sources and full-page captures, the single-file ev
 
 Copied from the complete design skill supplied with the project, preserving its organization and references checked on 2026-10-02. The package excludes source-repository scripts, caches, credentials, and unrelated projects. The only instruction edit is in `SKILL.md`: it resolves bundled links relative to the installed skill and writes artifacts into the user's project, not the plugin. The skill has no runtime dependency on the original directory, author-specific absolute paths, or escaping symlinks.
 
-0.2.0 added directory listing metadata, generated Claude manifests, and screenshots of reviewed output. 0.2.1 moves the review evidence out of the package (from 5.6 MB to about 0.5 MB) and replaces the full-page screenshots with display crops. 0.2.2 replaces the example prompt with an everyday request. The skill itself is unchanged.
+0.2.0 added directory listing metadata, generated Claude manifests, and screenshots of reviewed output. 0.2.1 moves the review evidence out of the package (from 5.6 MB to about 0.5 MB) and replaces the full-page screenshots with display crops. 0.2.2 replaces the example prompt with an everyday request. 0.2.3 adds a card image from the student-organization example. The skill itself is unchanged.

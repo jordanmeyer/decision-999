@@ -14,7 +14,8 @@
 html { scroll-padding-top: 1.5rem; }
 body { margin: 0; color: var(--ink); background: var(--white); font: 1rem/1.65 var(--sans); border-top: 4px solid var(--navy); }
 h1, h2, h3, p, figure, blockquote, dl, dd { margin: 0; }
-h1, h2, h3 { color: var(--navy); font-family: var(--serif); font-weight: 400; line-height: 1.1; }
+h1, h2, h3 { color: var(--navy); font-family: var(--serif); font-weight: 400; line-height: 1.1; text-wrap: balance; }
+.lines > span { display: block; }
 h1 { font-size: clamp(2.75rem, 6vw, 4.75rem); letter-spacing: -0.02em; }
 h2 { font-size: clamp(1.75rem, 3vw, 2.25rem); }
 h3 { font-size: 1.5rem; }
@@ -105,7 +106,7 @@ img { display: block; max-width: 100%; height: auto; }
 .about-hero .actions { margin-top: 2rem; }
 .about-hero h1 { max-width: 21ch; margin-block: 1rem 1.25rem; font-size: clamp(2.75rem, 5.5vw, 4.5rem); }
 .quote { display: grid; gap: 1rem; }
-.quote blockquote { max-width: 44ch; margin-top: 0.5rem; font: clamp(1.6rem, 3vw, 2.25rem)/1.3 var(--serif); color: var(--navy); }
+.quote blockquote { margin-top: 0.5rem; font: clamp(1.6rem, 3vw, 2.25rem)/1.3 var(--serif); color: var(--navy); }
 .split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 1rem 4rem; padding-block: 5rem; }
 .split p + p { margin-top: 1rem; }
 .builders { padding-block: 5rem; }
@@ -154,8 +155,6 @@ img { display: block; max-width: 100%; height: auto; }
 .cards > .card:first-child .card-shot { order: 2; padding: 2.5rem 0 0 2.5rem; }
 .cards > .card:first-child .card-shot img { border-right: 0; }
 .cards > .card:first-child .card-body { padding: 2.75rem; }
-.card-shot.portrait, .cards > .card:first-child .card-shot.portrait { justify-content: center; padding: 2.5rem 2.5rem 0; }
-.card-shot.portrait img, .cards > .card:first-child .card-shot.portrait img { width: auto; max-height: 22rem; border-right: 1px solid var(--hatteras); box-shadow: 0 0.75rem 2rem rgb(0 0 0 / 0.15); }
 .cards > .card:first-child h3 { font-size: 2.75rem; }
 
 .results { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(9rem, 100%), 1fr)); gap: 1rem 1.5rem; margin-block: 0.5rem; }
@@ -163,7 +162,7 @@ img { display: block; max-width: 100%; height: auto; }
 .results dd { font: 2.25rem/1.1 var(--serif); color: var(--navy); }
 .results dt { margin-top: 0.35rem; font-size: 0.8125rem; color: var(--muted); }
 
-.tasks { padding-bottom: 5rem; }
+.tasks { padding-block: 5rem; }
 .task-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr)); gap: 1.25rem; margin: 0; padding: 0; list-style: none; }
 .task-grid li { display: grid; align-content: start; gap: 0.75rem; padding: 1.5rem 1.5rem 1.75rem; border: 1px solid var(--line); border-top: 4px solid var(--accent); }
 .task-grid li:nth-child(1) { --accent: var(--shale); }
@@ -175,14 +174,15 @@ img { display: block; max-width: 100%; height: auto; }
 .task-grid span { font: 600 0.7rem/1.4 var(--sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
 .task-grid p { font: 1.2rem/1.45 var(--serif); color: var(--navy); }
 .band { padding-block: 4rem; background: var(--quiet); }
-.band h2 { max-width: 32ch; margin-bottom: 2rem; }
+.band h2 { margin-bottom: 2rem; }
 .columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
 .columns > div { border-top: 2px solid var(--navy); padding-top: 1.25rem; }
 .columns h3 { margin-bottom: 0.5rem; }
 .columns p { font-size: 0.9375rem; color: var(--muted); }
 .why .icon { display: block; width: 2.25rem; height: 2.25rem; margin-bottom: 1rem; fill: none; stroke: var(--navy); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 
-.install { padding-block: 5rem; }
+.install { padding-bottom: 5rem; }
+.install .actions { margin-top: 0; }
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin: 2rem 0 2.5rem; padding: 0; list-style: none; counter-reset: step; }
 .steps li { counter-increment: step; border-top: 2px solid var(--navy); padding-top: 1.25rem; }
 .steps li::before { content: counter(step, decimal-leading-zero); display: block; margin-bottom: 0.75rem; color: var(--muted); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; }
