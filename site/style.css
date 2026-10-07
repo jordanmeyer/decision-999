@@ -19,7 +19,7 @@ h1, h2, h3 { color: var(--navy); font-family: var(--serif); font-weight: 400; li
 h1 { font-size: clamp(2.75rem, 6vw, 4.75rem); letter-spacing: -0.02em; }
 h2 { font-size: clamp(1.75rem, 3vw, 2.25rem); }
 h3 { font-size: 1.5rem; }
-p { max-width: 68ch; }
+p { max-width: 68ch; text-wrap: pretty; }
 a { color: var(--navy); text-underline-offset: 0.2em; }
 a:hover { color: var(--royal); }
 :focus-visible { outline: 3px solid var(--navy); outline-offset: 3px; }
@@ -107,6 +107,7 @@ img { display: block; max-width: 100%; height: auto; }
 .link-button { border: 0; padding: 0; background: none; color: var(--navy); font: inherit; font-weight: 600; text-decoration: underline; cursor: pointer; }
 .quote { display: grid; gap: 1rem; }
 .quote .kicker { margin-bottom: 0.5rem; }
+.quote > p { max-width: none; }
 .quote blockquote { margin-top: 0.5rem; font: clamp(1.6rem, 3vw, 2.25rem)/1.3 var(--serif); color: var(--navy); }
 .split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 1rem 4rem; padding-block: 5rem; }
 .split p + p { margin-top: 1rem; }
