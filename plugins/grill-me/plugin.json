@@ -1,0 +1,50 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "grill-me",
+  "version": "0.1.0",
+  "description": "Turn an idea into a shared design through rounds of questions, recommendations, and explicit decisions.",
+  "author": {
+    "name": "Matt Pocock",
+    "url": "https://github.com/mattpocock"
+  },
+  "homepage": "https://jordanmeyer.github.io/decision-999/plugins/grill-me/",
+  "repository": "https://github.com/jordanmeyer/decision-999",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Grill Me",
+        "shortDescription": "Get grilled on your idea until every design decision is settled.",
+        "longDescription": "Grill Me interviews you before work begins. It maps decisions as a design tree, asks all currently answerable questions in a numbered round, and recommends an answer to each. Your answers unlock the next round; the agent waits for your confirmation of shared understanding before acting. The original skill is by Matt Pocock; this example packages the supplied text for installation.",
+        "developerName": "Jordan Meyer",
+        "category": "Planning",
+        "defaultPrompt": [
+          "Use grill-me to pressure-test my idea for a weekly customer feedback digest. Interview me until we agree on the design before building anything.",
+          "Use grill-me to work through a launch plan for a fictional neighborhood repair café. Ask each round of decisions together and recommend answers."
+        ],
+        "screenshots": []
+      }
+    },
+    "io.github.jordanmeyer": {
+      "label": "Example · Instructor-packaged",
+      "audience": "Anyone with an idea, plan, or feature that needs sharper decisions before implementation. Bring the goal and constraints; the agent works through the unresolved choices with you.",
+      "results": [
+        {
+          "value": "2 of 2",
+          "label": "Apps installed the packaged skill in empty settings"
+        },
+        {
+          "value": "Not verified",
+          "label": "Interview behavior; model tests blocked by login"
+        }
+      ],
+      "method": "On October 8, 2026, version 0.1.0 passed the directory build, boundary checks, and Claude marketplace and plugin validators. Claude Code 2.1.86 and Codex CLI 0.145.0 each installed it in temporary empty settings; both cached the exact skill text. Three synthetic interview cases were prepared, but all model runs stopped at authentication before producing an answer. These results establish packaging and installation only; no interview quality or student review is claimed.",
+      "limits": "An interview guide, not a guarantee that every decision will be found. Environmental fact-finding requires an agent app with filesystem or other relevant tools and sub-agent support. MBA student review, cross-app behavior, and interview consistency have not been verified.",
+      "screenshotAlt": [],
+      "team": [
+        "Matt Pocock — original skill",
+        "Jordan Meyer — plugin packaging"
+      ]
+    }
+  },
+  "license": "MIT"
+}

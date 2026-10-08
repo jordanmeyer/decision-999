@@ -15,6 +15,12 @@
       "category": "Design"
     },
     {
+      "name": "grill-me",
+      "source": "./plugins/grill-me",
+      "description": "Get grilled on your idea until every design decision is settled.",
+      "category": "Planning"
+    },
+    {
       "name": "create-your-own",
       "source": "./plugins/create-your-own",
       "description": "The scaffolding our students use to turn an SOP into a tested plugin that works across AI apps.",

@@ -1,0 +1,42 @@
+$ claude --version
+2.1.86 (Claude Code)
+[exit 0]
+$ claude plugin marketplace add $REPO
+Adding marketplace...
+✔ Successfully added marketplace: decision-999 (declared in user settings)
+[exit 0]
+$ claude plugin install grill-me@decision-999
+Installing plugin "grill-me@decision-999"...
+✔ Successfully installed plugin: grill-me@decision-999 (scope: user)
+[exit 0]
+$ claude plugin list
+Installed plugins:
+
+  ❯ grill-me@decision-999
+    Version: 0.1.0
+    Scope: user
+    Status: ✔ enabled
+[exit 0]
+claude: cached skill matches the packaged skill byte for byte.
+
+$ codex --version
+codex-cli 0.145.0
+[exit 0]
+$ codex plugin marketplace add $REPO
+Added marketplace `decision-999` from $REPO.
+Installed marketplace root: $REPO
+[exit 0]
+$ codex plugin add grill-me@decision-999
+Added plugin `grill-me` from marketplace `decision-999`.
+Installed plugin root: $TMP/codex/plugins/cache/decision-999/grill-me/0.1.0
+[exit 0]
+$ codex plugin list
+Marketplace `decision-999`
+$REPO/.agents/plugins/marketplace.json
+
+PLUGIN                        STATUS              VERSION  PATH
+campus-designer@decision-999  not installed                $REPO/plugins/campus-designer
+grill-me@decision-999         installed, enabled  0.1.0    $REPO/plugins/grill-me
+create-your-own@decision-999  not installed                $REPO/plugins/create-your-own
+[exit 0]
+codex: cached skill matches the packaged skill byte for byte.

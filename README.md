@@ -25,6 +25,7 @@ Then install a plugin by name, for example `campus-designer@decision-999`. Each 
 ## Plugins
 
 - [Campus Designer](plugins/campus-designer/README.md): webpages, slides, and documents that follow Duke's public brand guidelines. Instructor-built example.
+- [Grill Me](plugins/grill-me/README.md): interview an idea through rounds of dependent design decisions before acting. Matt Pocock's skill, packaged as an example; installation checked, interview behavior unverified.
 - [Create Your Own](plugins/create-your-own/README.md): the development guide and packaging script students use to turn an SOP or `SKILL.md` into a tested plugin for this catalog. Instructor-built scaffolding.
 
 ## How it works

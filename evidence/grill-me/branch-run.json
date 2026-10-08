@@ -1,0 +1,6 @@
+{
+  "result": "Failed to authenticate. API Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth access token is invalid.\"},\"request_id\":null}",
+  "is_error": true,
+  "modelUsage": {},
+  "exit_code": 1
+}
