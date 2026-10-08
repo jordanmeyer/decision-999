@@ -8,6 +8,16 @@ This folder sits outside the installable plugin, so installing Campus Designer d
 
 ## Results and scope
 
+### October 8, 2026 — developer-requested link styling fix
+
+Credit to **Jordan Meyer, the plugin developer**, for requesting removal of decorative link arrows and supplying two screenshots showing “Registration demo ↗” and “Try the registration demo ↗” in the event example. Both match links in the preserved [event HTML](examples/event/index.html).
+
+Implemented in plugin **0.3.1**: `skills/campus-designer/SKILL.md` prohibits decorative arrows on links, including navigation and button-styled calls to action, whether rendered as text, icons or CSS. Its `references/review.md` checklist now checks this preference. This is developer-requested design guidance, not a Duke brand requirement or an accessibility finding.
+
+This change updates instructions and the review checklist; it is not a new generation or independent rendered review. The historical examples, screenshots, hashes and verdicts below remain unchanged and may show arrows. The original five-defect count is unchanged. The October 2 assessment's statements that the skill was unchanged describe that earlier exercise; its three deferred proposals remain unimplemented.
+
+### October 2, 2026 — independent example reviews
+
 | Example | Final independent verdict | Resolved findings |
 | --- | --- | --- |
 | AI and leadership symposium | [Round 3 PASS](assessment/reviews/event/round-3.md) | E1: narrow enlarged layout overflow; E2: unreadable enlarged registration labels |

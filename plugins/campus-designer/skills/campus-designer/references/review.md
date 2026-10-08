@@ -27,6 +27,7 @@ Use applicable checks; mark each pass, fail, not applicable or unverified. Recor
 ## Design quality (judgment, not compliance)
 
 - Purpose, hierarchy and next action are clear to the intended audience.
+- Links, including navigation and button-styled calls to action, follow the [link-styling default](../SKILL.md#authority-labels): no decorative arrows.
 - Type, space, alignment, crop and density fit the content and medium; the result does not force an unrelated template.
 - Inspect actual output for clipping, overflow, awkward wraps, weak contrast, missing assets and visually distracting inconsistencies.
 - Make a separate simplification pass: remove redundant decoration, repeated calls to action, excess font families or unnecessary layout mechanisms when that improves comprehension.

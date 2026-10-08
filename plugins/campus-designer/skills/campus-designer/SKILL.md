@@ -22,6 +22,8 @@ Turn the requested content into purposeful, recognizably Duke work. Use the proj
 
 References distinguish **Duke rule** (explicit requirement/prohibition), **Duke recommendation** (advice, suggested use or example), **Skill default** (reversible implementation choice), and **General accessibility practice** (not a distinct Duke visual-brand rule). Source-specific scope matters. Do not upgrade “should” to a mandatory policy or turn an example into the only permitted design.
 
+**Skill default — link styling:** Do not add decorative arrows (such as ↗ or →) to links, including navigation links and button-styled calls to action. This includes text glyphs, icons and CSS-generated arrows. Use descriptive link text and clear styling instead. This is a developer-requested design preference, not a Duke brand rule.
+
 Use official asset files for marks; never typeset or trace a substitute. This folder includes reference diagrams, not production logos or licensed photography. Restricted downloads require a legitimately supplied asset; no credentials or access-control workarounds. Existing institutional authorization in the user's context need not be requested again.
 
 Evidence was checked on **2026-10-02**. Recheck the relevant official source when identity, usage rights, a source conflict, or changed policy affects the task; do not recrawl the entire guide for routine work.
