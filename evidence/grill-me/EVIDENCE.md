@@ -30,3 +30,7 @@ The generated listing was visually inspected in the in-app browser at measured w
 The behavior cases are isolated synthetic conversation states, not one continuous interview. The runner permits skill loading only, so it cannot establish environmental fact-finding or sub-agent behavior. A tool-enabled multi-round session, misleading inputs, repeat-run consistency, cross-app behavior, and thorough MBA student review remain unverified. Time savings and cost were not measured. The example is published at the repository owner's request with these limitations visible.
 
 The skill's requirement to finish every branch is an instruction, not a guarantee of completeness. Apps without relevant environment access and sub-agents cannot execute the full workflow as written.
+
+## Version 0.1.1
+
+On October 8, 2026, added a third example request about designing an onboarding flow for a fictional subscription app. The skill instructions are unchanged; the version 0.1.0 installation evidence above remains historical evidence, not a new behavioral test.

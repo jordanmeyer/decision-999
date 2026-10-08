@@ -1,10 +1,12 @@
 """Check installation in temporary, empty app settings without modifying personal settings."""
+import json
 import os
 from pathlib import Path
 import subprocess
 import tempfile
 
 ROOT = Path(__file__).resolve().parents[2]
+VERSION = json.loads((ROOT / 'plugins/grill-me/plugin.json').read_text())['version']
 log = []
 with tempfile.TemporaryDirectory() as scratch:
     for app, variable, install in (('claude', 'CLAUDE_CONFIG_DIR', 'install'), ('codex', 'CODEX_HOME', 'add')):
@@ -18,7 +20,7 @@ with tempfile.TemporaryDirectory() as scratch:
             log.extend(['$ ' + ' '.join(command), result.stdout.strip(), result.stderr.strip(), f'[exit {result.returncode}]'])
             if result.returncode:
                 raise SystemExit('\n'.join(log))
-        cached = home / 'plugins/cache/decision-999/grill-me/0.1.0/skills/grill-me/SKILL.md'
+        cached = home / f'plugins/cache/decision-999/grill-me/{VERSION}/skills/grill-me/SKILL.md'
         assert cached.read_bytes() == (ROOT / 'plugins/grill-me/skills/grill-me/SKILL.md').read_bytes()
         log.append(f'{app}: cached skill matches the packaged skill byte for byte.\n')
     output = '\n'.join(line.rstrip() for line in log if line.strip()).rstrip().replace(str(Path(scratch).resolve()), '$TMP').replace(scratch, '$TMP').replace(str(ROOT), '$REPO') + '\n'

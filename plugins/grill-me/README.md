@@ -1,6 +1,6 @@
 # Grill Me
 
-Version 0.1.0. A decision-tree interview that turns an idea into a shared design before work begins. Packaged from the skill text supplied by the repository owner; the instructions are preserved verbatim below the added metadata and heading.
+Version 0.1.1. A decision-tree interview that turns an idea into a shared design before work begins. Packaged from the skill text supplied by the repository owner; the instructions are preserved verbatim below the added metadata and heading.
 
 ## Credit
 

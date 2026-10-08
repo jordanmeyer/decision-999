@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "grill-me",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Turn an idea into a shared design through rounds of questions, recommendations, and explicit decisions.",
   "author": {
     "name": "Matt Pocock",
@@ -19,7 +19,8 @@
         "category": "Planning",
         "defaultPrompt": [
           "Use grill-me to pressure-test my idea for a weekly customer feedback digest. Interview me until we agree on the design before building anything.",
-          "Use grill-me to work through a launch plan for a fictional neighborhood repair café. Ask each round of decisions together and recommend answers."
+          "Use grill-me to work through a launch plan for a fictional neighborhood repair café. Ask each round of decisions together and recommend answers.",
+          "Use grill-me to design an onboarding flow for a fictional subscription app. Challenge my assumptions about users, success criteria, and edge cases before we agree on what to build."
         ],
         "screenshots": []
       }
