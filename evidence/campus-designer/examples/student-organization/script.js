@@ -28,6 +28,6 @@ document.querySelector('#interest-form').addEventListener('submit', event => {
   event.preventDefault();
   const [title, copy, target, label] = suggestions[document.querySelector('[name=interest]:checked').value];
   const result = document.querySelector('#next-step');
-  result.innerHTML = `<strong>${title}</strong><p>${copy}</p><a href="${target}">${label} →</a><p class="small">Demo complete. No membership has been created.</p>`;
+  result.innerHTML = `<strong>${title}</strong><p>${copy}</p><a href="${target}">${label}</a><p class="small">Demo complete. No membership has been created.</p>`;
   result.hidden = false;
 });

@@ -6,12 +6,16 @@
     {
       "source": "examples/event/index.html",
       "file": "examples/event/index.html",
-      "sha256": "06ab2df653666fd0c46a3c2431a94f5a0b030fb7f9f914a900539f8d34c2e1d0"
+      "sha256": "d6d1fb5d0626fc8fa069073a7c38baddd86ff711f0d506e747935f49af18f55b",
+      "sourceSha256": "06ab2df653666fd0c46a3c2431a94f5a0b030fb7f9f914a900539f8d34c2e1d0",
+      "change": "Decorative arrows and their unused styling removed October 8, 2026 at developer Jordan Meyer’s request; original review verdict applies to sourceSha256."
     },
     {
       "source": "examples/event/style.css",
       "file": "examples/event/style.css",
-      "sha256": "c28c6040c4b4336039b004e92dcfe9656783ead22e405cf9b73dc9f950b0fdca"
+      "sha256": "851a6947d4524137844e4b8eea2d8e97468dca3352de2dc57f637d7ca184bdc6",
+      "sourceSha256": "c28c6040c4b4336039b004e92dcfe9656783ead22e405cf9b73dc9f950b0fdca",
+      "change": "Decorative arrows and their unused styling removed October 8, 2026 at developer Jordan Meyer’s request; original review verdict applies to sourceSha256."
     },
     {
       "source": "examples/event/script.js",
@@ -51,12 +55,16 @@
     {
       "source": "examples/research/index.html",
       "file": "examples/research/index.html",
-      "sha256": "a732b44d1e9ce5f39949a212cb6080aa0787698446ed51a5bb6dfbc76e917bbb"
+      "sha256": "befd58f0e4e7a64cc2f43c7304249263cf8d38804326215b930e5dc06f425827",
+      "sourceSha256": "a732b44d1e9ce5f39949a212cb6080aa0787698446ed51a5bb6dfbc76e917bbb",
+      "change": "Decorative arrows and their unused styling removed October 8, 2026 at developer Jordan Meyer’s request; original review verdict applies to sourceSha256."
     },
     {
       "source": "examples/research/styles.css",
       "file": "examples/research/styles.css",
-      "sha256": "aa56e61cb7ed0398674ff62e61c77226aeccac1a060a2026b42195d5901cb0c0"
+      "sha256": "5372687fb07cd6431eba04ca2a9e1a7f10db18799c2e962750619ceb8d2163fc",
+      "sourceSha256": "aa56e61cb7ed0398674ff62e61c77226aeccac1a060a2026b42195d5901cb0c0",
+      "change": "Decorative arrows and their unused styling removed October 8, 2026 at developer Jordan Meyer’s request; original review verdict applies to sourceSha256."
     },
     {
       "source": "examples/research/script.js",
@@ -86,19 +94,23 @@
     {
       "source": "examples/student-organization/index.html",
       "file": "examples/student-organization/index.html",
-      "sha256": "919097077a2193ec34b7607ae98ae03a2893b765d7c7f441586b6c83b477cd43"
+      "sha256": "1afbdcb86d0e1510ca9677b0dcca4526e91df1c31f436e8cd50c18bddc6ed291",
+      "sourceSha256": "919097077a2193ec34b7607ae98ae03a2893b765d7c7f441586b6c83b477cd43",
+      "change": "Decorative arrows and their unused styling removed October 8, 2026 at developer Jordan Meyer’s request; original review verdict applies to sourceSha256."
     },
     {
       "source": "examples/student-organization/styles.css",
       "file": "examples/student-organization/styles.css",
       "sourceSha256": "79fb926ff7cdd8d262be5a89ce0a57a9135b810bbae68c01ddc213d1592eb31d",
-      "sha256": "bac58ad2b92a414da283c2df0e9ec9544d194ee83ba19ded6e80b5defed92de9",
-      "change": "Sample-session panel background changed from Dandelion (#FFD960) to Ginger Beer (#FCF7E5) on October 6 at the maintainer’s request, after review; navy text on Ginger Beer is 13.76:1."
+      "sha256": "f9879d28ba5426fe5529b234a203526fd9eb80fe2276f0c0755cd1c0cc57df33",
+      "change": "Sample-session panel background changed from Dandelion (#FFD960) to Ginger Beer (#FCF7E5) on October 6 at the maintainer’s request, after review; navy text on Ginger Beer is 13.76:1. Decorative arrows and their unused styling removed October 8, 2026 at developer Jordan Meyer’s request; original review verdict applies to sourceSha256."
     },
     {
       "source": "examples/student-organization/script.js",
       "file": "examples/student-organization/script.js",
-      "sha256": "60ec1d148e2bcdd96f62fa08438c89e491a3742a3a70deb79b1e0f8bdac24bf6"
+      "sha256": "a7cab0b0e361b0a54076f0c8838fc313f0cf57e8b152ef69e1a7832f8a6140c0",
+      "sourceSha256": "60ec1d148e2bcdd96f62fa08438c89e491a3742a3a70deb79b1e0f8bdac24bf6",
+      "change": "Decorative arrows and their unused styling removed October 8, 2026 at developer Jordan Meyer’s request; original review verdict applies to sourceSha256."
     },
     {
       "source": "examples/student-organization/assets/open-sans.ttf",
