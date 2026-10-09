@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "name": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+  "start": "2024-01-01",
+  "promise": "2025-12-31",
+  "tasks": [
+    {
+      "id": "a",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+      "duration": 365,
+      "release": null,
+      "dependencies": []
+    },
+    {
+      "id": "b",
+      "name": "Second year",
+      "duration": 365,
+      "release": null,
+      "dependencies": [
+        "a"
+      ]
+    }
+  ]
+}

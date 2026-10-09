@@ -1,0 +1,1 @@
+{"version":1,"name":"Independent January case","start":"2026-01-05","promise":"2026-01-12","tasks":[{"id":"constructor","name":"<b>Validation</b>","duration":2,"release":null,"dependencies":[]},{"id":"beta","name":"Second task","duration":3,"release":null,"dependencies":["constructor"]}]}

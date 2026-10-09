@@ -13,3 +13,7 @@
 Host limits: native viewport override had no effect and was reset; frames establish CSS layout only. Some cross-origin iframe actions failed in the host bridge; direct production keyboard checks and temporary same-origin visual frames supplied separate evidence. Temporary visual HTML exists only in ignored dist and will be removed by the clean publication build. Screenshots include host-added blank canvas; cropping only that blank margin is permitted for readable evidence. No physical-device or universal accessibility claim.
 
 Final closure: independently inspected the maximum-money CDF and frontier at320 after8dbb6ab. Compact axes (−$900K/−$600K/−$300K/$0) are readable and the coincident points have one `A / B / C` label. Screenshot `narrow-boundary-charts.png` records this correction.
+
+## Bounded native-history follow-up
+
+Finalsource6b25b8a6898a0575b5270406b1cff7df48f7c047: the earlier lifecycle check ran the calculation after returning and missed restored controls before interaction. Developer reproduced and fixed the mismatch for both form and outside-form inventory selector. Coordinator independently set certainty0SD/cost21 and inspected400, navigated to tests (17/17), thenBack. Before interaction controls resetSD120/cost18–24/seedtote-2026/selected600; lead600/detail600/defaultresults agreed, twoSVGs existed, warning/error logs empty. This closes the bounded follow-up without erasing prior evidence.

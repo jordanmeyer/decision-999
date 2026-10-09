@@ -9,3 +9,5 @@ The four specialist skills are candidate instructions, not approved dependencies
 Published gallery verified at course commit `4cd8381977020d94d8a9316921e213e962235ecb`, successful Actions run37889606924. The live page shows version0.2.1, both new app links, source/evidence links, and2of10 reviewed/live results. Screenshot: `gallery-live.png`. The independent app report-only deployments also succeeded at executive b4b2805 and uploads226756b; these did not change evaluated application source.
 
 Third example: course commit86e3e7e, successful Actions run37891128760, actual live gallery shows3of10 and the simulator link. The fourth process link is prepared from its independently verified live deployment; publication verification follows below.
+
+Fourth example: course commit0d61dcf, Actions37891739298 succeeded; actual live gallery shows4of10 and the process link. Process report-only commit7a236ea also deployed successfully in37891600065. Later native-history checks reopened a bounded issue in uploads and simulator; fixes/re-review are tracked without erasing initial passed rounds.

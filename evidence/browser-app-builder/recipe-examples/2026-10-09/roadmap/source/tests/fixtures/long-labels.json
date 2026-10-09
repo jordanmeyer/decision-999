@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "name": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+  "start": "2026-01-05",
+  "promise": "2026-01-12",
+  "tasks": [
+    {
+      "id": "constructor",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+      "duration": 2,
+      "release": null,
+      "dependencies": []
+    },
+    {
+      "id": "beta",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+      "duration": 3,
+      "release": null,
+      "dependencies": [
+        "constructor"
+      ]
+    }
+  ]
+}

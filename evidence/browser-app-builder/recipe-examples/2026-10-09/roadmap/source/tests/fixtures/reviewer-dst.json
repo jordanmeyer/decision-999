@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "name": "Reviewer release and merge across DST",
+  "start": "2026-03-06",
+  "promise": "2026-03-14",
+  "tasks": [
+    {
+      "id": "c",
+      "name": "Released inspection",
+      "duration": 1,
+      "release": "2026-03-10",
+      "dependencies": [
+        "a"
+      ]
+    },
+    {
+      "id": "a",
+      "name": "<b>Start work</b>",
+      "duration": 2,
+      "release": null,
+      "dependencies": []
+    },
+    {
+      "id": "e",
+      "name": "Independent release gate",
+      "duration": 1,
+      "release": "2026-03-14",
+      "dependencies": []
+    },
+    {
+      "id": "d",
+      "name": "Merged finish",
+      "duration": 2,
+      "release": null,
+      "dependencies": [
+        "b",
+        "c"
+      ]
+    },
+    {
+      "id": "b",
+      "name": "Three day work",
+      "duration": 3,
+      "release": null,
+      "dependencies": [
+        "a"
+      ]
+    }
+  ]
+}

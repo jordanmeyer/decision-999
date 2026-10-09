@@ -305,7 +305,7 @@
       "id": "leaflet",
       "name": "Leaflet",
       "skill": "leaflet-browser-app",
-      "status": "candidate",
+      "status": "approved",
       "packages": {
         "leaflet": "1.9.4"
       },
@@ -319,7 +319,7 @@
           ]
         }
       },
-      "limitations": "Candidate: isolated browser probe passed; full application review pending. Local GeoJSON and locally bundled geographic assets only; no remote tiles, geocoding or location permission. Retain data attribution and keyboard/table alternatives."
+      "limitations": "Local GeoJSON and locally bundled geographic assets only; no remote tiles, geocoding or location permission. Retain data attribution and keyboard/table alternatives. Independently reviewed state-level market screen; approval does not cover remote map services or arbitrary geographic models."
     },
     {
       "id": "duckdb",

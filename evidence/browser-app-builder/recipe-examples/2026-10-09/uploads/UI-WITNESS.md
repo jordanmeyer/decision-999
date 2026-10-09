@@ -1,0 +1,3 @@
+# Uploads native-history follow-up witness
+
+Coordinator independently verified source81cbd7110caef07f754d9b377e183dca4e17f5a7 through actual IAB. Jan2026/Product gave fourproductrows (Weekender12282gross/2937returned/9345net). Navigate to9503tests andBack before interaction: allfiltervaluesempty/groupchannel, threecorrectrows Paid34158/12850/21308, Organic28650/2284/26366, Email28374/0/28374. Totals91182/15134/76048, two1307pxwide canvases mounted, capturedlogs empty. Only autocomplete attributes changed; prior full model/import/layout review remains applicable. Persistent reviewer inspectedsource and closedthisfollow-up.

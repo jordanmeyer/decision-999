@@ -13,7 +13,7 @@
       "gallery_commit": "4cd8381977020d94d8a9316921e213e962235ecb"
     },
     "uploads": {
-      "stage": "live verified and linked in gallery",
+      "stage": "live; bounded history follow-up in review",
       "repository_proposed": "jordanmeyer/bab-example-uploads",
       "review": "PASS",
       "deployment": "PASS",
@@ -25,7 +25,7 @@
       "gallery_commit": "4cd8381977020d94d8a9316921e213e962235ecb"
     },
     "simulator": {
-      "stage": "live verified and linked in gallery",
+      "stage": "live; bounded history follow-up in review",
       "repository_proposed": "jordanmeyer/bab-example-simulator",
       "review": "PASS",
       "deployment": "PASS",
@@ -36,26 +36,32 @@
       "gallery_commit": "86e3e7e7844b3d8d7648b29b41d34804423a22a4"
     },
     "process": {
-      "stage": "live verified; gallery pending",
+      "stage": "live verified and linked in gallery",
       "repository_proposed": "jordanmeyer/bab-example-process",
       "review": "PASS",
       "deployment": "PASS",
       "reviewed_source": "aca04afaa1046785df0f46b7f95dbc14fc5f556e",
       "published_commit": "8e868939da3e900ee1353b33b32f53c15e23a383",
       "live_url": "https://jordanmeyer.github.io/bab-example-process/",
-      "workflow": "https://github.com/jordanmeyer/bab-example-process/actions/runs/37891183640"
+      "workflow": "https://github.com/jordanmeyer/bab-example-process/actions/runs/37891183640",
+      "gallery_commit": "0d61dcf"
     },
     "roadmap": {
-      "stage": "independent review",
+      "stage": "live verified; gallery pending",
       "repository_proposed": "jordanmeyer/bab-example-roadmap",
-      "review": "pending",
-      "deployment": "pending"
+      "review": "PASS",
+      "deployment": "PASS",
+      "reviewed_source": "51a9c4c965b25b26458fae425367ebebc6151da0",
+      "published_commit": "7bce04a0965356a92bceb29d52756e5e9ae458d8",
+      "live_url": "https://jordanmeyer.github.io/bab-example-roadmap/",
+      "workflow": "https://github.com/jordanmeyer/bab-example-roadmap/actions/runs/37892493308"
     },
     "markets": {
-      "stage": "independent review",
+      "stage": "review passed; publication preparation",
       "repository_proposed": "jordanmeyer/bab-example-markets",
-      "review": "pending",
-      "deployment": "pending"
+      "review": "PASS",
+      "deployment": "pending",
+      "reviewed_source": "5871ab6740e540e605778f0cea21adcc31b46a0c"
     },
     "sql": {
       "stage": "building",
@@ -64,7 +70,7 @@
       "deployment": "pending"
     },
     "optimizer": {
-      "stage": "simulated planning",
+      "stage": "building",
       "repository_proposed": "jordanmeyer/bab-example-optimizer",
       "review": "pending",
       "deployment": "pending"

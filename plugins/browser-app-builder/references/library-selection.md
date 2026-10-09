@@ -18,6 +18,8 @@ Plan and Build read this guide even if the host has not implicitly loaded a libr
 | Use jStat for browser statistical calculations with explicit assumptions and independently checked expected results | [jStat](../skills/jstat-browser-app/SKILL.md) |
 | Create reproducible local random streams for browser simulations using seedrandom | [seedrandom](../skills/seedrandom-browser-app/SKILL.md) |
 
+| Compare geographic markets using local boundaries and attributes | [Leaflet](../skills/leaflet-browser-app/SKILL.md) |
+
 A simple calculator needs none of these. Prefer one charting library and one table component. React Flow means editable nodes; Mermaid means text-authored explanations. vis-timeline displays events; Frappe Gantt displays scheduled tasks. Mantine follows a justified React choice, not every form request. Statistics and animation need a stated purpose.
 
 “Live analytical presentation” suggests reveal.js and, when useful, ECharts. Ask whether “live” means local interactive scenarios or externally refreshed data. The latter exceeds this pilot; offer a bundled example or local file import. Do not infer remote APIs from the phrase.
@@ -28,7 +30,6 @@ The following specialist recipes are being validated. Check each inventory statu
 
 | Student need | Skill |
 | --- | --- |
-| Compare geographic markets using local boundaries and attributes | [Leaflet](../skills/leaflet-browser-app/SKILL.md) |
 | Explore substantial local datasets with real SQL joins and aggregations | [DuckDB-Wasm](../skills/duckdb-browser-app/SKILL.md) |
 | Optimize a constrained production or resource-allocation model | [HiGHS](../skills/highs-browser-app/SKILL.md) |
 | Preview and download a controlled product-video composition | [Remotion browser video](../skills/remotion-browser-app/SKILL.md) |

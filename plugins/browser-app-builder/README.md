@@ -18,9 +18,9 @@ You can resume in a fresh chat with the same project files. Setup preserves exis
 
 ## Included
 
-Five [workflow skills](references/workflow.md), thirteen approved [library skills](references/library-selection.md), plain and managed starters, GitHub Pages workflows, and the bundled [Campus Designer](skills/campus-designer/SKILL.md). Build applies its Duke colors, typography, and review guidance through library-specific themes.
+Five [workflow skills](references/workflow.md), fourteen approved [library skills](references/library-selection.md), plain and managed starters, GitHub Pages workflows, and the bundled [Campus Designer](skills/campus-designer/SKILL.md). Build applies its Duke colors, typography, and review guidance through library-specific themes.
 
-Describe what you need: “an interactive analytical presentation,” “an editable process diagram,” or “a dashboard for a local CSV.” Plan and Build select the smallest useful set of approved libraries. Four specialist recipes—local mapping, SQL, optimization and video—are candidates undergoing validation; check their inventory status before selection. The video candidate requires an explicitly accepted Remotion render-telemetry exception and a suitable license basis.
+Describe what you need: “an interactive analytical presentation,” “an editable process diagram,” or “a dashboard for a local CSV.” Plan and Build select the smallest useful set of approved libraries. Local mapping is approved for bundled geographic data. Three specialist recipes—SQL, optimization and video—are candidates undergoing validation; check their inventory status before selection. The video candidate requires an explicitly accepted Remotion render-telemetry exception and a suitable license basis.
 
 Approved libraries cover charts, diagrams, timelines, schedules, tables, React controls, slides, animation, CSV, data transformation, statistics, and reproducible randomness.
 
@@ -36,6 +36,8 @@ New library examples, built through simulated planning and independent review:
 
 - [Approval process model](https://jordanmeyer.github.io/bab-example-process/) — React Flow and separate capacity calculations. [Source and review](https://github.com/jordanmeyer/bab-example-process).
 
+- [Launch roadmap](https://jordanmeyer.github.io/bab-example-roadmap/) — Frappe Gantt with dependency-based calendar calculations. [Source and review](https://github.com/jordanmeyer/bab-example-roadmap).
+
 Earlier examples built with version 0.1.1 in automated trials with simulated student conversations and synthetic data; these demonstrate the original plain-JavaScript workflow:
 
 - [Pricing calculator](https://jordanmeyer.github.io/bab-trial-pricing-2026-10-08/)
@@ -48,4 +50,4 @@ Apps run in the browser using public/synthetic datasets or locally selected file
 
 The host must provide usable file, Git, preview, and browser capabilities. Managed apps need a compatible Node/npm installation, which Setup reuses or helps prepare. Plain apps use available preview capabilities. Installation does not grant tools, OS permissions, or GitHub access.
 
-This is a pilot candidate, not a verified no-touch onboarding promise. See the listing's evidence record for actual checks and outstanding Work, clean-machine, fresh-chat, and novice-student gates. The original plain-app publication and updates were verified on a configured Mac. The 0.2.0 library expansion has separate local browser and production-build evidence; the executive, uploads, simulator and process examples now also verify managed GitHub Pages publication. Evaluation supports specific claims about tested cases; it does not certify a business model.
+This is a pilot candidate, not a verified no-touch onboarding promise. See the listing's evidence record for actual checks and outstanding Work, clean-machine, fresh-chat, and novice-student gates. The original plain-app publication and updates were verified on a configured Mac. The 0.2.0 library expansion has separate local browser and production-build evidence; the executive, uploads, simulator, process and roadmap examples now also verify managed GitHub Pages publication. Evaluation supports specific claims about tested cases; it does not certify a business model.
