@@ -1,0 +1,11 @@
+{
+  "app": "roadmap",
+  "url": "https://jordanmeyer.github.io/bab-example-roadmap/",
+  "at": "2026-10-09T20:50:02.881Z",
+  "check": "Ordinary reload at normal URL retrieved new stylesheet. Default ready Nov 29, 2026 with 2 days buffer; Packaging delay produced Dec 2, 1 day late, +3 days from baseline. Date/type minimums 143/104 px at ordinary text size remain separated.",
+  "returning_browser": "Normal URL and ordinary reload; no query parameter.",
+  "assets": [
+    "/bab-example-roadmap/assets/index-DFxfruV9.js",
+    "/bab-example-roadmap/assets/index-Wyd2eCZt.css"
+  ]
+}

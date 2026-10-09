@@ -26,14 +26,14 @@
         "uploads": "3cc0f3e6fef0e426bd9d5614b5be99137791dbca",
         "simulator": "0f0fd7441ba10190fd5de4f4e2db9926aee86932",
         "process": "ee5a30024747779677ef30dfea33bf8fae58bf32",
-        "roadmap": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+        "roadmap": "c9c48689abadfa230de8fd47ec049fae897fd65b",
         "markets": "03c8bb4ad7e56a0849f4529ebb407ed376225b9e",
         "sql": "5c1caf4a6e3ac9251fa97012c2ab8a58fb673b7a",
         "optimizer": "bd31dc171c1500a1d70ff0a33bc654abf7d36a96",
         "presentation": "4cf804db7629bef1fdf618b1d0d03ddd68c108bc",
         "pricing": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
         "inventory": "ff6c1bd0724a163942ba74cdfc516a047484c46e",
-        "sales": "3734d1f1676267bd8ec44924941fcda1a198563a"
+        "sales": "2cb6b46b5d7e7df7dd516588ea0dd5c6abeaf342"
       },
       "disposition": "The twelve per-app records identify linked prediction/change/worked-answer/limitation lessons. This verifies lesson-source delivery only; ALL-16 remains open for actual learning evidence."
     },
@@ -64,14 +64,14 @@
         "uploads": "3cc0f3e6fef0e426bd9d5614b5be99137791dbca",
         "simulator": "0f0fd7441ba10190fd5de4f4e2db9926aee86932",
         "process": "ee5a30024747779677ef30dfea33bf8fae58bf32",
-        "roadmap": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+        "roadmap": "c9c48689abadfa230de8fd47ec049fae897fd65b",
         "markets": "03c8bb4ad7e56a0849f4529ebb407ed376225b9e",
         "sql": "5c1caf4a6e3ac9251fa97012c2ab8a58fb673b7a",
         "optimizer": "bd31dc171c1500a1d70ff0a33bc654abf7d36a96",
         "presentation": "4cf804db7629bef1fdf618b1d0d03ddd68c108bc",
         "pricing": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
         "inventory": "ff6c1bd0724a163942ba74cdfc516a047484c46e",
-        "sales": "3734d1f1676267bd8ec44924941fcda1a198563a"
+        "sales": "2cb6b46b5d7e7df7dd516588ea0dd5c6abeaf342"
       },
       "disposition": "Source-reviewed visible result links now cover the named Returns, Roadmap and original-trial routes while retaining the result-first Simulator/Optimizer and existing keyboard skips. Root actual319px Returns analysis route was usable; Roadmap result link was keyboard-visible in the enlarged view; Pricing/Inventory/Sales Enter focused their result headings at the top. This meets the requested route/placement correction; it does not claim all12 routes or physical mobile-keyboard operation, which remains PRICE-09."
     },
@@ -103,14 +103,14 @@
         "uploads": "3cc0f3e6fef0e426bd9d5614b5be99137791dbca",
         "simulator": "0f0fd7441ba10190fd5de4f4e2db9926aee86932",
         "process": "ee5a30024747779677ef30dfea33bf8fae58bf32",
-        "roadmap": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+        "roadmap": "c9c48689abadfa230de8fd47ec049fae897fd65b",
         "markets": "03c8bb4ad7e56a0849f4529ebb407ed376225b9e",
         "sql": "5c1caf4a6e3ac9251fa97012c2ab8a58fb673b7a",
         "optimizer": "bd31dc171c1500a1d70ff0a33bc654abf7d36a96",
         "presentation": "4cf804db7629bef1fdf618b1d0d03ddd68c108bc",
         "pricing": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
         "inventory": "ff6c1bd0724a163942ba74cdfc516a047484c46e",
-        "sales": "3734d1f1676267bd8ec44924941fcda1a198563a"
+        "sales": "2cb6b46b5d7e7df7dd516588ea0dd5c6abeaf342"
       },
       "disposition": "Persistence instructions and appropriate save/export actions are visible beside the authored SQL, process graph and decision rationale. Actual SQL generated-query notes preserve completed work, Process edited-graph Blob/File round trip reproduces the model, and Executive/other rationale copies preserve authored context. Original inventory saved-record recovery also passed. These are the requested placement/recovery paths; native OS save dialogs and a universal Roadmap file cycle are not additional requirements."
     },
@@ -123,7 +123,7 @@
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/COVERAGE.md"
       ],
       "source_checkpoints": {
-        "sales": "3734d1f1676267bd8ec44924941fcda1a198563a"
+        "sales": "2cb6b46b5d7e7df7dd516588ea0dd5c6abeaf342"
       },
       "disposition": "Independent full Sales source review confirms the footer explicitly says maintainer-built, simulated planning and synthetic bundled samples; historical simulated records remain preserved."
     },
@@ -153,14 +153,14 @@
         "uploads": "3cc0f3e6fef0e426bd9d5614b5be99137791dbca",
         "simulator": "0f0fd7441ba10190fd5de4f4e2db9926aee86932",
         "process": "ee5a30024747779677ef30dfea33bf8fae58bf32",
-        "roadmap": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+        "roadmap": "c9c48689abadfa230de8fd47ec049fae897fd65b",
         "markets": "03c8bb4ad7e56a0849f4529ebb407ed376225b9e",
         "sql": "5c1caf4a6e3ac9251fa97012c2ab8a58fb673b7a",
         "optimizer": "bd31dc171c1500a1d70ff0a33bc654abf7d36a96",
         "presentation": "4cf804db7629bef1fdf618b1d0d03ddd68c108bc",
         "pricing": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
         "inventory": "ff6c1bd0724a163942ba74cdfc516a047484c46e",
-        "sales": "3734d1f1676267bd8ec44924941fcda1a198563a"
+        "sales": "2cb6b46b5d7e7df7dd516588ea0dd5c6abeaf342"
       },
       "disposition": "Actual screen-reader complete-task sessions have not been performed. Native/DOM/keyboard evidence and written protocols do not close this requirement."
     },
@@ -168,7 +168,7 @@
       "id": "ALL-12",
       "priority": "P2",
       "requirement": "Verify — Check 320px and enlarged text beyond the current spot checks. Fresh narrow observations used an actual 390 × 844 CSS-pixel viewport. Check 320px and 200% text enlargement separately, especially model disclosures, long imported names, modal tables, the presentation’s inner scrolling, and dense chart labels. Record actual dimensions and reachable controls; the absence of page overflow is not a readability check.",
-      "status": "implemented_pending_verification",
+      "status": "verified_local",
       "evidence": [
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/COVERAGE.md",
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/COVERAGE.md",
@@ -182,23 +182,24 @@
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/COVERAGE.md",
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/COVERAGE.md",
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/COVERAGE.md",
-        "evidence/browser-app-builder/checklist-corrections/2026-10-09/README.md"
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/final-layout/README.md"
       ],
       "source_checkpoints": {
         "executive": "b0828ef537614daa01d3686a495992ff586e725f",
         "uploads": "3cc0f3e6fef0e426bd9d5614b5be99137791dbca",
         "simulator": "0f0fd7441ba10190fd5de4f4e2db9926aee86932",
         "process": "ee5a30024747779677ef30dfea33bf8fae58bf32",
-        "roadmap": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+        "roadmap": "c9c48689abadfa230de8fd47ec049fae897fd65b",
         "markets": "03c8bb4ad7e56a0849f4529ebb407ed376225b9e",
         "sql": "5c1caf4a6e3ac9251fa97012c2ab8a58fb673b7a",
         "optimizer": "bd31dc171c1500a1d70ff0a33bc654abf7d36a96",
         "presentation": "4cf804db7629bef1fdf618b1d0d03ddd68c108bc",
         "pricing": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
         "inventory": "ff6c1bd0724a163942ba74cdfc516a047484c46e",
-        "sales": "3734d1f1676267bd8ec44924941fcda1a198563a"
+        "sales": "2cb6b46b5d7e7df7dd516588ea0dd5c6abeaf342"
       },
-      "disposition": "Actual319 and separate authored200% records now include Uploads long filenames, Executive modal tables, SQL editor, Simulator disclosures/shared-world tables, Presentation extreme charts/tables, repaired Markets controls and repaired Inventory labels. Broader form/error/expanded content views listed in the evidence index remain unverified. Keep this collection-wide requirement pending; authored text enlargement is not native device zoom."
+      "disposition": "Actual319px and separate authored200% text observations now cover the named model disclosures, long imported names, modal tables, presentation scrolling and dense chart/table labels. The final-layout record adds actual controls/recovery and independent screenshot review; real Markets, Inventory, Roadmap and Sales layout failures were repaired and retested. Dimensions and keyboard reachability are recorded. This is bounded representative coverage, not every possible state, native device zoom, screen-reader speech or novice success."
     },
     {
       "id": "ALL-14",
@@ -229,14 +230,14 @@
         "uploads": "3cc0f3e6fef0e426bd9d5614b5be99137791dbca",
         "simulator": "0f0fd7441ba10190fd5de4f4e2db9926aee86932",
         "process": "ee5a30024747779677ef30dfea33bf8fae58bf32",
-        "roadmap": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+        "roadmap": "c9c48689abadfa230de8fd47ec049fae897fd65b",
         "markets": "03c8bb4ad7e56a0849f4529ebb407ed376225b9e",
         "sql": "5c1caf4a6e3ac9251fa97012c2ab8a58fb673b7a",
         "optimizer": "bd31dc171c1500a1d70ff0a33bc654abf7d36a96",
         "presentation": "4cf804db7629bef1fdf618b1d0d03ddd68c108bc",
         "pricing": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
         "inventory": "ff6c1bd0724a163942ba74cdfc516a047484c46e",
-        "sales": "3734d1f1676267bd8ec44924941fcda1a198563a"
+        "sales": "2cb6b46b5d7e7df7dd516588ea0dd5c6abeaf342"
       },
       "disposition": "Actual generated Returns CSV metadata and SQL CSV/companion notes retain analytical context; the original Pricing clipboard, Inventory run record and Sales CSV/analytical JSON also preserve assumptions, filters/units, results and limitations. Recorded content checks meet the named export-context requirement. Blob capture is stated honestly and does not claim native disk saving, which this requirement does not ask to verify."
     },
@@ -266,14 +267,14 @@
         "uploads": "3cc0f3e6fef0e426bd9d5614b5be99137791dbca",
         "simulator": "0f0fd7441ba10190fd5de4f4e2db9926aee86932",
         "process": "ee5a30024747779677ef30dfea33bf8fae58bf32",
-        "roadmap": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+        "roadmap": "c9c48689abadfa230de8fd47ec049fae897fd65b",
         "markets": "03c8bb4ad7e56a0849f4529ebb407ed376225b9e",
         "sql": "5c1caf4a6e3ac9251fa97012c2ab8a58fb673b7a",
         "optimizer": "bd31dc171c1500a1d70ff0a33bc654abf7d36a96",
         "presentation": "4cf804db7629bef1fdf618b1d0d03ddd68c108bc",
         "pricing": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
         "inventory": "ff6c1bd0724a163942ba74cdfc516a047484c46e",
-        "sales": "3734d1f1676267bd8ec44924941fcda1a198563a"
+        "sales": "2cb6b46b5d7e7df7dd516588ea0dd5c6abeaf342"
       },
       "disposition": "No actual uncoached novice participant has been observed. The user will arrange a participant; the twelve-app packet and blank form are preparation only."
     },
@@ -790,7 +791,7 @@
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/COVERAGE.md"
       ],
       "app": "roadmap",
-      "source_checkpoint": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+      "source_checkpoint": "c9c48689abadfa230de8fd47ec049fae897fd65b",
       "disposition": "Root actual packaging example Dec2/one day late and controlling chain via Packaging/sign-off; worked five-day change less two-day float equals three-day completion delay."
     },
     {
@@ -802,7 +803,7 @@
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/COVERAGE.md"
       ],
       "app": "roadmap",
-      "source_checkpoint": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+      "source_checkpoint": "c9c48689abadfa230de8fd47ec049fae897fd65b",
       "disposition": "Reviewed pre-click preset replacement warning and explicitly named Load example controls; baseline/draft replacement stated before action."
     },
     {
@@ -814,7 +815,7 @@
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/COVERAGE.md"
       ],
       "app": "roadmap",
-      "source_checkpoint": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+      "source_checkpoint": "c9c48689abadfa230de8fd47ec049fae897fd65b",
       "disposition": "Root actual supplier-release example finishesDec4/three days late; worked idle gap and promise-versus-constraint distinction reviewed."
     },
     {
@@ -826,7 +827,7 @@
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/COVERAGE.md"
       ],
       "app": "roadmap",
-      "source_checkpoint": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+      "source_checkpoint": "c9c48689abadfa230de8fd47ec049fae897fd65b",
       "disposition": "Root actual changed dates and switched controlling chain reviewed; source provides baseline/revised starts and finishes together."
     },
     {
@@ -838,7 +839,7 @@
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/COVERAGE.md"
       ],
       "app": "roadmap",
-      "source_checkpoint": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+      "source_checkpoint": "c9c48689abadfa230de8fd47ec049fae897fd65b",
       "disposition": "Root actual Packaging table action selects matching editor and focuses #task-name; dropdown and pending protection retained."
     },
     {
@@ -850,7 +851,7 @@
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/COVERAGE.md"
       ],
       "app": "roadmap",
-      "source_checkpoint": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+      "source_checkpoint": "c9c48689abadfa230de8fd47ec049fae897fd65b",
       "disposition": "Reviewed existing-task scenario-editor boundary; no speculative general roadmap creation flow added."
     },
     {
@@ -863,7 +864,7 @@
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/browser-capacity-milestone.json"
       ],
       "app": "roadmap",
-      "source_checkpoint": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+      "source_checkpoint": "c9c48689abadfa230de8fd47ec049fae897fd65b",
       "disposition": "Root actual sign-off releaseDec4 yields Ready/headlineDec16; capacity1→2 removes six overload days without movingNov29; terminal-only ReadyDec4 produces three days late while all eight predecessor dates remain unchanged. Current source/model52/52 and exact table/date witnesses are separately recorded."
     },
     {
@@ -875,7 +876,7 @@
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/COVERAGE.md"
       ],
       "app": "roadmap",
-      "source_checkpoint": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+      "source_checkpoint": "c9c48689abadfa230de8fd47ec049fae897fd65b",
       "disposition": "Reviewed separate working-calendar assignment requires weekend/holiday rules and new boundary tests; current calendar-day model retained."
     },
     {
@@ -887,7 +888,7 @@
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/COVERAGE.md"
       ],
       "app": "roadmap",
-      "source_checkpoint": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+      "source_checkpoint": "c9c48689abadfa230de8fd47ec049fae897fd65b",
       "disposition": "Root actual sign-off releaseDec4 gives PilotDec4–8,SalesDec4–10,Ready/headlineDec16 and15 days late;52/52 browser tests include dependency regression."
     },
     {
@@ -899,7 +900,7 @@
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/COVERAGE.md"
       ],
       "app": "roadmap",
-      "source_checkpoint": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+      "source_checkpoint": "c9c48689abadfa230de8fd47ec049fae897fd65b",
       "disposition": "Root actual hand-worked release repair finishesDec5/four days late; source/model derives zero overload and contrasts within-float change that retains overload. No leveler added."
     },
     {
@@ -1679,7 +1680,7 @@
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-export-recovery.json"
       ],
       "app": "sales",
-      "source_checkpoint": "3734d1f1676267bd8ec44924941fcda1a198563a",
+      "source_checkpoint": "2cb6b46b5d7e7df7dd516588ea0dd5c6abeaf342",
       "disposition": "Root actual invalid reversed date interval hid totals/groups/rows/exports, retained identifiable source and offered recovery; Clear filters restored the valid view. A valid no-match state remained distinct."
     },
     {
@@ -1692,7 +1693,7 @@
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-imports.json"
       ],
       "app": "sales",
-      "source_checkpoint": "3734d1f1676267bd8ec44924941fcda1a198563a",
+      "source_checkpoint": "2cb6b46b5d7e7df7dd516588ea0dd5c6abeaf342",
       "disposition": "Independent12-line sample totals2950/2350/600/220 with changing margins/two losses; current root46/46 browser model suite."
     },
     {
@@ -1705,7 +1706,7 @@
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-imports.json"
       ],
       "app": "sales",
-      "source_checkpoint": "3734d1f1676267bd8ec44924941fcda1a198563a",
+      "source_checkpoint": "2cb6b46b5d7e7df7dd516588ea0dd5c6abeaf342",
       "disposition": "Independent grouped totals and reviewed sample include both products in both regions; current root46/46 suite."
     },
     {
@@ -1718,7 +1719,7 @@
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-imports.json"
       ],
       "app": "sales",
-      "source_checkpoint": "3734d1f1676267bd8ec44924941fcda1a198563a",
+      "source_checkpoint": "2cb6b46b5d7e7df7dd516588ea0dd5c6abeaf342",
       "disposition": "Reviewed prediction question, volume-adjusted worked answer and cost limitations; source delivery verified, novice task remains open."
     },
     {
@@ -1731,7 +1732,7 @@
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-imports.json"
       ],
       "app": "sales",
-      "source_checkpoint": "3734d1f1676267bd8ec44924941fcda1a198563a",
+      "source_checkpoint": "2cb6b46b5d7e7df7dd516588ea0dd5c6abeaf342",
       "disposition": "Independent full source review confirms consistent Contribution after product cost and absent-cost distinction."
     },
     {
@@ -1744,7 +1745,7 @@
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-imports.json"
       ],
       "app": "sales",
-      "source_checkpoint": "3734d1f1676267bd8ec44924941fcda1a198563a",
+      "source_checkpoint": "2cb6b46b5d7e7df7dd516588ea0dd5c6abeaf342",
       "disposition": "Independent600/2950 weighted rate and source group-per-unit comparison; model46/46 supports distinct revenue versus contribution leaders."
     },
     {
@@ -1757,7 +1758,7 @@
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-imports.json"
       ],
       "app": "sales",
-      "source_checkpoint": "3734d1f1676267bd8ec44924941fcda1a198563a",
+      "source_checkpoint": "2cb6b46b5d7e7df7dd516588ea0dd5c6abeaf342",
       "disposition": "Reviewed row-grain/duplicate policy and actual46-case browser suite includes duplicate summing regression."
     },
     {
@@ -1770,7 +1771,7 @@
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-imports.json"
       ],
       "app": "sales",
-      "source_checkpoint": "3734d1f1676267bd8ec44924941fcda1a198563a",
+      "source_checkpoint": "2cb6b46b5d7e7df7dd516588ea0dd5c6abeaf342",
       "disposition": "Root actual10,000-row/unique-group import,50+50 DOM rows and56.7/132.5ms timings; full data available by source. No student-device comfort claim."
     },
     {
@@ -1783,7 +1784,7 @@
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-imports.json"
       ],
       "app": "sales",
-      "source_checkpoint": "3734d1f1676267bd8ec44924941fcda1a198563a",
+      "source_checkpoint": "2cb6b46b5d7e7df7dd516588ea0dd5c6abeaf342",
       "disposition": "Root actual delimiter-collision import retains separate Region/Product identities; reviewed exact grouped summary arithmetic and model46/46."
     },
     {
@@ -1797,7 +1798,7 @@
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-export-recovery.json"
       ],
       "app": "sales",
-      "source_checkpoint": "3734d1f1676267bd8ec44924941fcda1a198563a",
+      "source_checkpoint": "2cb6b46b5d7e7df7dd516588ea0dd5c6abeaf342",
       "disposition": "Root actual linked12-row template import exposed its date range; inclusive September–October filters returned the exact two North/Pen rows. Clear filters recovered both reversed-date and valid no-match views."
     },
     {
@@ -1811,7 +1812,7 @@
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-export-recovery.json"
       ],
       "app": "sales",
-      "source_checkpoint": "3734d1f1676267bd8ec44924941fcda1a198563a",
+      "source_checkpoint": "2cb6b46b5d7e7df7dd516588ea0dd5c6abeaf342",
       "disposition": "Root actual valid no-match named active filters and retained source identity; its direct clear action restored records. The invalid-date state and rejected-import retention were separately verified."
     },
     {
@@ -1825,7 +1826,7 @@
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-export-recovery.json"
       ],
       "app": "sales",
-      "source_checkpoint": "3734d1f1676267bd8ec44924941fcda1a198563a",
+      "source_checkpoint": "2cb6b46b5d7e7df7dd516588ea0dd5c6abeaf342",
       "disposition": "Root actual generated filtered CSV and JSON matched the same two rows:350 revenue,210 cost,140 contribution and35 units. JSON retained source/provenance, active filters, row grain, groups, units and limits. Authored Blob inspection does not claim native saving."
     },
     {
@@ -1840,7 +1841,7 @@
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/walkthrough/OBSERVATION-FORM.md"
       ],
       "app": "sales",
-      "source_checkpoint": "3734d1f1676267bd8ec44924941fcda1a198563a",
+      "source_checkpoint": "2cb6b46b5d7e7df7dd516588ea0dd5c6abeaf342",
       "disposition": "Actual novice template/edit/import/malform/correct/reset task remains unobserved. The4/4 synthetic File/DataTransfer integration harness is not native-picker or novice evidence."
     },
     {
@@ -1853,7 +1854,7 @@
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-imports.json"
       ],
       "app": "sales",
-      "source_checkpoint": "3734d1f1676267bd8ec44924941fcda1a198563a",
+      "source_checkpoint": "2cb6b46b5d7e7df7dd516588ea0dd5c6abeaf342",
       "disposition": "Reviewed separate Common Goods assignment specifies IDs, event grain, aggregate-before-join and cohort/observation time; no returns system added."
     }
   ],
@@ -1866,11 +1867,11 @@
   "summary": {
     "items": 126,
     "by_status": {
-      "verified_local": 116,
+      "verified_local": 117,
       "open": 4,
-      "implemented_pending_verification": 6
+      "implemented_pending_verification": 5
     },
-    "publication": "No push or current live acceptance is established by this correction evidence index. Historical live revisions remain separate.",
+    "publication": "Exact pushed-SHA workflows and actual live follow-ups are tracked separately in publication.json. This index records local requirement verification and does not infer publication of a later source checkpoint.",
     "human_gates": "Actual screen-reader and uncoached novice evidence remains open. Authored synthetic input events/font doubling do not replace native picker, device zoom or human tasks."
   }
 }

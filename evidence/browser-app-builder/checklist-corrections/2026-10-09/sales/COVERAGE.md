@@ -1,8 +1,8 @@
 # Original Sales lens — checklist correction coverage
 
-Current source checkpoint: `3734d1f1676267bd8ec44924941fcda1a198563a`. Repository `/private/tmp/bab-checklist-originals-2026-10-09/sales`. Checklist SALES-01–14 and applicable ALL items. No push or current live check. Original simulated-planning and failed evaluation history remain intact.
+Current layout/source checkpoint: `2cb6b46b5d7e7df7dd516588ea0dd5c6abeaf342`; unchanged JavaScript/model source: `3734d1f1676267bd8ec44924941fcda1a198563a`. Repository `/private/tmp/bab-checklist-originals-2026-10-09/sales`. Checklist SALES-01–14 and applicable ALL items. The earlier report `80c5e5c09049bbf06233bf179f354bee13e71776` was published and live-checked (see ../publication.json); this later CSS correction and report passed local retesting, its exact-commit Pages deployment and an ordinary-URL live reload; see [live follow-up](../final-layout/sales-live-followup.json). Original simulated-planning and failed evaluation history remain intact.
 
-Current report HEAD: `80c5e5c09049bbf06233bf179f354bee13e71776`; generated-export harness checkpoint: `45dbbfaf677cde599b4e541d34faf8c892dc0f0e`. Report-only commits leave app/model source at `3734d1f1676267bd8ec44924941fcda1a198563a`.
+Current report HEAD: `6a94a8b35132b5dd6e198024d42a7b88ab675e47`; generated-export harness checkpoint: `45dbbfaf677cde599b4e541d34faf8c892dc0f0e`. The report-only follow-up leaves app/PLAN/tests identical to layout checkpoint `2cb6b46b5d7e7df7dd516588ea0dd5c6abeaf342`; the model and all authored tests remain unchanged by the CSS correction.
 
 ## Independent review and known answers
 
@@ -31,7 +31,7 @@ Independent arithmetic: North Notebook $1200−$1060=$140/60 units; North Pen $4
 | ALL-07 | Persistence boundary beside upload and exports; save JSON/CSV with no automatic storage. | Actual generated JSON/CSV content passed for the filtered view; native saving remains unobserved. |
 | ALL-08 | Footer now explicitly maintainer-built, simulated planning and synthetic bundled samples. Uploaded data separately identified as unverified user data. | Source correction complete. |
 | ALL-11 | Native controls, labels, status/alert messages, labeled table scroll regions and result destination. | Complete actual screen-reader tasks remain unobserved. |
-| ALL-12 | Authored layout fixture included in source. It snapshots/doubles existing computed fonts inside a bordered iframe; not device zoom, and new DOM needs enlargement reapplied. | Current complete320px and separate200% text readability/control-reachability tasks remain open. |
+| ALL-12 | Native local table scrolling and font-relative responsive metric grid; whole ISO dates. The authored QA controller enlarges existing computed text separately from narrow-width testing; it is not native device zoom. | Targeted repaired date/metric views and representative result/table tasks PASS at actual319px and1439px with200% authored text. Root keyboard reached final table columns and CSV action; independent settled-capture review passed. See final follow-up below for limits; no universal state/device claim. |
 | ALL-14 | Analytical JSON includes interpretation context and source-provenance limits; CSV remains machine-readable with a companion-note instruction. | Actual generated CSV/JSON content verified at45dbbfa; native save-dialog behavior remains unobserved. |
 | ALL-16 | Participant task script and lesson prepared. | No uncoached novice observed; no instructional-readiness claim. |
 
@@ -71,3 +71,14 @@ The models reviewer read the complete export-workflow harness, current app.js an
 ## Original result-route follow-up
 
 Root used native keyboard Enter on **View analysis** in an actual319 CSS-pixel frame. Focus arrived at #results-heading at the viewport top. The supplementary observation is in ../pricing/browser-orientation.json. This verifies that result route only; it does not establish physical mobile-keyboard behavior, screen-reader speech or every layout state. Application source is unchanged.
+
+
+## Final layout correction and targeted retest — PASS
+
+The pre-fix narrow dates broke into four fragments, and enlarged Revenue/Product cost split their cents. Source `2cb6b46b5d7e7df7dd516588ea0dd5c6abeaf342` restricts date wrapping only in matching-record cells and replaces fixed metric column counts with an auto-fit, font-relative grid. Extreme-number emergency wrapping remains available. HTML stylesheet references advance to version 5; application/module/model/test behavior does not change. Independent operations source review passed. The failed rounds remain in [narrow record start](../final-layout/sales-narrow-record-start.png) and [settled enlarged metrics before repair](../final-layout/sales-enlarged-groups-settled.png).
+
+Root's actual retest showed whole ISO dates in approximately109px cells and whole default amounts at319 CSS pixels. Native ArrowRight reached431.818px over720px table content in a288px region; the [final columns](../final-layout/sales-narrow-record-end-fixed.png) remained legible. Tab from Save analytical view JSON focused Download all matching rows CSV. In the separate1439px/200% authored text view, the metric grid used two576px columns with one-line64px amounts; dates measured196.259px and the records table fit its1152px region.
+
+Independent visual review passed [narrow dates](../final-layout/sales-narrow-record-start-fixed.png), [narrow metrics](../final-layout/sales-narrow-metrics-fixed.png), [enlarged metrics](../final-layout/sales-enlarged-metrics-fixed.png), the narrow final columns, and [settled enlarged records](../final-layout/sales-enlarged-records-fixed-settled.png). The first enlarged-records image displaced three contribution values transiently; the settled capture and root's equal cell-boundary measurements resolved that capture artifact. It remains preserved beside the settled image. Screenshot inspection establishes legibility/containment only; keyboard observations are attributed to root.
+
+This closes the observed date/cents failures and supplies bounded representative ALL-12 evidence. It does not assert every possible state or arbitrary maximum-size imported amount, physical-device zoom, screen-reader speech, native saving, or a human novice session. The unchanged46/46 model,4/4 import and4/4 export checks were not rerun. ALL-11, ALL-16 and SALES-13 human evidence remain open. The source correction and report follow-up are published at report commit `6a94a8b35132b5dd6e198024d42a7b88ab675e47`; [publication.json](../publication.json) records the successful exact-commit workflow. Normal-URL reload obtained stylesheet version 5, and the live North hand-check returned $240/$144/$96.

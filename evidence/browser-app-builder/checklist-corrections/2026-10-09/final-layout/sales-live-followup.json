@@ -1,0 +1,11 @@
+{
+  "app": "sales",
+  "url": "https://jordanmeyer.github.io/bab-trial-sales-2026-10-08/",
+  "at": "2026-10-09T20:51:29.694Z",
+  "check": "Normal URL and ordinary reload retrieved style.css?v=5; ISO dates use nowrap. Default varied sample totals revenue2950, product cost2350, contribution600. Three-row hand check filtered North returns240/144/96; Reset varied sample restores full data.",
+  "returning_browser": "Normal URL and ordinary reload; no cache-busting navigation query.",
+  "assets": [
+    "./style.css?v=5",
+    "./app.js?v=4"
+  ]
+}

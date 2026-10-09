@@ -1,5 +1,5 @@
 {
-  "scope": "All12 current pushed-SHA Pages workflows succeeded and live known-answer interactions passed. Presentation speaker-note follow-up also passed after ordinary reload. Novice, screen-reader, device and remaining complete-task acceptance stays open.",
+  "scope": "All 12 current pushed-SHA Pages workflows succeeded and live known-answer interactions passed. Presentation speaker-note and Roadmap/Sales layout follow-ups passed after ordinary reload. Novice, actual screen-reader speech and physical-device acceptance remain open.",
   "apps": [
     {
       "app": "executive",
@@ -113,28 +113,54 @@
       "app": "roadmap",
       "repo": "jordanmeyer/bab-example-roadmap",
       "local_path": "/private/tmp/bab-recipe-examples-2026-10-09/roadmap",
-      "pushed_commit": "61fcf069f65c35d5902a694a73a3ac1ae5657ed3",
-      "pushed_at": "2026-10-09T20:17:02.015663+00:00",
+      "pushed_commit": "db4b9e65412265625645b16eb0d1deefe42e543a",
+      "pushed_at": "2026-10-09 (ordinary layout follow-up)",
       "url": "https://jordanmeyer.github.io/bab-example-roadmap/",
       "workflow": [
         {
           "status": "completed",
           "conclusion": "success",
-          "head_sha": "61fcf069f65c35d5902a694a73a3ac1ae5657ed3",
-          "url": "https://github.com/jordanmeyer/bab-example-roadmap/actions/runs/37985935008",
-          "id": 37985935008
+          "head_sha": "db4b9e65412265625645b16eb0d1deefe42e543a",
+          "url": "https://github.com/jordanmeyer/bab-example-roadmap/actions/runs/37989054411",
+          "id": 37989054411
         }
       ],
       "live_verification": {
         "app": "roadmap",
         "url": "https://jordanmeyer.github.io/bab-example-roadmap/",
-        "at": "2026-10-09T20:21:47.770Z",
-        "check": "DefaultNov29 with2daysbuffer and6overload days; packaging delay readyDec2,1daylate,+3daysbaseline.",
+        "at": "2026-10-09T20:50:02.881Z",
+        "check": "Ordinary reload at normal URL retrieved new stylesheet. Default ready Nov 29, 2026 with 2 days buffer; Packaging delay produced Dec 2, 1 day late, +3 days from baseline. Date/type minimums 143/104 px at ordinary text size remain separated.",
+        "returning_browser": "Normal URL and ordinary reload; no query parameter.",
         "assets": [
-          "/bab-example-roadmap/assets/index-ZEeHeJAd.js",
-          "/bab-example-roadmap/assets/index-CbbWsWPd.css"
+          "/bab-example-roadmap/assets/index-DFxfruV9.js",
+          "/bab-example-roadmap/assets/index-Wyd2eCZt.css"
         ]
-      }
+      },
+      "previous_publications": [
+        {
+          "pushed_commit": "61fcf069f65c35d5902a694a73a3ac1ae5657ed3",
+          "pushed_at": "2026-10-09T20:17:02.015663+00:00",
+          "workflow": [
+            {
+              "status": "completed",
+              "conclusion": "success",
+              "head_sha": "61fcf069f65c35d5902a694a73a3ac1ae5657ed3",
+              "url": "https://github.com/jordanmeyer/bab-example-roadmap/actions/runs/37985935008",
+              "id": 37985935008
+            }
+          ],
+          "live_verification": {
+            "app": "roadmap",
+            "url": "https://jordanmeyer.github.io/bab-example-roadmap/",
+            "at": "2026-10-09T20:21:47.770Z",
+            "check": "DefaultNov29 with2daysbuffer and6overload days; packaging delay readyDec2,1daylate,+3daysbaseline.",
+            "assets": [
+              "/bab-example-roadmap/assets/index-ZEeHeJAd.js",
+              "/bab-example-roadmap/assets/index-CbbWsWPd.css"
+            ]
+          }
+        }
+      ]
     },
     {
       "app": "markets",
@@ -328,28 +354,54 @@
       "app": "sales",
       "repo": "jordanmeyer/bab-trial-sales-2026-10-08",
       "local_path": "/private/tmp/bab-checklist-originals-2026-10-09/sales",
-      "pushed_commit": "80c5e5c09049bbf06233bf179f354bee13e71776",
-      "pushed_at": "2026-10-09T20:17:11.839731+00:00",
+      "pushed_commit": "6a94a8b35132b5dd6e198024d42a7b88ab675e47",
+      "pushed_at": "2026-10-09 (ordinary layout follow-up)",
       "url": "https://jordanmeyer.github.io/bab-trial-sales-2026-10-08/",
       "workflow": [
         {
           "status": "completed",
           "conclusion": "success",
-          "head_sha": "80c5e5c09049bbf06233bf179f354bee13e71776",
-          "url": "https://github.com/jordanmeyer/bab-trial-sales-2026-10-08/actions/runs/37985953593",
-          "id": 37985953593
+          "head_sha": "6a94a8b35132b5dd6e198024d42a7b88ab675e47",
+          "url": "https://github.com/jordanmeyer/bab-trial-sales-2026-10-08/actions/runs/37989671856",
+          "id": 37989671856
         }
       ],
       "live_verification": {
         "app": "sales",
         "url": "https://jordanmeyer.github.io/bab-trial-sales-2026-10-08/",
-        "at": "2026-10-09T20:20:31.973Z",
-        "check": "Varied12rows2950/2350/600; three-row hand-check North240/144/96.",
+        "at": "2026-10-09T20:51:29.694Z",
+        "check": "Normal URL and ordinary reload retrieved style.css?v=5; ISO dates use nowrap. Default varied sample totals revenue2950, product cost2350, contribution600. Three-row hand check filtered North returns240/144/96; Reset varied sample restores full data.",
+        "returning_browser": "Normal URL and ordinary reload; no cache-busting navigation query.",
         "assets": [
-          "./style.css?v=4",
+          "./style.css?v=5",
           "./app.js?v=4"
         ]
-      }
+      },
+      "previous_publications": [
+        {
+          "pushed_commit": "80c5e5c09049bbf06233bf179f354bee13e71776",
+          "pushed_at": "2026-10-09T20:17:11.839731+00:00",
+          "workflow": [
+            {
+              "status": "completed",
+              "conclusion": "success",
+              "head_sha": "80c5e5c09049bbf06233bf179f354bee13e71776",
+              "url": "https://github.com/jordanmeyer/bab-trial-sales-2026-10-08/actions/runs/37985953593",
+              "id": 37985953593
+            }
+          ],
+          "live_verification": {
+            "app": "sales",
+            "url": "https://jordanmeyer.github.io/bab-trial-sales-2026-10-08/",
+            "at": "2026-10-09T20:20:31.973Z",
+            "check": "Varied12rows2950/2350/600; three-row hand-check North240/144/96.",
+            "assets": [
+              "./style.css?v=4",
+              "./app.js?v=4"
+            ]
+          }
+        }
+      ]
     }
   ]
 }

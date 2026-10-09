@@ -1,6 +1,6 @@
 # Launch Ledger checklist corrections
 
-Source checkpoint `62f102897af2ecb47799dcbc03582cbe7b29446d`. Implemented; independent review, browser witness and publication pending. App source remains in its separate repository. Earlier evaluation/review failures are retained there.
+Current source checkpoint `c9c48689abadfa230de8fd47ec049fae897fd65b`, report HEAD `db4b9e65412265625645b16eb0d1deefe42e543a`. The latest change is a CSS-only exact-table repair with independent source review and targeted local production retest passed. Its exact Pages deployment and [ordinary-URL live follow-up](../final-layout/roadmap-live-followup.json) also passed. JavaScript/model/HTML/tests/PLAN remain unchanged from `62f102897af2ecb47799dcbc03582cbe7b29446d`. App source remains in its separate repository. Earlier evaluation/review failures are retained there.
 
 | ID | Disposition and evidence |
 |---|---|
@@ -19,7 +19,7 @@ Source checkpoint `62f102897af2ecb47799dcbc03582cbe7b29446d`. Implemented; indep
 | ALL-07 | Export-applied-plan action and explicit reload/baseline-loss guidance beside task editing. |
 | ALL-08 | Not applicable: original Sales lens owned elsewhere. |
 | ALL-11 | Actual screen-reader task protocol supplied. No actual reader session available or claimed; remains an evidence gap. |
-| ALL-12 | Authored320 frame and separate200%computed-font test harness prepared. No shared viewport change. Root scoped1439px/body32px result view has no page overflow and visible result link; broader changed/expanded views remain pending. |
+| ALL-12 | Root result-view observations at319px and separate1439px/body32px are supplemented by the exact-table failure/repair below. At200%, repaired date/type columns remain distinct with286/208px minimum widths; at319px, keyboard scrolling reaches the final column and Enter on Ready to launch opens/focuses its editor. This closes the scoped table defect, not the collection-wide ALL-12 assessment or human gates. |
 | ALL-14 | Existing JSON retains complete current-plan inputs. Explicit exclusion of comparison baseline retained beside export. Checklist's remaining CSV work belongs to other apps. |
 | ALL-16 | Novice protocol supplied, but no actual novice session or instructional-readiness claim. Remains an evidence gap. |
 
@@ -37,3 +37,11 @@ Root actual production interactions: Design sign-off earliest release2026-12-04 
 At source62f102897af2ecb47799dcbc03582cbe7b29446d, root increased only Launch team capacity from1 to2 and applied it. All six overloaded days disappeared while dependency readiness stayedNov29 with two days of buffer. Then changing only the terminal Ready to launch earliest release toDec4 produced ReadyDec4, three days late and five days later than baseline. The exact table kept all eight predecessor start/end dates unchanged, including Design sign-offNov15. See browser-capacity-milestone.json. This directly exercises ROAD-12's separation of dependency timing, terminal milestone and capacity.
 
 Root also inspected actual1439 CSS-pixel output with authored200% text and computed body32px: no horizontal page overflow, with the keyboard result link visible at top0. See enlarged-results.png. This is a scoped result-view/route observation, not full expanded chart/table/error/editor coverage or native device zoom. Screen-reader and novice tasks remain open.
+
+## Enlarged exact-table failure and targeted repair
+
+Root's final layout round found date/type crowding and a lone final letter in “milestone” in [the failed enlarged table](../final-layout/roadmap-enlarged-task-action.png). CSS source `c9c48689abadfa230de8fd47ec049fae897fd65b` gives date cells an11em minimum, duration/type cells an8em minimum and normal word wrapping in both; the existing table region contains horizontal scrolling. Arbitrary task/dependency names retain their wrapping. Production build and whitespace checks passed; the data agent independently reviewed the complete stylesheet and table builder. JavaScript/model/tests are unchanged, so the earlier52/52 browser/model observations still apply without a new suite run.
+
+Root's actual local production retest confirmed `index-Wyd2eCZt.css`. At1439 CSS pixels and separate authored200% text, the date/type minima measured286/208px with normal wrapping. [The repaired enlarged table](../final-layout/roadmap-enlarged-task-action-fixed.png) clearly separates the date from “0 · milestone”; the data agent independently reviewed the screenshot. At319 CSS pixels, native keyboard horizontal scrolling reached827.27 in an1100px-wide table inside its273px region, exposing the last column. Enter on Ready to launch selected that task and focused `#task-name`; see [the repaired narrow table](../final-layout/roadmap-narrow-table-end-fixed.png).
+
+The generic local review iframe initially reused old HTML. Root used an explicit local review revision query to obtain the rebuilt asset; [the cached-build observation](../final-layout/roadmap-enlarged-cached-build.png) and failed screenshots remain. This records a local production pass, not a live update. Screen-reader and novice sessions remain open. The parent [final layout record](../final-layout/README.md) combines this per-app repair with the other representative checks to close the bounded global ALL-12 requirement.

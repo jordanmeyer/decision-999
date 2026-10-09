@@ -20,9 +20,10 @@ Students should be able to follow each of the twelve listed applications from a 
 - [ ] Correct and evaluate process, roadmap and markets items.
 - [ ] Correct and evaluate pricing, inventory and original sales items.
 - [x] Independently reviewed all twelve revised apps and resolved source-review findings; later browser discoveries have their own repair records.
-- [ ] Complete actual screen-reader tasks and 320px/200% text observations; retain unavailable capabilities as incomplete.
+- [x] Completed representative 319px/1439px and 200% text observations for the specified layout risks, including independent screenshot review and targeted repairs.
+- [ ] Complete actual screen-reader and physical-device tasks; retain unavailable capabilities as incomplete.
 - [ ] Run real novice walkthroughs, record confusion and make needed corrections.
-- [x] Published all twelve reviewed correction builds to their existing repositories; verified successful Pages runs for each exact pushed commit, live known-answer interactions and static artifact integrity. Presentation received one ordinary note-only follow-up, also verified live after normal reload.
+- [x] Published all twelve reviewed correction builds to their existing repositories; verified successful Pages runs for each exact pushed commit, live known-answer interactions and static artifact integrity. Presentation received one ordinary note-only follow-up, also verified live after normal reload. Roadmap and Sales later received CSS-only readability corrections; their exact-commit Pages deployments and normal-URL reload checks passed and are tracked in the evidence index.
 - [ ] Update gallery, source snapshots and requirement evidence; complete repository checks and closure audit.
 
 ## Surprises & Discoveries
@@ -40,6 +41,8 @@ The current browser rounds the requested 320px frames to 319 CSS pixels and 1440
 
 A returning browser initially reused the previous presentation HTML after the note-only follow-up. Ordinary reload retrieved the corrected note without a cache-busting query. Save this observation rather than claiming navigation alone always updates a running app. The note now explains that its Lower/Stronger presets restore the board-case costs; hidden Reveal announcement text remains suppressed, which is DOM evidence rather than a speech test.
 
+The final layout pass found enlarged Roadmap dates colliding with the next column and narrow Sales dates breaking into fragments; enlarged Sales amounts also split their cents. Small CSS corrections passed narrow/enlarged retests and independent image review. A few mid-scroll screenshots showed transient repaint artifacts; settled captures resolved those separately from genuine defects. The local QA iframe needed an explicit revision marker to inspect rebuilt Roadmap assets; normal live reload was checked separately.
+
 ## Decision Log
 
 
@@ -52,7 +55,7 @@ Decision (2026-10-09): real novice and screen-reader requirements stay open unti
 ## Outcomes & Retrospective
 
 
-All twelve apps have source corrections and scoped local evidence. The coverage index tracks 126 requirements without modifying the original review: 116 verified locally, 6 implemented with verification pending and 4 open human requirements. It distinguishes specific verified facts from incomplete complete-task acceptance. Additional browser checks closed export, recovery, pricing orientation and named result-route gaps; broader layout and human/device checks remain explicit in the evidence index. All twelve current correction builds are deployed and have bounded live verification; no real novice/screen-reader pass is claimed. The user has agreed to arrange novice observations; the independently reviewed packet now links to the verified live apps and is in `evidence/browser-app-builder/checklist-corrections/2026-10-09/walkthrough/`.
+All twelve apps have source corrections and scoped local evidence. The coverage index tracks 126 requirements without modifying the original review: 117 verified locally, 5 implemented with verification pending and 4 open human requirements. It distinguishes specific verified facts from incomplete complete-task acceptance. Additional browser checks closed export, recovery, pricing orientation and named result-route gaps. The broader representative layout review also passed after correcting Roadmap date/type overlap and Sales fragmented dates and split metric amounts. Human/device checks remain explicit in the evidence index. All twelve current correction builds are deployed and have bounded live verification; no real novice/screen-reader pass is claimed. The user has agreed to arrange novice observations; the independently reviewed packet now links to the verified live apps and is in `evidence/browser-app-builder/checklist-corrections/2026-10-09/walkthrough/`.
 
 ## Context and Orientation
 

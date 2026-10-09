@@ -1,0 +1,23 @@
+{
+  "app": "roadmap",
+  "commit": "db4b9e65412265625645b16eb0d1deefe42e543a",
+  "at": "2026-10-09T20:50:12.725740+00:00",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 10816,
+      "matches_local": true
+    },
+    {
+      "path": "assets/index-Wyd2eCZt.css",
+      "bytes": 20180,
+      "matches_local": true
+    },
+    {
+      "path": "assets/index-DFxfruV9.js",
+      "bytes": 67096,
+      "matches_local": true
+    }
+  ],
+  "scope": "Targeted static comparison after CSS-only correction; prior broader asset/source-link checks remain historical."
+}
