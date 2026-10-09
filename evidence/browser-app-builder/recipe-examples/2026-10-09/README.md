@@ -11,7 +11,7 @@ Only the Remotion video app has user authorization for its documented render-eve
 - [Executive operating review](https://jordanmeyer.github.io/bab-example-executive/) — [source and review](https://github.com/jordanmeyer/bab-example-executive). Mantine/ECharts/Tabulator;13 checks; two focus failures corrected.
 - [Sales and returns explorer](https://jordanmeyer.github.io/bab-example-uploads/) — [source and review](https://github.com/jordanmeyer/bab-example-uploads). Papa Parse/Arquero/ECharts;31 checks; production filtering and narrow presentation corrected.
 
-Source snapshots, exact simulated exchanges and review/evaluation/deployment records are in each app’s source/ folder. Reproduce with its README and pinned lockfile. The three remaining apps are tracked individually in status.json; no completion claim is made for them.
+Source snapshots, exact simulated exchanges and review/evaluation/deployment records are in each app’s source/ folder. Reproduce with its README and pinned lockfile. The two remaining apps are tracked individually in status.json; no completion claim is made for them.
 
 The [seasonal order simulator](https://jordanmeyer.github.io/bab-example-simulator/) is independently reviewed and live. See [source and review](https://github.com/jordanmeyer/bab-example-simulator), [coordinator browser witness](simulator/UI-WITNESS.md) and saved source. Seventeen browser checks, live deterministic references, risk-limit cases and returning-page checks passed; reviewer revisions corrected cached-chart lifecycle and maximum-value labels.
 
@@ -22,3 +22,5 @@ The [approval process model](https://jordanmeyer.github.io/bab-example-process/)
 [Replenish](https://jordanmeyer.github.io/bab-example-markets/) passed17 checks, independent public-geometry provenance and scoring review, map/table/pin interactions and live ranking/gate checks. [Source and review](https://github.com/jordanmeyer/bab-example-markets); [browser witness](markets/UI-WITNESS.md). Leaflet is approved for this local GeoJSON configuration; remote tiles/geocoding remain excluded.
 
 [Batch & Balance](https://jordanmeyer.github.io/bab-example-optimizer/) passed22 checks, independent enumeration/LP certificates, actual cancellation/retry and live default955/tiny23answers. [Source and review](https://github.com/jordanmeyer/bab-example-optimizer); [browser witness](optimizer/UI-WITNESS.md). HiGHS is approved for this bounded local-worker configuration. Real timeout and persisted bfcache were not induced; adapter tests are labeled separately.
+
+[Fulfillment Lab](https://jordanmeyer.github.io/bab-example-sql/) passed36 checks, independent raw-row arithmetic, actual deadline/cancel/reset, precise CSV export and live joins. [Source and review](https://github.com/jordanmeyer/bab-example-sql); [browser witness](sql/UI-WITNESS.md). The initial JSON-extension autoload approach failed the local-only boundary and was replaced; failed evidence remains.

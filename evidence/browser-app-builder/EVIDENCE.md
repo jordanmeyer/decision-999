@@ -107,3 +107,5 @@ Roadmap review51a9c4c passed40 checks and independent calendar/DST/import/histor
 Markets reviewed5871ab6 and publishedf822e18 through Actions37892896353. Live defaultGA67.50/TN67/NC61.75 and delivery$7→TN-only passed with22localgeometrypaths and clearlogs. The six campaign apps are configured-Mac evidence. Native-history follow-up updates for uploads81cbd711 and simulator6b25b8a were reviewed and verified live before any rerun interaction.
 
 The seventh campaign app, [Batch & Balance](https://jordanmeyer.github.io/bab-example-optimizer/), passed independent review of source2e4eef4,22browser checks and live Pages known answers after deploymente23c930. See campaign/optimizer records for independent enumeration, exact LP bounds, cancellation and observation limits.
+
+The eighth campaign app, [Fulfillment Lab](https://jordanmeyer.github.io/bab-example-sql/), passed36 checks, independent review at7a957523 and livea2f6aa2 known joins. The retained JSON-extension failure, exact export, real timeout and host download-wait failure are documented separately in campaign/sql evidence.

@@ -19,6 +19,7 @@ Plan and Build read this guide even if the host has not implicitly loaded a libr
 | Create reproducible local random streams for browser simulations using seedrandom | [seedrandom](../skills/seedrandom-browser-app/SKILL.md) |
 | Compare geographic markets using local boundaries and attributes | [Leaflet](../skills/leaflet-browser-app/SKILL.md) |
 | Optimize a constrained production or resource-allocation model | [HiGHS](../skills/highs-browser-app/SKILL.md) |
+| Explore substantial local datasets with real SQL joins and aggregations | [DuckDB-Wasm](../skills/duckdb-browser-app/SKILL.md) |
 
 A simple calculator needs none of these. Prefer one charting library and one table component. React Flow means editable nodes; Mermaid means text-authored explanations. vis-timeline displays events; Frappe Gantt displays scheduled tasks. Mantine follows a justified React choice, not every form request. Statistics and animation need a stated purpose.
 
@@ -26,11 +27,10 @@ A simple calculator needs none of these. Prefer one charting library and one tab
 
 New library apps use the [managed build](managed-build.md). Plain native apps retain the minimal starter. Direct skill invocation does not invent plan agreement, replace existing work, or authorize publication. If an entry is still candidate/blocked, explain the gap and use an approved alternative only if it fits the student's task. Libraries absent from the inventory require maintainer review; do not install them opportunistically.
 
-The following specialist recipes are being validated. Check each inventory status before selecting; a discoverable skill is not itself approval.
+The following specialist recipe is being validated. Check its inventory status before selecting; a discoverable skill is not itself approval.
 
 | Student need | Skill |
 | --- | --- |
-| Explore substantial local datasets with real SQL joins and aggregations | [DuckDB-Wasm](../skills/duckdb-browser-app/SKILL.md) |
 | Preview and download a controlled product-video composition | [Remotion browser video](../skills/remotion-browser-app/SKILL.md) |
 
 MapLibre/deck.gl, D3/Plotly/Vega/p5/Three and spreadsheet engines remain outside the approved set. Use ECharts or Leaflet when they satisfy the actual requirement; do not silently substitute when they do not. Approval is configuration-specific and does not promise arbitrary library combinations. The Remotion recipe needs explicit acceptance of its documented render-event telemetry and an established license basis; it must not inherit a telemetry-free claim.

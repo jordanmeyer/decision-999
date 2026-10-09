@@ -18,9 +18,9 @@ You can resume in a fresh chat with the same project files. Setup preserves exis
 
 ## Included
 
-Five [workflow skills](references/workflow.md), fifteen approved [library skills](references/library-selection.md), plain and managed starters, GitHub Pages workflows, and the bundled [Campus Designer](skills/campus-designer/SKILL.md). Build applies its Duke colors, typography, and review guidance through library-specific themes.
+Five [workflow skills](references/workflow.md), sixteen approved [library skills](references/library-selection.md), plain and managed starters, GitHub Pages workflows, and the bundled [Campus Designer](skills/campus-designer/SKILL.md). Build applies its Duke colors, typography, and review guidance through library-specific themes.
 
-Describe what you need: “an interactive analytical presentation,” “an editable process diagram,” or “a dashboard for a local CSV.” Plan and Build select the smallest useful set of approved libraries. Local mapping and bounded worker-based optimization are approved for the reviewed configurations. Two specialist recipes—SQL and video—are candidates undergoing validation; check their inventory status before selection. The video candidate requires an explicitly accepted Remotion render-telemetry exception and a suitable license basis.
+Describe what you need: “an interactive analytical presentation,” “an editable process diagram,” or “a dashboard for a local CSV.” Plan and Build select the smallest useful set of approved libraries. Local mapping, bounded SQL exploration and worker-based optimization are approved for the reviewed configurations. The video recipe remains a candidate undergoing validation; check their inventory status before selection. The video candidate requires an explicitly accepted Remotion render-telemetry exception and a suitable license basis.
 
 Approved libraries cover charts, diagrams, timelines, schedules, tables, React controls, slides, animation, CSV, data transformation, statistics, and reproducible randomness.
 
@@ -42,6 +42,8 @@ New library examples, built through simulated planning and independent review:
 
 - [Bakery resource allocation](https://jordanmeyer.github.io/bab-example-optimizer/) — HiGHS in a local worker, with whole-batch constraints and an independently checked fractional bound. [Source and review](https://github.com/jordanmeyer/bab-example-optimizer).
 
+- [Fulfillment SQL explorer](https://jordanmeyer.github.io/bab-example-sql/) — DuckDB-Wasm and ECharts with exact values, related tables and a join-grain lesson. [Source and review](https://github.com/jordanmeyer/bab-example-sql).
+
 Earlier examples built with version 0.1.1 in automated trials with simulated student conversations and synthetic data; these demonstrate the original plain-JavaScript workflow:
 
 - [Pricing calculator](https://jordanmeyer.github.io/bab-trial-pricing-2026-10-08/)
@@ -54,4 +56,4 @@ Apps run in the browser using public/synthetic datasets or locally selected file
 
 The host must provide usable file, Git, preview, and browser capabilities. Managed apps need a compatible Node/npm installation, which Setup reuses or helps prepare. Plain apps use available preview capabilities. Installation does not grant tools, OS permissions, or GitHub access.
 
-This is a pilot candidate, not a verified no-touch onboarding promise. See the listing's evidence record for actual checks and outstanding Work, clean-machine, fresh-chat, and novice-student gates. The original plain-app publication and updates were verified on a configured Mac. The 0.2.0 library expansion has separate local browser and production-build evidence; the executive, uploads, simulator, process, roadmap, market and optimization examples now also verify managed GitHub Pages publication. Evaluation supports specific claims about tested cases; it does not certify a business model.
+This is a pilot candidate, not a verified no-touch onboarding promise. See the listing's evidence record for actual checks and outstanding Work, clean-machine, fresh-chat, and novice-student gates. The original plain-app publication and updates were verified on a configured Mac. The 0.2.0 library expansion has separate local browser and production-build evidence; the executive, uploads, simulator, process, roadmap, market, SQL and optimization examples now also verify managed GitHub Pages publication. Evaluation supports specific claims about tested cases; it does not certify a business model.

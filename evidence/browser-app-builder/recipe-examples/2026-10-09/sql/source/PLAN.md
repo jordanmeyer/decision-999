@@ -1,0 +1,15 @@
+# Fulfillment Lab — agreed plan
+
+Build an original browserSQLworkspace for a fictional wholesale desk-accessory supplier. Students explore whichregions/products have value tied up in unfulfilledunits, using real editableSQL and starterqueries. Show schema/types/counts, accessible exactresultstable and chart for suitabletwo-column totals. No arbitraryfileimports. All tables synthetic/generatedlocally; no externalruntime services.
+
+Studentconfirmed tinycase: ordersO1East(A10×$20Notebook,B5×$30Lamp),O2West(C4×$25Notebook),O3West(D2×$50Lamp). ShipmenteventsA3,A2,B5,C1. Gross$550/shipped$275/outstanding$275;21ordered,11shipped,10outstandingunits. East350/250/100;West200/25/175. Notebookoutstanding175,Lamp100. Naiveleftjoin grosses$750 byduplicatingA; correctshipmentaggregationatlinelevel restores$550. Outstandingmeans unshippedorder value, notaccountsreceivable orprofit. Largecase2,400orders/7,200lines,4regions/12products,zero/partial/multiple shipments, deterministicdataset; visiblyswitchtiny/large.
+
+ManagedVite8.3.4, Node22.19.0/npm10.9.3. CandidateDuckDB-Wasm1.32.0 EHsinglethread config explicitlyauthorized bycoordinator formaintainertrial basedonisolatedprobes. ECharts6.1.0 approved fornumericresults. Exactlypinneddependencies/lockfile/localWASMworkerassets/supplementalnotice. Candidatecheckerrejection mustberecorded,notbypassed orrepresented asgeneralapproval. Selectedduckdb/EChartsskills, fiveworkflows andCampusDesigner followed. Publicbase/bab-example-sql/, sourcehttps://github.com/jordanmeyer/bab-example-sql. RootpublishesonlyafterindependentreviewPASS.
+
+Beforepromisingreadonly, verifyactualDuckDBparser/config enforcement. NeverinventregexSQLsanitizer. Blockexternalreads andextensionload/install, lockconfiguration. Registeronlycontrolledlocalfilenames beforeexposingeditor. Ifreadonlycannotbeproven, explainlimitation tosimulatedstudent beforechangingclaim/scope. Boundedqueryduration/displayrows, realcancelterminatingwork and resetrecovery. Preservequerytext onerrors. Exactcents/DECIMALresults displayedwithoutloss viaBigInt/Arrowhandling; chartprecision/unitsdisclosed andtablecanonical.
+
+Acceptance: realtinySQLanswers/mistakenjoincontrast, fullsynthesistablecounts, SQLsyntax/missingtable errorsretaintext, actualexternal/extension/config/mutationrejections, cancellationofexpensivequery plusfreshsuccessfulrun, resultcap/empty/textsafe/precisioncases, browserproductionprefixlocalEHworker/WASM, keyboard/narrow/desktop/solidhover, sourcereview/freshness. Planningconversation preserved separately asroleplay.
+
+## Implemented enforcement decision
+
+The failed JSON-extension approach is superseded. The app uses native tokenization plus a native prepared SELECT subquery inside a READ ONLY transaction. Configuration is locked before editable SQL, with external access and extension loading disabled. The actual 36-case suite verifies wrapper escapes, exact literals, cancellation/recovery and JSON loaded=false. Historical failures and observation limits remain in EVALUATION.md.

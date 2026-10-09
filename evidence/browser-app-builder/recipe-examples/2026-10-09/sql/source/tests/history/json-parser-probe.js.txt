@@ -1,0 +1,24 @@
+import * as duckdb from '@duckdb/duckdb-wasm';
+import wasmUrl from '@duckdb/duckdb-wasm/dist/duckdb-eh.wasm?url';
+import workerUrl from '@duckdb/duckdb-wasm/dist/duckdb-browser-eh.worker.js?url';
+const out=document.getElementById('output');out.textContent='';const log=(name,value)=>out.textContent+=name+': '+JSON.stringify(value,(_,v)=>typeof v==='bigint'?v.toString():v)+'\n';
+const db=new duckdb.AsyncDuckDB(new duckdb.VoidLogger(),new Worker(workerUrl));
+try{
+ await db.instantiate(wasmUrl);await db.open({maximumThreads:1,query:{castBigIntToDouble:false,castDecimalToDouble:false}});
+ let c=await db.connect(); log('extensions before parser',(await c.query("SELECT extension_name, installed, loaded, install_path FROM duckdb_extensions() WHERE extension_name='json'")).toArray());await c.query('CREATE TABLE items(id INTEGER, amount BIGINT); INSERT INTO items VALUES(1,55000),(2,27500);');
+ log('local table',(await c.query('SELECT SUM(amount) AS total FROM items')).toArray());
+ const parser=await c.prepare('SELECT json_serialize_sql(CAST(? AS VARCHAR)) AS ast');
+ log('extensions after parser',(await c.query("SELECT extension_name, installed, loaded, install_path FROM duckdb_extensions() WHERE extension_name='json'")).toArray());
+ for(const sql of ['SELECT * FROM items','SELECT 1; SELECT 2','DELETE FROM items','CREATE TABLE x(a INT)','WITH t AS (SELECT 1 n) SELECT * FROM t','SELECT * FROM query(\'DELETE FROM items\')','EXPLAIN SELECT 1']){
+  try{const ast=JSON.parse((await parser.query(sql)).get(0).ast);log('parse '+sql,{error:ast.error,count:ast.statements?.length,message:ast.error_message});}catch(e){log('parse error '+sql,e.message);}
+ }
+ const encoded=(await parser.query('SELECT 9007199254740993::BIGINT AS big, 12345678901234567890.12::DECIMAL(22,2) AS exact;')).get(0).ast;
+ const canonical=await c.prepare('SELECT json_deserialize_sql(CAST(? AS JSON)) AS sql');
+ const normalized=(await canonical.query(encoded)).get(0).sql;log('canonical',normalized);
+ log('canonical execution',(await c.query(`SELECT * FROM (${normalized}) AS result LIMIT 501`)).toArray());await canonical.close();await parser.close();
+ await c.query("SET autoinstall_known_extensions=false; SET autoload_known_extensions=false; SET enable_external_access=false; SET lock_configuration=true;");
+ for(const sql of ['DELETE FROM items','CREATE TABLE x(a INT)','CREATE TEMP TABLE x(a INT)',"SELECT * FROM read_csv('https://example.invalid/data.csv')",'LOAD httpfs','SET enable_external_access=true',"SELECT * FROM query('DELETE FROM items')"]){try{log('EXECUTED '+sql,(await c.query(sql)).toArray());}catch(e){log('rejected '+sql,e.message);}}
+ try{await c.query('BEGIN TRANSACTION READ ONLY');try{await c.query('INSERT INTO items VALUES(3,1)');log('readonly transaction WRITE EXECUTED',true);}catch(e){log('readonly transaction rejected write',e.message);}await c.query('ROLLBACK');}catch(e){log('readonly transaction unavailable',e.message);}
+ const decimals=await c.query("SELECT 9007199254740993::BIGINT AS big, 12345678901234567890.12::DECIMAL(22,2) AS exact");log('precisionfields',decimals.schema.fields.map(f=>({name:f.name,type:String(f.type),scale:f.type.scale})));log('precisionrow',decimals.toArray());
+ log('PASS proof complete',(await c.query('SELECT 42 AS answer')).toArray());await c.close();
+}catch(e){log('FAIL',e.message);}finally{await db.terminate();}

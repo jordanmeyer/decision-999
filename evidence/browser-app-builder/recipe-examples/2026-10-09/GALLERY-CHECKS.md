@@ -19,3 +19,5 @@ Sixth gallery publication: course commit `03e3861bb5adf1317cd6f687bcd5e110d3853f
 Seventh gallery preparation: the first directory build correctly rejected an accidental Markdown link in the optimizer ExecPlan (array notation immediately followed by parenthesized units). Reworded the source interface in the app documentation, corrected two port-command spaces and brought its completion narrative current; app61d6644 is report-only. Copied that exact document into the evidence snapshot. Repeated directory build passed. Executable source remained identical to reviewed2e4eef4.
 
 The first seventh-link Actions run37894480465 failed because this record itself repeated the malformed link syntax after local checks. Rephrased the record to avoid that syntax; no app source changed. Repeated all repository checks after the final documentation edit before retrying publication.
+
+Corrected seventh-link commit18b3562bcaa4d7af015211d12dfa777cdaf95716 passed Actions37894587436. Actual livegallery shows7of10 andtheHiGHSallocationlink. Optimizer report-only61d6644 also passed Actions37894431038.

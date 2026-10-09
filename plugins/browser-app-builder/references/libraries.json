@@ -325,7 +325,7 @@
       "id": "duckdb",
       "name": "DuckDB-Wasm",
       "skill": "duckdb-browser-app",
-      "status": "candidate",
+      "status": "approved",
       "packages": {
         "@duckdb/duckdb-wasm": "1.32.0"
       },
@@ -339,7 +339,7 @@
           ]
         }
       },
-      "limitations": "Candidate: isolated browser probe passed; full application review pending. Single-thread EH worker and local WASM assets for Pages without isolation headers. Disable extension auto-install/autoload and external access; lock configuration. Bounded local queries with cancellation/recovery. Supplemental package license required."
+      "limitations": "Reviewed single-thread EH worker and local WASM assets on Pages without isolation headers. Bounded SELECT workspace with native read-only enforcement, cancellation/deadline recovery and exact numeric display. Disable extension auto-install/autoload and external access; lock configuration before exposing editable SQL. Do not assume JSON parser functions are built in. Supplemental package license required. Approval does not cover arbitrary extensions, remote inputs or every browser."
     },
     {
       "id": "highs",

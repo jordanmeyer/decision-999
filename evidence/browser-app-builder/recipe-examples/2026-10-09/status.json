@@ -69,23 +69,28 @@
       "gallery_commit": "03e3861bb5adf1317cd6f687bcd5e110d3853f5e"
     },
     "sql": {
-      "stage": "building",
+      "stage": "live verified; gallery pending",
       "repository_proposed": "jordanmeyer/bab-example-sql",
-      "review": "pending",
-      "deployment": "pending"
+      "review": "PASS",
+      "deployment": "PASS",
+      "reviewed_source": "7a957523d776471eec7283311a562a9793d7f729",
+      "published_commit": "a2f6aa2402f01cc2e4f3aac7d2d471e5cd4b7cac",
+      "live_url": "https://jordanmeyer.github.io/bab-example-sql/",
+      "workflow": "https://github.com/jordanmeyer/bab-example-sql/actions/runs/37920646141"
     },
     "optimizer": {
-      "stage": "live verified; gallery pending",
+      "stage": "live verified and linked in gallery",
       "repository_proposed": "jordanmeyer/bab-example-optimizer",
       "review": "PASS",
       "deployment": "PASS",
       "reviewed_source": "2e4eef40bf2091800e2f07c0144888c6b264f8ee",
       "published_commit": "e23c930b353d4381b14db735efdf6122e535a832",
       "workflow": "https://github.com/jordanmeyer/bab-example-optimizer/actions/runs/37894236996",
-      "live_url": "https://jordanmeyer.github.io/bab-example-optimizer/"
+      "live_url": "https://jordanmeyer.github.io/bab-example-optimizer/",
+      "gallery_commit": "18b3562bcaa4d7af015211d12dfa777cdaf95716"
     },
     "presentation": {
-      "stage": "queued",
+      "stage": "review corrections applied; independent browser witness pending",
       "repository_proposed": "jordanmeyer/bab-example-presentation",
       "review": "pending",
       "deployment": "pending"

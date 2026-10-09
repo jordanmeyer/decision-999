@@ -1,0 +1,37 @@
+import {Engine} from '../app/engine.js';
+import {dataset,reference} from '../app/data.js';
+import {queries} from '../app/queries.js';
+let total=0,failed=0;const equal=(a,b)=>{if(JSON.stringify(a)!==JSON.stringify(b))throw Error(`Expected ${JSON.stringify(b)}, got ${JSON.stringify(a)}`);};
+const status=document.getElementById('status');
+async function check(name,fn){total++;const li=document.createElement('li');try{await fn();li.textContent='PASS — '+name;li.className='pass';}catch(e){failed++;li.textContent='FAIL — '+name+': '+e.message;li.className='fail';}document.getElementById('results').append(li);status.textContent=`${total-failed}/${total} passed so far; ${failed} failed. Running…`;}
+let engine=new Engine();
+try{
+ await engine.open('tiny');
+ await check('Tiny table counts3/2/4/4',()=>equal(Object.values(engine.data).map(rows=>rows.length),[3,2,4,4]));
+ await check('Actual SQL reconciles21units/11shipped/$550/$275/$275',async()=>equal((await engine.query(queries.find(q=>q.id==='totals').sql)).rows,[['21','11','55000','27500','27500']]));
+ await check('Region gapWest17500cents/East10000',async()=>equal((await engine.query(queries[0].sql)).rows,[['West','17500'],['East','10000']]));
+ await check('Product gapNotebook17500/Lamp10000',async()=>equal((await engine.query(queries[1].sql)).rows,[['Notebook','17500'],['Lamp','10000']]));
+ await check('Naivejoin75000 versuscorrect55000',async()=>equal((await engine.query(queries.find(q=>q.id==='mistake').sql)).rows.map(row=>row[1]),['75000','55000']));
+ await check('OnlyO3 has no shipment events',async()=>equal((await engine.query(queries.find(q=>q.id==='unshipped').sql)).rows,[['O3','West','2026-01-07']]));
+ await check('LineA aggregates two shipments into5units and10000outstanding',async()=>equal((await engine.query(queries.find(q=>q.id==='lines').sql)).rows[0],['A','East','Notebook','10','5','5','10000']));
+ for(const sql of ['DELETE FROM line_items','DROP TABLE orders','CREATE TABLE nope(a INT)','SELECT 1; SELECT 2','EXPLAIN SELECT 1','SELECT 1) AS escaped; DELETE FROM orders; --','SELECT 1) AS escaped; COMMIT; DELETE FROM orders; --'])await check('Nativeparser rejects '+sql,async()=>{let rejected=false;try{await engine.query(sql);}catch{rejected=true;}equal(rejected,true);});
+ for(const sql of ["SELECT * FROM read_csv('https://example.invalid/data.csv')","SELECT * FROM query('DELETE FROM line_items')"])await check('Database rejects '+sql,async()=>{let rejected=false;try{await engine.query(sql);}catch{rejected=true;}equal(rejected,true);});
+ for(const sql of ['LOAD httpfs','INSTALL httpfs','SET enable_external_access=true','INSERT INTO line_items VALUES(\'X\',\'O1\',\'P1\',1,1)'])await check('Lockedconfig/parser rejects '+sql,async()=>{let rejected=false;try{await engine.query(sql);}catch{rejected=true;}equal(rejected,true);});
+ await check('Native READ ONLY transaction rejects mutation independently of editor gate',async()=>{await engine.connection.query('BEGIN TRANSACTION READ ONLY');let error;try{await engine.connection.query('DELETE FROM orders');}catch(e){error=e;}finally{await engine.connection.query('ROLLBACK');}if(!error?.message.includes('read-only'))throw Error('write not blocked by transaction');});
+ await check('Rawconfiguration rejects externalextension and reenable',async()=>{for(const sql of ['LOAD httpfs','SET enable_external_access=true']){let rejected=false;try{await engine.connection.query(sql);}catch{rejected=true;}equal(rejected,true);}});
+ await check('ExactBIGINT beyondJavascriptsafeinteger and22digitdecimal',async()=>equal((await engine.query('SELECT 9007199254740993::BIGINT AS n,12345678901234567890.12::DECIMAL(22,2) AS d')).rows,[['9007199254740993','12345678901234567890.12']]));
+ await check('NegativeandzeroDECIMALscaledexactly',async()=>equal((await engine.query('SELECT -0.01::DECIMAL(10,2) AS a,0::DECIMAL(10,2) AS b')).rows,[['-0.01','0.00']]));
+ await check('Semicolonsinsidecomments/strings are parsedcorrectly',async()=>equal((await engine.query("/* ; */ SELECT ';drop table orders' AS literal;")).rows,[[';drop table orders']]));
+ await check('Trailing comments and UTF-8 lexer offsets',async()=>equal((await engine.query("SELECT 'café; 🧪' AS literal; -- final ; comment\n/* more ; */")).rows,[["café; 🧪"]]));
+ await check('No JSON extension loaded for query parsing',async()=>equal((await engine.query("SELECT loaded FROM duckdb_extensions() WHERE extension_name='json'")).rows,[['false']]));
+ await check('Orders survive wrapper escape attempts',async()=>equal((await engine.query('SELECT COUNT(*)::BIGINT FROM orders')).rows,[['3']]));
+ await check('LiteralHTMLtextremainsdata',async()=>equal((await engine.query("SELECT '<b>safe</b>' AS text")).rows,[['<b>safe</b>']]));
+ await check('NULL and emptyresults distinct',async()=>{equal((await engine.query('SELECT NULL AS value')).rows,[[null]]);equal((await engine.query('SELECT 1 WHERE false')).rows,[]);});
+ await check('501strow signals500-row displaycap',async()=>{const r=await engine.query('SELECT * FROM range(2000)');equal(r.rows.length,500);equal(r.capped,true);});
+ await check('Syntaxerror thenvalid42 recovers',async()=>{let error;try{await engine.query('SELECT bad FROM missing');}catch(e){error=e;}if(!error)throw Error('missingerror');equal((await engine.query('SELECT 42 AS answer')).rows,[['42']]);});
+ await check('Cancel terminates expensive computation and settles run',async()=>{const run=engine.query('SELECT SUM(sin(a.i+b.i)) FROM range(1000000) a(i),range(1000000) b(i)').catch(e=>e.message);setTimeout(()=>engine.stop(),30);const message=await run;if(!message.includes('cancelled'))throw Error(String(message));equal(engine.disposed,true);});
+ engine=new Engine();await engine.open('large');
+ await check('Freshlarge database aftercancel has2400orders/7200lines/12products',async()=>equal((await engine.query('SELECT (SELECT count(*) FROM orders)::BIGINT,(SELECT count(*) FROM line_items)::BIGINT,(SELECT count(*) FROM products)::BIGINT')).rows,[['2400','7200','12']]));
+ await check('Large actualSQL agreeswithindependentintegerrowarithmetic',async()=>{const r=reference(dataset('large'));equal((await engine.query(queries.find(q=>q.id==='totals').sql)).rows,[[String(r.units),String(r.shippedUnits),String(r.gross),String(r.shipped),String(r.outstanding)]]);});
+ await check('Largecorrespondingline neverovershipped',async()=>equal((await engine.query('SELECT COUNT(*)::BIGINT FROM (SELECT l.line_id FROM line_items l JOIN shipment_lines s USING(line_id) GROUP BY l.line_id,l.ordered_units HAVING SUM(s.shipped_units)>l.ordered_units)')).rows,[['0']]));
+}catch(e){await check('Database setup and suite completion',()=>{throw e;});}finally{await engine.close();status.textContent=`${total-failed}/${total} passed; ${failed} failed. Complete.`;}
