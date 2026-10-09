@@ -1,0 +1,56 @@
+Coordinator browser check of exact-cent scenario, before final agent evaluation
+A single-product scenario calculator
+
+Price & profit
+
+Find what your assumptions earn—and how many units cover your costs.
+
+Your assumptions
+
+USD · $0 to $1,000,000 per amount · 2 decimal places maximum. Use no commas or symbols.
+
+Price per unit
+USD
+Variable cost per unit
+USD
+Fixed costs for this period
+USD
+Quantity sold
+whole units
+
+0 to 1,000,000 units in the same period.
+
+Reset example
+Your result
+
+$0.00 profit. Break-even: 1,000 units.
+
+Profit for the period
+
+$0.00
+
+Revenue
+$300.00
+Variable costs
+$200.00
+Fixed costs
+$100.00
+Contribution per unit
+$0.10
+Whole-unit break-even
+
+1,000 units
+
+The first whole-unit quantity that covers fixed costs. One fewer unit still makes a loss.
+
+A scenario, not a demand forecast
+
+Raising price may reduce demand. Quantity is your assumption; this tool does not predict sales.
+
+Profit = (price − variable unit cost) × quantity − fixed costs. Break-even is the minimum whole-unit quantity with nonnegative profit. Money is calculated in exact cents; break-even rounds units up.
+
+One product, one period, constant price and unit cost. Excludes taxes, financing, capacity limits and volume discounts. Inputs stay on this page and are not saved. The starting values are a synthetic example.
+
+Final production reset from invalid1.005 using keyboard Enter:
+$4.00 profit. Break-even: 80 units.
+Inspected coordinator production warning/error log query: empty.

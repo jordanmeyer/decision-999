@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Price & profit</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+<main>
+  <header>
+    <p class="eyebrow">A single-product scenario calculator</p>
+    <h1>Price & profit</h1>
+    <p class="intro">Find what your assumptions earn—and how many units cover your costs.</p>
+  </header>
+  <div class="workspace">
+    <section aria-labelledby="inputs-heading">
+      <h2 id="inputs-heading">Your assumptions</h2>
+      <p id="money-help" class="muted">USD · $0 to $1,000,000 per amount · 2 decimal places maximum. Use no commas or symbols.</p>
+      <form id="scenario" novalidate>
+        <label for="price">Price per unit <span>USD</span></label>
+        <input id="price" name="price" type="text" inputmode="decimal" value="19.95" aria-describedby="money-help price-error" autocomplete="off">
+        <p id="price-error" class="error"></p>
+        <label for="cost">Variable cost per unit <span>USD</span></label>
+        <input id="cost" name="cost" type="text" inputmode="decimal" value="7.40" aria-describedby="money-help cost-error" autocomplete="off">
+        <p id="cost-error" class="error"></p>
+        <label for="fixed">Fixed costs for this period <span>USD</span></label>
+        <input id="fixed" name="fixed" type="text" inputmode="decimal" value="1000" aria-describedby="money-help fixed-error" autocomplete="off">
+        <p id="fixed-error" class="error"></p>
+        <label for="quantity">Quantity sold <span>whole units</span></label>
+        <input id="quantity" name="quantity" type="text" inputmode="numeric" value="80" aria-describedby="quantity-help quantity-error" autocomplete="off">
+        <p id="quantity-help" class="muted">0 to 1,000,000 units in the same period.</p>
+        <p id="quantity-error" class="error"></p>
+        <button type="reset">Reset example</button>
+      </form>
+    </section>
+    <section class="results" aria-labelledby="results-heading">
+      <h2 id="results-heading">Your result</h2>
+      <p id="status" role="status">Loading calculator…</p>
+      <div id="values" hidden>
+        <p class="eyebrow" id="profit-label">Profit for the period</p>
+        <p class="hero-number" id="profit"></p>
+        <dl>
+          <div><dt>Revenue</dt><dd id="revenue"></dd></div>
+          <div><dt>Variable costs</dt><dd id="variable"></dd></div>
+          <div><dt>Fixed costs</dt><dd id="fixed-result"></dd></div>
+          <div><dt>Contribution per unit</dt><dd id="margin"></dd></div>
+        </dl>
+        <div class="break-even">
+          <h3>Whole-unit break-even</h3>
+          <p id="break-even" class="break-number"></p>
+          <p id="explanation"></p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <aside aria-labelledby="model-heading">
+    <h2 id="model-heading">A scenario, not a demand forecast</h2>
+    <p>Raising price may reduce demand. Quantity is your assumption; this tool does not predict sales.</p>
+    <p>Profit = (price − variable unit cost) × quantity − fixed costs. Break-even is the minimum whole-unit quantity with nonnegative profit. Money is calculated in exact cents; break-even rounds units up.</p>
+    <p class="muted">One product, one period, constant price and unit cost. Excludes taxes, financing, capacity limits and volume discounts. Inputs stay on this page and are not saved. The starting values are a synthetic example.</p>
+  </aside>
+</main>
+</body>
+</html>

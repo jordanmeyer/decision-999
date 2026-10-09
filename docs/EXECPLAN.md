@@ -26,12 +26,16 @@ Students describe an application in ordinary language; the agent selects suitabl
 
 - [x] (2026-10-09) Corrected dependency placement, chart emphasis colors and Gantt lifecycle; 31 browser checks, locked production rebuilds and targeted boundary checks passed. Previous reports preserved in review-fixes/before/.
 
+- [x] (2026-10-09) Completed three independent builds from empty folders: pricing 25/25, inventory 13/13 and sales 28/28 browser checks. Verified actual library use, source/plan freshness and local production behavior; no push or publication.
+
 ## Surprises & Discoveries
 
 
 The current 0.1.2 workflow forbids Node installation/build systems and copies app/ directly to dist/. Both rules need a managed-build alternative. Campus Designer already has canonical CSS tokens and is generated into this plugin by scripts/build.py. Previous plain-app trials caught stale entry scripts; managed applications need versioned build assets and returning-browser checks.
 
 Existing unrelated edits affect site/config.json, both generated marketplace catalogs, and untracked .claude/. Preserve them. This configured machine has Node 22.19.0 and npm 10.9.3. Registry inspection, installation and browser trials established compatible configurations. An initial low-severity KaTeX advisory required a pinned override. reveal.js 6 exports reveal.js/reveal.css; the older dist subpath failed. Narrow reveal slides required fixed scaling and disabling automatic scroll activation; a native file input needed explicit sizing. Two runtime packages required supplemental license notices. Final audits reported zero known advisories. The sandbox blocked the default npm cache; a temporary writable cache completed reproduction without global changes. Evidence and failure details are in evidence/browser-app-builder/libraries/.
+
+Fresh trials found a native form-reset timing bug, narrow currency/text overflow and an incorrect chart paint-order assertion; all were corrected with failed rounds retained. Managed previews occasionally required restarting after source changes. Bundle-size warnings remain approximately 536 kB for inventory and 979 kB for sales. Evidence: evidence/browser-app-builder/trials/2026-10-09/.
 
 ## Decision Log
 
@@ -48,10 +52,14 @@ Decision: skill descriptions support implicit discovery; Plan/Build also explici
 
 Decision (2026-10-09): keep lifecycle scripts disabled, retain reviewed supplemental runtime notices, and pin the Mermaid KaTeX override. Actual builds and audits established these requirements. Record selection walkthroughs separately from automatic host routing; no independent Work routing trial was available.
 
+Decision (2026-10-09): repeat the original three applications with ordinary briefs and no prescribed libraries. Freeze plugin3966d48 and let each agent select the smallest useful set. Retain production previews for user review, stop test servers, and perform no push or deployment before review.
+
 ## Outcomes & Retrospective
 
 
 Version 0.2.0 is implemented as a locally verified pilot candidate: thirteen approved library recipes, managed Vite tooling, Campus Designer adapters and nineteen discoverable skills. Presentation passed 10/10 browser cases after review corrections, dashboard 13/13 and operations 8/8. Three production builds at a repository-prefix URL and a second fresh reproduction passed; notices and publication boundaries were checked. Repository generation/checks and isolated Codex/Claude installation passed. Earlier live examples still demonstrate only version 0.1.1. No new live deployment was attempted. Work routing, clean-machine setup, novice usability, comprehensive network interception and full accessibility remain unverified. Browser viewport limitations required fixed-width review frames; nested-frame actions were unreliable, so keyboard interactions were tested in top-level previews.
+
+Fresh independent trials completed 66 browser checks: pricing chose no library, inventory chose seedrandom/ECharts, and sales chose Papa Parse/Tabulator/ECharts. Imports, production behavior, exact dependency checks and source/plan freshness confirm those choices. Sanitized snapshots and simulated planning transcripts are saved under evidence/browser-app-builder/trials/2026-10-09/. Local previews remain available on ports9312/9322/9332 and comparison9300; test servers are stopped. Existing public examples and plugin files are unchanged. These results support explicit plugin-guided selection on this Mac, not automatic Work routing or live publication.
 
 ## Context and Orientation
 
@@ -143,3 +151,7 @@ Review follow-up (2026-10-09): Independent review reproduced skipped notices for
 Review outcome (2026-10-09): all three findings corrected. Runtime notices are protected by dependency-field validation, chart states use solid colors, and the schedule instance survives repeated navigation. Tests import the real operations component; no generic lifecycle abstraction was added. External release gates remain open.
 
 Correction validation: repository generation/checks, manifest validation and whitespace checks passed; gallery reports 31 cases. The optional skill-creator validator lacks PyYAML, so repository skill validation is the available evidence. Temporary browser tabs and preview servers were closed.
+
+Fresh-trial request (2026-10-09): user requested three subagents to restart the original examples from empty folders before pushing. Freeze corrected plugin3966d48, avoid earlier fixtures, record ordinary-language selection and simulated Q&A, and stop publication at local preparation. Pricing may correctly select no library.
+
+Fresh-trial outcome (2026-10-09): three requested subagents finished original applications from empty folders, with independent coordinator checks and preserved failures. Saved reproducible source snapshots and compared final source against evaluated commits. No push; publication and external host/usability gates remain open.

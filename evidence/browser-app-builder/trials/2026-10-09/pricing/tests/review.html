@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pricing layout review</title><style>body{font:16px system-ui;margin:16px} label{margin-right:24px}iframe{display:block;margin-top:16px;border:1px solid #666;width:1280px;height:1500px}</style></head>
+<body><h1>Frame-based layout review</h1><p>This local review helper is excluded from publication.</p><label>Review width <select id="width"><option value="1280">1280 CSS pixels</option><option value="320">320 CSS pixels</option></select></label><label><input id="text" type="checkbox">200% text size</label><p id="measure" role="status">Loading frame…</p><iframe title="Pricing calculator review" src="../app/"></iframe><script type="module">
+const frame=document.querySelector('iframe');
+function review(){
+ frame.style.width=`${document.querySelector('#width').value}px`;
+ frame.contentDocument.documentElement.style.fontSize=document.querySelector('#text').checked?'200%':'';
+ requestAnimationFrame(()=>{const doc=frame.contentDocument.documentElement; document.querySelector('#measure').textContent=`Frame viewport ${doc.clientWidth}px; document width ${doc.scrollWidth}px; root font ${getComputedStyle(doc).fontSize}.`;});
+}
+frame.addEventListener('load',review);
+document.querySelector('#width').addEventListener('change',review);
+document.querySelector('#text').addEventListener('change',review);
+</script></body></html>

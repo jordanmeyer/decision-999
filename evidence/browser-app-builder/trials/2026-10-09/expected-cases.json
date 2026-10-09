@@ -1,0 +1,126 @@
+{
+  "purpose": "Independent coordinator expectations specified before completed app outputs; synthetic data only.",
+  "pricing": [
+    {
+      "price": "19.95",
+      "unitCost": "7.40",
+      "fixedCost": "1000.00",
+      "quantity": 80,
+      "profit": "4.00",
+      "wholeBreakEven": 80,
+      "derivation": "(1995-740)*80-100000=400 cents; ceil(100000/1255)=80"
+    },
+    {
+      "price": "0.30",
+      "unitCost": "0.20",
+      "fixedCost": "100.00",
+      "quantity": 1000,
+      "profit": "0.00",
+      "wholeBreakEven": 1000,
+      "derivation": "10*1000-10000=0 cents"
+    },
+    {
+      "price": "10.00",
+      "unitCost": "12.00",
+      "fixedCost": "100.00",
+      "quantity": 1,
+      "profit": "-102.00",
+      "wholeBreakEven": null,
+      "derivation": "Negative contribution and positive fixed costs never reach nonnegative profit."
+    }
+  ],
+  "inventory": {
+    "horizon": 4,
+    "initialStock": 10,
+    "fixedDailyDemand": 3,
+    "leadDays": 2,
+    "reorderPoint": 4,
+    "orderQuantity": 5,
+    "weeklyReviewDays": 7,
+    "weeklyTarget": 60,
+    "dailyPolicy": {
+      "endStock": [
+        7,
+        4,
+        1,
+        3
+      ],
+      "unmet": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fulfilled": 12,
+      "averageEndStock": 3.75,
+      "orders": [
+        {
+          "day": 2,
+          "quantity": 5,
+          "arrivalDay": 4
+        },
+        {
+          "day": 4,
+          "quantity": 5,
+          "arrivalDay": 6
+        }
+      ]
+    },
+    "weeklyPolicy": {
+      "endStock": [
+        7,
+        4,
+        1,
+        0
+      ],
+      "unmet": [
+        0,
+        0,
+        0,
+        2
+      ],
+      "fulfilled": 10,
+      "averageEndStock": 3
+    }
+  },
+  "sales": {
+    "rows": [
+      {
+        "region": "North",
+        "product": "Notebook",
+        "quantity": 10,
+        "unit_price": 20,
+        "unit_cost": 12
+      },
+      {
+        "region": "South",
+        "product": "Pen",
+        "quantity": 5,
+        "unit_price": 30,
+        "unit_cost": 18
+      },
+      {
+        "region": "North",
+        "product": "Notebook",
+        "quantity": 2,
+        "unit_price": 20,
+        "unit_cost": 12
+      }
+    ],
+    "all": {
+      "revenue": 390,
+      "cost": 234,
+      "contribution": 156
+    },
+    "north": {
+      "revenue": 240,
+      "cost": 144,
+      "contribution": 96
+    },
+    "southNotebook": {
+      "revenue": 0,
+      "cost": 0,
+      "contribution": 0
+    }
+  }
+}

@@ -1,0 +1,92 @@
+SYNTHETIC SCENARIOS · MODEL 1
+
+Inventory policy lab
+
+Same demand. Two replenishment policies. Inspect what happens each day.
+
+Set the scenario
+Random seed
+Days (1–90)
+Starting stock (units)
+Demand minimum (units/day)
+Demand maximum (units/day)
+Lead time (days)
+Daily reorder point (units)
+Daily order quantity (units)
+Weekly target (units)
+
+Set minimum = maximum for fixed demand. All quantities are whole units; stock and policy levels are capped at 10,000.
+
+Run comparison
+Reset defaults
+Download daily CSV
+
+Comparison updated. Both policies use identical daily demand.
+
+Compare the tradeoff
+
+Seed “classroom-1” · 4 days · demand 3–3 units/day · 2-day lead
+
+Daily reorder
+100.0%
+Fulfilled demand
+3.8
+Mean end stock · units
+
+0 units unmet · 5 units pending at end
+
+Weekly order-up-to
+83.3%
+Fulfilled demand
+3.0
+Mean end stock · units
+
+2 units unmet · 0 units pending at end
+
+Stock trajectories — end of day
+Units
+Day
+0
+1
+2
+3
+4
+5
+6
+7
+1
+2
+3
+4
+Daily reorder
+Weekly order-up-to
+Daily ledger
+Policy
+Daily reorder
+Weekly order-up-to
+
+Read left to right: opening stock, arrivals, demand, then end-of-day ordering. Pending includes orders due beyond this horizon.
+
+Daily reorder · units
+Day	Opening	Arrivals	Demand	Fulfilled	Unmet	End stock	Ordered	Pending
+1	10	0	3	3	0	7	0	0
+2	7	0	3	3	0	4	5	5
+3	4	0	3	3	0	1	0	5
+4	1	5	3	3	0	3	5	5
+Read the assumptions first
+
+Daily demand is independent and uniformly distributed between the chosen integer bounds. This is a simplifying assumption, not a demand forecast. A single run does not establish which policy is best.
+
+Arrivals occur before demand. Unmet demand is lost, never backordered. After demand, daily reorder places one fixed order when stock plus pending orders is at or below its reorder point. Weekly review orders up to its target at the end of days 7, 14, 21… An order placed on day d arrives on day d + lead time.
+
+Fill rate = fulfilled units ÷ requested units. Mean stock averages end-of-day stock; it excludes goods in transit. Costs, capacity constraints, seasonality and supplier uncertainty are outside this model.
+
+Runs locally in your browser. No data is saved. No institutional affiliation or endorsement.
+
+Third-party licenses · Local trial; publication and source destination pending.
+
+Weekly ledger:
+1	10	0	3	3	0	7	0	0
+2	7	0	3	3	0	4	0	0
+3	4	0	3	3	0	1	0	0
+4	1	0	3	1	2	0	0	0

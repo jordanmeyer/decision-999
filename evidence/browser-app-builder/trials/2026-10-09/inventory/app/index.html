@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Inventory policy lab</title><link rel="stylesheet" href="./style.css"><script type="module" src="./app.js"></script></head>
+<body>
+<header><p class="eyebrow">Synthetic scenarios · Model 1</p><h1>Inventory policy lab</h1><p>Same demand. Two replenishment policies. Inspect what happens each day.</p></header>
+<main>
+<form id="scenario" novalidate>
+<h2>Set the scenario</h2><div class="inputs">
+<label class="seed">Random seed<input name="seed" value="classroom-1" maxlength="80" required></label>
+<label>Days (1–90)<input name="days" type="number" value="30" min="1" max="90" step="1" required></label>
+<label>Starting stock (units)<input name="start" type="number" value="35" min="0" max="10000" step="1" required></label>
+<label>Demand minimum (units/day)<input name="min" type="number" value="0" min="0" max="1000" step="1" required></label>
+<label>Demand maximum (units/day)<input name="max" type="number" value="12" min="0" max="1000" step="1" required></label>
+<label>Lead time (days)<input name="lead" type="number" value="2" min="1" max="30" step="1" required></label>
+<label>Daily reorder point (units)<input name="point" type="number" value="15" min="0" max="10000" step="1" required></label>
+<label>Daily order quantity (units)<input name="quantity" type="number" value="30" min="1" max="10000" step="1" required></label>
+<label>Weekly target (units)<input name="target" type="number" value="60" min="0" max="10000" step="1" required></label>
+</div><p class="hint">Set minimum = maximum for fixed demand. All quantities are whole units; stock and policy levels are capped at 10,000.</p>
+<div class="actions"><button type="submit">Run comparison</button><button type="button" id="reset" class="secondary">Reset defaults</button><button type="button" id="download" class="secondary">Download daily CSV</button></div>
+<p id="status" role="status">Loading simulation…</p><p id="error" role="alert"></p>
+</form>
+<section aria-labelledby="comparison"><h2 id="comparison">Compare the tradeoff</h2><p id="run-label"></p><div id="summary" class="summary"></div>
+<details id="chart-panel" open><summary>Stock trajectories — end of day</summary><div id="chart" aria-label="End-of-day stock comparison; exact values in the daily ledger" role="img"></div></details></section>
+<section aria-labelledby="ledger"><div class="section-heading"><h2 id="ledger">Daily ledger</h2><label>Policy<select id="policy"><option value="daily">Daily reorder</option><option value="weekly">Weekly order-up-to</option></select></label></div><p>Read left to right: opening stock, arrivals, demand, then end-of-day ordering. Pending includes orders due beyond this horizon.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Daily ledger scrollable table"><table><caption id="caption">Daily reorder · units</caption><thead><tr><th scope="col">Day</th><th scope="col">Opening</th><th scope="col">Arrivals</th><th scope="col">Demand</th><th scope="col">Fulfilled</th><th scope="col">Unmet</th><th scope="col">End stock</th><th scope="col">Ordered</th><th scope="col">Pending</th></tr></thead><tbody id="rows"></tbody></table></div></section>
+<aside><h2>Read the assumptions first</h2><p>Daily demand is independent and uniformly distributed between the chosen integer bounds. This is a simplifying assumption, not a demand forecast. A single run does not establish which policy is best.</p><p>Arrivals occur before demand. Unmet demand is lost, never backordered. After demand, daily reorder places one fixed order when stock plus pending orders is at or below its reorder point. Weekly review orders up to its target at the end of days 7, 14, 21… An order placed on day d arrives on day d + lead time.</p><p>Fill rate = fulfilled units ÷ requested units. Mean stock averages end-of-day stock; it excludes goods in transit. Costs, capacity constraints, seasonality and supplier uncertainty are outside this model.</p></aside>
+</main><footer><p>Runs locally in your browser. No data is saved. No institutional affiliation or endorsement.</p><p><a id="notices" href="./THIRD-PARTY-NOTICES.txt">Third-party licenses</a> · Local trial; publication and source destination pending.</p></footer>
+</body></html>

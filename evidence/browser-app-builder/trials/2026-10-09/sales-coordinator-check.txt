@@ -1,0 +1,158 @@
+North filter:
+SYNTHETIC SALES · LOCAL ANALYSIS
+
+A closer look at sales.
+
+Compare what came in, what it cost, and what remains before overhead.
+
+Your data, in this browser
+
+Start with the example or choose a local CSV. Nothing is uploaded or saved.
+
+Import sales CSV
+Restore example
+CSV format & limits
+
+Bundled synthetic example loaded: 3 sales rows.
+
+Explore the contribution
+Reset filters
+Region
+All regions
+North
+South
+Product
+All products
+Notebook
+Pen
+
+2 of 3 sales rows match.
+
+Revenue
+$240.00
+Cost of sales
+$144.00
+Contribution before overhead
+$96.00
+Visual comparison · USD
+USD
+0
+50
+100
+150
+200
+250
+Revenue
+Cost
+Contribution
+$240.00
+$144.00
+$96.00
+Inspect the sales
+Sort rows
+Original order
+Revenue: high to low
+Revenue: low to high
+Contribution: high to low
+Contribution: low to high
+Region: A to Z
+Product: A to Z
+
+Use column headings to sort, or the keyboard-friendly sort menu. Scroll inside the table to inspect all columns.
+
+Row
+Region
+Product
+Units
+Unit price (USD)
+Unit cost (USD)
+Revenue (USD)
+Cost (USD)
+Contribution (USD)
+
+
+1NorthNotebook10$20.00$12.00$200.00$120.00$80.00
+3NorthNotebook2$20.00$12.00$40.00$24.00$16.00
+A starting point for investigation. Contribution is revenue minus the stated cost of sales, before overhead and tax. It ignores inventory and differences between samples. This synthetic dataset does not establish causes or predict future performance.
+Independent learning example · No institutional affiliation
+Third-party licenses
+Publication pending authorization
+
+North + Pen empty intersection:
+SYNTHETIC SALES · LOCAL ANALYSIS
+
+A closer look at sales.
+
+Compare what came in, what it cost, and what remains before overhead.
+
+Your data, in this browser
+
+Start with the example or choose a local CSV. Nothing is uploaded or saved.
+
+Import sales CSV
+Restore example
+CSV format & limits
+
+Bundled synthetic example loaded: 3 sales rows.
+
+Explore the contribution
+Reset filters
+Region
+All regions
+North
+South
+Product
+All products
+Notebook
+Pen
+
+No matching sales. 0 of 3 rows; all totals are $0.00.
+
+Revenue
+$0.00
+Cost of sales
+$0.00
+Contribution before overhead
+$0.00
+Visual comparison · USD
+USD
+0
+0.2
+0.4
+0.6
+0.8
+1
+Revenue
+Cost
+Contribution
+$0.00
+$0.00
+$0.00
+Inspect the sales
+Sort rows
+Original order
+Revenue: high to low
+Revenue: low to high
+Contribution: high to low
+Contribution: low to high
+Region: A to Z
+Product: A to Z
+
+Use column headings to sort, or the keyboard-friendly sort menu. Scroll inside the table to inspect all columns.
+
+Row
+Region
+Product
+Units
+Unit price (USD)
+Unit cost (USD)
+Revenue (USD)
+Cost (USD)
+Contribution (USD)
+
+
+No matching sales.
+A starting point for investigation. Contribution is revenue minus the stated cost of sales, before overhead and tax. It ignores inventory and differences between samples. This synthetic dataset does not establish causes or predict future performance.
+Independent learning example · No institutional affiliation
+Third-party licenses
+Publication pending authorization

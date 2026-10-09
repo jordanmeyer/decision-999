@@ -1,0 +1,22 @@
+{
+  "pricing": {
+    "tested_commit": "fba817d8e56a5eff79198cddeef960d4187844e2",
+    "report_head": "ff133ee3086f75f9534eaa3f3760a77ecae70e6a",
+    "source_and_plan_clean": true,
+    "remote": null
+  },
+  "inventory": {
+    "tested_commit": "67ddbfa52b7f78416d82d88a3d055c7d141420ff",
+    "report_head": "3e73043c0ae0253fc2cb473455049ea607dee5d8",
+    "source_and_plan_clean": true,
+    "remote": null,
+    "dependency_check": "Approved direct dependencies and registry lockfile. Review transitive changes and run npm ci before testing."
+  },
+  "sales": {
+    "tested_commit": "50b631bc96735e673beda72c510aa4d34bc3fdef",
+    "report_head": "752767d0381359a70b30a6ed77f600ad164082d2",
+    "source_and_plan_clean": true,
+    "remote": null,
+    "dependency_check": "Approved direct dependencies and registry lockfile. Review transitive changes and run npm ci before testing."
+  }
+}
