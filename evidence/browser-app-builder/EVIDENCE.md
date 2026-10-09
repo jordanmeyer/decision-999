@@ -116,4 +116,10 @@ The eighth campaign app, [Fulfillment Lab](https://jordanmeyer.github.io/bab-exa
 
 ## Core checklist response — 0.2.3
 
-The [October 9 core correction record](reviews/2026-10-09-core-checklist/README.md) maps the applicable review items to shared workflow, domain recipe, canonical design or gallery changes. It includes fresh planning exercises, actual starter/font rendering, gallery browser evidence and independent review corrections. These strengthen future builds; the nine published examples retain their original source and campaign results. No automatic Work routing, new live deployment or full-model certification is implied.
+The [October 9 core correction record](reviews/2026-10-09-core-checklist/README.md) maps the applicable review items to shared workflow, domain recipe, canonical design or gallery changes. It includes fresh planning exercises, actual starter/font rendering, gallery browser evidence and independent review corrections. At that checkpoint these strengthened future builds; the original campaign results remain historical. The subsequent live revision below applies the guidance to all nine deployed examples.
+
+## Revised live examples — 0.2.3
+
+The [live revision record](live-revisions/2026-10-09/README.md) documents all nine updated applications: 285 passing browser cases, independent review, exact-commit GitHub Actions success, live known-answer interactions and returning-browser reload checks. Current gallery previews and build-story links describe these revisions. Source snapshots and final report commits are retained separately from the original campaign.
+
+The revisions restore meaningful opening decisions, model-specific teaching features, canonical local fonts and usable controls. Failed rounds include a presentation initialization race, rank explanation failures and narrow chart/table defects. Configured-Mac, browser and model limits are explicit; Work, clean-machine and novice-user release gates remain open.

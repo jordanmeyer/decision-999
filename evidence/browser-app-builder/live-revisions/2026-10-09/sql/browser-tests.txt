@@ -1,0 +1,42 @@
+41/41 passed; 0 failed. Complete.
+PASS — Exact USD preserves huge integer cents, signs and nonzero fractions
+PASS — Unknown aliases and decimal fields never guess currency units
+PASS — Tiny table counts3/2/4/4
+PASS — Actual SQL reconciles21units/11shipped/$550/$275/$275
+PASS — Region gapWest17500cents/East10000
+PASS — Product gapNotebook17500/Lamp10000
+PASS — Naivejoin75000 versuscorrect55000
+PASS — OnlyO3 has no shipment events
+PASS — LineA aggregates two shipments into5units and10000outstanding
+PASS — Nativeparser rejects DELETE FROM line_items
+PASS — Nativeparser rejects DROP TABLE orders
+PASS — Nativeparser rejects CREATE TABLE nope(a INT)
+PASS — Nativeparser rejects SELECT 1; SELECT 2
+PASS — Nativeparser rejects EXPLAIN SELECT 1
+PASS — Nativeparser rejects SELECT 1) AS escaped; DELETE FROM orders; --
+PASS — Nativeparser rejects SELECT 1) AS escaped; COMMIT; DELETE FROM orders; --
+PASS — Database rejects SELECT * FROM read_csv('https://example.invalid/data.csv')
+PASS — Database rejects SELECT * FROM query('DELETE FROM line_items')
+PASS — Lockedconfig/parser rejects LOAD httpfs
+PASS — Lockedconfig/parser rejects INSTALL httpfs
+PASS — Lockedconfig/parser rejects SET enable_external_access=true
+PASS — Lockedconfig/parser rejects INSERT INTO line_items VALUES('X','O1','P1',1,1)
+PASS — Native READ ONLY transaction rejects mutation independently of editor gate
+PASS — Rawconfiguration rejects externalextension and reenable
+PASS — ExactBIGINT beyondJavascriptsafeinteger and22digitdecimal
+PASS — NegativeandzeroDECIMALscaledexactly
+PASS — Semicolonsinsidecomments/strings are parsedcorrectly
+PASS — Trailing comments and UTF-8 lexer offsets
+PASS — No JSON extension loaded for query parsing
+PASS — Orders survive wrapper escape attempts
+PASS — LiteralHTMLtextremainsdata
+PASS — NULL and emptyresults distinct
+PASS — 501strow signals500-row displaycap
+PASS — Syntaxerror thenvalid42 recovers
+PASS — Cancel terminates expensive computation and settles run
+PASS — First query inspects12 products in alphabetical order
+PASS — First aggregation counts600 orders in each region
+PASS — Filtered starter returns20 lines of40 units with exact price cents
+PASS — Freshlarge database aftercancel has2400orders/7200lines/12products
+PASS — Large actualSQL agreeswithindependentintegerrowarithmetic
+PASS — Largecorrespondingline neverovershipped

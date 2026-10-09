@@ -1,0 +1,72 @@
+{
+  "version": 2,
+  "name": "Reviewer release and merge across DST",
+  "start": "2026-03-06",
+  "promise": "2026-03-14",
+  "tasks": [
+    {
+      "id": "c",
+      "name": "Released inspection",
+      "duration": 1,
+      "release": "2026-03-10",
+      "dependencies": [
+        "a"
+      ],
+      "kind": "task",
+      "resource": "team",
+      "allocation": 1
+    },
+    {
+      "id": "a",
+      "name": "<b>Start work</b>",
+      "duration": 2,
+      "release": null,
+      "dependencies": [],
+      "kind": "task",
+      "resource": "team",
+      "allocation": 1
+    },
+    {
+      "id": "e",
+      "name": "Independent release gate",
+      "duration": 1,
+      "release": "2026-03-14",
+      "dependencies": [],
+      "kind": "task",
+      "resource": "team",
+      "allocation": 1
+    },
+    {
+      "id": "d",
+      "name": "Merged finish",
+      "duration": 2,
+      "release": null,
+      "dependencies": [
+        "b",
+        "c"
+      ],
+      "kind": "task",
+      "resource": "team",
+      "allocation": 1
+    },
+    {
+      "id": "b",
+      "name": "Three day work",
+      "duration": 3,
+      "release": null,
+      "dependencies": [
+        "a"
+      ],
+      "kind": "task",
+      "resource": "team",
+      "allocation": 1
+    }
+  ],
+  "resources": [
+    {
+      "id": "team",
+      "name": "Example team",
+      "capacity": 2
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+# Approval Studio
+
+Agreed 2026-10-09 through the simulated student conversation in PLANNING-CONVERSATION.md. Build a self-contained browser tool for classmates to draw and edit purchase approvals, compare a routing policy, and distinguish elapsed-time assumptions from team workload. No real operating data or institutional endorsement.
+
+## Useful first version
+
+React Flow provides a directly editable node/route diagram. Native forms provide equivalent essential edits: select, rename, assign team, change touch/wait time, change route source/target/share, add/delete review steps and routes. Start and completion cannot be deleted through UI. Edit arrivals and productive capacity, save current valid process as comparison baseline, restore either invented example, export JSON or import a validated replacement. Imports stay in this tab, do not alter the baseline, and replace nothing until validation passes. Refresh restores the original example.
+
+A temporarily invalid graph is a draft: identify the responsible steps, pause current results, and provide Restore last valid process. Do not normalize bad shares or silently bypass deleted steps. A saved valid snapshot is distinct from an invalid draft. Coordinate/selection/measurement state is presentation only; model calculations are independently implemented in app/model.js.
+
+Managed libraries: @xyflow/react 12.12.0 for diagram editing; React/React DOM 19.3.0 required peers; @vitejs/plugin-react 6.1.2 and Vite 8.3.4 for local bundling. No chart, statistics or layout package is needed. Follow bundled Campus Designer: unchanged navy/royal with copper capacity warnings, local EB Garamond/Open Sans fonts, no marks or endorsement. React Flow attribution remains.
+
+## Model and agreed examples
+
+Routing is a directed acyclic graph: arrows go forward with no loops. Exactly one start and completion. Every node must lie on a structural route from start to completion. Outgoing route shares are mutually exclusive alternatives, not parallel work. Every non-completion node's shares sum to 100%, with floating-point tolerance 1e-8 percentage points, never normalization. Completion has no outgoing edges; start has no incoming edges. Zero-share routes are allowed and contribute no flow.
+
+Set start visit probability to 1. Process nodes only after every incoming route was processed. For each edge, add source visit probability × share/100 to the target. Each review's expected touch/wait contribution equals its visit probability × entered time. Sum contributions for expected touch, entered wait, and their elapsed total per request. Daily team work = arrivals/day × sum of expected touch for that team. Load = work/capacity; overload minutes = max(0, work−capacity). Wait does not consume team capacity. Exactly100% has no spare capacity. This is not a queue length, queue-delay, completion forecast, profit or staffing optimization model. No rework, parallelism, stochastic variation or working calendar is represented. Entered elapsed minutes are additive assumptions; daily capacity is a separate workload comparison. At zero arrivals, per-request time remains conditional and work/day is zero. A zero-time baseline makes percentage comparison unavailable.
+
+Original policy: 40 requests/day; manager sees all, 8min touch +120min wait; 30% procurement at25+480min, 70% directly to finance; all then finance at12+180min and complete. Capacities manager360, procurement420, finance420 productive min/day. Baseline touch =8+.3×25+12=27.5min; wait=120+.3×480+180=444min; elapsed471.5min. Manager daily work320/load88.888…%; procurement300/load71.428…%; finance480/load114.285…% and60min over.
+
+Simplified example sends10% to procurement and90% directly to finance, same times/capacity. Touch22.5, wait348, elapsed370.5; reduction101min =21.42099…%. Procurement daily work100/load23.8095…%; finance remains480/load114.285…%. All numbers are synthetic teaching assumptions. Units are explicit; output display rounds to one decimal, internal arithmetic uses unrounded finite numbers. Assertions use1e-9 tolerance on these independently derived cases.
+
+## JSON contract and boundaries
+
+Top level exact fields: version(1), name, arrivals, teams, nodes, edges. Teams: id,name,capacity. Nodes: id,label,type,team,touch,wait,position(x,y). Edges: id,source,target,share. Unknown/missing fields reject. Names/labels1–80 characters without controls. IDs start with a letter, followed by letters/digits/underscore/hyphen, maximum40. Node/route/team IDs unique within their arrays; route endpoint pairs unique. Review team must exist; start/end have null team and zero time. Finite numbers: arrivals0–10,000/day, touch0–4,800min, wait0–43,200min, capacity1–100,000 productive min/day, share0–100%, position±5,000. File maximum256KiB;1–8 teams,2–30 nodes,at most60 routes. No formulas or HTML from files execute. Valid import is atomic and retains baseline; failure preserves existing draft and last-valid snapshot.
+
+## Acceptance
+
+Browser tests import the actual model and visibly show success/failure. Independently check both cases, merges, zero arrivals, zero/100% routes, volume/capacity separation, no mutation, invalid sums/cycles/orphans/IDs/teams/numbers/JSON shape/size. Exercise actual add/delete/reconnect/share edits, repair/restore, JSON import/error/export, baseline, keyboard/native alternatives, node movement and production build. Inspect actual1440/390/320 production frames and graph visibility, resize, selected styles, labels and text equivalents. Keep diagram scroll/pan separate from page overflow. Source/runtime assets are local; observe available console and asset references without overstating network inspection. Commit source, tests, notices, plan, workflow and repository prefix before final run. Independent reviewer must pass actual checkpoint before coordinator publishes.
+
+## Authorized live revision — 2026-10-09
+
+The owner requested the new guidance. Lead with named overload and warn that sustained excess arrivals grow backlog; the 471.5/370.5 minute arithmetic remains nominal scenario time excluding congestion, never a turnaround forecast. Do not invent queueing. At exactly 100% capacity state no spare capacity. Capacity is the first workspace view; Process and editor opens the full-width canvas and unclipped native editor. Narrow screens use a readable route list. The audit discloses per-visit versus weighted minutes. Bundle licensed local typefaces and link BUILD-STORY.md. Acceptance includes default overload, 90/10 unchanged Finance overload, capacity recovery, all reachable editors and returning-browser state.

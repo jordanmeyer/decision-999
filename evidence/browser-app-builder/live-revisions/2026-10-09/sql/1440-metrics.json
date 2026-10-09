@@ -1,0 +1,43 @@
+{
+  "width": 1439,
+  "scroll": 1439,
+  "height": 2277,
+  "fonts": [
+    {
+      "family": "EB Garamond",
+      "weight": "400",
+      "status": "loaded"
+    },
+    {
+      "family": "Open Sans",
+      "weight": "400",
+      "status": "loaded"
+    },
+    {
+      "family": "Open Sans",
+      "weight": "600",
+      "status": "loaded"
+    }
+  ],
+  "fontRequests": [
+    {
+      "url": "http://127.0.0.1:9716/bab-example-sql/assets/open-sans-600-8xi7cHyI.ttf",
+      "bytes": 300
+    },
+    {
+      "url": "http://127.0.0.1:9716/bab-example-sql/assets/open-sans-400-BCdjR_up.ttf",
+      "bytes": 300
+    },
+    {
+      "url": "http://127.0.0.1:9716/bab-example-sql/assets/eb-garamond-400-BkAyYjUB.ttf",
+      "bytes": 300
+    }
+  ],
+  "externalRequests": [],
+  "smallControls": [],
+  "headings": [
+    "The order is in. What hasn’t left?",
+    "Start with a question.",
+    "Query results"
+  ]
+}

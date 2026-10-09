@@ -1,0 +1,23 @@
+{
+  "name": "bab-example-executive",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "test:browser": "vite --mode test",
+    "build": "node scripts/notices.mjs && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "6.1.2",
+    "vite": "8.3.4"
+  },
+  "dependencies": {
+    "@mantine/core": "9.7.1",
+    "@mantine/hooks": "9.7.1",
+    "echarts": "6.1.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  }
+}

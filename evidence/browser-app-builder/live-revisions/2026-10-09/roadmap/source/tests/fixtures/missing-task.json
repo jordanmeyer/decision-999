@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "name": "Invalid example",
+  "start": "2026-01-05",
+  "promise": "2026-01-12",
+  "tasks": [
+    {
+      "id": "alpha",
+      "name": "First task",
+      "duration": 2,
+      "release": null,
+      "dependencies": [
+        "missing"
+      ],
+      "kind": "task",
+      "resource": "team",
+      "allocation": 1
+    }
+  ],
+  "resources": [
+    {
+      "id": "team",
+      "name": "Example team",
+      "capacity": 2
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "width": 1439,
+  "scroll": 1439,
+  "height": 1383,
+  "fonts": [
+    {
+      "family": "EB Garamond",
+      "weight": "400",
+      "status": "loaded"
+    },
+    {
+      "family": "Open Sans",
+      "weight": "400",
+      "status": "loaded"
+    },
+    {
+      "family": "Open Sans",
+      "weight": "600",
+      "status": "loaded"
+    }
+  ],
+  "fontRequests": [
+    {
+      "url": "http://127.0.0.1:9712/bab-example-executive/assets/open-sans-400-BCdjR_up.ttf",
+      "bytes": 122416
+    },
+    {
+      "url": "http://127.0.0.1:9712/bab-example-executive/assets/open-sans-600-8xi7cHyI.ttf",
+      "bytes": 122360
+    },
+    {
+      "url": "http://127.0.0.1:9712/bab-example-executive/assets/eb-garamond-400-BkAyYjUB.ttf",
+      "bytes": 390168
+    }
+  ],
+  "externalRequests": [],
+  "smallControls": [],
+  "headings": [
+    "Growth needs a stronger bottom line.",
+    "Start with the questions.",
+    "See the margin change.",
+    "Compare the mix.",
+    "Know what this view can tell you."
+  ]
+}

@@ -38,8 +38,8 @@
           "label": "Approved library recipes exercised locally"
         },
         {
-          "value": "254",
-          "label": "Passing browser checks across nine reviewed examples"
+          "value": "285",
+          "label": "Passing browser checks across nine revised examples"
         },
         {
           "value": "3 of 3",
@@ -47,10 +47,10 @@
         },
         {
           "value": "9 of 9",
-          "label": "New recipe apps independently reviewed and verified live"
+          "label": "Revised apps independently reviewed and verified live"
         }
       ],
-      "method": "Nine original applications were built from recorded simulated planning conversations on a configured Mac. Persistent independent review produced revisions before each PASS, followed by exact-commit GitHub Pages deployment and live checks. The nine browser suites total 254 passing checks. Reviews caught calculation-test gaps, production filtering, keyboard and focus problems, stale browser-restored controls, narrow layouts and SQL extension autoload. The earlier version 0.1.1 plain-app trials and version 0.2.0 library fixtures remain separate historical evidence. These are maintainer-run simulations, not student outcomes or automatic ChatGPT Work routing trials. Exact prompts, source checkpoints, failed rounds, corrections, reviewer verdicts and deployment records are available in the full evidence record. The 0.2.3 checklist corrections strengthen planning, model review and shared typography for future builds; the previews and 254-check count document the original campaign. Subsequent app revisions retain their own evaluation and deployment records.",
+      "method": "Nine original applications were built from recorded simulated planning conversations on a configured Mac, then revised against the 0.2.3 guidance. Three developers worked in parallel; independent review checked models, useful default scenarios, interaction and production output before publication. The revised browser suites total 285 passing checks. Exact-commit GitHub Actions deployments and live known-answer interactions were verified for all nine, including returning-browser reloads. Revisions added clearer decision tradeoffs, consistent local typography, accessible alternatives to dense widgets, explicit pending states and public build stories. Review caught stale restored controls, chart and table layout issues, rank explanations and presentation initialization timing. Original campaign evidence and the earlier 0.1.1 plain-app trials remain separate historical records. These are maintainer-run simulations, not student outcomes or automatic ChatGPT Work routing trials. The evidence record preserves source checkpoints, failures, corrections, review verdicts and deployment results.",
       "limits": "Self-contained apps use bundled public/synthetic data or locally selected files. No backends, logins, external runtime APIs, remote AI, analytics, secret keys or remote fonts/scripts. Managed builds require compatible Node/npm and host file, shell and browser capabilities. Library approval covers the recorded versions/configurations, not arbitrary combinations. Work routing, clean-machine macOS/Windows and novice-student usability remain unverified. Browser checks do not certify a business model or full accessibility.",
       "screenshotAlt": [],
       "examples": [
@@ -58,90 +58,90 @@
           "label": "Stillwater Coffee",
           "url": "https://jordanmeyer.github.io/bab-example-executive/",
           "problem": "Where is operating margin slipping?",
-          "lesson": "Compare store performance, then inspect the operating evidence behind a margin investigation.",
-          "libraries": "Mantine · ECharts · Tabulator",
+          "lesson": "Separate sales growth from contribution, then inspect store costs and evidence in the board briefing.",
+          "libraries": "Mantine · ECharts",
           "preview": "gallery/executive.jpg",
-          "previewAlt": "Stillwater Coffee: recorded application preview from the October 9 trial",
+          "previewAlt": "Stillwater Coffee: revised live application, October 9, 2026",
           "walkthrough": "https://github.com/jordanmeyer/decision-999/blob/main/evidence/browser-app-builder/gallery/executive.md"
         },
         {
           "label": "Common Goods",
           "url": "https://jordanmeyer.github.io/bab-example-uploads/",
           "problem": "Which sales are lost to returns?",
-          "lesson": "Join synthetic sales and returns exports, then compare the net revenue left by product or channel.",
+          "lesson": "Follow a gross-sales lead erased by returns, then compare sales cohorts and product–channel combinations.",
           "libraries": "Papa Parse · Arquero · ECharts",
           "preview": "gallery/uploads.jpg",
-          "previewAlt": "Common Goods: recorded application preview from the October 9 trial",
+          "previewAlt": "Common Goods: revised live application, October 9, 2026",
           "walkthrough": "https://github.com/jordanmeyer/decision-999/blob/main/evidence/browser-app-builder/gallery/uploads.md"
         },
         {
           "label": "Seasonal order lab",
           "url": "https://jordanmeyer.github.io/bab-example-simulator/",
           "problem": "How much stock should we risk?",
-          "lesson": "Compare three order quantities under uncertain demand and unit costs, using a reproducible downside screen.",
+          "lesson": "Compare the expected-profit curve with a binding downside limit and see why the preferred order quantity changes.",
           "libraries": "jStat · seedrandom · ECharts",
           "preview": "gallery/simulator.jpg",
-          "previewAlt": "Seasonal order lab: recorded application preview from the October 9 trial",
+          "previewAlt": "Seasonal order lab: revised live application, October 9, 2026",
           "walkthrough": "https://github.com/jordanmeyer/decision-999/blob/main/evidence/browser-app-builder/gallery/simulator.md"
         },
         {
           "label": "Approval Studio",
           "url": "https://jordanmeyer.github.io/bab-example-process/",
-          "problem": "Which team is over capacity?",
-          "lesson": "Connect routing and work per visit to team workload; distinguish capacity from entered process times.",
+          "problem": "Does a shorter route fix the bottleneck?",
+          "lesson": "Change approval routing and compare nominal time with the workload that keeps Finance over capacity.",
           "libraries": "React Flow",
           "preview": "gallery/process.jpg",
-          "previewAlt": "Approval Studio: recorded application preview from the October 9 trial",
+          "previewAlt": "Approval Studio: revised live application, October 9, 2026",
           "walkthrough": "https://github.com/jordanmeyer/decision-999/blob/main/evidence/browser-app-builder/gallery/process.md"
         },
         {
           "label": "Launch Ledger",
           "url": "https://jordanmeyer.github.io/bab-example-roadmap/",
-          "problem": "What happens when a launch task slips?",
-          "lesson": "Follow a dependency delay through a calendar schedule and compare the resulting launch date.",
+          "problem": "Can the team deliver the promised date?",
+          "lesson": "Separate dependency dates from team capacity; test delays, resource overload and zero-duration milestones.",
           "libraries": "Frappe Gantt",
           "preview": "gallery/roadmap.jpg",
-          "previewAlt": "Launch Ledger: recorded application preview from the October 9 trial",
+          "previewAlt": "Launch Ledger: revised live application, October 9, 2026",
           "walkthrough": "https://github.com/jordanmeyer/decision-999/blob/main/evidence/browser-app-builder/gallery/roadmap.md"
         },
         {
           "label": "Replenish",
           "url": "https://jordanmeyer.github.io/bab-example-markets/",
           "problem": "What changes a market shortlist?",
-          "lesson": "Explore how weights and eligibility rules affect a geographic screen built from synthetic measures.",
+          "lesson": "Inspect how eligibility rules and weighted scores alter the shortlist, then challenge the ranking with sensitivity checks.",
           "libraries": "Leaflet",
           "preview": "gallery/markets.jpg",
-          "previewAlt": "Replenish: recorded application preview from the October 9 trial",
+          "previewAlt": "Replenish: revised live application, October 9, 2026",
           "walkthrough": "https://github.com/jordanmeyer/decision-999/blob/main/evidence/browser-app-builder/gallery/markets.md"
         },
         {
           "label": "Fulfillment Lab",
           "url": "https://jordanmeyer.github.io/bab-example-sql/",
-          "problem": "Where is unshipped order value?",
-          "lesson": "Query related local tables and learn why joining at the wrong grain can double-count value.",
+          "problem": "Where does a join change the answer?",
+          "lesson": "Start with simple SQL on 2,400 orders, then trace how shipment events can double-count order value.",
           "libraries": "DuckDB-Wasm · ECharts",
           "preview": "gallery/sql.jpg",
-          "previewAlt": "Fulfillment Lab: recorded application preview from the October 9 trial",
+          "previewAlt": "Fulfillment Lab: revised live application, October 9, 2026",
           "walkthrough": "https://github.com/jordanmeyer/decision-999/blob/main/evidence/browser-app-builder/gallery/sql.md"
         },
         {
           "label": "Batch & Balance",
           "url": "https://jordanmeyer.github.io/bab-example-optimizer/",
-          "problem": "What should the bakery produce?",
-          "lesson": "Allocate limited resources across whole batches and compare the feasible mix with a fractional bound.",
+          "problem": "Which extra capacity is worth buying?",
+          "lesson": "Re-solve whole-batch production with an extra hour, then compare integer choices with a fractional bound.",
           "libraries": "HiGHS",
           "preview": "gallery/optimizer.jpg",
-          "previewAlt": "Batch & Balance: recorded application preview from the October 9 trial",
+          "previewAlt": "Batch & Balance: revised live application, October 9, 2026",
           "walkthrough": "https://github.com/jordanmeyer/decision-999/blob/main/evidence/browser-app-builder/gallery/optimizer.md"
         },
         {
           "label": "Desk / Day",
           "url": "https://jordanmeyer.github.io/bab-example-presentation/",
-          "problem": "Does a small product launch break even?",
-          "lesson": "Change a pop-up launch scenario during a slide discussion and inspect its pricing sensitivity.",
+          "problem": "Should the board launch, pilot or defer?",
+          "lesson": "Change demand during the presentation and compare base profit, stress losses and the funding commitment.",
           "libraries": "reveal.js",
           "preview": "gallery/presentation.jpg",
-          "previewAlt": "Desk / Day: recorded application preview from the October 9 trial",
+          "previewAlt": "Desk / Day: revised live application, October 9, 2026",
           "walkthrough": "https://github.com/jordanmeyer/decision-999/blob/main/evidence/browser-app-builder/gallery/presentation.md"
         },
         {

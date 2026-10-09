@@ -13,26 +13,26 @@ The user now authorizes modifying the nine existing live example applications to
 - [x] (2026-10-09) Archived the core plan and inspected nine clean local app repositories, existing remotes and dependencies.
 - [x] Assigned three parallel developers, each owning three apps; coordinator owns package removal and publication.
 - [x] Executive: evaluated f98a158, independent PASS, published dd1897d with successful Actions 37964428332, actual live Meadow/company/reload verified.
-- [ ] Uploads: implement, evaluate, independent review, deploy and verify live.
+- [x] Uploads: evaluated 7b6369e, independent PASS, published eceabd1 with successful Actions 37965946836; live filtered $560 and default $239,961 after reload verified.
 - [x] Simulator: evaluated 455b426, independent PASS, published af31a95 with successful Actions 37964135811, actual live risk reversal/reload verified.
 - [x] Process: evaluated 442fcc5, independent PASS, published 8db5017 with successful Actions 37963974786, actual live routing/reload verified.
-- [ ] Roadmap: implement, evaluate, independent review, deploy and verify live.
-- [ ] Markets: implement, evaluate, independent review, deploy and verify live.
-- [ ] SQL: implement, evaluate, independent review, deploy and verify live.
-- [ ] Optimizer: implement, evaluate, independent review, deploy and verify live.
-- [ ] Presentation: implement, evaluate, independent review, deploy and verify live.
-- [ ] Retain sanitized final source/evidence and update gallery descriptions/previews to match revised apps.
-- [ ] Finish course checks, stop owned previews and record final outcomes/limits.
+- [x] Roadmap: evaluated c3cfdc3, independent PASS, published 0a718b1 with successful Actions 37966126725; live Nov29, both delays to Dec2 and reload verified.
+- [x] Markets: evaluated 6a9faed, independent PASS, published 8ba4318 with successful Actions 37967595846; live growth70 reversal and reload verified.
+- [x] SQL: evaluated 7e2cfd8, independent PASS, published 5de66d0 with successful Actions 37966909822; actual live large dataset, tiny $750/$550 join trap and reload verified.
+- [x] Optimizer: evaluated b8f26df, independent PASS, published 8cb8ad7 with successful Actions 37965184733; actual live $941 baseline, +60 oven minutes to $987 and reload verified.
+- [x] Presentation: evaluated e512792, independent PASS, published d3860ec with successful Actions 37966707459; live pilot/full decision and reload verified.
+- [x] Retained sanitized final source/evidence and updated all nine gallery descriptions/previews to match revised apps. Independent audit checked snapshot contents and gallery claims.
+- [x] Course build, boundary checks, Claude validation and whitespace checks pass. Gallery has no horizontal overflow at 1440, 390 and 320 frame widths; all nine images load and keyboard copy reports success. App preview processes are stopped; the final course preview closes after publication verification.
 
 ## Surprises & Discoveries
 
 
-All nine repositories exist under `/private/tmp/bab-recipe-examples-2026-10-09/`, are on main with clean working trees and retain node_modules. The course tree contains the completed but uncommitted core changes plus unrelated user configuration/catalog ordering and `.claude/`; preserve them. The current prepared plugin is0.2.3, with canonical designer0.3.2. No new library/runtime or repository is needed.
+All nine repositories exist under `/private/tmp/bab-recipe-examples-2026-10-09/`, are on main with clean working trees and retain node_modules. The course tree initially contained completed but uncommitted core changes plus unrelated user configuration/catalog ordering and `.claude/`; preserve the unrelated work. The plugin is 0.2.3, with canonical designer 0.3.2. No new library/runtime or repository is needed.
 
 
 ## Decision Log
 
-Decision (2026-10-09): removed Remotion, its telemetry exception, video example and gallery entry at the user’s request because its license is unsuitable for this use. Unpublished the Pages site and removed its source/workflow from main at c638292; Git history is retained. Other nine app revisions continue. The old Pages URL returns HTTP 404. Package/catalog checks pass and the dependency checker rejects the former direct package. Historical user-authored review content is preserved with source links pinned to its reviewed commit.
+Decision (2026-10-09): removed Remotion, its telemetry exception, video example and gallery entry at the user’s request because its license is unsuitable for this use. Unpublished the Pages site and removed its source/workflow from main at c638292; Git history is retained. Other nine app revisions continue. The old Pages URL returns HTTP 404. Package/catalog checks pass and the dependency checker rejects the former direct package. Historical user-authored review content is preserved with source links pinned to its reviewed commit. An independent subagent review confirmed that no active recipe, dependency, example or gallery reference remains; sixteen recipes and nine current examples are consistent.
 
 
 Decision (2026-10-09): scope is the nine reviewed bab-example apps, not the three older plain-JavaScript trials. Rationale: the new guidance and74-item checklist address these nine.
@@ -44,7 +44,7 @@ Decision: developers prepare clean evaluated commits, then independent reviewers
 ## Outcomes & Retrospective
 
 
-Implementation is underway. No revised app is yet claimed deployed. The prior gallery and trial passes remain historical and do not validate this revision.
+All nine revised apps are independently reviewed and verified live, with 285 passing browser cases. Final source snapshots and current gallery previews are retained under `evidence/browser-app-builder/live-revisions/2026-10-09/`; `status.json` identifies evaluated and published commits and successful Actions runs. Plugin 0.2.3 and designer 0.3.2 published in course commit 7e058c5 with successful Actions 37965642678. The gallery contains sixteen recipes and nine examples. Final gallery review corrected a torn map capture and two review links that pointed to earlier rounds. A separate snapshot audit found one outdated roadmap check count; a documentation-only correction is published and its snapshot matches. Course checks pass, with unrelated user configuration excluded from the publication index. Clean-machine, Windows, Work routing and student-usability gates remain unverified.
 
 ## Context and Orientation
 

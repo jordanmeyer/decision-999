@@ -30,17 +30,17 @@ Planning preserves your original brief and makes important scope choices explici
 
 ## Live examples
 
-Library examples from the completed 0.2.2 campaign, built through simulated planning and independent review. The gallery pairs their previews with business questions, lessons and “How this was built” records. The previews and original campaign records predate the 0.2.3 guidance; subsequent app revisions retain their own evaluation and deployment records:
+Nine examples built through simulated planning and independent review, then revised against the 0.2.3 guidance. Their 285 browser checks and live deployments are recorded separately from the original 0.2.2 campaign. The gallery pairs current previews with business questions, lessons and “How this was built” records:
 
-- [Stillwater Coffee · executive operating dashboard](https://jordanmeyer.github.io/bab-example-executive/) — Mantine, ECharts and Tabulator. [Source and review](https://github.com/jordanmeyer/bab-example-executive).
+- [Stillwater Coffee · executive operating dashboard](https://jordanmeyer.github.io/bab-example-executive/) — Mantine and ECharts, with a keyboard-accessible operating ledger. [Source and review](https://github.com/jordanmeyer/bab-example-executive).
 - [Common Goods · sales and returns explorer](https://jordanmeyer.github.io/bab-example-uploads/) — Papa Parse, Arquero and ECharts. [Source and review](https://github.com/jordanmeyer/bab-example-uploads).
 - [Seasonal order lab · seasonal order simulator](https://jordanmeyer.github.io/bab-example-simulator/) — jStat, seedrandom and ECharts. [Source and review](https://github.com/jordanmeyer/bab-example-simulator).
 - [Approval Studio · approval process model](https://jordanmeyer.github.io/bab-example-process/) — React Flow and separate capacity calculations. [Source and review](https://github.com/jordanmeyer/bab-example-process).
-- [Launch Ledger · launch roadmap](https://jordanmeyer.github.io/bab-example-roadmap/) — Frappe Gantt with dependency-based calendar calculations. [Source and review](https://github.com/jordanmeyer/bab-example-roadmap).
+- [Launch Ledger · launch roadmap](https://jordanmeyer.github.io/bab-example-roadmap/) — Frappe Gantt with dependency dates, team capacity and milestones. [Source and review](https://github.com/jordanmeyer/bab-example-roadmap).
 - [Replenish · geographic market screen](https://jordanmeyer.github.io/bab-example-markets/) — Leaflet with local public boundaries and synthetic scoring assumptions. [Source and review](https://github.com/jordanmeyer/bab-example-markets).
-- [Batch & Balance · bakery resource allocation](https://jordanmeyer.github.io/bab-example-optimizer/) — HiGHS in a local worker, with whole-batch constraints and an independently checked fractional bound. [Source and review](https://github.com/jordanmeyer/bab-example-optimizer).
+- [Batch & Balance · bakery resource allocation](https://jordanmeyer.github.io/bab-example-optimizer/) — HiGHS in a local worker, with whole-batch constraints, extra-capacity comparisons and a fractional bound. [Source and review](https://github.com/jordanmeyer/bab-example-optimizer).
 - [Fulfillment Lab · fulfillment SQL explorer](https://jordanmeyer.github.io/bab-example-sql/) — DuckDB-Wasm and ECharts with exact values, related tables and a join-grain lesson. [Source and review](https://github.com/jordanmeyer/bab-example-sql).
-- [Desk / Day · interactive analytical presentation](https://jordanmeyer.github.io/bab-example-presentation/) — reveal.js with editable pricing assumptions, sensitivity analysis and an exportable decision record. [Source and review](https://github.com/jordanmeyer/bab-example-presentation).
+- [Desk / Day · interactive analytical presentation](https://jordanmeyer.github.io/bab-example-presentation/) — reveal.js with a board-scale launch/pilot/defer decision, live assumptions, charts and a copyable decision record. [Source and review](https://github.com/jordanmeyer/bab-example-presentation).
 
 Earlier examples built with version 0.1.1 in automated trials with simulated student conversations and synthetic data; these demonstrate the original plain-JavaScript workflow:
 

@@ -1,0 +1,11 @@
+import { defineConfig } from 'vite';
+
+// Set to '/repository-name/' before Pages evaluation. No server-dependent routes.
+const base = '/bab-example-markets/';
+export default defineConfig(({ mode }) => ({
+  root: mode === 'test' ? '.' : 'app',
+  base: mode === 'test' ? '/' : base,
+  server: { host: '127.0.0.1', strictPort: true, proxy: mode === 'test' ? { '/bab-example-markets/': 'http://127.0.0.1:9726' } : undefined },
+  preview: { host: '127.0.0.1', strictPort: true },
+  build: { outDir: '../dist', emptyOutDir: true },
+}));

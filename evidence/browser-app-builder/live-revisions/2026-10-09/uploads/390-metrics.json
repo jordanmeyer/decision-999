@@ -1,0 +1,48 @@
+{
+  "width": 389,
+  "scroll": 389,
+  "height": 2896,
+  "fonts": [
+    {
+      "family": "EB Garamond",
+      "weight": "400",
+      "status": "loaded"
+    },
+    {
+      "family": "Open Sans",
+      "weight": "400",
+      "status": "loaded"
+    },
+    {
+      "family": "Open Sans",
+      "weight": "600",
+      "status": "loaded"
+    }
+  ],
+  "fontRequests": [
+    {
+      "url": "http://127.0.0.1:9714/bab-example-uploads/assets/open-sans-400-BCdjR_up.ttf",
+      "bytes": 300
+    },
+    {
+      "url": "http://127.0.0.1:9714/bab-example-uploads/assets/open-sans-600-8xi7cHyI.ttf",
+      "bytes": 300
+    },
+    {
+      "url": "http://127.0.0.1:9714/bab-example-uploads/assets/eb-garamond-400-BkAyYjUB.ttf",
+      "bytes": 300
+    }
+  ],
+  "externalRequests": [],
+  "smallControls": [],
+  "headings": [
+    "A sale isn’t the whole story.",
+    "Start with the samples",
+    "What did you keep?",
+    "Where returns change the picture",
+    "Sales month, after returns",
+    "Which product × channel combinations stand out?",
+    "One row per sale. Every return counted.",
+    "The file contract"
+  ]
+}

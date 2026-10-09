@@ -1,0 +1,52 @@
+# Independent review — Replenish market screen
+
+Reviewer: persistent independent recipe reviewer. Status: **PASS for application source5871ab6740e540e605778f0cea21adcc31b46a0c**. Reviewer owns this file. The reviewer's documented CUA session has no browser surface; coordinator performed an independent production witness, separate from the developer. Leaflet inventory promotion and the subsequent normal dependency-check pass remain coordinator publication gates.
+
+## Source and agreed scope
+
+Read the actual simulated planning exchange, PLAN, whole model/UI/styles/tests, data-refresh script, setup/evaluation/decisions/deployment/README and ExecPlan. The fixed synthetic commercial dataset, public geography, capped fixed anchors, normalized weights, separate hard gates, missing-data rule and exact alphabetical ties match the agreement. Automatic ranking and persistent manual pins have distinct owners and labels. Native selectors/table provide the analysis without a map. Applied settings remain separate from unsubmitted edits; copy uses applied results and thresholds.
+
+Leaflet is materially used for local polygons, context, labels, linked selection, zoom and resize. The code has no remote tile layer, geocoding or location API. Geometry and labels are bundled; external attribution links are ordinary user links. Solid fills use canonical tokens. Persisted pagehide retains the map/observer; nonpersisted cleanup removes them. Safe label nodes go to Leaflet; HTML interpolation elsewhere uses the authored fixed dataset or validated numbers, not imported visitor content. No file import is in the agreed product scope.
+
+The exact candidate Leaflet1.9.4/Vite8.3.4 packages and local publication prefix are present. The normal dependency checker truthfully rejects the candidate, rather than treating it as approved. Coordinator explicitly authorized this isolated trial pending full app review; approval/promotion remains a coordinator gate. Vendor BSD notice is retained. Source/workflow/base/notices agree on `/bab-example-markets/` and dist-only publication.
+
+## Independent numerical and provenance evidence
+
+Derived additional cases before executing the actual model:
+
+- Relax delivery/setup gates to$13.50/$300,000:11 markets rank; missing-growth Louisiana remains excluded. Florida's capped score is40+25+7.5+3=75.5. West Virginia is3.2+0+0+11.25=14.45. Actual model matches.
+- Setup ceiling$145,000 with default weights/delivery: top3 South Carolina58.25, Alabama38.25, Arkansas31.75. Actual model matches all scores and order.
+- Delivery$7.20/setup$220,000 qualifies Georgia and Tennessee; lowering delivery by one cent leaves only Tennessee. Actual model preserves equality and the one-cent exclusion.
+- Competition-only weighting gives Mississippi and South Carolina75, then Arkansas70; the exact tie is alphabetic. Actual order matches. Louisiana stays missing even though its missing component's weight is zero, as explicitly agreed.
+
+The [official Census States20M layer](https://tigerweb.geo.census.gov/arcgis/rest/services/Generalized_ACS2024/State_County/MapServer/9) independently identifies generalized state polygons, January1,2024 vintage, Census source and GeoJSON support. Reviewer fetched the exact22-feature query without invoking the app's writing script. Every bundled geometry type, coordinate after declared five-decimal rounding, official name and internal label point matched the official response. Coordinate order and separation from synthetic commercial attributes are documented correctly. This verifies provenance; it does not make the synthetic commercial score an empirical recommendation.
+
+## Retained rendered failure and pending witness
+
+Developer actually observed root client319/scroll874; native sideways scrolling moved554px into blank page despite a contained ledger. Investigation found absolute visually hidden state-name spans escaped the scroller because their containing block was the root. The final source positions their text buttons relatively. Developer then observed319/319 and zero whole-page horizontal scroll, without global overflow masking. This is a real developer-observed defect/fix, not a reviewer-controlled browser run. The final independent witness must reproduce the corrected narrow behavior.
+
+Developer reports17/17 model/geometry cases, actual polygon selection, zoom/fit/hide/show, invalid-input focus, all-zero/no-market states, maximum3 pins and keyboard focus recovery, exclusion-preserving pins and applied-state clipboard. Independent source and numeric checks above are complete. No further required source correction or architectural cleanup was identified in the separate simplification pass; fixed-data rendering and small native controls avoid unnecessary abstractions. Final UI/rendering/asset evidence and exact-source reconciliation remain pending.
+
+**Required lifecycle correction found during final developer checks:** after applying a$7 delivery gate, native navigation away and Back restored the form field7 but recreated default results with9 eligible markets, without indicating a pending edit. Clicking Apply then correctly produced Tennessee only. Map paths and captured logs were healthy, but the displayed form/result relationship was misleading. This is an observed developer failure at the frozen round, not a theoretical bfcache claim. Reviewer agreed that restored inputs must either reset consistently with results or show their pending state. Developer is testing a minimal form-autocomplete correction and will supply a new source checkpoint. No PASS for f21f648c.
+
+## Round 2 — source 65ceb49c5eb6d0b1fdde33628c92a22f1aba5e06
+
+Reviewer inspected the exact executable diff: `autocomplete="off"` on the settings form only. No model, application JavaScript, CSS or PLAN change. Developer repeated two actual production history cases: applied delivery7→Away/Back and pending delivery6→Away/Back now each return field12 with9 eligible default results, consistently; Apply remains usable with22 polygon paths and no captured warnings/errors. Independent root witness is still pending, including this precise pre-Apply field/result comparison. The corrected behavior is an observed supported-browser result, not a universal history-restoration guarantee.
+
+Reviewer requested the same pre-interaction history check for native view selectors outside the form. Developer confirmed three additional affected controls: selected VA with NC detail, growth selector with priority-score legend, and excluded-table selector with all12 rows. Disabling form autocomplete alone did not cover these controls. Developer is applying the minimal correction to each affected selector and will supply a new checkpoint. No PASS for65ceb49c.
+
+## Round 3 — source5871ab6740e540e605778f0cea21adcc31b46a0c — PASS
+
+Reviewed the complete executable correction. Relative to the original full review, exactly four autocomplete attributes were added: settings form plus market, map-metric and table-filter selectors. Removing those attributes yields byte-identical original HTML. Model, JavaScript, CSS, PLAN and test source are unchanged; final relevant-source diff is empty. No state-restoration wrapper or hidden persistence was added.
+
+Read the coordinator's durable independent `evidence/browser-app-builder/recipe-examples/2026-10-09/markets/UI-WITNESS.md`. It verifies17/17 tests, default known scores/components, actual polygon selection, keyboard table selection, zoom/fit/hide/show, missing Louisiana, max-three pins, eligibility-preserving pinned comparison, exact applied-state clipboard, pending edits, invalid associated-field focus, all-zero/no-market states, reset and focus recovery after removing a filtered-out pin.
+
+The final independent pre-interaction history case starts with VA/growth/excluded and applied delivery7. Away/Back returns NC/score/all/delivery12 with North Carolina detail, priority-score legend,12 rows,22 paths and the correct default top3 before another action. Captured warnings/errors are empty. This closes the complete observed restoration failure, including controls outside forms; it does not prove persisted bfcache use or every browser's policy.
+
+The independent320px frame measures319 client/scroll. Reviewer personally inspected root's retained narrow hero/method captures and the separately attributed developer map capture, `developer-narrow-map.png` in the course evidence: twelve state labels, selected and excluded outlines, geographic context, legend, zoom/fit controls and attribution are readable. No page-wide clipping masks the earlier overflow. Top-level keyboard checks supplement host iframe-focus limitations. Source, notices and geographic-provenance destinations are correct. CSS frames are layout evidence, not physical-device or universal accessibility certification; runtime locality is established by source/assets inspection and observed behavior, not an unavailable complete request trace.
+
+All required application findings are closed. The map contributes real geographic context while raw measures, fixed anchors, exclusions, component contributions and copied caveats expose the fictional assumptions. No additional product feature is necessary for the agreed classroom screen. This completed application review supports the coordinator's decision on the exact Leaflet candidate configuration; it does not approve remote tiles, geocoding, location access or unrelated configurations. After inventory promotion, run the unchanged canonical checker and normal build/publication/live checks before publishing.
+
+## Live revision — 6a9faede791fe4c2e8ac7f0b396301275c52a0ca — PASS
+
+Independent reviewer: root coordinator, October 9, 2026. This section records supplied independent observations, separately from developer evidence. Root reviewed complete model/UI and independently derived GA/TN crossover27.5, growth70 TN10750/145, GA9900/145 and NC9550/145. Observed25/25 browser tests; actual growth70 reversal with relative point-gap explanation; blank weight retained prior results and disabled Copy; Reset and map view recovered; Louisiana remained explicitly unscored for missing growth. The320 production frame had no page overflow, all3fonts loaded and same-origin observed resource entries. Root checked clean relevant source/PLAN. No required findings remain in this bounded review, and root authorized publication. Previous rounds remain above.

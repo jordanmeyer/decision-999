@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "name": "Risk-tiered routing · 90/10",
+  "arrivals": 40,
+  "teams": [
+    {
+      "id": "manager",
+      "name": "Managers",
+      "capacity": 360
+    },
+    {
+      "id": "procurement",
+      "name": "Procurement",
+      "capacity": 420
+    },
+    {
+      "id": "finance",
+      "name": "Finance",
+      "capacity": 420
+    }
+  ],
+  "nodes": [
+    {
+      "id": "start",
+      "label": "Purchase request",
+      "type": "start",
+      "team": null,
+      "touch": 0,
+      "wait": 0,
+      "position": {
+        "x": 0,
+        "y": 175
+      }
+    },
+    {
+      "id": "manager",
+      "label": "Manager approval",
+      "type": "review",
+      "team": "manager",
+      "touch": 8,
+      "wait": 120,
+      "position": {
+        "x": 235,
+        "y": 175
+      }
+    },
+    {
+      "id": "procurement",
+      "label": "Procurement review",
+      "type": "review",
+      "team": "procurement",
+      "touch": 25,
+      "wait": 480,
+      "position": {
+        "x": 490,
+        "y": 0
+      }
+    },
+    {
+      "id": "finance",
+      "label": "Finance approval",
+      "type": "review",
+      "team": "finance",
+      "touch": 12,
+      "wait": 180,
+      "position": {
+        "x": 750,
+        "y": 175
+      }
+    },
+    {
+      "id": "end",
+      "label": "Approved",
+      "type": "end",
+      "team": null,
+      "touch": 0,
+      "wait": 0,
+      "position": {
+        "x": 990,
+        "y": 175
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "request-manager",
+      "source": "start",
+      "target": "manager",
+      "share": 100
+    },
+    {
+      "id": "manager-procurement",
+      "source": "manager",
+      "target": "procurement",
+      "share": 10
+    },
+    {
+      "id": "manager-finance",
+      "source": "manager",
+      "target": "finance",
+      "share": 90
+    },
+    {
+      "id": "procurement-finance",
+      "source": "procurement",
+      "target": "finance",
+      "share": 100
+    },
+    {
+      "id": "finance-end",
+      "source": "finance",
+      "target": "end",
+      "share": 100
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+PUBLIC GEOGRAPHY; SYNTHETIC COMMERCIAL DATA
+
+Geometry source: U.S. Census Bureau, Generalized_ACS2024 / State_County, States20M (layer9), January1,2024 vintage. Retrieved2026-10-09.
+https://tigerweb.geo.census.gov/arcgis/rest/services/Generalized_ACS2024/State_County/MapServer/9
+The official service identifies the geometry as generalized state polygons and credits the U.S. Census Bureau. Query output was GeoJSON, outSR4326 (longitude, latitude), with STUSAB, NAME and internal label coordinates. The exact reproducible query is in scripts/fetch-boundaries.py in the source repository.
+
+Bundled candidate states: AL AR FL GA KY LA MS NC SC TN VA WV.
+Neighbor context: MO IL IN OH PA MD DC DE OK TX.
+Transformations: select22features; keep state abbreviation/name/internal label point; round geometry coordinates to5decimal places; sort by state abbreviation; serialize as local JSON. No commercial data comes from this geographic source. Label points are latitude,longitude for Leaflet; GeoJSON geometry is longitude,latitude. Context includes DC for geographic reference and does not count as a candidate state.
+
+The generalized geography is for statistical/thematic illustration. It is not a legal land description, address boundary or route model. Coordinate precision does not imply equivalent positional accuracy. The app makes no representation of Census endorsement.
+
+U.S. Census TIGER products are available for reuse with source acknowledgment; TIGER/Line and Census TIGER are registered marks. Source acknowledgment is retained in the map and here. Official product use-constraint example:
+https://catalog.data.gov/dataset/tiger-line-shapefile-2024-state-alabama-point-landmark
+General cartographic boundary description:
+https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html
+
+Commercial dataset: all annual addressable revenue, growth, delivery cost, competition intensity and setup cost figures are invented for this classroom exercise. They are not Census estimates or real market research. Louisiana growth is deliberately missing. Scores use fixed agreed classroom anchors, not geographic area or demographics.

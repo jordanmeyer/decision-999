@@ -1,0 +1,24 @@
+import {summarize,selectRows,status,costBridge,exactMoney} from '../app/model.js';
+import {records,months} from '../app/data.js';
+const cases=[];
+const test=(name,run)=>cases.push({name,run});
+const equal=(actual,expected)=>{if(actual!==expected)throw Error(`Expected ${expected}; observed ${actual}`);};
+const near=(actual,expected)=>{if(Math.abs(actual-expected)>1e-10)throw Error(`Expected ${expected}; observed ${actual}`);};
+const fixture={sales:10000000,product:3200000,labor:2800000,other:1500000,priorSales:9000000,transactions:5000,hours:2000};
+test('Independent reference: $100,000 − $32,000 − $28,000 − $15,000 = $25,000 (25%)',()=>{const r=summarize([fixture]);equal(r.contribution,2500000);near(r.margin,.25);});
+test('Independent reference: sales growth 10,000 / 90,000 = 11.111…%; ticket $20; sales/hour $50',()=>{const r=summarize([fixture]);near(r.growth,1/9);equal(r.ticket,2000);equal(r.salesPerHour,5000);});
+test('Weighted aggregation: $25k plus $0 contribution on $100k plus $300k sales = 6.25%, not 12.5%',()=>{const r=summarize([fixture,{...fixture,sales:30000000,product:20000000,labor:8000000,other:2000000,priorSales:30000000}]);near(r.margin,.0625);near(r.growth,1/39);});
+test('Zero denominators: empty selection yields 0 dollars and unavailable ratios',()=>{const r=summarize([]);equal(r.contribution,0);for(const key of ['margin','growth','ticket','salesPerHour'])equal(r[key],null);});
+test('Loss is preserved: $100k sales less $110k costs yields −$10k / −10%',()=>{const r=summarize([{...fixture,other:5000000}]);equal(r.contribution,-1000000);near(r.margin,-.1);});
+test('Target boundary: exactly 25% meets 25%, fails 25.01%; zero sales says No sales',()=>{equal(status(fixture,.25),'At / above target');equal(status(fixture,.2501),'Below target');equal(status({...fixture,sales:0},.2),'No sales');});
+test('Cent arithmetic: 101 − 32 − 28 − 15 = 26 cents; formatting retains cents',()=>{const r=summarize([{...fixture,sales:101,product:32,labor:28,other:15}]);equal(r.contribution,26);equal(exactMoney(r.contribution),'$0.26');});
+test('72 unique records; 6 months × 12 mature stores; every money input is integral cents',()=>{equal(records.length,72);equal(new Set(records.map(r=>r.id)).size,72);months.forEach(month=>equal(selectRows(records,{month}).length,12));for(const r of records)for(const key of ['sales','product','labor','other','priorSales'])equal(Number.isInteger(r[key]),true);});
+test('Scope intersection: Coast/S01/full period = 6; Coast/S12 = empty; September Coast = 4',()=>{equal(selectRows(records,{region:'Coast',storeId:'S01'}).length,6);equal(selectRows(records,{region:'Coast',storeId:'S12'}).length,0);equal(selectRows(records,{region:'Coast',month:'2026-09'}).length,4);});
+test('Independent September ledger sum: sales $1,441,000; contribution $341,800; 4 stores below 20%',()=>{const rows=selectRows(records,{month:'2026-09'});const r=summarize(rows);equal(r.sales,144100000);equal(r.contribution,34180000);near(r.margin,341800/1441000);equal(rows.filter(row=>status(row,.2)==='Below target').length,4);});
+test('Dataset reference store preserves supplied independent Meadow House case',()=>{const r=summarize(selectRows(records,{storeId:'S12',month:'2026-09'}));equal(r.sales,10000000);equal(r.contribution,2500000);equal(r.ticket,2000);near(r.growth,1/9);});
+test('Harbor expense bridge: labor +$7,995 and +4.5 percentage points; contribution −$6,261',()=>{const current=records.find(r=>r.storeId==='S01'&&r.month==='2026-09');const prior=records.find(r=>r.storeId==='S01'&&r.month==='2026-08');const bridge=costBridge(current,prior);equal(bridge.find(r=>r.key==='labor').change,799500);near(bridge.find(r=>r.key==='labor').ratioChange,.045);equal(summarize([current]).contribution-summarize([prior]).contribution,-626100);});
+test('Prior-year margin uses the same weighted base: $10 + $90 on $100 + $300 = 25%',()=>{near(summarize([{...fixture,priorSales:10000,priorContribution:1000},{...fixture,priorSales:30000,priorContribution:9000}]).priorMargin,.25);});
+test('Missing prior contribution suppresses the YoY margin comparison',()=>{equal(summarize([fixture]).priorMargin,null);equal(summarize([]).priorMargin,null);});
+let failures=0;
+for(const item of cases){const li=document.createElement('li');try{await item.run();li.className='pass';li.textContent=`PASS — ${item.name}`;}catch(error){failures++;li.className='fail';li.textContent=`FAIL — ${item.name}: ${error.message}`;}document.getElementById('results').append(li);}
+document.getElementById('summary').textContent=`${cases.length-failures}/${cases.length} passed; ${failures} failed.`;
