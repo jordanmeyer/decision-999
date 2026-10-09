@@ -1,6 +1,6 @@
 {
   "name": "browser-app-builder",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Guide a student from local setup to a planned, tested browser app and GitHub Pages publication, with bundled Campus Designer styling.",
   "author": {
     "name": "Jordan Meyer"

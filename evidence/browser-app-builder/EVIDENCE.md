@@ -76,8 +76,16 @@ The simulation's separate integer-arithmetic derivation is recorded in fixtures/
 
 A fresh loopback preview origin was used after a reload retained a cached pricing module. The final tests ran on copies verified against the repository fixtures. Keyboard submission of 19.90, 19.80, 1,000, and 100 showed `Profit: 0.00. Break-even: 1000.00 units; 1000 whole units.` Rendered 390px and 1440px iframe reviews showed no horizontal document overflow, and inspected console logs contained no warnings/errors. This is local fixture verification, not a student workflow trial.
 
+## Three automated application trials
+
+Three parallel agents completed Setup, Plan, Build, Evaluate and Deploy using the frozen 0.1.1 package on a configured Mac. The [trial report](trials/2026-10-08/README.md) links all three live applications and public source repositories, with actual simulated conversations, independent expected results, browser observations, failed rounds and exact evaluated/deployed commits.
+
+Pricing passed 25 cases, inventory passed 10 test groups, and sales passed 42 cases. Actual CSV import and invalid-import preservation were exercised. Browser interaction checks found two reset bugs; update checks found stale entry scripts despite successful Actions runs. The corrected third deployments passed live verification in all three repositories. These are automated trials with coordinator assistance, not real student or ChatGPT Work outcomes.
+
+Version 0.1.2 adds these links and updates the listing evidence; workflow skills and starter behavior are unchanged from the tested 0.1.1 package.
+
 ## Outstanding release gates
 
-Actual ChatGPT Work installation/discovery and fresh-chat student trials; clean-machine macOS and Windows Git installation; real managed-device onboarding and interrupted installer recovery; an authorized live GitHub Pages deployment and update. Setup file preservation has instruction-review coverage, not an automated or novice-user execution claim. Browser local imports are described but no import workflow was exercised by these fixtures.
+Actual ChatGPT Work installation/discovery and fresh-chat student trials; clean-machine macOS and Windows Git installation; real managed-device onboarding and interrupted installer recovery; novice-student usability. Setup file preservation has instruction-review coverage, not an automated or novice-user execution claim. Live GitHub Pages publication, updates and synthetic local CSV imports were verified in the automated trials above.
 
-No public trial repository or account was created. The course directory has not been deployed for this change. No student adoption, time savings, cross-host model quality, full accessibility, or universal numerical accuracy is claimed. These gaps do not prevent local use as a pilot candidate, but remain release gates in the ExecPlan.
+No student adoption, time savings, cross-host model quality, full accessibility, or universal numerical accuracy is claimed. These gaps remain release gates; the completed automated trials support configured-Mac pilot use.

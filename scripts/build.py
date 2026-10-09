@@ -105,6 +105,10 @@ def load(root, config):
         require(ui.get('defaultPrompt') and all(map(text, ui['defaultPrompt'])), f'{where}: fill in interface.defaultPrompt with example requests')
         require(listing.get('results') and all(set(r) == {'value', 'label'} and text(r['value']) and text(r['label']) for r in listing['results']),
                 f'{where}: fill in {ext}.results with value and label pairs from the evidence record')
+        for example in listing.get('examples', []):
+            require(text(example.get('label')) and text(example.get('url'))
+                    and urlsplit(example['url']).scheme == 'https' and urlsplit(example['url']).netloc,
+                    f'{where}: examples need a label and an absolute HTTPS url')
         shots = [bundled(package, s, where, '.png') for s in ui.get('screenshots', [])]
         alts = listing.get('screenshotAlt', [])
         require(len(alts) == len(shots) and all(map(text, alts)), f'{where}: fill in {ext}.screenshotAlt with one description per screenshot')
@@ -273,12 +277,15 @@ def listing_page(plugin, config, base, clients):
              + f'</div>\n      <figcaption>Real output from this plugin.{example}</figcaption>\n    </figure>') if plugin['shots'] else ''
     record = f"https://github.com/{config['repo']}/blob/main/evidence/{plugin['name']}/EVIDENCE.md"
     evidence = f'<p><a class="text-link" href="{record}">Read the full review record</a></p>' if plugin['record'].is_file() else ''
+    examples = ('<h3>Try the apps</h3><ul>' + ''.join(
+        f'<li><a class="text-link" href="{escape(e["url"])}">{escape(e["label"])}</a></li>'
+        for e in listing['examples']) + '</ul>') if listing.get('examples') else ''
     return {
         'base': base, 'display': escape(ui['displayName']), 'label': escape(listing['label']),
         'short': escape(ui['shortDescription']), 'long': escape(ui['longDescription']), 'category': escape(ui['category']),
         'team': ''.join(f'<li>{escape(person)}</li>' for person in plugin['team']), 'version': escape(m['version']), 'source': tree,
         'readme': f"https://github.com/{config['repo']}/blob/main/plugins/{plugin['name']}/README.md",
-        'shots': shots, 'evidence': evidence, 'audience': escape(listing['audience']), 'limits': escape(listing['limits']),
+        'shots': shots, 'evidence': evidence, 'examples': examples, 'audience': escape(listing['audience']), 'limits': escape(listing['limits']),
         'method': escape(listing['method']), 'results': results(listing['results']),
         'install': hosts([c for c in clients if c.get('primary')], config, base, plugin['name']),
         'prompts': ''.join(f'<blockquote class="prompt"><p>{escape(p)}</p></blockquote>' for p in ui['defaultPrompt']),

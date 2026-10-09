@@ -59,6 +59,14 @@ with tempfile.TemporaryDirectory() as temporary, redirect_stdout(io.StringIO()):
     edit(manifest, lambda m: m['extensions']['com.openai']['interface'].update(screenshots=['./../../site/assets/x.png']))
     rejects(root, 'must be a .png path inside the plugin')
     manifest.write_text(original, encoding='utf-8')
+    edit(manifest, lambda m: m['extensions'][config['extension']].update(
+        examples=[{'label': 'Unsafe link', 'url': 'javascript:alert(1)'}]))
+    rejects(root, 'absolute HTTPS url')
+    edit(manifest, lambda m: m['extensions'][config['extension']].update(
+        examples=[{'label': '<Example & proof>', 'url': 'https://example.com/?a=1&b=2'}]))
+    build(root)
+    assert '&lt;Example &amp; proof&gt;</a>' in (root / 'dist/plugins/campus-designer/index.html').read_text()
+    manifest.write_text(original, encoding='utf-8')
     skill.write_text(instructions + '\n[outside](../../../../README.md)\n', encoding='utf-8')
     rejects(root, 'is missing or leaves')
     skill.write_text(instructions, encoding='utf-8')
