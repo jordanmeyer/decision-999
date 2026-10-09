@@ -69,14 +69,15 @@
       "gallery_commit": "03e3861bb5adf1317cd6f687bcd5e110d3853f5e"
     },
     "sql": {
-      "stage": "live verified; gallery pending",
+      "stage": "live verified and linked in gallery",
       "repository_proposed": "jordanmeyer/bab-example-sql",
       "review": "PASS",
       "deployment": "PASS",
       "reviewed_source": "7a957523d776471eec7283311a562a9793d7f729",
       "published_commit": "a2f6aa2402f01cc2e4f3aac7d2d471e5cd4b7cac",
       "live_url": "https://jordanmeyer.github.io/bab-example-sql/",
-      "workflow": "https://github.com/jordanmeyer/bab-example-sql/actions/runs/37920646141"
+      "workflow": "https://github.com/jordanmeyer/bab-example-sql/actions/runs/37920646141",
+      "gallery_commit": "2fae6f17b2aa4ab609c0f580870a0a4df8b76ec4"
     },
     "optimizer": {
       "stage": "live verified and linked in gallery",
@@ -90,10 +91,14 @@
       "gallery_commit": "18b3562bcaa4d7af015211d12dfa777cdaf95716"
     },
     "presentation": {
-      "stage": "review corrections applied; independent browser witness pending",
+      "stage": "live verified; gallery pending",
       "repository_proposed": "jordanmeyer/bab-example-presentation",
-      "review": "pending",
-      "deployment": "pending"
+      "review": "PASS",
+      "deployment": "PASS",
+      "reviewed_source": "f21d9f2b5eebd74ba33cfc34872629c73c1d9ad8",
+      "published_commit": "fda0419135322442ee7a0f28059a0bb22524f6e5",
+      "workflow": "https://github.com/jordanmeyer/bab-example-presentation/actions/runs/37921873665",
+      "live_url": "https://jordanmeyer.github.io/bab-example-presentation/"
     },
     "video": {
       "stage": "agreed simulated plan; building silent two-template MP4 composer",

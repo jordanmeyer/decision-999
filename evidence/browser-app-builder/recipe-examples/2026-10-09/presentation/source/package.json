@@ -1,0 +1,19 @@
+{
+  "name": "bab-example-presentation",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "test:browser": "vite --mode test",
+    "build": "node scripts/notices.mjs && vite build",
+    "preview": "vite preview",
+    "test": "node tests/model.test.js"
+  },
+  "devDependencies": {
+    "vite": "8.3.4"
+  },
+  "dependencies": {
+    "reveal.js": "6.0.2"
+  }
+}

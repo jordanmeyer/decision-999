@@ -14,3 +14,13 @@ All six slides at320CSSpx measured document319/319 and section292/292. Six actua
 2. The valid largest currency card at320 wrapped as minus / $10,100,00 / 0.00. `narrow-maximum-card.png` preserves this readability failure. Requested a fitting, unbroken exact amount.
 
 Both findings were sent to the developer and persistent reviewer. No final PASS is claimed here; corrected-source rechecks follow below. The initial frame locator keyboard action failed in the browser provider; native keyboard input subsequently succeeded and is the evidence described above.
+
+## Corrected checkpoint f21d9f2
+
+Actual production recheck on2026-10-09: applying the maximum-loss scenario on slide3 refreshed Reveal's native hidden announcement to−$10,100,000.00 with the matching revenue/cost/threshold. The320frame document measured319/319px; the exact amount stayed on one readable line, shown in narrow-maximum-card-corrected.png. On the main desktop app, applying price18 preserved active slide3, focused fixed-cost input and section scroll0, while both visible result and announcement updated to$100/84units.
+
+The actual test page reported41/41passed. A1440CSSpx production frame's sensitivity slide was visually inspected and captured in desktop-chart.png; baseline exact values match the adjacent table. Actual native Back from the test page, after a nondefault applied scenario, a pending price edit and slide5, restored slide1,20/12/100/500inputs and baseline300/63 before any interaction. No bfcache-specific claim is made. Console errors/warnings were empty. An attempted navigation to the local text notice was blocked by the host; it did not change application state. Notices/source paths are present and production package checks cover their files.
+
+These observations close the two required rendered findings. Independent reviewer makes the final acceptance decision.
+
+Live publication fda0419135322442ee7a0f28059a0bb22524f6e5 passed Actions37921873665. Actual live baseline300/63 and decimal4.89/66 passed; source/base assets and empty warning/error logs verified. Screenshot live.png preserves the result.

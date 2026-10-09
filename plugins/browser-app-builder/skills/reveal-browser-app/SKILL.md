@@ -15,12 +15,12 @@ import 'reveal.js/reveal.css';
 import './theme/reveal.css';
 const deck = new Reveal(element, { embedded: true, hash: false, scrollActivationWidth: null, width: '100%', height: '100%',
   minScale: 1, maxScale: 1, center: false,
-  keyboardCondition: 'focused', transition: 'none' });
+  keyboardCondition: () => document.activeElement === element, transition: 'none' });
 await deck.initialize();
 deck.on('slidechanged', () => chart?.resize());
 ```
 
-Use .reveal > .slides > section markup. Do not import a stock theme over the Duke theme. Keep deck controls scoped, test inputs/selects without advancing slides, and resize charts after slide entry. Use embedded mode when part of a larger app. Disable automatic narrow-screen scroll activation for this embedded recipe. Percentage dimensions and unscaled text avoid shrinking controls to unreadable sizes on phones; constrain slide content and test clipping. No remote iframes, media or math CDN plugins. Destroy the deck on teardown.
+Use .reveal > .slides > section markup. Do not import a stock theme over the Duke theme. Make the deck element keyboard-focusable. Its arrow navigation should run only when that element has DOM focus; focused fields and table scrollers keep their native keys. The pinned library's 'focused' condition tracks pointer focus and is unsuitable for this rule. Resize charts after slide entry. After replacing calculations on the current slide, call the public `deck.slide(deck.getIndices().h)` to refresh Reveal's native announcement (for a horizontal deck). Verify the applied values, focus, scroll and slide remain consistent; do not call internal announcement methods. Use embedded mode when part of a larger app. Disable automatic narrow-screen scroll activation for this embedded recipe. Percentage dimensions and unscaled text avoid shrinking controls to unreadable sizes on phones; constrain slide content and test clipping. No remote iframes, media or math CDN plugins. Destroy the deck on teardown.
 
 Visual libraries use the relevant [theme assets](../../assets/library-themes/) with the bundled [Campus Designer](../campus-designer/SKILL.md). Generated paths above are relative to the student's app, not the installed plugin.
 

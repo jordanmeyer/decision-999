@@ -24,9 +24,9 @@ The checklist includes four recipes beyond the current thirteen-library inventor
 - [x] Interactive process model: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
 - [x] Roadmap/project plan: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
 - [x] Geographic market analysis: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
-- [ ] SQL data explorer: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
-- [ ] Resource-allocation optimizer: plan/build/tests/reviewer PASS complete; live publicatione23c930 verified withActions37894236996; gallery link pending.
-- [ ] Interactive analytical presentation: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
+- [x] SQL data explorer: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
+- [x] Resource-allocation optimizer: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
+- [x] Interactive analytical presentation: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
 - [ ] Downloadable product-video generator: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
 - [ ] Verify complete gallery, all links, all deployments and exact review/evaluation checkpoints; run final repository/packaging checks.
 
@@ -55,7 +55,7 @@ Decision (2026-10-09): user explicitly allowed the Remotion video-only telemetry
 ## Outcomes & Retrospective
 
 
-Executive passed independent review at bc19eb40; uploads at b64d85f after correcting a production-only Arquero closure/minification failure and narrow-screen presentation. Both exact-commit Actions deployments succeeded and live known answers passed. Gallery links were pushed at 4cd8381; its Pages workflow and the actual live gallery passed. Isolated HiGHS and DuckDB EH browser probes passed; a corrected Remotion probe produced a downloaded, decoded, playable MP4. The simulator passed source review plus independent coordinator browser checks and was deployed at c769e3f; live known answers passed. Process passed independent review at aca04af and live deployment at 8e86893. Roadmap and markets are reviewed, live and linked. Six examples are now visible in the gallery. Optimizer passed independent review at2e4eef4; its approved local-worker configuration passed the canonical checker and publicatione23c930 is underway. SQL native-query correction is in final review. The video simulated plan is agreed and implementation has begun; presentation planning follows SQL. Remaining specialist apps are not yet complete. Existing evidence remains historical. Track each app's tested commit, reviewed commit, published commit and live URL separately in evidence/browser-app-builder/recipe-examples/2026-10-09/status.json. Completion requires all ten, not an easier subset. User goal stays active through context/turn boundaries.
+Eight applications have passed independent review, exact-commit Pages deployment and live checks, and are linked in the deployed gallery. SQL was the eighth, with gallery commit2fae6f1 and successful Actions37921552354. Presentation final fixes pass the coordinator's actual browser checks; the persistent reviewer is completing acceptance. Video exports have been downloaded, decoded and played; remaining template and lifecycle checks are underway. Failed rounds remain in each record. status.json records separate reviewed, published and gallery commits. Completion requires all ten.
 
 ## Context and Orientation
 
@@ -109,7 +109,7 @@ Never rewrite history, replace remotes, delete user edits or reuse a repository 
 ## Artifacts and Notes
 
 
-Campaign state and review evidence live under evidence/browser-app-builder/recipe-examples/2026-10-09/. The ten rows above are the completion checklist. Root and subagents communicate as simulated student/developer/reviewer; messages are evidence, not real student outcomes. No public success exists yet.
+Campaign state and review evidence live under evidence/browser-app-builder/recipe-examples/2026-10-09/. The ten rows above are the completion checklist. Root and subagents communicate as simulated student/developer/reviewer; messages are evidence, not real student outcomes. Eight reviewed public examples are verified; see status.json for current per-app state.
 
 Revision note (2026-10-09): began the expanded ten-recipe goal, preserving prior completed expansion/review work, explicit all-ten scope and per-app independent review/publication requirement.
 
@@ -122,3 +122,5 @@ Six reviewed apps are live and linked in course commit03e3861, verified through 
 Optimizer is live at the reviewed checkpoint with known answers955and23 and repository-path WASM execution. The seventh gallery link is prepared with source snapshot and15approved recipes; SQL andvideo remaincandidate.
 
 Eight apps are reviewed and live: SQL source7a957523 / publicationa2f6aa2 passed Actions37920646141 and actual known joins. Its normal approved-dependency check passed. The eighth gallery link is prepared. Presentation review is correcting a stale Reveal announcement and narrow maximum-money wrapping; video has a real decoded silent MP4 with remaining combinations and lifecycle checks. The browser download-event tool ignored explicit timeouts and stalled for hours; future media checks must use direct download inspection rather than that wait.
+
+Presentation passed independent review atf21d9f2 and live publicationfda0419 via Actions37921873665; ninth gallery update prepared. The reusable Reveal recipe now inherits the tested DOM-focus and current-announcement corrections.

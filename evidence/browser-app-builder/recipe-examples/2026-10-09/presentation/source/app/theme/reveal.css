@@ -1,0 +1,11 @@
+.reveal { --r-background-color: var(--duke-white); --r-main-font: Arial,sans-serif; --r-main-color: var(--duke-cast-iron); --r-heading-font: Georgia,serif; --r-heading-color: var(--duke-navy-blue); --r-link-color: var(--duke-royal-blue); --r-link-color-hover: var(--duke-navy-blue); --r-selection-background-color: var(--duke-hatteras); font-family: var(--r-main-font); color: var(--r-main-color); }
+.reveal h1,.reveal h2,.reveal h3 { font-family: var(--r-heading-font); color: var(--r-heading-color); text-transform: none; }
+.reveal .controls { color: var(--duke-navy-blue); }
+.reveal .controls button { opacity: 1; }
+.reveal .controls button:disabled { visibility: hidden; }
+.reveal .progress { color: var(--duke-navy-blue); }
+
+.reveal .controls button.enabled { opacity: 1; }
+.reveal .slides section { box-sizing: border-box; }
+.reveal input { max-width: 100%; box-sizing: border-box; }
+@media(max-width:600px) { .reveal .slides section { font-size: 18px; } .reveal h1,.reveal h2 { font-size: 26px; } }

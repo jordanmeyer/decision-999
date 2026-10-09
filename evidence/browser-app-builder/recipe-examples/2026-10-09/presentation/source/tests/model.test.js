@@ -1,0 +1,27 @@
+import {baseline,presets,parseInputs,calculate,sensitivity,money,thresholdText,decisionRecord} from '../app/model.js';
+const results=[];function check(name,fn){try{fn();results.push({name,ok:true});}catch(error){results.push({name,ok:false,error:error.message});}}
+const equal=(a,b)=>{if(JSON.stringify(a)!==JSON.stringify(b))throw Error(`Expected ${JSON.stringify(b)}; got ${JSON.stringify(a)}`);};
+check('Baseline exact cents and63 whole units',()=>equal(calculate(baseline),{revenue:200000,variable:120000,contribution:800,profit:30000,threshold:{kind:'volume',units:63}}));
+check('62 units lose$4;63 gain$4',()=>equal([62,63].map(quantity=>calculate({...baseline,quantity}).profit),[-400,400]));
+check('50-unit downside loses$100',()=>equal(calculate(presets[1]).profit,-10000));
+check('$18 price returns$100 and84-unit threshold',()=>{const r=calculate(presets[2]);equal([r.profit,r.threshold.units],[10000,84]);});
+check('One-cent contribution ceiling is exact',()=>equal(calculate({price:11,cost:10,quantity:100,fixed:99}).threshold.units,99));
+check('Zero contribution positive fixed has no threshold',()=>equal(calculate({...baseline,cost:2000}).threshold,{kind:'none',units:null}));
+check('Negative contribution positive fixed has no threshold',()=>equal(calculate({...baseline,cost:2100}).threshold,{kind:'none',units:null}));
+check('Negative contribution and zero fixed:only0 avoids loss',()=>{const x={...baseline,cost:2100,fixed:0};equal(calculate(x).threshold.kind,'zero-only');equal([0,1].map(quantity=>calculate({...x,quantity}).profit),[0,-100]);});
+check('Zero margin and fixed:all volumes exactly break even',()=>{const x={...baseline,cost:2000,fixed:0};equal(calculate(x).threshold.kind,'all');equal([0,10000].map(quantity=>calculate({...x,quantity}).profit),[0,0]);});
+check('Positive margin zero fixed minimum non-loss0',()=>equal(calculate({...baseline,fixed:0}).threshold,{kind:'minimum',units:0}));
+check('Threshold may lie beyond supported quantity',()=>{const r=calculate({price:1,cost:0,fixed:10000000,quantity:10000});equal(r.threshold.units,10000000);if(!thresholdText(r).detail.includes('exceeds'))throw Error('missing supported-range explanation');});
+check('Supported maximum arithmetic stays exact',()=>equal(calculate({price:100000,cost:0,quantity:10000,fixed:10000000}).profit,990000000));
+check('Supported maximum loss stays exact',()=>equal(calculate({price:0,cost:100000,quantity:10000,fixed:10000000}).profit,-1010000000));
+check('Dollar parser uses exact cent components',()=>equal(parseInputs({price:'20.01',cost:'12.02',quantity:'100',fixed:'500.03'}),{values:{price:2001,cost:1202,fixed:50003,quantity:100}}));
+for(const value of ['', '-1','1e2','1.001','NaN','Infinity','1,000','1000.01'])check(`Invalid price ${JSON.stringify(value)} rejected`,()=>{if(!parseInputs({price:value,cost:'12',quantity:'100',fixed:'500'}).errors?.price)throw Error('not rejected');});
+for(const value of ['1.5','-1','10001','1e3',''])check(`Invalid quantity ${JSON.stringify(value)} rejected`,()=>{if(!parseInputs({price:'20',cost:'12',quantity:value,fixed:'500'}).errors?.quantity)throw Error('not rejected');});
+check('All-zero inputs valid',()=>equal(parseInputs({price:'0',cost:'0',quantity:'0',fixed:'0'}).values,{price:0,cost:0,fixed:0,quantity:0}));
+check('Upper-bound fixed cost accepted andnextcent rejected',()=>{equal(parseInputs({price:'0',cost:'0',quantity:'0',fixed:'100000'}).values.fixed,10000000);if(!parseInputs({price:'0',cost:'0',quantity:'0',fixed:'100000.01'}).errors?.fixed)throw Error('not rejected');});
+check('Baseline sensitivity quantities and two independent outputs',()=>{const s=sensitivity(baseline);equal(s.map(r=>r.quantity),[0,25,50,75,100,125,150,200]);equal([s[0].profit,s[7].profit],[-50000,110000]);});
+for(const quantity of [0,1,2,3,4,9998,9999,10000])check(`Sensitivity bounded and includescurrent ${quantity}`,()=>{const rows=sensitivity({...baseline,quantity}),qs=rows.map(r=>r.quantity);if(!qs.includes(0)||!qs.includes(quantity)||new Set(qs).size!==qs.length||qs.some(q=>!Number.isInteger(q)||q<0||q>10000))throw Error('invalid grid');if(quantity<10000&&!qs.some(q=>q>quantity))throw Error('missing larger volume');});
+check('Sensitivity never changes per-unit/fixed assumptions',()=>equal(sensitivity({...baseline,price:1000,cost:1100,fixed:123}).every(row=>row.profit===-100*row.quantity-123),true));
+check('Money output exact including one cent/zero/maximum loss',()=>equal([money(1),money(0),money(-1010000000)],['$0.01','$0.00','−$10,100,000.00']));
+check('Decision record uses current inputs and edge semantics',()=>{const text=decisionRecord({...baseline,cost:2100,fixed:0,quantity:1});for(const phrase of ['$21.00','−$1.00','0 units only','Every positive volume loses money','not a guarantee'])if(!text.includes(phrase))throw Error('missing '+phrase);});
+if(typeof document!=='undefined'){document.getElementById('results').replaceChildren(...results.map(r=>{const li=document.createElement('li');li.textContent=`${r.ok?'PASS':'FAIL'} — ${r.name}${r.error?': '+r.error:''}`;return li;}));document.getElementById('status').textContent=`${results.filter(r=>r.ok).length}/${results.length} passed. Complete.`;}else{for(const r of results)console.log(`${r.ok?'PASS':'FAIL'} — ${r.name}${r.error?': '+r.error:''}`);if(results.some(r=>!r.ok))process.exitCode=1;console.log(`${results.filter(r=>r.ok).length}/${results.length} passed`);}

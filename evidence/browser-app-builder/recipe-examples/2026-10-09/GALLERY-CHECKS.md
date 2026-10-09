@@ -21,3 +21,5 @@ Seventh gallery preparation: the first directory build correctly rejected an acc
 The first seventh-link Actions run37894480465 failed because this record itself repeated the malformed link syntax after local checks. Rephrased the record to avoid that syntax; no app source changed. Repeated all repository checks after the final documentation edit before retrying publication.
 
 Corrected seventh-link commit18b3562bcaa4d7af015211d12dfa777cdaf95716 passed Actions37894587436. Actual livegallery shows7of10 andtheHiGHSallocationlink. Optimizer report-only61d6644 also passed Actions37894431038.
+
+Eighth gallery update2fae6f17b2aa4ab609c0f580870a0a4df8b76ec4: Actions37921552354completed/success. Actual reloaded live gallery showed8of10, sixteen approved recipes and the Fulfillment SQL explorer link at its verified Pages URL.
