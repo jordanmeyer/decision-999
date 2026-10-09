@@ -1,179 +1,102 @@
-# Build the Browser App Builder plugin
+# Run three parallel Browser App Builder trials
 
-This living ExecPlan follows `~/.codex/PLANS.md`. Maintain Progress, Surprises & Discoveries, Decision Log, and Outcomes & Retrospective. The previous completed plan is archived unchanged in `docs/plans/2026-10-06-plugin-directory.md`.
+This living ExecPlan follows ~/.codex/PLANS.md. The plugin implementation plan is preserved in docs/plans/2026-10-08-browser-app-builder.md. Maintain progress, discoveries, decisions, and outcomes as execution proceeds.
 
 ## Purpose / Big Picture
 
 
-An MBA student with no terminal experience installs Browser App Builder and develops a self-contained browser application through Setup, Plan, Build, Evaluate, and Deploy. The agent handles files, commands, history, previews, tests, and publication mechanics. The student supplies domain knowledge, makes decisions, reviews results, and handles authentication or OS prompts.
-
-Apps use HTML, CSS, JavaScript, bundled public/synthetic data, or transient local browser imports. No backends, external APIs, runtime credentials, telemetry, accounts, or paid runtime services. No required Python, Node, package manager, or editor installation. Use existing host capabilities; Git provides history and GitHub provides publication.
-
-Each stage leaves files allowing a fresh chat to continue. Successful release evidence includes a tested application, public source, and working Pages URL. A locally verified pilot candidate is distinct from a verified release.
+Run three original applications through the published Browser App Builder's Setup, Plan, Build, Evaluate, and Deploy stages. Each starts in a blank independent folder, captures an actual simulated planning exchange, produces browser-tested code, and publishes to a new public GitHub repository with a verified Pages URL. Exercise a second ordinary deployment per app. Three subagents build independently in parallel; the coordinator supplies simulated student answers and serializes shared browser operations.
 
 ## Progress
 
 
-- [x] (2026-10-08) Agreed five stages, no terminal experience, self-contained scope, and no required student runtimes.
-- [x] (2026-10-08) Obtained independent review and accepted preservation, attribution, freshness, and release-gate corrections.
-- [x] (2026-10-08) Archived the completed directory plan and saved this active plan.
-- [x] (2026-10-08) Probed local file creation, Git, and module-based browser calculation in Codex. Actual Work discovery remains unverified.
-- [x] (2026-10-08) Implemented package, shared guidance, starter, deployment template, and five workflow skills.
-- [x] (2026-10-08) Bundled Campus Designer from its canonical source and invoked it from Build.
-- [x] (2026-10-08) Passed 18 browser fixture checks, detected/corrected an intentional formula error, and passed nine Git/publication boundary checks.
-- [x] (2026-10-08) Integrated listing, regenerated catalogs, inspected desktop/narrow rendering and keyboard copy, and passed repository/Claude checks and two isolated CLI installations.
-- [ ] Complete actual Work fresh-chat trials and fresh macOS/Windows setup.
-- [ ] Complete authorized live GitHub publication.
-- [x] (2026-10-08) Recorded candidate readiness, independent review corrections, and outstanding release gates in evidence/browser-app-builder/.
-- [x] (2026-10-08) Corrected decimal monetary precision, added plan-semantic review and an independent stochastic expectation; passed 25 browser cases and 12 Git/publication checks.
-- [x] (2026-10-08) Passed 0.1.1 repository/Claude packaging checks and two fresh six-skill installations; prepared the reviewed correction commit.
+- [x] (2026-10-08) User authorized three public repositories, independent trial folders, existing public Git attribution, and second deployments.
+- [x] (2026-10-08) Created empty pricing, inventory, and sales folders and froze plugin 0.1.1 from c8bb0e5.
+- [x] (2026-10-08) Started three subagents and captured planning questions and simulated student replies.
+- [x] (2026-10-08) Observed all three starter modules load and buttons change status in the browser.
+- [x] (2026-10-08) Built and browser-evaluated all three applications; repaired inventory and sales reset defects before publication.
+- [x] (2026-10-08) Created all three public repositories, enabled Pages, and verified first deployments.
+- [x] (2026-10-08) Added and evaluated one improvement per app; second deployments exposed cached scripts; third corrective deployments passed returning-browser checks.
+- [x] (2026-10-08) Saved sanitized transcripts/reports/API results/screenshots, compared findings, stopped all previews, and prepared six verified public links.
 
 ## Surprises & Discoveries
 
 
-The catalog already discovers multiple skills. Create Your Own's teaching approach transfers, but its Python packaging script and course-repository destination do not.
+The configured Mac already has Git, authenticated SSH pushing, an authenticated GitHub browser session, browser automation, and Python for loopback previews. GitHub CLI is absent and unnecessary. The requested sibling project folder required the normal filesystem approval route, which succeeded. No runtime was installed. These conditions do not demonstrate clean-machine setup or new-account onboarding.
 
-Existing uncommitted work modifies `site/config.json`, both generated catalogs, and adds `.claude/`. Preserve it. The user removed grill-me from the featured list; retain that ordering.
+Browser interaction testing found defects that pure calculation tests missed: inventory named its reset button `reset`, shadowing `form.reset`; sales scheduled redraw in a microtask before the native reset default action. Both failed rounds are preserved and corrected. Pages source could be set to GitHub Actions while repositories were still empty. The coordinator used a no-store loopback preview on port 9100 after earlier IAB module caching concerns.
 
-The current host has Git 2.50.1, Node 22.19.0, Python, Claude Code 2.1.86, and Codex CLI 0.145.0. A disposable preview using an existing runtime displayed `PASS: browser module and calculation` in the in-app browser. This is Codex capability evidence, not clean-machine or ChatGPT Work acceptance.
-
-Published Git history includes files omitted from dist. Protect source and evidence before the first commit. Editorial/report changes do not invalidate calculations; substantive plan changes require review; Git comparisons against tested source identify relevant changes.
-
-Independent implementation review found that comparing a checkpoint directly to the working tree can miss opposing staged and unstaged edits. Separate committed, staged, and unstaged comparisons now detect this case; the regression exercise passes. Setup rerun checks now use the existing app's interaction, and Deploy creates an authorized repository before configuring its Pages settings.
-
-The browser viewport override did not resize the document, so rendered responsive checks used explicit 390px and 1440px iframe viewports. The optional skill-author validator could not run without PyYAML; no dependency was installed to support it. Repository/Claude checks and actual CLI installations passed independently.
-
-Follow-up review reproduced a pricing fixture defect: (19.90 − 19.80) yields a binary floating-point margin slightly below 0.10, so fixed cost 100 incorrectly rounds break-even up to 1,001 units. The original integer-input tests missed this. Simulation reproducibility and conservation also do not detect a generator that always returns zero demand.
+Second-deployment browser acceptance found stale entry scripts in all apps. Adding `?v=2` to changed entry URLs and using ordinary corrective commits resolved it. This is a recorded application-level workaround; the frozen plugin was not altered.
 
 ## Decision Log
 
 
-Decision (2026-10-08): Use browser-app-builder with five independently invocable workflow skills. Students may resume or repeat a stage.
+Decision (2026-10-08): Freeze the exact published package at c8bb0e5 and do not modify it during trials. Rationale: failures and workarounds must be attributable to the version tested.
 
-Decision (2026-10-08): No mandatory student Python/Node; existing course maintainer tooling remains unchanged. Use host preview tools or existing runtimes, and report missing preview capability explicitly.
+Decision (2026-10-08): Three subagents own separate apps; the coordinator owns browser interactions and GitHub repository creation/settings. Rationale: retain parallel construction without browser UI collisions. Record this assistance rather than implying each agent operated an independent desktop.
 
-Decision (2026-10-08): Public/synthetic material only in projects and evidence; student-approved public Git attribution is the explicit exception. Never invent an identity.
+Decision (2026-10-08): Reuse Jordan Meyer's existing public Git identity locally, as authorized in the plan. Rationale: simulated student personas must not become invented commit authors.
 
-Decision (2026-10-08): Add only missing starter files to existing folders. Preserve plans, host files, history, configuration, and unrelated remotes; resolve collisions before replacement.
-
-Decision (2026-10-08): Record evaluated commit and compare application, tests, workflow, and executable tooling through Git. Editorial/report-only commits need no retest; substantive plan changes require renewed evaluation. No separate digest mechanism.
-
-Decision (2026-10-08): Missing external environments leave release gates open, not fabricated or indefinitely confused with candidate implementation.
-
-Decision (2026-10-08, user steering): Bundle the former Duke Designer, now Campus Designer, and have Build use it for a shared Duke look. Generate the bundled copy from `plugins/campus-designer/skills/campus-designer/` during the catalog build, check equality, and never maintain a second authored copy. This replaces the earlier neutral-styling default. Public brand guidance does not authorize institutional marks or affiliation claims.
-
-Decision (2026-10-08, follow-up review): The pricing fixture accepts amounts with at most two decimal places and whole-unit quantity, each between zero and one million inclusive. Use integer cents internally; this bounds all arithmetic below JavaScript's exact-integer limit and avoids a blanket rounding tolerance. Compare the current agreed plan with the evaluated plan before publication: substantive changes require renewed evaluation, editorial changes do not. Add an independently calculated five-day seeded demand sequence to catch nonrandom output without claiming distribution or business-model accuracy.
+Decision (2026-10-08): Use only synthetic data, actual recorded Q&A, and independently justified expected results. Rationale: simulation is an agent trial, not evidence of novice-student usability.
 
 ## Outcomes & Retrospective
 
 
-Initially implemented a locally verified 0.1.0 pilot candidate with five workflow skills and the generated canonical designer. Two isolated CLI installations, 18 browser calculation cases, nine Git/publication boundaries, and repository/Claude checks passed. A deliberate pricing error caused four failures and passed after correction. The independent instruction review's three findings were resolved. Evidence and reproducible fixtures are in evidence/browser-app-builder/.
+All three applications are live and verified, with three successful Actions runs each. Browser suites passed25/25 pricing cases,10/10 inventory groups and42/42 sales cases. Two interaction defects were found and corrected before initial publication. The second live updates failed returning-browser acceptance despite successful workflows because the entry JavaScript remained cached. Versioned entry URLs fixed all three; ordinary reload verified the final updates. Exact live files match source and publication excludes reports/tests/Git metadata.
 
-Follow-up corrections for 0.1.1 now pass 25 browser cases and 12 Git/publication checks. The expanded pricing cases failed before the fix, and the independent simulation expectation caught a constant-zero-demand mutation. Plan comparisons expose changed requirements even when source remains unchanged; their semantic review stays with the agent and student.
-
-The final simplification pass retained one shared workflow reference, one freshness procedure, and one authored designer source. No initializer, generic app packager, policy analyzer, or student runtime dependency was added. The canonical designer's full resource tree is bundled so its internal references remain portable.
-
-Actual Work installation and fresh-chat trials, fresh-machine macOS/Windows setup, and authorized live publication remain incomplete. Maintainer fixtures and instruction reviews do not substitute for those gates. No public deployment or student outcome is claimed.
+Sanitized evidence is in evidence/browser-app-builder/trials/2026-10-08/, including per-app transcripts and handoffs, independent browser observations, workflow records, exact final checks and a live overview screenshot. All previews are stopped. Each local app has one final report-only commit ahead of public main; no fourth publication was needed. The frozen plugin's31files remained byte-identical. Existing course edits were preserved. The trials support a configured-Mac pilot and expose a concrete Deploy improvement; clean-machine, Windows, actual Work handoff and real-student gates remain unverified.
 
 ## Context and Orientation
 
 
-Work from `/Users/jordan/Projects/decision-999`. Read create-your-own's interview, testing, and portability references. Leave its behavior unchanged. Create `plugins/browser-app-builder/` containing plugin.json, README, one shared workflow reference, assets/starter, a Pages workflow template, and five skill entrypoints: setup-browser-app, plan-browser-app, build-browser-app, evaluate-browser-app, deploy-browser-app. Names match folders. Package-local links must resolve after installation. Write generated projects outside the installed plugin.
+The course repository is /Users/jordan/Projects/decision-999. Preserve its existing site/config.json, generated-catalog ordering edits, and untracked .claude directory. The independent root is /Users/jordan/Projects/browser-app-builder-trials/2026-10-08, containing pricing/, inventory/, sales/, and _plugin/plugins/browser-app-builder/. The frozen package is extracted from git archive, not copied from an editable working version. Never copy the existing course evidence applications as trial implementations.
 
-The generated sixth skill, campus-designer, carries its full references/assets from the canonical package. Build reads identity, color, typography, web, and review references. Keep Duke navy, approved type choices, accessible layouts, no unauthorized marks, and no implied endorsement. Use system fonts or licensed local assets, never remote font requests.
-
-Evidence lives in `evidence/browser-app-builder/`. `scripts/build.py` generates catalogs, Claude manifests, designer bundle, and site output. `scripts/check.py` checks current generated files and packaging boundaries. Do not hand-edit generated files. Preserve directory layout and featured ordering.
+Each subagent reads all five skills and shared references, applies bundled Campus Designer, and writes SETUP.md, PLAN.md, DECISIONS.md, README.md, EVALUATION.md, DEPLOYMENT.md, and SIMULATED-CONVERSATION.md when substantive. app/ is publishable source; tests/ contains plain browser tests. The source repositories retain readable handoffs and only public/synthetic evidence.
 
 ## Plan of Work
 
 
-### Milestone 1: Capabilities and handoffs
+### Setup and simulated planning
 
 
-Probe file writing, Git, JavaScript-module preview, and browser test inspection in a disposable folder. Attempt isolated host installation/discovery. Distinguish Codex checks from Work desktop validation. A preview must serve app and test files, support modules, and allow browser inspection. Prefer host tools; existing runtimes are permitted, but no runtime installation fallback. Missing capabilities stop only dependent work.
+Use each selected folder as its own Git root, branch main, locally configured approved attribution. Reuse /usr/bin/python3 on loopback ports 9101, 9102, and 9103 to serve app/ and tests/. The parent observes module loading and interaction before the starter is replaced. Every agent asks focused questions and records the actual coordinator replies; do not fabricate a transcript afterward.
 
-Use PLAN.md for scope/model/examples/acceptance; README.md for usage/limits; DECISIONS.md for choices; SETUP.md for actual tool invocations and preview; EVALUATION.md for results and tested commit; DEPLOYMENT.md for URLs and published commit. Use app/ for publication sources, tests/ for browser checks, .github/workflows/ for publication, and ignored dist/ for generated output. Create substantive artifacts only. Every skill reads existing files; a plan's existence is not student agreement, and stage routing is not publication permission.
+Pricing serves an MBA notebook-venture exercise for one period. Four inputs are USD price, USD unit cost, whole quantity sold, and USD fixed cost; each ranges from zero to one million and amounts have at most two decimals. Show contribution, revenue, costs, profit and break-even. No demand forecasts, taxes, capacity, or optimal-price claim. With 20/12/100/500, profit is 300 and break-even is 62.5 or 63 whole units. Explicitly handle nonpositive margins and zero fixed cost.
 
-### Milestone 2: Setup
+Inventory serves an MBA retail-policy exercise. Single SKU, lost sales, uniform integer demand min..max and a seed. Each day processes arrivals, then demand/sales, then one fixed-quantity order if inventory position (on-hand plus outstanding) is at or below the reorder point. An end-of-day d order with lead time L arrives start of d+L; L is at least one. Defaults: stock 10, demand 0..8, reorder point 5, order quantity 10, lead time two, 30 days, seed 42. Horizon at most 365; stock/demand/order values at most 10,000; seed nonnegative 32-bit integer. No-demand fill rate is N/A. Show lost demand, fill rate and orders, with uniform-demand limitations.
 
+Sales serves an MBA synthetic pop-up exercise. CSV schema: date,region,product,quantity,unit_price,unit_cost; USD cents, nonnegative integer quantity. Reject invalid imports transactionally with row-specific errors. Filter by dates, region and product. Support quoted commas/escaped quotes, CRLF and UTF-8 BOM. Cap at 1 MB/10,000 rows, each amount/quantity at one million, and reject aggregate cents beyond exact integer range. Negative contribution margins remain valid. Empty filtered results show zeros. Include a downloadable synthetic template and reset-to-demo. Three sample rows (North Notebook 10 at 20/12; South Pen 5 at 30/18; North Notebook 2 at 20/12) independently total revenue 390, cost 234, contribution 156, quantity 17; North totals 240/144/96 and 12.
 
-Detect folder access, command execution, Git, and preview/browser tools. Reuse Git. Official missing-Git routes: Apple's Command Line Tools on Mac; Git WinGet package or official installer on Windows. Students handle OS prompts. Verify installation in a fresh invocation; do not infer success from installer messages. Do not install Homebrew, WSL, Python, Node, or an editor. Do not bypass device policy.
-
-Record verified invocations without secrets. Copy starter using file tools for empty folders. For existing folders add missing files only, preserving PLAN.md and host files; explain collisions before replacement. Avoid enclosing Git repositories. Configure approved attribution locally after explaining public history. If attribution is deferred, initialize without commits and mark history incomplete.
-
-Ignore generated/local-input files before staging. Public/synthetic source, fixtures, reports, and screenshots only; transient browser imports never become evidence. Inspect staged contents before each commit. Acceptance: starter preview and initial revision without student-entered commands; reruns preserve work.
-
-### Milestone 3: Plan and Build
+### Build and evaluate
 
 
-Interview for user, decision, input/output, domain judgment, and correctness. Narrow scope and reshape backend/API requests into bundled data or local imports. Record assumptions, units, exclusions, expected-result sources, boundary behavior, and acceptance. For simulations explain seeds as inputs making random runs reproducible. Confirm consequential choices.
+Build original plain HTML/CSS/JS with local assets only, applying the frozen designer. Use independent hand calculations, stock transitions/seeded expectations, and CSV totals/error fixtures. All actual browser automation runs through the coordinator's CUA tools. Record source review and pure-function checks separately from browser observations. Include workflow and source links before final source checkpoints. Require clean relevant paths and apply the frozen source/plan freshness procedure. Preserve failed rounds and justified fixes.
 
-Build from the agreed plan, using bundled Campus Designer. Separate calculations from interface code when needed for tests. Plain HTML/CSS/JavaScript; no frameworks, package managers, backend, or build system. Prefer native capabilities; justified libraries must be pinned, licensed, and local. Relative paths and no server routing. Include units, errors, keyboard controls, and narrow layouts. Run initial cases and inspect rendered output. Make meaningful reviewed commits; bring material scope/model changes back to the student. No generic packaging script: app/ is publishable source. Acceptance: fresh-chat Build succeeds from artifacts and honestly distinguishes basic checks from Evaluate.
-
-### Milestone 4: Evaluate
+### Publish and update
 
 
-Expected answers come from hand calculations or independently justified references, not the app output. Use tests/index.html with visible results and plain JS modules importing actual model functions. Execute in the existing browser preview without installing a runtime or framework. Check meaningful boundaries, malformed inputs, units, rounding, scale, invariants, seeds, nonrandom limits, and justified statistical tolerances.
+Check proposed names jordanmeyer/bab-trial-pricing-2026-10-08, bab-trial-inventory-2026-10-08, and bab-trial-sales-2026-10-08. If unrelated work occupies a name, append the next available numeric suffix; never overwrite. Use the authenticated GitHub browser to create public empty repositories, enable Pages source GitHub Actions, and then push ordinary main commits over existing SSH. Publishing only app/ through the supplied workflow is mandatory. Observe each run for the exact pushed commit and verify live assets, main interaction, a known answer, and source link. If an empty-repository settings limitation requires sequencing adjustment, record the workaround without pretending the frozen skill prescribed it.
 
-Commit the agreed PLAN.md, source, and tests before evaluation. Record tested commit and relevant paths: app/, tests/, .github/workflows/, plus executable tooling. Require clean tracked state and no untracked/ignored relevant source. Compare relevant paths against the checkpoint; editorial/report-only commits may follow, but compare the current plan with the tested plan and require renewed evaluation after substantive changes. Preserve failed rounds. Fix through Build, revisit model through Plan, rerun affected checks, update checkpoint. Acceptance: detect intentional formula defect; docs-only commit preserves applicability; changed source invalidates it.
+After first success, agree one small improvement per app through another simulated exchange. Update plan/model when affected, reevaluate, push, and verify a second successful deployment. Record evaluated and published commits separately. Do not force-push or rewrite history. For ambiguous outcomes, inspect existing state before retrying creation.
 
-### Milestone 5: Deploy
-
-
-Resolve failed/stale checks. Guide GitHub signup/sign-in/settings with available browser tools; student handles credentials and verification. Reuse authorized tools/authentication. GitHub CLI is optional only when needed. Establish account/repo/public visibility, respecting existing authorization. Review source, reports, attribution, and history before pushing; deleting latest sensitive files is insufficient.
-
-Add official Actions template before final checkpoint; refresh evaluation. Workflow runs on main, verifies app/index.html, copies app/ into dist/, uploads only dist/, and deploys Pages. Minimal permissions; shell copy, no app build runtime. Static packaging is not numerical verification. Compare source to evaluated checkpoint before publishing; check uncommitted and untracked files.
-
-Create/push only authorized repo. Wait for deployment matching pushed commit, open live app, verify repository-path assets, main interaction, known calculation, and source link. Record published commit separately. Exercise an ordinary update. No course-directory trial publication. Missing live authorization leaves this gate unverified.
-
-### Milestone 6: Verify and integrate
+## Concrete Steps and Validation
 
 
-Use synthetic pricing and inventory examples. Exercise stages and fresh-chat handoffs where available; keep deterministic fixture checks distinct from real student trials. Save prompts, fixtures, outputs, environments, and reproduction instructions outside installed package. Never copy secrets/caches/personal imports/generated output.
+Use git status, git diff, and git ls-files per the frozen freshness reference before/after evaluation and before pushes. Open the three loopback app/ and tests/ URLs. Browser checks cover known calculations, invalid input, keyboard interaction, desktop/narrow layouts, console errors, source links and repository-path assets. Test the actual CSV file chooser with synthetic data. Observe available network evidence and state its limits. Deployments must finish successfully and then pass live checks; a push alone is insufficient.
 
-Test preservation, local Git settings, freshness, package boundaries, module loading under a repository path, and designer-bundle consistency. Version 0.1.1, Development category, instructor-built pilot language, five usable prompts, and evidence-backed results. No invented adoption or compatibility claims. Update MAINTAINING and VALIDATION; preserve site identity/config and create-your-own.
-
-Review surrounding code and simplify. Remove repeated rules, unused assets, wrappers, and unnecessary scripts. No general JS policy analyzer: inspect source and observe actual browser behavior, recording limits.
-
-## Concrete Steps
-
-
-Use disposable student folders and record actual preview URLs. From the course repository run:
-
-    python3 scripts/build.py
-    python3 scripts/check.py
-    claude plugin validate .
-    python3 scripts/serve.py
-    git diff --check
-
-These are maintainer commands, never student prerequisites. Expect current catalogs/bundled designer, valid manifests, clean build and boundary checks. Inspect new listing at desktop/narrow widths, keyboard and copy behavior, evidence links, and examples. Commit generated files with feature changes without including unrelated config edits. Publish directory only when authorized through main Actions.
-
-## Validation and Acceptance
-
-
-For the corrected fixtures, open the pricing and inventory browser test pages through an existing preview: expect 17/17 and 8/8 passes. Price 19.90, cost 19.80, fixed cost 100 breaks even at exactly 1,000 units; fixed cost 100.01 requires 1,001. All amounts allow at most two decimal places and all inputs range from 0 to 1,000,000, with whole quantity. A constant-zero-demand mutation must fail the independently calculated sequence 5, 1, 12, 4, 7 for seed 42 and maximum demand 20. Run python3 evidence/browser-app-builder/check.py for 12 boundaries, including editorial/substantive/pending plan comparisons.
-
-Pricing fixture: price 20, cost 12, quantity 100, fixed cost 500 gives profit 300; continuous break-even 62.5, whole-unit 63; zero contribution margin handled. Inventory fixture: stock 10/demand 3 leaves 7/unmet 0; demand 12 leaves 0/unmet 2. Same seeds reproduce random output, not proof of model accuracy.
-
-Check empty and pre-populated folders, interrupted setup, configured Git, missing Git/preview, managed denial, and conflicts. Challenge login/API/secret/confidential requests without storing sensitive material. Check public staged content, source/test/workflow freshness including untracked files, app-only publication, and no observed remote requests. Do not claim universal isolation from observation.
-
-Candidate acceptance means implemented package and passing available local checks. Release gates additionally require actual Work installation and fresh-chat workflow, fresh macOS/Windows installation, and authorized GitHub Pages deployment. Keep unavailable gates open and narrow claims accordingly.
+Store sanitized consolidated records in evidence/browser-app-builder/trials/2026-10-08/. Copy only useful public handoffs/transcripts/results; exclude credentials, caches, imported private files, generated dist/, and raw environment dumps. Final comparison must identify first/final outcomes, corrections, coordinator interventions and limitations. Do not update the frozen package mid-run or claim actual Work, Windows, clean-machine, or novice-student acceptance.
 
 ## Idempotence and Recovery
 
 
-Preserve files/configuration, resolve collisions, and use ordinary commits. Never rewrite history or unrelated remotes automatically. Preserve failed evaluation rounds. Inspect existing repos/runs before deployment retries to avoid duplicates. Stop publication for sensitive history and explain remediation. Stop trial servers; retain only sanitized evidence; preserve sibling sources.
+Preserve independent repositories and prior rounds. Never reset unrelated repos/remotes or delete existing app folders. Stop only preview processes started for this trial after verification. The GitHub applications remain live and local source folders remain available. Authentication challenges or system prompts may require user participation; do not bypass them.
 
 ## Artifacts and Notes
 
 
-Record trial prompts, public fixtures, versions, tested/deployed commits, browser results, and reproduction steps. Screenshots show actual results. No full release gate has passed. Follow-up regression output and the independently derived stochastic sequence are recorded in evidence/browser-app-builder/EVIDENCE.md and fixtures/README.md.
-
-Revision (2026-10-08): Saved approved implementation plan and incorporated user request to package canonical Campus Designer and use it in Build. Generated designer copies replace the earlier neutral default without introducing a second maintained skill source.
+All three starter pages displayed JavaScript module loaded. Preview is ready. Activating Check interaction changed each to Interaction works. Ready to plan your app. Parent observations were sent to the respective agents. Git author attribution is explicitly approved public source metadata; simulated personas are not real students.
 
 ## Interfaces and Dependencies
 
 
-Five workflow skills and one generated designer skill use the existing manifest format. No schema change. Handoffs are readable files. Git provides history; host tools provide editing/preview/testing. Optional existing runtimes are not required installations. Apps use HTML/CSS/JS and optional licensed local libraries. GitHub Actions publishes static files. Course maintainer Python tooling remains separate.
-
-Revision (2026-10-08, follow-up review): Corrected decimal fixture arithmetic, distinguished editorial documentation from changed model requirements, and added independent seeded expectations. The external release gates remain unchanged.
+No new product API or plugin schema is introduced. Student app boundaries remain browser-only HTML/CSS/JavaScript with no required runtime installation. The configured machine's existing Python is a preview convenience. GitHub browser access handles repository/Pages settings; Git over SSH handles pushes. All three apps expose their own app/index.html and browser test page, source repository and Pages URL.

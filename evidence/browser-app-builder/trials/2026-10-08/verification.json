@@ -1,0 +1,93 @@
+{
+  "pricing": {
+    "repository": "https://github.com/jordanmeyer/bab-trial-pricing-2026-10-08",
+    "live": "https://jordanmeyer.github.io/bab-trial-pricing-2026-10-08/",
+    "local": "/Users/jordan/Projects/browser-app-builder-trials/2026-10-08/pricing",
+    "published": "cf1dc2a009db54fccd55ea87b761e435fa3dc3a3",
+    "evaluated": "cefef31eb8b93a8d2b0b189b01d4e26216ec2ab8",
+    "local_report_commit": "2bf5efa941f6bcd9dd4b48f5887279ad1d8aece9",
+    "freshness": "all source, staged, unstaged, untracked and PLAN checks passed",
+    "live_files_exact": [
+      "index.html",
+      "style.css",
+      "model.js",
+      "app.js"
+    ],
+    "non_application_urls": {
+      "PLAN.md": 404,
+      "EVALUATION.md": 404,
+      "tests/index.html": 404,
+      ".git/config": 404
+    },
+    "final_workflow": {
+      "id": 37877472621,
+      "html_url": "https://github.com/jordanmeyer/bab-trial-pricing-2026-10-08/actions/runs/37877472621",
+      "head_sha": "cf1dc2a009db54fccd55ea87b761e435fa3dc3a3",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-09T03:03:07Z",
+      "updated_at": "2026-10-09T03:03:52Z"
+    }
+  },
+  "inventory": {
+    "repository": "https://github.com/jordanmeyer/bab-trial-inventory-2026-10-08",
+    "live": "https://jordanmeyer.github.io/bab-trial-inventory-2026-10-08/",
+    "local": "/Users/jordan/Projects/browser-app-builder-trials/2026-10-08/inventory",
+    "published": "65d07eb67111ccea9182fa19233dd3ea37706d27",
+    "evaluated": "6976d8aeafb902bbcead3a1695f2680ae0fda85f",
+    "local_report_commit": "4d379f7baea6d68e647c563d0f8f7d5ecee87c4e",
+    "freshness": "all source, staged, unstaged, untracked and PLAN checks passed",
+    "live_files_exact": [
+      "index.html",
+      "style.css",
+      "model.js",
+      "app.js"
+    ],
+    "non_application_urls": {
+      "PLAN.md": 404,
+      "EVALUATION.md": 404,
+      "tests/index.html": 404,
+      ".git/config": 404
+    },
+    "final_workflow": {
+      "id": 37877483643,
+      "html_url": "https://github.com/jordanmeyer/bab-trial-inventory-2026-10-08/actions/runs/37877483643",
+      "head_sha": "65d07eb67111ccea9182fa19233dd3ea37706d27",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-09T03:03:16Z",
+      "updated_at": "2026-10-09T03:03:44Z"
+    }
+  },
+  "sales": {
+    "repository": "https://github.com/jordanmeyer/bab-trial-sales-2026-10-08",
+    "live": "https://jordanmeyer.github.io/bab-trial-sales-2026-10-08/",
+    "local": "/Users/jordan/Projects/browser-app-builder-trials/2026-10-08/sales",
+    "published": "610a9d90daa7bea654bb59584e098c80282ce802",
+    "evaluated": "774f00d46c6f777dfd861d39d971a80dbfc3bb3a",
+    "local_report_commit": "6564aba4b8794b0a06465cb84eb80c8f1049a850",
+    "freshness": "all source, staged, unstaged, untracked and PLAN checks passed",
+    "live_files_exact": [
+      "template.csv",
+      "index.html",
+      "style.css",
+      "model.js",
+      "app.js"
+    ],
+    "non_application_urls": {
+      "PLAN.md": 404,
+      "EVALUATION.md": 404,
+      "tests/index.html": 404,
+      ".git/config": 404
+    },
+    "final_workflow": {
+      "id": 37877506115,
+      "html_url": "https://github.com/jordanmeyer/bab-trial-sales-2026-10-08/actions/runs/37877506115",
+      "head_sha": "610a9d90daa7bea654bb59584e098c80282ce802",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-09T03:03:34Z",
+      "updated_at": "2026-10-09T03:03:58Z"
+    }
+  }
+}

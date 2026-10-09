@@ -1,0 +1,21 @@
+# Inventory trial setup
+
+Frozen Browser App Builder 0.1.1 (source c8bb0e5) supplies the five workflow skills, Campus Designer, starter, and Pages template. This project is an original, synthetic trial.
+
+- Selected directory: `/Users/jordan/Projects/browser-app-builder-trials/2026-10-08/inventory`; empty before setup, no enclosing Git repository.
+- macOS; working shell/file tools. `/usr/bin/git`, version 2.50.1 (Apple Git-155).
+- Initialized `main`. Approved local Git attribution: Jordan Meyer <jordanmeyer@protonmail.com>. This name and email will be public when history is pushed. No global configuration changed.
+- Existing `/usr/bin/python3`, Python 3.9.6. No runtime installed.
+- Preview: `/usr/bin/python3 -m http.server 9102 --bind 127.0.0.1` from project root; tool process session 66892. Restart by running the same command in this folder.
+- App: http://127.0.0.1:9102/app/ . Test page will be http://127.0.0.1:9102/tests/ . The server serves the root for cross-directory module imports.
+- Frozen starter copied after inspection. Browser checks are delegated to the coordinating parent agent; pending actual module/interaction observations. A shell HTTP response is not a browser check.
+- The agent needed the authorized-directory sandbox escalation to write this sibling project. No permission or runtime workaround was used.
+
+Initial history contains only the starter and this setup record. Setup is incomplete until the parent confirms the actual starter interaction.
+
+## Verified starter handoff
+Parent browser observation on 2026-10-08: `/app/` showed “JavaScript module loaded. Preview is ready.” Activating **Check interaction** changed it to “Interaction works. Ready to plan your app.” Starter history commit: `e731c4911031aa394123f08b3eb3e2694e7be65e`. Setup is complete; the starter can be replaced. No browser observation is inferred from HTTP/source checks.
+
+
+## Trial completion
+The app agent stopped its original loopback preview (tool session 66892, verified `/usr/bin/python3 -m http.server 9102 --bind 127.0.0.1`, PID 23739) after final live verification. Restart instructions above remain valid. Parent's separate no-store preview on port 9100 remains available for final screenshots and is not controlled by this app agent.

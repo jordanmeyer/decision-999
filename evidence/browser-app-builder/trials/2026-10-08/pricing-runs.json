@@ -1,0 +1,29 @@
+[
+  {
+    "id": 37877472621,
+    "html_url": "https://github.com/jordanmeyer/bab-trial-pricing-2026-10-08/actions/runs/37877472621",
+    "head_sha": "cf1dc2a009db54fccd55ea87b761e435fa3dc3a3",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-10-09T03:03:07Z",
+    "updated_at": "2026-10-09T03:03:52Z"
+  },
+  {
+    "id": 37877140794,
+    "html_url": "https://github.com/jordanmeyer/bab-trial-pricing-2026-10-08/actions/runs/37877140794",
+    "head_sha": "5099d7934c31638925af693f7881d1ff450e40a6",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-10-09T02:59:00Z",
+    "updated_at": "2026-10-09T02:59:20Z"
+  },
+  {
+    "id": 37876881290,
+    "html_url": "https://github.com/jordanmeyer/bab-trial-pricing-2026-10-08/actions/runs/37876881290",
+    "head_sha": "361848ffc6453e3fc9900054026769d5388a3dfd",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-10-09T02:55:40Z",
+    "updated_at": "2026-10-09T02:56:06Z"
+  }
+]
