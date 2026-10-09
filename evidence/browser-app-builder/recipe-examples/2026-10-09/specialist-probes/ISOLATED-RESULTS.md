@@ -14,3 +14,9 @@ Leaflet local geometry/player initial appearance remains recorded in research; c
 Final Leaflet isolated probe: local polygon bounds−79,35.8,−78.8,36, safe popup score42, working zoom9→10/11 and rendered geographic geometry; screenshot map.png. No remote tile layer. This is a capability probe, not useful market-analysis product evidence.
 
 Imported license text has whitespace/newlines normalized for repository checks; terms and attribution are retained. Original upstream URLs and package versions identify original distributions.
+
+## Silent-only video packaging follow-up
+
+The production Vite configuration aliases the three optional `@mediabunny/*-encoder` imports to a local module that throws an explicit unsupported-audio error. Both capability and render calls force `muted: true` after spread options. This is application packaging for silent video, not a Remotion feature claim. A build-time module graph check found no AAC, MP3 or FLAC encoder modules; the output contains a 180-byte rejection stub instead. The unchanged renderer retains its disclosed telemetry.
+
+The coordinator rendered and downloaded a new production MP4 using this configuration. Observed capability: H.264 supported, audio codec null. Actual output: 13,366 bytes, 320×180, 30 frames. `ffprobe` found one H.264 video stream and no audio stream. This addresses distribution of unused embedded audio codecs for the silent configuration; full application review, cancellation, templates, live deployment and supported-browser checks remain pending.

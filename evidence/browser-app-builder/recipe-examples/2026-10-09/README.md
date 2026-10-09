@@ -12,3 +12,5 @@ No application in this campaign has been published yet. Only the Remotion video 
 - [Sales and returns explorer](https://jordanmeyer.github.io/bab-example-uploads/) — [source and review](https://github.com/jordanmeyer/bab-example-uploads). Papa Parse/Arquero/ECharts;31 checks; production filtering and narrow presentation corrected.
 
 Source snapshots, exact simulated exchanges and review/evaluation/deployment records are in each app’s source/ folder. Reproduce with its README and pinned lockfile. The eight remaining apps are tracked individually in status.json; no completion claim is made for them.
+
+The [seasonal order simulator](https://jordanmeyer.github.io/bab-example-simulator/) is independently reviewed and live. See [source and review](https://github.com/jordanmeyer/bab-example-simulator), [coordinator browser witness](simulator/UI-WITNESS.md) and saved source. Seventeen browser checks, live deterministic references, risk-limit cases and returning-page checks passed; reviewer revisions corrected cached-chart lifecycle and maximum-value labels.

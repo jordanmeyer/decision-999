@@ -20,7 +20,7 @@ The checklist includes four recipes beyond the current thirteen-library inventor
 - [ ] Verify specialized package configurations, exact licenses and browser behavior.
 - [x] Executive dashboard: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
 - [x] Uploaded-files dashboard: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
-- [ ] Probabilistic simulator: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
+- [x] Probabilistic simulator: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
 - [ ] Interactive process model: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
 - [ ] Roadmap/project plan: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
 - [ ] Geographic market analysis: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
@@ -55,7 +55,7 @@ Decision (2026-10-09): user explicitly allowed the Remotion video-only telemetry
 ## Outcomes & Retrospective
 
 
-Executive passed independent review at bc19eb40; uploads at b64d85f after correcting a production-only Arquero closure/minification failure and narrow-screen presentation. Both exact-commit Actions deployments succeeded and live known answers passed. Gallery links are prepared; push/verification follows. Isolated HiGHS and DuckDB EH browser probes passed; a corrected Remotion probe produced a downloaded, decoded, playable MP4. Full specialist apps remain queued. Existing evidence remains historical. Track each app's tested commit, reviewed commit, published commit and live URL separately in evidence/browser-app-builder/recipe-examples/2026-10-09/status.json. Completion requires all ten, not an easier subset. User goal stays active through context/turn boundaries.
+Executive passed independent review at bc19eb40; uploads at b64d85f after correcting a production-only Arquero closure/minification failure and narrow-screen presentation. Both exact-commit Actions deployments succeeded and live known answers passed. Gallery links were pushed at 4cd8381; its Pages workflow and the actual live gallery passed. Isolated HiGHS and DuckDB EH browser probes passed; a corrected Remotion probe produced a downloaded, decoded, playable MP4. The simulator passed source review plus independent coordinator browser checks and was deployed at c769e3f; live known answers passed. Process and roadmap reviews and the market build are underway. Full specialist apps remain in progress. Existing evidence remains historical. Track each app's tested commit, reviewed commit, published commit and live URL separately in evidence/browser-app-builder/recipe-examples/2026-10-09/status.json. Completion requires all ten, not an easier subset. User goal stays active through context/turn boundaries.
 
 ## Context and Orientation
 

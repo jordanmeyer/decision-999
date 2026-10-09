@@ -1,6 +1,6 @@
 ---
 name: remotion-browser-app
-description: Build controlled product-video composers with Remotion Player previews and client-side downloadable MP4 or WebM rendering, with explicit licensing and telemetry disclosure.
+description: Build controlled product-video composers with Remotion Player previews and client-side downloadable silent MP4 rendering, with explicit licensing and telemetry disclosure.
 ---
 
 # Downloadable browser videos with Remotion
@@ -26,3 +26,5 @@ const blob = await rendered.getBlob();
 Check actual WebCodecs capability; merely displaying Player does not establish export support. Keep render progress, cancellation and errors visible. Revoke obsolete blob URLs and clean up resources. Use [Campus Designer](../campus-designer/SKILL.md) tokens and system fonts in templates; test actual renderer support for every composition element. Do not introduce remote images or music to make the example look finished.
 
 Verify preview/export frame agreement, longest permitted text, reduced-motion interface behavior, cancellation/retry and a real downloaded playable file with expected dimensions/duration. Inspect beginning/middle/end frames; a nonempty blob is not proof of a correct video. Record codec/browser limits, licensing basis, disclosed telemetry and observed requests in [Evaluate](../evaluate-browser-app/SKILL.md). Publish only after reviewer verifies the controlled templates and real export.
+
+The candidate probe now excludes optional AAC/MP3/FLAC encoder packages through explicit Vite aliases to a local rejection module. This is a silent-MP4 application configuration, not a Remotion built-in switch. Force `muted: true` after spread options in both capability and render calls. Keep a build-time module-graph assertion that those encoder packages are absent, and verify the exported file contains no audio stream. Do not add audio until the corresponding codec notices/source obligations are resolved.

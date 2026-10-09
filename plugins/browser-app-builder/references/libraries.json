@@ -396,7 +396,7 @@
           ]
         }
       },
-      "limitations": "Candidate: isolated export/playback passed; embedded audio codec notice/source gap and full application review remain unresolved. Controlled local templates; WebCodecs capability checks and playable MP4/WebM export. Remotion license eligibility must be established. User-approved video-only exception: render-event telemetry sends IP, origin, render type/status to Remotion, never video content. Disclose before rendering; no analytics elsewhere."
+      "limitations": "Candidate: isolated silent MP4 export/playback passed with optional audio encoders excluded by explicit Vite aliases; full application review remains unresolved. Controlled silent templates, WebCodecs capability checks and forced muted rendering. Audio export is unsupported; this configuration does not resolve audio-codec source obligations for other configurations. Remotion license eligibility must be established. User-approved video-only exception: render-event telemetry sends IP, origin, render type/status to Remotion, never video content. Disclose before rendering; no analytics elsewhere."
     }
   ]
 }
