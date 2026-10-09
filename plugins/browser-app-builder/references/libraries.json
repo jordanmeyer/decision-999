@@ -1,5 +1,5 @@
 {
-  "checked": "2026-10-08",
+  "checked": "2026-10-09",
   "runtime": {
     "node": "22.19.0",
     "npm": "10.9.3"
@@ -300,6 +300,103 @@
         }
       },
       "limitations": "Local generator instances only; no global Math.random replacement. Not a security random source."
+    },
+    {
+      "id": "leaflet",
+      "name": "Leaflet",
+      "skill": "leaflet-browser-app",
+      "status": "candidate",
+      "packages": {
+        "leaflet": "1.9.4"
+      },
+      "peers": {},
+      "documentation": "https://leafletjs.com/reference.html",
+      "licenses": {
+        "leaflet": {
+          "expression": "BSD-2-Clause",
+          "files": [
+            "LICENSE"
+          ]
+        }
+      },
+      "limitations": "Candidate: isolated browser probe passed; full application review pending. Local GeoJSON and locally bundled geographic assets only; no remote tiles, geocoding or location permission. Retain data attribution and keyboard/table alternatives."
+    },
+    {
+      "id": "duckdb",
+      "name": "DuckDB-Wasm",
+      "skill": "duckdb-browser-app",
+      "status": "candidate",
+      "packages": {
+        "@duckdb/duckdb-wasm": "1.32.0"
+      },
+      "peers": {},
+      "documentation": "https://duckdb.org/docs/current/clients/wasm/overview",
+      "licenses": {
+        "@duckdb/duckdb-wasm": {
+          "expression": "MIT",
+          "files": [
+            "Supplemental upstream LICENSE at package gitHead a20b8290e79e37a7b914e62621aa412d69ba95fc"
+          ]
+        }
+      },
+      "limitations": "Candidate: isolated browser probe passed; full application review pending. Single-thread EH worker and local WASM assets for Pages without isolation headers. Disable extension auto-install/autoload and external access; lock configuration. Bounded local queries with cancellation/recovery. Supplemental package license required."
+    },
+    {
+      "id": "highs",
+      "name": "HiGHS",
+      "skill": "highs-browser-app",
+      "status": "candidate",
+      "packages": {
+        "highs": "1.15.3"
+      },
+      "peers": {},
+      "documentation": "https://github.com/lovasoa/highs-js",
+      "licenses": {
+        "highs": {
+          "expression": "MIT",
+          "files": [
+            "LICENSE"
+          ]
+        }
+      },
+      "limitations": "Candidate: isolated browser probe passed; full application review pending. Local WASM in a dedicated worker, bounded solve time, explicit integrality and feasibility tolerances. Terminate/recreate worker for cancellation. A feasible incumbent is not proof of optimality."
+    },
+    {
+      "id": "remotion",
+      "name": "Remotion browser video",
+      "skill": "remotion-browser-app",
+      "status": "candidate",
+      "packages": {
+        "remotion": "4.0.534",
+        "@remotion/player": "4.0.534",
+        "@remotion/web-renderer": "4.0.534"
+      },
+      "peers": {
+        "react": "19.3.0",
+        "react-dom": "19.3.0"
+      },
+      "documentation": "https://www.remotion.dev/docs/client-side-rendering",
+      "licenses": {
+        "remotion": {
+          "expression": "SEE LICENSE IN LICENSE.md",
+          "files": [
+            "LICENSE.md"
+          ]
+        },
+        "@remotion/player": {
+          "expression": "SEE LICENSE IN LICENSE.md",
+          "files": [
+            "LICENSE.md"
+          ]
+        },
+        "@remotion/web-renderer": {
+          "expression": "SEE LICENSE IN LICENSE.md",
+          "files": [
+            "LICENSE.md"
+          ]
+        }
+      },
+      "limitations": "Candidate: isolated export/playback passed; embedded audio codec notice/source gap and full application review remain unresolved. Controlled local templates; WebCodecs capability checks and playable MP4/WebM export. Remotion license eligibility must be established. User-approved video-only exception: render-event telemetry sends IP, origin, render type/status to Remotion, never video content. Disclose before rendering; no analytics elsewhere."
     }
   ]
 }

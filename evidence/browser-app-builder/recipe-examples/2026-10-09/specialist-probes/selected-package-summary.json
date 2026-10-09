@@ -1,0 +1,297 @@
+{
+  "leaflet": {
+    "dist-tags": {
+      "beta": "1.8.0-beta.3",
+      "latest": "1.9.4",
+      "alpha": "2.0.0-alpha.1"
+    },
+    "version": "1.9.4",
+    "license": "BSD-2-Clause",
+    "dependencies": null,
+    "peerDependencies": null,
+    "engines": null,
+    "scripts": {
+      "docs": "node ./build/docs.js && node ./build/integrity.js",
+      "lint": "eslint .",
+      "test": "karma start ./spec/karma.conf.js",
+      "build": "npm run rollup && npm run uglify",
+      "serve": "cd docs && bundle exec jekyll serve",
+      "watch": "rollup -w -c build/rollup-config.js",
+      "rollup": "rollup -c build/rollup-config.js",
+      "uglify": "uglifyjs dist/leaflet-src.js -c -m -o dist/leaflet.js --source-map filename=dist/leaflet.js.map --source-map content=dist/leaflet-src.js.map --source-map url=leaflet.js.map --comments",
+      "lintfix": "npm run lint -- --fix",
+      "prepare": "husky install",
+      "bundlemon": "bundlemon --subProject js --defaultCompression none && bundlemon --subProject js-gzip --defaultCompression gzip"
+    },
+    "dist": {
+      "shasum": "23fae724e282fa25745aff82ca4d394748db7d8d",
+      "tarball": "https://registry.npmjs.org/leaflet/-/leaflet-1.9.4.tgz",
+      "fileCount": 106,
+      "integrity": "sha512-nxS1ynzJOmOlHp+iL3FyWqK89GtNL8U8rvlMOsQdTTssxZwCXh8N2NB3GDQOL+YR3XnWyZAxwQixURb+FA74PA==",
+      "signatures": [
+        {
+          "sig": "MEQCIACJsJBx5tsQhMIL6VAVvX5sHa7SaLu4Zub3wg5lG9HCAiA+ww0SlPXDrT1xwBIuDEneiS5JxaRgUxIKnDVNsfJ+2g==",
+          "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+        }
+      ],
+      "unpackedSize": 3739487
+    },
+    "published": "2023-05-18T11:04:11.088Z",
+    "repository": {
+      "url": "git://github.com/Leaflet/Leaflet.git",
+      "type": "git"
+    }
+  },
+  "@duckdb/duckdb-wasm": {
+    "dist-tags": {
+      "latest": "1.33.1-dev57.0",
+      "next": "1.33.1-dev65.0"
+    },
+    "version": "1.32.0",
+    "license": "MIT",
+    "dependencies": {
+      "apache-arrow": "^17.0.0"
+    },
+    "peerDependencies": null,
+    "engines": null,
+    "scripts": {
+      "docs": "typedoc",
+      "lint": "eslint src test",
+      "test": "npm run test:chrome && npm run test:node",
+      "format": "prettier --write \"**/*.+(js|ts)\"",
+      "report": "node ./coverage.mjs",
+      "test:node": "node --enable-source-maps ../../node_modules/jasmine/bin/jasmine ./dist/tests-node.cjs",
+      "build:debug": "node bundle.mjs debug && tsc --emitDeclarationOnly",
+      "test:chrome": "karma start ./karma/tests-chrome.cjs",
+      "test:browser": "karma start ./karma/tests-all.cjs",
+      "test:firefox": "karma start ./karma/tests-firefox.cjs",
+      "build:release": "node bundle.mjs release && tsc --emitDeclarationOnly",
+      "test:coverage": "npm run test:chrome:coverage && npm run test:node:coverage && npm run report",
+      "test:chrome:eh": "karma start ./karma/tests-chrome-eh.cjs",
+      "test:node:debug": "node --inspect-brk --enable-source-maps ../../node_modules/jasmine/bin/jasmine ./dist/tests-node.cjs",
+      "test:browser:debug": "karma start ./karma/tests-debug.cjs",
+      "test:node:coverage": "nyc -r json --report-dir ./coverage/node node ../../node_modules/jasmine/bin/jasmine ./dist/tests-node.cjs",
+      "test:chrome:coverage": "karma start ./karma/tests-chrome-coverage.cjs"
+    },
+    "dist": {
+      "shasum": "199ebbca6c302eba7bb0a458aacd34ccf8518335",
+      "tarball": "https://registry.npmjs.org/@duckdb/duckdb-wasm/-/duckdb-wasm-1.32.0.tgz",
+      "fileCount": 85,
+      "integrity": "sha512-IewXTNYEjsZCPE9weUWgtjGxUlMRo7qhX0GF6tq/KjK8bnY+RAl4cyUdYUfcdzbyb4b9ZxPC+FOsCcxgaKFWMg==",
+      "signatures": [
+        {
+          "sig": "MEUCIQDmNt2pOKCqKaaTb1jBdb0hssyuS+l7jdTTXKQBMFNxngIgAYODulDEYhxZnw0270SFHoNbNjpNbLPa3cx9R71QSXU=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        }
+      ],
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/@duckdb%2fduckdb-wasm@1.32.0",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "unpackedSize": 144178808
+    },
+    "published": "2026-06-22T05:45:39.386Z",
+    "repository": {
+      "url": "git+https://github.com/duckdb/duckdb-wasm.git",
+      "type": "git"
+    },
+    "latestTagAtCheck": "1.33.1-dev57.0",
+    "selection": "Newest strictly stable x.y.z release; actual embedded engine v1.4.3."
+  },
+  "highs": {
+    "dist-tags": {
+      "latest": "1.15.3",
+      "next": "1.15.3-pre.4"
+    },
+    "version": "1.15.3",
+    "license": "MIT",
+    "dependencies": null,
+    "peerDependencies": null,
+    "engines": {
+      "node": ">=18"
+    },
+    "scripts": {
+      "test": "tsc && tsc -p tsconfig.runtime.json && tsc -p test-dts/tsconfig.json && tsc -p test-dts/tsconfig.disposable.json && node tests/test.js && node --test tests/extended/*.test.cjs",
+      "build": "./build.sh",
+      "docs:api": "npm ci --prefix docs-tooling --ignore-scripts && node docs-tooling/node_modules/typedoc/bin/typedoc --options typedoc.json",
+      "check:api": "node scripts/generate-highs-api.mjs --check",
+      "test:demo": "playwright test",
+      "bench:size": "node benchmarks/measure-size.mjs",
+      "build:demo": "node scripts/prepare-demo.mjs && npm run docs:api",
+      "docs:options": "node scripts/generate-options-docs.mjs",
+      "test:package": "node scripts/test-packed-package.mjs",
+      "bench:runtime": "node benchmarks/runtime.mjs"
+    },
+    "dist": {
+      "shasum": "516181f8c1c6fd0c7d8698073e01f3e07671a82a",
+      "tarball": "https://registry.npmjs.org/highs/-/highs-1.15.3.tgz",
+      "fileCount": 7,
+      "integrity": "sha512-5rzjBlAkqRxr7FOv+iZjxF8nNfKsEt8uOaP3S6gls6yRf4+Jv4BqBIE3iPFsgfOHutQBMNxRE9jWhxRAM7Oycw==",
+      "signatures": [
+        {
+          "sig": "MEUCIFfKUE91ouD25i1PGifVeUgUpQ0tY/SuYMbvtleg7s4vAiEA/mzGfnkhPWc9N1/qAbjvOUvyn/H3lWBtRKyYQY10wwY=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+          "sig": "MEUCIQD2VuYDVZcynf1EhD2/eT16fMM6SvOg9eI1K2wKQlUt6gIgNjsvaiCp+IHxgvSUY+f89spAhbXsTTuwzhtVTIsP3O4="
+        }
+      ],
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/highs@1.15.3",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "unpackedSize": 4016114
+    },
+    "published": "2026-09-11T20:24:58.744Z",
+    "repository": {
+      "url": "git+https://github.com/lovasoa/highs-js.git",
+      "type": "git"
+    }
+  },
+  "remotion": {
+    "dist-tags": {
+      "canary": "4.0.0-alpha.217",
+      "alpha": "4.1.0-alpha12",
+      "latest": "4.0.534"
+    },
+    "version": "4.0.534",
+    "license": "SEE LICENSE IN LICENSE.md",
+    "dependencies": null,
+    "peerDependencies": {
+      "react": ">=16.8.0",
+      "react-dom": ">=16.8.0"
+    },
+    "engines": null,
+    "scripts": {
+      "lint": "eslint src",
+      "make": "tsgo -d && bun --env-file=../.env.bundle bundle.ts",
+      "test": "bun test src/test",
+      "format": "oxfmt src",
+      "formatting": "oxfmt src --check",
+      "prepublishOnly": "bun ensure-correct-version.ts && cp ../../README.md . && cp ../../LICENSE.md ."
+    },
+    "dist": {
+      "shasum": "1c7bc4f0997d32d65a576c68aae8bcac3169626d",
+      "tarball": "https://registry.npmjs.org/remotion/-/remotion-4.0.534.tgz",
+      "fileCount": 437,
+      "integrity": "sha512-gSfMreFJgncWEHGsIWksicmEGsTrGMIAgZ87WS4e+bIB+nVsAN67UXWbQ88xGwUONm3xzwu9Ty786kFDcgZoaQ==",
+      "signatures": [
+        {
+          "sig": "MEUCIFqkTH/hJtBJZkV1TYc1Y+WYDkDKPaS0eOrZbJnBk2RBAiEA0QZYI9bQSymO+OScB0TBup3EgUmsevezxpIHGdu+brM=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "sig": "MEYCIQDrmWSEP46DU3wkvA4kjOToaOxUTztfzNClaiuoEchRHgIhAPPWpG3SrVTJ2d8PAena4p57XG/FhdU+JCw3xZXVBcnl",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        }
+      ],
+      "unpackedSize": 1765522
+    },
+    "published": "2026-10-07T09:16:48.909Z",
+    "repository": {
+      "url": "https://github.com/remotion-dev/remotion/tree/main/packages/core"
+    }
+  },
+  "@remotion/player": {
+    "dist-tags": {
+      "canary": "4.0.0-alpha.217",
+      "alpha": "4.1.0-alpha12",
+      "latest": "4.0.534"
+    },
+    "version": "4.0.534",
+    "license": "SEE LICENSE IN LICENSE.md",
+    "dependencies": {
+      "remotion": "4.0.534"
+    },
+    "peerDependencies": {
+      "react": ">=16.8.0",
+      "react-dom": ">=16.8.0"
+    },
+    "engines": null,
+    "scripts": {
+      "lint": "eslint src",
+      "make": "tsgo -d && bun ensure-correct-version.ts && bun --env-file=../.env.bundle bundle.ts",
+      "test": "bun test src",
+      "format": "oxfmt src",
+      "formatting": "oxfmt src --check",
+      "prerelease": "cp ../../README.md . && cp ../../LICENSE.md ."
+    },
+    "dist": {
+      "shasum": "4515101ec962b2d0bb7b1f74d3c0836e3070ea34",
+      "tarball": "https://registry.npmjs.org/@remotion/player/-/player-4.0.534.tgz",
+      "fileCount": 112,
+      "integrity": "sha512-uXkg9qsuYP85eykXTayr8jjSzFJYwtPzYprMfjxnAx9u5C/H726wTE800wGUcDPCDn1SPf6TAg71pmo882Z+jA==",
+      "signatures": [
+        {
+          "sig": "MEUCIHk6qBZbkJ04tVPJVZsdJ3agbvnBOqsIVIkJ6YX78ChNAiEAleBMSPCTPtbMv68bdX2sn0zUuba/QwKzpRYcPeV+cXs=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "sig": "MEUCIEmJ6YMTbqyzY+b4q9DF3aEU+XwzaqVbdN9MGOW/aNPIAiEAwEcc3XUssULkFmRaUVS6T6NBjhLuoFcKoG02JKdWus8=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        }
+      ],
+      "unpackedSize": 346686
+    },
+    "published": "2026-10-07T09:18:27.656Z",
+    "repository": {
+      "url": "https://github.com/remotion-dev/remotion/tree/main/packages/player"
+    }
+  },
+  "@remotion/web-renderer": {
+    "dist-tags": {
+      "latest": "4.0.534"
+    },
+    "version": "4.0.534",
+    "license": "SEE LICENSE IN LICENSE.md",
+    "dependencies": {
+      "remotion": "4.0.534",
+      "mediabunny": "1.56.1",
+      "@remotion/licensing": "4.0.534",
+      "@mediabunny/aac-encoder": "1.56.1",
+      "@mediabunny/mp3-encoder": "1.56.1",
+      "@mediabunny/flac-encoder": "1.56.1"
+    },
+    "peerDependencies": {
+      "react": ">=18.0.0",
+      "react-dom": ">=18.0.0"
+    },
+    "engines": null,
+    "scripts": {
+      "lint": "eslint src",
+      "make": "tsgo && bun --env-file=../.env.bundle bundle.ts",
+      "watch": "tsgo -w",
+      "format": "oxfmt src",
+      "studio": "cd ../example && bunx remotion studio ../web-renderer/src/test/studio.ts --public-dir=../example-videos/videos",
+      "remotion": "cd ../example && bunx remotion studio ../web-renderer/src/test/studio.ts --public-dir=../example-videos/videos",
+      "formatting": "oxfmt src --check",
+      "testwebrenderer": "vitest src/test --browser --run"
+    },
+    "dist": {
+      "shasum": "3e59277508ffc8f8e79c0d59c9f293588ef20b24",
+      "tarball": "https://registry.npmjs.org/@remotion/web-renderer/-/web-renderer-4.0.534.tgz",
+      "fileCount": 98,
+      "integrity": "sha512-5JlbHvU4eAA/ymvHLmHHvR+YfkTMnVcInwaNVu2kLyXGEO6HcRmqDwp2hhAGtj212/LvZKKLPLBXbfhHygelIQ==",
+      "signatures": [
+        {
+          "sig": "MEQCH2w/1hQJKmdK+hvGfR3kizoKGpasurer3vF7xEj1OwACIQDUw7O6ZJta6tcRjU8C7oBzyG1KQdW9oPrI8z/kKvoTqw==",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "sig": "MEUCID8iPcHln12mxz8RCw6/T3O8bPv6SDJCMMWDZPZyAk1WAiEAs++N23Uk1pNPheOWoXWrocOVfuooNLK2+SWUJmZpHn8=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        }
+      ],
+      "unpackedSize": 293339
+    },
+    "published": "2026-10-07T09:19:17.320Z",
+    "repository": {
+      "url": "https://github.com/remotion-dev/remotion/tree/main/packages/web-renderer"
+    }
+  }
+}

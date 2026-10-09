@@ -1,0 +1,14 @@
+[
+  {
+    "sha": "0f6c374750d0f2d95f4a435c96ba8da75312a93f",
+    "date": "2026-04-27T18:58:05Z",
+    "message": "Ensure extensions work with huge timestamps, fix AC3 and AAC extension's behavior with huge timestamps",
+    "url": "https://github.com/Vanilagy/mediabunny/commit/0f6c374750d0f2d95f4a435c96ba8da75312a93f"
+  },
+  {
+    "sha": "c4398fb88c50d61562595c8283aec42a03338c1e",
+    "date": "2026-03-04T16:05:34Z",
+    "message": "Add @mediabunny/aac-encoder extension package",
+    "url": "https://github.com/Vanilagy/mediabunny/commit/c4398fb88c50d61562595c8283aec42a03338c1e"
+  }
+]

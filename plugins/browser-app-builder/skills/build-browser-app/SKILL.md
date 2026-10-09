@@ -15,7 +15,7 @@ Give applications a shared Duke look through unchanged Duke blues, recommended t
 
 ## Implement and verify
 
-1. Build HTML/CSS/JavaScript in `app/`, adding JSX only for selected React libraries. Keep calculations in modules that UI and tests share. Use native features first; approved libraries follow the managed workflow below. No backend or external runtime service.
+1. Build HTML/CSS/JavaScript in `app/`, adding JSX only for selected React libraries. Keep calculations in modules that UI and tests share. Use native features first; approved libraries follow the managed workflow below. No backend or external runtime service except the specifically accepted Remotion licensing telemetry described in shared workflow.
 2. Keep asset/module paths relative and use ordinary or hash navigation rather than server routes. Use bundled public/synthetic data or transient local imports. Validate inputs, label units, handle empty/error states, and provide keyboard-operable controls. Never send imported data elsewhere or preserve it as project evidence.
 3. Open the app using the verified preview. Run the plan's initial known-answer cases, check console errors and actual browser interactions, and inspect desktop and narrow layouts. Check focus, labels, contrast, overflow, reset, and import/export when present. Observe network behavior with available browser tools; report the scope observed rather than claiming universal isolation.
 4. Fix defects and discuss changes to the student's model or scope before altering those decisions. Update the plan and `DECISIONS.md` when they change. Write README usage, assumptions, data/library/font provenance, actual preview instructions, and limitations.

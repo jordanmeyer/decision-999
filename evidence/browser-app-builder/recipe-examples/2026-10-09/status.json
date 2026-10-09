@@ -2,25 +2,34 @@
   "started": "2026-10-09",
   "apps": {
     "executive": {
-      "stage": "planning",
+      "stage": "live verified; gallery pending",
       "repository_proposed": "jordanmeyer/bab-example-executive",
-      "review": "pending",
-      "deployment": "pending"
+      "review": "PASS",
+      "deployment": "PASS",
+      "reviewed_source": "bc19eb40ba4ded2b141c13955cdea79e0bf406c4",
+      "published_commit": "81f41a02055ddaea079b6b2fcfa0494c653014fd",
+      "live_url": "https://jordanmeyer.github.io/bab-example-executive/",
+      "workflow": "https://github.com/jordanmeyer/bab-example-executive/actions/runs/37888360279"
     },
     "uploads": {
-      "stage": "planning",
+      "stage": "live verified; gallery pending",
       "repository_proposed": "jordanmeyer/bab-example-uploads",
-      "review": "pending",
-      "deployment": "pending"
+      "review": "PASS",
+      "deployment": "PASS",
+      "evaluated_source": "036710e852d77dea13973a026e87deb645d53f20",
+      "reviewed_source": "b64d85f7658a18602a9ad5877232d100069ac463",
+      "published_commit": "d50e59024f2b29ba66782e7be135d20e2bfb9a48",
+      "live_url": "https://jordanmeyer.github.io/bab-example-uploads/",
+      "workflow": "https://github.com/jordanmeyer/bab-example-uploads/actions/runs/37888660919"
     },
     "simulator": {
-      "stage": "queued",
+      "stage": "building",
       "repository_proposed": "jordanmeyer/bab-example-simulator",
       "review": "pending",
       "deployment": "pending"
     },
     "process": {
-      "stage": "queued",
+      "stage": "planning",
       "repository_proposed": "jordanmeyer/bab-example-process",
       "review": "pending",
       "deployment": "pending"

@@ -18,8 +18,8 @@ The checklist includes four recipes beyond the current thirteen-library inventor
 - [x] Answered first realistic planning questions for executive and uploads; preserved exact messages for their transcripts.
 - [x] (2026-10-09) User explicitly approved a disclosed video-only Remotion render-telemetry exception; no exception for other apps.
 - [ ] Verify specialized package configurations, exact licenses and browser behavior.
-- [ ] Executive dashboard: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
-- [ ] Uploaded-files dashboard: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
+- [x] Executive dashboard: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
+- [x] Uploaded-files dashboard: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
 - [ ] Probabilistic simulator: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
 - [ ] Interactive process model: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
 - [ ] Roadmap/project plan: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
@@ -55,7 +55,7 @@ Decision (2026-10-09): user explicitly allowed the Remotion video-only telemetry
 ## Outcomes & Retrospective
 
 
-Work has started; no app in this new ten-example campaign has yet passed independent review or been published. Existing evidence remains historical. Track each app's tested commit, reviewed commit, published commit and live URL separately in evidence/browser-app-builder/recipe-examples/2026-10-09/status.json. Completion requires all ten, not an easier subset. User goal stays active through context/turn boundaries.
+Executive passed independent review at bc19eb40; uploads at b64d85f after correcting a production-only Arquero closure/minification failure and narrow-screen presentation. Both exact-commit Actions deployments succeeded and live known answers passed. Gallery links are prepared; push/verification follows. Isolated HiGHS and DuckDB EH browser probes passed; a corrected Remotion probe produced a downloaded, decoded, playable MP4. Full specialist apps remain queued. Existing evidence remains historical. Track each app's tested commit, reviewed commit, published commit and live URL separately in evidence/browser-app-builder/recipe-examples/2026-10-09/status.json. Completion requires all ten, not an easier subset. User goal stays active through context/turn boundaries.
 
 ## Context and Orientation
 

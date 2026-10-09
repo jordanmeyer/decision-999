@@ -14,7 +14,7 @@ import * as aq from 'arquero';
 const totals = aq.from(rows).rollup({ revenue: aq.op.sum('revenue'), cost: aq.op.sum('cost') }).object();
 ```
 
-Use authored expressions only. Validate typed input before constructing the table and define empty-result behavior. Keep exact currency accounting in bounded integer cents; do not assume grouping solves rounding or overflow. Do not compile expressions supplied through CSV.
+Use authored expressions only. Validate typed input before constructing the table and define empty-result behavior. Keep exact currency accounting in bounded integer cents; do not assume grouping solves rounding or overflow. Do not compile expressions supplied through CSV. For authored filters that close over local variables, use `aq.escape(d => ...)`; minification can rename lexical variables while `.params({ name })` keys stay unchanged, breaking parsed expressions only in production. Verify the production filter with nonempty and empty results.
 
 Visual libraries use the relevant [theme assets](../../assets/library-themes/) with the bundled [Campus Designer](../campus-designer/SKILL.md). Generated paths above are relative to the student's app, not the installed plugin.
 

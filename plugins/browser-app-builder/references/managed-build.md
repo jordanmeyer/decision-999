@@ -14,7 +14,7 @@ Run `node /absolute/installed/plugin/scripts/check-dependencies.mjs /absolute/pr
 
 ## React when needed
 
-For React Flow or Mantine add inventory-pinned React/React DOM and required peers, plus `@vitejs/plugin-react` as a development dependency. In vite.config.js import `react from '@vitejs/plugin-react'` and add `plugins: [react()]` to the returned object. Use `.jsx` for JSX files. Do not add TypeScript or a UI framework to a plain form.
+For React Flow, Mantine or an approved Remotion recipe add inventory-pinned React/React DOM and required peers, plus `@vitejs/plugin-react` as a development dependency. In vite.config.js import `react from '@vitejs/plugin-react'` and add `plugins: [react()]` to the returned object. Use `.jsx` for JSX files. Do not add TypeScript or a UI framework to a plain form.
 
 ## Commands and assets
 
@@ -22,6 +22,6 @@ For React Flow or Mantine add inventory-pinned React/React DOM and required peer
 
 Copy canonical designer tokens into `app/theme/duke-tokens.css`, then selected [theme adapters](../assets/library-themes/). Import vendor base CSS before adapters. Copy required public assets under app/public, using `import.meta.env.BASE_URL` when constructing their URLs. No remote assets or server routes. Frappe Gantt's CSS is copied from its installed dist/frappe-gantt.css because its package export map does not expose that subpath; retain its notice.
 
-Copy only needed [supplemental notices](../assets/license-notices/) into project-root licenses/ (seedrandom and Mantine's react-remove-scroll-bar dependency omit standalone notices). Preserve filenames and review any other missing notice rather than inventing text. The build generates app/public/THIRD-PARTY-NOTICES.txt from installed distributions, failing when a notice is missing. Generate it before checkpointing and commit it; a repeat build from identical dependencies must not change tracked source. Include this file in publication and link it from the app. Do not publish source tests or node_modules. Never put imported private files in app/public.
+Copy only needed [supplemental notices](../assets/license-notices/) into project-root licenses/ (seedrandom, Mantine's react-remove-scroll-bar, DuckDB and Remotion's licensing helper need supplemental records; copy only the selected recipe's notices). Preserve filenames and review any other missing notice rather than inventing text. The build generates app/public/THIRD-PARTY-NOTICES.txt from installed distributions, failing when a notice is missing. Generate it before checkpointing and commit it; a repeat build from identical dependencies must not change tracked source. Include this file in publication and link it from the app. Do not publish source tests or node_modules. Never put imported private files in app/public.
 
 Before Pages publication set `base` in vite.config.js to `/repository-name/` (or `/` for an account root site), then use [managed Pages workflow](../assets/pages-managed.yml). Include config/workflow in evaluation. Test production under the actual prefix, then verify live deployment and a returning-browser update when authorized. Vite fingerprints imported assets; files copied verbatim from public/ need explicit versioning when changed.

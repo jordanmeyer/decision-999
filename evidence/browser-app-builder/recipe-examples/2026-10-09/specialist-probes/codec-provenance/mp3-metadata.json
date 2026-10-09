@@ -1,0 +1,31 @@
+{
+  "name": "@mediabunny/mp3-encoder",
+  "version": "1.56.1",
+  "license": "MPL-2.0",
+  "gitHead": "cee57d1cdfd1776d515c081057b50eb337291e32",
+  "dist": {
+    "shasum": "3b8b39e149961dc3206c1886943f411877eb1c48",
+    "tarball": "https://registry.npmjs.org/@mediabunny/mp3-encoder/-/mp3-encoder-1.56.1.tgz",
+    "fileCount": 25,
+    "integrity": "sha512-p66ovEq6mZt3ejje45NOju84hIJI4v8rHfsmc1D2J34ziV0USE8AdJBzmiwqxl6nZkIAQLNB19HzbVRcQfc51g==",
+    "signatures": [
+      {
+        "sig": "MEUCIHhzK0VB1luq7QyRoaEa8GpTw8RKdF2mWNcUpx8p2SukAiEAkcUaLCzfKM3aCBtrBpkG3KAN0wQpUeNifoKm194SpkI=",
+        "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+      }
+    ],
+    "attestations": {
+      "url": "https://registry.npmjs.org/-/npm/v1/attestations/@mediabunny%2fmp3-encoder@1.56.1",
+      "provenance": {
+        "predicateType": "https://slsa.dev/provenance/v1"
+      }
+    },
+    "unpackedSize": 1681990
+  },
+  "repository": {
+    "url": "git+https://github.com/Vanilagy/mediabunny.git",
+    "type": "git",
+    "directory": "packages/mp3-encoder"
+  },
+  "metadataSource": "https://registry.npmjs.org/@mediabunny/mp3-encoder/1.56.1"
+}

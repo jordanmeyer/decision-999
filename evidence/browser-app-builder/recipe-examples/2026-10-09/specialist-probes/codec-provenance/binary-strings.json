@@ -1,0 +1,64 @@
+{
+  "aac": {
+    "packageVersion": "1.56.1",
+    "extractedWasmBytes": 509386,
+    "wasmSha256": "8488acb0bc9f43055b83600cc4c2c07d20f07675aa65671f91ac1d75515845d9",
+    "matchingStrings": [
+      "Huffyuv FFmpeg variant",
+      "libavcodec/put_bits.h",
+      "strictly conform to a older more strict version of the spec or reference software",
+      "libavutil/tx.c",
+      "libavutil/hwcontext.c",
+      "libavutil/channel_layout.c",
+      "libavutil/opt.c",
+      "libavcodec/options.c",
+      "libavutil/imgutils.c",
+      "libavcodec/get_buffer.c",
+      "libavutil/buffer.c",
+      "libavcodec/aaccoder.c",
+      "libavutil/mem.c",
+      "libavcodec/audio_frame_queue.c",
+      "libavcodec/encode.c",
+      "libavcodec/aacenc.c",
+      "libavcodec/avcodec.c",
+      "Lavc62.23.103",
+      "MPEG-4 part 2 Microsoft variant version 3",
+      "MPEG-4 part 2 Microsoft variant version 2",
+      "H.263 / H.263-1996, H.263+ / H.263-1998 / H.263 version 2",
+      "Microsoft Paint (MSP) version 2",
+      "FFmpeg video codec #1",
+      "MPEG-4 part 2 Microsoft variant version 1",
+      "old standard qpel (autodetected per FOURCC/version)",
+      "edge padding bug (autodetected per FOURCC/version)",
+      "direct-qpel-blocksize bug (autodetected per FOURCC/version)",
+      "On2 VP6 (Flash version)",
+      "On2 VP6 (Flash version, with alpha channel)",
+      "FLAC (Free Lossless Audio Codec)",
+      "gray decoding requested but not enabled at configuration time",
+      "Not yet implemented in FFmpeg, patches welcome"
+    ],
+    "packageFile": "node_modules/@mediabunny/aac-encoder/dist/modules/build/aac.js",
+    "fileSha256": "3e44b391ddf0c6a90f122924957e98c61fcac0b2c733f144ce13c6c4ec9f65b3"
+  },
+  "mp3": {
+    "packageVersion": "1.56.1",
+    "extractedWasmBytes": 223033,
+    "wasmSha256": "d0b109db83c153b81ba0080fa2163664dff1e341b154edda6d40bc4b6fbc355e",
+    "matchingStrings": [
+      " 1%%  bug in LAME encoding library",
+      "90%%  LAME compiled with buggy version of gcc using advanced optimizations"
+    ],
+    "packageFile": "node_modules/@mediabunny/mp3-encoder/dist/modules/build/lame.js",
+    "fileSha256": "88738989c13b533ab2810d6dbb01463c18eecee398d29d2755613a70ddb95a6a"
+  },
+  "flac": {
+    "packageVersion": "1.56.1",
+    "extractedWasmBytes": 166140,
+    "wasmSha256": "ea25f2da12550128391e0d83465deb887c3bef96b7ee4a9b34ebb1d8202fffbe",
+    "matchingStrings": [
+      "reference libFLAC git-3f1ecff8 20260304"
+    ],
+    "packageFile": "node_modules/@mediabunny/flac-encoder/dist/modules/build/flac.js",
+    "fileSha256": "0e6f1104ddccba45d4b18fac52c2496c8358678581b6c1fe526b2ce81f7769a6"
+  }
+}

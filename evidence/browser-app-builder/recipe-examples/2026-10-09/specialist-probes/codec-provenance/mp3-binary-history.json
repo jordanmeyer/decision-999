@@ -1,0 +1,14 @@
+[
+  {
+    "sha": "3be94cc788098ee25a263666970400674aff84e7",
+    "date": "2025-08-15T12:19:06Z",
+    "message": "Decrease AudioBuffer chunking size, support more MP3 sample rates, lift MP3 encoder memory limit",
+    "url": "https://github.com/Vanilagy/mediabunny/commit/3be94cc788098ee25a263666970400674aff84e7"
+  },
+  {
+    "sha": "cbb2681d33c34d0bcd3b3b746a0e48618b04f3dc",
+    "date": "2025-08-09T22:45:30Z",
+    "message": "Create @mediabunny/mp3-encoder, restructure and extend build system",
+    "url": "https://github.com/Vanilagy/mediabunny/commit/cbb2681d33c34d0bcd3b3b746a0e48618b04f3dc"
+  }
+]

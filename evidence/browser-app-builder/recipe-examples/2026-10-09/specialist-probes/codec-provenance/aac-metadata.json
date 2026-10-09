@@ -1,0 +1,31 @@
+{
+  "name": "@mediabunny/aac-encoder",
+  "version": "1.56.1",
+  "license": "MPL-2.0",
+  "gitHead": "cee57d1cdfd1776d515c081057b50eb337291e32",
+  "dist": {
+    "shasum": "0da220870b976c9d6674381338af4d6895b754d4",
+    "tarball": "https://registry.npmjs.org/@mediabunny/aac-encoder/-/aac-encoder-1.56.1.tgz",
+    "fileCount": 29,
+    "integrity": "sha512-a+OY/BctP7zC4G/prHikooOVaoWXMD4+bUyEwHg2dtQiQdIwC6TDJdVYJu5dfrdSNOiAFkv1HKcYEeROdwMezg==",
+    "signatures": [
+      {
+        "sig": "MEUCIQCLIKwaBr0LmYDth9D0lKJ6X5EkGXeI6ELkR8DU5wWlGAIgAdcfOYe1qq/7XqtRtLB/weYssXBaZHT8p+Y7W2mwAxI=",
+        "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+      }
+    ],
+    "attestations": {
+      "url": "https://registry.npmjs.org/-/npm/v1/attestations/@mediabunny%2faac-encoder@1.56.1",
+      "provenance": {
+        "predicateType": "https://slsa.dev/provenance/v1"
+      }
+    },
+    "unpackedSize": 4698341
+  },
+  "repository": {
+    "url": "git+https://github.com/Vanilagy/mediabunny.git",
+    "type": "git",
+    "directory": "packages/aac-encoder"
+  },
+  "metadataSource": "https://registry.npmjs.org/@mediabunny/aac-encoder/1.56.1"
+}
