@@ -4,9 +4,11 @@ Executed October 8–9, 2026, on the configured Mac, with Node 22.19.0, npm 10.9
 
 Dependency provenance and notice exceptions are recorded in [DEPENDENCIES.md](DEPENDENCIES.md). Gallery desktop/narrow screenshots are retained alongside these records. The fixed-width review page is retained as [responsive-review.html](responsive-review.html); serve it locally while the three previews run.
 
+Review findings and their verified corrections are recorded in [review-fixes/README.md](review-fixes/README.md); previous reports remain preserved there.
+
 ## Results
 
-Presentation: **9/9** browser checks. Dashboard: **13/13**. Operations: **8/8**. The saved `browser-results.txt` files are actual browser DOM snapshots. Each library has an isolated operation check as well as its use in a combined production fixture. All three production builds passed, served under `/library-trial/`, and retained runtime license notices. A clean `npm ci` followed by a rebuild passed for each, with zero known audit vulnerabilities in the recorded responses. This does not certify security or general correctness.
+Presentation: **10/10** browser checks. Dashboard: **13/13**. Operations: **8/8**. The saved `browser-results.txt` files are actual browser DOM snapshots. Each library has an isolated operation check as well as its use in a combined production fixture. All three production builds passed, served under `/library-trial/`, and retained runtime license notices. A clean `npm ci` followed by a rebuild passed for each, with zero known audit vulnerabilities in the recorded responses. This does not certify security or general correctness.
 
 Known answers were established independently: `(20 − 12) × 100 − 500 = 300`; integer-cent decimal example has zero profit; mean of 2,4,6 is 4 and sample variance is 4. Sales revenue/cost/profit are 390/234/156, with North 240/144/96. January 5–7 inclusive is three days; January 8–9 is two. Seedrandom's README supplies the first two `hello.` draws and a third reduced-precision quick draw; the test allows one 32-bit interval for comparison of that third draw with the full-precision generator. The uniform sample mean uses 10,000 draws and a predeclared ±0.02 bound around 0.5; under independent bounded uniform draws Hoeffding's bound gives at most `2 exp(-8)` for exceeding this tolerance. This is a smoke check of the selected stream, not validation of a business simulation.
 
@@ -63,6 +65,6 @@ Production output contains only index.html, built assets and THIRD-PARTY-NOTICES
 
 ## Installation and release gates
 
-The local 0.2.0 package installed successfully in isolated Codex and Claude configurations, with all **19** skills present: five workflow skills, Campus Designer and thirteen library skills. This demonstrates CLI installation/discovery, not automatic Work invocation. Both Claude validators, directory generation and repository boundary checks pass. The regenerated gallery displays version 0.2.0 and all 30 results at desktop and narrow widths; keyboard activation of the copy control reported success. Trial preview servers were stopped afterward.
+The local 0.2.0 package installed successfully in isolated Codex and Claude configurations, with all **19** skills present: five workflow skills, Campus Designer and thirteen library skills. This demonstrates CLI installation/discovery, not automatic Work invocation. Both Claude validators, directory generation and repository boundary checks pass. The initial gallery review displayed version 0.2.0 and 30 results at desktop and narrow widths (updated to 31 after review corrections); keyboard activation of the copy control reported success. Trial preview servers were stopped afterward.
 
 No new repository or live managed deployment was created. GitHub Actions execution, returning-browser updates on Pages, actual ChatGPT Work routing/handoffs, clean-machine macOS/Windows setup, and novice usability remain unverified. Existing version 0.1.1 live examples retain their own historical evidence.

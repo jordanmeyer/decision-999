@@ -23,6 +23,19 @@ for name in ('presentation', 'dashboard', 'operations'):
         assert rejected.returncode and 'Unapproved dependency' in rejected.stderr
     finally:
         package.write_bytes(original)
+    for field in ('devDependencies', 'optionalDependencies', 'peerDependencies'):
+        data = json.loads(original)
+        name = next(iter(data['dependencies']))
+        data.setdefault(field, {})[name] = data['dependencies'].pop(name)
+        try:
+            package.write_text(json.dumps(data))
+            rejected = subprocess.run(checker, capture_output=True, text=True)
+            assert rejected.returncode and 'must be in dependencies' in rejected.stderr
+        finally:
+            package.write_bytes(original)
+    notices = (project / 'dist/THIRD-PARTY-NOTICES.txt').read_text()
+    for name, version in json.loads(original)['dependencies'].items():
+        assert f'{name} @ {version}' in notices, f'Missing published notice: {name}'
     published = [path.relative_to(project / 'dist') for path in (project / 'dist').rglob('*') if path.is_file()]
     assert Path('index.html') in published and Path('THIRD-PARTY-NOTICES.txt') in published
     assert all(path.parts[0] in ('assets', 'index.html', 'THIRD-PARTY-NOTICES.txt') for path in published), published
@@ -62,4 +75,4 @@ with tempfile.TemporaryDirectory() as temporary:
     (project / 'licenses').mkdir()
     (project / 'licenses/new.txt').write_text('New license source')
     assert not fresh()
-print('Passed: three approved dependency sets, unknown-package rejection, app-only publication and non-root assets; report-only freshness, six managed-source changes/opposing staged edits, untracked license source.')
+print('Passed: three approved dependency sets, unknown-package and misplaced-runtime rejection, published direct-library notices, app-only publication and non-root assets; report-only freshness, six managed-source changes/opposing staged edits, untracked license source.')

@@ -1,0 +1,11 @@
+- heading "Library checks" [level=1]
+- status: 8/8 passed
+- list:
+  - listitem: "PASS: Independent inclusive schedule dates"
+  - listitem: "PASS: Reject reversed dates"
+  - listitem: "PASS: React Flow isolated edge operation"
+  - listitem: "PASS: Mermaid isolated strict diagram"
+  - listitem: "PASS: Mermaid malformed source rejected"
+  - listitem: "PASS: vis-timeline isolated local date interval"
+  - listitem: "PASS: Frappe Gantt isolated task rendering"
+  - listitem: "PASS: Motion isolated instant transition and stop"

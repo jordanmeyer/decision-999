@@ -1,11 +1,88 @@
-- heading "Library checks" [level=1]
-- status: 8/8 passed
-- list:
-  - listitem: "PASS: Independent inclusive schedule dates"
-  - listitem: "PASS: Reject reversed dates"
-  - listitem: "PASS: React Flow isolated edge operation"
-  - listitem: "PASS: Mermaid isolated strict diagram"
-  - listitem: "PASS: Mermaid malformed source rejected"
-  - listitem: "PASS: vis-timeline isolated local date interval"
-  - listitem: "PASS: Frappe Gantt isolated task rendering"
-  - listitem: "PASS: Motion isolated instant transition and stop"
+Library checks
+
+8/8 passed
+
+PASS: Independent inclusive schedule dates
+PASS: Reject reversed dates
+PASS: React Flow isolated edge operation
+PASS: Mermaid isolated strict diagram
+PASS: Mermaid malformed source rejected
+PASS: vis-timeline isolated local date interval
+PASS: Frappe Gantt rendering and repeated navigation retain one instance
+PASS: Motion isolated instant transition and stop
+ProcessExplanationTimelineSchedule
+
+Prepare: January 5–7 (3 days). Launch: January 8–9 (2 days).
+
+Prepare
+Launch
+Today
+December
+January
+February
+06
+07
+08
+09
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+01
+02
+03
+04
+05
+06
+07
+08
+09
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+01
+02
+03
+04
+05
+06
+07
+08
+09

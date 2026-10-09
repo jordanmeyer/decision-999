@@ -38,7 +38,7 @@
           "label": "Approved library recipes exercised locally"
         },
         {
-          "value": "30",
+          "value": "31",
           "label": "Passing browser checks across three library fixtures"
         },
         {
@@ -50,7 +50,7 @@
           "label": "Earlier plain-app trials published and verified live"
         }
       ],
-      "method": "Version 0.2.0 adds thirteen pinned library recipes exercised through individual browser checks and three synthetic combined fixtures on a configured Mac. Browser suites passed 9 presentation, 13 dashboard and 8 operations checks. Production preview, keyboard interactions, CSV import and narrow layout review exposed and corrected stylesheet, slide-sizing and file-input issues. These are maintainer-authored fixtures, not student outcomes or automatic Work-routing trials. The three linked live applications were built separately with version 0.1.1; their publication and corrected updates remain historical evidence.",
+      "method": "Version 0.2.0 adds thirteen pinned library recipes exercised through individual browser checks and three synthetic combined fixtures on a configured Mac. Browser suites passed 10 presentation, 13 dashboard and 8 operations checks. Production preview, keyboard interactions, CSV import and narrow layout review exposed and corrected stylesheet, slide-sizing and file-input issues. These are maintainer-authored fixtures, not student outcomes or automatic Work-routing trials. The three linked live applications were built separately with version 0.1.1; their publication and corrected updates remain historical evidence.",
       "limits": "Self-contained apps use bundled public/synthetic data or locally selected files. No backends, logins, external runtime APIs, remote AI, analytics, secret keys or remote fonts/scripts. Managed builds require compatible Node/npm and host file, shell and browser capabilities. Library approval covers the recorded versions/configurations, not arbitrary combinations. Live managed deployment, Work routing, clean-machine macOS/Windows and novice-student usability remain unverified. Browser checks do not certify a business model or full accessibility.",
       "screenshotAlt": [],
       "examples": [

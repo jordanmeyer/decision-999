@@ -17,12 +17,14 @@ Students describe an application in ordinary language; the agent selects suitabl
 - [x] (2026-10-09) Implemented managed starter, dependency checks and locally verified publication packaging.
 - [x] (2026-10-09) Added selection guidance and thirteen focused skills; isolated CLI installation exposes nineteen total skills.
 - [x] (2026-10-09) Added canonical-token adapters and corrected observed narrow-layout issues.
-- [x] (2026-10-09) Passed 30 isolated/combination browser cases and recorded selection/non-selection walkthroughs; automatic Work routing remains a separate gate.
+- [x] (2026-10-09) Passed 31 isolated/combination browser cases after review corrections and recorded selection/non-selection walkthroughs; automatic Work routing remains a separate gate.
 - [x] (2026-10-09) Updated version 0.2.0 listing/docs and generated catalogs; repository, dependency, freshness and plugin checks passed.
 - [x] (2026-10-09) Recorded a locally verified pilot candidate with explicit external evidence gaps.
 
 - [ ] Verify an authorized live managed Pages deployment and returning-browser update. No destination authorized for this expansion.
 - [ ] Verify actual ChatGPT Work routing/handoffs, clean-machine macOS/Windows installation and novice usability.
+
+- [x] (2026-10-09) Corrected dependency placement, chart emphasis colors and Gantt lifecycle; 31 browser checks, locked production rebuilds and targeted boundary checks passed. Previous reports preserved in review-fixes/before/.
 
 ## Surprises & Discoveries
 
@@ -49,7 +51,7 @@ Decision (2026-10-09): keep lifecycle scripts disabled, retain reviewed suppleme
 ## Outcomes & Retrospective
 
 
-Version 0.2.0 is implemented as a locally verified pilot candidate: thirteen approved library recipes, managed Vite tooling, Campus Designer adapters and nineteen discoverable skills. Presentation passed 9/9 browser cases, dashboard 13/13 and operations 8/8. Three production builds at a repository-prefix URL and a second fresh reproduction passed; notices and publication boundaries were checked. Repository generation/checks and isolated Codex/Claude installation passed. Earlier live examples still demonstrate only version 0.1.1. No new live deployment was attempted. Work routing, clean-machine setup, novice usability, comprehensive network interception and full accessibility remain unverified. Browser viewport limitations required fixed-width review frames; nested-frame actions were unreliable, so keyboard interactions were tested in top-level previews.
+Version 0.2.0 is implemented as a locally verified pilot candidate: thirteen approved library recipes, managed Vite tooling, Campus Designer adapters and nineteen discoverable skills. Presentation passed 10/10 browser cases after review corrections, dashboard 13/13 and operations 8/8. Three production builds at a repository-prefix URL and a second fresh reproduction passed; notices and publication boundaries were checked. Repository generation/checks and isolated Codex/Claude installation passed. Earlier live examples still demonstrate only version 0.1.1. No new live deployment was attempted. Work routing, clean-machine setup, novice usability, comprehensive network interception and full accessibility remain unverified. Browser viewport limitations required fixed-width review frames; nested-frame actions were unreliable, so keyboard interactions were tested in top-level previews.
 
 ## Context and Orientation
 
@@ -135,3 +137,9 @@ Revision note: saved the user-approved expansion for implementation, retaining a
 Five workflow skills and Campus Designer remain; thirteen library skills are added without marketplace schema changes. PLAN adds libraries/build mode; SETUP tools; EVALUATION dependency/production evidence; DEPLOYMENT exact results. Plain apps require no Node; managed apps use pinned Node/npm/Vite and optional React. Both deploy static files with no external runtime service or secrets.
 
 Revision note (2026-10-09): completed the simplification pass (removed unused fixture-generator state and duplicated manifest generation, clarified plain-only build instructions), verified gallery desktop/narrow output, and stopped all trial preview processes. Catalog regeneration retained only the pre-existing ordering differences, so those unrelated edits remain uncommitted. Recorded implementation, 30 observed browser passes, reproduction and dependency findings; retained external release gates instead of claiming unavailable environments passed.
+
+Review follow-up (2026-10-09): Independent review reproduced skipped notices for bundled devDependencies, ECharts emphasis color lifting and accumulating Frappe document listeners. Require runtime dependency placement, retain solid chart states, and use a document-lifetime schedule container. The pinned Gantt version has no destroy API, so repeated component unmount is outside this recipe.
+
+Review outcome (2026-10-09): all three findings corrected. Runtime notices are protected by dependency-field validation, chart states use solid colors, and the schedule instance survives repeated navigation. Tests import the real operations component; no generic lifecycle abstraction was added. External release gates remain open.
+
+Correction validation: repository generation/checks, manifest validation and whitespace checks passed; gallery reports 31 cases. The optional skill-creator validator lacks PyYAML, so repository skill validation is the available evidence. Temporary browser tabs and preview servers were closed.

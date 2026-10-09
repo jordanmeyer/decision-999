@@ -33,7 +33,7 @@
           ]
         }
       },
-      "limitations": "Analytical charts; local series only, text-safe tooltips, accessible tabular equivalent."
+      "limitations": "Analytical charts; local series only, text-safe tooltips, accessible tabular equivalent. Adapter covers solid bar/pie/scatter states and disables line emphasis; other series require explicit state review."
     },
     {
       "id": "react-flow",
@@ -108,7 +108,7 @@
           ]
         }
       },
-      "limitations": "Task schedules only; dates do not establish resource-feasible optimization. Copy distributed CSS because its export map omits a CSS subpath."
+      "limitations": "Task schedules only; dates do not establish resource-feasible optimization. Copy distributed CSS because its export map omits a CSS subpath. No destroy API: retain one mounted instance per document; do not recreate on view changes."
     },
     {
       "id": "tabulator",

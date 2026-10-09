@@ -18,10 +18,10 @@ chart.setOption({ aria: { enabled: true }, tooltip: { renderMode: 'richText' },
   series: [{ type: 'bar', data: [390, 234] }] });
 ```
 
-Use echarts.js and tokens.js. Give the chart a measured height. Use a ResizeObserver to resize it; resize again when a containing slide/view becomes visible. Dispose the chart and observer on teardown. Provide a text/table equivalent with units and non-color labels. Avoid HTML tooltip formatters for imported strings.
+Use echarts.js and tokens.js. The adapter preserves bar/pie/scatter fills in emphasis and selection, prevents blur fading, and disables line emphasis color lifting. Keep these settings when customizing series; other series types need explicit solid interaction styles and a rendered-state check. Give the chart a measured height. Use a ResizeObserver to resize it; resize again when a containing slide/view becomes visible. Dispose the chart and observer on teardown. Provide a text/table equivalent with units and non-color labels. Avoid HTML tooltip formatters for imported strings.
 
 Visual libraries use the relevant [theme assets](../../assets/library-themes/) with the bundled [Campus Designer](../campus-designer/SKILL.md). Generated paths above are relative to the student's app, not the installed plugin.
 
 ## Verify
 
-Check displayed values against independently derived totals, initial hidden containers, narrow layout, text alternatives, and cleanup after navigation. Record failures and observed production behavior through [Evaluate](../evaluate-browser-app/SKILL.md). Check the [official documentation](https://echarts.apache.org/handbook/en/) for API detail, but do not replace pinned versions or add remote services.
+Check normal, hover/highlight, selected and blurred marks against the original solid colors; do not rely on initial palette inspection. Check displayed values against independently derived totals, initial hidden containers, narrow layout, text alternatives, and cleanup after navigation. Record failures and observed production behavior through [Evaluate](../evaluate-browser-app/SKILL.md). Check the [official documentation](https://echarts.apache.org/handbook/en/) for API detail, but do not replace pinned versions or add remote services.

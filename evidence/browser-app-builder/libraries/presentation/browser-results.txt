@@ -1,12 +1,14 @@
-- heading "Library checks" [level=1]
-- status: 9/9 passed
-- list:
-  - listitem: "PASS: Pricing known answer"
-  - listitem: "PASS: Currency decimal calculation"
-  - listitem: "PASS: Invalid quantity rejected"
-  - listitem: "PASS: jStat independent sample statistics"
-  - listitem: "PASS: seedrandom published reference sequence"
-  - listitem: "PASS: Seeded uniform mean, tolerance fixed before run"
-  - listitem: "PASS: Local reproducibility and global RNG preserved"
-  - listitem: "PASS: ECharts isolated SVG series"
-  - listitem: "PASS: reveal isolated navigation and teardown"
+Library checks
+
+10/10 passed
+
+PASS: Pricing known answer
+PASS: Currency decimal calculation
+PASS: Invalid quantity rejected
+PASS: jStat independent sample statistics
+PASS: seedrandom published reference sequence
+PASS: Seeded uniform mean, tolerance fixed before run
+PASS: Local reproducibility and global RNG preserved
+PASS: ECharts isolated SVG series
+PASS: ECharts solid normal, highlighted and selected colors
+PASS: reveal isolated navigation and teardown

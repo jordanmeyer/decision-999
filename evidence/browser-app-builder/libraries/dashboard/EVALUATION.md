@@ -1,5 +1,5 @@
 # Dashboard evaluation
 
-Tested local commit: `57c9224214010fe2e07c02e484f8afc2d473b8e8`. Browser suite: 13/13 passed. Production build and non-root preview passed. See ../README.md for independent expectations, interaction observations, failed rounds, limitations and reproduction. Source paths: app/, tests/, .github/workflows/, package.json, package-lock.json, .npmrc, .node-version, vite.config.js, scripts/, licenses/. Relevant paths were clean after the final build and checks.
+Review-correction checkpoint (October 9, 2026): `2f6751e117c515cad36c5eefcf7dc7d37aec43f4`. Browser suite: 13/13 passed. Locked clean installation, production build and repository-prefix preview passed. Rebuild left relevant source paths clean. Source paths: app/, tests/, .github/workflows/, package.json, package-lock.json, .npmrc, .node-version, vite.config.js, scripts/, licenses/.
 
-This is a maintainer-authored synthetic fixture, not a completed student workflow or live deployment.
+See ../review-fixes/README.md for the corrections and targeted checks; previous reports and results remain under ../review-fixes/before/. See ../README.md for reproduction and retained environment limitations. This is a synthetic maintainer fixture, not a student or live deployment trial.
