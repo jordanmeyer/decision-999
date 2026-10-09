@@ -314,7 +314,7 @@ def listing_page(plugin, config, base, clients):
             entries.append(f'''<li class="app-example">
               <img src="{href}example-{i}{Path(e['preview']).suffix}" alt="{escape(e['previewAlt'])}" loading="lazy">
               <div><p class="label">{escape(e['label'])}</p><h4><a href="{escape(e['url'])}">{escape(e['problem'])}</a></h4>
-              <p>{escape(e['lesson'])}</p><p class="meta">{escape(e['libraries'])}</p>
+              <p>{escape(e['lesson'])}</p><p class="meta">JavaScript libraries: {escape(e['libraries'])}</p>
               <a class="text-link" href="{escape(e['walkthrough'])}" aria-label="How {escape(e['label'])} was built">How this was built</a></div></li>''')
         else:
             entries.append(f'<li><a class="text-link" href="{escape(e["url"])}">{escape(e["label"])}</a></li>')
