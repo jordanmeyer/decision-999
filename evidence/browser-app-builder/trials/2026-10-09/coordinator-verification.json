@@ -6,17 +6,19 @@
     "remote": null
   },
   "inventory": {
-    "tested_commit": "67ddbfa52b7f78416d82d88a3d055c7d141420ff",
-    "report_head": "3e73043c0ae0253fc2cb473455049ea607dee5d8",
+    "tested_commit": "445504c512ed6ea69e9c4eaa350db343cd85029c",
+    "report_head": "159a23c3a786cf806bb7ad817c0228217be14686",
     "source_and_plan_clean": true,
     "remote": null,
-    "dependency_check": "Approved direct dependencies and registry lockfile. Review transitive changes and run npm ci before testing."
+    "dependency_check": "Approved direct dependencies and registry lockfile. Review transitive changes and run npm ci before testing.",
+    "previous_tested_commit": "67ddbfa52b7f78416d82d88a3d055c7d141420ff"
   },
   "sales": {
-    "tested_commit": "50b631bc96735e673beda72c510aa4d34bc3fdef",
-    "report_head": "752767d0381359a70b30a6ed77f600ad164082d2",
+    "tested_commit": "d5f8cff4f092a6da2a2336ecb3bf13833df422f6",
+    "report_head": "e10965e3c8ef45aabf64de415c609c3b47c3ecf6",
     "source_and_plan_clean": true,
     "remote": null,
-    "dependency_check": "Approved direct dependencies and registry lockfile. Review transitive changes and run npm ci before testing."
+    "dependency_check": "Approved direct dependencies and registry lockfile. Review transitive changes and run npm ci before testing.",
+    "previous_tested_commit": "50b631bc96735e673beda72c510aa4d34bc3fdef"
   }
 }

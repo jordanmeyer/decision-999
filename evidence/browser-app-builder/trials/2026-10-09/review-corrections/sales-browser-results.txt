@@ -1,0 +1,36 @@
+Sales model checks
+
+32/32 passed; 0 failed.
+
+PASS — Example: revenue 39000, cost 23400, contribution 15600 cents
+PASS — North intersection: 24000/14400/9600 cents
+PASS — South: 15000/9000/6000 cents
+PASS — Empty North/Pen intersection: zeros
+PASS — Zero quantity and a loss: 3×0.10 minus 3×0.20 = −30 cents
+PASS — BOM, CRLF, quoted commas, escaped quotes and literal HTML
+PASS — Reordered exact headers
+PASS — Unclosed quote rejected
+PASS — Extra field rejected
+PASS — Missing field rejected
+PASS — Missing header rejected
+PASS — Duplicate header rejected
+PASS — Extra precision rejected, not rounded
+PASS — Blank price rejected
+PASS — Negative price rejected
+PASS — Fractional units rejected
+PASS — Exponent notation rejected
+PASS — Empty dataset rejected
+PASS — Blank region rejected
+PASS — Labels longer than 120 rejected
+PASS — Input maxima accepted exactly
+PASS — Quantity limit enforced
+PASS — Price limit enforced
+PASS — 5,000 rows: each 2×$1.05/$0.20, total $10,500/$2,000/$8,500
+PASS — 5,001 rows rejected
+PASS — 2 MB UTF-8 size limit enforced
+PASS — Unsafe aggregate cents rejected
+PASS — Chart hidden-to-visible resize; solid normal/highlight/blur/select fills; disposal
+PASS — Safe-integer large totals retain the final cent when displayed
+PASS — Currency formatting preserves negative cents and zero
+PASS — Blank and multiline CSV use explicitly labeled data-record indices
+PASS — Header/menu sorting survives filtering; large imported card/chart amounts are exact

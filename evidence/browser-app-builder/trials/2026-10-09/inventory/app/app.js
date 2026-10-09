@@ -29,6 +29,7 @@ function ledger() {
   }));
 }
 function render() {
+  for (const field of form.querySelectorAll('input')) { field.removeAttribute('aria-invalid'); field.removeAttribute('aria-describedby'); }
   try {
     const next = Object.fromEntries([...new FormData(form)].map(([key, value]) => [key, key === 'seed' ? value : value.trim() ? Number(value) : NaN]));
     const output = run(next);
@@ -39,9 +40,14 @@ function render() {
       block.innerHTML = `<h3>${names[key]}</h3><div class="metrics"><div class="metric"><strong>${stats.fill.toFixed(1)}%</strong><span>Fulfilled demand${stats.demand ? '' : ' (no demand)'}</span></div><div class="metric"><strong>${stats.meanStock.toFixed(1)}</strong><span>Mean end stock · units</span></div></div><p>${stats.unmet} units unmet · ${stats.pending} units pending at end</p>`;
       return block;
     }));
-    chart.setOption({ animation: false, aria: { enabled: true }, tooltip: { trigger: 'axis', renderMode: 'richText' }, legend: { selectedMode: false, bottom: 0 }, grid: { left: 48, right: 16, top: 28, bottom: 60 }, xAxis: { type: 'category', name: 'Day', data: results.daily.map(row => row.day) }, yAxis: { type: 'value', name: 'Units', min: 0 }, series: Object.entries(results).map(([key, rows]) => ({ name: names[key], type: 'line', data: rows.map(row => row.stock), symbol: 'none', lineStyle: { width: 3, type: key === 'weekly' ? 'dashed' : 'solid' }, emphasis: { disabled: true } })) }, true);
+    chart.setOption({ animation: false, aria: { enabled: true }, tooltip: { trigger: 'axis', renderMode: 'richText' }, legend: { selectedMode: false, bottom: 0 }, grid: { left: 48, right: 16, top: 28, bottom: 60 }, xAxis: { type: 'category', name: 'Day', data: results.daily.map(row => row.day) }, yAxis: { type: 'value', name: 'Units', min: 0 }, series: Object.entries(results).map(([key, rows]) => ({ name: names[key], type: 'line', data: rows.map(row => row.stock), symbol: rows.length === 1 ? 'circle' : 'none', symbolSize: 10, lineStyle: { width: 3, type: key === 'weekly' ? 'dashed' : 'solid' }, emphasis: { disabled: true } })) }, true);
     ledger(); status.textContent = 'Comparison updated. Both policies use identical daily demand.';
-  } catch (issue) { error.textContent = issue.message; status.textContent = 'Results still show the last successful run. Correct the inputs and run again.'; }
+  } catch (issue) {
+    const field = form.elements[issue.field];
+    error.textContent = field ? `${field.labels[0].textContent.trim()}: ${issue.message}` : issue.message;
+    status.textContent = 'Results still show the last successful run. Correct the inputs and run again.';
+    if (field) { field.setAttribute('aria-invalid', 'true'); field.setAttribute('aria-describedby', 'error'); field.focus(); }
+  }
 }
 form.addEventListener('submit', event => { event.preventDefault(); render(); });
 form.addEventListener('input', () => { status.textContent = 'Inputs changed. Run comparison to update results and export.'; });

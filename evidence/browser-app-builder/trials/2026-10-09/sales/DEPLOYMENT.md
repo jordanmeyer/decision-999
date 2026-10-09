@@ -7,3 +7,5 @@ A real source-repository link is deliberately absent rather than fabricated. Aft
 Later updates use ordinary commits: revise, evaluate affected behavior, run freshness checks, push only after authorization, verify deployment and live revision. Do not force-push. Current local production preview is http://127.0.0.1:9332/fresh-sales/.
 
 Local evaluated commit:50b631bc96735e673beda72c510aa4d34bc3fdef. Production build verified separately, including non-root assets, known totals and actual imports. Runtime preview session44698 remains available on9332; restart with `npm run preview -- --port 9332` from project root after `npm run build`. No monitoring is scheduled. Tests/development stopped at handoff. Published commit: none.
+
+Review corrections are locally evaluated at d5f8cff4f092a6da2a2336ecb3bf13833df422f6. Production was rebuilt; no repository or live publication exists. Earlier evaluated commits above are historical.

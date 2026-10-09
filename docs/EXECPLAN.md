@@ -28,6 +28,8 @@ Students describe an application in ordinary language; the agent selects suitabl
 
 - [x] (2026-10-09) Completed three independent builds from empty folders: pricing 25/25, inventory 13/13 and sales 28/28 browser checks. Verified actual library use, source/plan freshness and local production behavior; no push or publication.
 
+- [x] (2026-10-09) Corrected seven independent app-review findings. Inventory14/14 and sales32/32 browser checks pass; production sorting, exact cents, CSV errors, single-day chart marks and error focus verified. Refreshed source snapshots/checkpoints; preserved earlier reports.
+
 ## Surprises & Discoveries
 
 
@@ -36,6 +38,8 @@ The current 0.1.2 workflow forbids Node installation/build systems and copies ap
 Existing unrelated edits affect site/config.json, both generated marketplace catalogs, and untracked .claude/. Preserve them. This configured machine has Node 22.19.0 and npm 10.9.3. Registry inspection, installation and browser trials established compatible configurations. An initial low-severity KaTeX advisory required a pinned override. reveal.js 6 exports reveal.js/reveal.css; the older dist subpath failed. Narrow reveal slides required fixed scaling and disabling automatic scroll activation; a native file input needed explicit sizing. Two runtime packages required supplemental license notices. Final audits reported zero known advisories. The sandbox blocked the default npm cache; a temporary writable cache completed reproduction without global changes. Evidence and failure details are in evidence/browser-app-builder/libraries/.
 
 Fresh trials found a native form-reset timing bug, narrow currency/text overflow and an incorrect chart paint-order assertion; all were corrected with failed rounds retained. Managed previews occasionally required restarting after source changes. Bundle-size warnings remain approximately 536 kB for inventory and 979 kB for sales. Evidence: evidence/browser-app-builder/trials/2026-10-09/.
+
+Independent app review found gaps beyond initial model tests: long seed reflow, a one-point chart without symbols, detached validation, an ambiguous stock-limit hint, two conflicting sort controls, floating-point currency presentation and misleading CSV row numbers. Regression groups now cover actual application interactions as well as calculation functions.
 
 ## Decision Log
 
@@ -53,6 +57,8 @@ Decision: skill descriptions support implicit discovery; Plan/Build also explici
 Decision (2026-10-09): keep lifecycle scripts disabled, retain reviewed supplemental runtime notices, and pin the Mermaid KaTeX override. Actual builds and audits established these requirements. Record selection walkthroughs separately from automatic host routing; no independent Work routing trial was available.
 
 Decision (2026-10-09): repeat the original three applications with ordinary briefs and no prescribed libraries. Freeze plugin3966d48 and let each agent select the smallest useful set. Retain production previews for user review, stop test servers, and perform no push or deployment before review.
+
+Decision (2026-10-09): correct the seven confirmed app defects without adding optional features or changing the plugin. Tabulator owns sorting; integer cents remain exact through labels; CSV errors explicitly count nonempty data records. Keep the business models unchanged and preserve old evaluation rounds.
 
 ## Outcomes & Retrospective
 
@@ -155,3 +161,5 @@ Correction validation: repository generation/checks, manifest validation and whi
 Fresh-trial request (2026-10-09): user requested three subagents to restart the original examples from empty folders before pushing. Freeze corrected plugin3966d48, avoid earlier fixtures, record ordinary-language selection and simulated Q&A, and stop publication at local preparation. Pricing may correctly select no library.
 
 Fresh-trial outcome (2026-10-09): three requested subagents finished original applications from empty folders, with independent coordinator checks and preserved failures. Saved reproducible source snapshots and compared final source against evaluated commits. No push; publication and external host/usability gates remain open.
+
+App-review correction outcome (2026-10-09): seven findings corrected in local working projects and repository evidence snapshots. Inventory tested445504c, salesd5f8cff;46 checks passed across these changed apps, plus targeted production inspection. Pricing and plugin unchanged. CSV upload retry followed renewed user authorization after accidental denial; no permission bypass. No push or deployment. Temporary correction servers stopped; historical and external validation limits remain.

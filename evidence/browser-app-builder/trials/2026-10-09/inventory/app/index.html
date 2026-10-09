@@ -15,7 +15,7 @@
 <label>Daily reorder point (units)<input name="point" type="number" value="15" min="0" max="10000" step="1" required></label>
 <label>Daily order quantity (units)<input name="quantity" type="number" value="30" min="1" max="10000" step="1" required></label>
 <label>Weekly target (units)<input name="target" type="number" value="60" min="0" max="10000" step="1" required></label>
-</div><p class="hint">Set minimum = maximum for fixed demand. All quantities are whole units; stock and policy levels are capped at 10,000.</p>
+</div><p class="hint">Set minimum = maximum for fixed demand. All quantities are whole units; starting-stock and policy inputs are capped at 10,000. Resulting stock may exceed that input limit.</p>
 <div class="actions"><button type="submit">Run comparison</button><button type="button" id="reset" class="secondary">Reset defaults</button><button type="button" id="download" class="secondary">Download daily CSV</button></div>
 <p id="status" role="status">Loading simulation…</p><p id="error" role="alert"></p>
 </form>

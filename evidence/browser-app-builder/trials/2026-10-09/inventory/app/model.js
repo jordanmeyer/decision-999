@@ -3,11 +3,11 @@ import seedrandom from 'seedrandom';
 export const defaults = { seed: 'classroom-1', days: 30, start: 35, min: 0, max: 12, lead: 2, point: 15, quantity: 30, target: 60 };
 export const bounds = { days: [1, 90], start: [0, 10000], min: [0, 1000], max: [0, 1000], lead: [1, 30], point: [0, 10000], quantity: [1, 10000], target: [0, 10000] };
 export function validate(input) {
-  if (typeof input.seed !== 'string' || !input.seed.trim() || input.seed.length > 80) throw Error('Seed must contain 1–80 characters.');
+  if (typeof input.seed !== 'string' || !input.seed.trim() || input.seed.length > 80) throw Object.assign(Error('Enter 1–80 characters.'), { field: 'seed' });
   for (const [key, [min, max]] of Object.entries(bounds)) {
-    if (!Number.isInteger(input[key]) || input[key] < min || input[key] > max) throw Error(`${key}: enter a whole number from ${min} to ${max}.`);
+    if (!Number.isInteger(input[key]) || input[key] < min || input[key] > max) throw Object.assign(Error(`Enter a whole number from ${min} to ${max}.`), { field: key });
   }
-  if (input.min > input.max) throw Error('Minimum daily demand must not exceed maximum.');
+  if (input.min > input.max) throw Object.assign(Error('Minimum daily demand must not exceed maximum.'), { field: 'min' });
   return input;
 }
 export function demandSequence(seed, days, min, max) {

@@ -1,0 +1,18 @@
+Inventory model checks
+
+14 passed; 0 failed. Complete.
+
+PASS — Published seedrandom reference draws, without changing global RNG
+PASS — Independent one-day known answers
+PASS — Four-day stock/shortage and trigger sequence
+PASS — Day d+L receipt and outstanding orders suppress duplicate orders
+PASS — Weekly end-day7 review and start-day9 receipt
+PASS — Arrivals precede demand; positive lead1
+PASS — Fixed-demand and zero-demand limits
+PASS — Seed repeat/change and identical demand across policies
+PASS — Uniform0..12 independent mean/variance-derived tolerances (100000 draws): mean 5.99926; bin range 7580–7782
+PASS — Per-day material and demand conservation for large realistic case
+PASS — Reject blank/noninteger/negative/inverted and impractical inputs
+PASS — Coordinator-derived four-day policy comparison
+PASS — CSV two-policy rows, input metadata and escaped seed
+PASS — Narrow long seed, single-day marks, associated focused validation and recovery

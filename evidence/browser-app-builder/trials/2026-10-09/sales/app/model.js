@@ -12,7 +12,7 @@ export function parseSales(text) {
     throw Error('Use exactly these headers: region, product, quantity, unit_price, unit_cost.');
   if (!data.length || data.length > 5000) throw Error('CSV must contain 1–5,000 sales rows.');
   const rows = data.map((values, index) => {
-    const fail = message => { throw Error(`Row ${index + 2}: ${message}`); };
+    const fail = message => { throw Error(`Data record ${index + 1} (blank records excluded): ${message}`); };
     if (values.length !== 5) fail('expected exactly five fields.');
     const row = Object.fromEntries(fields.map((field, i) => [field, values[i].trim()]));
     for (const field of ['region', 'product']) if (!row[field] || row[field].length > 120) fail(`${field} must contain 1–120 characters.`);

@@ -1,3 +1,5 @@
+import { money } from '../app/format.js';
+import { checkSalesUI } from './ui.js';
 import { parseSales, filterSales, totals } from '../app/model.js';
 import example from '../app/example.csv?raw';
 import { checkChart } from './chart.js';
@@ -35,6 +37,10 @@ test('5,001 rows rejected', () => rejects(header+('N,P,1,1,0\n').repeat(5001),'1
 test('2 MB UTF-8 size limit enforced', () => rejects(header+'é'.repeat(1000000),'2 MB'));
 test('Unsafe aggregate cents rejected', () => rejects(header+('N,P,1000000,1000000,0\n').repeat(100),'exact-cent'));
 test('Chart hidden-to-visible resize; solid normal/highlight/blur/select fills; disposal', checkChart);
+test('Safe-integer large totals retain the final cent when displayed', () => equal(money(8000000000000001), '$80,000,000,000,000.01'));
+test('Currency formatting preserves negative cents and zero', () => equal([money(-8000000000000001),money(-1),money(0)], ['-$80,000,000,000,000.01','-$0.01','$0.00']));
+test('Blank and multiline CSV use explicitly labeled data-record indices', () => rejects(header+'N,"multi\nline",1,3,1\n\nN,P,no,3,1','Data record 2 (blank records excluded)'));
+test('Header/menu sorting survives filtering; large imported card/chart amounts are exact', checkSalesUI);
 let passed=0;
 for (const [name, run] of cases) { const li=document.createElement('li'); try { await run(); passed++;li.textContent=`PASS — ${name}`; } catch(error) { li.textContent=`FAIL — ${name}: ${error.message}`; } document.querySelector('#results').append(li); }
 document.querySelector('#summary').textContent=`${passed}/${cases.length} passed; ${cases.length-passed} failed.`;
