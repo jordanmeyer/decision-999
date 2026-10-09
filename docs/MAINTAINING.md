@@ -15,3 +15,11 @@ This guide is for the course team maintaining the curated collection of MBA stud
 **Review.** Describe what the plugin does, who it is for, data sources and rights, the exact tests and results, and known limits. A reviewer installs the plugin, verifies its evidence and repeats relevant checks before publication; historical artifact review does not require new model generation. Listings must not claim endorsement by an employer, institution, or anyone else.
 
 To update a plugin, bump its `version`, repeat checks affected by the change, and update the listing and evidence together. A historical PASS applies only to its identified source version.
+
+## Browser applications
+
+Browser App Builder is a separate instructor-built pilot for independent student app repositories. Its five workflow skills cover Setup, Plan, Build, Evaluate, and Deploy; generated applications need no Python/Node installation. The directory's Python commands remain maintainer tooling only. Preserve the existing Create Your Own plugin path for plugin authors.
+
+`plugins/browser-app-builder/skills/campus-designer/` is generated from `plugins/campus-designer/skills/campus-designer/` by `scripts/build.py`. Edit only the canonical designer, then rebuild and commit the generated copy with the catalogs. `scripts/check.py` rejects a stale copy and verifies regeneration removes obsolete resources. Build invokes this packaged designer directly, so students do not need another plugin. Public brand guidance supplies styling, not affiliation or mark authorization.
+
+Run `python3 evidence/browser-app-builder/check.py` for Git freshness and app-only publication boundaries. Browser fixtures and reproduction instructions live in `evidence/browser-app-builder/`. Distinguish those maintainer checks from actual Work installation, fresh-chat student trials, clean-machine setup, and live deployment. Keep unsupported release gates explicit in the listing and ExecPlan. No public app submission flow is introduced.

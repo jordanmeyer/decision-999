@@ -17,6 +17,8 @@ NAV = (('plugins', 'Plugins'), ('install', 'Install'), ('about', 'About'))
 SCHEMA = 'https://agent-plugins.org/schemas/1.0.0/plugin.schema.json'
 INTERFACE = ('displayName', 'shortDescription', 'longDescription', 'developerName', 'category')
 LISTING = ('label', 'audience', 'limits', 'method')
+DESIGNER = Path('plugins/campus-designer/skills/campus-designer')
+BUILDER = Path('plugins/browser-app-builder')
 WINDOW_BAR = '<div class="window-bar" aria-hidden="true"><span></span><span></span><span></span></div>'
 
 
@@ -53,6 +55,23 @@ def bundled(package, value, where, suffix):
 
 def text(value):
     return isinstance(value, str) and value.strip()
+
+
+def designer_files(root):
+    """One authored designer; the builder ships a generated, self-contained copy."""
+    return {p.relative_to(root / DESIGNER): p.read_bytes() for p in (root / DESIGNER).rglob('*') if p.is_file()}
+
+
+def bundle_designer(root):
+    if not (root / BUILDER).is_dir():
+        return
+    destination = root / BUILDER / 'skills/campus-designer'
+    if destination.exists():
+        shutil.rmtree(destination)
+    for path, content in designer_files(root).items():
+        target = destination / path
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(content)
 
 
 def check_links(folder):
@@ -306,6 +325,7 @@ def build(root=ROOT, base=None):
     config = read_json(root / 'site/config.json')
     base = base or urlsplit(config['url']).path
     require(re.fullmatch(r'/(?:[\w.-]+/)*', base), 'Base must be an absolute directory path')
+    bundle_designer(root)
     plugins = load(root, config)
     clients = load_clients(root)
     for path, content in catalogs(config, plugins).items():

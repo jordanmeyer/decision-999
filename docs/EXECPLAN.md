@@ -1,134 +1,167 @@
-# Complete the plugin directory with existing reviewed examples
+# Build the Browser App Builder plugin
 
-This ExecPlan is a living document maintained according to `~/.codex/PLANS.md`. Keep Progress, Surprises & Discoveries, Decision Log, and Outcomes & Retrospective current.
+This living ExecPlan follows `~/.codex/PLANS.md`. Maintain Progress, Surprises & Discoveries, Decision Log, and Outcomes & Retrospective. The previous completed plan is archived unchanged in `docs/plans/2026-10-06-plugin-directory.md`.
 
 ## Purpose / Big Picture
 
 
-An MBA student should be able to send an employer a useful listing for a plugin they built. The faculty committee sees the same directory, initially populated by one instructor-built example, Campus Designer (named Duke Designer until October 7). Each listing explains the capability, shows actual output, offers installation steps, and identifies the evidence and limits behind its claims.
+An MBA student with no terminal experience installs Browser App Builder and develops a self-contained browser application through Setup, Plan, Build, Evaluate, and Deploy. The agent handles files, commands, history, previews, tests, and publication mechanics. The student supplies domain knowledge, makes decisions, reviews results, and handles authentication or OS prompts.
 
-The current task fills the listing with existing results from the Codex chat “Review design skill,” not newly generated examples. Visitors will see the final fictional AI and leadership symposium at desktop and mobile sizes and can inspect the source and independent review history. Complete integration and report its checks, then verify publication under the original project scope. Do not alter the sibling source, call the Claude API, or create Claude generation sessions. The coordinating agent owns commits and publication.
+Apps use HTML, CSS, JavaScript, bundled public/synthetic data, or transient local browser imports. No backends, external APIs, runtime credentials, telemetry, accounts, or paid runtime services. No required Python, Node, package manager, or editor installation. Use existing host capabilities; Git provides history and GitHub provides publication.
+
+Each stage leaves files allowing a fresh chat to continue. Successful release evidence includes a tested application, public source, and working Pages URL. A locally verified pilot candidate is distinct from a verified release.
 
 ## Progress
 
 
-- [x] (2026-10-06) Implemented the directory layout and manifest-driven listing, with site identity in `site/config.json` and generated Codex/Claude catalogs.
-- [x] (2026-10-06) Previously checked the layout in a scratch copy at 1440, 375 and 320 pixels with clearly marked placeholder images; checked keyboard copy success/failure, local Codex and Claude Code installation, and Claude manifest validation. These checks predate the real evidence import.
-- [x] (2026-10-06) Located the completed October 2 Codex builder/reviewer exercise: event round 3 PASS, research round 2 PASS, student organization round 2 PASS.
-- [x] (2026-10-06) Imported reviewed sources, final screenshots, reports and reproduction scripts into the plugin; documented provenance in `EVIDENCE.md` and `assets/evidence/provenance.json`.
-- [x] (2026-10-06) Independently verified all 45 imported provenance entries and 12 final public-file hashes against the preserved records; the evidence importer confirmed all 517 sibling files unchanged and screenshot byte equality.
-- [x] (2026-10-06) Replaced the unrelated pricing-workshop prompt and removed the unused Claude generation runner. Reconciled the package README and validation record with actual iterative Codex evidence.
-- [x] (2026-10-06) Built and checked the integrated repository; catalogs, local manifest validation and whitespace checks pass.
-- [x] (2026-10-06) Parent inspected real home/listing/example at 1440px and 320px, loaded images/fonts, checked keyboard copy feedback and example registration/reset focus; no browser errors or narrow overflow.
-- [x] (2026-10-06) Completed independent asset/code review without blocking findings and documented fresh-install and clipboard-read limitations.
-- [x] (2026-10-06) Published commit `78c67f55c61ee7bce7106ff67917d8551d18076b`; exact-commit deployment run 37531184205 succeeded. All 12 deployed files matched the build byte-for-byte; live home/listing/example and evidence links passed browser inspection without errors. Fresh installation was not repeated and remains a documented limitation, not a new evaluation requirement for this asset import.
-- [x] (2026-10-06) Moved review evidence, full-page captures, the single-file example and its font license from `plugins/duke-designer/` to `evidence/duke-designer/` (package 5.6 MB → 0.4 MB); all 45 provenance hashes match at the new relative paths. Bumped the plugin to 0.2.1.
-- [x] (2026-10-06) Replaced full-page listing screenshots with 1440×900 and 390×844 top crops; the originals sit at their review paths under `evidence/duke-designer/assessment/reviews/event/round-3/`.
-- [x] (2026-10-06) Repositioned the home page as a marketplace for AI users who want MBA-level work done: value headline, example requests, featured listing, why MBA-built plugins differ, and a three-step how-it-works with install steps. Rewrote evidence as two plain results and a short method; trimmed the example prompt and limits; shortened the home title.
-- [x] (2026-10-06) Build, `check.py` and `claude plugin validate` (catalog and plugin) pass; local desktop, 375px and 320px review found no horizontal overflow.
-- [x] (2026-10-06) Site-wide polish pass against the design skill: section labels pass contrast on every surface, one section rhythm, navy listing header with framed screenshots, navy footer, word-boundary command wrapping, and a 1440×810 card image (plugin 0.2.4).
-- [x] (2026-10-06) Added Create Your Own 0.1.0, the course scaffolding: a development guide (SOP to skill, cross-app portability, testing, packaging), templates, and `new_plugin.py`, which packages a skill folder for this site. It was packaged with its own script and installed in empty Claude Code and Codex settings. `site/config.json` `featured` now orders the home page and catalogs.
-- [x] (2026-10-07) Renamed Duke Designer to Campus Designer 0.3.0: plugin, skill and evidence folders, install name, listing address, example request and footer credit. Preserved review records keep the original name.
-- [x] (2026-10-07) Made listing screenshots optional: no image block on the listing, and the directory card shows the first example request instead. Create Your Own 0.1.2 drops its illegible terminal image.
+- [x] (2026-10-08) Agreed five stages, no terminal experience, self-contained scope, and no required student runtimes.
+- [x] (2026-10-08) Obtained independent review and accepted preservation, attribution, freshness, and release-gate corrections.
+- [x] (2026-10-08) Archived the completed directory plan and saved this active plan.
+- [x] (2026-10-08) Probed local file creation, Git, and module-based browser calculation in Codex. Actual Work discovery remains unverified.
+- [x] (2026-10-08) Implemented package, shared guidance, starter, deployment template, and five workflow skills.
+- [x] (2026-10-08) Bundled Campus Designer from its canonical source and invoked it from Build.
+- [x] (2026-10-08) Passed 18 browser fixture checks, detected/corrected an intentional formula error, and passed nine Git/publication boundary checks.
+- [x] (2026-10-08) Integrated listing, regenerated catalogs, inspected desktop/narrow rendering and keyboard copy, and passed repository/Claude checks and two isolated CLI installations.
+- [ ] Complete actual Work fresh-chat trials and fresh macOS/Windows setup.
+- [ ] Complete authorized live GitHub publication.
+- [x] (2026-10-08) Recorded candidate readiness, independent review corrections, and outstanding release gates in evidence/browser-app-builder/.
 
 ## Surprises & Discoveries
 
 
-The original source already contains completed independent reviews, including failed rounds and corrections. Event findings E1/E2, research R1 and student-organization S1/S2 are implementation defects resolved by the final versions. The final reports identify exact source hashes; a PASS is a bounded verdict on that artifact, not general skill accuracy or a first-attempt success rate.
+The catalog already discovers multiple skills. Create Your Own's teaching approach transfers, but its Python packaging script and course-repository destination do not.
 
-The source screenshots are full-page captures, 1440×3891 and 390×5693 pixels. Listing presentation must make their content understandable without misrepresenting them as newly generated images. The downloadable single-file event page embeds original CSS/font data and relocates the unchanged script; it needs packaging checks independently of the source's historical PASS.
+Existing uncommitted work modifies `site/config.json`, both generated catalogs, and adds `.claude/`. Preserve it. The user removed grill-me from the featured list; retain that ordering.
 
-Copper section labels measured 4.13:1 on Whisper Gray bands, below the 4.5:1 AA threshold the skill applies to small text; copper passes only on white (4.62:1). Labels are now navy with a copper rule.
+The current host has Git 2.50.1, Node 22.19.0, Python, Claude Code 2.1.86, and Codex CLI 0.145.0. A disposable preview using an existing runtime displayed `PASS: browser module and calculation` in the in-app browser. This is Codex capability evidence, not clean-machine or ChatGPT Work acceptance.
 
-Claude and Codex read different catalog locations. The build generates `.claude-plugin/marketplace.json`, per-plugin `.claude-plugin/plugin.json`, and `.agents/plugins/marketplace.json` from root plugin manifests. Earlier local Claude Code 2.1.86 validation required omitting unsupported top-level description/displayName fields. Keep these generated files owned by the build.
+Published Git history includes files omitted from dist. Protect source and evidence before the first commit. Documentation changes do not invalidate calculations; Git comparisons against tested source identify relevant changes.
+
+Independent implementation review found that comparing a checkpoint directly to the working tree can miss opposing staged and unstaged edits. Separate committed, staged, and unstaged comparisons now detect this case; the regression exercise passes. Setup rerun checks now use the existing app's interaction, and Deploy creates an authorized repository before configuring its Pages settings.
+
+The browser viewport override did not resize the document, so rendered responsive checks used explicit 390px and 1440px iframe viewports. The optional skill-author validator could not run without PyYAML; no dependency was installed to support it. Repository/Claude checks and actual CLI installations passed independently.
 
 ## Decision Log
 
 
-- Decision: Keep employers as the primary audience and show the same site to the committee. Rationale: the listing is intended as a portfolio link; one instructor example honestly demonstrates the proposed course. Date: 2026-10-06, maintainer direction.
-- Decision: Use “Build with AI” and “MBA course · number pending” from `site/config.json`. Rationale: the final course name and number are unknown. Repository and marketplace remain `decision-999`. Date: 2026-10-06.
-- Decision: Permit the Duke Designer name and factual discussion of public guidance while prohibiting claims of affiliation or endorsement and institutional logos. Rationale: this is the maintainer's replacement for the original website-wide name prohibition. Date: 2026-10-06.
-- Decision (2026-10-07): Rename Duke Designer to Campus Designer (`campus-designer`), including its install name, address and skill name, so the plugin name does not suggest an official Duke tool. Its descriptions still say, accurately, that it follows Duke’s public brand guidance.
-- Decision: Keep `plugins/<name>/plugin.json` as the sole listing source and generate host catalogs. Rationale: one package folder contains contributor data, while hosts receive the formats they understand. Date: 2026-10-06.
-- Decision: Reuse the existing Codex assessment and retire the Claude generation runner. Rationale: the user explicitly requested the completed review results and no Claude API calls or generated Claude sessions. No new evaluation is needed to establish those historical findings. Date: 2026-10-06.
-- Decision: Describe three reviewed examples, three final passes after revisions and five resolved defects, without cost, duration, model-comparison or one-shot claims. Rationale: these counts are supported by specific reports; broader performance metrics are not. Date: 2026-10-06.
-- Decision: Retain final-source browser scripts with only their Playwright import adapted, and run reproductions in scratch copies. Rationale: this preserves useful repeatability without replacing historical evidence or introducing a new evaluation framework. Date: 2026-10-06.
+Decision (2026-10-08): Use browser-app-builder with five independently invocable workflow skills. Students may resume or repeat a stage.
 
-- Decision: Present the home page to AI users looking for help with work they might hire an MBA to do, modeled on OpenAI's ChatGPT plugins page (value line, example requests, benefits, three steps). Rationale: maintainer direction; the distinctive claim is that these plugins carry a professional's method rather than connecting another app. The demo shows the intended future state. Date: 2026-10-06.
-- Decision: Keep installable packages to what an install needs and put listing evidence in `evidence/<name>/`, which the build reads by convention for `EVIDENCE.md` and an optional `example.html`. Rationale: every install downloads the whole plugin folder. Date: 2026-10-06.
+Decision (2026-10-08): No mandatory student Python/Node; existing course maintainer tooling remains unchanged. Use host preview tools or existing runtimes, and report missing preview capability explicitly.
+
+Decision (2026-10-08): Public/synthetic material only in projects and evidence; student-approved public Git attribution is the explicit exception. Never invent an identity.
+
+Decision (2026-10-08): Add only missing starter files to existing folders. Preserve plans, host files, history, configuration, and unrelated remotes; resolve collisions before replacement.
+
+Decision (2026-10-08): Record evaluated commit and compare application, tests, workflow, and executable tooling through Git. Documentation-only commits need no retest; no separate digest mechanism.
+
+Decision (2026-10-08): Missing external environments leave release gates open, not fabricated or indefinitely confused with candidate implementation.
+
+Decision (2026-10-08, user steering): Bundle the former Duke Designer, now Campus Designer, and have Build use it for a shared Duke look. Generate the bundled copy from `plugins/campus-designer/skills/campus-designer/` during the catalog build, check equality, and never maintain a second authored copy. This replaces the earlier neutral-styling default. Public brand guidance does not authorize institutional marks or affiliation claims.
 
 ## Outcomes & Retrospective
 
 
-The evidence gap is filled by existing work. The plugin now includes traceable sources and review history, and its documentation no longer asks the user to run an unrelated Claude generation benchmark. Current build, catalogs, local manifest validation and browser integration checks passed. Historical scratch installs are separate; fresh installation of this integration was not repeated due an environment-isolation constraint. The requested asset integration is complete and published: exact-commit deployment succeeded, every deployed file matched the local build, and live browser inspection confirmed the listing, screenshots, evidence link and example. No Claude API calls or generation sessions were used.
+Implemented a locally verified 0.1.0 pilot candidate with five workflow skills and the generated canonical designer. Two isolated CLI installations, 18 browser calculation cases, nine Git/publication boundaries, and repository/Claude checks passed. A deliberate pricing error caused four failures and passed after correction. The independent instruction review's three findings were resolved. Evidence and reproducible fixtures are in evidence/browser-app-builder/.
+
+The final simplification pass retained one shared workflow reference, one freshness procedure, and one authored designer source. No initializer, generic app packager, policy analyzer, or student runtime dependency was added. The canonical designer's full resource tree is bundled so its internal references remain portable.
+
+Actual Work installation and fresh-chat trials, fresh-machine macOS/Windows setup, and authorized live publication remain incomplete. Maintainer fixtures and instruction reviews do not substitute for those gates. No public deployment or student outcome is claimed.
 
 ## Context and Orientation
 
 
-The workspace is `/Users/jordan/Projects/decision-999`. `site/config.json` owns the display identity, course label, repository, marketplace name, canonical URL/base path and namespace for course listing fields. The current base path is `/decision-999/`.
+Work from `/Users/jordan/Projects/decision-999`. Read create-your-own's interview, testing, and portability references. Leave its behavior unchanged. Create `plugins/browser-app-builder/` containing plugin.json, README, one shared workflow reference, assets/starter, a Pages workflow template, and five skill entrypoints: setup-browser-app, plan-browser-app, build-browser-app, evaluate-browser-app, deploy-browser-app. Names match folders. Package-local links must resolve after installation. Write generated projects outside the installed plugin.
 
-`plugins/campus-designer/plugin.json` supplies package version, vendor-facing metadata and course listing fields. `extensions.com.openai.interface` contains the displayed title, prompt and screenshot paths. `extensions.io.github.jordanmeyer` contains the evidence counts, method, audience, limits and example path. The packaged skill remains at `skills/duke-designer/SKILL.md`; it is guidance for artifact creation, not a bundled renderer or permission to use institutional marks.
+The generated sixth skill, campus-designer, carries its full references/assets from the canonical package. Build reads identity, color, typography, web, and review references. Keep Duke navy, approved type choices, accessible layouts, no unauthorized marks, and no implied endorsement. Use system fonts or licensed local assets, never remote font requests.
 
-`plugins/campus-designer/assets/desktop.png` and `mobile.png` are display crops of the final event-review captures. Everything an install does not need lives in `evidence/campus-designer/`: the preserved sources, reports and full-page captures, the single-file `example.html`, and `EVIDENCE.md`, which describes scope, provenance and reproduction. The original source at `/Users/jordan/Projects/duke-designer` is read only. It is not needed to build the directory.
-
-`scripts/build.py` reads package manifests, generates host catalogs and renders `site/layout.html`, `site/home.html` and `site/plugin.html` into ignored `dist/`. `scripts/check.py` checks clean builds and package/site boundaries. `scripts/serve.py` previews the configured base path. The existing GitHub workflow deploys `dist/` from main. The coordinating agent owns publication and must record the new exact-commit outcome.
+Evidence lives in `evidence/browser-app-builder/`. `scripts/build.py` generates catalogs, Claude manifests, designer bundle, and site output. `scripts/check.py` checks current generated files and packaging boundaries. Do not hand-edit generated files. Preserve directory layout and featured ordering.
 
 ## Plan of Work
 
 
-### Milestone 1: Reuse exact reviewed evidence
+### Milestone 1: Capabilities and handoffs
 
 
-This milestone is complete. Preserve the event round-3, research round-2 and student-organization round-2 sources, reports and checks. Keep their prior failed rounds so the iterative process is visible. Verify copied hashes against provenance and the final-verification record. The current prompt must describe the fictional Duke AI and leadership symposium, agenda, speakers, demonstration registration and rendered review. It restates the source brief; do not claim it is an exact original transcript.
+Probe file writing, Git, JavaScript-module preview, and browser test inspection in a disposable folder. Attempt isolated host installation/discovery. Distinguish Codex checks from Work desktop validation. A preview must serve app and test files, support modules, and allow browser inspection. Prefer host tools; existing runtimes are permitted, but no runtime installation fallback. Missing capabilities stop only dependent work.
 
-### Milestone 2: Integrate and inspect the listing
+Use PLAN.md for scope/model/examples/acceptance; README.md for usage/limits; DECISIONS.md for choices; SETUP.md for actual tool invocations and preview; EVALUATION.md for results and tested commit; DEPLOYMENT.md for URLs and published commit. Use app/ for publication sources, tests/ for browser checks, .github/workflows/ for publication, and ignored dist/ for generated output. Create substantive artifacts only. Every skill reads existing files; a plan's existence is not student agreement, and stage routing is not publication permission.
 
-
-This milestone is complete; current results are recorded in `docs/VALIDATION.md`. Build using the real images and evidence fields. Validate generated catalogs and local links, then inspect both the home page and `/decision-999/plugins/duke-designer/` at desktop and 320/390px widths. Follow the evidence and example links. Check the single-file example's local loading and demonstration registration. Verify that counts and method text describe iterative review and that neither page implies institutional endorsement. Test keyboard copy and its failure feedback. Record observed results in `docs/VALIDATION.md`, distinguishing historical source review from current integration checks.
-
-### Milestone 3: Publication and handoff
+### Milestone 2: Setup
 
 
-This milestone is complete; deployment and live checks are recorded in `docs/VALIDATION.md`. Review surrounding code and documentation for stale pricing-workshop prompts, removed runner references, duplicate registries and unsupported benchmark claims. Keep the standard-library build and plain browser implementation. Report completed local checks and remaining limits. The coordinating agent should publish through the existing main-branch workflow, verify the exact pushed commit and live URLs/assets, and record the deployment. Fresh remote installation remains blocked by the current isolation constraint; do not report it as passed or reuse old installation results as new proof.
+Detect folder access, command execution, Git, and preview/browser tools. Reuse Git. Official missing-Git routes: Apple's Command Line Tools on Mac; Git WinGet package or official installer on Windows. Students handle OS prompts. Verify installation in a fresh invocation; do not infer success from installer messages. Do not install Homebrew, WSL, Python, Node, or an editor. Do not bypass device policy.
+
+Record verified invocations without secrets. Copy starter using file tools for empty folders. For existing folders add missing files only, preserving PLAN.md and host files; explain collisions before replacement. Avoid enclosing Git repositories. Configure approved attribution locally after explaining public history. If attribution is deferred, initialize without commits and mark history incomplete.
+
+Ignore generated/local-input files before staging. Public/synthetic source, fixtures, reports, and screenshots only; transient browser imports never become evidence. Inspect staged contents before each commit. Acceptance: starter preview and initial revision without student-entered commands; reruns preserve work.
+
+### Milestone 3: Plan and Build
+
+
+Interview for user, decision, input/output, domain judgment, and correctness. Narrow scope and reshape backend/API requests into bundled data or local imports. Record assumptions, units, exclusions, expected-result sources, boundary behavior, and acceptance. For simulations explain seeds as inputs making random runs reproducible. Confirm consequential choices.
+
+Build from the agreed plan, using bundled Campus Designer. Separate calculations from interface code when needed for tests. Plain HTML/CSS/JavaScript; no frameworks, package managers, backend, or build system. Prefer native capabilities; justified libraries must be pinned, licensed, and local. Relative paths and no server routing. Include units, errors, keyboard controls, and narrow layouts. Run initial cases and inspect rendered output. Make meaningful reviewed commits; bring material scope/model changes back to the student. No generic packaging script: app/ is publishable source. Acceptance: fresh-chat Build succeeds from artifacts and honestly distinguishes basic checks from Evaluate.
+
+### Milestone 4: Evaluate
+
+
+Expected answers come from hand calculations or independently justified references, not the app output. Use tests/index.html with visible results and plain JS modules importing actual model functions. Execute in the existing browser preview without installing a runtime or framework. Check meaningful boundaries, malformed inputs, units, rounding, scale, invariants, seeds, nonrandom limits, and justified statistical tolerances.
+
+Commit source and tests before evaluation. Record tested commit and relevant paths: app/, tests/, .github/workflows/, plus executable tooling. Require clean tracked state and no untracked/ignored relevant source. Compare relevant paths against the checkpoint; documentation-only commits may follow. Preserve failed rounds. Fix through Build, revisit model through Plan, rerun affected checks, update checkpoint. Acceptance: detect intentional formula defect; docs-only commit preserves applicability; changed source invalidates it.
+
+### Milestone 5: Deploy
+
+
+Resolve failed/stale checks. Guide GitHub signup/sign-in/settings with available browser tools; student handles credentials and verification. Reuse authorized tools/authentication. GitHub CLI is optional only when needed. Establish account/repo/public visibility, respecting existing authorization. Review source, reports, attribution, and history before pushing; deleting latest sensitive files is insufficient.
+
+Add official Actions template before final checkpoint; refresh evaluation. Workflow runs on main, verifies app/index.html, copies app/ into dist/, uploads only dist/, and deploys Pages. Minimal permissions; shell copy, no app build runtime. Static packaging is not numerical verification. Compare source to evaluated checkpoint before publishing; check uncommitted and untracked files.
+
+Create/push only authorized repo. Wait for deployment matching pushed commit, open live app, verify repository-path assets, main interaction, known calculation, and source link. Record published commit separately. Exercise an ordinary update. No course-directory trial publication. Missing live authorization leaves this gate unverified.
+
+### Milestone 6: Verify and integrate
+
+
+Use synthetic pricing and inventory examples. Exercise stages and fresh-chat handoffs where available; keep deterministic fixture checks distinct from real student trials. Save prompts, fixtures, outputs, environments, and reproduction instructions outside installed package. Never copy secrets/caches/personal imports/generated output.
+
+Test preservation, local Git settings, freshness, package boundaries, module loading under a repository path, and designer-bundle consistency. Version 0.1.0, Development category, instructor-built pilot language, five usable prompts, and evidence-backed results. No invented adoption or compatibility claims. Update MAINTAINING and VALIDATION; preserve site identity/config and create-your-own.
+
+Review surrounding code and simplify. Remove repeated rules, unused assets, wrappers, and unnecessary scripts. No general JS policy analyzer: inspect source and observe actual browser behavior, recording limits.
 
 ## Concrete Steps
 
 
-From `/Users/jordan/Projects/decision-999`, run:
+Use disposable student folders and record actual preview URLs. From the course repository run:
 
     python3 scripts/build.py
     python3 scripts/check.py
     claude plugin validate .
     python3 scripts/serve.py
+    git diff --check
 
-The first two commands should report a completed listing/catalog build and passing focused checks; the Claude command validates files locally and should report validation passed. It is not a generation session or API evaluation. Open `http://localhost:8000/decision-999/` and `http://localhost:8000/decision-999/plugins/duke-designer/` for browser checks.
-
-For optional repeated checks of the historical source, follow the scratch-copy commands in `evidence/campus-designer/EVIDENCE.md`. Those scripts inspect existing pages using Node.js, Playwright and Google Chrome, generate new screenshots/check records only in scratch space, and make no model calls. They are unnecessary merely to establish that the retained historical reports say PASS.
+These are maintainer commands, never student prerequisites. Expect current catalogs/bundled designer, valid manifests, clean build and boundary checks. Inspect new listing at desktop/narrow widths, keyboard and copy behavior, evidence links, and examples. Commit generated files with feature changes without including unrelated config edits. Publish directory only when authorized through main Actions.
 
 ## Validation and Acceptance
 
 
-Accept local integration when clean build/check and local manifest validation pass; real images, examples and links load; desktop/narrow layouts remain readable without horizontal page scrolling; and keyboard actions and copy feedback work. The listing must accurately identify all three final review rounds and its fictional instructor example. The preserved public-file hashes must match the final reports. Verify that no source-tree changes were made and that no Claude generation occurred. Do not describe local work as published until the new deployment and live checks succeed.
+Pricing fixture: price 20, cost 12, quantity 100, fixed cost 500 gives profit 300; continuous break-even 62.5, whole-unit 63; zero contribution margin handled. Inventory fixture: stock 10/demand 3 leaves 7/unmet 0; demand 12 leaves 0/unmet 2. Same seeds reproduce random output, not proof of model accuracy.
+
+Check empty and pre-populated folders, interrupted setup, configured Git, missing Git/preview, managed denial, and conflicts. Challenge login/API/secret/confidential requests without storing sensitive material. Check public staged content, source/test/workflow freshness including untracked files, app-only publication, and no observed remote requests. Do not claim universal isolation from observation.
+
+Candidate acceptance means implemented package and passing available local checks. Release gates additionally require actual Work installation and fresh-chat workflow, fresh macOS/Windows installation, and authorized GitHub Pages deployment. Keep unavailable gates open and narrow claims accordingly.
 
 ## Idempotence and Recovery
 
 
-Build regenerates `dist/` and catalogs; do not hand-edit those generated files. Repeating checks must not change the preserved evidence. Use a disposable scratch copy for browser reproduction so new results cannot overwrite the October 2 record. If a copied hash differs, recopy only the identified source file and update provenance only for an intentional documented adaptation. Never edit the sibling to make a test pass.
+Preserve files/configuration, resolve collisions, and use ordinary commits. Never rewrite history or unrelated remotes automatically. Preserve failed evaluation rounds. Inspect existing repos/runs before deployment retries to avoid duplicates. Stop publication for sensitive history and explain remediation. Stop trial servers; retain only sanitized evidence; preserve sibling sources.
 
 ## Artifacts and Notes
 
 
-Verified import output on October 6:
+Record trial prompts, public fixtures, versions, tested/deployed commits, browser results, and reproduction steps. Screenshots show actual results. No full release gate has passed.
 
-    Verified 45 provenance entries and all 12 final public-file hashes.
-
-The final source verdicts are event round 3 PASS, research round 2 PASS and student organization round 2 PASS. These cover reviewed artifact versions after corrections, with exact matrices and limitations in each report. Historical deployment run 37510840758 belongs to the earlier neutral single-page release, not this directory redesign.
+Revision (2026-10-08): Saved approved implementation plan and incorporated user request to package canonical Campus Designer and use it in Build. Generated designer copies replace the earlier neutral default without introducing a second maintained skill source.
 
 ## Interfaces and Dependencies
 
 
-Build and focused checks require Python 3.9+ standard library. Local host-manifest validation requires Claude Code but no model session. Optional reproduction requires Node.js, the Playwright package and installed Google Chrome; the skill itself has no dependency on those reproduction tools. No Claude API key, new generation runner, database or evaluation service is needed.
-
-Revision note (2026-10-06): Reconciled the directory plan with the user's direction to reuse the completed Codex review exercise. Removed the blocked Claude-generation milestone, unrelated prompt and benchmark assumptions; separated completed local integration from coordinating-agent publication and retained the fresh-install limitation.
-
-Completion note (2026-10-06): Published the reviewed directory and imported assets from main, verified exact-commit run 37531184205, all 12 deployed-file bytes and live rendered output. The requested work is complete; historical and current installation evidence remain explicitly separated.
+Five workflow skills and one generated designer skill use the existing manifest format. No schema change. Handoffs are readable files. Git provides history; host tools provide editing/preview/testing. Optional existing runtimes are not required installations. Apps use HTML/CSS/JS and optional licensed local libraries. GitHub Actions publishes static files. Course maintainer Python tooling remains separate.

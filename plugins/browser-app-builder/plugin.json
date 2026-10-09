@@ -1,0 +1,51 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "browser-app-builder",
+  "version": "0.1.0",
+  "description": "Guide a student from local setup to a planned, tested browser app and GitHub Pages publication, with bundled Campus Designer styling.",
+  "author": {
+    "name": "Jordan Meyer"
+  },
+  "homepage": "https://jordanmeyer.github.io/decision-999/plugins/browser-app-builder/",
+  "repository": "https://github.com/jordanmeyer/decision-999",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Browser App Builder",
+        "shortDescription": "Plan, build, evaluate, and publish a browser app. No terminal experience needed.",
+        "longDescription": "Five guided stages help a student prepare a local project, agree a bounded plan, build an interactive browser app, test its calculations against independent examples, and publish source and a working demo on GitHub Pages. Campus Designer is bundled and used during Build for a shared Duke-inspired look without claims of institutional affiliation. This is an instructor-built pilot candidate; see the evidence and remaining validation gates.",
+        "developerName": "Jordan Meyer",
+        "category": "Development",
+        "defaultPrompt": [
+          "Use setup-browser-app to prepare this folder. I have never used a terminal.",
+          "Use plan-browser-app to help me plan a pricing scenario calculator that runs entirely in the browser.",
+          "Use build-browser-app to implement my agreed PLAN.md with the bundled Campus Designer.",
+          "Use evaluate-browser-app to check my app calculations with me and record the evidence.",
+          "Use deploy-browser-app to help me publish my evaluated app on GitHub Pages."
+        ],
+        "screenshots": []
+      }
+    },
+    "io.github.jordanmeyer": {
+      "label": "Pilot candidate \u00b7 Instructor-built",
+      "audience": "MBA students building a self-contained decision tool, dashboard, or simulation with an agent. No prior terminal experience assumed.",
+      "results": [
+        {
+          "value": "2 of 2",
+          "label": "Isolated CLI installation checks passed"
+        },
+        {
+          "value": "18 of 18",
+          "label": "Maintainer fixture calculation checks passed in the browser"
+        },
+        {
+          "value": "9 of 9",
+          "label": "Git freshness and publishing boundary checks passed"
+        }
+      ],
+      "method": "On October 8, 2026, the package installed in isolated Codex CLI 0.145.0 and Claude Code 2.1.86 configurations with all six skills, including Campus Designer. Maintainer-authored pricing and inventory fixtures passed 18 browser calculation checks; an intentional formula defect caused four failures and passed again after restoration. Nine Git/publication boundary checks and an independent instruction review were completed. These are local package and fixture checks, not student or ChatGPT Work trials.",
+      "limits": "Pilot candidate. Requires host file, shell, and browser preview capabilities; no Python or Node installation is required. Fresh ChatGPT Work trials, clean-machine macOS/Windows setup, and live GitHub publication remain unverified. Public or synthetic project data only; no backends or external APIs. Design guidance does not grant institutional affiliation or mark authorization.",
+      "screenshotAlt": []
+    }
+  }
+}

@@ -1,0 +1,70 @@
+# Browser App Builder evidence
+
+Instructor-built pilot candidate, checked October 8, 2026. Results below cover local packaging, maintainer-authored fixtures, and an independent instruction review. They are not student workflow outcomes, ChatGPT Work installation results, or claims of statistical/business-model accuracy.
+
+## Environment and initial probe
+
+Local Codex session on macOS; Git 2.50.1 (Apple Git-155), Codex CLI 0.145.0, Claude Code 2.1.86, and the Codex in-app browser. The system's existing Python preview server was reused for these maintainer checks; nothing was installed. Generated apps and plugin instructions do not require Python or Node. The optional skill-author validator could not run because PyYAML was absent from both the system and bundled Python environments. Repository and Claude validation ran separately as recorded below.
+
+A disposable module probe computed `(20 - 12) * 100 - 500` and visibly reported `PASS: browser module and calculation` for the expected value 300. This established local module preview before package implementation; it does not prove student Work access.
+
+## Installation: 2 of 2
+
+Installed the local marketplace in empty, disposable Codex and Claude configuration directories. Both installed `browser-app-builder@decision-999` version 0.1.0. Both caches contained setup-browser-app, plan-browser-app, build-browser-app, evaluate-browser-app, deploy-browser-app, and campus-designer. Canonical and bundled designer resources match byte-for-byte across 16 files. The course check also verifies that regeneration repairs stale content and removes obsolete generated resources.
+
+Reproduce from the repository root, replacing the temporary directories with fresh empty ones:
+
+    mkdir -p /tmp/browser-builder-codex /tmp/browser-builder-claude
+    CODEX_HOME=/tmp/browser-builder-codex codex plugin marketplace add "$PWD" --json
+    CODEX_HOME=/tmp/browser-builder-codex codex plugin add browser-app-builder@decision-999 --json
+    CLAUDE_CONFIG_DIR=/tmp/browser-builder-claude claude plugin marketplace add "$PWD"
+    CLAUDE_CONFIG_DIR=/tmp/browser-builder-claude claude plugin install browser-app-builder@decision-999
+
+Use the marketplace name from site/config.json if it changes. These installation checks made no model calls and changed neither normal host profile. They do not establish the quality of generated applications or actual Work skill discovery.
+
+## Browser fixtures: 18 of 18
+
+The [fixtures](fixtures/README.md) were authored by the implementing agent for mechanical verification, not generated in independent student chats. The test pages import the same model functions as their application interfaces. Expected values and model limitations are recorded with the fixtures.
+
+Observed browser output:
+
+    Pricing: 11/11 passed; 0 failed.
+    Inventory: 7/7 passed; 0 failed.
+
+Pricing checks include independently computed profit 300, continuous break-even 62.5, whole-unit 63, profit −4 at 62 units, profit 4 at 63 units, nonpositive margins, zero quantity/fixed cost, and invalid inputs. Inventory checks cover the stock/demand examples, zero stock, seed reproducibility, zero-demand limit, conservation, and fractional-unit rejection.
+
+In a scratch pricing copy, changing the profit formula to add 1 produced `7/11 passed; 4 failed`: hand-calculated profit, below-break-even profit, whole-unit profit, and zero-quantity profit failed. Restoring the source and reloading produced `11/11 passed; 0 failed`. The preserved fixture is the correct version; retain this failed-round account when repeating the exercise.
+
+The pricing interface, activated with Enter, displayed `Profit: 300.00. Break-even: 62.50 units; 63 whole units.` Inventory with stock 10, maximum demand 0, five days, and seed 42 displayed `5 days: 0 unmet units; 50 remaining units. Seed: 42.` Neither page reported console warnings/errors in the inspected log. The starter module loaded and its button visibly changed the status.
+
+To reproduce, use an available preview tool to serve this evidence directory. A maintainer with Python already available may run:
+
+    python3 -m http.server 8765 --bind 127.0.0.1 --directory evidence/browser-app-builder
+
+Open `/fixtures/pricing/tests/`, `/fixtures/inventory/tests/`, and the corresponding `/app/` paths. This is a reproduction option, not a student dependency. Use a scratch copy for intentional defects. No runtime installation is needed by the JavaScript fixtures.
+
+## Git and publishing boundaries: 9 of 9
+
+Run from the course repository:
+
+    python3 evidence/browser-app-builder/check.py
+
+Observed success covers a clean checkpoint, report-only commit, unstaged change, opposing staged/unstaged edits, untracked test, ignored test, committed source change, app-only publication, and symlink refusal. The script uses a synthetic identity in a disposable Git repository. It runs the actual shell packaging body extracted from the supplied Actions template, checking that reports and tests stay out of dist and symlinks are rejected before copying. It does not execute GitHub Actions or publish a repository.
+
+An independent [instruction review](reviews/instruction-review.md) found the opposing-index-edits bug and two stage-ordering issues. All three were corrected. Its four scenarios reviewed existing plans without tools, confidential/API requests, stale evaluation, and bundled-design use; these were read-only reasoning exercises, not observed novice behavior.
+
+## Directory and design checks
+
+`python3 scripts/build.py`, `python3 scripts/check.py`, `claude plugin validate .`, plugin-specific Claude validation, and whitespace checks passed. Existing site configuration and featured ordering were preserved. All generated designer resources come from the canonical skill; there is no separately authored copy.
+
+The local listing displayed all five stage prompts, the bundled designer explanation, and explicit pilot limits. Keyboard activation of its copy button displayed `Copied to the clipboard.` The clipboard content itself was not read. Local evidence/source URLs were inspected for their intended targets; remote feature URLs are not claimed live before publication.
+
+Responsive inspection used a disposable review page with 390px and 1440px iframe viewports after the browser's viewport override failed to change the actual document width. Pricing and listing rendered without horizontal document overflow in those frames; the narrow documents measured approximately 389 CSS pixels due to host scaling. This is rendered desktop/narrow review, not mobile-device testing. Fixture assets and code were reviewed as local-only; a complete network trace was not available, so no universal data-isolation claim is made.
+
+The Git installer paths were verified against the official Git macOS and Windows installation pages. The template's four exact Action tags were verified with git ls-remote against the official actions repositories: checkout v7.0.1, configure-pages v6.0.0, upload-pages-artifact v5.0.0, and deploy-pages v5.0.1. These checks establish tag existence, not a successful live workflow.
+
+## Outstanding release gates
+
+Actual ChatGPT Work installation/discovery and fresh-chat student trials; clean-machine macOS and Windows Git installation; real managed-device onboarding and interrupted installer recovery; an authorized live GitHub Pages deployment and update. Setup file preservation has instruction-review coverage, not an automated or novice-user execution claim. Browser local imports are described but no import workflow was exercised by these fixtures.
+
+No public trial repository or account was created. The course directory has not been deployed for this change. No student adoption, time savings, cross-host model quality, full accessibility, or universal numerical accuracy is claimed. These gaps do not prevent local use as a pilot candidate, but remain release gates in the ExecPlan.

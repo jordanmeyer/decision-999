@@ -7,7 +7,11 @@ import shutil
 import subprocess
 import sys
 import tempfile
-from build import ROOT, build, catalogs, load, read_json
+from build import ROOT, BUILDER, build, catalogs, designer_files, load, read_json
+
+designer = ROOT / BUILDER / 'skills/campus-designer'
+assert {p.relative_to(designer): p.read_bytes() for p in designer.rglob('*') if p.is_file()} == designer_files(ROOT), \
+    'Bundled Campus Designer is stale: run scripts/build.py and commit it'
 
 config = read_json(ROOT / 'site/config.json')
 for path, content in catalogs(config, load(ROOT, config)).items():
@@ -42,6 +46,11 @@ with tempfile.TemporaryDirectory() as temporary, redirect_stdout(io.StringIO()):
     for folder in ('plugins', 'site', 'evidence'):
         shutil.copytree(ROOT / folder, root / folder)
     build(root)  # without the sibling source project or any committed catalog
+    bundled = root / BUILDER / 'skills/campus-designer'
+    (bundled / 'obsolete.txt').write_text('Old generated resource', encoding='utf-8')
+    (bundled / 'SKILL.md').write_text('Stale generated copy', encoding='utf-8')
+    build(root)
+    assert {p.relative_to(bundled): p.read_bytes() for p in bundled.rglob('*') if p.is_file()} == designer_files(root)
     manifest, skill = root / 'plugins/campus-designer/plugin.json', root / 'plugins/campus-designer/skills/campus-designer/SKILL.md'
     original, instructions = manifest.read_text(encoding='utf-8'), skill.read_text(encoding='utf-8')
     edit(manifest, lambda m: m['extensions'][config['extension']].pop('limits'))
@@ -51,7 +60,7 @@ with tempfile.TemporaryDirectory() as temporary, redirect_stdout(io.StringIO()):
     rejects(root, 'must be a .png path inside the plugin')
     manifest.write_text(original, encoding='utf-8')
     skill.write_text(instructions + '\n[outside](../../../../README.md)\n', encoding='utf-8')
-    rejects(root, 'is missing or leaves campus-designer/')
+    rejects(root, 'is missing or leaves')
     skill.write_text(instructions, encoding='utf-8')
     shutil.copytree(root / 'plugins/campus-designer', root / 'plugins/second-example')
     edit(root / 'plugins/second-example/plugin.json', second)
@@ -72,5 +81,5 @@ with tempfile.TemporaryDirectory() as temporary, redirect_stdout(io.StringIO()):
     subprocess.run([sys.executable, ROOT / 'plugins/create-your-own/skills/create-your-own/scripts/new_plugin.py',
                     'drafts/meeting-brief', '--developer', 'Test'], cwd=root, check=True, capture_output=True)
     rejects(root, 'meeting-brief/plugin.json: fill in interface.shortDescription')
-print('Passed: catalogs current, clean build, missing listing text, escaping screenshot and skill link, automatic second listing with its team and no screenshots, '
+print('Passed: catalogs and bundled designer current, stale designer resources replaced, clean build, missing listing text, escaping screenshot and skill link, automatic second listing with its team and no screenshots, '
       'scaffolded plugin held until its listing is written.')

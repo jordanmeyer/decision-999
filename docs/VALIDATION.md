@@ -218,3 +218,13 @@ Screenshots are now optional; Create Your Own's terminal rendering was not legib
 - **Validation:** `check.py` now builds its second test listing without screenshots and asserts that it has no image block and that its card shows the request.
 
 Create Your Own 0.1.2 removes its screenshot, and its packaging guide explains when to leave screenshots out. Its build, validators and installs in empty settings were repeated.
+
+## Browser App Builder pilot candidate — October 8, 2026
+
+Added five workflow skills and a generated copy of the canonical Campus Designer. Build explicitly reads the bundled designer and its identity, color, typography, web, and review references. No required Python/Node installation or application build system is introduced; existing maintainer tooling remains separate. Archived the prior ExecPlan and saved the current plan with outstanding release gates.
+
+Local catalog/build checks and Claude manifest validation passed. Both isolated Codex CLI 0.145.0 and Claude Code 2.1.86 installations contained all six skills; the designer matches all 16 canonical files. The optional skill-author validator was unavailable because its PyYAML dependency was absent. Stale and obsolete generated designer resources are covered by the repository check.
+
+Maintainer-authored pricing/inventory fixtures passed 18 browser checks. An intentional pricing defect caused four failures, and restoring it returned all 11 pricing cases to passing. Nine Git/publication boundary checks passed, including the opposing index/worktree edits found by independent review. Setup rerun verification and new-repo Pages ordering were also corrected. The listing's keyboard copy action showed success; desktop/narrow iframe rendering showed no horizontal document overflow. See `evidence/browser-app-builder/EVIDENCE.md` for methods, reproduction, source-review limits, and review details.
+
+Actual Work/fresh-chat trials, clean-machine installation, and live GitHub deployment remain unverified. No public publication occurred. This is a locally verified pilot candidate, not an evaluated student outcome.

@@ -25,6 +25,12 @@
       "source": "./plugins/create-your-own",
       "description": "The scaffolding our students use to turn an SOP into a tested plugin that works across AI apps.",
       "category": "Development"
+    },
+    {
+      "name": "browser-app-builder",
+      "source": "./plugins/browser-app-builder",
+      "description": "Plan, build, evaluate, and publish a browser app. No terminal experience needed.",
+      "category": "Development"
     }
   ]
 }

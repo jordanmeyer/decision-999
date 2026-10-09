@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inventory simulation · Synthetic fixture</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body><main>
+  <p class="eyebrow">Decision tool · Synthetic example</p>
+  <h1>Explore daily inventory.</h1>
+  <p>Each day starts with fresh stock. Demand is uniformly drawn from zero through the maximum.</p>
+  <form>
+    <p><label>Daily stock <input name="stock" type="number" min="0" step="1" value="10" required></label></p>
+    <p><label>Maximum demand <input name="maxDemand" type="number" min="0" step="1" value="20" required></label></p>
+    <p><label>Days <input name="days" type="number" min="1" max="10000" step="1" value="30" required></label></p>
+    <p><label>Seed <input name="seed" type="number" min="0" step="1" value="42" required></label></p>
+    <button>Simulate</button>
+  </form>
+  <p id="result" role="status">Simulate to see the result.</p>
+  <aside>The seed makes the run reproducible. This illustrative demand model has not been calibrated to real operations. Maintainer test fixture; no institutional affiliation.</aside>
+</main></body>
+</html>
