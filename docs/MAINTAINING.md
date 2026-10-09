@@ -20,8 +20,16 @@ To update a plugin, bump its `version`, repeat checks affected by the change, an
 
 ## Browser applications
 
-Browser App Builder is a separate instructor-built pilot for independent student app repositories. Its five workflow skills cover Setup, Plan, Build, Evaluate, and Deploy; generated applications need no Python/Node installation. The directory's Python commands remain maintainer tooling only. Preserve the existing Create Your Own plugin path for plugin authors.
+Browser App Builder is a separate instructor-built pilot for independent student app repositories. Its five workflow skills cover Setup, Plan, Build, Evaluate, and Deploy; plain applications need no Python/Node installation; approved library applications use an agent-managed Node/npm/Vite build. The directory's Python commands remain maintainer tooling only. Preserve the existing Create Your Own plugin path for plugin authors.
 
 `plugins/browser-app-builder/skills/campus-designer/` is generated from `plugins/campus-designer/skills/campus-designer/` by `scripts/build.py`. Edit only the canonical designer, then rebuild and commit the generated copy with the catalogs. `scripts/check.py` rejects a stale copy and verifies regeneration removes obsolete resources. Build invokes this packaged designer directly, so students do not need another plugin. Public brand guidance supplies styling, not affiliation or mark authorization.
 
 Run `python3 evidence/browser-app-builder/check.py` for Git freshness and app-only publication boundaries. Browser fixtures and reproduction instructions live in `evidence/browser-app-builder/`. Distinguish those maintainer checks from actual Work installation, fresh-chat student trials, clean-machine setup, and live deployment. Keep unsupported release gates explicit in the listing and ExecPlan. No public app submission flow is introduced.
+
+### Approved browser libraries (0.2.0)
+
+`references/libraries.json` within Browser App Builder owns exact library/peer versions and approval status. Library skills read that inventory rather than repeating version numbers. Validate new versions in isolation and in affected combinations; inspect peer requirements, resolved lockfiles, licenses, install scripts and advisories. Do not automatically upgrade student projects. The dependency checker runs through the installed plugin and rejects unapproved direct packages and unsupported lockfile sources. It is not a JavaScript security analyzer.
+
+The managed starter uses project-local npm dependencies and ignored build output. The Node version file matches the tested inventory runtime; managed Actions uses that file. The notice collector includes installed runtime notices and fails when an unrecognized missing notice needs review. Supplemental notices have provenance in the library evidence. Maintain only the canonical designer; the directory build also generates the managed starter's token asset from it. Library adapters read those tokens.
+
+Reproduce the three synthetic library fixtures with `evidence/browser-app-builder/libraries/prepare.py` in a new scratch folder, follow that evidence README's install/build/browser commands, then run its `check.py` with the scratch root. Preserve failures and distinguish isolated CLI installation (19 skills) from actual Work selection. Update listing evidence and limitations with dependency changes. No new live deployment destination is implied by a local library update.

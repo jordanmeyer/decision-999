@@ -1,0 +1,16 @@
+- heading "Library checks" [level=1]
+- status: 13/13 passed
+- list:
+  - listitem: "PASS: Mantine isolated labeled control"
+  - listitem: "PASS: Independent full totals"
+  - listitem: "PASS: Independent North totals"
+  - listitem: "PASS: Empty filter"
+  - listitem: "PASS: Papa quoted comma and escaped quote"
+  - listitem: "PASS: BOM and CRLF"
+  - listitem: "PASS: Malformed row"
+  - listitem: "PASS: Missing columns"
+  - listitem: "PASS: Missing numeric value"
+  - listitem: "PASS: Unsupported currency precision"
+  - listitem: "PASS: Arquero standalone sum"
+  - listitem: "PASS: HTML-like data preserved as text"
+  - listitem: "PASS: Tabulator isolated safe formatter and filter"

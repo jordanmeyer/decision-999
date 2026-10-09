@@ -1,0 +1,7 @@
+.bab-table.tabulator { background: var(--duke-white); color: var(--duke-cast-iron); font-family: Arial,sans-serif; border: 1px solid var(--duke-graphite); }
+.bab-table.tabulator .tabulator-header,.bab-table.tabulator .tabulator-col { background: var(--duke-navy-blue); color: var(--duke-white); }
+.bab-table.tabulator .tabulator-header .tabulator-col.tabulator-sortable:hover { background: var(--duke-royal-blue); }
+.bab-table.tabulator .tabulator-row { background: var(--duke-white); color: var(--duke-cast-iron); }
+.bab-table.tabulator .tabulator-row.tabulator-row-even { background: var(--duke-whisper-gray); }
+.bab-table.tabulator .tabulator-row.tabulator-selected { background: var(--duke-hatteras); }
+.bab-table.tabulator .tabulator-cell:focus { outline: 2px solid var(--duke-navy-blue); outline-offset: -2px; }

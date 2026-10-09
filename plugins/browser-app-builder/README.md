@@ -1,6 +1,6 @@
 # Browser App Builder
 
-Version 0.1.2 · Instructor-built pilot candidate.
+Version 0.2.0 · Instructor-built pilot candidate.
 
 Turn a problem you understand into a self-contained browser application, with a saved plan, local revision history, calculation evidence, and a GitHub Pages publishing workflow. Your agent handles the files and commands; you make the product and model decisions. No coding experience is required.
 
@@ -18,11 +18,15 @@ You can resume in a fresh chat with the same project files. Setup preserves exis
 
 ## Included
 
-Five [workflow skills](references/workflow.md), a minimal [starter](assets/starter/), a [Pages workflow](assets/pages.yml), and the bundled [Campus Designer](skills/campus-designer/SKILL.md) branding skill. Build explicitly uses Campus Designer's Duke colors, typography, web, and review guidance.
+Five [workflow skills](references/workflow.md), thirteen [library skills](references/library-selection.md), plain and managed starters, GitHub Pages workflows, and the bundled [Campus Designer](skills/campus-designer/SKILL.md). Build applies its Duke colors, typography, and review guidance through library-specific themes.
+
+Describe what you need: “an interactive analytical presentation,” “an editable process diagram,” or “a dashboard for a local CSV.” Plan and Build select the smallest useful set of approved libraries. Libraries cover charts, diagrams, timelines, schedules, tables, React controls, slides, animation, CSV, data transformation, statistics, and reproducible randomness.
+
+Library apps use an agent-managed Node/npm/Vite build. Your agent prepares the tools and commands; visitors receive a self-contained static app. Simple apps can still use native browser features without Node. Approved versions are pinned, bundled locally, and shipped with their license notices.
 
 ## Live examples
 
-Built in automated trials with simulated student conversations and synthetic data:
+Built with version 0.1.1 in automated trials with simulated student conversations and synthetic data; these demonstrate the original plain-JavaScript workflow:
 
 - [Pricing calculator](https://jordanmeyer.github.io/bab-trial-pricing-2026-10-08/)
 - [Inventory simulation](https://jordanmeyer.github.io/bab-trial-inventory-2026-10-08/)
@@ -32,6 +36,6 @@ Built in automated trials with simulated student conversations and synthetic dat
 
 Apps run in the browser using public/synthetic datasets or locally selected files. No backends, logins, external APIs, remote AI, analytics, or secret keys. Local imports remain in the browser and never become committed fixtures. Published source and history must contain only public/synthetic material, apart from explicitly approved author attribution.
 
-The host must provide usable file, Git, preview, and browser capabilities. Existing runtimes can support preview, but the plugin does not require or automatically install one. Installation does not grant tools, OS permissions, or GitHub access.
+The host must provide usable file, Git, preview, and browser capabilities. Managed apps need a compatible Node/npm installation, which Setup reuses or helps prepare. Plain apps use available preview capabilities. Installation does not grant tools, OS permissions, or GitHub access.
 
-This is a pilot candidate, not a verified no-touch onboarding promise. See the listing's evidence record for actual checks and outstanding Work, clean-machine, fresh-chat, and novice-student gates. Live publication and updates were verified on a configured Mac. Evaluation supports specific claims about tested cases; it does not certify a business model.
+This is a pilot candidate, not a verified no-touch onboarding promise. See the listing's evidence record for actual checks and outstanding Work, clean-machine, fresh-chat, and novice-student gates. The original plain-app publication and updates were verified on a configured Mac. The 0.2.0 library expansion has separate local browser and production-build evidence; live managed deployment remains unverified. Evaluation supports specific claims about tested cases; it does not certify a business model.

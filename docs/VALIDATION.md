@@ -240,3 +240,13 @@ Repository checks, both Claude manifest validations, whitespace checks, and fres
 ## Browser App Builder live-example links — 0.1.2
 
 The listing now links the three observed automated app trials beneath its overview, with matching README links and current evidence/limits. HTTPS example URL validation rejects a javascript: destination; rendering escapes example labels. Build, repository checks, Claude marketplace validation and whitespace checks passed. In-app browser review at measured389px and1439px widths showed no horizontal document overflow; Tab advanced through the app links, and Enter on the install copy button displayed “Copied to the clipboard.” The rendered review is saved in evidence/browser-app-builder/gallery-links.jpg. Workflow skills remain unchanged from0.1.1.
+
+## Browser App Builder library expansion — 0.2.0
+
+Thirteen pinned library skills, explicit selection guidance, managed Node/npm/Vite builds, source-freshness coverage for dependencies/configuration, and Campus Designer adapters were added. Plain applications retain their prior path. The managed starter's token file is generated from the canonical designer, not maintained separately.
+
+Three synthetic maintainer fixtures passed 30 browser checks (presentation 9, dashboard 13, operations 8), including an isolated operation for every library. All three locked production builds passed at a repository-style path; final audits reported zero known vulnerabilities after the reviewed KaTeX override. Testing corrected reveal.js's CSS export path, narrow embedded slide behavior, file-input overflow, supplemental license handling and a missed file-watch update. Production observations included keyboard input, graph editing, filtered totals and an actual quoted CSV import with HTML-like text rendered literally.
+
+Both isolated Codex and Claude installations contained all 19 skills. Directory generation, repository checks, plain and managed Git/publication checks, both Claude validators, and whitespace checks passed. The new inventory checks reject floating versions and missing skill references; managed checks reject unknown direct dependencies and detect changed manifests/configuration plus opposing staged/worktree edits. This does not prove automatic skill invocation. See `evidence/browser-app-builder/libraries/README.md` for exact versions, checkpoints, snapshots, corrections and reproduction.
+
+Native narrow-device interaction, OS-level reduced-motion switching, exhaustive request interception, actual Work routing/handoffs, clean-machine macOS/Windows, live managed publication and novice usability remain unverified. Earlier live examples remain version 0.1.1 evidence. No new repositories were created or deployed for this expansion.

@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "browser-app-builder",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Guide a student from local setup to a planned, tested browser app and GitHub Pages publication, with bundled Campus Designer styling.",
   "author": {
     "name": "Jordan Meyer"
@@ -13,7 +13,7 @@
       "interface": {
         "displayName": "Browser App Builder",
         "shortDescription": "Plan, build, evaluate, and publish a browser app. No coding experience is required.",
-        "longDescription": "Turn a problem you understand into a self-contained browser application, with a saved plan, local revision history, calculation evidence, and a GitHub Pages publishing workflow. Your agent handles the files and commands; you make the product and model decisions. Includes five workflow skills, a minimal starter, a Pages workflow, and the bundled Campus Designer branding skill. Build explicitly uses Campus Designer's Duke colors, typography, web, and review guidance. Explore three live examples below, built in automated trials with simulated student conversations and synthetic data.",
+        "longDescription": "Turn a problem you understand into a self-contained browser application, with a saved plan, local revision history, calculation evidence, and GitHub Pages publication. Your agent handles the files and commands; you make the product and model decisions. Five workflow skills select from thirteen approved library skills for charts, diagrams, timelines, schedules, tables, React controls, slides, animation, CSV, data transformation, statistics, and reproducible randomness. Library apps use an agent-managed Node/npm/Vite build; simple apps can still use native browser features without Node. Bundled Campus Designer guidance and library-specific themes provide consistent Duke colors and typography. The live examples below were built with version 0.1.1 in automated trials with simulated student conversations and synthetic data.",
         "developerName": "Jordan Meyer",
         "category": "Development",
         "defaultPrompt": [
@@ -21,7 +21,10 @@
           "Use plan-browser-app to help me plan a pricing scenario calculator.",
           "Use build-browser-app to implement the agreed PLAN.md.",
           "Use evaluate-browser-app to check the calculations with me and record the evidence.",
-          "Use deploy-browser-app to help me publish the evaluated app on GitHub Pages."
+          "Use deploy-browser-app to help me publish the evaluated app on GitHub Pages.",
+          "Help me plan an interactive analytical presentation with local pricing scenarios.",
+          "Help me plan an editable process diagram.",
+          "Help me plan a dashboard that imports a local synthetic CSV."
         ],
         "screenshots": []
       }
@@ -31,20 +34,24 @@
       "audience": "MBA students building a self-contained decision tool, dashboard, or simulation with an agent.",
       "results": [
         {
-          "value": "3 of 3",
-          "label": "Automated app trials published and verified live"
+          "value": "13",
+          "label": "Approved library recipes exercised locally"
         },
         {
-          "value": "25 / 10 / 42",
-          "label": "Passing pricing cases / inventory test groups / sales cases"
+          "value": "30",
+          "label": "Passing browser checks across three library fixtures"
+        },
+        {
+          "value": "3",
+          "label": "Managed production builds verified locally"
         },
         {
           "value": "3 of 3",
-          "label": "Updated apps verified after cache corrections"
+          "label": "Earlier plain-app trials published and verified live"
         }
       ],
-      "method": "On October 8, 2026, three parallel agents used version 0.1.1 to build original apps from blank folders on a configured Mac. Simulated planning conversations, independent expected results, browser checks, source repositories, and live Pages deployments are recorded. Browser tests passed 25 pricing cases, 10 inventory groups, and 42 sales cases. Testing caught and corrected two reset bugs; live update checks caught stale JavaScript in all three apps, corrected in a third deployment per repository. The coordinator handled shared browser operations. These are automated trials, not real student outcomes or ChatGPT Work trials.",
-      "limits": "Apps run in the browser using public/synthetic datasets or locally selected files. No backends, logins, external APIs, remote AI, analytics, or secret keys. The host must provide usable file, Git, preview, and browser capabilities. This is a pilot candidate; Work, clean-machine, fresh-chat, and novice-student checks remain outstanding. Live publication and updates were verified on this configured Mac. Evaluation supports specific claims about tested cases; it does not certify a business model.",
+      "method": "Version 0.2.0 adds thirteen pinned library recipes exercised through individual browser checks and three synthetic combined fixtures on a configured Mac. Browser suites passed 9 presentation, 13 dashboard and 8 operations checks. Production preview, keyboard interactions, CSV import and narrow layout review exposed and corrected stylesheet, slide-sizing and file-input issues. These are maintainer-authored fixtures, not student outcomes or automatic Work-routing trials. The three linked live applications were built separately with version 0.1.1; their publication and corrected updates remain historical evidence.",
+      "limits": "Self-contained apps use bundled public/synthetic data or locally selected files. No backends, logins, external runtime APIs, remote AI, analytics, secret keys or remote fonts/scripts. Managed builds require compatible Node/npm and host file, shell and browser capabilities. Library approval covers the recorded versions/configurations, not arbitrary combinations. Live managed deployment, Work routing, clean-machine macOS/Windows and novice-student usability remain unverified. Browser checks do not certify a business model or full accessibility.",
       "screenshotAlt": [],
       "examples": [
         {

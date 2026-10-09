@@ -9,6 +9,8 @@ Read the [shared workflow](../../references/workflow.md), then the project files
 
 Interview for the judgment behind the app: who uses it, what decision or task it improves, what inputs they have, what output helps them, and what a plausible but wrong result looks like. Ask focused questions until consequential choices are settled. Keep technical decisions with the agent and domain decisions with the student.
 
+Consult [library selection](../../references/library-selection.md), select the smallest justified approved set, and read those skills. Record IDs, reasons, build mode and limitations in PLAN.md. An interactive analytical presentation suggests reveal.js, while “live” external data still exceeds scope. Use no library for a simple native form.
+
 Narrow the first version to one useful task. A dashboard can filter bundled data or a locally selected file; a simulation can vary assumptions in the browser. When a request needs accounts, live APIs, cloud storage, or secrets, explain why it exceeds this pilot and propose a self-contained alternative. Do not silently add services or promise unsupported capabilities.
 
 Write `PLAN.md` with:

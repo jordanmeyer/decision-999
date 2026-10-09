@@ -72,6 +72,9 @@ def bundle_designer(root):
         target = destination / path
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes(content)
+    tokens = root / BUILDER / 'assets/managed-starter/app/theme/duke-tokens.css'
+    tokens.parent.mkdir(parents=True, exist_ok=True)
+    tokens.write_bytes((root / DESIGNER / 'assets/duke-tokens.css').read_bytes())
 
 
 def check_links(folder):
@@ -91,6 +94,20 @@ def load(root, config):
     for file in sorted((root / 'plugins').glob('*/plugin.json')):
         package, manifest, where = file.parent, read_json(file), f'plugins/{file.parent.name}/plugin.json'
         name = manifest.get('name')
+        if package.name == 'browser-app-builder':
+            inventory = read_json(package / 'references/libraries.json')
+            entries = inventory['libraries']
+            require(len({entry['id'] for entry in entries}) == len(entries), 'Duplicate library ID')
+            for entry in entries:
+                require(entry['status'] in ('approved', 'candidate', 'blocked'), 'Invalid library status')
+                require(re.fullmatch(r'[a-z0-9]+(-[a-z0-9]+)*', entry['skill'])
+                        and (package / 'skills' / entry['skill'] / 'SKILL.md').is_file(), 'Library skill is missing')
+                for version in (entry['packages'] | entry['peers']).values():
+                    require(re.fullmatch(r'\d+\.\d+\.\d+', version), 'Library versions must be exact stable releases')
+                require(all(item['expression'] and item['files'] for item in entry['licenses'].values()), 'Library license evidence is missing')
+            starter = read_json(package / 'assets/managed-starter/package.json')
+            require(starter['devDependencies'] == {'vite': inventory['tooling']['vite']}, 'Managed starter tooling is stale')
+            require((package / 'assets/managed-starter/.node-version').read_text().strip() == inventory['runtime']['node'], 'Managed starter Node version is stale')
         require(manifest.get('$schema') == SCHEMA, f'{where}: $schema must be {SCHEMA}')
         require(name == package.name and re.fullmatch(r'[a-z0-9]+(-[a-z0-9]+)*', name), f'{where}: name must be lowercase-hyphenated and match its folder')
         require(re.fullmatch(r'\d+\.\d+\.\d+', manifest.get('version', '')), f'{where}: version must be x.y.z')

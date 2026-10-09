@@ -5,7 +5,7 @@ description: Build or revise a self-contained browser app from a student's agree
 
 # Build the planned app
 
-Read the [shared workflow](../../references/workflow.md), `PLAN.md`, `SETUP.md`, and existing source. Use [Plan](../plan-browser-app/SKILL.md) if consequential choices are missing; use [Setup](../setup-browser-app/SKILL.md) if tools or the project are not ready. Do not replace existing work with a starter.
+Read [library selection](../../references/library-selection.md), load the chosen library skills, and read the [shared workflow](../../references/workflow.md), `PLAN.md`, `SETUP.md`, and existing source. Use [Plan](../plan-browser-app/SKILL.md) if consequential choices are missing; use [Setup](../setup-browser-app/SKILL.md) if tools or the project are not ready. Do not replace existing work with a starter.
 
 ## Design with the bundled skill
 
@@ -15,10 +15,14 @@ Give applications a shared Duke look through unchanged Duke blues, recommended t
 
 ## Implement and verify
 
-1. Build plain HTML/CSS/JavaScript in `app/`. Keep calculations in modules that both UI and tests can import. Use native browser APIs first; justify and locally bundle any library with its version and license. No backend, framework, package manager, or runtime installation.
+1. Build HTML/CSS/JavaScript in `app/`, adding JSX only for selected React libraries. Keep calculations in modules that UI and tests share. Use native features first; approved libraries follow the managed workflow below. No backend or external runtime service.
 2. Keep asset/module paths relative and use ordinary or hash navigation rather than server routes. Use bundled public/synthetic data or transient local imports. Validate inputs, label units, handle empty/error states, and provide keyboard-operable controls. Never send imported data elsewhere or preserve it as project evidence.
 3. Open the app using the verified preview. Run the plan's initial known-answer cases, check console errors and actual browser interactions, and inspect desktop and narrow layouts. Check focus, labels, contrast, overflow, reset, and import/export when present. Observe network behavior with available browser tools; report the scope observed rather than claiming universal isolation.
 4. Fix defects and discuss changes to the student's model or scope before altering those decisions. Update the plan and `DECISIONS.md` when they change. Write README usage, assumptions, data/library/font provenance, actual preview instructions, and limitations.
 5. Inspect staged public/synthetic files and make meaningful local commits. Report what works, which initial checks ran, and what remains unverified. Hand off to [Evaluate](../evaluate-browser-app/SKILL.md); a polished interface or successful preview does not establish calculation accuracy.
 
-Write no generic build script: `app/` is already the publication source. Reserve `dist/` for deployment output. Preserve the shared design while simplifying unnecessary controls, abstractions, and dependencies.
+For plain applications, `app/` is already publishable; do not add a build script. Managed applications use the provided Vite commands below. Reserve `dist/` for deployment output. Preserve the shared design while simplifying unnecessary controls, abstractions, and dependencies.
+
+## Managed applications
+
+When the plan selects approved libraries, follow [managed build](../../references/managed-build.md). Confirm package versions and required peers against the inventory, run the packaged dependency check, and preserve the lockfile. Copy canonical designer tokens plus only selected theme adapters. Do not duplicate palette definitions or import a stock theme over them. Build production output and inspect it separately from development. Record the commands, dependency reasons and license notices in README.md; include config, lockfile and generated notices before the evaluated checkpoint.

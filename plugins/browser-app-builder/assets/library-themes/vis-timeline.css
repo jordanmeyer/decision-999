@@ -1,0 +1,4 @@
+.bab-timeline .vis-timeline { font-family: Arial,sans-serif; border-color: var(--duke-graphite); }
+.bab-timeline .vis-item { background: var(--duke-hatteras); color: var(--duke-cast-iron); border-color: var(--duke-navy-blue); }
+.bab-timeline .vis-item.vis-selected { background: var(--duke-dandelion); border: 2px solid var(--duke-navy-blue); }
+.bab-timeline .vis-time-axis .vis-text { color: var(--duke-cast-iron); }

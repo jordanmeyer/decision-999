@@ -6,7 +6,7 @@ Read this reference whenever using a Browser App Builder skill. Resolve links re
 
 Build a self-contained browser app: HTML, CSS, JavaScript, bundled public/synthetic data, or a file the visitor chooses locally. No backend, login, shared database, remote API, remote AI calls, analytics, secrets, or remote scripts/fonts. Browser storage, if needed, is device-local and must be explained as such. Never imply that local state is shared, backed up, or access-controlled.
 
-Use native browser features first. A justified library must be pinned, bundled locally with its license, and recorded in the app README. No framework, build system, package manager, or required Python/Node installation. Host-provided previews and already available runtimes are fine; record what actually works. If a needed capability is missing, explain the specific gap and continue independent work. Do not quietly install a runtime or replace GitHub Pages with another hosting product.
+Use native browser features first. New library apps use only approved configurations in [the inventory](libraries.json), selected through [library selection](library-selection.md), and the [managed build](managed-build.md). The agent may prepare Node/npm/Vite for development; visitors need only a browser. Download packages during development, bundle runtime assets locally and retain their licenses. No floating versions or opportunistic dependencies. Plain apps retain the minimal starter and no required runtime installation. Host-provided previews remain preferable where suitable. Missing capabilities stop only dependent work; do not change hosting or bypass device restrictions.
 
 ## Keep the student in charge
 
@@ -35,7 +35,7 @@ Read the actual project before acting. Create each record only when there is som
 | `EVALUATION.md` | Evaluate: tested commit, relevant paths, cases, expected/observed results, failures/fixes, tools, limitations. |
 | `DEPLOYMENT.md` | Deploy: repository, live URL, evaluated and published commits, verification, update steps. |
 
-`app/` contains publishable files; `tests/` contains the browser test page and fixtures. `.github/workflows/` holds publishing instructions. `dist/` is generated publishing output, never authored source. Keep local input storage outside `app/` and out of Git.
+`app/` contains application source (directly publishable for plain apps; compiled by Vite for managed apps); `tests/` contains the browser test page and fixtures. `.github/workflows/` holds publishing instructions. `dist/` is generated publishing output, never authored source. Keep local input storage outside `app/` and out of Git.
 
 If a plan is missing or a consequential decision is unresolved, use [Plan](../skills/plan-browser-app/SKILL.md). If a prerequisite is missing, use [Setup](../skills/setup-browser-app/SKILL.md). Existing files are not permission to replace them. Missing capabilities stop only dependent work.
 

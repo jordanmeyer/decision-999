@@ -46,6 +46,14 @@ with tempfile.TemporaryDirectory() as temporary, redirect_stdout(io.StringIO()):
     for folder in ('plugins', 'site', 'evidence'):
         shutil.copytree(ROOT / folder, root / folder)
     build(root)  # without the sibling source project or any committed catalog
+    inventory = root / BUILDER / 'references/libraries.json'
+    saved_inventory = inventory.read_text()
+    edit(inventory, lambda data: data['libraries'][0]['packages'].update(echarts='^6.0.0'))
+    rejects(root, 'Library versions must be exact stable releases')
+    inventory.write_text(saved_inventory)
+    edit(inventory, lambda data: data['libraries'][0].update(skill='missing-library-skill'))
+    rejects(root, 'Library skill is missing')
+    inventory.write_text(saved_inventory)
     bundled = root / BUILDER / 'skills/campus-designer'
     (bundled / 'obsolete.txt').write_text('Old generated resource', encoding='utf-8')
     (bundled / 'SKILL.md').write_text('Stale generated copy', encoding='utf-8')

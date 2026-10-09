@@ -89,3 +89,7 @@ Version 0.1.2 adds these links and updates the listing evidence; workflow skills
 Actual ChatGPT Work installation/discovery and fresh-chat student trials; clean-machine macOS and Windows Git installation; real managed-device onboarding and interrupted installer recovery; novice-student usability. Setup file preservation has instruction-review coverage, not an automated or novice-user execution claim. Live GitHub Pages publication, updates and synthetic local CSV imports were verified in the automated trials above.
 
 No student adoption, time savings, cross-host model quality, full accessibility, or universal numerical accuracy is claimed. These gaps remain release gates; the completed automated trials support configured-Mac pilot use.
+
+## Library expansion, version 0.2.0
+
+See [library verification](libraries/README.md) for 30 passing browser cases across three synthetic managed-build fixtures, exact dependency locks, production observations, failed rounds, source checkpoints and reproduction. Thirteen library skills plus the existing six skills installed into isolated Codex/Claude configurations. [Selection walkthroughs](libraries/ROUTING.md) are author-executed instruction checks, not independent routing benchmarks. Live managed deployment and Work/clean-machine/student gates remain outstanding; earlier live examples above retain their historical version.

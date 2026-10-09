@@ -1,0 +1,13 @@
+# Dependency review, October 8–9, 2026
+
+The approved inventory records exact direct versions, required peers, documentation and package license filenames. Versions were obtained from the official npm registry, then installed with lifecycle scripts disabled. The three retained lockfiles record registry URLs and integrity values for the resolved trees. Repeat with `npm ci`, the plugin dependency checker, `npm audit`, and the browser cases; do not resolve fresh versions to reproduce this run.
+
+The initial combined tree exposed one low-severity KaTeX advisory, GHSA-238p-pmpm-9mq7. The Mermaid configuration uses the inventory's exact KaTeX override. Final `audit.json` responses in all three fixtures report zero known advisories. This is a dated automated observation, not a security certification. Package metadata in the initial tree identified an optional development-only fsevents lifecycle script; scripts remained disabled and all production builds succeeded.
+
+Runtime notices are collected from installed distributions into THIRD-PARTY-NOTICES.txt. ECharts retains LICENSE and NOTICE, vis-timeline retains its alternative-license texts, and Arquero retains BSD-3-Clause. jStat's package uses older `licenses` metadata; the actual LICENSE is MIT. Development-only build dependencies are not redistributed in the application bundle and are excluded by the collector. Missing optional platform packages are skipped. Unrecognized missing runtime notices stop the build.
+
+Two supplemental MIT notices are bundled. Seedrandom's notice is the opening license comment in the pinned npm distribution's seedrandom.js. React-remove-scroll-bar 2.3.8 omits its license file; its upstream LICENSE was retrieved from https://github.com/theKashey/react-remove-scroll-bar/blob/master/LICENSE, with Git blob 7c08c3990396ecefd90f99ff5d9a34f26f5b5616. The npm gitHead could not be fetched, so this evidence is the reviewed upstream MIT notice, not a claim of an exact release-tag retrieval. Recheck it when updating that dependency.
+
+The managed workflow's official action tags were resolved through GitHub's API during implementation: checkout v7.0.1, setup-node v7.0.0, configure-pages v6.0.0, upload-pages-artifact v5.0.0 and deploy-pages v5.0.1. The workflow uses the tested Node version through .node-version. This verifies references and local packaging, not a GitHub Actions execution. No live destination was authorized for this expansion.
+
+These checks do not establish that every optional feature or arbitrary combination is safe, accessible or self-contained. Approval covers the constrained recipes exercised in the fixtures. Review changed lockfiles, library configuration and observed browser behavior when extending them.
