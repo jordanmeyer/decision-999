@@ -28,6 +28,8 @@ with tempfile.TemporaryDirectory() as temporary:
     (project / 'tests/cases.js').write_text('export const cases = [];\n')
     (project / '.github/workflows').mkdir(parents=True)
     shutil.copy2(PACKAGE / 'assets/pages.yml', project / '.github/workflows/pages.yml')
+    plan = project / 'PLAN.md'
+    plan.write_text('# Pricing\n\nCurrency units: dollars\n')
     tested = commit('Synthetic source checkpoint')
     paths = ['app/', 'tests/', '.github/workflows/']
 
@@ -44,6 +46,18 @@ with tempfile.TemporaryDirectory() as temporary:
     (project / 'EVALUATION.md').write_text(f'Tested commit: {tested}\n')
     commit('Report only')
     assert fresh(), 'Documentation-only commit should preserve evaluation'
+    plan.write_text('# Pricing calculator\n\nCurrency units: dollars\n')
+    commit('Editorial plan change')
+    assert fresh() and git('show', f'{tested}:PLAN.md').stdout == '# Pricing\n\nCurrency units: dollars\n'
+    assert '+# Pricing calculator' in git('diff', tested, 'HEAD', '--', 'PLAN.md').stdout
+    plan.write_text('# Pricing calculator\n\nCurrency units: cents\n')
+    commit('Substantive plan change')
+    assert fresh(), 'Source comparisons alone cannot detect changed requirements'
+    assert '+Currency units: cents' in git('diff', tested, 'HEAD', '--', 'PLAN.md').stdout
+    plan.write_text('# Pricing calculator\n\nCurrency units: dollars\n')
+    assert git('status', '--short', '--', 'PLAN.md').stdout, 'Pending plan edits must be visible'
+    commit('Restore intended units')
+    assert not git('status', '--short', '--', 'PLAN.md').stdout
     source = project / 'app/app.js'
     original = source.read_text()
     source.write_text(original + '\n// Changed source\n')
@@ -83,4 +97,4 @@ with tempfile.TemporaryDirectory() as temporary:
     result = subprocess.run(['bash', '-e', '-c', commands], cwd=project, capture_output=True, text=True)
     assert result.returncode != 0 and not (project / 'dist').exists(), 'Reject escaping symlink before packaging'
 
-print('Passed: clean checkpoint, report-only commit, unstaged change, opposing staged edits, untracked test, ignored test, committed change, app-only publication, symlink refusal.')
+print('Passed: clean checkpoint, report-only commit, editorial plan comparison, substantive plan comparison, pending plan change, unstaged change, opposing staged edits, untracked test, ignored test, committed change, app-only publication, symlink refusal.')

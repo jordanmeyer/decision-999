@@ -17,7 +17,7 @@ Create `tests/index.html` and test modules under `tests/` using plain browser Ja
 
 ## Bind results to source
 
-Follow [evaluation freshness](../../references/evaluation-freshness.md). Inspect and commit the source and tests before the final run. If history is not ready, resolve Setup first; exploratory checks may proceed but are not a publishable evaluation.
+Follow [evaluation freshness](../../references/evaluation-freshness.md), including its comparison of the current and evaluated plans. Inspect and commit the agreed plan, source, and tests before the final run. If history is not ready, resolve Setup first; exploratory checks may proceed but are not a publishable evaluation.
 
 Run cases through the browser and verify the results, then inspect the interface with the student: meaningful scenarios, invalid inputs, units, keyboard use, narrow layout, and actual import/export behavior. Record method/tool versions, inputs, expected/observed values, pass/fail, and limitations. Do not silently substitute source review for rendered or numerical checks.
 

@@ -4,6 +4,13 @@ export const cases = [
   ['Stock 10, demand 12 leaves 2 unmet', () => JSON.stringify(inventory(10, 12)) === '{"remaining":0,"unmet":2}'],
   ['Zero stock leaves all demand unmet', () => inventory(0, 4).unmet === 4],
   ['Identical seed reproduces the run', () => JSON.stringify(simulate(10, 20, 30, 42)) === JSON.stringify(simulate(10, 20, 30, 42))],
+  ['Seed 42 matches independently calculated five-day demand and stock', () => JSON.stringify(simulate(10, 20, 5, 42)) === JSON.stringify([
+    { demand: 5, remaining: 5, unmet: 0 },
+    { demand: 1, remaining: 9, unmet: 0 },
+    { demand: 12, remaining: 0, unmet: 2 },
+    { demand: 4, remaining: 6, unmet: 0 },
+    { demand: 7, remaining: 3, unmet: 0 },
+  ])],
   ['No-demand limit leaves all stock', () => simulate(10, 0, 5, 42).every(row => row.remaining === 10 && row.unmet === 0)],
   ['Inventory conservation', () => simulate(10, 20, 100, 42).every(row => 10 + row.unmet === row.demand + row.remaining)],
   ['Fractional units rejected', () => { try { inventory(10, 1.5); return false; } catch { return true; } }],

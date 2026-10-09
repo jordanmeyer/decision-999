@@ -228,3 +228,11 @@ Local catalog/build checks and Claude manifest validation passed. Both isolated 
 Maintainer-authored pricing/inventory fixtures passed 18 browser checks. An intentional pricing defect caused four failures, and restoring it returned all 11 pricing cases to passing. Nine Git/publication boundary checks passed, including the opposing index/worktree edits found by independent review. Setup rerun verification and new-repo Pages ordering were also corrected. The listing's keyboard copy action showed success; desktop/narrow iframe rendering showed no horizontal document overflow. See `evidence/browser-app-builder/EVIDENCE.md` for methods, reproduction, source-review limits, and review details.
 
 Actual Work/fresh-chat trials, clean-machine installation, and live GitHub deployment remain unverified. No public publication occurred. This is a locally verified pilot candidate, not an evaluated student outcome.
+
+## Browser App Builder follow-up corrections — October 8, 2026
+
+Version 0.1.1 resolves the second review's three findings. The pricing fixture now uses bounded integer cents and rejects unsupported precision/quantity/ranges; Evaluate and Deploy compare the current plan with its evaluated version and distinguish editorial from substantive changes; inventory tests include an independently derived five-day seeded expectation.
+
+The expanded pricing suite produced 13/17 passes before correction and 17/17 afterward. Inventory passed 8/8; a disposable constant-zero-demand mutation failed the new expectation while the previous cases still passed. Twelve Git/publication checks passed, including three new plan-review boundaries. These checks expose plan changes but do not automate semantic judgment. Keyboard submission of the decimal example displayed exactly 1,000 whole break-even units and zero profit. Desktop/narrow rendering had no horizontal document overflow, and inspected console logs were clear.
+
+Repository checks, both Claude manifest validations, whitespace checks, and fresh isolated Codex/Claude installations passed for 0.1.1 with all six skills. Browser source copies matched repository app/test files. The optional authoring validator's missing PyYAML dependency and all external release gates remain as previously documented; nothing was published.

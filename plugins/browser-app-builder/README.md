@@ -1,6 +1,6 @@
 # Browser App Builder
 
-Version 0.1.0 · Instructor-built pilot candidate.
+Version 0.1.1 · Instructor-built pilot candidate.
 
 Turn a problem you understand into a self-contained browser application, with a saved plan, local revision history, calculation evidence, and a GitHub Pages publishing workflow. Your agent handles the files and commands; you make the product and model decisions. No terminal experience or Python/Node installation is required.
 

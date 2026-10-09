@@ -10,12 +10,12 @@
 <body><main>
   <p class="eyebrow">Decision tool · Synthetic example</p>
   <h1>Explore a pricing scenario.</h1>
-  <p>Change the assumptions to compare profit and break-even volume. All amounts use the same currency.</p>
+  <p>Change the assumptions to compare profit and break-even volume. Use the same currency with at most two decimal places. Amounts and whole-unit quantity range from 0 to 1,000,000.</p>
   <form>
-    <p><label>Price per unit <input name="price" type="number" min="0" step="any" value="20" required></label></p>
-    <p><label>Variable cost per unit <input name="cost" type="number" min="0" step="any" value="12" required></label></p>
-    <p><label>Quantity <input name="quantity" type="number" min="0" step="1" value="100" required></label></p>
-    <p><label>Fixed cost <input name="fixed" type="number" min="0" step="any" value="500" required></label></p>
+    <p><label>Price per unit <input name="price" type="number" min="0" max="1000000" step="0.01" value="20" required></label></p>
+    <p><label>Variable cost per unit <input name="cost" type="number" min="0" max="1000000" step="0.01" value="12" required></label></p>
+    <p><label>Quantity <input name="quantity" type="number" min="0" max="1000000" step="1" value="100" required></label></p>
+    <p><label>Fixed cost <input name="fixed" type="number" min="0" max="1000000" step="0.01" value="500" required></label></p>
     <button>Calculate</button>
   </form>
   <p id="result" role="status">Calculate to see the result.</p>

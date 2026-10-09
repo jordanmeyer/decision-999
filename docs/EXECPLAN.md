@@ -25,6 +25,8 @@ Each stage leaves files allowing a fresh chat to continue. Successful release ev
 - [ ] Complete actual Work fresh-chat trials and fresh macOS/Windows setup.
 - [ ] Complete authorized live GitHub publication.
 - [x] (2026-10-08) Recorded candidate readiness, independent review corrections, and outstanding release gates in evidence/browser-app-builder/.
+- [x] (2026-10-08) Corrected decimal monetary precision, added plan-semantic review and an independent stochastic expectation; passed 25 browser cases and 12 Git/publication checks.
+- [x] (2026-10-08) Passed 0.1.1 repository/Claude packaging checks and two fresh six-skill installations; prepared the reviewed correction commit.
 
 ## Surprises & Discoveries
 
@@ -35,11 +37,13 @@ Existing uncommitted work modifies `site/config.json`, both generated catalogs, 
 
 The current host has Git 2.50.1, Node 22.19.0, Python, Claude Code 2.1.86, and Codex CLI 0.145.0. A disposable preview using an existing runtime displayed `PASS: browser module and calculation` in the in-app browser. This is Codex capability evidence, not clean-machine or ChatGPT Work acceptance.
 
-Published Git history includes files omitted from dist. Protect source and evidence before the first commit. Documentation changes do not invalidate calculations; Git comparisons against tested source identify relevant changes.
+Published Git history includes files omitted from dist. Protect source and evidence before the first commit. Editorial/report changes do not invalidate calculations; substantive plan changes require review; Git comparisons against tested source identify relevant changes.
 
 Independent implementation review found that comparing a checkpoint directly to the working tree can miss opposing staged and unstaged edits. Separate committed, staged, and unstaged comparisons now detect this case; the regression exercise passes. Setup rerun checks now use the existing app's interaction, and Deploy creates an authorized repository before configuring its Pages settings.
 
 The browser viewport override did not resize the document, so rendered responsive checks used explicit 390px and 1440px iframe viewports. The optional skill-author validator could not run without PyYAML; no dependency was installed to support it. Repository/Claude checks and actual CLI installations passed independently.
+
+Follow-up review reproduced a pricing fixture defect: (19.90 − 19.80) yields a binary floating-point margin slightly below 0.10, so fixed cost 100 incorrectly rounds break-even up to 1,001 units. The original integer-input tests missed this. Simulation reproducibility and conservation also do not detect a generator that always returns zero demand.
 
 ## Decision Log
 
@@ -52,16 +56,20 @@ Decision (2026-10-08): Public/synthetic material only in projects and evidence; 
 
 Decision (2026-10-08): Add only missing starter files to existing folders. Preserve plans, host files, history, configuration, and unrelated remotes; resolve collisions before replacement.
 
-Decision (2026-10-08): Record evaluated commit and compare application, tests, workflow, and executable tooling through Git. Documentation-only commits need no retest; no separate digest mechanism.
+Decision (2026-10-08): Record evaluated commit and compare application, tests, workflow, and executable tooling through Git. Editorial/report-only commits need no retest; substantive plan changes require renewed evaluation. No separate digest mechanism.
 
 Decision (2026-10-08): Missing external environments leave release gates open, not fabricated or indefinitely confused with candidate implementation.
 
 Decision (2026-10-08, user steering): Bundle the former Duke Designer, now Campus Designer, and have Build use it for a shared Duke look. Generate the bundled copy from `plugins/campus-designer/skills/campus-designer/` during the catalog build, check equality, and never maintain a second authored copy. This replaces the earlier neutral-styling default. Public brand guidance does not authorize institutional marks or affiliation claims.
 
+Decision (2026-10-08, follow-up review): The pricing fixture accepts amounts with at most two decimal places and whole-unit quantity, each between zero and one million inclusive. Use integer cents internally; this bounds all arithmetic below JavaScript's exact-integer limit and avoids a blanket rounding tolerance. Compare the current agreed plan with the evaluated plan before publication: substantive changes require renewed evaluation, editorial changes do not. Add an independently calculated five-day seeded demand sequence to catch nonrandom output without claiming distribution or business-model accuracy.
+
 ## Outcomes & Retrospective
 
 
-Implemented a locally verified 0.1.0 pilot candidate with five workflow skills and the generated canonical designer. Two isolated CLI installations, 18 browser calculation cases, nine Git/publication boundaries, and repository/Claude checks passed. A deliberate pricing error caused four failures and passed after correction. The independent instruction review's three findings were resolved. Evidence and reproducible fixtures are in evidence/browser-app-builder/.
+Initially implemented a locally verified 0.1.0 pilot candidate with five workflow skills and the generated canonical designer. Two isolated CLI installations, 18 browser calculation cases, nine Git/publication boundaries, and repository/Claude checks passed. A deliberate pricing error caused four failures and passed after correction. The independent instruction review's three findings were resolved. Evidence and reproducible fixtures are in evidence/browser-app-builder/.
+
+Follow-up corrections for 0.1.1 now pass 25 browser cases and 12 Git/publication checks. The expanded pricing cases failed before the fix, and the independent simulation expectation caught a constant-zero-demand mutation. Plan comparisons expose changed requirements even when source remains unchanged; their semantic review stays with the agent and student.
 
 The final simplification pass retained one shared workflow reference, one freshness procedure, and one authored designer source. No initializer, generic app packager, policy analyzer, or student runtime dependency was added. The canonical designer's full resource tree is bundled so its internal references remain portable.
 
@@ -107,7 +115,7 @@ Build from the agreed plan, using bundled Campus Designer. Separate calculations
 
 Expected answers come from hand calculations or independently justified references, not the app output. Use tests/index.html with visible results and plain JS modules importing actual model functions. Execute in the existing browser preview without installing a runtime or framework. Check meaningful boundaries, malformed inputs, units, rounding, scale, invariants, seeds, nonrandom limits, and justified statistical tolerances.
 
-Commit source and tests before evaluation. Record tested commit and relevant paths: app/, tests/, .github/workflows/, plus executable tooling. Require clean tracked state and no untracked/ignored relevant source. Compare relevant paths against the checkpoint; documentation-only commits may follow. Preserve failed rounds. Fix through Build, revisit model through Plan, rerun affected checks, update checkpoint. Acceptance: detect intentional formula defect; docs-only commit preserves applicability; changed source invalidates it.
+Commit the agreed PLAN.md, source, and tests before evaluation. Record tested commit and relevant paths: app/, tests/, .github/workflows/, plus executable tooling. Require clean tracked state and no untracked/ignored relevant source. Compare relevant paths against the checkpoint; editorial/report-only commits may follow, but compare the current plan with the tested plan and require renewed evaluation after substantive changes. Preserve failed rounds. Fix through Build, revisit model through Plan, rerun affected checks, update checkpoint. Acceptance: detect intentional formula defect; docs-only commit preserves applicability; changed source invalidates it.
 
 ### Milestone 5: Deploy
 
@@ -123,7 +131,7 @@ Create/push only authorized repo. Wait for deployment matching pushed commit, op
 
 Use synthetic pricing and inventory examples. Exercise stages and fresh-chat handoffs where available; keep deterministic fixture checks distinct from real student trials. Save prompts, fixtures, outputs, environments, and reproduction instructions outside installed package. Never copy secrets/caches/personal imports/generated output.
 
-Test preservation, local Git settings, freshness, package boundaries, module loading under a repository path, and designer-bundle consistency. Version 0.1.0, Development category, instructor-built pilot language, five usable prompts, and evidence-backed results. No invented adoption or compatibility claims. Update MAINTAINING and VALIDATION; preserve site identity/config and create-your-own.
+Test preservation, local Git settings, freshness, package boundaries, module loading under a repository path, and designer-bundle consistency. Version 0.1.1, Development category, instructor-built pilot language, five usable prompts, and evidence-backed results. No invented adoption or compatibility claims. Update MAINTAINING and VALIDATION; preserve site identity/config and create-your-own.
 
 Review surrounding code and simplify. Remove repeated rules, unused assets, wrappers, and unnecessary scripts. No general JS policy analyzer: inspect source and observe actual browser behavior, recording limits.
 
@@ -143,6 +151,8 @@ These are maintainer commands, never student prerequisites. Expect current catal
 ## Validation and Acceptance
 
 
+For the corrected fixtures, open the pricing and inventory browser test pages through an existing preview: expect 17/17 and 8/8 passes. Price 19.90, cost 19.80, fixed cost 100 breaks even at exactly 1,000 units; fixed cost 100.01 requires 1,001. All amounts allow at most two decimal places and all inputs range from 0 to 1,000,000, with whole quantity. A constant-zero-demand mutation must fail the independently calculated sequence 5, 1, 12, 4, 7 for seed 42 and maximum demand 20. Run python3 evidence/browser-app-builder/check.py for 12 boundaries, including editorial/substantive/pending plan comparisons.
+
 Pricing fixture: price 20, cost 12, quantity 100, fixed cost 500 gives profit 300; continuous break-even 62.5, whole-unit 63; zero contribution margin handled. Inventory fixture: stock 10/demand 3 leaves 7/unmet 0; demand 12 leaves 0/unmet 2. Same seeds reproduce random output, not proof of model accuracy.
 
 Check empty and pre-populated folders, interrupted setup, configured Git, missing Git/preview, managed denial, and conflicts. Challenge login/API/secret/confidential requests without storing sensitive material. Check public staged content, source/test/workflow freshness including untracked files, app-only publication, and no observed remote requests. Do not claim universal isolation from observation.
@@ -157,7 +167,7 @@ Preserve files/configuration, resolve collisions, and use ordinary commits. Neve
 ## Artifacts and Notes
 
 
-Record trial prompts, public fixtures, versions, tested/deployed commits, browser results, and reproduction steps. Screenshots show actual results. No full release gate has passed.
+Record trial prompts, public fixtures, versions, tested/deployed commits, browser results, and reproduction steps. Screenshots show actual results. No full release gate has passed. Follow-up regression output and the independently derived stochastic sequence are recorded in evidence/browser-app-builder/EVIDENCE.md and fixtures/README.md.
 
 Revision (2026-10-08): Saved approved implementation plan and incorporated user request to package canonical Campus Designer and use it in Build. Generated designer copies replace the earlier neutral default without introducing a second maintained skill source.
 
@@ -165,3 +175,5 @@ Revision (2026-10-08): Saved approved implementation plan and incorporated user 
 
 
 Five workflow skills and one generated designer skill use the existing manifest format. No schema change. Handoffs are readable files. Git provides history; host tools provide editing/preview/testing. Optional existing runtimes are not required installations. Apps use HTML/CSS/JS and optional licensed local libraries. GitHub Actions publishes static files. Course maintainer Python tooling remains separate.
+
+Revision (2026-10-08, follow-up review): Corrected decimal fixture arithmetic, distinguished editorial documentation from changed model requirements, and added independent seeded expectations. The external release gates remain unchanged.

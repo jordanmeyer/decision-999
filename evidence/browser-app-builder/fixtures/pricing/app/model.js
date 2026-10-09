@@ -1,8 +1,13 @@
 export function pricing({ price, cost, quantity, fixed }) {
-  if (![price, cost, quantity, fixed].every(Number.isFinite) || Math.min(price, cost, quantity, fixed) < 0) {
-    throw new Error('Use finite, nonnegative inputs.');
+  if (![price, cost, quantity, fixed].every(value => Number.isFinite(value) && value >= 0 && value <= 1000000) || !Number.isInteger(quantity)) {
+    throw new Error('Use amounts from 0 to 1,000,000 and a whole-unit quantity in that range.');
   }
-  const margin = price - cost;
-  const breakEven = fixed === 0 ? 0 : margin > 0 ? fixed / margin : null;
-  return { profit: margin * quantity - fixed, breakEven, wholeUnits: breakEven === null ? null : Math.ceil(breakEven) };
+  const [priceCents, costCents, fixedCents] = [price, cost, fixed].map(amount => {
+    const cents = Math.round(amount * 100);
+    if (amount !== cents / 100) throw new Error('Use amounts with at most two decimal places.');
+    return cents;
+  });
+  const marginCents = priceCents - costCents;
+  const breakEven = fixedCents === 0 ? 0 : marginCents > 0 ? fixedCents / marginCents : null;
+  return { profit: (marginCents * quantity - fixedCents) / 100, breakEven, wholeUnits: breakEven === null ? null : Math.ceil(breakEven) };
 }
