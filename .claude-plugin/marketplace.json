@@ -29,7 +29,7 @@
     {
       "name": "browser-app-builder",
       "source": "./plugins/browser-app-builder",
-      "description": "Plan, build, evaluate, and publish a browser app. No terminal experience needed.",
+      "description": "Plan, build, evaluate, and publish a browser app. No coding experience is required.",
       "category": "Development"
     }
   ]
