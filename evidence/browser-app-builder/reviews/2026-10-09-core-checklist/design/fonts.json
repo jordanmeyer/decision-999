@@ -1,0 +1,17 @@
+[
+  {
+    "file": "eb-garamond-400.ttf",
+    "bytes": 389868,
+    "sha256": "934aa932b4bc1a75d883f7c3d4d5bbc8278e5e7fcc96d5440bbffd61050cf958"
+  },
+  {
+    "file": "open-sans-600.ttf",
+    "bytes": 122060,
+    "sha256": "733eb93b167e6d45de09aa768f6c0355647c2c26f5416dbc7407a08ed41e81c6"
+  },
+  {
+    "file": "open-sans-400.ttf",
+    "bytes": 122116,
+    "sha256": "47ed1cfaa7ffca04a04ab850b2938fd52c09d1b44cfa3e2980878e166b0cbd87"
+  }
+]

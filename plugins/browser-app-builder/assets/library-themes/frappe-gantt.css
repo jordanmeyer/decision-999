@@ -1,4 +1,4 @@
-.bab-gantt { --g-arrow-color: var(--duke-navy-blue); --g-bar-color: var(--duke-hatteras); --g-bar-border: var(--duke-navy-blue); --g-tick-color: var(--duke-limestone); --g-text-dark: var(--duke-cast-iron); --g-text-light: var(--duke-cast-iron); --g-progress-color: var(--duke-hatteras); font-family: Arial,sans-serif; }
+.bab-gantt { --g-arrow-color: var(--duke-navy-blue); --g-bar-color: var(--duke-hatteras); --g-bar-border: var(--duke-navy-blue); --g-tick-color: var(--duke-limestone); --g-text-dark: var(--duke-cast-iron); --g-text-light: var(--duke-cast-iron); --g-progress-color: var(--duke-hatteras); font-family: var(--duke-font-body); }
 .bab-gantt .gantt .bar { fill: var(--duke-hatteras); stroke: var(--duke-navy-blue); }
 .bab-gantt .gantt .bar-progress { fill: var(--duke-granite); }
-.bab-gantt .gantt .bar-label { fill: var(--duke-cast-iron); font-family: Arial,sans-serif; }
+.bab-gantt .gantt .bar-label { fill: var(--duke-cast-iron); font-family: var(--duke-font-body); }

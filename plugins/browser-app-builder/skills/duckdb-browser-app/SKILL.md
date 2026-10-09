@@ -7,6 +7,8 @@ description: Build substantial local SQL data explorers using DuckDB-Wasm worker
 
 Read [selection](../../references/library-selection.md), [workflow](../../references/workflow.md) and `duckdb` in [inventory](../../references/libraries.json). Only an approved configuration may be used. Record tables, types, scale, query limits and expected joins/aggregations in the plan. Use [managed setup](../../references/managed-build.md).
 
+For learning explorers, read [SQL learning paths and units](../../references/decision-models.md#sql-learning-explorers). Starter queries, dataset scale and readable results are part of the teaching product, not only engine validation.
+
 Bundle the EH WASM and browser worker locally using Vite asset URLs. This single-thread configuration does not require cross-origin isolation headers unavailable on ordinary Pages. Do not copy CDN initialization examples or enable extension downloads.
 
 ```js

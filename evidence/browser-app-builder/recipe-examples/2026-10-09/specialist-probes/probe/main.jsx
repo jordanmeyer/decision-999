@@ -1,4 +1,4 @@
-document.querySelector('main').innerHTML = '<h1>Isolated specialist probes</h1><p>Each button runs one capability. Remotion render telemetry is explicitly authorized for the video probe.</p><button id="map-probe">Show local map</button> <button id="highs">Run HiGHS worker</button> <button id="duckdb">Run DuckDB EH worker</button> <button id="video">Render local Remotion video</button><pre id="local-output"></pre><div id="map" style="height:240px;width:500px;max-width:100%"></div><div id="video-result"></div>';
+document.querySelector('main').innerHTML = '<h1>Isolated specialist probes</h1><p>Each button runs one capability.</p><button id="map-probe">Show local map</button> <button id="highs">Run HiGHS worker</button> <button id="duckdb">Run DuckDB EH worker</button><pre id="local-output"></pre><div id="map" style="height:240px;width:500px;max-width:100%"></div>';
 const log = (name,value) => { document.querySelector('#local-output').textContent += `\n${name}: ${JSON.stringify(value,(_,v)=>typeof v==='bigint'?String(v):v)}`; };
 document.querySelector('#highs').onclick=async()=>{
  log('highs','starting');
@@ -25,10 +25,6 @@ document.querySelector('#duckdb').onclick=async()=>{
   log('duckdb recovery',(await c.query('SELECT 6*7 AS answer')).toArray());
   await c.close();
  }catch(e){log('duckdb error',e.message);}finally{if(db)await db.terminate();log('duckdb','done');}
-};
-document.querySelector('#video').onclick=async()=>{
- log('video','loading');
- try { const {runVideo}=await import('./video-probe.jsx'); await runVideo(log); } catch(e){log('video error',e.message);}
 };
 
 document.querySelector('#map-probe').onclick=async()=>{

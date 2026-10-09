@@ -7,6 +7,8 @@ description: Build geographic market comparisons with local GeoJSON, interactive
 
 Read [selection](../../references/library-selection.md), [workflow](../../references/workflow.md) and the `leaflet` configuration in [inventory](../../references/libraries.json). Use its exact packages only when approved. Establish the geographic question, measurement units, attribution, scoring assumptions and accessible comparison in the agreed plan; use [managed setup](../../references/managed-build.md).
 
+For weighted market screens, read [market ranking and sensitivity](../../references/decision-models.md#market-ranking-and-sensitivity). Explain changes through metric contributions and provide the agreed sensitivity view; the map is only one presentation of the model.
+
 Use a real Leaflet map with locally bundled GeoJSON or licensed local geographic assets. A useful map needs geographic context and a legend, not merely disconnected dots. Explain synthetic attributes separately from actual geographic boundaries. Remote tiles, geocoding, routing services and visitor location requests are outside this configuration. Use circle markers or locally bundled icons; no default CDN icon paths.
 
 ```js
@@ -21,6 +23,6 @@ label.textContent = market.name;
 marker.bindPopup(label);
 ```
 
-Derive solid colors and system typography from [Campus Designer](../campus-designer/SKILL.md). Use non-color cues for selected/shortlisted markets and a linked keyboard-accessible table or select. If blue is used for fill, keep it opaque; choose another published color rather than fading Duke blue. Preserve Leaflet structural CSS and attribution controls. Resize after a hidden panel becomes visible; remove map/listeners when the containing view is destroyed.
+Derive solid colors and locally bundled typography from [Campus Designer](../campus-designer/SKILL.md). Use non-color cues for selected/shortlisted markets and a linked keyboard-accessible table or select. If blue is used for fill, keep it opaque; choose another published color rather than fading Duke blue. Preserve Leaflet structural CSS and attribution controls. Resize after a hidden panel becomes visible; remove map/listeners when the containing view is destroyed.
 
 Verify geographic coordinate order (GeoJSON longitude, latitude), independent scoring/ranking examples, ties and zero-weight behavior. Exercise map/table selection, zoom, keyboard alternative, narrow layout and hidden-to-visible resize. Inspect local asset paths and requests under the actual Pages prefix. Record observed behavior through [Evaluate](../evaluate-browser-app/SKILL.md); a map is not a forecast or a validated site-selection model.

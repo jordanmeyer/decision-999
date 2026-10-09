@@ -4,7 +4,7 @@ Read this reference whenever using a Browser App Builder skill. Resolve links re
 
 ## Bound the application
 
-Build a self-contained browser app: HTML, CSS, JavaScript, bundled public/synthetic data, or a file the visitor chooses locally. No backend, login, shared database, remote API, remote AI calls, analytics, secrets, or remote scripts/fonts. The Remotion video recipe is the only possible runtime exception: use its approved inventory configuration only with an established license basis, an explicit app-owner acceptance and visitor disclosure of its documented render-event telemetry. It does not authorize analytics, external assets or transmission of video content. Browser storage, if needed, is device-local and must be explained as such. Never imply that local state is shared, backed up, or access-controlled.
+Build a self-contained browser app: HTML, CSS, JavaScript, bundled public/synthetic data, or a file the visitor chooses locally. No backend, login, shared database, remote API, remote AI calls, analytics, secrets, or remote scripts/fonts. Browser storage, if needed, is device-local and must be explained as such. Never imply that local state is shared, backed up, or access-controlled.
 
 Use native browser features first. New library apps use only approved configurations in [the inventory](libraries.json), selected through [library selection](library-selection.md), and the [managed build](managed-build.md). The agent may prepare Node/npm/Vite for development; visitors need only a browser. Download packages during development, bundle runtime assets locally and retain their licenses. No floating versions or opportunistic dependencies. Plain apps retain the minimal starter and no required runtime installation. Host-provided previews remain preferable where suitable. Missing capabilities stop only dependent work; do not change hosting or bypass device restrictions.
 
@@ -29,7 +29,7 @@ Read the actual project before acting. Create each record only when there is som
 | Artifact | Owner and contents |
 | --- | --- |
 | `SETUP.md` | Setup: capabilities, verified tool invocations, preview/test URLs and how to restart them, gaps. No secrets or unnecessary machine details. |
-| `PLAN.md` | Plan: agreed purpose, inputs/outputs, scope, model, assumptions, expected cases, acceptance; identify pending choices. |
+| `PLAN.md` | Plan: opening request, requirement coverage and agreed deferrals, purpose, inputs/outputs, model, teaching/default cases, acceptance; identify pending choices. |
 | `README.md` | Build: what the app does, usage, data sources/licenses, preview and limits; Deploy adds public URLs. |
 | `DECISIONS.md` | Any stage: significant student decisions, rationale, and resulting change. No chat dump. |
 | `EVALUATION.md` | Evaluate: tested commit, relevant paths, cases, expected/observed results, failures/fixes, tools, limitations. |
@@ -43,4 +43,4 @@ Make meaningful commits after inspecting staged content. Document material scope
 
 ## Shared design
 
-Use the bundled [Campus Designer](../skills/campus-designer/SKILL.md), formerly Duke Designer, during Build and visual review. Apply its public Duke color, typography, and layout guidance. Do not imply affiliation or endorsement or include institutional logos/seals without authorization. The starter uses Duke navy and Georgia/Arial system fallbacks; no remote font requests. Keep fonts local and licensed if changing them.
+Use the bundled [Campus Designer](../skills/campus-designer/SKILL.md), formerly Duke Designer, during Build and visual review. Apply its public Duke color, typography, and layout guidance. Do not imply affiliation or endorsement or include institutional logos/seals without authorization. The starters bundle canonical EB Garamond/Open Sans files and published fallback stacks with OFL notices. Use that local bundle by default, verify actual font loading, and disclose necessary substitutions; no remote font requests.

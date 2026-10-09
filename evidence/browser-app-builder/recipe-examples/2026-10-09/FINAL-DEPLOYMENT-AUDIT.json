@@ -97,16 +97,5 @@
         "conclusion": "success"
       }
     ]
-  },
-  {
-    "app": "video",
-    "latest_report_commit": "15cddc9db7d0026aeeed17a8f64e2d6cbccc825f",
-    "workflows": [
-      {
-        "id": 37941613424,
-        "status": "completed",
-        "conclusion": "success"
-      }
-    ]
   }
 ]

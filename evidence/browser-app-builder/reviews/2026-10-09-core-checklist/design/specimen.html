@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="./theme/adapters/base.css"><link rel="stylesheet" href="./theme/adapters/reveal.css"><main><h1>Can the launch cover its costs?</h1><p>This synthetic font specimen checks the bundled theme with a long heading, a primary action, tabular figures and a disclosure.</p><h2>$132,000</h2><table><tr><th><strong>Sales</strong></th><td>$132,000</td></tr><tr><th>Costs</th><td>$101,239</td></tr></table><p><button type="button">Compare scenarios</button></p><details><summary>Calculation notes</summary><p>Amounts use whole dollars here; rounding is a display choice.</p></details><section class="reveal"><h2>4 / 12</h2><p>Slide adapter sample.</p></section><p id="theme-result"></p></main><script type="module">import {duke} from './theme/adapters/tokens.js'; await document.fonts.ready; const d=duke(); document.querySelector('#theme-result').textContent=`Adapter reads: ${d.heading}; ${d.body}.`;
+await document.fonts.ready;
+const proof = document.createElement('pre');
+proof.id = 'font-proof';
+proof.style.cssText = 'white-space:pre-wrap;font-size:12px';
+const records = [];
+document.fonts.forEach(font => records.push({family: font.family, weight: font.weight, status: font.status}));
+proof.textContent = JSON.stringify(records, null, 2);
+document.querySelector('main').append(proof);
+</script></html>

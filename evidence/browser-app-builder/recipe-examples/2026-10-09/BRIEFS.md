@@ -37,9 +37,3 @@ These are prompts for independent developers, not transcripts or completed plann
 ## Live analytical presentation
 
 “I need to present a product-launch recommendation to the board. I want a polished slide story with a few local assumptions I can change during discussion, charts that update correctly, and an appendix explaining the model. Live means interactive in the room, not fetching new external data.”
-
-## Downloadable product-video generator
-
-“I'm preparing a short launch video for a fictional product. I want a few carefully designed templates, editable product copy and colors, an accurate preview, and a video file I can download and play. Keep it simple enough that classmates cannot break the composition with overly long text or unsupported media.”
-
-The user explicitly approved the documented Remotion render-event telemetry exception for the video app only. Disclose this exception in that app/recipe; it is not consent to analytics elsewhere or to sending video content.

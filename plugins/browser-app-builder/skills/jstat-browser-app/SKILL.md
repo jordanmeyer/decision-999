@@ -7,6 +7,8 @@ description: Use jStat for browser statistical calculations with explicit assump
 
 Read [selection](../../references/library-selection.md), [workflow](../../references/workflow.md) and the `jstat` entry in [the approved inventory](../../references/libraries.json). Use only an approved entry and its exact packages/peers. Preserve the agreed plan; route missing prerequisites through [managed setup](../../references/managed-build.md). Load only the selected libraries.
 
+For a single-period inventory simulator, read [inventory decisions](../../references/decision-models.md#single-period-inventory-decisions). Show an independently justified expected-profit benchmark and a meaningful risk tradeoff, not only repeated draws for a few arbitrary quantities.
+
 ## Usage pattern
 
 ```js

@@ -72,9 +72,14 @@ def bundle_designer(root):
         target = destination / path
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes(content)
-    tokens = root / BUILDER / 'assets/managed-starter/app/theme/duke-tokens.css'
-    tokens.parent.mkdir(parents=True, exist_ok=True)
-    tokens.write_bytes((root / DESIGNER / 'assets/duke-tokens.css').read_bytes())
+    for starter in ('starter', 'managed-starter'):
+        theme = root / BUILDER / 'assets' / starter / 'app/theme'
+        theme.mkdir(parents=True, exist_ok=True)
+        for name in ('duke-tokens.css', 'duke-fonts.css'):
+            shutil.copyfile(root / DESIGNER / 'assets' / name, theme / name)
+        if (theme / 'fonts').exists():
+            shutil.rmtree(theme / 'fonts')
+        shutil.copytree(root / DESIGNER / 'assets/fonts', theme / 'fonts')
 
 
 def check_links(folder):
@@ -126,6 +131,15 @@ def load(root, config):
             require(text(example.get('label')) and text(example.get('url'))
                     and urlsplit(example['url']).scheme == 'https' and urlsplit(example['url']).netloc,
                     f'{where}: examples need a label and an absolute HTTPS url')
+            if 'preview' in example:
+                evidence = root / 'evidence' / name
+                preview = evidence / example['preview']
+                require(inside(preview, evidence) and preview.is_file() and preview.suffix in ('.png', '.jpg'),
+                        f'{where}: example preview must be an image inside its evidence folder')
+                require(all(text(example.get(k)) for k in ('previewAlt', 'problem', 'lesson', 'libraries', 'walkthrough')),
+                        f'{where}: preview needs alt text, problem, lesson, libraries and walkthrough')
+                require(urlsplit(example['walkthrough']).scheme == 'https' and urlsplit(example['walkthrough']).netloc,
+                        f'{where}: example walkthrough needs an absolute HTTPS url')
         shots = [bundled(package, s, where, '.png') for s in ui.get('screenshots', [])]
         alts = listing.get('screenshotAlt', [])
         require(len(alts) == len(shots) and all(map(text, alts)), f'{where}: fill in {ext}.screenshotAlt with one description per screenshot')
@@ -294,9 +308,17 @@ def listing_page(plugin, config, base, clients):
              + f'</div>\n      <figcaption>Real output from this plugin.{example}</figcaption>\n    </figure>') if plugin['shots'] else ''
     record = f"https://github.com/{config['repo']}/blob/main/evidence/{plugin['name']}/EVIDENCE.md"
     evidence = f'<p><a class="text-link" href="{record}">Read the full review record</a></p>' if plugin['record'].is_file() else ''
-    examples = ('<h3>Try the apps</h3><ul>' + ''.join(
-        f'<li><a class="text-link" href="{escape(e["url"])}">{escape(e["label"])}</a></li>'
-        for e in listing['examples']) + '</ul>') if listing.get('examples') else ''
+    entries = []
+    for i, e in enumerate(listing.get('examples', [])):
+        if 'preview' in e:
+            entries.append(f'''<li class="app-example">
+              <img src="{href}example-{i}{Path(e['preview']).suffix}" alt="{escape(e['previewAlt'])}" loading="lazy">
+              <div><p class="label">{escape(e['label'])}</p><h4><a href="{escape(e['url'])}">{escape(e['problem'])}</a></h4>
+              <p>{escape(e['lesson'])}</p><p class="meta">{escape(e['libraries'])}</p>
+              <a class="text-link" href="{escape(e['walkthrough'])}" aria-label="How {escape(e['label'])} was built">How this was built</a></div></li>''')
+        else:
+            entries.append(f'<li><a class="text-link" href="{escape(e["url"])}">{escape(e["label"])}</a></li>')
+    examples = '<h3 id="apps">Try the apps</h3><ul class="app-examples">' + ''.join(entries) + '</ul>' if entries else ''
     return {
         'base': base, 'display': escape(ui['displayName']), 'label': escape(listing['label']),
         'short': escape(ui['shortDescription']), 'long': escape(ui['longDescription']), 'category': escape(ui['category']),
@@ -400,6 +422,10 @@ def build(root=ROOT, base=None):
         folder.mkdir(parents=True)
         for shot in {*plugin['shots'], plugin['cover']} - {None}:
             shutil.copy2(shot, folder / shot.name)
+        for i, entry in enumerate(plugin['listing'].get('examples', [])):
+            if 'preview' in entry:
+                preview = root / 'evidence' / plugin['name'] / entry['preview']
+                shutil.copy2(preview, folder / f'example-{i}{preview.suffix}')
         if plugin['example'].is_file():
             shutil.copy2(plugin['example'], folder / 'example.html')
             pages.append(folder / 'example.html')

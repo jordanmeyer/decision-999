@@ -7,6 +7,8 @@ description: Create interactive analytical slide presentations with reveal.js, i
 
 Read [selection](../../references/library-selection.md), [workflow](../../references/workflow.md) and the `reveal` entry in [the approved inventory](../../references/libraries.json). Use only an approved entry and its exact packages/peers. Preserve the agreed plan; route missing prerequisites through [managed setup](../../references/managed-build.md). Load only the selected libraries.
 
+Read [analytical presentations](../../references/decision-models.md#analytical-presentations) to preserve the intended audience, decision stakes, evidence and requested model appendix. Include a visible presentation mode and use live valid-input updates for inexpensive local meeting scenarios.
+
 ## Usage pattern
 
 ```js

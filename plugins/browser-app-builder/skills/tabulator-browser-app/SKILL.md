@@ -7,6 +7,8 @@ description: Build substantial interactive data tables with Tabulator for local 
 
 Read [selection](../../references/library-selection.md), [workflow](../../references/workflow.md) and the `tabulator` entry in [the approved inventory](../../references/libraries.json). Use only an approved entry and its exact packages/peers. Preserve the agreed plan; route missing prerequisites through [managed setup](../../references/managed-build.md). Load only the selected libraries.
 
+For operating ledgers and uploaded-data analysis, read the matching [dashboard guidance](../../references/decision-models.md#executive-dashboards). The main table must be the accessible working view; a hidden alternate table does not repair an unusable primary ledger.
+
 ## Usage pattern
 
 ```js

@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "campus-designer",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Design and review webpages, presentations, documents, and visual materials using Duke's public brand guidance.",
   "author": {
     "name": "Jordan Meyer",
@@ -37,7 +37,7 @@
     "io.github.jordanmeyer": {
       "label": "Example · Instructor-built",
       "audience": "Anyone who produces webpages, slides, or documents that should follow Duke’s public brand guidelines, without a designer on hand. The guidance is spread across many pages of the brand site; this plugin packages it in one place for an agent to consult.",
-      "limits": "Guidance only: it includes no production logos, photography, or font files, and relies on your agent’s tools to create and render files. It covers one brand guide, not brands in general. It grants no permission to use Duke marks and is not an official Duke tool.",
+      "limits": "Includes licensed local EB Garamond/Open Sans files, but no production logos, photography or creation/rendering tools. It covers one brand guide, not brands in general. It grants no permission to use Duke marks and is not an official Duke tool.",
       "results": [
         {
           "value": "3 of 3",

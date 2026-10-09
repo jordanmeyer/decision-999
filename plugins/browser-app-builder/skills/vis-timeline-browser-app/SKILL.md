@@ -7,6 +7,8 @@ description: Build interactive event timelines or interval roadmaps with local d
 
 Read [selection](../../references/library-selection.md), [workflow](../../references/workflow.md) and the `vis-timeline` entry in [the approved inventory](../../references/libraries.json). Use only an approved entry and its exact packages/peers. Preserve the agreed plan; route missing prerequisites through [managed setup](../../references/managed-build.md). Load only the selected libraries.
 
+For project roadmaps, read [resources and milestones](../../references/decision-models.md#roadmaps-resources-and-milestones). Use named point events for milestones, and model resource feasibility separately when requested.
+
 ## Usage pattern
 
 ```js

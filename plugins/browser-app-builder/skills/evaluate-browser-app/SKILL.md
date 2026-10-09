@@ -9,6 +9,10 @@ Read the [shared workflow](../../references/workflow.md), plan, source, setup, a
 
 ## Establish expected behavior
 
+Review the original request and PLAN.md coverage before testing. Each consequential requested feature needs observed behavior or an explicit student-approved deferral. Treat silent reductions of audience, scale, resources, milestones, charts or model explanation as gaps; passing tests for a simpler product does not close them.
+
+Evaluate the first-load lesson as well as formulas. Run the planned counterfactual and explain the change using independently checked model inputs. Check a binding and nonbinding limit when relevant; distinguish a nominal arithmetic output from a feasible forecast. Use the applicable [decision-model guidance](../../references/decision-models.md). Record lesson/scope findings separately from numerical pass counts. A mathematically correct app can still fail its agreed teaching purpose.
+
 Derive expected answers before observing the app: hand calculations, independently supplied examples, or a separately justified reference calculation. Record the derivation. Never bless the application's current outputs as expected fixtures.
 
 Build cases appropriate to the model: normal inputs, zero/negative boundaries, missing or malformed imports, unit/rounding mistakes, large realistic inputs, and mathematical relationships that must hold. For random simulations, test fixed seeds, cases without randomness, and statistical checks with tolerances justified before the run. Reproducibility alone is not accuracy.
@@ -22,6 +26,8 @@ Follow [evaluation freshness](../../references/evaluation-freshness.md), includi
 Run cases through the browser and verify the results, then inspect the interface with the student: meaningful scenarios, invalid inputs, units, keyboard use, narrow layout, and actual import/export behavior. Record method/tool versions, inputs, expected/observed values, pass/fail, and limitations. Do not silently substitute source review for rendered or numerical checks.
 
 Save each round in `EVALUATION.md`, including the tested commit and relevant paths. Keep failed rounds. Refer coding defects to [Build](../build-browser-app/SKILL.md) and model changes to [Plan](../plan-browser-app/SKILL.md). Rerun affected checks after changes and establish the new checkpoint. Only call the final round passing when required checks ran and relevant source remains clean.
+
+Review the main decision at first load and after edits: visible evidence, pending-state honesty, readable units/rounding, consistent dates, actual truncation, non-clipped chart labels, keyboard-usable primary table, and the chosen live/Apply pattern. Apply Campus Designer's rendered review, including local font loading, maximum-length numbers and dense targets. Check the worked-example links against the real request/plan/evidence; remove unsupported claims. Do a separate simplification pass for repeated values, redundant controls, empty panels and technical copy that obscures the decision.
 
 Before handoff, have the student review assumptions and unresolved limitations. Do not claim the business model is certified. [Deploy](../deploy-browser-app/SKILL.md) must recheck freshness and will require a final round after adding its workflow or public source link.
 

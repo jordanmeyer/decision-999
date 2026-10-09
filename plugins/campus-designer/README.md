@@ -1,6 +1,6 @@
 # Campus Designer
 
-Version 0.3.0. The complete `campus-designer` skill: Duke's public brand guidance for webpages, presentations, documents, and visual materials. It is an independent, instructor-built example. It is not an official Duke tool and grants no permission to use Duke marks.
+Version 0.3.2. The complete `campus-designer` skill: Duke's public brand guidance for webpages, presentations, documents, and visual materials. It is an independent, instructor-built example. It is not an official Duke tool and grants no permission to use Duke marks.
 
 ## Install
 
@@ -28,9 +28,9 @@ To call the skill directly, use `/campus-designer:campus-designer` in Claude or 
 
 ## Contents and prerequisites
 
-`skills/campus-designer/SKILL.md` is the entry point. It links to 11 text references, three instructional PNG diagrams, and an optional CSS token file. Reference diagrams are not production logos and must not be cropped into output. Source URLs, access dates, limitations, and notices are in `references/sources.md`. `assets/` holds the two listing screenshots and the directory card image.
+`skills/campus-designer/SKILL.md` is the entry point. It links to 11 text references, three instructional PNG diagrams, an optional CSS token file, and a local EB Garamond/Open Sans font bundle with OFL notices. Reference diagrams are not production logos and must not be cropped into output. Source URLs, access dates, limitations, and notices are in `references/sources.md`. `assets/` holds the two listing screenshots and the directory card image.
 
-The skill supplies guidance only. It uses the agent's own tools to create and render files and bundles no browser, document renderer, production marks, photography, or fonts. Restricted official templates need legitimately supplied access. Fonts must be obtained under their own licenses.
+The skill uses the agent's own tools to create and render files. It bundles EB Garamond 400 and Open Sans 400/600 normal styles under the SIL Open Font License, with a local CSS loader and retained notices. It includes no browser, document renderer, production marks or photography. Restricted official templates need legitimately supplied access.
 
 `plugin.json` follows the [Agent Plugins](https://agent-plugins.org/specification) format. Its `extensions` hold the directory listing. `.claude-plugin/plugin.json` is generated from it by the repository build for Claude; do not edit it by hand.
 
@@ -42,6 +42,8 @@ The review reports, preserved sources and full-page captures, the single-file ev
 
 ## Portability and provenance
 
-Copied from the complete design skill supplied with the project, preserving its organization and references checked on 2026-10-02. The package excludes source-repository scripts, caches, credentials, and unrelated projects. Two edits to `SKILL.md` depart from the source: it resolves bundled links relative to the installed skill and writes artifacts into the user's project, not the plugin, and since 0.3.0 its name and title are Campus Designer. The skill has no runtime dependency on the original directory, author-specific absolute paths, or escaping symlinks.
+Copied from the complete design skill supplied with the project, preserving its organization and references checked on 2026-10-02. The package excludes source-repository scripts, caches, credentials, and unrelated projects. Package adaptations include: it resolves bundled links relative to the installed skill and writes artifacts into the user's project, not the plugin, its name and title are Campus Designer, and the bundled local fonts and practical web-review defaults address observed output defects. The skill has no runtime dependency on the original directory, author-specific absolute paths, or escaping symlinks.
 
 0.2.0 added directory listing metadata, generated Claude manifests, and screenshots of reviewed output. 0.2.1 moves the review evidence out of the package (from 5.6 MB to about 0.5 MB) and replaces the full-page screenshots with display crops. 0.2.2 replaces the example prompt with an everyday request. 0.2.3 adds a card image from the student-organization example. 0.2.4 re-crops that image to 1440×810 so it ends above the page’s navy purpose band instead of cutting through its text. 0.3.0 renames the plugin and skill from Duke Designer (`duke-designer`) to Campus Designer (`campus-designer`) so the name does not suggest an official Duke tool; install it under the new name. The guidance itself is unchanged.
+
+0.3.2 adds the licensed local font bundle and shared checks for numerical typography, heading wraps, action labels, compact layouts and dense-control targets. The new starter/theme render evidence is separate from the October 2 example review.

@@ -179,7 +179,7 @@
           ]
         }
       },
-      "limitations": "React controls; import core styles then local overrides; system fonts only. Supplemental react-remove-scroll-bar notice required."
+      "limitations": "React controls; import core styles then local overrides; licensed local fonts only. Supplemental react-remove-scroll-bar notice required."
     },
     {
       "id": "reveal",
@@ -360,43 +360,6 @@
         }
       },
       "limitations": "Reviewed local WASM in a dedicated worker, bounded solve time, explicit integrality and feasibility tolerances. Terminate/recreate worker for cancellation. A feasible incumbent is not proof of optimality. Approved bounded three-product allocation configuration; arbitrary large models and every timeout/browser path are not certified."
-    },
-    {
-      "id": "remotion",
-      "name": "Remotion browser video",
-      "skill": "remotion-browser-app",
-      "status": "approved",
-      "packages": {
-        "remotion": "4.0.534",
-        "@remotion/player": "4.0.534",
-        "@remotion/web-renderer": "4.0.534"
-      },
-      "peers": {
-        "react": "19.3.0",
-        "react-dom": "19.3.0"
-      },
-      "documentation": "https://www.remotion.dev/docs/client-side-rendering",
-      "licenses": {
-        "remotion": {
-          "expression": "SEE LICENSE IN LICENSE.md",
-          "files": [
-            "LICENSE.md"
-          ]
-        },
-        "@remotion/player": {
-          "expression": "SEE LICENSE IN LICENSE.md",
-          "files": [
-            "LICENSE.md"
-          ]
-        },
-        "@remotion/web-renderer": {
-          "expression": "SEE LICENSE IN LICENSE.md",
-          "files": [
-            "LICENSE.md"
-          ]
-        }
-      },
-      "limitations": "Reviewed silent H.264 MP4 profile: two controlled templates, bounded copy and dimensions, explicit WebCodecs capability checks and forced muted rendering. Optional AAC/MP3/FLAC encoders are excluded by Vite aliases plus a build-time module assertion. Five actual exports were decoded and reviewed; arbitrary compositions, browsers and audio are not certified. License eligibility must be established for the actual operator. App-owner acceptance and visitor disclosure are required for Remotion render-event telemetry (IP, origin, render type/status; no video content); the recorded exception applies only to the authorized video example. Preserve distributed licenses, supplemental provenance and exact unmodified Mediabunny source links."
     }
   ]
 }

@@ -7,6 +7,8 @@ description: Transform, group and summarize local tabular data with Arquero. Use
 
 Read [selection](../../references/library-selection.md), [workflow](../../references/workflow.md) and the `arquero` entry in [the approved inventory](../../references/libraries.json). Use only an approved entry and its exact packages/peers. Preserve the agreed plan; route missing prerequisites through [managed setup](../../references/managed-build.md). Load only the selected libraries.
 
+For sales/returns analysis, read [uploaded sales and returns](../../references/decision-models.md#uploaded-sales-and-returns). Verify join grain and totals before building joint product/channel comparisons.
+
 ## Usage pattern
 
 ```js

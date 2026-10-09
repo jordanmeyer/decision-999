@@ -7,6 +7,8 @@ description: Create reproducible local random streams for browser simulations us
 
 Read [selection](../../references/library-selection.md), [workflow](../../references/workflow.md) and the `seedrandom` entry in [the approved inventory](../../references/libraries.json). Use only an approved entry and its exact packages/peers. Preserve the agreed plan; route missing prerequisites through [managed setup](../../references/managed-build.md). Load only the selected libraries.
 
+For inventory decisions, read [the model guidance](../../references/decision-models.md#single-period-inventory-decisions). Reuse the same generated demand sample across quantities when that matches the model; do not select a seed merely because its outcome makes the desired story look good.
+
 ## Usage pattern
 
 ```js

@@ -7,6 +7,8 @@ description: Parse a visitor-selected local CSV or bundled CSV with Papa Parse. 
 
 Read [selection](../../references/library-selection.md), [workflow](../../references/workflow.md) and the `papa-parse` entry in [the approved inventory](../../references/libraries.json). Use only an approved entry and its exact packages/peers. Preserve the agreed plan; route missing prerequisites through [managed setup](../../references/managed-build.md). Load only the selected libraries.
 
+For joined sales/returns imports, read [uploaded sales and returns](../../references/decision-models.md#uploaded-sales-and-returns). Parsing valid CSV does not establish the grain, join correctness or the meaning of net revenue.
+
 ## Usage pattern
 
 ```js

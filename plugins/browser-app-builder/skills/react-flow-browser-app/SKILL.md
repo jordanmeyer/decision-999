@@ -7,6 +7,8 @@ description: Build editable process or decision diagrams with nodes and connecti
 
 Read [selection](../../references/library-selection.md), [workflow](../../references/workflow.md) and the `react-flow` entry in [the approved inventory](../../references/libraries.json). Use only an approved entry and its exact packages/peers. Preserve the agreed plan; route missing prerequisites through [managed setup](../../references/managed-build.md). Load only the selected libraries.
 
+For capacity or turnaround models, read [process capacity and elapsed time](../../references/decision-models.md#process-capacity-and-elapsed-time) before defining outputs. A drawing library does not establish queue stability or resource feasibility.
+
 ## Usage pattern
 
 ```js

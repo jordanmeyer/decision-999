@@ -22,7 +22,7 @@ Access date for all entries: **2026-10-02**. Duke brand guidance comes from the 
 
 ## Bundled official reference illustrations
 
-Unmodified public PNG bytes downloaded from the links below. These are **instructional diagrams only**, kept under references; not approved production logos, editable templates, or a grant of trademark use. Do not crop out their artwork for output. No production logos, photos, mood boards or font binaries are bundled.
+Unmodified public PNG bytes downloaded from the links below. These are **instructional diagrams only**, kept under references; not approved production logos, editable templates, or a grant of trademark use. Do not crop out their artwork for output. No production logos, photos or mood boards are bundled.
 
 | Local file | Official origin | Purpose |
 | --- | --- | --- |
@@ -31,6 +31,8 @@ Unmodified public PNG bytes downloaded from the links below. These are **instruc
 | [subbrand-two-line.png](figures/subbrand-two-line.png) | [S3 two-line diagram](https://brand.duke.edu/wp-content/uploads/sites/42/2018/10/Duke-cobranding_horizontal.png) | Specific uppercase bold / italic composition; dimensions differ from Canvas B. |
 
 [duke-tokens.css](../assets/duke-tokens.css) is skill-authored, not an official Duke download. Its 20 named colors transcribe S5. White is from the S5 grid. Heading/body stacks use S6; choosing EB Garamond/Open Sans as defaults is the skill's choice. It carries no layout rules, fonts or external dependencies.
+
+[duke-fonts.css](../assets/duke-fonts.css) is a separate skill-authored loader for locally bundled EB Garamond 400 and Open Sans 400/600 normal styles. Font bytes are unmodified copies of the directory site's existing licensed assets; this was checked on 2026-10-09. The [EB Garamond notice](../assets/fonts/ebgaramond-license.txt) names the EB Garamond Project Authors and the [Open Sans notice](../assets/fonts/opensans-license.txt) names the Open Sans Project Authors. Both retain the SIL Open Font License 1.1; no restricted Duke ZIP was used. The loader uses relative URLs and does not contact a font service.
 
 ## Exact restricted-resource addresses
 

@@ -1,11 +1,14 @@
-:root { color-scheme: light; font-family: Arial, sans-serif; color: #262626; background: #F3F2F1; }
+@import "./theme/duke-tokens.css";
+@import "./theme/duke-fonts.css";
+:root { color-scheme: light; font-family: var(--duke-font-body); font-variant-numeric: lining-nums tabular-nums; color: var(--duke-cast-iron); background: var(--duke-whisper-gray); }
 * { box-sizing: border-box; }
-body { margin: 0; border-top: 8px solid #012169; }
+body { margin: 0; border-top: 8px solid var(--duke-navy-blue); }
 main { max-width: 52rem; margin: 0 auto; padding: clamp(1.5rem, 6vw, 5rem) 1.5rem; }
-h1 { color: #012169; font: 400 clamp(2.25rem, 6vw, 4rem)/1.1 Georgia, serif; max-width: 16ch; }
+h1 { color: var(--duke-navy-blue); font: 400 clamp(2.25rem, 6vw, 4rem)/1.1 var(--duke-font-heading); max-width: 16ch; text-wrap: balance; font-variant-numeric: lining-nums tabular-nums; }
 p, aside { line-height: 1.65; max-width: 62ch; }
-.eyebrow { font-size: .875rem; color: #012169; }
-button { font: inherit; padding: .85rem 1.25rem; color: white; background: #012169; border: 2px solid #012169; cursor: pointer; }
-button:hover { background: #00539B; }
-:focus-visible { outline: 3px solid #00539B; outline-offset: 4px; }
-aside { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid #666; font-size: .875rem; }
+b, strong { font-weight: 600; }
+.eyebrow { font-size: .875rem; color: var(--duke-navy-blue); }
+button { font: inherit; min-height: 44px; padding: .85rem 1.25rem; color: var(--duke-white); background: var(--duke-navy-blue); border: 2px solid var(--duke-navy-blue); cursor: pointer; }
+button:hover { background: var(--duke-royal-blue); }
+:focus-visible { outline: 3px solid var(--duke-royal-blue); outline-offset: 4px; }
+aside { margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--duke-graphite); font-size: .875rem; }

@@ -1,1 +1,14 @@
-{"name":"browser-recipe-research","version":"1.0.0","private":true,"type":"module","dependencies":{"@duckdb/duckdb-wasm":"1.32.0","@remotion/player":"4.0.534","@remotion/web-renderer":"4.0.534","highs":"1.15.3","leaflet":"1.9.4","react":"19.3.0","react-dom":"19.3.0","remotion":"4.0.534"},"devDependencies":{"@vitejs/plugin-react":"6.1.2","vite":"8.3.4"}}
+{
+  "name": "browser-recipe-research",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@duckdb/duckdb-wasm": "1.32.0",
+    "highs": "1.15.3",
+    "leaflet": "1.9.4"
+  },
+  "devDependencies": {
+    "vite": "8.3.4"
+  }
+}

@@ -57,8 +57,13 @@ with tempfile.TemporaryDirectory() as temporary, redirect_stdout(io.StringIO()):
     bundled = root / BUILDER / 'skills/campus-designer'
     (bundled / 'obsolete.txt').write_text('Old generated resource', encoding='utf-8')
     (bundled / 'SKILL.md').write_text('Stale generated copy', encoding='utf-8')
+    for starter in ('starter', 'managed-starter'):
+        (root / BUILDER / 'assets' / starter / 'app/theme/fonts/obsolete.ttf').write_bytes(b'old font')
     build(root)
     assert {p.relative_to(bundled): p.read_bytes() for p in bundled.rglob('*') if p.is_file()} == designer_files(root)
+    for starter in ('starter', 'managed-starter'):
+        fonts = root / BUILDER / 'assets' / starter / 'app/theme/fonts'
+        assert {p.name: p.read_bytes() for p in fonts.iterdir()} == {p.name: p.read_bytes() for p in (root / 'plugins/campus-designer/skills/campus-designer/assets/fonts').iterdir()}
     manifest, skill = root / 'plugins/campus-designer/plugin.json', root / 'plugins/campus-designer/skills/campus-designer/SKILL.md'
     original, instructions = manifest.read_text(encoding='utf-8'), skill.read_text(encoding='utf-8')
     edit(manifest, lambda m: m['extensions'][config['extension']].pop('limits'))
@@ -75,6 +80,17 @@ with tempfile.TemporaryDirectory() as temporary, redirect_stdout(io.StringIO()):
     build(root)
     assert '&lt;Example &amp; proof&gt;</a>' in (root / 'dist/plugins/campus-designer/index.html').read_text()
     manifest.write_text(original, encoding='utf-8')
+    app_manifest = root / BUILDER / 'plugin.json'
+    app_original = app_manifest.read_text()
+    edit(app_manifest, lambda m: m['extensions'][config['extension']]['examples'][0].update(preview='../../site/assets/open-sans-400.ttf'))
+    rejects(root, 'example preview must be an image inside its evidence folder')
+    app_manifest.write_text(app_original)
+    edit(app_manifest, lambda m: m['extensions'][config['extension']]['examples'][0].update(walkthrough='javascript:alert(1)'))
+    rejects(root, 'example walkthrough needs an absolute HTTPS url')
+    app_manifest.write_text(app_original)
+    build(root)
+    assert (root / 'dist/plugins/browser-app-builder/example-0.jpg').read_bytes() == (root / 'evidence/browser-app-builder/gallery/executive.jpg').read_bytes()
+    assert not (root / 'dist/plugins/browser-app-builder/source').exists()  # previews do not publish the evidence tree
     skill.write_text(instructions + '\n[outside](../../../../README.md)\n', encoding='utf-8')
     rejects(root, 'is missing or leaves')
     skill.write_text(instructions, encoding='utf-8')

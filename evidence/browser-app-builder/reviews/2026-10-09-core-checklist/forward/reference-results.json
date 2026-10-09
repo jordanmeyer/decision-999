@@ -1,0 +1,627 @@
+{
+  "scope": "Executed independent planning arithmetic only; no application or browser tested.",
+  "process": {
+    "finance_visits": 144.0,
+    "workload": [
+      3840,
+      6720,
+      3600.0,
+      4800
+    ],
+    "utilization": [
+      0.64,
+      0.7466666666666667,
+      1.1428571428571428,
+      0.8
+    ],
+    "finance_overload": 450.0,
+    "baseline_max_arrivals": 420.0,
+    "scenario_time": 471.5,
+    "touch_time": 39.5,
+    "wait_time": 432.0,
+    "finance_20_work": 2880.0,
+    "finance_20_utilization": 0.9142857142857143,
+    "finance_20_headroom": 270.0,
+    "finance_20_max_arrivals": 525.0,
+    "finance_20_time": 470.0,
+    "finance_at_capacity_touch": 21.875,
+    "finance_wait_zero_time": 429.5,
+    "shared_finance_work": 6000.0,
+    "finance_bypass_time": 422.0
+  },
+  "inventory": {
+    "critical_ratio": 0.6857142857142857,
+    "continuous_quantile": 558.0486263655324,
+    "whole_unit_optimum": 558,
+    "zero_demand_mass": 1.5739107093515337e-05,
+    "batch_rows": {
+      "330": {
+        "expected_profit": -228.4239658715951,
+        "loss_probability": 1
+      },
+      "340": {
+        "expected_profit": -18.043336376850675,
+        "loss_probability": 0.08521345864203839
+      },
+      "460": {
+        "expected_profit": 1972.227059829269,
+        "loss_probability": 0.14590330911314459
+      },
+      "470": {
+        "expected_profit": 2077.3711201841943,
+        "loss_probability": 0.1517006815357302
+      },
+      "550": {
+        "expected_profit": 2506.081618985234,
+        "loss_probability": 0.20587060445225314
+      },
+      "560": {
+        "expected_profit": 2509.2728911153044,
+        "loss_probability": 0.2130644572025851
+      },
+      "570": {
+        "expected_profit": 2502.2000236542444,
+        "loss_probability": 0.22040286335635945
+      }
+    },
+    "binding_15_percent": {
+      "q": 460,
+      "expected_profit": 1972.227059829269,
+      "loss_probability": 0.14590330911314459,
+      "positive_feasible_count": 13
+    },
+    "nonbinding_25_percent": {
+      "q": 560,
+      "expected_profit": 2509.2728911153044,
+      "loss_probability": 0.2130644572025851,
+      "positive_feasible_count": 27
+    },
+    "no_positive_feasible_5_percent": {
+      "q": 0,
+      "expected_profit": 0,
+      "loss_probability": 0,
+      "positive_feasible_count": 0
+    },
+    "no_fixed_cost": {
+      "q": 560,
+      "expected_profit": 10509.272891115304,
+      "loss_probability": 0.0034237966932239017,
+      "positive_feasible_count": 100
+    },
+    "profit_sacrifice": 537.0458312860355,
+    "minimum_positive_loss_q": 340,
+    "deterministic_demand_500": {
+      "460": 3040,
+      "500": 4000,
+      "560": 3340
+    },
+    "deterministic_zero_demand_q460": -13060,
+    "hand_fixture": {
+      "demands": [
+        0,
+        300,
+        500,
+        800
+      ],
+      "q": 460,
+      "profits": [
+        -13060,
+        -2560,
+        3040,
+        3040
+      ],
+      "sum_profit": -9540,
+      "mean_profit": -2385.0,
+      "loss_probability": 0.5
+    },
+    "strict_loss_boundary": {
+      "109": -35,
+      "110": 0
+    }
+  },
+  "board": {
+    "baseline": {
+      "recommendation": "full",
+      "alternatives": {
+        "full": {
+          "scenarios": {
+            "downside": {
+              "weight": 0.25,
+              "demand": [
+                24000,
+                24000,
+                24000
+              ],
+              "sold": [
+                24000,
+                24000,
+                24000
+              ],
+              "unserved": [
+                0,
+                0,
+                0
+              ],
+              "cash_flow": [
+                450000,
+                450000,
+                450000
+              ],
+              "npv": -680916.6040571001
+            },
+            "base": {
+              "weight": 0.5,
+              "demand": [
+                40000,
+                44000,
+                48400
+              ],
+              "sold": [
+                40000,
+                44000,
+                48400
+              ],
+              "unserved": [
+                0,
+                0,
+                0
+              ],
+              "cash_flow": [
+                1250000,
+                1450000,
+                1670000
+              ],
+              "npv": 1789406.4613072872
+            },
+            "upside": {
+              "weight": 0.25,
+              "demand": [
+                60000,
+                69000,
+                79350
+              ],
+              "sold": [
+                60000,
+                69000,
+                70000
+              ],
+              "unserved": [
+                0,
+                0,
+                9350
+              ],
+              "cash_flow": [
+                2250000,
+                2700000,
+                2750000
+              ],
+              "npv": 4542975.206611569
+            }
+          },
+          "weighted_npv": 1860217.8812922607,
+          "worst_npv": -680916.6040571001,
+          "negative_npv_weight": 0.25,
+          "upfront": 1800000
+        },
+        "limited": {
+          "scenarios": {
+            "downside": {
+              "weight": 0.25,
+              "demand": [
+                24000,
+                24000,
+                24000
+              ],
+              "sold": [
+                20000,
+                24000,
+                24000
+              ],
+              "unserved": [
+                4000,
+                0,
+                0
+              ],
+              "cash_flow": [
+                550000,
+                750000,
+                750000
+              ],
+              "npv": 783320.8114199846
+            },
+            "base": {
+              "weight": 0.5,
+              "demand": [
+                40000,
+                44000,
+                48400
+              ],
+              "sold": [
+                20000,
+                30000,
+                30000
+              ],
+              "unserved": [
+                20000,
+                14000,
+                18400
+              ],
+              "cash_flow": [
+                550000,
+                1050000,
+                1050000
+              ],
+              "npv": 1256649.1359879784
+            },
+            "upside": {
+              "weight": 0.25,
+              "demand": [
+                60000,
+                69000,
+                79350
+              ],
+              "sold": [
+                20000,
+                30000,
+                30000
+              ],
+              "unserved": [
+                40000,
+                39000,
+                49350
+              ],
+              "cash_flow": [
+                550000,
+                1050000,
+                1050000
+              ],
+              "npv": 1256649.1359879784
+            }
+          },
+          "weighted_npv": 1138317.05484598,
+          "worst_npv": 783320.8114199846,
+          "negative_npv_weight": 0,
+          "upfront": 900000
+        },
+        "defer": {
+          "scenarios": {
+            "downside": {
+              "weight": 0.25,
+              "demand": [
+                24000,
+                24000,
+                24000
+              ],
+              "sold": [
+                0,
+                0,
+                0
+              ],
+              "unserved": [
+                24000,
+                24000,
+                24000
+              ],
+              "cash_flow": [
+                0,
+                0,
+                0
+              ],
+              "npv": 0.0
+            },
+            "base": {
+              "weight": 0.5,
+              "demand": [
+                40000,
+                44000,
+                48400
+              ],
+              "sold": [
+                0,
+                0,
+                0
+              ],
+              "unserved": [
+                40000,
+                44000,
+                48400
+              ],
+              "cash_flow": [
+                0,
+                0,
+                0
+              ],
+              "npv": 0.0
+            },
+            "upside": {
+              "weight": 0.25,
+              "demand": [
+                60000,
+                69000,
+                79350
+              ],
+              "sold": [
+                0,
+                0,
+                0
+              ],
+              "unserved": [
+                60000,
+                69000,
+                79350
+              ],
+              "cash_flow": [
+                0,
+                0,
+                0
+              ],
+              "npv": 0.0
+            }
+          },
+          "weighted_npv": 0.0,
+          "worst_npv": 0.0,
+          "negative_npv_weight": 0,
+          "upfront": 0
+        }
+      }
+    },
+    "demand_70_percent": {
+      "recommendation": "limited",
+      "alternatives": {
+        "full": {
+          "scenarios": {
+            "downside": {
+              "weight": 0.25,
+              "demand": [
+                16800,
+                16800,
+                16800
+              ],
+              "sold": [
+                16800,
+                16800,
+                16800
+              ],
+              "unserved": [
+                0,
+                0,
+                0
+              ],
+              "cash_flow": [
+                90000,
+                90000,
+                90000
+              ],
+              "npv": -1576183.32081142
+            },
+            "base": {
+              "weight": 0.5,
+              "demand": [
+                28000,
+                30800,
+                33880
+              ],
+              "sold": [
+                28000,
+                30800,
+                33880
+              ],
+              "unserved": [
+                0,
+                0,
+                0
+              ],
+              "cash_flow": [
+                650000,
+                790000,
+                944000
+              ],
+              "npv": 153042.82494365098
+            },
+            "upside": {
+              "weight": 0.25,
+              "demand": [
+                42000,
+                48300,
+                55545
+              ],
+              "sold": [
+                42000,
+                48300,
+                55545
+              ],
+              "unserved": [
+                0,
+                0,
+                0
+              ],
+              "cash_flow": [
+                1350000,
+                1665000,
+                2027250
+              ],
+              "npv": 2326408.71525169
+            }
+          },
+          "weighted_npv": 264077.76108189294,
+          "worst_npv": -1576183.32081142,
+          "negative_npv_weight": 0.25,
+          "upfront": 1800000
+        },
+        "limited": {
+          "scenarios": {
+            "downside": {
+              "weight": 0.25,
+              "demand": [
+                16800,
+                16800,
+                16800
+              ],
+              "sold": [
+                16800,
+                16800,
+                16800
+              ],
+              "unserved": [
+                0,
+                0,
+                0
+              ],
+              "cash_flow": [
+                390000,
+                390000,
+                390000
+              ],
+              "npv": 69872.2764838466
+            },
+            "base": {
+              "weight": 0.5,
+              "demand": [
+                28000,
+                30800,
+                33880
+              ],
+              "sold": [
+                20000,
+                30000,
+                30000
+              ],
+              "unserved": [
+                8000,
+                800,
+                3880
+              ],
+              "cash_flow": [
+                550000,
+                1050000,
+                1050000
+              ],
+              "npv": 1256649.1359879784
+            },
+            "upside": {
+              "weight": 0.25,
+              "demand": [
+                42000,
+                48300,
+                55545
+              ],
+              "sold": [
+                20000,
+                30000,
+                30000
+              ],
+              "unserved": [
+                22000,
+                18300,
+                25545
+              ],
+              "cash_flow": [
+                550000,
+                1050000,
+                1050000
+              ],
+              "npv": 1256649.1359879784
+            }
+          },
+          "weighted_npv": 959954.9211119455,
+          "worst_npv": 69872.2764838466,
+          "negative_npv_weight": 0,
+          "upfront": 900000
+        },
+        "defer": {
+          "scenarios": {
+            "downside": {
+              "weight": 0.25,
+              "demand": [
+                16800,
+                16800,
+                16800
+              ],
+              "sold": [
+                0,
+                0,
+                0
+              ],
+              "unserved": [
+                16800,
+                16800,
+                16800
+              ],
+              "cash_flow": [
+                0,
+                0,
+                0
+              ],
+              "npv": 0.0
+            },
+            "base": {
+              "weight": 0.5,
+              "demand": [
+                28000,
+                30800,
+                33880
+              ],
+              "sold": [
+                0,
+                0,
+                0
+              ],
+              "unserved": [
+                28000,
+                30800,
+                33880
+              ],
+              "cash_flow": [
+                0,
+                0,
+                0
+              ],
+              "npv": 0.0
+            },
+            "upside": {
+              "weight": 0.25,
+              "demand": [
+                42000,
+                48300,
+                55545
+              ],
+              "sold": [
+                0,
+                0,
+                0
+              ],
+              "unserved": [
+                42000,
+                48300,
+                55545
+              ],
+              "cash_flow": [
+                0,
+                0,
+                0
+              ],
+              "npv": 0.0
+            }
+          },
+          "weighted_npv": 0.0,
+          "worst_npv": 0.0,
+          "negative_npv_weight": 0,
+          "upfront": 0
+        }
+      }
+    },
+    "baseline_expected_full_advantage": 721900.8264462808,
+    "zero_floor_recommendation": "limited",
+    "zero_demand_recommendation": "defer",
+    "zero_discount_full_base_npv": 2570000.0,
+    "zero_margin_full_base_npv": -3665138.9932381664,
+    "no_feasible_high_floor": null,
+    "base_full_year1_bridge": {
+      "revenue": 4800000,
+      "variable_cost": 2800000,
+      "fixed_cost": 750000,
+      "operating_cash": 1250000,
+      "cumulative_including_time0": -550000
+    }
+  }
+}

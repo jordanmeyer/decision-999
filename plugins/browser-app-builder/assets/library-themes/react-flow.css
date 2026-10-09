@@ -1,4 +1,4 @@
-.react-flow { --xy-background-color: var(--duke-white); --xy-node-background-color: var(--duke-white); --xy-node-color: var(--duke-cast-iron); --xy-node-border: 1px solid var(--duke-navy-blue); --xy-edge-stroke: var(--duke-navy-blue); --xy-edge-stroke-selected: var(--duke-copper); --xy-controls-button-background-color: var(--duke-white); --xy-controls-button-color: var(--duke-navy-blue); font-family: Arial,sans-serif; }
+.react-flow { --xy-background-color: var(--duke-white); --xy-node-background-color: var(--duke-white); --xy-node-color: var(--duke-cast-iron); --xy-node-border: 1px solid var(--duke-navy-blue); --xy-edge-stroke: var(--duke-navy-blue); --xy-edge-stroke-selected: var(--duke-copper); --xy-controls-button-background-color: var(--duke-white); --xy-controls-button-color: var(--duke-navy-blue); font-family: var(--duke-font-body); }
 .react-flow .react-flow__node.selected { outline: 2px solid var(--duke-navy-blue); }
 .react-flow .react-flow__handle { background: var(--duke-navy-blue); }
 .react-flow .react-flow__controls-button:hover { background: var(--duke-hatteras); }

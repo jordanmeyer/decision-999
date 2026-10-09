@@ -102,17 +102,6 @@
       "workflow": "https://github.com/jordanmeyer/bab-example-presentation/actions/runs/37921873665",
       "live_url": "https://jordanmeyer.github.io/bab-example-presentation/",
       "gallery_commit": "da449f8a7a4bdd6c852ab73aff2bfbe5c4b72771"
-    },
-    "video": {
-      "stage": "live verified and linked in gallery",
-      "repository_proposed": "jordanmeyer/bab-example-video",
-      "review": "PASS",
-      "deployment": "PASS",
-      "reviewed_source": "287fed96c6f2afc3608170ce6cbefe618b992aeb",
-      "published_commit": "a179981ec334857c7a9aca20281e8c22df819879",
-      "workflow": "https://github.com/jordanmeyer/bab-example-video/actions/runs/37922588673",
-      "live_url": "https://jordanmeyer.github.io/bab-example-video/",
-      "gallery_commit": "77fe8022c9488f26e4165a4a128413d636d7afe5"
     }
   },
   "completed": "2026-10-09",

@@ -7,6 +7,8 @@ description: Build browser resource-allocation optimizers with HiGHS in a worker
 
 Read [selection](../../references/library-selection.md), [workflow](../../references/workflow.md) and `highs` in [inventory](../../references/libraries.json). Use only its approved exact configuration and [managed setup](../../references/managed-build.md). Agree on decision variables, units, objective, constraint directions, integrality, bounds and what the model omits before writing the solver input.
 
+For allocation teaching apps, read [capacity value and integrality](../../references/decision-models.md#resource-allocation-and-capacity-value). Capacity experiments and a meaningful whole-unit lesson require model comparisons, not simply displaying solver output.
+
 Run HiGHS in a dedicated module worker so solving cannot freeze the interface. Bundle its WASM locally. Add `worker: { format: 'es' }` to the returned Vite configuration; this loader needs ES module worker output, including its split chunks. Create it with `new Worker(new URL('./solver-worker.js', import.meta.url), { type: 'module' })`. Generate solver variable names from controlled IDs, not imported labels; keep business labels separately.
 
 ```js
