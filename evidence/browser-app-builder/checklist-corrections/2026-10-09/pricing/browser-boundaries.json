@@ -1,0 +1,61 @@
+{
+  "environment": "Codex in-app browser; configured Mac; actual local app; not novice or screen-reader evidence",
+  "observations": [
+    {
+      "app": "pricing",
+      "case": "62 units",
+      "result": "-$4.00",
+      "threshold": "63 units",
+      "explanation": "Theoretical break-even: 62.50 units. Round up to cover costs with whole units."
+    },
+    {
+      "app": "pricing",
+      "case": "63 units",
+      "result": "$4.00",
+      "threshold": "63 units",
+      "explanation": "Theoretical break-even: 62.50 units. Round up to cover costs with whole units."
+    },
+    {
+      "app": "pricing",
+      "case": "zero price",
+      "result": "-$1,700.00",
+      "threshold": "No break-even at this price",
+      "explanation": "Each sale contributes zero or less toward positive fixed costs. Selling more cannot cover them."
+    },
+    {
+      "app": "pricing",
+      "case": "negative contribution, zero fixed",
+      "result": "-$200.00",
+      "threshold": "0 units",
+      "explanation": "Zero units already covers zero fixed costs. Every additional sale loses money."
+    },
+    {
+      "app": "pricing",
+      "case": "zero contribution, zero fixed",
+      "result": "$0.00",
+      "threshold": "0 units",
+      "explanation": "Zero units already covers zero fixed costs. Every quantity has zero profit."
+    },
+    {
+      "app": "pricing",
+      "case": "zero quantity",
+      "result": "-$500.00",
+      "threshold": "63 units",
+      "explanation": "Theoretical break-even: 62.50 units. Round up to cover costs with whole units."
+    },
+    {
+      "app": "pricing",
+      "case": "threshold above limit",
+      "result": "-$999,999.99",
+      "threshold": "100,000,000 units",
+      "explanation": "Theoretical break-even: 100000000.00 units. Round up to cover costs with whole units. This exceeds the 1,000,000-unit scenario limit."
+    },
+    {
+      "app": "pricing",
+      "case": "decimal boundary",
+      "result": "-$0.01",
+      "threshold": "1,001 units",
+      "explanation": "Theoretical break-even: 1000.10 units. Round up to cover costs with whole units."
+    }
+  ]
+}

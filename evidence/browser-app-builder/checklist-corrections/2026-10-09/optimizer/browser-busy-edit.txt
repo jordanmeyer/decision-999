@@ -1,0 +1,21 @@
+PASS — edit with actual app and worker
+[
+  {
+    "phase": "busy",
+    "title": "Finding the best feasible mix…",
+    "cancelVisible": true,
+    "assumptionsCollapsed": true
+  },
+  {
+    "phase": "edit",
+    "status": "Assumptions changed. Solve again to see a current allocation.",
+    "title": "A new mix is waiting to be solved.",
+    "evidenceHidden": true
+  },
+  {
+    "phase": "retry",
+    "title": "These commitments do not fit.",
+    "explanation": "Oven needs 1 more min (158 used / 157 available). The minimum commitments alone require this much capacity. Review the commitments, capacity or resource assumptions and solve again. These are conflicts under the model, not a unique business cause; no requirement has been relaxed.",
+    "status": "Solve complete: Infeasible. No current allocation."
+  }
+]

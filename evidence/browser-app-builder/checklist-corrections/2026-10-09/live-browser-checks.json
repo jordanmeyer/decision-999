@@ -1,0 +1,125 @@
+{
+  "scope": "Configured Mac browser known-answer smoke checks after exact-SHA successful Pages deployments. No human/device/screen-reader acceptance claim. Normal URLs; no cache-busting query.",
+  "checks": [
+    {
+      "app": "pricing",
+      "url": "https://jordanmeyer.github.io/bab-trial-pricing-2026-10-08/",
+      "at": "2026-10-09T20:20:17.548Z",
+      "check": "Default $300 / whole-unit minimum 63. Changed quantity 62 returns -$4, comparison retains reference $300.",
+      "assets": [
+        "./style.css?v=4",
+        "./app.js?v=4"
+      ]
+    },
+    {
+      "app": "inventory",
+      "url": "https://jordanmeyer.github.io/bab-trial-inventory-2026-10-08/",
+      "at": "2026-10-09T20:20:25.935Z",
+      "check": "Default 90/123 units =73.2%; delayed delivery example 15/20 =75%, ending2, pipeline6.",
+      "assets": [
+        "./style.css?v=5",
+        "./app.js?v=5"
+      ]
+    },
+    {
+      "app": "sales",
+      "url": "https://jordanmeyer.github.io/bab-trial-sales-2026-10-08/",
+      "at": "2026-10-09T20:20:31.973Z",
+      "check": "Varied12rows2950/2350/600; three-row hand-check North240/144/96.",
+      "assets": [
+        "./style.css?v=4",
+        "./app.js?v=4"
+      ]
+    },
+    {
+      "app": "executive",
+      "url": "https://jordanmeyer.github.io/bab-example-executive/",
+      "at": "2026-10-09T20:20:41.316Z",
+      "check": "Defaultsales1,441,000/contribution341,800; Coast502,000/102,180/20.4%.",
+      "assets": [
+        "/bab-example-executive/assets/index-CoCXyH9_.js",
+        "/bab-example-executive/assets/index-ZSg0LWtH.css"
+      ]
+    },
+    {
+      "app": "uploads",
+      "url": "https://jordanmeyer.github.io/bab-example-uploads/",
+      "at": "2026-10-09T20:20:53.101Z",
+      "check": "Sample384sales326returns 291788−51827=239961. Paid social110356−33604=76752; original-cohort labeling and source identities visible.",
+      "assets": [
+        "/bab-example-uploads/assets/index-CIv3dk97.js",
+        "/bab-example-uploads/assets/index-Bqz3pqrc.css"
+      ]
+    },
+    {
+      "app": "simulator",
+      "url": "https://jordanmeyer.github.io/bab-example-simulator/",
+      "at": "2026-10-09T20:21:04.486Z",
+      "check": "Default chosen469 expected6068 vs unscreened558/6510; upper loss bound2.994022%; downside button opens selected469 view.",
+      "assets": [
+        "/bab-example-simulator/assets/index-gQQbQtRP.js",
+        "/bab-example-simulator/assets/index-D_SppeD6.css"
+      ]
+    },
+    {
+      "app": "optimizer",
+      "url": "https://jordanmeyer.github.io/bab-example-optimizer/",
+      "at": "2026-10-09T20:21:13.788Z",
+      "check": "Live worker solves default5/8/16 batches for941 vs946LP; two-product lesson3/2=$23 vs$24LP; exact constraints visible.",
+      "assets": [
+        "/bab-example-optimizer/assets/index-BbHcAxjj.js",
+        "/bab-example-optimizer/assets/index-CUn1Eb8g.css"
+      ]
+    },
+    {
+      "app": "sql",
+      "url": "https://jordanmeyer.github.io/bab-example-sql/",
+      "at": "2026-10-09T20:21:36.027Z",
+      "check": "Live DuckDB worker tiny join case renders mistaken75000cents versus correct55000cents.",
+      "assets": [
+        "/bab-example-sql/assets/index-BBYkWZ7H.js",
+        "/bab-example-sql/assets/index-DhLvN0JA.css"
+      ]
+    },
+    {
+      "app": "roadmap",
+      "url": "https://jordanmeyer.github.io/bab-example-roadmap/",
+      "at": "2026-10-09T20:21:47.770Z",
+      "check": "DefaultNov29 with2daysbuffer and6overload days; packaging delay readyDec2,1daylate,+3daysbaseline.",
+      "assets": [
+        "/bab-example-roadmap/assets/index-ZEeHeJAd.js",
+        "/bab-example-roadmap/assets/index-CbbWsWPd.css"
+      ]
+    },
+    {
+      "app": "process",
+      "url": "https://jordanmeyer.github.io/bab-example-process/",
+      "at": "2026-10-09T20:21:54.680Z",
+      "check": "Default471.5 nominalmin withFinance480/420=114.3%load;90/10 reduces nominalto370.5 (−101) whileFinance remains overcapacity.",
+      "assets": [
+        "/bab-example-process/assets/index-B5ItCOrY.js",
+        "/bab-example-process/assets/index-DW5ssznd.css"
+      ]
+    },
+    {
+      "app": "markets",
+      "url": "https://jordanmeyer.github.io/bab-example-markets/",
+      "at": "2026-10-09T20:22:02.687Z",
+      "check": "DefaultGeorgia67.50/Tennessee67.00; Growth70 reverses leader Tennessee74.14/Georgia68.28;9of12eligible.",
+      "assets": [
+        "/bab-example-markets/assets/index-BP0Vk7KB.js",
+        "/bab-example-markets/assets/index-CjlUHjfZ.css"
+      ]
+    },
+    {
+      "app": "presentation",
+      "url": "https://jordanmeyer.github.io/bab-example-presentation/",
+      "at": "2026-10-09T20:22:29.240Z",
+      "check": "20−12 contribution ×100−500=$300; stress−20;pilot115/19; funding1700. Live-result anchor stays onslide4.",
+      "assets": [
+        "/bab-example-presentation/assets/index-BSndAInm.js",
+        "/bab-example-presentation/assets/index-DXSb14z_.css"
+      ]
+    }
+  ]
+}

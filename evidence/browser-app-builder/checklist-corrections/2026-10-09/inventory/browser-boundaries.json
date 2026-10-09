@@ -1,0 +1,55 @@
+{
+  "environment": "Codex in-app browser; configured Mac; actual local app; not novice or screen-reader evidence",
+  "comparison": "Same demand path; service and stock consequences\nPolicy (point / order units)\tUnit fill\tAverage closing stock\tEnding stock\tPipeline stock\nCurrent: 3 / 6\t75.0%\t1\t2\t6\nComparison: 6 / 6\t85.0%\t1.4\t0\t12",
+  "comparisonEdit": "Old table cleared; comparison pending message visible",
+  "observations": [
+    {
+      "name": "zero demand",
+      "fill": "N/A (no demand)",
+      "summary": "0 of 0 units demanded were sold; 0 received; 0 remain on order beyond the final day. Ending on-hand stock is separate from pipeline stock.",
+      "service": "0 of 5 days had unmet demand; 5 days had none. Unit fill uses units sold ÷ units demanded, not the fraction of days without a stockout. Average closing inventory: 5 units. N/A is not evidence of good service: no demand tested the policy.",
+      "firstRow": "1\t5\t0\t0\t0\t0\t5\t0\t5\t0\t—\t5 + 0 = 5 > 3: no order",
+      "circles": 0
+    },
+    {
+      "name": "zero initial",
+      "fill": "50.0%",
+      "summary": "10 of 20 units demanded were sold; 12 received; 6 remain on order beyond the final day. Ending on-hand stock is separate from pipeline stock.",
+      "service": "3 of 5 days had unmet demand; 2 days had none. Unit fill uses units sold ÷ units demanded, not the fraction of days without a stockout. Average closing inventory: 0.8 units.",
+      "firstRow": "1\t0\t0\t4\t0\t4\t0\t0\t0\t6\t3\t0 + 0 = 0 ≤ 3: order 6",
+      "circles": 2
+    },
+    {
+      "name": "small order",
+      "fill": "40.0%",
+      "summary": "8 of 20 units demanded were sold; 3 received; 2 remain on order beyond the final day. Ending on-hand stock is separate from pipeline stock.",
+      "service": "4 of 5 days had unmet demand; 1 days had none. Unit fill uses units sold ÷ units demanded, not the fraction of days without a stockout. Average closing inventory: 0.2 units.",
+      "firstRow": "1\t5\t0\t4\t4\t0\t1\t0\t1\t1\t3\t1 + 0 = 1 ≤ 3: order 1",
+      "circles": 3
+    },
+    {
+      "name": "lead beyond horizon",
+      "fill": "25.0%",
+      "summary": "5 of 20 units demanded were sold; 0 received; 6 remain on order beyond the final day. Ending on-hand stock is separate from pipeline stock.",
+      "service": "4 of 5 days had unmet demand; 1 days had none. Unit fill uses units sold ÷ units demanded, not the fraction of days without a stockout. Average closing inventory: 0.2 units.",
+      "firstRow": "1\t5\t0\t4\t4\t0\t1\t0\t1\t6\t7\t1 + 0 = 1 ≤ 3: order 6",
+      "circles": 0
+    },
+    {
+      "name": "exact threshold",
+      "fill": "85.0%",
+      "summary": "17 of 20 units demanded were sold; 12 received; 6 remain on order beyond the final day. Ending on-hand stock is separate from pipeline stock.",
+      "service": "2 of 5 days had unmet demand; 3 days had none. Unit fill uses units sold ÷ units demanded, not the fraction of days without a stockout. Average closing inventory: 1.4 units.",
+      "firstRow": "1\t7\t0\t4\t4\t0\t3\t0\t3\t6\t3\t3 + 0 = 3 ≤ 3: order 6",
+      "circles": 2
+    },
+    {
+      "name": "one day",
+      "fill": "100.0%",
+      "summary": "4 of 4 units demanded were sold; 0 received; 6 remain on order beyond the final day. Ending on-hand stock is separate from pipeline stock.",
+      "service": "0 of 1 days had unmet demand; 1 days had none. Unit fill uses units sold ÷ units demanded, not the fraction of days without a stockout. Average closing inventory: 1 units.",
+      "firstRow": "1\t5\t0\t4\t4\t0\t1\t0\t1\t6\t3\t1 + 0 = 1 ≤ 3: order 6",
+      "circles": 1
+    }
+  ]
+}

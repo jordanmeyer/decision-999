@@ -1,0 +1,25 @@
+{
+  "source": "0f0fd7441ba10190fd5de4f4e2db9926aee86932",
+  "precision": [
+    {
+      "risk": 2.994,
+      "text": "LAST COMPLETED RUN · 3.0% LOSS LIMIT\n\nIf proceeding, order 468 units.\n\n$6,057 expected contribution; 2.6% simulated chance of loss. The conservative upper estimate is 2.98345%, within your 2.994% limit.\n\nWithout the loss screen, 558 units maximize expected contribution at $6,510. Your risk limit gives up $452 of expected contribution.\n\nThis quantity choice assumes the launch goes ahead; not launching is outside the model.\n\nSimulated fifth percentile: $1,286. This tail summary is not a worst-case bound. Inspect this order’s downside\n\nTHE QUANTITY DECISION\n\nFind the peak, then apply the risk limit.\n\nThe critical ratio is 68.6%: ($45.00 − $21.00) ÷ ($45.00 − $10.00). Its continuous demand quantile is 558.1 units; the exact whole-unit peak is 558.\n\nOrder quantity, units\n-$5K\n$0\n$5K\n$10K\n0\n200\n400\n600\n800\n\nNavy: exact expected contribution. Diamond: unscreened peak. Circle: risk-constrained choice. Displayed range 1–860; the search checks every integer from 1–5,000. Lower-bound quantities s"
+    },
+    {
+      "risk": 2.995,
+      "text": "LAST COMPLETED RUN · 3.0% LOSS LIMIT\n\nIf proceeding, order 469 units.\n\n$6,068 expected contribution; 2.7% simulated chance of loss. The conservative upper estimate is 2.994022%, within your 2.995% limit.\n\nWithout the loss screen, 558 units maximize expected contribution at $6,510. Your risk limit gives up $442 of expected contribution.\n\nThis quantity choice assumes the launch goes ahead; not launching is outside the model.\n\nSimulated fifth percentile: $1,274. This tail summary is not a worst-case bound. Inspect this order’s downside\n\nTHE QUANTITY DECISION\n\nFind the peak, then apply the risk limit.\n\nThe critical ratio is 68.6%: ($45.00 − $21.00) ÷ ($45.00 − $10.00). Its continuous demand quantile is 558.1 units; the exact whole-unit peak is 558.\n\nOrder quantity, units\n-$5K\n$0\n$5K\n$10K\n0\n200\n400\n600\n800\n\nNavy: exact expected contribution. Diamond: unscreened peak. Circle: risk-constrained choice. Displayed range 1–860; the search checks every integer from 1–5,000. Lower-bound quantities "
+    }
+  ],
+  "sharedWorlds": [
+    {
+      "scenario": "5000",
+      "table": "Same demand and landed cost for every compared order\nOrdered units\tDemand units\tCost per unit\tContribution\n558\t217\t$19.78\t-$1,862\n469\t217\t$19.78\t-$992\n400\t217\t$19.78\t-$317\n500\t217\t$19.78\t-$1,295\n600\t217\t$19.78\t-$2,273"
+    },
+    {
+      "scenario": "10000",
+      "table": "Same demand and landed cost for every compared order\nOrdered units\tDemand units\tCost per unit\tContribution\n558\t478\t$20.59\t$6,821\n469\t478\t$20.59\t$7,448\n400\t478\t$20.59\t$5,764\n500\t478\t$20.59\t$7,435\n600\t478\t$20.59\t$6,376"
+    }
+  ],
+  "copy": "Seasonal Order Lab — last completed run\n{\n  \"demandMean\": 500,\n  \"demandSd\": 120,\n  \"price\": 4500,\n  \"recovery\": 1000,\n  \"costLow\": 1800,\n  \"costHigh\": 2400,\n  \"fixed\": 400000,\n  \"riskLimit\": 0.02995,\n  \"quantities\": [\n    400,\n    500,\n    600\n  ],\n  \"seed\": \"tote-2026\",\n  \"runs\": 10000,\n  \"currency\": \"USD cents\"\n}\nQuantity choice assumes proceeding with a launch; no-launch is not compared.\nUnscreened peak: 558 units, expected contribution $6,510. Within risk limit: 469. Expected contribution $6,068; loss estimate 2.7%; screening upper endpoint 2.994022%. Risk screen uses a 95% Wilson upper endpoint (exact for certainty).\nSource: https://github.com/jordanmeyer/bab-example-simulator",
+  "invalidDraftCopyRetainsCompleted": true
+}

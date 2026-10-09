@@ -1,0 +1,32 @@
+{
+  "source": "0f0fd7441ba10190fd5de4f4e2db9926aee86932",
+  "flat": {
+    "ticks": [
+      "Order quantity, units",
+      "-$100K",
+      "-$80K",
+      "-$60K",
+      "-$40K",
+      "-$20K",
+      "$0",
+      "0",
+      "200",
+      "400",
+      "600",
+      "800",
+      "900",
+      "0%",
+      "20%",
+      "40%",
+      "60%",
+      "80%",
+      "100%",
+      "-$100,000–-$99,999"
+    ],
+    "table": "Primary comparison · expected contribution is analytic; loss share is simulated\nOrder\tUnits\tExpected contribution\tLoss estimate\tScreen\nUnscreened peak\t1\t-$100,000\t100.0%\tPass\nEditable comparison\t400\t-$100,000\t100.0%\tPass\nEditable comparison\t500\t-$100,000\t100.0%\tPass\nEditable comparison\t600\t-$100,000\t100.0%\tPass"
+  },
+  "negativeCertainty": "Fixed100000,risk100,certainty: q500/−88000;400/−90400;600/−89100. Explicitwarningoptimizationdoesnotjustifylaunching.",
+  "zeroRisk": " · 0.0% LOSS LIMIT\n\nNo quantity meets your risk limit.\n\nNone of the whole orders from 1–5,000 passes. Reconsider your assumptions or the launch; no order has been recommended.\n\nThe unscreened peak is 500 units at -$88,000.\n\nThis quantity choice assumes the launch goes ahead; not launching is outside the model.\n\nTHE QUANTITY DECISION\n\nFind the peak, then apply the risk limit.\n\nThe critical ratio is 68.6%: ($45.00 − $21.00) ÷ ($45.00 − $10.00). Its continuous demand quantile is 500.0 units; the exact whole-unit peak is 500.\n\nOrder quantity, units\n-$100K\n-$80K\n-$60K\n-$40K\n-$20K\n$0\n0\n100\n200\n300\n400\n500\n600\n\nNavy: exact expected contribution. Diamond: unscreened peak. Circle: risk-constrained choice. Displayed range 1–600; the search checks every integer from 1–5,000. Lower-bound quantities still pay the fixed launch cost.\n\nPrimary comparison · expected contribution is analytic; loss share i",
+  "conditionedDemand": "Mean0,SD50 shows mean39.9, samplemean39.9,p5=3,p50=34,p95=97",
+  "timing": "Observed10000scenarioflat run89ms onconfiguredMac; notstudentdeviceevidence"
+}

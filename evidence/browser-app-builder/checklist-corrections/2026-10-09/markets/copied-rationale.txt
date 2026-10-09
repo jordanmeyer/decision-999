@@ -1,0 +1,36 @@
+REPLENISH — SYNTHETIC CLASSROOM MARKET SCREEN
+Fictional refill-supply service. These inputs are invented; scores are not forecasts or real market assessments.
+
+Eligibility ceilings: delivery $12/order; setup $300,000. Equality qualifies.
+Addressable market: 40 weight (53.3%); Growth: 0 weight (0.0%); Delivery efficiency: 20 weight (26.7%); Lower competition: 15 weight (20.0%)
+Fixed anchors (0→100): addressable market $2m→$12m; growth 0%→12%; delivery $12→$4; competition 100→0. Scores capped at 0/100. Complete data are required for a comparable shortlist, even when the missing metric has zero weight; missing is never zero. Addressable market is assumed total opportunity, not company revenue. Exact ties: alphabetical.
+
+AUTOMATIC TOP THREE
+Florida: 67.33 / 100; addressable market $18,000,000 USD/year; growth 14.0%; delivery $9/order; competition 80/100; setup $300,000. Qualifies.
+Georgia: 66.67 / 100; addressable market $10,000,000 USD/year; growth 8.4%; delivery $7.20/order; competition 60/100; setup $220,000. Qualifies.
+Virginia: 61.67 / 100; addressable market $9,500,000 USD/year; growth 7.2%; delivery $8.80/order; competition 45/100; setup $250,000. Qualifies.
+
+MY PINNED COMPARISON (not the automatic ranking)
+Georgia: 66.67 / 100; addressable market $10,000,000 USD/year; growth 8.4%; delivery $7.20/order; competition 60/100; setup $220,000. Qualifies.
+Tennessee: 59.33 / 100; addressable market $7,000,000 USD/year; growth 10.8%; delivery $6.40/order; competition 30/100; setup $165,000. Qualifies.
+North Carolina: 57.33 / 100; addressable market $8,000,000 USD/year; growth 9.0%; delivery $8/order; competition 40/100; setup $180,000. Qualifies.
+
+CHANGES FROM THE STARTING SCREEN
+Florida: unranked → 1. Newly eligible after the ceilings changed. Previously blocked by: Setup $300,000 exceeds $250,000.
+Georgia: 1 → 2. Against Tennessee, growth is the largest contribution to the changed score gap: 8.4% versus 10.8%. Its weight is now 0.0% of the total; this part of the gap moved from -5.00 to 0.00 points.
+Virginia: 4 → 3. Against North Carolina, growth is the largest contribution to the changed score gap: 7.2% versus 9.0%. Its weight is now 0.0% of the total; this part of the gap moved from -3.75 to 0.00 points.
+Tennessee: 2 → 4. Against Virginia, growth is the largest contribution to the changed score gap: 10.8% versus 7.2%. Its weight is now 0.0% of the total; this part of the gap moved from 7.50 to 0.00 points.
+North Carolina: 3 → 5. Against South Carolina, addressable market is the largest contribution to the changed score gap: $8M versus $6M. Its weight is now 53.3% of the total; this part of the gap moved from 8.00 to 10.67 points.
+South Carolina: 5 → 6. Against Alabama, growth is the largest contribution to the changed score gap: 9.6% versus 6.0%. Its weight is now 0.0% of the total; this part of the gap moved from 7.50 to 0.00 points.
+Alabama: 6 → 8. Against Arkansas, addressable market is the largest contribution to the changed score gap: $4.5M versus $3.5M. Its weight is now 53.3% of the total; this part of the gap moved from 4.00 to 5.33 points.
+Arkansas: 8 → 9. Against Mississippi, growth is the largest contribution to the changed score gap: 5.4% versus 3.6%. Its weight is now 0.0% of the total; this part of the gap moved from 3.75 to 0.00 points.
+Mississippi: 9 → 10. Changed eligibility moved the rank: Florida qualifies now.
+
+GROWTH WEIGHT SENSITIVITY (integer weights; all other settings held fixed)
+0–100: Florida
+
+COMPARISON CAUTION
+Map bands adapt to the four highest distinct values. The same shade across screenshots does not imply the same score; a tiny difference can cross a whole band. Compare exact scores, normalized weights and gate assumptions. Scores do not measure certainty.
+
+Public geometry: U.S. Census Bureau, Generalized ACS2024 States20M, January1,2024 vintage. Commercial attributes are unrelated synthetic data.
+Source: https://github.com/jordanmeyer/bab-example-markets

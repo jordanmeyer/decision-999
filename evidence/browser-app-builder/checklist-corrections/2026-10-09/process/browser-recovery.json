@@ -1,0 +1,12 @@
+{
+  "source": "ee5a30024747779677ef30dfea33bf8fae58bf32",
+  "requestedWidth": 320,
+  "actualWidth": 319,
+  "observations": {
+    "invalidShares": "Draft needs repair. Results are paused.\nManager approval: outgoing shares total 80%; they must total 100%.\nRestore last valid process",
+    "recovery": "Changed Finance share to90, applied; alertgone, valid10/90draft",
+    "loop": "Draft needs repair. Results are paused.\nPurchase request: start must have no incoming routes.\nA loop is present. Steps blocked from ordering: Purchase request, Manager approval, Finance approval, Approved. This model requires one-way routes with no rework cycles.\nProcurement review: connect this step on a route from start to completion.\nRestore last valid process",
+    "undo": "Alertgone, structuralundo retained corrected10/90shares, baselineunchanged"
+  },
+  "scope": "Actual keyboard/native-select browser interactions in narrow production iframe. No pointergraph/filepicker/novice/screenreaderpass inferred."
+}

@@ -1,0 +1,424 @@
+{
+  "scope": "Authored paired File/DataTransfer submissions and real export Blob capture. Download click suppressed; no native picker, saved file or human walkthrough claim.",
+  "environment": {
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "iframeWidth": 1280,
+    "iframeHeight": 900,
+    "appUrl": "http://127.0.0.1:9714/bab-example-uploads/"
+  },
+  "observations": [
+    {
+      "name": "Valid pair establishes two-file identity and $350 − $90 = $260",
+      "passed": true,
+      "submitToResultsMs": 7.6,
+      "notice": "Imported 2 sales lines and 3 return events. All IDs matched. Files remain in this tab only.",
+      "rejected": false,
+      "dataset": "Your local files",
+      "files": "Sales: synthetic-first-sales.csv (2 lines)\nReturns: synthetic-first-returns.csv (3 events)",
+      "counts": "2 sales lines · 3 return events",
+      "coverage": "Observed through Mar 1, 2026. Returns are assigned to the original sales cohort; later cohorts may still receive returns.",
+      "filters": {
+        "month": "",
+        "product": "",
+        "channel": "",
+        "group": "channel"
+      },
+      "gross": "$350",
+      "returned": "$90",
+      "net": "$260",
+      "units": "15 units across 2 sales lines",
+      "returnedUnits": "4 of 15 units returned",
+      "rate": "26.7%",
+      "summary": [
+        [
+          "Email",
+          "$200",
+          "$60",
+          "$140",
+          "30.0%",
+          "#1 → #1"
+        ],
+        [
+          "Search",
+          "$150",
+          "$30",
+          "$120",
+          "20.0%",
+          "#2 → #2"
+        ]
+      ],
+      "joinedRows": [
+        [
+          "A",
+          "Jan 3, 2026",
+          "Canvas tote",
+          "Email",
+          "10",
+          "3",
+          "$20.00",
+          "$140",
+          "Inspect A"
+        ],
+        [
+          "B",
+          "Feb 2, 2026",
+          "Travel mug",
+          "Search",
+          "5",
+          "1",
+          "$30.00",
+          "$120",
+          "Inspect B"
+        ]
+      ],
+      "exportLabel": "Export channel summary (2 groups)",
+      "exportContext": "Original sale-month cohorts · all months · all products · all channels. CSV includes this scope, filenames and observed-through date; blank filter metadata means all."
+    },
+    {
+      "name": "Unmatched return rejects the pair and retains the complete prior dataset identity",
+      "passed": true,
+      "submitToResultsMs": 1.2,
+      "notice": "returns: unmatched line_id “Z”. Import its sale too. Previous data is unchanged.",
+      "rejected": true,
+      "dataset": "Your local files",
+      "files": "Sales: synthetic-first-sales.csv (2 lines)\nReturns: synthetic-first-returns.csv (3 events)",
+      "counts": "2 sales lines · 3 return events",
+      "coverage": "Observed through Mar 1, 2026. Returns are assigned to the original sales cohort; later cohorts may still receive returns.",
+      "filters": {
+        "month": "",
+        "product": "",
+        "channel": "",
+        "group": "channel"
+      },
+      "gross": "$350",
+      "returned": "$90",
+      "net": "$260",
+      "units": "15 units across 2 sales lines",
+      "returnedUnits": "4 of 15 units returned",
+      "rate": "26.7%",
+      "summary": [
+        [
+          "Email",
+          "$200",
+          "$60",
+          "$140",
+          "30.0%",
+          "#1 → #1"
+        ],
+        [
+          "Search",
+          "$150",
+          "$30",
+          "$120",
+          "20.0%",
+          "#2 → #2"
+        ]
+      ],
+      "joinedRows": [
+        [
+          "A",
+          "Jan 3, 2026",
+          "Canvas tote",
+          "Email",
+          "10",
+          "3",
+          "$20.00",
+          "$140",
+          "Inspect A"
+        ],
+        [
+          "B",
+          "Feb 2, 2026",
+          "Travel mug",
+          "Search",
+          "5",
+          "1",
+          "$30.00",
+          "$120",
+          "Inspect B"
+        ]
+      ],
+      "exportLabel": "Export channel summary (2 groups)",
+      "exportContext": "Original sale-month cohorts · all months · all products · all channels. CSV includes this scope, filenames and observed-through date; blank filter metadata means all."
+    },
+    {
+      "name": "Two individually valid return events exceeding sold units reject without replacement",
+      "passed": true,
+      "submitToResultsMs": 0.5,
+      "notice": "returns: “A” returns 11 units but sold 10. Previous data is unchanged.",
+      "rejected": true,
+      "dataset": "Your local files",
+      "files": "Sales: synthetic-first-sales.csv (2 lines)\nReturns: synthetic-first-returns.csv (3 events)",
+      "counts": "2 sales lines · 3 return events",
+      "coverage": "Observed through Mar 1, 2026. Returns are assigned to the original sales cohort; later cohorts may still receive returns.",
+      "filters": {
+        "month": "",
+        "product": "",
+        "channel": "",
+        "group": "channel"
+      },
+      "gross": "$350",
+      "returned": "$90",
+      "net": "$260",
+      "units": "15 units across 2 sales lines",
+      "returnedUnits": "4 of 15 units returned",
+      "rate": "26.7%",
+      "summary": [
+        [
+          "Email",
+          "$200",
+          "$60",
+          "$140",
+          "30.0%",
+          "#1 → #1"
+        ],
+        [
+          "Search",
+          "$150",
+          "$30",
+          "$120",
+          "20.0%",
+          "#2 → #2"
+        ]
+      ],
+      "joinedRows": [
+        [
+          "A",
+          "Jan 3, 2026",
+          "Canvas tote",
+          "Email",
+          "10",
+          "3",
+          "$20.00",
+          "$140",
+          "Inspect A"
+        ],
+        [
+          "B",
+          "Feb 2, 2026",
+          "Travel mug",
+          "Search",
+          "5",
+          "1",
+          "$30.00",
+          "$120",
+          "Inspect B"
+        ]
+      ],
+      "exportLabel": "Export channel summary (2 groups)",
+      "exportContext": "Original sale-month cohorts · all months · all products · all channels. CSV includes this scope, filenames and observed-through date; blank filter metadata means all."
+    },
+    {
+      "name": "Corrected paired import replaces both identities and preserves one row per sale",
+      "passed": true,
+      "submitToResultsMs": 7.6,
+      "notice": "Imported 4 sales lines and 5 return events. All IDs matched. Files remain in this tab only.",
+      "rejected": false,
+      "dataset": "Your local files",
+      "files": "Sales: synthetic-corrected-sales.csv (4 lines)\nReturns: synthetic-corrected-returns.csv (5 events)",
+      "counts": "4 sales lines · 5 return events",
+      "coverage": "Observed through Mar 3, 2026. Returns are assigned to the original sales cohort; later cohorts may still receive returns.",
+      "filters": {
+        "month": "",
+        "product": "",
+        "channel": "",
+        "group": "channel"
+      },
+      "gross": "$480",
+      "returned": "$130",
+      "net": "$350",
+      "units": "21 units across 4 sales lines",
+      "returnedUnits": "6 of 21 units returned",
+      "rate": "28.6%",
+      "summary": [
+        [
+          "Email",
+          "$230",
+          "$75",
+          "$155",
+          "33.3%",
+          "#2 → #2"
+        ],
+        [
+          "Search",
+          "$250",
+          "$55",
+          "$195",
+          "22.2%",
+          "#1 → #1"
+        ]
+      ],
+      "joinedRows": [
+        [
+          "A",
+          "Jan 3, 2026",
+          "Canvas tote",
+          "Email",
+          "10",
+          "3",
+          "$20.00",
+          "$140",
+          "Inspect A"
+        ],
+        [
+          "B",
+          "Feb 2, 2026",
+          "Travel mug",
+          "Search",
+          "5",
+          "1",
+          "$30.00",
+          "$120",
+          "Inspect B"
+        ],
+        [
+          "C",
+          "Jan 5, 2026",
+          "Canvas tote",
+          "Search",
+          "4",
+          "1",
+          "$25.00",
+          "$75",
+          "Inspect C"
+        ],
+        [
+          "D",
+          "Feb 10, 2026",
+          "Canvas tote",
+          "Email",
+          "2",
+          "1",
+          "$15.00",
+          "$15",
+          "Inspect D"
+        ]
+      ],
+      "exportLabel": "Export channel summary (2 groups)",
+      "exportContext": "Original sale-month cohorts · all months · all products · all channels. CSV includes this scope, filenames and observed-through date; blank filter metadata means all."
+    },
+    {
+      "name": "Product × channel export keeps both channels and original-sale-month metadata",
+      "passed": true,
+      "view": {
+        "dataset": "Your local files",
+        "files": "Sales: synthetic-corrected-sales.csv (4 lines)\nReturns: synthetic-corrected-returns.csv (5 events)",
+        "counts": "4 sales lines · 5 return events",
+        "coverage": "Observed through Mar 3, 2026. Returns are assigned to the original sales cohort; later cohorts may still receive returns.",
+        "filters": {
+          "month": "2026-01",
+          "product": "Canvas tote",
+          "channel": "",
+          "group": "pair"
+        },
+        "gross": "$300",
+        "returned": "$85",
+        "net": "$215",
+        "units": "14 units across 2 sales lines",
+        "returnedUnits": "4 of 14 units returned",
+        "rate": "28.6%",
+        "summary": [
+          [
+            "Canvas tote · Email",
+            "$200",
+            "$60",
+            "$140",
+            "30.0%",
+            "#1 → #1"
+          ],
+          [
+            "Canvas tote · Search",
+            "$100",
+            "$25",
+            "$75",
+            "25.0%",
+            "#2 → #2"
+          ]
+        ],
+        "joinedRows": [
+          [
+            "A",
+            "Jan 3, 2026",
+            "Canvas tote",
+            "Email",
+            "10",
+            "3",
+            "$20.00",
+            "$140",
+            "Inspect A"
+          ],
+          [
+            "C",
+            "Jan 5, 2026",
+            "Canvas tote",
+            "Search",
+            "4",
+            "1",
+            "$25.00",
+            "$75",
+            "Inspect C"
+          ]
+        ],
+        "exportLabel": "Export product × channel summary (2 groups)",
+        "exportContext": "Original sale-month cohorts · Jan 2026 · Canvas tote · all channels. CSV includes this scope, filenames and observed-through date; blank filter metadata means all."
+      },
+      "export": {
+        "filename": "revenue-summary-by-pair.csv",
+        "mimeType": "text/csv;charset=utf-8",
+        "csv": "sales_file,returns_file,source_sales_lines,source_return_events,time_basis,observed_through,sale_month_filter,product_filter,channel_filter,group_by,group,gross_usd,returned_usd,net_usd,sold_units,returned_units,unit_return_rate,gross_rank,net_rank\r\nsynthetic-corrected-sales.csv,synthetic-corrected-returns.csv,4,5,original_sale_month,2026-03-03,2026-01,Canvas tote,,pair,Canvas tote · Email,200.00,60.00,140.00,10,3,0.3,1,1\r\nsynthetic-corrected-sales.csv,synthetic-corrected-returns.csv,4,5,original_sale_month,2026-03-03,2026-01,Canvas tote,,pair,Canvas tote · Search,100.00,25.00,75.00,4,1,0.25,2,2"
+      }
+    },
+    {
+      "name": "Chosen product/channel export carries current filters, values and within-view ranks",
+      "passed": true,
+      "view": {
+        "dataset": "Your local files",
+        "files": "Sales: synthetic-corrected-sales.csv (4 lines)\nReturns: synthetic-corrected-returns.csv (5 events)",
+        "counts": "4 sales lines · 5 return events",
+        "coverage": "Observed through Mar 3, 2026. Returns are assigned to the original sales cohort; later cohorts may still receive returns.",
+        "filters": {
+          "month": "2026-01",
+          "product": "Canvas tote",
+          "channel": "Search",
+          "group": "pair"
+        },
+        "gross": "$100",
+        "returned": "$25",
+        "net": "$75",
+        "units": "4 units across 1 sales lines",
+        "returnedUnits": "1 of 4 units returned",
+        "rate": "25.0%",
+        "summary": [
+          [
+            "Canvas tote · Search",
+            "$100",
+            "$25",
+            "$75",
+            "25.0%",
+            "#1 → #1"
+          ]
+        ],
+        "joinedRows": [
+          [
+            "C",
+            "Jan 5, 2026",
+            "Canvas tote",
+            "Search",
+            "4",
+            "1",
+            "$25.00",
+            "$75",
+            "Inspect C"
+          ]
+        ],
+        "exportLabel": "Export product × channel summary (1 groups)",
+        "exportContext": "Original sale-month cohorts · Jan 2026 · Canvas tote · Search. CSV includes this scope, filenames and observed-through date; blank filter metadata means all."
+      },
+      "export": {
+        "filename": "revenue-summary-by-pair.csv",
+        "mimeType": "text/csv;charset=utf-8",
+        "csv": "sales_file,returns_file,source_sales_lines,source_return_events,time_basis,observed_through,sale_month_filter,product_filter,channel_filter,group_by,group,gross_usd,returned_usd,net_usd,sold_units,returned_units,unit_return_rate,gross_rank,net_rank\r\nsynthetic-corrected-sales.csv,synthetic-corrected-returns.csv,4,5,original_sale_month,2026-03-03,2026-01,Canvas tote,Search,pair,Canvas tote · Search,100.00,25.00,75.00,4,1,0.25,1,1"
+      }
+    }
+  ]
+}

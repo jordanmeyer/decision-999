@@ -1,0 +1,1246 @@
+{
+  "checked_at": "2026-10-09T20:22:30.137221+00:00",
+  "scope": "Static deployed artifact integrity only. Ordinary HTTPS GETs at the exact public URLs, preserving declared asset version queries; no added query cache-busting, browser automation, app execution, giant worker/WASM download or native/human verification. Managed files compare with existing reviewed local dist; plain files compare with tracked app/. Source-link inspection is static, not a rendered-link claim. Publication/workflow and real browser checks remain in publication.json. Exact source/build-story hrefs or quoted JS literals were checked in hash-matched files, and their normal GitHub URLs received ordinary HEAD requests.",
+  "apps": [
+    {
+      "app": "executive",
+      "url": "https://jordanmeyer.github.io/bab-example-executive/",
+      "published_commit": "25563b862f4983ff9b22f2ec73fe42449066af0b",
+      "comparison": "reviewed local production dist",
+      "local_head": "25563b862f4983ff9b22f2ec73fe42449066af0b",
+      "local_git_status": "",
+      "files": [
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-executive/",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-executive/",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 526,
+          "sha256": "7d3a04117526bb173d3f9f988c06c72447390a1304231fd496c0a6d4660cfd35",
+          "etag": "\"6ac94bec-20e\"",
+          "local_file": "dist/index.html",
+          "local_bytes": 526,
+          "local_sha256": "7d3a04117526bb173d3f9f988c06c72447390a1304231fd496c0a6d4660cfd35",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-executive/assets/index-CoCXyH9_.js",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-executive/assets/index-CoCXyH9_.js",
+          "content_type": "application/javascript; charset=utf-8",
+          "bytes": 945903,
+          "sha256": "7c90044bc1ec17b54ba2453ba4699f72fc66446b811d1fd3d743adeca829a9f0",
+          "etag": "\"6ac94bec-e6eef\"",
+          "local_file": "dist/assets/index-CoCXyH9_.js",
+          "local_bytes": 945903,
+          "local_sha256": "7c90044bc1ec17b54ba2453ba4699f72fc66446b811d1fd3d743adeca829a9f0",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-executive/assets/index-ZSg0LWtH.css",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-executive/assets/index-ZSg0LWtH.css",
+          "content_type": "text/css; charset=utf-8",
+          "bytes": 261974,
+          "sha256": "e8d3f7bf2afec3bf6cdbe64cb72f86e21a30c7db933f688842c48103c4f2ae62",
+          "etag": "\"6ac94bec-3ff56\"",
+          "local_file": "dist/assets/index-ZSg0LWtH.css",
+          "local_bytes": 261974,
+          "local_sha256": "e8d3f7bf2afec3bf6cdbe64cb72f86e21a30c7db933f688842c48103c4f2ae62",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-executive/THIRD-PARTY-NOTICES.txt",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-executive/THIRD-PARTY-NOTICES.txt",
+          "content_type": "text/plain; charset=utf-8",
+          "bytes": 55009,
+          "sha256": "b726be4c2fa74845057675102e482978f4959b9d0c40b6b3f2be1df2a716001f",
+          "etag": "\"6ac94bec-d6e1\"",
+          "local_file": "dist/THIRD-PARTY-NOTICES.txt",
+          "local_bytes": 55009,
+          "local_sha256": "b726be4c2fa74845057675102e482978f4959b9d0c40b6b3f2be1df2a716001f",
+          "match": true
+        }
+      ],
+      "errors": [],
+      "source_links": {
+        "repository_url": "https://github.com/jordanmeyer/bab-example-executive",
+        "found_in_html_or_entry_js": true,
+        "build_story_url": "https://github.com/jordanmeyer/bab-example-executive/blob/main/BUILD-STORY.md",
+        "build_story_found_in_html_entry_or_linked_lesson": true,
+        "evidence_type": "static href/literal inspection; runtime links remain a browser check",
+        "http_checks": [
+          {
+            "kind": "repository",
+            "url": "https://github.com/jordanmeyer/bab-example-executive",
+            "exact_static_link_or_literal_found_in": [
+              "dist/assets/index-CoCXyH9_.js"
+            ],
+            "method": "HEAD",
+            "status": 200,
+            "final_url": "https://github.com/jordanmeyer/bab-example-executive"
+          },
+          {
+            "kind": "build_story",
+            "url": "https://github.com/jordanmeyer/bab-example-executive/blob/main/BUILD-STORY.md",
+            "exact_static_link_or_literal_found_in": [
+              "dist/assets/index-CoCXyH9_.js"
+            ],
+            "method": "HEAD",
+            "status": 200,
+            "final_url": "https://github.com/jordanmeyer/bab-example-executive/blob/main/BUILD-STORY.md"
+          }
+        ]
+      },
+      "html_asset_urls": [
+        "https://jordanmeyer.github.io/bab-example-executive/assets/index-CoCXyH9_.js",
+        "https://jordanmeyer.github.io/bab-example-executive/assets/index-ZSg0LWtH.css"
+      ],
+      "status": "pass"
+    },
+    {
+      "app": "uploads",
+      "url": "https://jordanmeyer.github.io/bab-example-uploads/",
+      "published_commit": "76f0b2857136d42d928636edb89555a95fee6242",
+      "comparison": "reviewed local production dist",
+      "local_head": "76f0b2857136d42d928636edb89555a95fee6242",
+      "local_git_status": "",
+      "files": [
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-uploads/",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-uploads/",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 11826,
+          "sha256": "def582ce1c7ed5e65efa3ec5a2f84dc47d0e3df70b709546eb3452cf6517e11a",
+          "etag": "\"6ac94bea-2e32\"",
+          "local_file": "dist/index.html",
+          "local_bytes": 11826,
+          "local_sha256": "def582ce1c7ed5e65efa3ec5a2f84dc47d0e3df70b709546eb3452cf6517e11a",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-uploads/assets/index-CIv3dk97.js",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-uploads/assets/index-CIv3dk97.js",
+          "content_type": "application/javascript; charset=utf-8",
+          "bytes": 798185,
+          "sha256": "eb65090df50d0b74b6b3a9730faf27f9d830a4f0a91a68d68f315319ef0beb33",
+          "etag": "\"6ac94bea-c2de9\"",
+          "local_file": "dist/assets/index-CIv3dk97.js",
+          "local_bytes": 798185,
+          "local_sha256": "eb65090df50d0b74b6b3a9730faf27f9d830a4f0a91a68d68f315319ef0beb33",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-uploads/assets/index-Bqz3pqrc.css",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-uploads/assets/index-Bqz3pqrc.css",
+          "content_type": "text/css; charset=utf-8",
+          "bytes": 13090,
+          "sha256": "fd6b2631f968773202661df86355d2731e20dec14e19919a592feb75f734dd47",
+          "etag": "\"6ac94bea-3322\"",
+          "local_file": "dist/assets/index-Bqz3pqrc.css",
+          "local_bytes": 13090,
+          "local_sha256": "fd6b2631f968773202661df86355d2731e20dec14e19919a592feb75f734dd47",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-uploads/THIRD-PARTY-NOTICES.txt",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-uploads/THIRD-PARTY-NOTICES.txt",
+          "content_type": "text/plain; charset=utf-8",
+          "bytes": 29869,
+          "sha256": "4dc847e6678daec66c0b78255955e47366d9c4340e67db485821a50058eb2070",
+          "etag": "\"6ac94bea-74ad\"",
+          "local_file": "dist/THIRD-PARTY-NOTICES.txt",
+          "local_bytes": 29869,
+          "local_sha256": "4dc847e6678daec66c0b78255955e47366d9c4340e67db485821a50058eb2070",
+          "match": true
+        }
+      ],
+      "errors": [],
+      "source_links": {
+        "repository_url": "https://github.com/jordanmeyer/bab-example-uploads",
+        "found_in_html_or_entry_js": true,
+        "build_story_url": "https://github.com/jordanmeyer/bab-example-uploads/blob/main/BUILD-STORY.md",
+        "build_story_found_in_html_entry_or_linked_lesson": true,
+        "evidence_type": "static href/literal inspection; runtime links remain a browser check",
+        "http_checks": [
+          {
+            "kind": "repository",
+            "url": "https://github.com/jordanmeyer/bab-example-uploads",
+            "exact_static_link_or_literal_found_in": [
+              "dist/index.html"
+            ],
+            "method": "HEAD",
+            "status": 200,
+            "final_url": "https://github.com/jordanmeyer/bab-example-uploads"
+          },
+          {
+            "kind": "build_story",
+            "url": "https://github.com/jordanmeyer/bab-example-uploads/blob/main/BUILD-STORY.md",
+            "exact_static_link_or_literal_found_in": [
+              "dist/index.html"
+            ],
+            "method": "HEAD",
+            "status": 200,
+            "final_url": "https://github.com/jordanmeyer/bab-example-uploads/blob/main/BUILD-STORY.md"
+          }
+        ]
+      },
+      "html_asset_urls": [
+        "https://jordanmeyer.github.io/bab-example-uploads/assets/index-CIv3dk97.js",
+        "https://jordanmeyer.github.io/bab-example-uploads/assets/index-Bqz3pqrc.css"
+      ],
+      "status": "pass"
+    },
+    {
+      "app": "simulator",
+      "url": "https://jordanmeyer.github.io/bab-example-simulator/",
+      "published_commit": "361d528421ae4970f7970b99c2862d1ae7269c1e",
+      "comparison": "reviewed local production dist",
+      "local_head": "361d528421ae4970f7970b99c2862d1ae7269c1e",
+      "local_git_status": "",
+      "files": [
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-simulator/",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-simulator/",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 9739,
+          "sha256": "d87c0a30eafb0c93a178a698147474e2a697a401c3b1cb0324766f4907e1815e",
+          "etag": "\"6ac94beb-260b\"",
+          "local_file": "dist/index.html",
+          "local_bytes": 9739,
+          "local_sha256": "d87c0a30eafb0c93a178a698147474e2a697a401c3b1cb0324766f4907e1815e",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-simulator/assets/index-gQQbQtRP.js",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-simulator/assets/index-gQQbQtRP.js",
+          "content_type": "application/javascript; charset=utf-8",
+          "bytes": 609820,
+          "sha256": "3f8024ef49d30ddd8846709bdab59af539ac31aac772e36c01406c869f822976",
+          "etag": "\"6ac94beb-94e1c\"",
+          "local_file": "dist/assets/index-gQQbQtRP.js",
+          "local_bytes": 609820,
+          "local_sha256": "3f8024ef49d30ddd8846709bdab59af539ac31aac772e36c01406c869f822976",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-simulator/assets/index-D_SppeD6.css",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-simulator/assets/index-D_SppeD6.css",
+          "content_type": "text/css; charset=utf-8",
+          "bytes": 6069,
+          "sha256": "ba42f773e2f1ce7daf64e71ceed5bf57fddc951341a1efaadfa9282f3bc5b7e2",
+          "etag": "\"6ac94beb-17b5\"",
+          "local_file": "dist/assets/index-D_SppeD6.css",
+          "local_bytes": 6069,
+          "local_sha256": "ba42f773e2f1ce7daf64e71ceed5bf57fddc951341a1efaadfa9282f3bc5b7e2",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-simulator/THIRD-PARTY-NOTICES.txt",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-simulator/THIRD-PARTY-NOTICES.txt",
+          "content_type": "text/plain; charset=utf-8",
+          "bytes": 25389,
+          "sha256": "26a9be8f6f5a775325c09cfb0c610e0249bf559fcf2baff00111047c60880be3",
+          "etag": "\"6ac94beb-632d\"",
+          "local_file": "dist/THIRD-PARTY-NOTICES.txt",
+          "local_bytes": 25389,
+          "local_sha256": "26a9be8f6f5a775325c09cfb0c610e0249bf559fcf2baff00111047c60880be3",
+          "match": true
+        }
+      ],
+      "errors": [],
+      "source_links": {
+        "repository_url": "https://github.com/jordanmeyer/bab-example-simulator",
+        "found_in_html_or_entry_js": true,
+        "build_story_url": "https://github.com/jordanmeyer/bab-example-simulator/blob/main/BUILD-STORY.md",
+        "build_story_found_in_html_entry_or_linked_lesson": true,
+        "evidence_type": "static href/literal inspection; runtime links remain a browser check",
+        "http_checks": [
+          {
+            "kind": "repository",
+            "url": "https://github.com/jordanmeyer/bab-example-simulator",
+            "exact_static_link_or_literal_found_in": [
+              "dist/index.html"
+            ],
+            "method": "HEAD",
+            "status": 200,
+            "final_url": "https://github.com/jordanmeyer/bab-example-simulator"
+          },
+          {
+            "kind": "build_story",
+            "url": "https://github.com/jordanmeyer/bab-example-simulator/blob/main/BUILD-STORY.md",
+            "exact_static_link_or_literal_found_in": [
+              "dist/index.html"
+            ],
+            "method": "HEAD",
+            "status": 200,
+            "final_url": "https://github.com/jordanmeyer/bab-example-simulator/blob/main/BUILD-STORY.md"
+          }
+        ]
+      },
+      "html_asset_urls": [
+        "https://jordanmeyer.github.io/bab-example-simulator/assets/index-gQQbQtRP.js",
+        "https://jordanmeyer.github.io/bab-example-simulator/assets/index-D_SppeD6.css"
+      ],
+      "status": "pass"
+    },
+    {
+      "app": "process",
+      "url": "https://jordanmeyer.github.io/bab-example-process/",
+      "published_commit": "126ef1c803f65490e0f5ae7cf0e171f70e76907b",
+      "comparison": "reviewed local production dist",
+      "local_head": "126ef1c803f65490e0f5ae7cf0e171f70e76907b",
+      "local_git_status": "",
+      "files": [
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-process/",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-process/",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 584,
+          "sha256": "dc873da81fc1a0e382dfced7e61e3edbc63a539567e9e827dae2bc6a698501f5",
+          "etag": "\"6ac94bd8-248\"",
+          "local_file": "dist/index.html",
+          "local_bytes": 584,
+          "local_sha256": "dc873da81fc1a0e382dfced7e61e3edbc63a539567e9e827dae2bc6a698501f5",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-process/assets/index-B5ItCOrY.js",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-process/assets/index-B5ItCOrY.js",
+          "content_type": "application/javascript; charset=utf-8",
+          "bytes": 427811,
+          "sha256": "30b8b3b23e3b2acade34b282c09220379b6a4da4f3a1b3c61b9697dbf09180a2",
+          "etag": "\"6ac94bd8-68723\"",
+          "local_file": "dist/assets/index-B5ItCOrY.js",
+          "local_bytes": 427811,
+          "local_sha256": "30b8b3b23e3b2acade34b282c09220379b6a4da4f3a1b3c61b9697dbf09180a2",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-process/assets/index-DW5ssznd.css",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-process/assets/index-DW5ssznd.css",
+          "content_type": "text/css; charset=utf-8",
+          "bytes": 30267,
+          "sha256": "a8c324446805cd88eefa44cf1cf54ddbfeefd6e8f51fb58cc2e1ed94b6d88302",
+          "etag": "\"6ac94bd8-763b\"",
+          "local_file": "dist/assets/index-DW5ssznd.css",
+          "local_bytes": 30267,
+          "local_sha256": "a8c324446805cd88eefa44cf1cf54ddbfeefd6e8f51fb58cc2e1ed94b6d88302",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-process/THIRD-PARTY-NOTICES.txt",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-process/THIRD-PARTY-NOTICES.txt",
+          "content_type": "text/plain; charset=utf-8",
+          "bytes": 32513,
+          "sha256": "a6628b9eca85272ec40d9c0e51bb11075b3abf21dff8cd088f8fac5561fcd99f",
+          "etag": "\"6ac94bd8-7f01\"",
+          "local_file": "dist/THIRD-PARTY-NOTICES.txt",
+          "local_bytes": 32513,
+          "local_sha256": "a6628b9eca85272ec40d9c0e51bb11075b3abf21dff8cd088f8fac5561fcd99f",
+          "match": true
+        }
+      ],
+      "errors": [],
+      "source_links": {
+        "repository_url": "https://github.com/jordanmeyer/bab-example-process",
+        "found_in_html_or_entry_js": true,
+        "build_story_url": "https://github.com/jordanmeyer/bab-example-process/blob/main/BUILD-STORY.md",
+        "build_story_found_in_html_entry_or_linked_lesson": true,
+        "evidence_type": "static href/literal inspection; runtime links remain a browser check",
+        "http_checks": [
+          {
+            "kind": "repository",
+            "url": "https://github.com/jordanmeyer/bab-example-process",
+            "exact_static_link_or_literal_found_in": [
+              "dist/assets/index-B5ItCOrY.js"
+            ],
+            "method": "HEAD",
+            "status": 200,
+            "final_url": "https://github.com/jordanmeyer/bab-example-process"
+          },
+          {
+            "kind": "build_story",
+            "url": "https://github.com/jordanmeyer/bab-example-process/blob/main/BUILD-STORY.md",
+            "exact_static_link_or_literal_found_in": [
+              "dist/assets/index-B5ItCOrY.js"
+            ],
+            "method": "HEAD",
+            "status": 200,
+            "final_url": "https://github.com/jordanmeyer/bab-example-process/blob/main/BUILD-STORY.md"
+          }
+        ]
+      },
+      "html_asset_urls": [
+        "https://jordanmeyer.github.io/bab-example-process/assets/index-B5ItCOrY.js",
+        "https://jordanmeyer.github.io/bab-example-process/assets/index-DW5ssznd.css"
+      ],
+      "status": "pass"
+    },
+    {
+      "app": "roadmap",
+      "url": "https://jordanmeyer.github.io/bab-example-roadmap/",
+      "published_commit": "61fcf069f65c35d5902a694a73a3ac1ae5657ed3",
+      "comparison": "reviewed local production dist",
+      "local_head": "61fcf069f65c35d5902a694a73a3ac1ae5657ed3",
+      "local_git_status": "",
+      "files": [
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-roadmap/",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-roadmap/",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 10816,
+          "sha256": "2ac307f351b2f72cbe4cd884c0164a9a591d7c05d0d8077223c0aa29b141b58e",
+          "etag": "\"6ac94bf4-2a40\"",
+          "local_file": "dist/index.html",
+          "local_bytes": 10816,
+          "local_sha256": "2ac307f351b2f72cbe4cd884c0164a9a591d7c05d0d8077223c0aa29b141b58e",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-roadmap/assets/index-ZEeHeJAd.js",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-roadmap/assets/index-ZEeHeJAd.js",
+          "content_type": "application/javascript; charset=utf-8",
+          "bytes": 67096,
+          "sha256": "bb04d7234fcff884a190dcebb78e9b61788b51bd1d428971354f0939ffb645d8",
+          "etag": "\"6ac94bf5-10618\"",
+          "local_file": "dist/assets/index-ZEeHeJAd.js",
+          "local_bytes": 67096,
+          "local_sha256": "bb04d7234fcff884a190dcebb78e9b61788b51bd1d428971354f0939ffb645d8",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-roadmap/assets/index-CbbWsWPd.css",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-roadmap/assets/index-CbbWsWPd.css",
+          "content_type": "text/css; charset=utf-8",
+          "bytes": 20055,
+          "sha256": "cdaa23823c8eaf14370f4b3c307cc77a547da9c3fed5fbcaa96d4eed057c92d1",
+          "etag": "\"6ac94bf5-4e57\"",
+          "local_file": "dist/assets/index-CbbWsWPd.css",
+          "local_bytes": 20055,
+          "local_sha256": "cdaa23823c8eaf14370f4b3c307cc77a547da9c3fed5fbcaa96d4eed057c92d1",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-roadmap/THIRD-PARTY-NOTICES.txt",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-roadmap/THIRD-PARTY-NOTICES.txt",
+          "content_type": "text/plain; charset=utf-8",
+          "bytes": 9930,
+          "sha256": "a3608f43645df969b12396d26ec0488f7ec047ea805b139717d8282121f894d7",
+          "etag": "\"6ac94bf5-26ca\"",
+          "local_file": "dist/THIRD-PARTY-NOTICES.txt",
+          "local_bytes": 9930,
+          "local_sha256": "a3608f43645df969b12396d26ec0488f7ec047ea805b139717d8282121f894d7",
+          "match": true
+        }
+      ],
+      "errors": [],
+      "source_links": {
+        "repository_url": "https://github.com/jordanmeyer/bab-example-roadmap",
+        "found_in_html_or_entry_js": true,
+        "build_story_url": "https://github.com/jordanmeyer/bab-example-roadmap/blob/main/BUILD-STORY.md",
+        "build_story_found_in_html_entry_or_linked_lesson": true,
+        "evidence_type": "static href/literal inspection; runtime links remain a browser check",
+        "http_checks": [
+          {
+            "kind": "repository",
+            "url": "https://github.com/jordanmeyer/bab-example-roadmap",
+            "exact_static_link_or_literal_found_in": [
+              "dist/index.html"
+            ],
+            "method": "HEAD",
+            "status": 200,
+            "final_url": "https://github.com/jordanmeyer/bab-example-roadmap"
+          },
+          {
+            "kind": "build_story",
+            "url": "https://github.com/jordanmeyer/bab-example-roadmap/blob/main/BUILD-STORY.md",
+            "exact_static_link_or_literal_found_in": [
+              "dist/index.html"
+            ],
+            "method": "HEAD",
+            "status": 200,
+            "final_url": "https://github.com/jordanmeyer/bab-example-roadmap/blob/main/BUILD-STORY.md"
+          }
+        ]
+      },
+      "html_asset_urls": [
+        "https://jordanmeyer.github.io/bab-example-roadmap/assets/index-ZEeHeJAd.js",
+        "https://jordanmeyer.github.io/bab-example-roadmap/assets/index-CbbWsWPd.css"
+      ],
+      "status": "pass"
+    },
+    {
+      "app": "markets",
+      "url": "https://jordanmeyer.github.io/bab-example-markets/",
+      "published_commit": "b732e4a0fca882b570eecb6df5a5f7585b40e343",
+      "comparison": "reviewed local production dist",
+      "local_head": "b732e4a0fca882b570eecb6df5a5f7585b40e343",
+      "local_git_status": "",
+      "files": [
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-markets/",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-markets/",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 10514,
+          "sha256": "ec4c7d8354ca4e120b3b2a596c405247e0d1ef10cb6ee2ea6ee90f66852f013e",
+          "etag": "\"6ac94be3-2912\"",
+          "local_file": "dist/index.html",
+          "local_bytes": 10514,
+          "local_sha256": "ec4c7d8354ca4e120b3b2a596c405247e0d1ef10cb6ee2ea6ee90f66852f013e",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-markets/assets/index-BP0Vk7KB.js",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-markets/assets/index-BP0Vk7KB.js",
+          "content_type": "application/javascript; charset=utf-8",
+          "bytes": 289935,
+          "sha256": "a5493fe062081233c073709588ca3642e1b9c42c332abbe4f86aa4c92328c6aa",
+          "etag": "\"6ac94be3-46c8f\"",
+          "local_file": "dist/assets/index-BP0Vk7KB.js",
+          "local_bytes": 289935,
+          "local_sha256": "a5493fe062081233c073709588ca3642e1b9c42c332abbe4f86aa4c92328c6aa",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-markets/assets/index-CjlUHjfZ.css",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-markets/assets/index-CjlUHjfZ.css",
+          "content_type": "text/css; charset=utf-8",
+          "bytes": 36729,
+          "sha256": "6ddaac10b4f203668ebd3bb4ce71b4b84222b979f91d833975313fe056bb0ce7",
+          "etag": "\"6ac94be3-8f79\"",
+          "local_file": "dist/assets/index-CjlUHjfZ.css",
+          "local_bytes": 36729,
+          "local_sha256": "6ddaac10b4f203668ebd3bb4ce71b4b84222b979f91d833975313fe056bb0ce7",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-markets/THIRD-PARTY-NOTICES.txt",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-markets/THIRD-PARTY-NOTICES.txt",
+          "content_type": "text/plain; charset=utf-8",
+          "bytes": 10250,
+          "sha256": "03cc76d605dfd51519276b2ccff9a581c89e81ffe3764887069f454c3b87187c",
+          "etag": "\"6ac94be3-280a\"",
+          "local_file": "dist/THIRD-PARTY-NOTICES.txt",
+          "local_bytes": 10250,
+          "local_sha256": "03cc76d605dfd51519276b2ccff9a581c89e81ffe3764887069f454c3b87187c",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-markets/DATA-PROVENANCE.txt",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-markets/DATA-PROVENANCE.txt",
+          "content_type": "text/plain; charset=utf-8",
+          "bytes": 2166,
+          "sha256": "d00b9aec6598a2ed552561ff8be3d8eb545e7d4bb6c400a986ecd8732a1f2880",
+          "etag": "\"6ac94be3-876\"",
+          "local_file": "dist/DATA-PROVENANCE.txt",
+          "local_bytes": 2166,
+          "local_sha256": "d00b9aec6598a2ed552561ff8be3d8eb545e7d4bb6c400a986ecd8732a1f2880",
+          "match": true
+        }
+      ],
+      "errors": [],
+      "source_links": {
+        "repository_url": "https://github.com/jordanmeyer/bab-example-markets",
+        "found_in_html_or_entry_js": true,
+        "build_story_url": "https://github.com/jordanmeyer/bab-example-markets/blob/main/BUILD-STORY.md",
+        "build_story_found_in_html_entry_or_linked_lesson": true,
+        "evidence_type": "static href/literal inspection; runtime links remain a browser check",
+        "http_checks": [
+          {
+            "kind": "repository",
+            "url": "https://github.com/jordanmeyer/bab-example-markets",
+            "exact_static_link_or_literal_found_in": [
+              "dist/index.html"
+            ],
+            "method": "HEAD",
+            "status": 200,
+            "final_url": "https://github.com/jordanmeyer/bab-example-markets"
+          },
+          {
+            "kind": "build_story",
+            "url": "https://github.com/jordanmeyer/bab-example-markets/blob/main/BUILD-STORY.md",
+            "exact_static_link_or_literal_found_in": [
+              "dist/index.html"
+            ],
+            "method": "HEAD",
+            "status": 200,
+            "final_url": "https://github.com/jordanmeyer/bab-example-markets/blob/main/BUILD-STORY.md"
+          }
+        ]
+      },
+      "html_asset_urls": [
+        "https://jordanmeyer.github.io/bab-example-markets/assets/index-BP0Vk7KB.js",
+        "https://jordanmeyer.github.io/bab-example-markets/assets/index-CjlUHjfZ.css"
+      ],
+      "status": "pass"
+    },
+    {
+      "app": "sql",
+      "url": "https://jordanmeyer.github.io/bab-example-sql/",
+      "published_commit": "218f1d2f7ea4f9b28335e9486be4a09521ac1e5c",
+      "comparison": "reviewed local production dist",
+      "local_head": "218f1d2f7ea4f9b28335e9486be4a09521ac1e5c",
+      "local_git_status": "",
+      "files": [
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-sql/",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-sql/",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 9467,
+          "sha256": "bc8e28b75d10d7b89a40911885ca0944dcfb0309d8eb19585c45308c50649cf2",
+          "etag": "\"6ac94be7-24fb\"",
+          "local_file": "dist/index.html",
+          "local_bytes": 9467,
+          "local_sha256": "bc8e28b75d10d7b89a40911885ca0944dcfb0309d8eb19585c45308c50649cf2",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-sql/assets/index-BBYkWZ7H.js",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-sql/assets/index-BBYkWZ7H.js",
+          "content_type": "application/javascript; charset=utf-8",
+          "bytes": 1335651,
+          "sha256": "419e64f0f76b3efa5a29f9d2d152594f7e344dd264e89cd41da01209f7ba8486",
+          "etag": "\"6ac94be7-146163\"",
+          "local_file": "dist/assets/index-BBYkWZ7H.js",
+          "local_bytes": 1335651,
+          "local_sha256": "419e64f0f76b3efa5a29f9d2d152594f7e344dd264e89cd41da01209f7ba8486",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-sql/assets/index-DhLvN0JA.css",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-sql/assets/index-DhLvN0JA.css",
+          "content_type": "text/css; charset=utf-8",
+          "bytes": 10680,
+          "sha256": "05e42cbd64b8fdfb31ede1783605898630c82dab04c517f129dabcd8d6fff616",
+          "etag": "\"6ac94be8-29b8\"",
+          "local_file": "dist/assets/index-DhLvN0JA.css",
+          "local_bytes": 10680,
+          "local_sha256": "05e42cbd64b8fdfb31ede1783605898630c82dab04c517f129dabcd8d6fff616",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-sql/THIRD-PARTY-NOTICES.txt",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-sql/THIRD-PARTY-NOTICES.txt",
+          "content_type": "text/plain; charset=utf-8",
+          "bytes": 188790,
+          "sha256": "637f76cab718a79b178ff17ad2019ca066492ba51e5ffccdeedbfae487f5ebe1",
+          "etag": "\"6ac94be7-2e176\"",
+          "local_file": "dist/THIRD-PARTY-NOTICES.txt",
+          "local_bytes": 188790,
+          "local_sha256": "637f76cab718a79b178ff17ad2019ca066492ba51e5ffccdeedbfae487f5ebe1",
+          "match": true
+        }
+      ],
+      "errors": [],
+      "source_links": {
+        "repository_url": "https://github.com/jordanmeyer/bab-example-sql",
+        "found_in_html_or_entry_js": true,
+        "build_story_url": "https://github.com/jordanmeyer/bab-example-sql/blob/main/BUILD-STORY.md",
+        "build_story_found_in_html_entry_or_linked_lesson": true,
+        "evidence_type": "static href/literal inspection; runtime links remain a browser check",
+        "http_checks": [
+          {
+            "kind": "repository",
+            "url": "https://github.com/jordanmeyer/bab-example-sql",
+            "exact_static_link_or_literal_found_in": [
+              "dist/index.html"
+            ],
+            "method": "HEAD",
+            "status": 200,
+            "final_url": "https://github.com/jordanmeyer/bab-example-sql"
+          },
+          {
+            "kind": "build_story",
+            "url": "https://github.com/jordanmeyer/bab-example-sql/blob/main/BUILD-STORY.md",
+            "exact_static_link_or_literal_found_in": [
+              "dist/index.html"
+            ],
+            "method": "HEAD",
+            "status": 200,
+            "final_url": "https://github.com/jordanmeyer/bab-example-sql/blob/main/BUILD-STORY.md"
+          }
+        ]
+      },
+      "html_asset_urls": [
+        "https://jordanmeyer.github.io/bab-example-sql/assets/index-BBYkWZ7H.js",
+        "https://jordanmeyer.github.io/bab-example-sql/assets/index-DhLvN0JA.css"
+      ],
+      "status": "pass"
+    },
+    {
+      "app": "optimizer",
+      "url": "https://jordanmeyer.github.io/bab-example-optimizer/",
+      "published_commit": "f6620f469fd0758ad009d2afc7353bb474a679e6",
+      "comparison": "reviewed local production dist",
+      "local_head": "f6620f469fd0758ad009d2afc7353bb474a679e6",
+      "local_git_status": "",
+      "files": [
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-optimizer/",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-optimizer/",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 8789,
+          "sha256": "6d64f0656525d751f8888397652472aee6ed923e3a61d07ea3a627f000aa4c56",
+          "etag": "\"6ac94be0-2255\"",
+          "local_file": "dist/index.html",
+          "local_bytes": 8789,
+          "local_sha256": "6d64f0656525d751f8888397652472aee6ed923e3a61d07ea3a627f000aa4c56",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-optimizer/assets/index-BbHcAxjj.js",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-optimizer/assets/index-BbHcAxjj.js",
+          "content_type": "application/javascript; charset=utf-8",
+          "bytes": 20878,
+          "sha256": "613a1f0816b8011ae63642ff576363e4fc9a99211ec0e085cff8238c8fac6504",
+          "etag": "\"6ac94be0-518e\"",
+          "local_file": "dist/assets/index-BbHcAxjj.js",
+          "local_bytes": 20878,
+          "local_sha256": "613a1f0816b8011ae63642ff576363e4fc9a99211ec0e085cff8238c8fac6504",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-optimizer/assets/index-CUn1Eb8g.css",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-optimizer/assets/index-CUn1Eb8g.css",
+          "content_type": "text/css; charset=utf-8",
+          "bytes": 13929,
+          "sha256": "6ac1746617318455bf5a882fe3445f7fe811d4b322b45d5bfa16d0cf61b5d505",
+          "etag": "\"6ac94be0-3669\"",
+          "local_file": "dist/assets/index-CUn1Eb8g.css",
+          "local_bytes": 13929,
+          "local_sha256": "6ac1746617318455bf5a882fe3445f7fe811d4b322b45d5bfa16d0cf61b5d505",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-optimizer/THIRD-PARTY-NOTICES.txt",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-optimizer/THIRD-PARTY-NOTICES.txt",
+          "content_type": "text/plain; charset=utf-8",
+          "bytes": 9919,
+          "sha256": "42923b9a8850358071cc5ec2717e5edeba0927e35b05e1fb2e5a34bac8681caf",
+          "etag": "\"6ac94be0-26bf\"",
+          "local_file": "dist/THIRD-PARTY-NOTICES.txt",
+          "local_bytes": 9919,
+          "local_sha256": "42923b9a8850358071cc5ec2717e5edeba0927e35b05e1fb2e5a34bac8681caf",
+          "match": true
+        }
+      ],
+      "errors": [],
+      "source_links": {
+        "repository_url": "https://github.com/jordanmeyer/bab-example-optimizer",
+        "found_in_html_or_entry_js": true,
+        "build_story_url": "https://github.com/jordanmeyer/bab-example-optimizer/blob/main/BUILD-STORY.md",
+        "build_story_found_in_html_entry_or_linked_lesson": true,
+        "evidence_type": "static href/literal inspection; runtime links remain a browser check",
+        "http_checks": [
+          {
+            "kind": "repository",
+            "url": "https://github.com/jordanmeyer/bab-example-optimizer",
+            "exact_static_link_or_literal_found_in": [
+              "dist/index.html"
+            ],
+            "method": "HEAD",
+            "status": 200,
+            "final_url": "https://github.com/jordanmeyer/bab-example-optimizer"
+          },
+          {
+            "kind": "build_story",
+            "url": "https://github.com/jordanmeyer/bab-example-optimizer/blob/main/BUILD-STORY.md",
+            "exact_static_link_or_literal_found_in": [
+              "dist/index.html"
+            ],
+            "method": "HEAD",
+            "status": 200,
+            "final_url": "https://github.com/jordanmeyer/bab-example-optimizer/blob/main/BUILD-STORY.md"
+          }
+        ]
+      },
+      "html_asset_urls": [
+        "https://jordanmeyer.github.io/bab-example-optimizer/assets/index-BbHcAxjj.js",
+        "https://jordanmeyer.github.io/bab-example-optimizer/assets/index-CUn1Eb8g.css"
+      ],
+      "status": "pass"
+    },
+    {
+      "app": "presentation",
+      "url": "https://jordanmeyer.github.io/bab-example-presentation/",
+      "published_commit": "6879ea29f4bb17ac077c795d6b7a6e5e570ea648",
+      "comparison": "reviewed local production dist",
+      "local_head": "6879ea29f4bb17ac077c795d6b7a6e5e570ea648",
+      "local_git_status": "",
+      "files": [
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-presentation/",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-presentation/",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 14200,
+          "sha256": "3e15ae59c35a30e85bd89b20c5cb2c52f67b4faf8cd6183bce5dc6306d943386",
+          "etag": "\"6ac94bf4-3778\"",
+          "local_file": "dist/index.html",
+          "local_bytes": 14200,
+          "local_sha256": "3e15ae59c35a30e85bd89b20c5cb2c52f67b4faf8cd6183bce5dc6306d943386",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-presentation/assets/index-BSndAInm.js",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-presentation/assets/index-BSndAInm.js",
+          "content_type": "application/javascript; charset=utf-8",
+          "bytes": 137458,
+          "sha256": "88c21d3231102e16f2de47832a8f86d5ec9f0a06618992c880f0b7868d97e9ce",
+          "etag": "\"6ac94bf4-218f2\"",
+          "local_file": "dist/assets/index-BSndAInm.js",
+          "local_bytes": 137458,
+          "local_sha256": "88c21d3231102e16f2de47832a8f86d5ec9f0a06618992c880f0b7868d97e9ce",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-presentation/assets/index-DXSb14z_.css",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-presentation/assets/index-DXSb14z_.css",
+          "content_type": "text/css; charset=utf-8",
+          "bytes": 67742,
+          "sha256": "f27beeae21155145ea4877b77fa0bf6aaf0eb49c1afdf6d84328b371bf5d0f9b",
+          "etag": "\"6ac94bf4-1089e\"",
+          "local_file": "dist/assets/index-DXSb14z_.css",
+          "local_bytes": 67742,
+          "local_sha256": "f27beeae21155145ea4877b77fa0bf6aaf0eb49c1afdf6d84328b371bf5d0f9b",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-example-presentation/THIRD-PARTY-NOTICES.txt",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-example-presentation/THIRD-PARTY-NOTICES.txt",
+          "content_type": "text/plain; charset=utf-8",
+          "bytes": 9941,
+          "sha256": "47016ed7ce711c75e866a4bb6324b4e1a65baf928c65acac211860fe6b72f943",
+          "etag": "\"6ac94bf4-26d5\"",
+          "local_file": "dist/THIRD-PARTY-NOTICES.txt",
+          "local_bytes": 9941,
+          "local_sha256": "47016ed7ce711c75e866a4bb6324b4e1a65baf928c65acac211860fe6b72f943",
+          "match": true
+        }
+      ],
+      "errors": [],
+      "source_links": {
+        "repository_url": "https://github.com/jordanmeyer/bab-example-presentation",
+        "found_in_html_or_entry_js": true,
+        "build_story_url": "https://github.com/jordanmeyer/bab-example-presentation/blob/main/BUILD-STORY.md",
+        "build_story_found_in_html_entry_or_linked_lesson": true,
+        "evidence_type": "static href/literal inspection; runtime links remain a browser check",
+        "http_checks": [
+          {
+            "kind": "repository",
+            "url": "https://github.com/jordanmeyer/bab-example-presentation",
+            "exact_static_link_or_literal_found_in": [
+              "dist/index.html"
+            ],
+            "method": "HEAD",
+            "status": 200,
+            "final_url": "https://github.com/jordanmeyer/bab-example-presentation"
+          },
+          {
+            "kind": "build_story",
+            "url": "https://github.com/jordanmeyer/bab-example-presentation/blob/main/BUILD-STORY.md",
+            "exact_static_link_or_literal_found_in": [
+              "dist/index.html"
+            ],
+            "method": "HEAD",
+            "status": 200,
+            "final_url": "https://github.com/jordanmeyer/bab-example-presentation/blob/main/BUILD-STORY.md"
+          }
+        ]
+      },
+      "html_asset_urls": [
+        "https://jordanmeyer.github.io/bab-example-presentation/assets/index-BSndAInm.js",
+        "https://jordanmeyer.github.io/bab-example-presentation/assets/index-DXSb14z_.css"
+      ],
+      "status": "pass"
+    },
+    {
+      "app": "pricing",
+      "url": "https://jordanmeyer.github.io/bab-trial-pricing-2026-10-08/",
+      "published_commit": "b2ab3c95453b2ec27becb7caa52df91ca5a215e0",
+      "comparison": "tracked app files",
+      "local_head": "b2ab3c95453b2ec27becb7caa52df91ca5a215e0",
+      "local_git_status": "",
+      "files": [
+        {
+          "url": "https://jordanmeyer.github.io/bab-trial-pricing-2026-10-08/",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-trial-pricing-2026-10-08/",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 4721,
+          "sha256": "6fa02fcb8687e4c36b2e95868d25a270903f377b599bdc002067653f47a01921",
+          "etag": "\"6ac94bd7-1271\"",
+          "local_file": "app/index.html",
+          "local_bytes": 4721,
+          "local_sha256": "6fa02fcb8687e4c36b2e95868d25a270903f377b599bdc002067653f47a01921",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-trial-pricing-2026-10-08/style.css?v=4",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-trial-pricing-2026-10-08/style.css?v=4",
+          "content_type": "text/css; charset=utf-8",
+          "bytes": 3375,
+          "sha256": "53844c0d85437332c8d38456a33f3fcb88b57108289dc81211999628eef35060",
+          "etag": "\"6ac94bd7-d2f\"",
+          "local_file": "app/style.css",
+          "local_bytes": 3375,
+          "local_sha256": "53844c0d85437332c8d38456a33f3fcb88b57108289dc81211999628eef35060",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-trial-pricing-2026-10-08/app.js?v=4",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-trial-pricing-2026-10-08/app.js?v=4",
+          "content_type": "application/javascript; charset=utf-8",
+          "bytes": 6703,
+          "sha256": "9e1b4a6d0f45a591cc81899921a47d1b586edd205891fe3551ffece8cd60671b",
+          "etag": "\"6ac94bd7-1a2f\"",
+          "local_file": "app/app.js",
+          "local_bytes": 6703,
+          "local_sha256": "9e1b4a6d0f45a591cc81899921a47d1b586edd205891fe3551ffece8cd60671b",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-trial-pricing-2026-10-08/model.js?v=4",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-trial-pricing-2026-10-08/model.js?v=4",
+          "content_type": "application/javascript; charset=utf-8",
+          "bytes": 1048,
+          "sha256": "a53d776fa42e3991782954a217255bf64e518a43f07eaa2abb768f97712b5255",
+          "etag": "\"6ac94bd7-418\"",
+          "local_file": "app/model.js",
+          "local_bytes": 1048,
+          "local_sha256": "a53d776fa42e3991782954a217255bf64e518a43f07eaa2abb768f97712b5255",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-trial-pricing-2026-10-08/learn.html",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-trial-pricing-2026-10-08/learn.html",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 3327,
+          "sha256": "ae9d3a265be98423d60f1606b294d1082fdde5831e1e7da4a8c9ba0dc801a467",
+          "etag": "\"6ac94bd7-cff\"",
+          "local_file": "app/learn.html",
+          "local_bytes": 3327,
+          "local_sha256": "ae9d3a265be98423d60f1606b294d1082fdde5831e1e7da4a8c9ba0dc801a467",
+          "match": true
+        }
+      ],
+      "errors": [],
+      "source_links": {
+        "repository_url": "https://github.com/jordanmeyer/bab-trial-pricing-2026-10-08",
+        "found_in_html_or_entry_js": true,
+        "build_story_url": "https://github.com/jordanmeyer/bab-trial-pricing-2026-10-08/blob/main/BUILD-STORY.md",
+        "build_story_found_in_html_entry_or_linked_lesson": true,
+        "evidence_type": "static href/literal inspection; runtime links remain a browser check",
+        "http_checks": [
+          {
+            "kind": "repository",
+            "url": "https://github.com/jordanmeyer/bab-trial-pricing-2026-10-08",
+            "exact_static_link_or_literal_found_in": [
+              "app/index.html"
+            ],
+            "method": "HEAD",
+            "status": 200,
+            "final_url": "https://github.com/jordanmeyer/bab-trial-pricing-2026-10-08"
+          },
+          {
+            "kind": "build_story",
+            "url": "https://github.com/jordanmeyer/bab-trial-pricing-2026-10-08/blob/main/BUILD-STORY.md",
+            "exact_static_link_or_literal_found_in": [
+              "app/learn.html"
+            ],
+            "method": "HEAD",
+            "status": 200,
+            "final_url": "https://github.com/jordanmeyer/bab-trial-pricing-2026-10-08/blob/main/BUILD-STORY.md"
+          }
+        ]
+      },
+      "html_asset_urls": [
+        "https://jordanmeyer.github.io/bab-trial-pricing-2026-10-08/style.css?v=4",
+        "https://jordanmeyer.github.io/bab-trial-pricing-2026-10-08/app.js?v=4"
+      ],
+      "status": "pass"
+    },
+    {
+      "app": "inventory",
+      "url": "https://jordanmeyer.github.io/bab-trial-inventory-2026-10-08/",
+      "published_commit": "b06495470c421787f455f64ff28bc61af5876d0a",
+      "comparison": "tracked app files",
+      "local_head": "b06495470c421787f455f64ff28bc61af5876d0a",
+      "local_git_status": "",
+      "files": [
+        {
+          "url": "https://jordanmeyer.github.io/bab-trial-inventory-2026-10-08/",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-trial-inventory-2026-10-08/",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 5759,
+          "sha256": "607cb0fbbfb473d55120c5a1c0f98ee7eeb608752d8bbef2dfaedacdea8add08",
+          "etag": "\"6ac94be9-167f\"",
+          "local_file": "app/index.html",
+          "local_bytes": 5759,
+          "local_sha256": "607cb0fbbfb473d55120c5a1c0f98ee7eeb608752d8bbef2dfaedacdea8add08",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-trial-inventory-2026-10-08/style.css?v=5",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-trial-inventory-2026-10-08/style.css?v=5",
+          "content_type": "text/css; charset=utf-8",
+          "bytes": 3878,
+          "sha256": "e44b68fa4f2ed73c9f2c64d284d04e4efa81c839f321d0c55b234682c904e54f",
+          "etag": "\"6ac94be9-f26\"",
+          "local_file": "app/style.css",
+          "local_bytes": 3878,
+          "local_sha256": "e44b68fa4f2ed73c9f2c64d284d04e4efa81c839f321d0c55b234682c904e54f",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-trial-inventory-2026-10-08/app.js?v=5",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-trial-inventory-2026-10-08/app.js?v=5",
+          "content_type": "application/javascript; charset=utf-8",
+          "bytes": 8259,
+          "sha256": "b86981eb72785aad45691248f72a6b60aaf7d1746aed035129d413054ca5b600",
+          "etag": "\"6ac94be9-2043\"",
+          "local_file": "app/app.js",
+          "local_bytes": 8259,
+          "local_sha256": "b86981eb72785aad45691248f72a6b60aaf7d1746aed035129d413054ca5b600",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-trial-inventory-2026-10-08/model.js?v=4",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-trial-inventory-2026-10-08/model.js?v=4",
+          "content_type": "application/javascript; charset=utf-8",
+          "bytes": 3678,
+          "sha256": "1d7c35d19741aa7ec940c94dd871e0a88cce31e91497238c915f931ba993b880",
+          "etag": "\"6ac94be9-e5e\"",
+          "local_file": "app/model.js",
+          "local_bytes": 3678,
+          "local_sha256": "1d7c35d19741aa7ec940c94dd871e0a88cce31e91497238c915f931ba993b880",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-trial-inventory-2026-10-08/learn.html",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-trial-inventory-2026-10-08/learn.html",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 4276,
+          "sha256": "2d00cfa0fd230317415ff4da945e21eaaad0f0b9bacdd96e03d792403d229838",
+          "etag": "\"6ac94be9-10b4\"",
+          "local_file": "app/learn.html",
+          "local_bytes": 4276,
+          "local_sha256": "2d00cfa0fd230317415ff4da945e21eaaad0f0b9bacdd96e03d792403d229838",
+          "match": true
+        }
+      ],
+      "errors": [],
+      "source_links": {
+        "repository_url": "https://github.com/jordanmeyer/bab-trial-inventory-2026-10-08",
+        "found_in_html_or_entry_js": true,
+        "build_story_url": "https://github.com/jordanmeyer/bab-trial-inventory-2026-10-08/blob/main/BUILD-STORY.md",
+        "build_story_found_in_html_entry_or_linked_lesson": true,
+        "evidence_type": "static href/literal inspection; runtime links remain a browser check",
+        "http_checks": [
+          {
+            "kind": "repository",
+            "url": "https://github.com/jordanmeyer/bab-trial-inventory-2026-10-08",
+            "exact_static_link_or_literal_found_in": [
+              "app/index.html"
+            ],
+            "method": "HEAD",
+            "status": 200,
+            "final_url": "https://github.com/jordanmeyer/bab-trial-inventory-2026-10-08"
+          },
+          {
+            "kind": "build_story",
+            "url": "https://github.com/jordanmeyer/bab-trial-inventory-2026-10-08/blob/main/BUILD-STORY.md",
+            "exact_static_link_or_literal_found_in": [
+              "app/learn.html"
+            ],
+            "method": "HEAD",
+            "status": 200,
+            "final_url": "https://github.com/jordanmeyer/bab-trial-inventory-2026-10-08/blob/main/BUILD-STORY.md"
+          }
+        ]
+      },
+      "html_asset_urls": [
+        "https://jordanmeyer.github.io/bab-trial-inventory-2026-10-08/style.css?v=5",
+        "https://jordanmeyer.github.io/bab-trial-inventory-2026-10-08/app.js?v=5"
+      ],
+      "status": "pass"
+    },
+    {
+      "app": "sales",
+      "url": "https://jordanmeyer.github.io/bab-trial-sales-2026-10-08/",
+      "published_commit": "80c5e5c09049bbf06233bf179f354bee13e71776",
+      "comparison": "tracked app files",
+      "local_head": "80c5e5c09049bbf06233bf179f354bee13e71776",
+      "local_git_status": "",
+      "files": [
+        {
+          "url": "https://jordanmeyer.github.io/bab-trial-sales-2026-10-08/",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-trial-sales-2026-10-08/",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 5141,
+          "sha256": "8eddb9ca17a52b675a354aa0dedd338407685fd265e419984216ce26cabe2552",
+          "etag": "\"6ac94bec-1415\"",
+          "local_file": "app/index.html",
+          "local_bytes": 5141,
+          "local_sha256": "8eddb9ca17a52b675a354aa0dedd338407685fd265e419984216ce26cabe2552",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-trial-sales-2026-10-08/style.css?v=4",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-trial-sales-2026-10-08/style.css?v=4",
+          "content_type": "text/css; charset=utf-8",
+          "bytes": 3536,
+          "sha256": "4566279a8c511c5b77166fe126fdd4266c93e58371aed725dc79426084200f6a",
+          "etag": "\"6ac94bec-dd0\"",
+          "local_file": "app/style.css",
+          "local_bytes": 3536,
+          "local_sha256": "4566279a8c511c5b77166fe126fdd4266c93e58371aed725dc79426084200f6a",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-trial-sales-2026-10-08/app.js?v=4",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-trial-sales-2026-10-08/app.js?v=4",
+          "content_type": "application/javascript; charset=utf-8",
+          "bytes": 5786,
+          "sha256": "7861323443823a2d4f4f0b2d04e2d251c0255296f498c27c331d3e8ee8b2b2ec",
+          "etag": "\"6ac94bec-169a\"",
+          "local_file": "app/app.js",
+          "local_bytes": 5786,
+          "local_sha256": "7861323443823a2d4f4f0b2d04e2d251c0255296f498c27c331d3e8ee8b2b2ec",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-trial-sales-2026-10-08/model.js?v=4",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-trial-sales-2026-10-08/model.js?v=4",
+          "content_type": "application/javascript; charset=utf-8",
+          "bytes": 5004,
+          "sha256": "31d3c87d9000f3a24a2cfb784dd7a1cf19b9a85e05581762a6bc9a1eb6dc9316",
+          "etag": "\"6ac94bec-138c\"",
+          "local_file": "app/model.js",
+          "local_bytes": 5004,
+          "local_sha256": "31d3c87d9000f3a24a2cfb784dd7a1cf19b9a85e05581762a6bc9a1eb6dc9316",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-trial-sales-2026-10-08/learn.html",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-trial-sales-2026-10-08/learn.html",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 4374,
+          "sha256": "73ba816dae6267cdf59bf6813122e894a288b20fd524de3085f2b676bac07b8e",
+          "etag": "\"6ac94bec-1116\"",
+          "local_file": "app/learn.html",
+          "local_bytes": 4374,
+          "local_sha256": "73ba816dae6267cdf59bf6813122e894a288b20fd524de3085f2b676bac07b8e",
+          "match": true
+        },
+        {
+          "url": "https://jordanmeyer.github.io/bab-trial-sales-2026-10-08/template.csv",
+          "status": 200,
+          "final_url": "https://jordanmeyer.github.io/bab-trial-sales-2026-10-08/template.csv",
+          "content_type": "text/csv; charset=utf-8",
+          "bytes": 433,
+          "sha256": "90151597d01c633387d4759fda4cc21a602f10ddca207c2548861224bed6c279",
+          "etag": "\"6ac94bec-1b1\"",
+          "local_file": "app/template.csv",
+          "local_bytes": 433,
+          "local_sha256": "90151597d01c633387d4759fda4cc21a602f10ddca207c2548861224bed6c279",
+          "match": true
+        }
+      ],
+      "errors": [],
+      "source_links": {
+        "repository_url": "https://github.com/jordanmeyer/bab-trial-sales-2026-10-08",
+        "found_in_html_or_entry_js": true,
+        "build_story_url": "https://github.com/jordanmeyer/bab-trial-sales-2026-10-08/blob/main/BUILD-STORY.md",
+        "build_story_found_in_html_entry_or_linked_lesson": true,
+        "evidence_type": "static href/literal inspection; runtime links remain a browser check",
+        "http_checks": [
+          {
+            "kind": "repository",
+            "url": "https://github.com/jordanmeyer/bab-trial-sales-2026-10-08",
+            "exact_static_link_or_literal_found_in": [
+              "app/index.html"
+            ],
+            "method": "HEAD",
+            "status": 200,
+            "final_url": "https://github.com/jordanmeyer/bab-trial-sales-2026-10-08"
+          },
+          {
+            "kind": "build_story",
+            "url": "https://github.com/jordanmeyer/bab-trial-sales-2026-10-08/blob/main/BUILD-STORY.md",
+            "exact_static_link_or_literal_found_in": [
+              "app/learn.html"
+            ],
+            "method": "HEAD",
+            "status": 200,
+            "final_url": "https://github.com/jordanmeyer/bab-trial-sales-2026-10-08/blob/main/BUILD-STORY.md"
+          }
+        ]
+      },
+      "html_asset_urls": [
+        "https://jordanmeyer.github.io/bab-trial-sales-2026-10-08/style.css?v=4",
+        "https://jordanmeyer.github.io/bab-trial-sales-2026-10-08/app.js?v=4"
+      ],
+      "status": "pass"
+    }
+  ],
+  "summary": {
+    "apps": 12,
+    "pass": 12,
+    "fail": 0,
+    "compared_files": 53,
+    "source_link_http_checks": 24
+  },
+  "inspection_notes": [
+    "Initial link-literal scanner recognized single/double quotes but missed Vite\u2019s backtick literals in executive/process. Direct inspection found the exact href values in the already hash-matched JS; adding backtick recognition resolved both scanner misses. This was an inspection-parser limitation, not a deployed artifact failure. No remote request was repeated for that correction.",
+    "Dynamic worker chunks/WASM, fonts and every runtime asset were not downloaded. The record covers HTML, all HTML-linked JS/CSS, key notices, and original-app model imports/linked lessons/template. Root owns rendered behavior verification."
+  ]
+}

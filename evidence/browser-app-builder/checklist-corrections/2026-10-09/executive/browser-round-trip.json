@@ -1,0 +1,48 @@
+{
+  "source": "b0828ef537614daa01d3686a495992ff586e725f",
+  "tests": "14/14 actual browser passed",
+  "desktop": [
+    {
+      "question": 1,
+      "returned": true,
+      "focus": "briefing-question"
+    },
+    {
+      "question": 2,
+      "returned": true
+    },
+    {
+      "question": 3,
+      "returned": true
+    }
+  ],
+  "narrow": [
+    {
+      "question": 1,
+      "returned": true
+    },
+    {
+      "question": 2,
+      "returned": true
+    },
+    {
+      "question": 3,
+      "returned": true
+    }
+  ],
+  "narrowActualWidth": 319,
+  "narrowRequestedWidth": 320,
+  "focus": "Question heading after detail Escape; final ledger close returns Harbor Wharf trigger",
+  "enlarged": {
+    "mechanism": "Authored same-origin harness doubles computed font sizes",
+    "width": 1439,
+    "pageScrollWidth": 1439,
+    "modalWidth": 780,
+    "modalScrollWidth": 780,
+    "modalHeight": 990,
+    "modalScrollHeight": 1559,
+    "observation": "Readable Magnolia detail, contained horizontal cost table, Back and close reachable by keyboard"
+  },
+  "failedRound": "Previous source Escape closed detail and briefing together; Modal.Stack fixed same-event ownership. Negative zero cost effect fixed.",
+  "limits": "No actual screen-reader or novice evidence; not physical device testing."
+}

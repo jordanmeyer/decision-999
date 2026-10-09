@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-09",
+  "source_commit": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
+  "mechanism": "Authored same-origin frame, browser native keyboard locator actions; separate text doubling",
+  "observations": [
+    {
+      "width": 319,
+      "text": "100%",
+      "change": "100 to62 units",
+      "focus_after_edit": "quantity",
+      "pending": "Stable titled result region, explicit Inputs changed placeholder, reference retained and current cells Pending; no document horizontal overflow. Screenshot inspected.",
+      "keyboard_result_link": "Enter focuses results-title at viewport top; Calculate gives -4; same link returns focus to same heading."
+    },
+    {
+      "width": 1280,
+      "body_font": "32px (200%)",
+      "change": "62 to63 units",
+      "pending": "Same placeholder/reference structure remains readable; no document horizontal overflow. Screenshot inspected.",
+      "keyboard_result_link": "Enter focuses results-title; Calculate gives4; result announcement matches63units."
+    }
+  ],
+  "supplementary_original_routes": {
+    "inventory": "At319px, Enter on View sample-path result focuses results-heading at top.",
+    "sales": "At319px, Enter on View analysis focuses results-heading at top."
+  },
+  "limits": "No physical mobile keyboard or actual screen-reader task. Screenshots in same directory."
+}

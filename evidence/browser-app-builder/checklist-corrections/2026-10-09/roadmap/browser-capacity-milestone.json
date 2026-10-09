@@ -1,0 +1,26 @@
+{
+  "source": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+  "observations": [
+    {
+      "capacity": [
+        "Workload fits the entered team capacity"
+      ],
+      "readyChanges": [
+        "The plan has two days of date buffer, but six days of team overload. Try a delay or add capacity to separate the two constraints.",
+        "One controlling chain in baseline: Product validation → Supplier readiness → Pilot batch → Safety testing → Launch preparation → Ready to launch. Revised: Product validation → Supplier readiness → Pilot batch → Safety testing → Launch preparation → Ready to launch. A later external start can begin a controlling chain."
+      ],
+      "results": "DEPENDENCY READY DATE\n\nNov 29, 2026\n\n27 calendar days from project start\n\nAGAINST THE PROMISE\n\n2 days buffer\n\nPromised Dec 1, 2026\n\nCHANGE FROM BASELINE\n\nUnchanged\n\nBaseline ready Nov 29, 2026",
+      "task": "capacityonly2"
+    },
+    {
+      "results": "DEPENDENCY READY DATE\n\nDec 4, 2026\n\n32 calendar days from project start\n\nAGAINST THE PROMISE\n\n3 days late\n\nPromised Dec 1, 2026\n\nCHANGE FROM BASELINE\n\n5 days later\n\nBaseline ready Nov 29, 2026",
+      "state": [
+        "All edits applied. Dates and daily capacity were recalculated separately."
+      ],
+      "tables": [
+        "Revised dates versus baseline · end dates are the boundary after work finishes\nTASK\tSTART → END\tDAYS / TYPE\tTEAM / PEOPLE PER DAY\tDEPENDS ON\tTOTAL FLOAT\tEND Δ\n\n01\nProduct validation\t\nNov 2, 2026\n→ Nov 7, 2026\n\t5\tResearch · 1\tProject start\t5 days\tUnchanged\n\n02\nPackaging design\t\nNov 7, 2026\n→ Nov 15, 2026\n\t8\tDesign · 1\tProduct validation\t7 days\tUnchanged\n\n03\nSupplier readiness\t\nNov 7, 2026\n→ Nov 17, 2026\n\t10\tLaunch team · 0.7\tProduct validation\t5 days\tUnchanged\n\n04\nPilot batch\t\nNov 17, 2026\n→ Nov 21, 2026\n\t4\tLaunch team · 1\tDesign sign-off; Supplier readiness\t5 days\tUnchanged\n\n05\nSafety testing\t\nNov 21, 2026\n→ Nov 28, 2026\n\t7\tLaunch team · 0.5\tPilot batch\t5 days\tUnchanged\n\n06\nSales materials\t\nNov 15, 2026\n→ Nov 21, 2026\n\t6\tLaunch team · 0.6\tDesign sign-off\t12 days\tUnchanged\n\n07\nLaunch preparation\t\nNov 28, 2026\n→ Nov 29, 2026\n\t1\tLaunch team · 1\tSafety testing; Sales materials\t5 days\tUnchanged\n\n08\nDesign sign-off\t\nNov 15, 2026\nMilestone\n\t0 · milestone\tNo capacity used\tPackaging design\t7 days\tUnchanged\n\n09\nReady to launch\t\nDec 4, 2026\nMilestone\n\t0 · milestone\tNo capacity used\tLaunch preparation\tCritical · 0 days\t5 days later"
+      ],
+      "task": "ReadyterminalreleaseDec4"
+    }
+  ]
+}

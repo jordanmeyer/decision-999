@@ -1,0 +1,640 @@
+{
+  "scope": "Authored developer UI events, actual React Flow and application handlers, real Blob/File round trip; no native picker/download, novice or screen-reader observation.",
+  "appUrl": "http://127.0.0.1:9722/bab-example-process/",
+  "environment": {
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "width": 1439,
+    "height": 1000
+  },
+  "records": [
+    {
+      "name": "Pan selected step away, reveal and fit",
+      "status": "PASS",
+      "steps": [
+        {
+          "phase": "selected step offscreen",
+          "selected": "manager",
+          "viewport": {
+            "left": 73.48484802246094,
+            "top": 289.8910827636719,
+            "right": 1365.9090423583984,
+            "bottom": 709.8721313476562,
+            "width": 1292.4241943359375,
+            "height": 419.9810485839844
+          },
+          "manager": {
+            "left": -1830.2738037109375,
+            "top": 514.084228515625,
+            "right": -1617.3868865966797,
+            "bottom": 663.5130920410156,
+            "width": 212.8869171142578,
+            "height": 149.42886352539062
+          },
+          "transform": "translate(-2142px, 46.7793px) scale(1.01379)"
+        },
+        {
+          "phase": "same selection revealed",
+          "selected": "manager",
+          "viewport": {
+            "left": 73.48484802246094,
+            "top": 289.8910827636719,
+            "right": 1365.9090423583984,
+            "bottom": 709.8721313476562,
+            "width": 1292.4241943359375,
+            "height": 419.9810485839844
+          },
+          "manager": {
+            "left": 614.48486328125,
+            "top": 426.3910827636719,
+            "right": 824.4753875732422,
+            "bottom": 573.7869110107422,
+            "width": 209.9905242919922,
+            "height": 147.3958282470703
+          }
+        },
+        {
+          "phase": "fit all five",
+          "nodes": [
+            {
+              "id": "start",
+              "left": 131.48484802246094,
+              "top": 514.084228515625,
+              "right": 303.81048583984375,
+              "bottom": 592.0867385864258,
+              "width": 172.3256378173828,
+              "height": 78.00251007080078
+            },
+            {
+              "id": "manager",
+              "left": 369.7262268066406,
+              "top": 514.084228515625,
+              "right": 582.6131896972656,
+              "bottom": 663.5130920410156,
+              "width": 212.886962890625,
+              "height": 149.42886352539062
+            },
+            {
+              "id": "procurement",
+              "left": 628.2435302734375,
+              "top": 336.67041015625,
+              "right": 841.1304931640625,
+              "bottom": 486.0992889404297,
+              "width": 212.886962890625,
+              "height": 149.4288787841797
+            },
+            {
+              "id": "finance",
+              "left": 891.8297119140625,
+              "top": 514.084228515625,
+              "right": 1104.7167358398438,
+              "bottom": 663.5130920410156,
+              "width": 212.88702392578125,
+              "height": 149.42886352539062
+            },
+            {
+              "id": "end",
+              "left": 1135.1400146484375,
+              "top": 514.084228515625,
+              "right": 1307.4656524658203,
+              "bottom": 592.0867385864258,
+              "width": 172.3256378173828,
+              "height": 78.00251007080078
+            }
+          ],
+          "modelUnchanged": true
+        }
+      ]
+    },
+    {
+      "name": "Capture custom values and position, then replace with preset",
+      "status": "PASS",
+      "steps": [
+        {
+          "phase": "custom baseline captured",
+          "notices": [
+            "Baseline replaced: Original policy · 70/30 (471.5 min/request) → Synthetic custom baseline (473.5 min/request). Values and positions captured."
+          ],
+          "nominal": "473.5 min/request",
+          "comparison": "Nominal time versus baseline0 min/requestSame entered times as the baseline.",
+          "baseline": "Baseline: Synthetic custom baseline · 473.5 nominal min/request · 35 requests/day",
+          "changes": "0 steps, 0 routes and 0 teams changed (including additions/removals and positions). Arrival rate unchanged.",
+          "validation": null,
+          "selectedStep": null,
+          "selectedRoute": null,
+          "teamValues": [
+            {
+              "name": "Managers",
+              "capacity": "360",
+              "load": "97.2% loaded",
+              "work": "350 min of work / day"
+            },
+            {
+              "name": "Procurement",
+              "capacity": "420",
+              "load": "62.5% loaded",
+              "work": "262.5 min of work / day"
+            },
+            {
+              "name": "Finance",
+              "capacity": "500",
+              "load": "84% loaded",
+              "work": "420 min of work / day"
+            }
+          ],
+          "export": {
+            "name": "approval-process.json",
+            "bytes": 2080,
+            "type": "application/json",
+            "data": {
+              "version": 1,
+              "name": "Synthetic custom baseline",
+              "arrivals": 35,
+              "teams": [
+                {
+                  "id": "manager",
+                  "name": "Managers",
+                  "capacity": 360
+                },
+                {
+                  "id": "procurement",
+                  "name": "Procurement",
+                  "capacity": 420
+                },
+                {
+                  "id": "finance",
+                  "name": "Finance",
+                  "capacity": 500
+                }
+              ],
+              "nodes": [
+                {
+                  "id": "start",
+                  "label": "Purchase request",
+                  "type": "start",
+                  "team": null,
+                  "touch": 0,
+                  "wait": 0,
+                  "position": {
+                    "x": 0,
+                    "y": 175
+                  }
+                },
+                {
+                  "id": "manager",
+                  "label": "Manager approval",
+                  "type": "review",
+                  "team": "manager",
+                  "touch": 10,
+                  "wait": 120,
+                  "position": {
+                    "x": 264.59183673469386,
+                    "y": 194.7278911564626
+                  }
+                },
+                {
+                  "id": "procurement",
+                  "label": "Procurement review",
+                  "type": "review",
+                  "team": "procurement",
+                  "touch": 25,
+                  "wait": 480,
+                  "position": {
+                    "x": 490,
+                    "y": 0
+                  }
+                },
+                {
+                  "id": "finance",
+                  "label": "Finance approval",
+                  "type": "review",
+                  "team": "finance",
+                  "touch": 12,
+                  "wait": 180,
+                  "position": {
+                    "x": 750,
+                    "y": 175
+                  }
+                },
+                {
+                  "id": "end",
+                  "label": "Approved",
+                  "type": "end",
+                  "team": null,
+                  "touch": 0,
+                  "wait": 0,
+                  "position": {
+                    "x": 990,
+                    "y": 175
+                  }
+                }
+              ],
+              "edges": [
+                {
+                  "id": "request-manager",
+                  "source": "start",
+                  "target": "manager",
+                  "share": 100
+                },
+                {
+                  "id": "manager-procurement",
+                  "source": "manager",
+                  "target": "procurement",
+                  "share": 30
+                },
+                {
+                  "id": "manager-finance",
+                  "source": "manager",
+                  "target": "finance",
+                  "share": 70
+                },
+                {
+                  "id": "procurement-finance",
+                  "source": "procurement",
+                  "target": "finance",
+                  "share": 100
+                },
+                {
+                  "id": "finance-end",
+                  "source": "finance",
+                  "target": "end",
+                  "share": 100
+                }
+              ]
+            }
+          }
+        },
+        {
+          "phase": "preset replaces draft and baseline",
+          "notices": [
+            "90/10 example loaded. Compare its routing against the original 70/30 policy."
+          ],
+          "nominal": "370.5 min/request",
+          "comparison": "Nominal time versus baseline−101 min/request21.4% less nominal time. Capacity is checked separately.",
+          "baseline": "Baseline: Original policy · 70/30 · 471.5 nominal min/request · 40 requests/day",
+          "changes": "0 steps, 2 routes and 0 teams changed (including additions/removals and positions). Arrival rate unchanged.",
+          "validation": null,
+          "selectedStep": "manager",
+          "selectedRoute": "manager-procurement",
+          "teamValues": [
+            {
+              "name": "Managers",
+              "capacity": "360",
+              "load": "88.9% loaded",
+              "work": "320 min of work / day"
+            },
+            {
+              "name": "Procurement",
+              "capacity": "420",
+              "load": "23.8% loaded",
+              "work": "100 min of work / day"
+            },
+            {
+              "name": "Finance",
+              "capacity": "420",
+              "load": "114.3% loaded",
+              "work": "480 min of work / day · 60 min over capacity"
+            }
+          ],
+          "export": {
+            "name": "approval-process.json",
+            "bytes": 2053,
+            "type": "application/json",
+            "data": {
+              "version": 1,
+              "name": "Risk-tiered routing · 90/10",
+              "arrivals": 40,
+              "teams": [
+                {
+                  "id": "manager",
+                  "name": "Managers",
+                  "capacity": 360
+                },
+                {
+                  "id": "procurement",
+                  "name": "Procurement",
+                  "capacity": 420
+                },
+                {
+                  "id": "finance",
+                  "name": "Finance",
+                  "capacity": 420
+                }
+              ],
+              "nodes": [
+                {
+                  "id": "start",
+                  "label": "Purchase request",
+                  "type": "start",
+                  "team": null,
+                  "touch": 0,
+                  "wait": 0,
+                  "position": {
+                    "x": 0,
+                    "y": 175
+                  }
+                },
+                {
+                  "id": "manager",
+                  "label": "Manager approval",
+                  "type": "review",
+                  "team": "manager",
+                  "touch": 8,
+                  "wait": 120,
+                  "position": {
+                    "x": 235,
+                    "y": 175
+                  }
+                },
+                {
+                  "id": "procurement",
+                  "label": "Procurement review",
+                  "type": "review",
+                  "team": "procurement",
+                  "touch": 25,
+                  "wait": 480,
+                  "position": {
+                    "x": 490,
+                    "y": 0
+                  }
+                },
+                {
+                  "id": "finance",
+                  "label": "Finance approval",
+                  "type": "review",
+                  "team": "finance",
+                  "touch": 12,
+                  "wait": 180,
+                  "position": {
+                    "x": 750,
+                    "y": 175
+                  }
+                },
+                {
+                  "id": "end",
+                  "label": "Approved",
+                  "type": "end",
+                  "team": null,
+                  "touch": 0,
+                  "wait": 0,
+                  "position": {
+                    "x": 990,
+                    "y": 175
+                  }
+                }
+              ],
+              "edges": [
+                {
+                  "id": "request-manager",
+                  "source": "start",
+                  "target": "manager",
+                  "share": 100
+                },
+                {
+                  "id": "manager-procurement",
+                  "source": "manager",
+                  "target": "procurement",
+                  "share": 10
+                },
+                {
+                  "id": "manager-finance",
+                  "source": "manager",
+                  "target": "finance",
+                  "share": 90
+                },
+                {
+                  "id": "procurement-finance",
+                  "source": "procurement",
+                  "target": "finance",
+                  "share": 100
+                },
+                {
+                  "id": "finance-end",
+                  "source": "finance",
+                  "target": "end",
+                  "share": 100
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Add, connect, apply shares, recover loop and export/reimport",
+      "status": "PASS",
+      "steps": [
+        {
+          "phase": "valid extended graph and capacity",
+          "notices": [
+            "Original example restored, including the comparison baseline."
+          ],
+          "nominal": "379.5 min/request",
+          "comparison": "Nominal time versus baseline−92 min/request19.5% less nominal time. Capacity is checked separately.",
+          "baseline": "Baseline: Original policy · 70/30 · 471.5 nominal min/request · 40 requests/day",
+          "changes": "1 steps, 3 routes and 1 teams changed (including additions/removals and positions). Arrival rate unchanged.",
+          "validation": null,
+          "selectedStep": null,
+          "selectedRoute": null,
+          "teamValues": [
+            {
+              "name": "Managers",
+              "capacity": "680",
+              "load": "100% loaded",
+              "work": "680 min of work / day"
+            },
+            {
+              "name": "Procurement",
+              "capacity": "420",
+              "load": "23.8% loaded",
+              "work": "100 min of work / day"
+            },
+            {
+              "name": "Finance",
+              "capacity": "420",
+              "load": "114.3% loaded",
+              "work": "480 min of work / day · 60 min over capacity"
+            }
+          ]
+        },
+        {
+          "phase": "named loop pauses results",
+          "validation": "Draft needs repair. Results are paused.A loop is present. Steps blocked from ordering: Manager approval, Procurement review, Finance approval, Approved, Extra review. This model requires one-way routes with no rework cycles.Restore last valid process",
+          "nominal": "— min/request"
+        },
+        {
+          "phase": "exported Blob reimported exactly; original baseline retained",
+          "file": "synthetic-workflow-roundtrip.json",
+          "notices": [
+            "Valid process imported. The comparison baseline is unchanged; use the baseline button to replace it."
+          ],
+          "nominal": "379.5 min/request",
+          "comparison": "Nominal time versus baseline−92 min/request19.5% less nominal time. Capacity is checked separately.",
+          "baseline": "Baseline: Original policy · 70/30 · 471.5 nominal min/request · 40 requests/day",
+          "changes": "1 steps, 3 routes and 1 teams changed (including additions/removals and positions). Arrival rate unchanged.",
+          "validation": null,
+          "selectedStep": "manager",
+          "selectedRoute": "request-manager",
+          "teamValues": [
+            {
+              "name": "Managers",
+              "capacity": "680",
+              "load": "100% loaded",
+              "work": "680 min of work / day"
+            },
+            {
+              "name": "Procurement",
+              "capacity": "420",
+              "load": "23.8% loaded",
+              "work": "100 min of work / day"
+            },
+            {
+              "name": "Finance",
+              "capacity": "420",
+              "load": "114.3% loaded",
+              "work": "480 min of work / day · 60 min over capacity"
+            }
+          ],
+          "export": {
+            "name": "approval-process.json",
+            "bytes": 2400,
+            "type": "application/json",
+            "data": {
+              "version": 1,
+              "name": "Synthetic graph round trip",
+              "arrivals": 40,
+              "teams": [
+                {
+                  "id": "manager",
+                  "name": "Managers",
+                  "capacity": 680
+                },
+                {
+                  "id": "procurement",
+                  "name": "Procurement",
+                  "capacity": 420
+                },
+                {
+                  "id": "finance",
+                  "name": "Finance",
+                  "capacity": 420
+                }
+              ],
+              "nodes": [
+                {
+                  "id": "start",
+                  "label": "Purchase request",
+                  "type": "start",
+                  "team": null,
+                  "touch": 0,
+                  "wait": 0,
+                  "position": {
+                    "x": 0,
+                    "y": 175
+                  }
+                },
+                {
+                  "id": "manager",
+                  "label": "Manager approval",
+                  "type": "review",
+                  "team": "manager",
+                  "touch": 8,
+                  "wait": 120,
+                  "position": {
+                    "x": 235,
+                    "y": 175
+                  }
+                },
+                {
+                  "id": "procurement",
+                  "label": "Procurement review",
+                  "type": "review",
+                  "team": "procurement",
+                  "touch": 25,
+                  "wait": 480,
+                  "position": {
+                    "x": 490,
+                    "y": 0
+                  }
+                },
+                {
+                  "id": "finance",
+                  "label": "Finance approval",
+                  "type": "review",
+                  "team": "finance",
+                  "touch": 12,
+                  "wait": 180,
+                  "position": {
+                    "x": 750,
+                    "y": 175
+                  }
+                },
+                {
+                  "id": "end",
+                  "label": "Approved",
+                  "type": "end",
+                  "team": null,
+                  "touch": 0,
+                  "wait": 0,
+                  "position": {
+                    "x": 990,
+                    "y": 175
+                  }
+                },
+                {
+                  "id": "step-4297b0ae",
+                  "label": "Extra review",
+                  "type": "review",
+                  "team": "manager",
+                  "touch": 10,
+                  "wait": 0,
+                  "position": {
+                    "x": 470,
+                    "y": 350
+                  }
+                }
+              ],
+              "edges": [
+                {
+                  "id": "request-manager",
+                  "source": "start",
+                  "target": "manager",
+                  "share": 100
+                },
+                {
+                  "id": "manager-procurement",
+                  "source": "manager",
+                  "target": "procurement",
+                  "share": 10
+                },
+                {
+                  "id": "manager-finance",
+                  "source": "manager",
+                  "target": "step-4297b0ae",
+                  "share": 90
+                },
+                {
+                  "id": "procurement-finance",
+                  "source": "procurement",
+                  "target": "finance",
+                  "share": 100
+                },
+                {
+                  "id": "finance-end",
+                  "source": "finance",
+                  "target": "end",
+                  "share": 100
+                },
+                {
+                  "id": "route-d884592e",
+                  "source": "step-4297b0ae",
+                  "target": "finance",
+                  "share": 100
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

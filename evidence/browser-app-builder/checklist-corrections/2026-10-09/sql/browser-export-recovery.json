@@ -1,0 +1,281 @@
+{
+  "scope": "Actual app DOM actions and worker; generated Blob capture, not native download or human evidence.",
+  "appURL": "http://127.0.0.1:9716/bab-example-sql/",
+  "environment": {
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "frameWidth": 1280,
+    "frameHeight": 843
+  },
+  "observations": [
+    {
+      "name": "Uncapped CSV and note retain executed SQL, tiny identity, units and four rows after an editor change",
+      "status": "PASS",
+      "observedAt": "2026-10-09T19:56:31.096Z",
+      "downloads": [
+        {
+          "name": "fulfillment-tiny-results.csv",
+          "type": "text/csv",
+          "bytes": 111,
+          "records": 4,
+          "firstLines": [
+            "\"line_id\",\"ordered_units\",\"unit_price_cents\"",
+            "\"A\",\"10\",\"2000\"",
+            "\"B\",\"5\",\"3000\""
+          ],
+          "lastLine": "\"D\",\"2\",\"5000\""
+        },
+        {
+          "name": "fulfillment-tiny-result-note.txt",
+          "type": "text/plain",
+          "bytes": 809,
+          "text": "Fulfillment Lab result note\nCSV: fulfillment-tiny-results.csv\nDataset: tiny synthetic example\nSource tables: orders: 3 · products: 2 · line_items: 4 · shipment_lines: 4\nCompleted: 2026-10-09T19:56:31.094Z\nRetained rows: 4 (uncapped result)\nTable pagination: up to 50 rows per visible page; CSV includes every retained row.\nUnits: CSV retains raw values and original names. Documented *_cents money columns use integer USD cents; arbitrary aliases do not establish units.\nColumns: line_id (Utf8), ordered_units (Int32), unit_price_cents (Int64)\nLimitations: synthetic merchandise values; no costs, due dates or payment status. Unshipped does not mean late, unpaid or unprofitable.\n\nExecuted SQL (may differ from the editor):\nSELECT line_id, ordered_units, unit_price_cents\nFROM line_items\nORDER BY line_id;\n"
+        }
+      ],
+      "ui": {
+        "dataset": "tiny",
+        "editor": "SELECT 'not executed' AS draft_only;",
+        "executedSQL": "SELECT line_id, ordered_units, unit_price_cents\nFROM line_items\nORDER BY line_id;",
+        "resultOrigin": "Editor changed. Results below belong to the last completed SQL shown here.",
+        "resultStatus": "4 rows · 7 ms. ",
+        "engineStatus": "Ready · local engine · read-only queries · no external SQL access",
+        "visibleRows": 4,
+        "visibleCells": [
+          [
+            "A",
+            "10",
+            "$20"
+          ],
+          [
+            "B",
+            "5",
+            "$30"
+          ]
+        ],
+        "pageNote": "Rows 1–4 of 4 retained",
+        "exportLabel": "Download 4 retained rows (CSV)",
+        "runDisabled": false,
+        "cancelDisabled": true
+      }
+    },
+    {
+      "name": "Capped CSV exports 500 raw rows while the table shows 50; note retains the completed query and cap",
+      "status": "PASS",
+      "observedAt": "2026-10-09T19:56:31.105Z",
+      "downloads": [
+        {
+          "name": "fulfillment-tiny-results.csv",
+          "type": "text/csv",
+          "bytes": 7304,
+          "records": 500,
+          "firstLines": [
+            "\"sequence\",\"gross_cents\"",
+            "\"0\",\"0\"",
+            "\"1\",\"101\""
+          ],
+          "lastLine": "\"499\",\"50399\""
+        },
+        {
+          "name": "fulfillment-tiny-result-note.txt",
+          "type": "text/plain",
+          "bytes": 836,
+          "text": "Fulfillment Lab result note\nCSV: fulfillment-tiny-results.csv\nDataset: tiny synthetic example\nSource tables: orders: 3 · products: 2 · line_items: 4 · shipment_lines: 4\nCompleted: 2026-10-09T19:56:31.101Z\nRetained rows: 500 (500-row cap reached; additional rows exist)\nTable pagination: up to 50 rows per visible page; CSV includes every retained row.\nUnits: CSV retains raw values and original names. Documented *_cents money columns use integer USD cents; arbitrary aliases do not establish units.\nColumns: sequence (Int64), gross_cents (Int64)\nLimitations: synthetic merchandise values; no costs, due dates or payment status. Unshipped does not mean late, unpaid or unprofitable.\n\nExecuted SQL (may differ from the editor):\nSELECT range::BIGINT AS sequence, (range * 101)::BIGINT AS gross_cents\nFROM range(501)\nORDER BY sequence;\n"
+        }
+      ],
+      "ui": {
+        "dataset": "tiny",
+        "editor": "SELECT 'another unexecuted edit' AS draft_only;",
+        "executedSQL": "SELECT range::BIGINT AS sequence, (range * 101)::BIGINT AS gross_cents\nFROM range(501)\nORDER BY sequence;",
+        "resultOrigin": "Editor changed. Results below belong to the last completed SQL shown here.",
+        "resultStatus": "500 rows retained; more rows exist (500-row cap) · 4 ms. ",
+        "engineStatus": "Ready · local engine · read-only queries · no external SQL access",
+        "visibleRows": 50,
+        "visibleCells": [
+          [
+            "0",
+            "$0"
+          ],
+          [
+            "1",
+            "$1.01"
+          ]
+        ],
+        "pageNote": "Rows 1–50 of 500 retained (cap reached)",
+        "exportLabel": "Download 500 retained rows (CSV)",
+        "runDisabled": false,
+        "cancelDisabled": true
+      }
+    },
+    {
+      "name": "Unknown-column error preserves draft and old-result provenance; corrected query recovers",
+      "status": "PASS",
+      "observedAt": "2026-10-09T19:56:31.116Z",
+      "failure": {
+        "dataset": "tiny",
+        "editor": "SELECT nonexistent FROM line_items;",
+        "executedSQL": "SELECT range::BIGINT AS sequence, (range * 101)::BIGINT AS gross_cents\nFROM range(501)\nORDER BY sequence;",
+        "resultOrigin": "Editor changed. Results below belong to the last completed SQL shown here.",
+        "resultStatus": "Query failed: Binder Error: Referenced column \"nonexistent\" not found in FROM clause!\nCandidate bindings: \"unit_price_cents\", \"ordered_units\", \"order_id\"\n\nLINE 2: SELECT nonexistent FROM line_items\n               ^\nOpen Tables and columns, check the column spelling and qualify shared names with the table alias. Your SQL is unchanged. Previous result remains below; its executed SQL is still shown.",
+        "engineStatus": "Ready · local engine · read-only queries · no external SQL access",
+        "visibleRows": 50,
+        "visibleCells": [
+          [
+            "0",
+            "$0"
+          ],
+          [
+            "1",
+            "$1.01"
+          ]
+        ],
+        "pageNote": "Rows 1–50 of 500 retained (cap reached)",
+        "exportLabel": "Download 500 retained rows (CSV)",
+        "runDisabled": false,
+        "cancelDisabled": true
+      },
+      "recovery": {
+        "dataset": "tiny",
+        "editor": "SELECT COUNT(*)::BIGINT AS line_count FROM line_items;",
+        "executedSQL": "SELECT COUNT(*)::BIGINT AS line_count FROM line_items;",
+        "resultOrigin": "Results match the editor.",
+        "resultStatus": "1 row · 3 ms. ",
+        "engineStatus": "Ready · local engine · read-only queries · no external SQL access",
+        "visibleRows": 1,
+        "visibleCells": [
+          [
+            "4"
+          ]
+        ],
+        "pageNote": "Rows 1–1 of 1 retained",
+        "exportLabel": "Download 1 retained rows (CSV)",
+        "runDisabled": false,
+        "cancelDisabled": true
+      }
+    },
+    {
+      "name": "Malformed SQL preserves draft and old-result provenance; corrected query recovers",
+      "status": "PASS",
+      "observedAt": "2026-10-09T19:56:31.134Z",
+      "failure": {
+        "dataset": "tiny",
+        "editor": "SELECT FROM;",
+        "executedSQL": "SELECT COUNT(*)::BIGINT AS line_count FROM line_items;",
+        "resultOrigin": "Editor changed. Results below belong to the last completed SQL shown here.",
+        "resultStatus": "Query failed: Parser Error: syntax error at or near \")\"\n\nLINE 4: ) AS result LIMIT 501\n        ^\n\nLINE 4: ) AS result LIMIT 501\n        ^\nCheck commas, quotes and clause order near the reported location. Compare with a starter; Restore previous query recovers your draft. Your SQL is unchanged. Previous result remains below; its executed SQL is still shown.",
+        "engineStatus": "Ready · local engine · read-only queries · no external SQL access",
+        "visibleRows": 1,
+        "visibleCells": [
+          [
+            "4"
+          ]
+        ],
+        "pageNote": "Rows 1–1 of 1 retained",
+        "exportLabel": "Download 1 retained rows (CSV)",
+        "runDisabled": false,
+        "cancelDisabled": true
+      },
+      "recovery": {
+        "dataset": "tiny",
+        "editor": "SELECT 'recovered' AS outcome, 42::BIGINT AS answer;",
+        "executedSQL": "SELECT 'recovered' AS outcome, 42::BIGINT AS answer;",
+        "resultOrigin": "Results match the editor.",
+        "resultStatus": "1 row · 2 ms. ",
+        "engineStatus": "Ready · local engine · read-only queries · no external SQL access",
+        "visibleRows": 1,
+        "visibleCells": [
+          [
+            "recovered",
+            "42"
+          ]
+        ],
+        "pageNote": "Rows 1–1 of 1 retained",
+        "exportLabel": "Download 1 retained rows (CSV)",
+        "runDisabled": false,
+        "cancelDisabled": true
+      }
+    },
+    {
+      "name": "Actual heavy query is cancelled within eight seconds; Reset preserves SQL and a fresh worker recovers",
+      "status": "PASS",
+      "observedAt": "2026-10-09T19:56:31.612Z",
+      "cancelAtMs": 253.3,
+      "cancelled": {
+        "dataset": "tiny",
+        "editor": "SELECT SUM(sin(a.i+b.i)) FROM range(1000000) a(i), range(1000000) b(i);",
+        "executedSQL": "SELECT 'recovered' AS outcome, 42::BIGINT AS answer;",
+        "resultOrigin": "Editor changed. Results below belong to the last completed SQL shown here.",
+        "resultStatus": "Query failed: Query cancelled. Worker stopped; reset to continue.\nReset database, then run a smaller query. Your editor text stays in place. Your SQL is unchanged. Previous result remains below; its executed SQL is still shown.",
+        "engineStatus": "Worker stopped. Reset the database to continue with the same SQL.",
+        "visibleRows": 1,
+        "visibleCells": [
+          [
+            "recovered",
+            "42"
+          ]
+        ],
+        "pageNote": "Rows 1–1 of 1 retained",
+        "exportLabel": "Download 1 retained rows (CSV)",
+        "runDisabled": true,
+        "cancelDisabled": true
+      },
+      "recovery": {
+        "dataset": "tiny",
+        "editor": "SELECT 42::BIGINT AS recovered;",
+        "executedSQL": "SELECT 42::BIGINT AS recovered;",
+        "resultOrigin": "Results match the editor.",
+        "resultStatus": "1 row · 4 ms. ",
+        "engineStatus": "Ready · local engine · read-only queries · no external SQL access",
+        "visibleRows": 1,
+        "visibleCells": [
+          [
+            "42"
+          ]
+        ],
+        "pageNote": "Rows 1–1 of 1 retained",
+        "exportLabel": "Download 1 retained rows (CSV)",
+        "runDisabled": false,
+        "cancelDisabled": true
+      }
+    }
+  ],
+  "timeout": {
+    "status": "PASS",
+    "observedAt": "2026-10-09T19:56:56.668Z",
+    "elapsedMs": 8002.4,
+    "timedOut": {
+      "dataset": "tiny",
+      "editor": "SELECT SUM(sin(a.i+b.i)) FROM range(1000000) a(i), range(1000000) b(i);",
+      "executedSQL": "SELECT 42::BIGINT AS recovered;",
+      "resultOrigin": "Editor changed. Results below belong to the last completed SQL shown here.",
+      "resultStatus": "Query failed: Query exceeded 8 seconds. Worker stopped; reset to continue.\nReset database; narrow the joins or filter inputs before running again. A final LIMIT may not reduce intermediate work. Your SQL is unchanged. Previous result remains below; its executed SQL is still shown.",
+      "engineStatus": "Worker stopped. Reset the database to continue with the same SQL.",
+      "visibleRows": 1,
+      "visibleCells": [
+        [
+          "42"
+        ]
+      ],
+      "pageNote": "Rows 1–1 of 1 retained",
+      "exportLabel": "Download 1 retained rows (CSV)",
+      "runDisabled": true,
+      "cancelDisabled": true
+    },
+    "recovery": {
+      "dataset": "tiny",
+      "editor": "SELECT 42::BIGINT AS recovered;",
+      "executedSQL": "SELECT 42::BIGINT AS recovered;",
+      "resultOrigin": "Results match the editor.",
+      "resultStatus": "1 row · 3 ms. ",
+      "engineStatus": "Ready · local engine · read-only queries · no external SQL access",
+      "visibleRows": 1,
+      "visibleCells": [
+        [
+          "42"
+        ]
+      ],
+      "pageNote": "Rows 1–1 of 1 retained",
+      "exportLabel": "Download 1 retained rows (CSV)",
+      "runDisabled": false,
+      "cancelDisabled": true
+    }
+  }
+}

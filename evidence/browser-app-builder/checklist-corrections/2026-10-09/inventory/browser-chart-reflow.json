@@ -1,0 +1,19 @@
+{
+  "source": "ff6c1bd0724a163942ba74cdfc516a047484c46e",
+  "observations": [
+    {
+      "case": "319 one day",
+      "font": "14px",
+      "height": 223.9820098876953,
+      "viewBox": "0 0 288 224",
+      "width": 287.68939208984375
+    },
+    {
+      "case": "1280 doubledtext default30days",
+      "font": "28px",
+      "height": 447.9876708984375,
+      "viewBox": "0 0 1184 448",
+      "width": 1184.2802734375
+    }
+  ]
+}

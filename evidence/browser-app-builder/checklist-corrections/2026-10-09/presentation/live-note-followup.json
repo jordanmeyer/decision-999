@@ -1,0 +1,11 @@
+{
+  "app": "presentation",
+  "url": "https://jordanmeyer.github.io/bab-example-presentation/",
+  "at": "2026-10-09T20:26:53.121Z",
+  "check": "Ordinary reload retrieves corrected note tying Lower/Stronger to180/108/2.4m; Lower20k returnsPauseandrevise; Stronger60k returnsAuthorizeconditionalfulllaunch. Earlier20/12/100/500 yields300 andunchanged JS/model remains applicable.",
+  "returning_browser": "Navigation initially reused previousHTML; ordinary reload obtained newnote. No cache-busting query.",
+  "assets": [
+    "/bab-example-presentation/assets/index-BSndAInm.js",
+    "/bab-example-presentation/assets/index-DXSb14z_.css"
+  ]
+}

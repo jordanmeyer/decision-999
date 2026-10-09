@@ -1,0 +1,25 @@
+24/24 passed; 0 failed.
+PASS — jStat conventions: mean4; sample variance4; population variance8/3
+PASS — Normal reference: median0; CDF(0)=.5;97.5th percentile1.95996398454
+PASS — Upstream seedrandom hello. sequence: two doubles, quick value, then int32
+PASS — Sampling uses a local generator; identical seeds reproduce, changed seeds differ
+PASS — Payoff accounting:80 sold×$20 +20 leftover×$4 −100×$12 −$100 = $380
+PASS — Inventory conservation and lost sales for demand150/order100:100 sold,0 leftover,50 missed
+PASS — Certainty preset:400/500/600 orders yield$5,600/$8,000/$6,900, with0/0/100 leftovers
+PASS — Certainty respects exact zero-risk screen; $0 contribution is not a loss
+PASS — No qualifying order is explicit under certain loss; no forced recommendation
+PASS — Wilson boundary for0/100 losses: upper z²/(100+z²)=.0369934982, not zero
+PASS — Nearest-rank downside percentile handles singleton and percentile endpoints
+PASS — Rounded uniform cost loss boundary:50–52 cents, revenue51 =>25% chance of loss
+PASS — Independent Python math.erf enumeration:default analytical means and risks
+PASS — Monte Carlo agrees with independent default references within5 sampling standard errors
+PASS — Conditioning is not clipping:mean0/SD50 yields capped expected sales39.0445828487 forq100
+PASS — Common draws make option order irrelevant and conserve expected stock
+PASS — Validation rejects blank/negative/invalid costs, recovery, duplicate/fractional units and empty seed
+PASS — Exact quantity peak: independent normal enumeration yields q558 / $6509.726639; neighbors are lower
+PASS — Risk can bind, release and reject every quantity without changing the expected-profit peak
+PASS — Default lesson binds; a 20% risk limit releases the expected-profit peak
+PASS — Half-normal demand preview: continuous mean50√(2/π), rounded seeded mean and quantiles
+PASS — Scenario1 hand check:424 demand and$19.64 cost gives$6,020 at500; changing order leaves world intact
+PASS — Wilson equality passes; just below upper endpoint excludes469 and selects468
+PASS — Loose risk limit can admit negative expected contribution; optimum remains conditional on launch

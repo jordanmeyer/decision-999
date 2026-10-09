@@ -1,0 +1,13 @@
+{
+  "source": "bd31dc171c1500a1d70ff0a33bc654abf7d36a96",
+  "browserTests": "27/27 passed",
+  "observations": {
+    "cancel": "Cancelled actual worker initialload, status: Solve cancelled. The worker stopped; solve again when ready.",
+    "retry": "Retry completed Optimal",
+    "infeasible": "Prep100 versus minimumcommitments4/3/2 needs118, appsaid18moremin,noallocation",
+    "zeroMaximum": "OrdinaryCelebration0/0 remainseditableafterAdd60prep,re-enable18works; Tinyhides3rd;Resetreveals",
+    "tiny": "3Breakfast+2Tea=$23",
+    "edit": "Old allocationhidden afterprepedit; attemptededitduringsolvewasalreadycompletebeforeedit"
+  },
+  "limits": "Real time-limit/nonoptimal response not induced. Edit during an in-progress solve not established. No screen-reader/novice evidence."
+}

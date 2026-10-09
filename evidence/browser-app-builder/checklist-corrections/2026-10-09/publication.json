@@ -1,0 +1,355 @@
+{
+  "scope": "All12 current pushed-SHA Pages workflows succeeded and live known-answer interactions passed. Presentation speaker-note follow-up also passed after ordinary reload. Novice, screen-reader, device and remaining complete-task acceptance stays open.",
+  "apps": [
+    {
+      "app": "executive",
+      "repo": "jordanmeyer/bab-example-executive",
+      "local_path": "/private/tmp/bab-recipe-examples-2026-10-09/executive",
+      "pushed_commit": "25563b862f4983ff9b22f2ec73fe42449066af0b",
+      "pushed_at": "2026-10-09T20:16:56.311504+00:00",
+      "url": "https://jordanmeyer.github.io/bab-example-executive/",
+      "workflow": [
+        {
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "25563b862f4983ff9b22f2ec73fe42449066af0b",
+          "url": "https://github.com/jordanmeyer/bab-example-executive/actions/runs/37985924546",
+          "id": 37985924546
+        }
+      ],
+      "live_verification": {
+        "app": "executive",
+        "url": "https://jordanmeyer.github.io/bab-example-executive/",
+        "at": "2026-10-09T20:20:41.316Z",
+        "check": "Defaultsales1,441,000/contribution341,800; Coast502,000/102,180/20.4%.",
+        "assets": [
+          "/bab-example-executive/assets/index-CoCXyH9_.js",
+          "/bab-example-executive/assets/index-ZSg0LWtH.css"
+        ]
+      }
+    },
+    {
+      "app": "uploads",
+      "repo": "jordanmeyer/bab-example-uploads",
+      "local_path": "/private/tmp/bab-recipe-examples-2026-10-09/uploads",
+      "pushed_commit": "76f0b2857136d42d928636edb89555a95fee6242",
+      "pushed_at": "2026-10-09T20:16:57.727825+00:00",
+      "url": "https://jordanmeyer.github.io/bab-example-uploads/",
+      "workflow": [
+        {
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "76f0b2857136d42d928636edb89555a95fee6242",
+          "url": "https://github.com/jordanmeyer/bab-example-uploads/actions/runs/37985926930",
+          "id": 37985926930
+        }
+      ],
+      "live_verification": {
+        "app": "uploads",
+        "url": "https://jordanmeyer.github.io/bab-example-uploads/",
+        "at": "2026-10-09T20:20:53.101Z",
+        "check": "Sample384sales326returns 291788\u221251827=239961. Paid social110356\u221233604=76752; original-cohort labeling and source identities visible.",
+        "assets": [
+          "/bab-example-uploads/assets/index-CIv3dk97.js",
+          "/bab-example-uploads/assets/index-Bqz3pqrc.css"
+        ]
+      }
+    },
+    {
+      "app": "simulator",
+      "repo": "jordanmeyer/bab-example-simulator",
+      "local_path": "/private/tmp/bab-recipe-examples-2026-10-09/simulator",
+      "pushed_commit": "361d528421ae4970f7970b99c2862d1ae7269c1e",
+      "pushed_at": "2026-10-09T20:16:58.982519+00:00",
+      "url": "https://jordanmeyer.github.io/bab-example-simulator/",
+      "workflow": [
+        {
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "361d528421ae4970f7970b99c2862d1ae7269c1e",
+          "url": "https://github.com/jordanmeyer/bab-example-simulator/actions/runs/37985929591",
+          "id": 37985929591
+        }
+      ],
+      "live_verification": {
+        "app": "simulator",
+        "url": "https://jordanmeyer.github.io/bab-example-simulator/",
+        "at": "2026-10-09T20:21:04.486Z",
+        "check": "Default chosen469 expected6068 vs unscreened558/6510; upper loss bound2.994022%; downside button opens selected469 view.",
+        "assets": [
+          "/bab-example-simulator/assets/index-gQQbQtRP.js",
+          "/bab-example-simulator/assets/index-D_SppeD6.css"
+        ]
+      }
+    },
+    {
+      "app": "process",
+      "repo": "jordanmeyer/bab-example-process",
+      "local_path": "/private/tmp/bab-recipe-examples-2026-10-09/process",
+      "pushed_commit": "126ef1c803f65490e0f5ae7cf0e171f70e76907b",
+      "pushed_at": "2026-10-09T20:17:00.673338+00:00",
+      "url": "https://jordanmeyer.github.io/bab-example-process/",
+      "workflow": [
+        {
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "126ef1c803f65490e0f5ae7cf0e171f70e76907b",
+          "url": "https://github.com/jordanmeyer/bab-example-process/actions/runs/37985932858",
+          "id": 37985932858
+        }
+      ],
+      "live_verification": {
+        "app": "process",
+        "url": "https://jordanmeyer.github.io/bab-example-process/",
+        "at": "2026-10-09T20:21:54.680Z",
+        "check": "Default471.5 nominalmin withFinance480/420=114.3%load;90/10 reduces nominalto370.5 (\u2212101) whileFinance remains overcapacity.",
+        "assets": [
+          "/bab-example-process/assets/index-B5ItCOrY.js",
+          "/bab-example-process/assets/index-DW5ssznd.css"
+        ]
+      }
+    },
+    {
+      "app": "roadmap",
+      "repo": "jordanmeyer/bab-example-roadmap",
+      "local_path": "/private/tmp/bab-recipe-examples-2026-10-09/roadmap",
+      "pushed_commit": "61fcf069f65c35d5902a694a73a3ac1ae5657ed3",
+      "pushed_at": "2026-10-09T20:17:02.015663+00:00",
+      "url": "https://jordanmeyer.github.io/bab-example-roadmap/",
+      "workflow": [
+        {
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "61fcf069f65c35d5902a694a73a3ac1ae5657ed3",
+          "url": "https://github.com/jordanmeyer/bab-example-roadmap/actions/runs/37985935008",
+          "id": 37985935008
+        }
+      ],
+      "live_verification": {
+        "app": "roadmap",
+        "url": "https://jordanmeyer.github.io/bab-example-roadmap/",
+        "at": "2026-10-09T20:21:47.770Z",
+        "check": "DefaultNov29 with2daysbuffer and6overload days; packaging delay readyDec2,1daylate,+3daysbaseline.",
+        "assets": [
+          "/bab-example-roadmap/assets/index-ZEeHeJAd.js",
+          "/bab-example-roadmap/assets/index-CbbWsWPd.css"
+        ]
+      }
+    },
+    {
+      "app": "markets",
+      "repo": "jordanmeyer/bab-example-markets",
+      "local_path": "/private/tmp/bab-recipe-examples-2026-10-09/markets",
+      "pushed_commit": "b732e4a0fca882b570eecb6df5a5f7585b40e343",
+      "pushed_at": "2026-10-09T20:17:03.329418+00:00",
+      "url": "https://jordanmeyer.github.io/bab-example-markets/",
+      "workflow": [
+        {
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "b732e4a0fca882b570eecb6df5a5f7585b40e343",
+          "url": "https://github.com/jordanmeyer/bab-example-markets/actions/runs/37985937982",
+          "id": 37985937982
+        }
+      ],
+      "live_verification": {
+        "app": "markets",
+        "url": "https://jordanmeyer.github.io/bab-example-markets/",
+        "at": "2026-10-09T20:22:02.687Z",
+        "check": "DefaultGeorgia67.50/Tennessee67.00; Growth70 reverses leader Tennessee74.14/Georgia68.28;9of12eligible.",
+        "assets": [
+          "/bab-example-markets/assets/index-BP0Vk7KB.js",
+          "/bab-example-markets/assets/index-CjlUHjfZ.css"
+        ]
+      }
+    },
+    {
+      "app": "sql",
+      "repo": "jordanmeyer/bab-example-sql",
+      "local_path": "/private/tmp/bab-recipe-examples-2026-10-09/sql",
+      "pushed_commit": "218f1d2f7ea4f9b28335e9486be4a09521ac1e5c",
+      "pushed_at": "2026-10-09T20:17:04.587669+00:00",
+      "url": "https://jordanmeyer.github.io/bab-example-sql/",
+      "workflow": [
+        {
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "218f1d2f7ea4f9b28335e9486be4a09521ac1e5c",
+          "url": "https://github.com/jordanmeyer/bab-example-sql/actions/runs/37985941141",
+          "id": 37985941141
+        }
+      ],
+      "live_verification": {
+        "app": "sql",
+        "url": "https://jordanmeyer.github.io/bab-example-sql/",
+        "at": "2026-10-09T20:21:36.027Z",
+        "check": "Live DuckDB worker tiny join case displays mistaken $750 versus correct $550, with raw-cents CSV convention disclosed.",
+        "assets": [
+          "/bab-example-sql/assets/index-BBYkWZ7H.js",
+          "/bab-example-sql/assets/index-DhLvN0JA.css"
+        ]
+      }
+    },
+    {
+      "app": "optimizer",
+      "repo": "jordanmeyer/bab-example-optimizer",
+      "local_path": "/private/tmp/bab-recipe-examples-2026-10-09/optimizer",
+      "pushed_commit": "f6620f469fd0758ad009d2afc7353bb474a679e6",
+      "pushed_at": "2026-10-09T20:17:06.140519+00:00",
+      "url": "https://jordanmeyer.github.io/bab-example-optimizer/",
+      "workflow": [
+        {
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "f6620f469fd0758ad009d2afc7353bb474a679e6",
+          "url": "https://github.com/jordanmeyer/bab-example-optimizer/actions/runs/37985942825",
+          "id": 37985942825
+        }
+      ],
+      "live_verification": {
+        "app": "optimizer",
+        "url": "https://jordanmeyer.github.io/bab-example-optimizer/",
+        "at": "2026-10-09T20:21:13.788Z",
+        "check": "Live worker solves default5/8/16 batches for941 vs946LP; two-product lesson3/2=$23 vs$24LP; exact constraints visible.",
+        "assets": [
+          "/bab-example-optimizer/assets/index-BbHcAxjj.js",
+          "/bab-example-optimizer/assets/index-CUn1Eb8g.css"
+        ]
+      }
+    },
+    {
+      "app": "presentation",
+      "repo": "jordanmeyer/bab-example-presentation",
+      "local_path": "/private/tmp/bab-recipe-examples-2026-10-09/presentation",
+      "pushed_commit": "917486c5408bdff1a85b4247900a729711d79ea4",
+      "pushed_at": "2026-10-09 (ordinary follow-up after speaker-note browser review)",
+      "url": "https://jordanmeyer.github.io/bab-example-presentation/",
+      "workflow": [
+        {
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "917486c5408bdff1a85b4247900a729711d79ea4",
+          "url": "https://github.com/jordanmeyer/bab-example-presentation/actions/runs/37986905851",
+          "id": 37986905851
+        }
+      ],
+      "live_verification": {
+        "app": "presentation",
+        "url": "https://jordanmeyer.github.io/bab-example-presentation/",
+        "at": "2026-10-09T20:26:53.121Z",
+        "check": "Ordinary reload retrieves corrected note tying Lower/Stronger to180/108/2.4m; Lower20k returnsPauseandrevise; Stronger60k returnsAuthorizeconditionalfulllaunch. Earlier20/12/100/500 yields300 andunchanged JS/model remains applicable.",
+        "returning_browser": "Navigation initially reused previousHTML; ordinary reload obtained newnote. No cache-busting query.",
+        "assets": [
+          "/bab-example-presentation/assets/index-BSndAInm.js",
+          "/bab-example-presentation/assets/index-DXSb14z_.css"
+        ]
+      },
+      "previous_publications": [
+        {
+          "pushed_commit": "6879ea29f4bb17ac077c795d6b7a6e5e570ea648",
+          "pushed_at": "2026-10-09T20:17:07.791417+00:00",
+          "workflow": [
+            {
+              "status": "completed",
+              "conclusion": "success",
+              "head_sha": "6879ea29f4bb17ac077c795d6b7a6e5e570ea648",
+              "url": "https://github.com/jordanmeyer/bab-example-presentation/actions/runs/37985945709",
+              "id": 37985945709
+            }
+          ],
+          "live_verification": {
+            "app": "presentation",
+            "url": "https://jordanmeyer.github.io/bab-example-presentation/",
+            "at": "2026-10-09T20:22:29.240Z",
+            "check": "20\u221212 contribution \u00d7100\u2212500=$300; stress\u221220;pilot115/19; funding1700. Live-result anchor stays onslide4.",
+            "assets": [
+              "/bab-example-presentation/assets/index-BSndAInm.js",
+              "/bab-example-presentation/assets/index-DXSb14z_.css"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "app": "pricing",
+      "repo": "jordanmeyer/bab-trial-pricing-2026-10-08",
+      "local_path": "/private/tmp/bab-checklist-originals-2026-10-09/pricing",
+      "pushed_commit": "b2ab3c95453b2ec27becb7caa52df91ca5a215e0",
+      "pushed_at": "2026-10-09T20:17:09.254979+00:00",
+      "url": "https://jordanmeyer.github.io/bab-trial-pricing-2026-10-08/",
+      "workflow": [
+        {
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "b2ab3c95453b2ec27becb7caa52df91ca5a215e0",
+          "url": "https://github.com/jordanmeyer/bab-trial-pricing-2026-10-08/actions/runs/37985948448",
+          "id": 37985948448
+        }
+      ],
+      "live_verification": {
+        "app": "pricing",
+        "url": "https://jordanmeyer.github.io/bab-trial-pricing-2026-10-08/",
+        "at": "2026-10-09T20:20:17.548Z",
+        "check": "Default $300 / whole-unit minimum 63. Changed quantity 62 returns -$4, comparison retains reference $300.",
+        "assets": [
+          "./style.css?v=4",
+          "./app.js?v=4"
+        ]
+      }
+    },
+    {
+      "app": "inventory",
+      "repo": "jordanmeyer/bab-trial-inventory-2026-10-08",
+      "local_path": "/private/tmp/bab-checklist-originals-2026-10-09/inventory",
+      "pushed_commit": "b06495470c421787f455f64ff28bc61af5876d0a",
+      "pushed_at": "2026-10-09T20:17:10.633696+00:00",
+      "url": "https://jordanmeyer.github.io/bab-trial-inventory-2026-10-08/",
+      "workflow": [
+        {
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "b06495470c421787f455f64ff28bc61af5876d0a",
+          "url": "https://github.com/jordanmeyer/bab-trial-inventory-2026-10-08/actions/runs/37985951685",
+          "id": 37985951685
+        }
+      ],
+      "live_verification": {
+        "app": "inventory",
+        "url": "https://jordanmeyer.github.io/bab-trial-inventory-2026-10-08/",
+        "at": "2026-10-09T20:20:25.935Z",
+        "check": "Default 90/123 units =73.2%; delayed delivery example 15/20 =75%, ending2, pipeline6.",
+        "assets": [
+          "./style.css?v=5",
+          "./app.js?v=5"
+        ]
+      }
+    },
+    {
+      "app": "sales",
+      "repo": "jordanmeyer/bab-trial-sales-2026-10-08",
+      "local_path": "/private/tmp/bab-checklist-originals-2026-10-09/sales",
+      "pushed_commit": "80c5e5c09049bbf06233bf179f354bee13e71776",
+      "pushed_at": "2026-10-09T20:17:11.839731+00:00",
+      "url": "https://jordanmeyer.github.io/bab-trial-sales-2026-10-08/",
+      "workflow": [
+        {
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "80c5e5c09049bbf06233bf179f354bee13e71776",
+          "url": "https://github.com/jordanmeyer/bab-trial-sales-2026-10-08/actions/runs/37985953593",
+          "id": 37985953593
+        }
+      ],
+      "live_verification": {
+        "app": "sales",
+        "url": "https://jordanmeyer.github.io/bab-trial-sales-2026-10-08/",
+        "at": "2026-10-09T20:20:31.973Z",
+        "check": "Varied12rows2950/2350/600; three-row hand-check North240/144/96.",
+        "assets": [
+          "./style.css?v=4",
+          "./app.js?v=4"
+        ]
+      }
+    }
+  ]
+}

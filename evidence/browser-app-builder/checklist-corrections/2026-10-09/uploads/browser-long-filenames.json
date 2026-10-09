@@ -1,0 +1,77 @@
+{
+  "checkpoint": "e1a907b5de1a78a5f32af68ca262a2fee33e94a2",
+  "observations": [
+    {
+      "scope": "Actual frame dimensions and DOM font enlargement; inspect the visible result separately. No human, screen-reader, native picker or native zoom claim.",
+      "requestedWidth": 320,
+      "width": 319,
+      "scrollWidth": 319,
+      "height": 3674,
+      "textFactor": 1,
+      "source": {
+        "text": "Sales: synthetic-sales-reviewed-classroom-export-with-long-source-name-for-narrow-layout-recovery-check.csv (2 lines)\nReturns: synthetic-returns-reviewed-classroom-export-with-long-source-name-for-narrow-layout-recovery-check.csv (3 events)",
+        "width": 280,
+        "scrollWidth": 280,
+        "fontSize": "13px",
+        "whiteSpace": "pre-line",
+        "overflowWrap": "anywhere"
+      },
+      "activeView": "Revenue comparison",
+      "fonts": [
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "Open Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "Open Sans",
+          "weight": "600",
+          "status": "loaded"
+        }
+      ],
+      "externalRequests": [],
+      "smallControls": []
+    },
+    {
+      "scope": "Actual frame dimensions and DOM font enlargement; inspect the visible result separately. No human, screen-reader, native picker or native zoom claim.",
+      "requestedWidth": 1440,
+      "width": 1439,
+      "scrollWidth": 1439,
+      "height": 2668,
+      "textFactor": 2,
+      "source": {
+        "text": "Sales: synthetic-sales-reviewed-classroom-export-with-long-source-name-for-narrow-layout-recovery-check.csv (2 lines)\nReturns: synthetic-returns-reviewed-classroom-export-with-long-source-name-for-narrow-layout-recovery-check.csv (3 events)",
+        "width": 238,
+        "scrollWidth": 238,
+        "fontSize": "26px",
+        "whiteSpace": "pre-line",
+        "overflowWrap": "anywhere"
+      },
+      "activeView": "Revenue comparison",
+      "fonts": [
+        {
+          "family": "EB Garamond",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "Open Sans",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "Open Sans",
+          "weight": "600",
+          "status": "loaded"
+        }
+      ],
+      "externalRequests": [],
+      "smallControls": []
+    }
+  ]
+}

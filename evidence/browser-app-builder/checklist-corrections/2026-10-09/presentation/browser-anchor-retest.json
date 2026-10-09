@@ -1,0 +1,50 @@
+{
+  "source": "debbe173666df2b5ec41b4a12f1a14918ca4a920",
+  "results": [
+    {
+      "focus": "live-result",
+      "resultTop": 33.80681610107422,
+      "scrollWidth": 319,
+      "task": "narrow to result",
+      "viewport": 1100,
+      "width": 319
+    },
+    {
+      "focus": "assumptions",
+      "task": "narrow backinputs",
+      "top": 0.28409090638160706
+    },
+    {
+      "focus": "live-result",
+      "overflow": 319,
+      "task": "narrow readall toresult",
+      "top": 0.6155303120613098
+    },
+    {
+      "focus": "assumptions",
+      "task": "narrow readall backinputs",
+      "top": 0.4261363744735718
+    },
+    {
+      "focus": "live-result",
+      "task": "desktop toresult",
+      "top": 288.5179748535156,
+      "viewport": 1100
+    },
+    {
+      "focus": "assumptions",
+      "task": "desktop backinputs",
+      "top": 288.5179748535156
+    },
+    {
+      "focus": "live-result",
+      "task": "desktop readall toresult",
+      "top": -0.2130681872367859
+    },
+    {
+      "focus": "assumptions",
+      "task": "desktop readall backinputs",
+      "top": -0.2130681872367859
+    }
+  ]
+}

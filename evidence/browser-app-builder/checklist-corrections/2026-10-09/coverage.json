@@ -1,0 +1,1876 @@
+{
+  "source": "evidence/browser-app-builder/reviews/2026-10-09-example-app-checklist.md",
+  "source_sha256": "564c3d5fd489ee4a99f316a47dd47690f64ccf97dd682c15c4e0ca09c3b0990b",
+  "items": [
+    {
+      "id": "ALL-02",
+      "priority": "P2",
+      "requirement": "Improve — Finish the teaching path with a prediction and an answer. The nine new build stories now explain the brief, design decisions, libraries and evidence. Keep those links. Add a short student exercise where still missing: predict a result, change specified controls, reconcile the answer, and name one limitation. Put the task and answer in the walkthrough, with a concise link from the app; do not add another long instructional panel to every screen.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/simulator/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/markets/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/optimizer/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/presentation/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/COVERAGE.md"
+      ],
+      "source_checkpoints": {
+        "executive": "b0828ef537614daa01d3686a495992ff586e725f",
+        "uploads": "3cc0f3e6fef0e426bd9d5614b5be99137791dbca",
+        "simulator": "0f0fd7441ba10190fd5de4f4e2db9926aee86932",
+        "process": "ee5a30024747779677ef30dfea33bf8fae58bf32",
+        "roadmap": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+        "markets": "03c8bb4ad7e56a0849f4529ebb407ed376225b9e",
+        "sql": "5c1caf4a6e3ac9251fa97012c2ab8a58fb673b7a",
+        "optimizer": "bd31dc171c1500a1d70ff0a33bc654abf7d36a96",
+        "presentation": "4cf804db7629bef1fdf618b1d0d03ddd68c108bc",
+        "pricing": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
+        "inventory": "ff6c1bd0724a163942ba74cdfc516a047484c46e",
+        "sales": "3734d1f1676267bd8ec44924941fcda1a198563a"
+      },
+      "disposition": "The twelve per-app records identify linked prediction/change/worked-answer/limitation lessons. This verifies lesson-source delivery only; ALL-16 remains open for actual learning evidence."
+    },
+    {
+      "id": "ALL-05",
+      "priority": "P2",
+      "requirement": "Observed — Finish the mobile route to the result. The simulator and optimizer now put results ahead of collapsed assumptions, and several apps have useful view controls. At 390px the returns workspace still occupies most of the first screen, while the roadmap and original trials put lengthy introductions/forms ahead of results. Add visible result links where this remains a problem; retain the working keyboard skip links. Do not undo the successful result-first revisions.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/simulator/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/markets/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/optimizer/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/presentation/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/browser-orientation.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/narrow-analysis.png",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/enlarged-results.png"
+      ],
+      "source_checkpoints": {
+        "executive": "b0828ef537614daa01d3686a495992ff586e725f",
+        "uploads": "3cc0f3e6fef0e426bd9d5614b5be99137791dbca",
+        "simulator": "0f0fd7441ba10190fd5de4f4e2db9926aee86932",
+        "process": "ee5a30024747779677ef30dfea33bf8fae58bf32",
+        "roadmap": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+        "markets": "03c8bb4ad7e56a0849f4529ebb407ed376225b9e",
+        "sql": "5c1caf4a6e3ac9251fa97012c2ab8a58fb673b7a",
+        "optimizer": "bd31dc171c1500a1d70ff0a33bc654abf7d36a96",
+        "presentation": "4cf804db7629bef1fdf618b1d0d03ddd68c108bc",
+        "pricing": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
+        "inventory": "ff6c1bd0724a163942ba74cdfc516a047484c46e",
+        "sales": "3734d1f1676267bd8ec44924941fcda1a198563a"
+      },
+      "disposition": "Source-reviewed visible result links now cover the named Returns, Roadmap and original-trial routes while retaining the result-first Simulator/Optimizer and existing keyboard skips. Root actual319px Returns analysis route was usable; Roadmap result link was keyboard-visible in the enlarged view; Pricing/Inventory/Sales Enter focused their result headings at the top. This meets the requested route/placement correction; it does not claim all12 routes or physical mobile-keyboard operation, which remains PRICE-09."
+    },
+    {
+      "id": "ALL-07",
+      "priority": "P2",
+      "requirement": "Improve — Put persistence guidance beside substantial editing. Several apps already say that reload resets the example and provide JSON or text exports. Keep those statements. Where students author SQL, graph edits or a decision rationale, make the appropriate save/export path visible beside that work, before they leave the tab. This is a placement and recovery task, not a request for accounts or automatic storage.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/simulator/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/markets/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/optimizer/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/presentation/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/browser-export-recovery.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/browser-editor-roundtrip.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/copied-takeaway.txt",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/browser-save-restore.json"
+      ],
+      "source_checkpoints": {
+        "executive": "b0828ef537614daa01d3686a495992ff586e725f",
+        "uploads": "3cc0f3e6fef0e426bd9d5614b5be99137791dbca",
+        "simulator": "0f0fd7441ba10190fd5de4f4e2db9926aee86932",
+        "process": "ee5a30024747779677ef30dfea33bf8fae58bf32",
+        "roadmap": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+        "markets": "03c8bb4ad7e56a0849f4529ebb407ed376225b9e",
+        "sql": "5c1caf4a6e3ac9251fa97012c2ab8a58fb673b7a",
+        "optimizer": "bd31dc171c1500a1d70ff0a33bc654abf7d36a96",
+        "presentation": "4cf804db7629bef1fdf618b1d0d03ddd68c108bc",
+        "pricing": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
+        "inventory": "ff6c1bd0724a163942ba74cdfc516a047484c46e",
+        "sales": "3734d1f1676267bd8ec44924941fcda1a198563a"
+      },
+      "disposition": "Persistence instructions and appropriate save/export actions are visible beside the authored SQL, process graph and decision rationale. Actual SQL generated-query notes preserve completed work, Process edited-graph Blob/File round trip reproduces the model, and Executive/other rationale copies preserve authored context. Original inventory saved-record recovery also passed. These are the requested placement/recovery paths; native OS save dialogs and a universal Roadmap file cycle are not additional requirements."
+    },
+    {
+      "id": "ALL-08",
+      "priority": "P2",
+      "requirement": "Observed — Align the original Sales lens footer with its provenance. The gallery now clearly separates the original trials from the revised examples. Sales lens itself still says “Independent student exercise.” Change that to an unambiguous maintainer-built/simulated teaching-example description. Preserve the genuine simulated-planning history; do not imply a real student outcome.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/COVERAGE.md"
+      ],
+      "source_checkpoints": {
+        "sales": "3734d1f1676267bd8ec44924941fcda1a198563a"
+      },
+      "disposition": "Independent full Sales source review confirms the footer explicitly says maintainer-built, simulated planning and synthetic bundled samples; historical simulated records remain preserved."
+    },
+    {
+      "id": "ALL-11",
+      "priority": "P2",
+      "requirement": "Verify — Finish accessibility verification on complete tasks. Retain the existing keyboard and browser evidence, then cover the remaining complete tasks with an actual screen reader: invalid input recovery, chart/table interpretation, modal-to-detail focus, and slide navigation. The new matrix focus failure is separately reproduced in UPLOAD-14. Having a table or an accessible name is useful evidence, but does not alone establish that the whole lesson is accessible.",
+      "status": "open",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/simulator/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/markets/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/optimizer/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/presentation/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/walkthrough/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/walkthrough/OBSERVATION-FORM.md"
+      ],
+      "source_checkpoints": {
+        "executive": "b0828ef537614daa01d3686a495992ff586e725f",
+        "uploads": "3cc0f3e6fef0e426bd9d5614b5be99137791dbca",
+        "simulator": "0f0fd7441ba10190fd5de4f4e2db9926aee86932",
+        "process": "ee5a30024747779677ef30dfea33bf8fae58bf32",
+        "roadmap": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+        "markets": "03c8bb4ad7e56a0849f4529ebb407ed376225b9e",
+        "sql": "5c1caf4a6e3ac9251fa97012c2ab8a58fb673b7a",
+        "optimizer": "bd31dc171c1500a1d70ff0a33bc654abf7d36a96",
+        "presentation": "4cf804db7629bef1fdf618b1d0d03ddd68c108bc",
+        "pricing": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
+        "inventory": "ff6c1bd0724a163942ba74cdfc516a047484c46e",
+        "sales": "3734d1f1676267bd8ec44924941fcda1a198563a"
+      },
+      "disposition": "Actual screen-reader complete-task sessions have not been performed. Native/DOM/keyboard evidence and written protocols do not close this requirement."
+    },
+    {
+      "id": "ALL-12",
+      "priority": "P2",
+      "requirement": "Verify — Check 320px and enlarged text beyond the current spot checks. Fresh narrow observations used an actual 390 × 844 CSS-pixel viewport. Check 320px and 200% text enlargement separately, especially model disclosures, long imported names, modal tables, the presentation’s inner scrolling, and dense chart labels. Record actual dimensions and reachable controls; the absence of page overflow is not a readability check.",
+      "status": "implemented_pending_verification",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/simulator/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/markets/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/optimizer/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/presentation/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/README.md"
+      ],
+      "source_checkpoints": {
+        "executive": "b0828ef537614daa01d3686a495992ff586e725f",
+        "uploads": "3cc0f3e6fef0e426bd9d5614b5be99137791dbca",
+        "simulator": "0f0fd7441ba10190fd5de4f4e2db9926aee86932",
+        "process": "ee5a30024747779677ef30dfea33bf8fae58bf32",
+        "roadmap": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+        "markets": "03c8bb4ad7e56a0849f4529ebb407ed376225b9e",
+        "sql": "5c1caf4a6e3ac9251fa97012c2ab8a58fb673b7a",
+        "optimizer": "bd31dc171c1500a1d70ff0a33bc654abf7d36a96",
+        "presentation": "4cf804db7629bef1fdf618b1d0d03ddd68c108bc",
+        "pricing": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
+        "inventory": "ff6c1bd0724a163942ba74cdfc516a047484c46e",
+        "sales": "3734d1f1676267bd8ec44924941fcda1a198563a"
+      },
+      "disposition": "Actual319 and separate authored200% records now include Uploads long filenames, Executive modal tables, SQL editor, Simulator disclosures/shared-world tables, Presentation extreme charts/tables, repaired Markets controls and repaired Inventory labels. Broader form/error/expanded content views listed in the evidence index remain unverified. Keep this collection-wide requirement pending; authored text enlargement is not native device zoom."
+    },
+    {
+      "id": "ALL-14",
+      "priority": "P2",
+      "requirement": "Improve — Make existing exports independently interpretable. Several copied rationales now carry extensive assumptions and limitations. Concentrate remaining work on the returns summary and SQL result exports, which still lose analytical context, and the older trials if promoted to current assignments. Keep CSV machine-readable; a small companion note or explicit metadata columns is enough.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/simulator/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/markets/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/optimizer/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/presentation/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/browser-import-export.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/browser-export-recovery.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/browser-reference-copy.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/browser-save-restore.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-export-recovery.json"
+      ],
+      "source_checkpoints": {
+        "executive": "b0828ef537614daa01d3686a495992ff586e725f",
+        "uploads": "3cc0f3e6fef0e426bd9d5614b5be99137791dbca",
+        "simulator": "0f0fd7441ba10190fd5de4f4e2db9926aee86932",
+        "process": "ee5a30024747779677ef30dfea33bf8fae58bf32",
+        "roadmap": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+        "markets": "03c8bb4ad7e56a0849f4529ebb407ed376225b9e",
+        "sql": "5c1caf4a6e3ac9251fa97012c2ab8a58fb673b7a",
+        "optimizer": "bd31dc171c1500a1d70ff0a33bc654abf7d36a96",
+        "presentation": "4cf804db7629bef1fdf618b1d0d03ddd68c108bc",
+        "pricing": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
+        "inventory": "ff6c1bd0724a163942ba74cdfc516a047484c46e",
+        "sales": "3734d1f1676267bd8ec44924941fcda1a198563a"
+      },
+      "disposition": "Actual generated Returns CSV metadata and SQL CSV/companion notes retain analytical context; the original Pricing clipboard, Inventory run record and Sales CSV/analytical JSON also preserve assumptions, filters/units, results and limitations. Recorded content checks meet the named export-context requirement. Blob capture is stated honestly and does not claim native disk saving, which this requirement does not ask to verify."
+    },
+    {
+      "id": "ALL-16",
+      "priority": "P1",
+      "requirement": "Verify — Run actual student walkthroughs before claiming instructional readiness. Ask a novice to interpret the default, make a predicted change, recover from an invalid input, and explain a limitation without coaching. Record confusion and revise the lesson. Existing automated reviews and passing browser checks do not establish learning outcomes.",
+      "status": "open",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/simulator/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/markets/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/optimizer/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/presentation/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/walkthrough/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/walkthrough/OBSERVATION-FORM.md"
+      ],
+      "source_checkpoints": {
+        "executive": "b0828ef537614daa01d3686a495992ff586e725f",
+        "uploads": "3cc0f3e6fef0e426bd9d5614b5be99137791dbca",
+        "simulator": "0f0fd7441ba10190fd5de4f4e2db9926aee86932",
+        "process": "ee5a30024747779677ef30dfea33bf8fae58bf32",
+        "roadmap": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+        "markets": "03c8bb4ad7e56a0849f4529ebb407ed376225b9e",
+        "sql": "5c1caf4a6e3ac9251fa97012c2ab8a58fb673b7a",
+        "optimizer": "bd31dc171c1500a1d70ff0a33bc654abf7d36a96",
+        "presentation": "4cf804db7629bef1fdf618b1d0d03ddd68c108bc",
+        "pricing": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
+        "inventory": "ff6c1bd0724a163942ba74cdfc516a047484c46e",
+        "sales": "3734d1f1676267bd8ec44924941fcda1a198563a"
+      },
+      "disposition": "No actual uncoached novice participant has been observed. The user will arrange a participant; the twelve-app packet and blank form are preparation only."
+    },
+    {
+      "id": "EXEC-01",
+      "priority": "P2",
+      "requirement": "Improve — Add a student investigation before the supplied board answer. The revised briefing now includes indexed sales/hours, cost evidence and comparison tables. Ask students to predict Harbor Wharf’s driver, inspect the evidence, and propose a next check before revealing the supplied investigation. Preserve the caution that revenue productivity alone does not justify staffing cuts.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/browser-round-trip.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/narrow-store-detail.png"
+      ],
+      "app": "executive",
+      "source_checkpoint": "b0828ef537614daa01d3686a495992ff586e725f",
+      "disposition": "Independent source review confirms prediction and next-evidence prompt before collapsed interpretation, with the staffing caution retained."
+    },
+    {
+      "id": "EXEC-02",
+      "priority": "P2",
+      "requirement": "Observed — Make adjacent KPI comparison periods easier to distinguish. Sales and margin now compare with the same month last year, while contribution compares with the preceding month. The labels are correct, but adjacent cards still invite a common-period reading. Visually group the comparison bases or explain the choice briefly. Update any exercise that still assumes margin is month-over-month.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/browser-round-trip.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/narrow-store-detail.png"
+      ],
+      "app": "executive",
+      "source_checkpoint": "b0828ef537614daa01d3686a495992ff586e725f",
+      "disposition": "Source review confirms adjacent comparison-period key and updated walkthrough; this is a bounded copy/teaching correction."
+    },
+    {
+      "id": "EXEC-04",
+      "priority": "P2",
+      "requirement": "Improve — Teach weighted margin with a concrete counterexample. Add a two-store exercise where averaging percentages gives the wrong group margin. Let students reconcile total contribution divided by total sales with the headline value; keep this small and use existing records.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/browser-round-trip.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/narrow-store-detail.png"
+      ],
+      "app": "executive",
+      "source_checkpoint": "b0828ef537614daa01d3686a495992ff586e725f",
+      "disposition": "Independent derivation reconciles Harbor/Meadow20.0625% weighted versus20.9487% mean; the checked-in lesson contains the counterexample and answer."
+    },
+    {
+      "id": "EXEC-05",
+      "priority": "P2",
+      "requirement": "Improve — Explain the consequence of changing the target. Show a short before/after count or ask “Which stores change status if the target rises to 25%?” State beside the result that changing the classroom threshold changes the classification, not operating performance.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/browser-round-trip.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/narrow-store-detail.png"
+      ],
+      "app": "executive",
+      "source_checkpoint": "b0828ef537614daa01d3686a495992ff586e725f",
+      "disposition": "Independent arithmetic and root model checks support target20→25 changing4→6 classifications, with classification-only explanation beside results."
+    },
+    {
+      "id": "EXEC-06",
+      "priority": "P2",
+      "requirement": "Improve — Give the analyst a compact takeaway. Allow a local copy of the selected scope, key values, evidence inspected, and next investigation. The app currently has strong questions but no simple record of what a student concluded. A text record is enough; no reporting subsystem is needed.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/browser-round-trip.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/narrow-store-detail.png",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/copied-takeaway.txt"
+      ],
+      "app": "executive",
+      "source_checkpoint": "b0828ef537614daa01d3686a495992ff586e725f",
+      "disposition": "Root actual keyboard copy captured selected scope, key values, authored evidence/next investigation, comparison periods and limitations. This verifies the local takeaway path, not a participant’s reasoning."
+    },
+    {
+      "id": "EXEC-11",
+      "priority": "P2",
+      "requirement": "Improve — Make the cost bridge communicate contribution impact. A cost increase currently appears as a positive cost-line change even though it reduces contribution. Label the distinction or add a signed “effect on contribution” column so students can reconcile the bridge without mentally reversing signs.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/browser-round-trip.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/narrow-store-detail.png"
+      ],
+      "app": "executive",
+      "source_checkpoint": "b0828ef537614daa01d3686a495992ff586e725f",
+      "disposition": "Root actual repaired-source browser suite14/14 and production occupancy+$0; independent signed bridge3000−1266−7995+0=−6261. Earlier negative-zero failure retained."
+    },
+    {
+      "id": "EXEC-12",
+      "priority": "P2",
+      "requirement": "Verify — Test the entire briefing-to-detail round trip. Open all three questions, inspect their evidence, dismiss the store modal, and verify a sensible focus destination on desktop and narrow screens. The earlier review recorded a passing simple Escape/focus-return path. Retain current evidence for the chained modal workflow rather than inferring it from that simpler path.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/browser-round-trip.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/narrow-store-detail.png"
+      ],
+      "app": "executive",
+      "source_checkpoint": "b0828ef537614daa01d3686a495992ff586e725f",
+      "disposition": "Root actual all-three briefing/detail/Escape returns on desktop and319px; directly logged heading focus on desktop1/3 and narrow3, plus direct-ledger trigger return. This is the specified round trip, not screen-reader certification."
+    },
+    {
+      "id": "EXEC-13",
+      "priority": "P2",
+      "requirement": "Observed — Restore a direct text equivalent for regional comparison. The new company-wide regional chart fixes the loss of peer context, but its accessible name only says that values appear on bars. Unlike the monthly chart, it has no adjacent exact-value table or textual regional summary. In the inspected accessible structure the regional numbers are absent. Add the three regional margins as concise text/table values; do not require a screen-reader user to reconstruct aggregates from store rows.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/browser-round-trip.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/executive/narrow-store-detail.png"
+      ],
+      "app": "executive",
+      "source_checkpoint": "b0828ef537614daa01d3686a495992ff586e725f",
+      "disposition": "Independent regional arithmetic20.3546%/24.5813%/26.6474% and source review confirm the adjacent exact-value regional table."
+    },
+    {
+      "id": "UPLOAD-01",
+      "priority": "P2",
+      "requirement": "Improve — Update the rank-reversal exercise to the richer sample. Paid social now falls from first on gross to second on net: $110,356 − $33,604 = $76,752, behind Organic search at $94,765. Use the product × channel matrix to ask whether the aggregate channel story holds within products and months. Retire the old first-to-third/$21,308 answer; keep revenue distinct from profit and acquisition efficiency.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/browser-interactions.json"
+      ],
+      "app": "uploads",
+      "source_checkpoint": "3cc0f3e6fef0e426bd9d5614b5be99137791dbca",
+      "disposition": "Independent raw-file arithmetic confirms110356−33604=76752 behind94765, plus within-product/month counterexample in the worked lesson."
+    },
+    {
+      "id": "UPLOAD-02",
+      "priority": "P1",
+      "requirement": "Improve — Demonstrate cohort maturity rather than only warning about it. Show the same sale before and after a later return, or provide paired dated sample exports. Students should see why a newer cohort's apparently better return rate can reflect less observation time.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/browser-interactions.json"
+      ],
+      "app": "uploads",
+      "source_checkpoint": "3cc0f3e6fef0e426bd9d5614b5be99137791dbca",
+      "disposition": "Root actual same-sale snapshots kept gross200 and changed20%/160 net to50%/100 net; ordinary example load path and source identity recorded."
+    },
+    {
+      "id": "UPLOAD-04",
+      "priority": "P2",
+      "requirement": "Improve — Give the aggregate-before-join rule a visible raw example. Select one sale with multiple return events and show those events, their sum, and the resulting single joined row. The current audit table exposes totals but not the raw return-event path that explains the central data lesson.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/browser-interactions.json"
+      ],
+      "app": "uploads",
+      "source_checkpoint": "3cc0f3e6fef0e426bd9d5614b5be99137791dbca",
+      "disposition": "Root actual MR1=2 and MR2=3 aggregate to one M1 row/net100, with duplicated400 gross trap visibly explained."
+    },
+    {
+      "id": "UPLOAD-05",
+      "priority": "P2",
+      "requirement": "Observed — Replace single-group rank narration. Filtering Channel to Email now shows real returns, but still says its rank moves from #1 to #1 “among the 1 matching groups.” State that one group is selected and describe its retained revenue/return rate. Only narrate comparative movement when multiple groups can be compared.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/browser-interactions.json"
+      ],
+      "app": "uploads",
+      "source_checkpoint": "3cc0f3e6fef0e426bd9d5614b5be99137791dbca",
+      "disposition": "Root actual Email selection reports one group,68444 retained and107/1464 returned(7.3%), instead of a one-group rank movement."
+    },
+    {
+      "id": "UPLOAD-07",
+      "priority": "P2",
+      "requirement": "Observed — Put a visible analysis shortcut above mobile import controls. Import instructions are now collapsed, but the narrow sidebar still shows the introduction, sample identity, reset, downloads and contract before analysis. At 390px the analysis heading only reaches the bottom of the first screen. Add a visible “View sample analysis” link near the sample identity, or move secondary downloads into the disclosure; keep the existing keyboard skip link.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/browser-interactions.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/narrow-analysis.png",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/enlarged-analysis.png",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/browser-long-filenames.json"
+      ],
+      "app": "uploads",
+      "source_checkpoint": "3cc0f3e6fef0e426bd9d5614b5be99137791dbca",
+      "disposition": "Root actual319px and separate enlarged-text analysis views verified the visible analysis shortcut and reachable result; long filenames retained readable source identity and controls."
+    },
+    {
+      "id": "UPLOAD-08",
+      "priority": "P2",
+      "requirement": "Improve — Preserve source identity after importing. The interface changes the dataset label to “Your local files,” discarding the visible filenames. Show the two selected filenames and their row counts so a student can verify which pair is being analyzed; do not persist file contents.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/browser-interactions.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/browser-import-export.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/browser-long-filenames.json"
+      ],
+      "app": "uploads",
+      "source_checkpoint": "3cc0f3e6fef0e426bd9d5614b5be99137791dbca",
+      "disposition": "Root actual paired synthetic File/DataTransfer imports displayed both filenames and row/event counts; unmatched and over-return rejection retained the complete prior dataset and identity. Corrected pair replaced both transactionally.319px and separate200% long filenames were inspected. No native picker claim."
+    },
+    {
+      "id": "UPLOAD-11",
+      "priority": "P2",
+      "requirement": "Observed — Attach cohort/filter context to exported summaries. The summary CSV contains grouped values and ranks but not the selected month/product/channel or observation boundary. Add enough metadata to prevent a filtered summary from being mistaken for all-company totals.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/browser-interactions.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/browser-import-export.json"
+      ],
+      "app": "uploads",
+      "source_checkpoint": "3cc0f3e6fef0e426bd9d5614b5be99137791dbca",
+      "disposition": "Root actual generated summary CSV Blobs matched selected product×channel grain, month/product/channel filters, source filenames/counts, sale-cohort time basis and observation boundary. Exact filtered total215 and subsequent single-group75 reconciled with the visible view. Native saving is not claimed."
+    },
+    {
+      "id": "UPLOAD-12",
+      "priority": "P2",
+      "requirement": "Verify — Exercise the two-file import as a student task. Download both samples, inspect headers, introduce an unmatched return and an over-return, and verify rejection leaves the previous dataset and source identity intact. Then import a corrected pair. Prior evidence covers validation; this review did not repeat file selection.",
+      "status": "implemented_pending_verification",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/browser-interactions.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/browser-import-export.json"
+      ],
+      "app": "uploads",
+      "source_checkpoint": "3cc0f3e6fef0e426bd9d5614b5be99137791dbca",
+      "disposition": "Root actual six-case authored paired-file harness verified unmatched/over-return rejection retained prior values and filenames, then accepted a corrected pair. The full sample-download/header-edit/native workflow and student task remain unobserved; synthetic File/DataTransfer does not close them."
+    },
+    {
+      "id": "UPLOAD-13",
+      "priority": "P3",
+      "requirement": "Improve — Offer refund-month analysis only as a separate extension. If added, explicitly switch the time basis and labels rather than silently reusing the cohort chart. A student should be able to reconcile the two views and explain why net sales by cohort is not cash movement by month.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/browser-interactions.json"
+      ],
+      "app": "uploads",
+      "source_checkpoint": "3cc0f3e6fef0e426bd9d5614b5be99137791dbca",
+      "disposition": "Reviewed bounded refund-month extension explicitly requires a distinct time basis; no unrequested new mode added. Assignment delivery verified, not student completion."
+    },
+    {
+      "id": "UPLOAD-14",
+      "priority": "P2",
+      "requirement": "Observed — Preserve keyboard focus when a matrix cell filters the data. In Trends & interactions, activate “Everyday tee, Email: 8.7% · 33 / 380 units” with Enter. The filters correctly apply, but renderMatrix replaces the focused button and document.activeElement becomes BODY. Retain focus on the corresponding cell or move it to a clearly labeled filtered-result summary, and announce the applied product/channel. Also provide a nearby route back to the full matrix.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/browser-interactions.json"
+      ],
+      "app": "uploads",
+      "source_checkpoint": "3cc0f3e6fef0e426bd9d5614b5be99137791dbca",
+      "disposition": "Root actual Enter on Everyday tee/Email applied filters and focused stable #matrix-selection with33/380=8.7%; source includes nearby all-combinations recovery action."
+    },
+    {
+      "id": "UPLOAD-15",
+      "priority": "P2",
+      "requirement": "Observed — Name what the global summary export will contain. The new Trends & interactions view shows a monthly chart and a product × channel matrix, while Export summary still serializes view.groups using the Compare by choice in the hidden Revenue comparison view. With default grouping, it exports channel rows rather than monthly or matrix rows. Label the export with its grouping, expose that choice beside the action, or offer view-specific exports; the screen and downloaded grain must be predictable.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/browser-interactions.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/browser-import-export.json"
+      ],
+      "app": "uploads",
+      "source_checkpoint": "3cc0f3e6fef0e426bd9d5614b5be99137791dbca",
+      "disposition": "Source review and actual production controls name the chosen export grain. Root actual generated product×channel CSV rows and filter/context metadata matched the visible summary; single selected channel yielded one correctly scoped row. Native saving remains outside this authored check."
+    },
+    {
+      "id": "SIM-04",
+      "priority": "P2",
+      "requirement": "Improve — Teach the risk limit using the new full quantity search. Use the current 3% default: 469 units and $6,068 exact expected contribution versus the unscreened 558-unit peak at $6,510. Ask students to raise the limit to 20%, then explain why the peak becomes eligible and what the $442 difference buys in the default case. Include a no-qualifying-quantity case and distinguish the displayed point estimate from the upper endpoint used to screen.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/simulator/README.md"
+      ],
+      "app": "simulator",
+      "source_checkpoint": "0f0fd7441ba10190fd5de4f4e2db9926aee86932",
+      "disposition": "Reviewed worked task and independent model reference reconcile469/6068 versus558/6510,442 tradeoff, Wilson endpoint and no qualifying quantity; root actual model suite24/24."
+    },
+    {
+      "id": "SIM-05",
+      "priority": "P2",
+      "requirement": "Improve — Use certainty to distinguish comparisons from the searched optimum. The certainty preset still supports exact payoffs for the editable 400/500/600 quantities: $5,600/$8,000/$6,900. Ask for these predictions first, then explain why the new 1–5,000 search chooses 500. The three inputs are comparison markers now, not the complete decision set.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/simulator/README.md"
+      ],
+      "app": "simulator",
+      "source_checkpoint": "0f0fd7441ba10190fd5de4f4e2db9926aee86932",
+      "disposition": "Reviewed prediction exercise and independently exact certainty results400/5600,500/8000,600/6900; root actual model suite24/24."
+    },
+    {
+      "id": "SIM-06",
+      "priority": "P2",
+      "requirement": "Improve — Make the conditioned-demand distribution tangible. For a low underlying mean and high deviation, show the resulting mean and a small demand summary beside the input. The current wording is correct but “underlying mean” is easy to mistake for expected realized demand.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/simulator/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/simulator/browser-boundaries.json"
+      ],
+      "app": "simulator",
+      "source_checkpoint": "0f0fd7441ba10190fd5de4f4e2db9926aee86932",
+      "disposition": "Root actual mean0/deviation50 preview showed conditioned mean39.9, fifth percentile3, median34 and95th percentile97; independent half-normal derivation and24-case model suite agree."
+    },
+    {
+      "id": "SIM-07",
+      "priority": "P2",
+      "requirement": "Improve — Explain common random numbers through an experiment. Show that every searched quantity, including the three editable comparisons, faces the same demand/cost draw within a run. A small selected-scenario row can teach why this is a fairer comparison than independently drawing a new world for each quantity.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/simulator/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/simulator/browser-precision-shared-worlds.json"
+      ],
+      "app": "simulator",
+      "source_checkpoint": "0f0fd7441ba10190fd5de4f4e2db9926aee86932",
+      "disposition": "Reviewed shared-world task and independent arithmetic; root actual scenario5000 gave demand217/cost19.78 in every row and scenario10000 gave478/20.59 in every row."
+    },
+    {
+      "id": "SIM-10",
+      "priority": "P2",
+      "requirement": "Improve — Bring the selected order’s downside into the recommendation. The new downside disclosure includes a histogram, fifth percentile, median, inventory and missed demand. Link directly to it from the 469-unit recommendation or show a compact fifth-percentile value there. Call the percentile a simulated tail summary, not a worst-case bound.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/simulator/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/simulator/browser-precision-shared-worlds.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/simulator/narrow-downside.png"
+      ],
+      "app": "simulator",
+      "source_checkpoint": "0f0fd7441ba10190fd5de4f4e2db9926aee86932",
+      "disposition": "Root actual319px Inspect this order downside opened the469-unit disclosure and focused its summary; simulated-tail/non-worst-case wording is source reviewed."
+    },
+    {
+      "id": "SIM-12",
+      "priority": "P2",
+      "requirement": "Verify — Check the extreme-input graphics as well as the numbers. Include zero deviation, identical min/max costs, very low mean/high deviation, no qualifying option, and a risk boundary near an interval endpoint. Inspect curve labels, zero lines, result text, and copied assumptions together.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/simulator/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/simulator/browser-boundaries.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/simulator/browser-precision-shared-worlds.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/simulator/narrow-flat-curve.png",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/simulator/narrow-certainty.png"
+      ],
+      "app": "simulator",
+      "source_checkpoint": "0f0fd7441ba10190fd5de4f4e2db9926aee86932",
+      "disposition": "Root actual negative/flat curve retained six readable zero-inclusive ticks at319px; low-mean/high-deviation and equal-cost tails varied; certainty gave one readable100% bar. Risk2.994→468 versus2.995→469 matched upper endpoints, and actual copied assumptions retained full precision. No-eligible states and invalid-input retained copy were observed. This closes the listed extreme cases, not all enlarged-layout or human checks."
+    },
+    {
+      "id": "SIM-13",
+      "priority": "P3",
+      "requirement": "Improve — Use correlated demand/cost as a student extension. Keep the shipped independent model small. A separate exercise can ask what changes when demand and landed cost move together, requiring an explicit new assumption and fresh validation rather than a hidden correlation control.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/simulator/README.md"
+      ],
+      "app": "simulator",
+      "source_checkpoint": "0f0fd7441ba10190fd5de4f4e2db9926aee86932",
+      "disposition": "Bounded joint demand/cost modeling extension requires explicit assumptions and fresh validation; no correlation control added. This verifies assignment source only."
+    },
+    {
+      "id": "SIM-14",
+      "priority": "P2",
+      "requirement": "Observed — Show initialization and running state for the expanded search. A fresh live load initially displayed an empty dark recommendation strip, empty chart area and empty comparison body before results appeared. The source waits for fonts, then synchronously performs the 5,000-quantity × 10,000-draw risk sweep, without a visible loading state. Show a short preparing/running message and prevent duplicate starts. Measure responsiveness on the intended student hardware before deciding whether a worker is necessary; this observation does not establish a slow-device failure.",
+      "status": "implemented_pending_verification",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/simulator/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/simulator/browser-boundaries.json"
+      ],
+      "app": "simulator",
+      "source_checkpoint": "0f0fd7441ba10190fd5de4f4e2db9926aee86932",
+      "disposition": "Visible initialization/running/duplicate-start source is implemented and reviewed. Root observed an89ms run on the configured Mac; intended-student-hardware responsiveness remains unavailable and is not closed by that timing."
+    },
+    {
+      "id": "SIM-15",
+      "priority": "P2",
+      "requirement": "Improve — State that the recommended quantity assumes the launch goes ahead. The method correctly says that every allowed order pays the launch cost and that no-launch is outside the comparison. Repeat that boundary beside “Order N units,” particularly when all feasible orders have negative expected contribution under a loose loss limit. Offer “best quantity if proceeding” language or a prominent warning; do not imply that optimizing quantity alone establishes that launching is worthwhile.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/simulator/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/simulator/browser-boundaries.json"
+      ],
+      "app": "simulator",
+      "source_checkpoint": "0f0fd7441ba10190fd5de4f4e2db9926aee86932",
+      "disposition": "Root actual flat−100000 and certainty500/−88000 results prominently warn that the least-loss quantity does not justify launching; reviewed source states that no launch is outside the search."
+    },
+    {
+      "id": "PROC-04",
+      "priority": "P2",
+      "requirement": "Improve — Explain the risk-tiered name at the policy change. The 90/10 example is still named “Risk-tiered routing,” although it only changes route shares. Say that risk classification and control effectiveness are assumed, not modeled. The new overload headline correctly separates nominal time from achievable turnaround; preserve that distinction.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/browser-recovery.json"
+      ],
+      "app": "process",
+      "source_checkpoint": "ee5a30024747779677ef30dfea33bf8fae58bf32",
+      "disposition": "Reviewed policy copy distinguishes assumed classification/control effectiveness from changed route shares and retains nominal-versus-capacity interpretation."
+    },
+    {
+      "id": "PROC-05",
+      "priority": "P2",
+      "requirement": "Improve — Teach the meaning of productive capacity. Show that 420 productive minutes is not automatically one employee's paid working day. Give a short example translating staffing, availability, and productive share into the entered team capacity, without adding an HR model.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/browser-recovery.json"
+      ],
+      "app": "process",
+      "source_checkpoint": "ee5a30024747779677ef30dfea33bf8fae58bf32",
+      "disposition": "Reviewed exact staff example2×7×60×50%=420 productive minutes; no paid-day equivalence or extra HR model."
+    },
+    {
+      "id": "PROC-07",
+      "priority": "P2",
+      "requirement": "Improve — Make route-share editing a coherent transaction. Changing one branch of a 70/30 split temporarily breaks the 100% total. Offer a small route-group editor or an Apply step so students can edit both values before the model rejects the draft; keep invalid-state reporting explicit.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/browser-recovery.json"
+      ],
+      "app": "process",
+      "source_checkpoint": "ee5a30024747779677ef30dfea33bf8fae58bf32",
+      "disposition": "Reviewed grouped Apply/Cancel transaction; root actual invalid80% applied draft pauses with named Manager step and valid10/90 repair clears it. Full novice cycle remains PROC-12."
+    },
+    {
+      "id": "PROC-08",
+      "priority": "P2",
+      "requirement": "Improve — Add a simple undo for structural edits. Deleting a review step or route can break the model, while the visible recovery path is restoring the example or importing a file. A one-step undo or recoverable draft snapshot would make experimentation less costly without requiring a full editing-history system.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/browser-recovery.json"
+      ],
+      "app": "process",
+      "source_checkpoint": "ee5a30024747779677ef30dfea33bf8fae58bf32",
+      "disposition": "Reviewed one structural snapshot; root actual loop repair via Undo restored valid state, retained corrected10/90 shares and left baseline unchanged."
+    },
+    {
+      "id": "PROC-09",
+      "priority": "P2",
+      "requirement": "Verify — Keep the selected graph element in view after panning. Form and canvas selection are already linked. Check the remaining navigation case: pan a selected step off-screen, then select it through the form. Ensure the student can locate it with a direct reveal/fit action or appropriate viewport movement. Do not add a second selection state.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/browser-recovery.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/browser-editor-roundtrip.json"
+      ],
+      "app": "process",
+      "source_checkpoint": "ee5a30024747779677ef30dfea33bf8fae58bf32",
+      "disposition": "Root actual authored React Flow pan moved Manager left−1830 outside the graph; form selection/Reveal selected placed it at614 inside, and Fit contained all five nodes. Exported model remained unchanged. This is authored mouse-event evidence, not native pointer/touch equivalence."
+    },
+    {
+      "id": "PROC-11",
+      "priority": "P2",
+      "requirement": "Improve — Make baseline replacement and preset replacement unmistakable. State which values and graph positions are captured, and whether a preset replaces the baseline as well as the draft. Add a small change summary so the student's comparison survives interpretation even if they intentionally replace its reference.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/browser-recovery.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/browser-editor-roundtrip.json"
+      ],
+      "app": "process",
+      "source_checkpoint": "ee5a30024747779677ef30dfea33bf8fae58bf32",
+      "disposition": "Root actual custom35-arrival/473.5-minute baseline captured edited values and position; loading90/10 restored original positions and471.5-minute baseline with370.5 current. Replacement warnings and change summary were independently source reviewed."
+    },
+    {
+      "id": "PROC-12",
+      "priority": "P2",
+      "requirement": "Verify — Test a novice's complete graph-edit cycle. Add a review step, connect it, allocate branch shares, assign capacity, recover from a loop, export, and reimport. Verify that errors name the relevant steps and that keyboard forms can complete the same task as pointer controls.",
+      "status": "implemented_pending_verification",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/browser-recovery.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/walkthrough/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/walkthrough/OBSERVATION-FORM.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/browser-editor-roundtrip.json"
+      ],
+      "app": "process",
+      "source_checkpoint": "ee5a30024747779677ef30dfea33bf8fae58bf32",
+      "disposition": "Root actual authored developer form cycle passed add/connect/10–90 shares/680 capacity, named loop/Undo, generated JSON Blob export and synthetic File/DataTransfer reimport; exact six-node/six-route model and separate baseline retained. Required novice observation and native keyboard/pointer equivalence remain open."
+    },
+    {
+      "id": "PROC-13",
+      "priority": "P3",
+      "requirement": "Improve — Offer capacity relief as an extension experiment. Ask students to find a feasible arrival rate or capacity change and explain what it does not establish about waiting time. Keep stochastic queue simulation separate unless it becomes the explicit objective of a new example.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/browser-recovery.json"
+      ],
+      "app": "process",
+      "source_checkpoint": "ee5a30024747779677ef30dfea33bf8fae58bf32",
+      "disposition": "Reviewed bounded capacity-relief prediction/answer exercise with35/34 arrival and500 capacity cases; waiting-time limitation explicit. Assignment delivery only."
+    },
+    {
+      "id": "PROC-14",
+      "priority": "P2",
+      "requirement": "Observed — Match mobile instructions to the steps-and-routes view. The readable narrow list is a successful replacement for the tiny graph. At 390px, however, its introduction still says “Drag steps or connect their handles” and refers to forms “below the diagram.” Use guidance for selecting steps and editing routes on this view, and retain drag instructions only where the canvas is present.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/process/browser-recovery.json"
+      ],
+      "app": "process",
+      "source_checkpoint": "ee5a30024747779677ef30dfea33bf8fae58bf32",
+      "disposition": "Reviewed separate native-list instructions and canvas instructions; list no longer directs users to drag handles."
+    },
+    {
+      "id": "ROAD-01",
+      "priority": "P1",
+      "requirement": "Improve — Explain why a five-day task delay produces a three-day launch delay. Walk through Packaging's two days of float and the shift in the controlling dependency. Show the affected path beside the date change so students learn scheduling logic rather than just operating a Gantt chart.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/COVERAGE.md"
+      ],
+      "app": "roadmap",
+      "source_checkpoint": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+      "disposition": "Root actual packaging example Dec2/one day late and controlling chain via Packaging/sign-off; worked five-day change less two-day float equals three-day completion delay."
+    },
+    {
+      "id": "ROAD-02",
+      "priority": "P2",
+      "requirement": "Observed — Disclose preset replacement before clicking. The revised status is clearer after activation, but the buttons still say “Packaging +5 days” and “Safety +3 days.” Clicking loads an example and sets the comparison baseline to the original launch plan. Rename them “Load packaging-delay example” and “Load safety-delay example,” or add a short replacement notice beside them. Dirty-state protection does not explain what happens to an already applied custom plan or baseline.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/COVERAGE.md"
+      ],
+      "app": "roadmap",
+      "source_checkpoint": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+      "disposition": "Reviewed pre-click preset replacement warning and explicitly named Load example controls; baseline/draft replacement stated before action."
+    },
+    {
+      "id": "ROAD-06",
+      "priority": "P2",
+      "requirement": "Improve — Explain earliest permitted start with a visible case. Give one task an external release date, show the idle gap it creates, and explain why changing the promise does not move the work. This demonstrates the difference between a scheduling constraint and a management target.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/COVERAGE.md"
+      ],
+      "app": "roadmap",
+      "source_checkpoint": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+      "disposition": "Root actual supplier-release example finishesDec4/three days late; worked idle gap and promise-versus-constraint distinction reviewed."
+    },
+    {
+      "id": "ROAD-08",
+      "priority": "P2",
+      "requirement": "Improve — Compare baseline and revised dates in one view. The current selector switches between schedules, and the table gives end deltas. Add a lightweight ghost baseline or a compact changed-tasks summary so a student does not have to remember bar positions while toggling.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/COVERAGE.md"
+      ],
+      "app": "roadmap",
+      "source_checkpoint": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+      "disposition": "Root actual changed dates and switched controlling chain reviewed; source provides baseline/revised starts and finishes together."
+    },
+    {
+      "id": "ROAD-10",
+      "priority": "P2",
+      "requirement": "Improve — Bring the relevant editor closer to the selected task. The editor follows the chart and a full table. Make task names in the table select the editor and move focus appropriately; preserve the dropdown as an alternative. Avoid a long manual scroll after identifying a task to change.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/COVERAGE.md"
+      ],
+      "app": "roadmap",
+      "source_checkpoint": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+      "disposition": "Root actual Packaging table action selects matching editor and focuses #task-name; dropdown and pending protection retained."
+    },
+    {
+      "id": "ROAD-11",
+      "priority": "P2",
+      "requirement": "Improve — State the editing boundary clearly. The UI edits the existing tasks; it does not expose a general add/delete task workflow even though JSON supports other plans. Either call it a scenario editor for the supplied launch or add a minimal safe add/remove flow if creating a new roadmap is part of the teaching objective.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/COVERAGE.md"
+      ],
+      "app": "roadmap",
+      "source_checkpoint": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+      "disposition": "Reviewed existing-task scenario-editor boundary; no speculative general roadmap creation flow added."
+    },
+    {
+      "id": "ROAD-12",
+      "priority": "P2",
+      "requirement": "Verify — Test milestone dependencies as well as critical-path styling. Existing revision evidence covers delays, capacity, invalid edits and milestones. Extend the check to a milestone that actually gates a successor, an independently delayed terminal milestone, and a resource repair that preserves dates. Chart labels, task dates, headline finish and “Ready to launch” must express the same intended completion rule; ROAD-14 documents the current counterexample.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/browser-capacity-milestone.json"
+      ],
+      "app": "roadmap",
+      "source_checkpoint": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+      "disposition": "Root actual sign-off releaseDec4 yields Ready/headlineDec16; capacity1→2 removes six overload days without movingNov29; terminal-only ReadyDec4 produces three days late while all eight predecessor dates remain unchanged. Current source/model52/52 and exact table/date witnesses are separately recorded."
+    },
+    {
+      "id": "ROAD-13",
+      "priority": "P3",
+      "requirement": "Improve — Offer a working-day calendar as a separate student extension. Require explicit weekend/holiday rules and new date tests. Do not silently change the current calendar-day model, which is a useful simple baseline.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/COVERAGE.md"
+      ],
+      "app": "roadmap",
+      "source_checkpoint": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+      "disposition": "Reviewed separate working-calendar assignment requires weekend/holiday rules and new boundary tests; current calendar-day model retained."
+    },
+    {
+      "id": "ROAD-14",
+      "priority": "P1",
+      "requirement": "Observed — Make sign-off an actual dependency and reconcile the completion milestone. In samplePlan, “Design sign-off” depends on packaging but no task depends on sign-off; Pilot batch depends directly on packaging and supplier. Reproduced against the saved current model: set design-ready.release to 2026-12-04. Pilot still starts November 17 and finishes at the November 21 boundary; Ready to launch stays November 29, while the headline finish becomes December 4 because it takes the maximum over every task. If sign-off is a gate, connect it to the work it authorizes. Ensure Ready to launch gathers all required terminal work, or rename the headline/milestone so their different meanings are explicit. Retain this dependency-level case as a regression check.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/COVERAGE.md"
+      ],
+      "app": "roadmap",
+      "source_checkpoint": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+      "disposition": "Root actual sign-off releaseDec4 gives PilotDec4–8,SalesDec4–10,Ready/headlineDec16 and15 days late;52/52 browser tests include dependency regression."
+    },
+    {
+      "id": "ROAD-15",
+      "priority": "P2",
+      "requirement": "Improve — Teach one resource repair that does not merely buy more capacity. The revised default correctly reveals six overloaded days and explains that 1.6 people clears them without moving dates. Add an exercise using float/release dates to move competing work, then compare both overload and promise effects. Show why dates can be dependency-feasible yet not staff-feasible. Keep automated resource leveling outside scope; a hand-worked repair teaches the new model better.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/roadmap/COVERAGE.md"
+      ],
+      "app": "roadmap",
+      "source_checkpoint": "62f102897af2ecb47799dcbc03582cbe7b29446d",
+      "disposition": "Root actual hand-worked release repair finishesDec5/four days late; source/model derives zero overload and contrasts within-float change that retains overload. No leveler added."
+    },
+    {
+      "id": "MKT-01",
+      "priority": "P1",
+      "requirement": "Observed — Rename the prominent revenue metric to market size. Top cards say “$10M revenue,” whereas the method explains that this is assumed total addressable annual market, not company revenue. Use “Addressable market, USD/year” consistently in cards, controls, tables, and copied rationale; retain the distinction near the ranking.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/markets/COVERAGE.md"
+      ],
+      "app": "markets",
+      "source_checkpoint": "03c8bb4ad7e56a0849f4529ebb407ed376225b9e",
+      "disposition": "Independent full source review confirms addressable-market terminology across prominent controls/cards/table/detail/copy, with company-revenue distinction nearby."
+    },
+    {
+      "id": "MKT-03",
+      "priority": "P2",
+      "requirement": "Improve — Explain the setup gate as a feasibility assumption. The Florida case is ideal: a higher ceiling changes eligibility abruptly, not gradually. Show “newly eligible” and its reason, and ask whether the ceiling includes contingency. Preserve equality-as-eligible behavior explicitly.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/markets/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/markets/copied-rationale.txt"
+      ],
+      "app": "markets",
+      "source_checkpoint": "03c8bb4ad7e56a0849f4529ebb407ed376225b9e",
+      "disposition": "Source and independent27-case boundaries preserve setup equality and one-cent exclusion. Root actual setup300000 with growth0 admits Florida at67.33/first; visible gate copy explains feasibility/equality/contingency and rank-change reason. CSS-only03c8 leaves model/copy unchanged."
+    },
+    {
+      "id": "MKT-06",
+      "priority": "P2",
+      "requirement": "Improve — Make the missing-data policy a conscious lesson. Louisiana stays unranked even with zero growth weight. This is documented and intentional, not a computation defect. Explain why the app requires complete data, and invite students to debate that policy without converting missing growth to zero.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/markets/COVERAGE.md"
+      ],
+      "app": "markets",
+      "source_checkpoint": "03c8bb4ad7e56a0849f4529ebb407ed376225b9e",
+      "disposition": "Reviewed complete-data-even-at-zero-weight explanation and debate task; Louisiana missing value is not converted to zero."
+    },
+    {
+      "id": "MKT-07",
+      "priority": "P2",
+      "requirement": "Improve — Clarify what four weighted scores leave out. Ask whether size and growth double-count opportunity, whether delivery cost proxies route density adequately, and whether the fictional competition index is meaningful. A small assumptions worksheet is more useful than adding more arbitrary score factors.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/markets/COVERAGE.md"
+      ],
+      "app": "markets",
+      "source_checkpoint": "03c8bb4ad7e56a0849f4529ebb407ed376225b9e",
+      "disposition": "Reviewed assumptions worksheet covers opportunity double counting, route-density proxy and fictional competition index; no arbitrary new factors."
+    },
+    {
+      "id": "MKT-09",
+      "priority": "P2",
+      "requirement": "Improve — Keep score precision from implying certainty. The new sensitivity panel usefully shows that Georgia’s 67.50 and Tennessee’s 67.00 can reverse after a small change in priorities. Add a short “close under these assumed weights” interpretation beside those headline scores, or use rounded display values with precise arithmetic in detail. Do not round before ranking or imply a statistical confidence level.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/markets/COVERAGE.md"
+      ],
+      "app": "markets",
+      "source_checkpoint": "03c8bb4ad7e56a0849f4529ebb407ed376225b9e",
+      "disposition": "Reviewed close-under-assumed-weights copy beside default scores; precise ranking remains unrounded and no statistical confidence claim."
+    },
+    {
+      "id": "MKT-10",
+      "priority": "P2",
+      "requirement": "Improve — Keep gate failures visually distinct from low scores. The map groups excluded/unscored states together while the table explains different causes. Add a clear legend/detail distinction between ineligible, missing-data, and low-priority-but-eligible states; retain non-color symbols.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/markets/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/markets/narrow-map.png"
+      ],
+      "app": "markets",
+      "source_checkpoint": "03c8bb4ad7e56a0849f4529ebb407ed376225b9e",
+      "disposition": "Root actual319 map shows ranked eligible states and × excluded states; Louisiana selection remains missing-growth/unranked (?) while West Virginia is excluded for13.50>12. Source legend/detail distinguishes dotted missing data from dashed gate failures and preserves exact native-table reasons."
+    },
+    {
+      "id": "MKT-12",
+      "priority": "P2",
+      "requirement": "Verify — Check narrow map interaction without stealing page navigation. Test panning, zooming, keyboard escape/focus, selecting small states, hiding the map, and reaching the equivalent selector/table. The narrow map was visually inspected; that is not evidence for all touch and keyboard paths.",
+      "status": "implemented_pending_verification",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/markets/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/markets/narrow-map.png"
+      ],
+      "app": "markets",
+      "source_checkpoint": "03c8bb4ad7e56a0849f4529ebb407ed376225b9e",
+      "disposition": "Root actual319 desktop-keyboard Enable movement→map ArrowRight pans; Escape stops/returns toggle focus; Zoom In, West Virginia native selection and Hide/Show retention passed. Physical-touch map/page navigation is still unobserved; this requirement is not closed by keyboard evidence."
+    },
+    {
+      "id": "MKT-13",
+      "priority": "P3",
+      "requirement": "Improve — Add editable synthetic assumptions only as a bounded extension. Let students test one market's growth or delivery estimate with provenance and reset behavior. Do not add live geocoding, commercial data feeds, or location collection to demonstrate this lesson.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/markets/COVERAGE.md"
+      ],
+      "app": "markets",
+      "source_checkpoint": "03c8bb4ad7e56a0849f4529ebb407ed376225b9e",
+      "disposition": "Reviewed one-estimate extension with provenance/reset/validation requirements; no live data feed or speculative editor added."
+    },
+    {
+      "id": "MKT-14",
+      "priority": "P2",
+      "requirement": "Improve — Make adaptive map colors unsuitable for unqualified before-and-after claims. The new legend explicitly says that bands separate the four highest distinct values, so it is not an undocumented algorithm. However, each edit can change thresholds: the same shade across two screenshots does not imply the same priority score, and a tiny score difference can cross a full color band. Add this interpretation to the sensitivity exercise and copied/saved comparison guidance, or provide fixed bands when comparing scenarios. Preserve the useful rank labels and exact values.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/markets/COVERAGE.md"
+      ],
+      "app": "markets",
+      "source_checkpoint": "03c8bb4ad7e56a0849f4529ebb407ed376225b9e",
+      "disposition": "Reviewed adaptive-band caution in legend, sensitivity lesson and copied rationale; equal shades across scenarios are not claimed comparable."
+    },
+    {
+      "id": "SQL-01",
+      "priority": "P2",
+      "requirement": "Improve — Expose the raw hand-check rows next to the join lesson. The revised app explains Line A and supplies beginner queries, but the hand-check disclosure still gives totals rather than all four raw lines and shipment events. Add compact exact rows or a one-click inspection query for each relevant table. Students should be able to reconstruct $750 versus $550 from the raw grain without first understanding the full CTE.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/narrow-query-start.png",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/enlarged-query-start.png"
+      ],
+      "app": "sql",
+      "source_checkpoint": "5c1caf4a6e3ac9251fa97012c2ab8a58fb673b7a",
+      "disposition": "Root actual tiny raw-join trap750 versus550 and source-review raw-line/event teaching path complete the bounded reconstruction."
+    },
+    {
+      "id": "SQL-04",
+      "priority": "P2",
+      "requirement": "Improve — Give the large dataset its own known-answer investigation. The app now starts with 2,400 orders and a simple products query. Retain that beginner progression. Add a bounded business question using the larger variation, with the expected result and a clause-by-clause path from inspection to the answer. The tiny dataset should remain the proof of the join rule, rather than being the only explained analytical conclusion.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/narrow-query-start.png",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/enlarged-query-start.png"
+      ],
+      "app": "sql",
+      "source_checkpoint": "5c1caf4a6e3ac9251fa97012c2ab8a58fb673b7a",
+      "disposition": "Independent BigInt derivation gives West831513.25 and2023857.25 total outstanding; reviewed clause-by-clause prediction/reconciliation task with root47-case engine/model evidence."
+    },
+    {
+      "id": "SQL-07",
+      "priority": "P2",
+      "requirement": "Observed — Explain why an automatic chart is absent. Source rules require exactly two suitable columns, unique nonempty categories, at most 20 rows, and uncapped results. When a query fails those chart rules, show a short reason and one example query that satisfies them; otherwise students may think the chart broke.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/narrow-query-start.png",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/enlarged-query-start.png"
+      ],
+      "app": "sql",
+      "source_checkpoint": "5c1caf4a6e3ac9251fa97012c2ab8a58fb673b7a",
+      "disposition": "Independent source review and root47-case browser suite cover specific absent-chart reasons for invalid result shapes/types/caps; valid example provided."
+    },
+    {
+      "id": "SQL-08",
+      "priority": "P2",
+      "requirement": "Improve — Protect an edited query when selecting a starter. Changing the starter currently replaces the editor contents. Offer a simple restore-previous-query action or make replacement explicit before students lose a custom query. Keep Save SQL as the durable local path.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/narrow-query-start.png",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/enlarged-query-start.png"
+      ],
+      "app": "sql",
+      "source_checkpoint": "5c1caf4a6e3ac9251fa97012c2ab8a58fb673b7a",
+      "disposition": "Root actual restoration recovered exact prior SQL ending DESC; source has one-step replacement recovery and adjacent Save SQL warning."
+    },
+    {
+      "id": "SQL-09",
+      "priority": "P2",
+      "requirement": "Observed — Clarify what “Download shown rows” exports. The source exports all retained result rows, up to 500, while the visible page contains up to 50. Label the button with the actual export count and distinguish result cap from table pagination. Do not imply a complete uncapped database export.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/narrow-query-start.png",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/enlarged-query-start.png",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/browser-export-recovery.json"
+      ],
+      "app": "sql",
+      "source_checkpoint": "5c1caf4a6e3ac9251fa97012c2ab8a58fb673b7a",
+      "disposition": "Root actual generated CSV Blobs contained all4 tiny-result rows and all500 retained capped rows while the page showed50. Export labels and note distinguished pagination from the cap; no complete uncapped export or native save claim."
+    },
+    {
+      "id": "SQL-10",
+      "priority": "P2",
+      "requirement": "Improve — Include result provenance in the saved workflow. Saving SQL and downloading CSV are separate actions, and the CSV alone omits dataset identity and query text. Offer a paired note or clearly named files so a student can reproduce the exported answer.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/narrow-query-start.png",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/enlarged-query-start.png",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/browser-export-recovery.json"
+      ],
+      "app": "sql",
+      "source_checkpoint": "5c1caf4a6e3ac9251fa97012c2ab8a58fb673b7a",
+      "disposition": "Root actual generated result CSV and paired note retained source identity, executed SQL rather than later editor draft, returned/retained counts and cap context for exact4-row and500-row results. Authored Blob capture is not native saving."
+    },
+    {
+      "id": "SQL-11",
+      "priority": "P2",
+      "requirement": "Verify — Recheck keyboard arrival in long narrow SQL. The new default query is short and avoids the old initial long-CTE problem. Verify the issue specifically after selecting an advanced starter: activate the editor skip link at narrow width, inspect horizontal position/caret behavior, and reach the label and start of the query. Add wrapping or a deliberate view-reset only if that path still obscures the query. Do not move the cursor during ordinary editing.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/narrow-query-start.png",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/enlarged-query-start.png"
+      ],
+      "app": "sql",
+      "source_checkpoint": "5c1caf4a6e3ac9251fa97012c2ab8a58fb673b7a",
+      "disposition": "Root actual repaired319px advanced-starter skip with Enter focuses editor at selection0,scrollLeft0,scrollTop0 and visible query label/start; prior557/177 failure retained."
+    },
+    {
+      "id": "SQL-12",
+      "priority": "P2",
+      "requirement": "Improve — Translate execution errors into the next useful action. Keep the precise database error, but add concise guidance for an unknown column, malformed SQL, timeout, and cancellation. Keep old results visibly attributed to the old query; do not make a failed query look like a new answer.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/narrow-query-start.png",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/enlarged-query-start.png",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sql/browser-export-recovery.json"
+      ],
+      "app": "sql",
+      "source_checkpoint": "5c1caf4a6e3ac9251fa97012c2ab8a58fb673b7a",
+      "disposition": "Root actual real-worker unknown-column and malformed-query recovery retained visibly attributed old results; cancel completed in253.3ms and an unaccelerated timeout in8002.4ms. Reset/fresh query42 recovered. This is actual production UI/worker evidence, separate from older accelerated adapters."
+    },
+    {
+      "id": "OPT-02",
+      "priority": "P1",
+      "requirement": "Improve — Explain why the selected mix beats an intuitive alternative. Ask students to maximize the highest-contribution product first, check the resulting resource/commitment violations, and compare with the valid optimum. The existing manual-mix checker supplies the mechanism; add the reasoning task.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/optimizer/README.md"
+      ],
+      "app": "optimizer",
+      "source_checkpoint": "bd31dc171c1500a1d70ff0a33bc654abf7d36a96",
+      "disposition": "Independent enumeration/model review and worked task compare greedy933 with optimum941, deriving8 improvement; root actual27-case suite reported."
+    },
+    {
+      "id": "OPT-05",
+      "priority": "P2",
+      "requirement": "Improve — Turn the improved infeasibility explanation into an exercise. The revised source calculates minimum-commitment resource use and explains conflicts when infeasible. Supply one exact input change that reaches this state, ask students which constraint fails before solving, and show the independent minimum-use calculation. No new infeasibility engine is needed.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/optimizer/README.md"
+      ],
+      "app": "optimizer",
+      "source_checkpoint": "bd31dc171c1500a1d70ff0a33bc654abf7d36a96",
+      "disposition": "Reviewed exact oven157 task and independent minimum-use158 calculation; Node real HiGHS infeasible result and root27-case browser suite support the lesson."
+    },
+    {
+      "id": "OPT-07",
+      "priority": "P2",
+      "requirement": "Improve — Make omitted production constraints concrete. Ask whether oven capacity represents total minutes, simultaneous trays, or a sequenced machine. Explain that the current additive resource model is not a timed production schedule, even if its total-minute allocation is feasible.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/optimizer/README.md"
+      ],
+      "app": "optimizer",
+      "source_checkpoint": "bd31dc171c1500a1d70ff0a33bc654abf7d36a96",
+      "disposition": "Reviewed control/method/rationale and exercise explicitly distinguish additive productive minutes from machine sequencing/concurrency."
+    },
+    {
+      "id": "OPT-09",
+      "priority": "P2",
+      "requirement": "Improve — Make the next solve reachable from the pending result. Collapsing the operating assumptions greatly improves the default page. After an edit clears results, provide a direct route from the pending-result panel to the solve action. The action currently lives below all coefficients inside the assumptions disclosure. Keep stale allocations hidden, but do not make a student retrace the entire form to apply one change.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/optimizer/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/optimizer/browser-busy-edit.txt"
+      ],
+      "app": "optimizer",
+      "source_checkpoint": "bd31dc171c1500a1d70ff0a33bc654abf7d36a96",
+      "disposition": "Root actual pending/busy fixture edited an active solve, hid the old allocation, showed a new mix waiting and retried from the adjacent solve action with the assumptions collapsed. Invalid commitments then reported the exact shortfall."
+    },
+    {
+      "id": "OPT-12",
+      "priority": "P2",
+      "requirement": "Verify — Check solver states in the actual UI. Exercise cancel/retry, editing during a solve, infeasible commitments, and a feasible-but-not-proven-optimal response if reproducibly inducible. Keep simulated adapter states labeled as such; prior evidence says a real timeout was not induced.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/optimizer/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/optimizer/browser-states.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/optimizer/browser-busy-edit.txt"
+      ],
+      "app": "optimizer",
+      "source_checkpoint": "bd31dc171c1500a1d70ff0a33bc654abf7d36a96",
+      "disposition": "Root actual cancellation/retry, infeasible commitments and authored real-worker edit-during-solve/retry passed. The earlier manual busy-edit attempt finished too early and is retained. No feasible limited incumbent was reproducibly induced with supported inputs; adapter states remain explicitly simulated. Complete within the requirement’s conditional scope, without a natural-timeout claim."
+    },
+    {
+      "id": "OPT-13",
+      "priority": "P3",
+      "requirement": "Improve — Use overtime cost as a separate modeling extension. Ask students to introduce purchased capacity with a cost and justify its bounds. Do not expand the core example until they can explain the original objective and constraints.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/optimizer/README.md"
+      ],
+      "app": "optimizer",
+      "source_checkpoint": "bd31dc171c1500a1d70ff0a33bc654abf7d36a96",
+      "disposition": "Reviewed bounded purchased-overtime assignment requiring cost/bounds/validation; no extra optimizer feature added."
+    },
+    {
+      "id": "OPT-14",
+      "priority": "P2",
+      "requirement": "Observed — Put cancellation beside the busy result. On initial load and preset solves, the result says “You can cancel” while the only Cancel solve button is inside the collapsed operating-assumptions disclosure, after all inputs. Expose the existing cancellation action in the busy panel or open a compact solve bar. A student should not have to open a long form to find the action the message promises.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/optimizer/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/optimizer/browser-states.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/optimizer/browser-busy-edit.txt"
+      ],
+      "app": "optimizer",
+      "source_checkpoint": "bd31dc171c1500a1d70ff0a33bc654abf7d36a96",
+      "disposition": "Root actual busy state showed Cancel beside the result with assumptions collapsed; actual cancellation/retry passed and the authored busy-edit fixture independently recorded Cancel visible."
+    },
+    {
+      "id": "OPT-15",
+      "priority": "P2",
+      "requirement": "Observed — Call a demand cap an assumed maximum. The improved Bound status column still labels a product at its maximum “Limited by expected sales.” The method correctly describes a deterministic ceiling, not a demand forecast. For example, with oven capacity 10,000, Breakfast boxes reaches 24 batches and receives that label. Use “At assumed demand maximum” and retain the distinction between a sales cap and guaranteed sell-through.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/optimizer/README.md"
+      ],
+      "app": "optimizer",
+      "source_checkpoint": "bd31dc171c1500a1d70ff0a33bc654abf7d36a96",
+      "disposition": "Reviewed deterministic assumed-maximum label; root actual zero-max/Tiny recovery and model27-case evidence retained. No guaranteed sell-through claim."
+    },
+    {
+      "id": "DECK-01",
+      "priority": "P2",
+      "requirement": "Observed — Make the narrow presentation’s scroll ownership obvious. The rebuilt deck is substantially clearer, but the live assumptions slide still scrolls internally within a scrolling page. At 390 × 844, the viewport cuts through “Restore valid values,” and both inner and outer scrollbars are visible; the live result is farther inside the slide. Use a mobile document flow or an explicit continuation/result affordance. Verify a reader can move between inputs, result and slide navigation without mistaking the visible portion for the whole slide.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/presentation/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/presentation/browser-anchor-retest.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/presentation/narrow-maximum.png"
+      ],
+      "app": "presentation",
+      "source_checkpoint": "4cf804db7629bef1fdf618b1d0d03ddd68c108bc",
+      "disposition": "Root actual corrected input/result anchors focused and revealed the exact target in both directions at319px and1280px, in slide and Read all modes. Narrow page flow, native table ArrowRight movement and maximum-result/chart readability were inspected. Earlier Reveal-intercepted anchor failure is preserved. Broader layout and actual screen-reader checks remain separate."
+    },
+    {
+      "id": "DECK-04",
+      "priority": "P2",
+      "requirement": "Improve — Distinguish the generated policy record from a student decision. The new record now includes recommendation, alternatives, scaling, policy and specific release gates. It still records the model’s prescribed choice rather than the student’s judgment. Either label it “Copy policy recommendation” or let the learner append their decision, reason and next evidence test locally. Do not treat a copied calculation as an approved business decision.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/presentation/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/presentation/browser-anchor-retest.json"
+      ],
+      "app": "presentation",
+      "source_checkpoint": "4cf804db7629bef1fdf618b1d0d03ddd68c108bc",
+      "disposition": "Reviewed Copy policy recommendation label distinguishes policy from learner judgment or approval. Root actual clipboard contained quantity40001, full base480072, policy and alternatives; blank input disabled Copy until Restore."
+    },
+    {
+      "id": "DECK-10",
+      "priority": "P2",
+      "requirement": "Verify — Check revised slide announcements with a screen reader. Fresh snapshots again expose a whole-slide announcement as well as the slide content, including the live assumptions/results. Test whether a screen reader repeats the full content on navigation and on individual number edits, and ensure validation does not trigger an excessive announcement. This is a verification concern, not a confirmed audible duplication.",
+      "status": "open",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/presentation/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/walkthrough/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/walkthrough/OBSERVATION-FORM.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/presentation/browser-notes-retest.json"
+      ],
+      "app": "presentation",
+      "source_checkpoint": "4cf804db7629bef1fdf618b1d0d03ddd68c108bc",
+      "disposition": "Source4cf804 qualifies the visible speaker note and passed actual disclosure/Read all retest. Reveal navigation clone remains aria-hidden=true/live=off, but actual screen-reader speech on navigation/edit/error is still unobserved. DOM configuration and visible-note repair do not close this gate."
+    },
+    {
+      "id": "DECK-12",
+      "priority": "P2",
+      "requirement": "Improve — Offer an all-slides reading path. The revised seven-slide argument, notes and appendix deserve a simple document/print reading mode. Preserve current assumptions and policy labels in that view. This would also make comparison and classroom annotation easier; a PowerPoint exporter or new document subsystem is unnecessary.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/presentation/README.md"
+      ],
+      "app": "presentation",
+      "source_checkpoint": "4cf804db7629bef1fdf618b1d0d03ddd68c108bc",
+      "disposition": "Root actual seven-section/three-chart reading view, preserved1450 inputs after mode cycle/selector; source retains current policy/appendix/notes. Broader layout remains ALL-12."
+    },
+    {
+      "id": "DECK-13",
+      "priority": "P3",
+      "requirement": "Improve — Have students replace the decision policy and argument. Use the new full-launch/pilot/defer story as the worked example. An extension should require a different question, explicit alternatives, a defensible decision rule, and a validation plan—not just different prices or business names. Keep the numerical model as small as the new argument permits.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/presentation/README.md"
+      ],
+      "app": "presentation",
+      "source_checkpoint": "4cf804db7629bef1fdf618b1d0d03ddd68c108bc",
+      "disposition": "Reviewed different-question/alternatives/decision-rule/validation assignment; numerical scope remains bounded."
+    },
+    {
+      "id": "DECK-14",
+      "priority": "P2",
+      "requirement": "Observed — Explain the full-first policy when the pilot dominates the displayed metrics. The full-first preference is disclosed in the appendix and copied record, so this is not an arithmetic defect. But the prominent recommendation only cites passing gates. Reproduced with price $180, cost $108, quantity 1,450 and fixed cost $100,000: full launch yields $4,400 base, −$37,360 stress and $256,600 funding; pilot yields $6,320 base, −$6,208 stress and $71,980 funding. Both pass, yet the app recommends full launch. Put the governing preference beside that recommendation and ask students what strategic benefit justifies it, or change the rule to a stated objective. Do not quietly call passing gates the best economic choice.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/presentation/README.md"
+      ],
+      "app": "presentation",
+      "source_checkpoint": "4cf804db7629bef1fdf618b1d0d03ddd68c108bc",
+      "disposition": "Root actual1450/fixed100000 full4400/−37360/256600 versus pilot6320/−6208/71980, with prominent full-first explanation;45/45 model suite."
+    },
+    {
+      "id": "DECK-15",
+      "priority": "P2",
+      "requirement": "Improve — Separate a smaller launch from the value of learning through a pilot. The app now names a staged pilot and correctly asks for a later scale decision. Its arithmetic nevertheless compares one-period operating options; it does not value information or model a second-stage rollout. Make this a specific discussion question: what evidence will the pilot reveal, and how would it change the later decision? Keep the 30% demand/25% fixed-cost assumptions visible when interpreting the pilot advantage. A two-stage optimization model is unnecessary unless that becomes the lesson.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/presentation/README.md"
+      ],
+      "app": "presentation",
+      "source_checkpoint": "4cf804db7629bef1fdf618b1d0d03ddd68c108bc",
+      "disposition": "Reviewed visible30%/25% scaling, one-period/no-information-value boundary and prompt asking how pilot evidence changes a later decision."
+    },
+    {
+      "id": "PRICE-01",
+      "priority": "P1",
+      "requirement": "Improve — Turn the default into a visible derivation. Show $8 contribution × 100 units − $500 = $300, then compare 62 units (−$4) and 63 units (+$4). Let students predict before calculating. This is more useful than presenting the formula only in the final assumptions paragraph.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/browser-boundaries.json"
+      ],
+      "app": "pricing",
+      "source_checkpoint": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
+      "disposition": "Independent derivation and root actual62/63 cases give−4/+4 with visible threshold63; prediction/answer source reviewed."
+    },
+    {
+      "id": "PRICE-02",
+      "priority": "P1",
+      "requirement": "Improve — Make clear that this is a contribution/break-even tool, not a price optimizer. The caveat already says this, but the title invites a broader interpretation. Use a subtitle and a worked price/volume comparison that explicitly holds or changes volume by assumption.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/browser-boundaries.json"
+      ],
+      "app": "pricing",
+      "source_checkpoint": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
+      "disposition": "Reviewed subtitle and worked assumed-volume22×100 versus22×70 comparison with500 versus200 result; no optimizer claim."
+    },
+    {
+      "id": "PRICE-03",
+      "priority": "P2",
+      "requirement": "Improve — Rename the decimal preset around its lesson. “Load decimal example” describes a test case, not a business question. Explain that a ten-cent contribution needs 1,000 units to cover $100, and why changing fixed cost by one cent changes the required whole-unit quantity.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/browser-boundaries.json"
+      ],
+      "app": "pricing",
+      "source_checkpoint": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
+      "disposition": "Reviewed lesson-centered preset name and100/100.01 threshold explanation; root actual decimal boundary shows−0.01 and1001 units."
+    },
+    {
+      "id": "PRICE-04",
+      "priority": "P2",
+      "requirement": "Improve — Distinguish a minimum non-loss quantity from exact break-even. With zero fixed cost, the answer is zero units, but negative contribution means every positive sale loses money; zero contribution means every quantity breaks even. The explanation already handles this in prose. Make the headline terminology equally precise, as the newer presentation does.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/browser-boundaries.json"
+      ],
+      "app": "pricing",
+      "source_checkpoint": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
+      "disposition": "Root actual zero-fixed negative/zero-contribution explanations distinguish zero minimum quantity from every-positive-sale loss/every-quantity zero result."
+    },
+    {
+      "id": "PRICE-05",
+      "priority": "P2",
+      "requirement": "Improve — Make the modeled cost boundary visible in the profit label. “Profit for this period” can be read as full business profit. Prefer “Result after entered costs” or “Modeled operating result,” retaining the concise explanation of omitted costs and unsold inventory.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/browser-boundaries.json"
+      ],
+      "app": "pricing",
+      "source_checkpoint": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
+      "disposition": "Independent source review confirms Result after entered costs and explicit omitted-cost/assumed-sales boundary."
+    },
+    {
+      "id": "PRICE-06",
+      "priority": "P2",
+      "requirement": "Improve — Add a margin-of-safety explanation for the current scenario. Show how far assumed sales sit above/below whole-unit cost coverage, while clearly stating that assumed sales are not predicted demand. Keep the arithmetic inspectable and handle nonpositive contribution separately.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/browser-boundaries.json"
+      ],
+      "app": "pricing",
+      "source_checkpoint": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
+      "disposition": "Independent default37-unit cushion and reviewed nonpositive-contribution handling; root27-case browser model evidence with distinct edge explanations."
+    },
+    {
+      "id": "PRICE-07",
+      "priority": "P2",
+      "requirement": "Improve — Add a small comparison using existing arithmetic. Let students compare the current case with the default or one saved alternative. A two-row table is enough; a full dashboard or optimization engine would obscure the simple lesson.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/browser-boundaries.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/browser-reference-copy.json"
+      ],
+      "app": "pricing",
+      "source_checkpoint": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
+      "disposition": "Root actual saved reference63units/$4 versus current62units/−$4; pending reference action disabled. The two-row comparison uses the same reviewed arithmetic."
+    },
+    {
+      "id": "PRICE-08",
+      "priority": "P2",
+      "requirement": "Observed — Maintain orientation when edits hide the result. The current stale-state policy is safe, but removing all numbers creates a largely empty result panel. Keep a stable “Inputs changed—calculate to update” placeholder and preserve enough layout structure to avoid a jarring visual jump.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/browser-boundaries.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/browser-orientation.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/narrow-pending.png",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/enlarged-pending.png"
+      ],
+      "app": "pricing",
+      "source_checkpoint": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
+      "disposition": "Root actual319px and separate1280px/body32px pending-state review passed: edits retain quantity focus, stable titled placeholder and reference/current Pending rows remain readable without outer overflow; Enter focuses result heading,62→−4 and63→4 reconcile. This is bounded layout/keyboard evidence, not a mobile-keyboard or human task."
+    },
+    {
+      "id": "PRICE-09",
+      "priority": "P2",
+      "requirement": "Improve — Give the narrow layout a direct route from Calculate to the answer. After a successful calculation, announce the result and offer a clear result jump without unexpectedly stealing focus on every edit. Verify the form and output remain usable with the mobile keyboard open.",
+      "status": "implemented_pending_verification",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/browser-boundaries.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/browser-orientation.json"
+      ],
+      "app": "pricing",
+      "source_checkpoint": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
+      "disposition": "Root actual319px result-link Enter focuses results-title at viewport top and edits retain quantity focus; separate200% route also works. Physical mobile-keyboard-open usability remains unobserved, so the requirement stays pending."
+    },
+    {
+      "id": "PRICE-10",
+      "priority": "P2",
+      "requirement": "Improve — Let students take away the four assumptions and answer. Add one copyable scenario record with units, the formula, and model limits. This is sufficient for an assignment; persistent storage is unnecessary.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/browser-boundaries.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/browser-reference-copy.json"
+      ],
+      "app": "pricing",
+      "source_checkpoint": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
+      "disposition": "Root actual clipboard contains all four assumptions, USD/period, contribution equation, result, whole-unit/theoretical threshold, limitations and source. Denied-clipboard fallback remains source-reviewed only; no storage added."
+    },
+    {
+      "id": "PRICE-11",
+      "priority": "P2",
+      "requirement": "Verify — Review the edge explanations as teaching content. Exercise zero price, cost above price, zero fixed cost, zero quantity, a threshold beyond the supported quantity limit, and the decimal case. Require distinct and accurate language for each condition, not only passing arithmetic assertions.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/browser-boundaries.json"
+      ],
+      "app": "pricing",
+      "source_checkpoint": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
+      "disposition": "Root actual eight boundary cases with exact explanations recorded in browser-boundaries.json, including all requested categories; current27/27 model suite."
+    },
+    {
+      "id": "PRICE-12",
+      "priority": "P3",
+      "requirement": "Improve — Offer demand response as a separate extension. Require an explicit demand assumption and validation plan before calling any resulting price “best.” Keep the core example deterministic and transparent.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/browser-boundaries.json"
+      ],
+      "app": "pricing",
+      "source_checkpoint": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
+      "disposition": "Reviewed explicit demand-response extension requires assumptions/objective/validation; no optimizer added. Assignment source only."
+    },
+    {
+      "id": "INV-01",
+      "priority": "P1",
+      "requirement": "Improve — Present a single run as a sample path. A seeded 30-day fill rate of 73.2% is one realization, not the policy's expected service level. Put that distinction beside the KPI, and ask students to compare seeds before drawing a policy conclusion.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/browser-boundaries.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/narrow-result.png"
+      ],
+      "app": "inventory",
+      "source_checkpoint": "ff6c1bd0724a163942ba74cdfc516a047484c46e",
+      "disposition": "Reviewed KPI-adjacent sample-path warning and seed-comparison task; no expected-service interpretation or learner outcome inferred."
+    },
+    {
+      "id": "INV-02",
+      "priority": "P1",
+      "requirement": "Improve — Teach inventory position in the ledger. Orders use closing stock plus outstanding orders, but the table only shows closing stock and newly ordered units. Add on-order quantity and the position used by the reorder decision, with one row-level calculation explaining why an order was or was not placed.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/browser-boundaries.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/narrow-result.png"
+      ],
+      "app": "inventory",
+      "source_checkpoint": "ff6c1bd0724a163942ba74cdfc516a047484c46e",
+      "disposition": "Root actual complete five-row ledger contains on-order/position and exact row-level decisions; independent arithmetic reconciled."
+    },
+    {
+      "id": "INV-03",
+      "priority": "P1",
+      "requirement": "Improve — Give the delayed-delivery preset a day-by-day walkthrough. Show opening stock, arrivals, demand, sales, closing stock, position, and the next due date for the five-day case. Ask students to predict day 2 and day 3 before revealing the ledger.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/browser-boundaries.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/narrow-result.png"
+      ],
+      "app": "inventory",
+      "source_checkpoint": "ff6c1bd0724a163942ba74cdfc516a047484c46e",
+      "disposition": "Reviewed prediction/reveal lesson and root actual complete delayed ledger with15/20 sales,ending2,pipeline6 and next-due timing."
+    },
+    {
+      "id": "INV-04",
+      "priority": "P2",
+      "requirement": "Improve — Name the exact replenishment policy. This is an end-of-day review placing at most one fixed-size order when position is at or below the point. It is not a continuous-review implementation or an order-up-to rule. Put that distinction near the controls and discuss the effect when the order quantity is very small.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/browser-boundaries.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/narrow-result.png"
+      ],
+      "app": "inventory",
+      "source_checkpoint": "ff6c1bd0724a163942ba74cdfc516a047484c46e",
+      "disposition": "Reviewed exact end-of-day one-order policy and root actual tiny-order case40% fill/8 of20, showing sustained shortage."
+    },
+    {
+      "id": "INV-05",
+      "priority": "P2",
+      "requirement": "Improve — Explain fill rate versus days without a stockout. The current KPI is units sold divided by units demanded. Add a short example where one bad day produces different unit fill and stockout-day measures, without presenting them as interchangeable service levels.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/browser-boundaries.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/narrow-result.png"
+      ],
+      "app": "inventory",
+      "source_checkpoint": "ff6c1bd0724a163942ba74cdfc516a047484c46e",
+      "disposition": "Independent delayed-case75% unit fill versus60% days without unmet demand; source and actual summary keep these distinct."
+    },
+    {
+      "id": "INV-06",
+      "priority": "P2",
+      "requirement": "Improve — Show why “more stock is better” is not a complete policy answer. Costs are deliberately absent, so higher inventory may improve fill without any modeled penalty. State that this app compares service consequences, not economic optimality; use average/ending inventory as a visible tradeoff if added.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/browser-boundaries.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/narrow-result.png"
+      ],
+      "app": "inventory",
+      "source_checkpoint": "ff6c1bd0724a163942ba74cdfc516a047484c46e",
+      "disposition": "Root actual same-path comparison shows service/inventory tradeoff75→85%,average1→1.4,ending2→0,pipeline6→12; no cost optimum claimed."
+    },
+    {
+      "id": "INV-07",
+      "priority": "P2",
+      "requirement": "Improve — Explain horizon effects and outstanding orders. The delayed example places an order on the final day. Label that as the continuing policy operating beyond the reporting window, and distinguish on-hand from pipeline stock. Do not imply the final order was received or consumed during the five days.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/browser-boundaries.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/narrow-result.png"
+      ],
+      "app": "inventory",
+      "source_checkpoint": "ff6c1bd0724a163942ba74cdfc516a047484c46e",
+      "disposition": "Root actual delayed ending2 versus pipeline6; independent final order due day7 and visible horizon boundary reviewed."
+    },
+    {
+      "id": "INV-08",
+      "priority": "P2",
+      "requirement": "Improve — Add a small stock/arrival timeline. A ledger is excellent for proof but poor for seeing repeated depletion and delivery cycles. Use a simple native SVG with an exact table alongside it; the no-library starting example need not gain a charting dependency.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/browser-boundaries.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/narrow-result.png",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/browser-chart-reflow.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/narrow-one-day.png",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/narrow-one-day-fixed.png",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/enlarged-chart-fixed.png"
+      ],
+      "app": "inventory",
+      "source_checkpoint": "ff6c1bd0724a163942ba74cdfc516a047484c46e",
+      "disposition": "Root actual narrow chart-label failure was repaired atff6c1bd. Targeted319 one-day and default30-day charts show readable14px labels, closing point/line and receipt circles; separate1280 authored200% chart uses28px labels. Exact ledger remains available; failed and fixed captures retained."
+    },
+    {
+      "id": "INV-09",
+      "priority": "P2",
+      "requirement": "Improve — Support a controlled policy comparison. Compare two reorder points or order quantities against the same generated demand path and display both fill and inventory outcomes. This is the smallest useful next step from “run a simulation” to “learn about a policy.”",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/browser-boundaries.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/narrow-result.png"
+      ],
+      "app": "inventory",
+      "source_checkpoint": "ff6c1bd0724a163942ba74cdfc516a047484c46e",
+      "disposition": "Root actual same-demand-path point3/order6 versus point6/order6 matches independent outcomes; comparison edits clear the old table."
+    },
+    {
+      "id": "INV-10",
+      "priority": "P2",
+      "requirement": "Improve — Make long ledgers navigable. At the supported 365-day horizon, use pagination, a compact summary, or a chosen day range. Keep all rows available for an explicit export or inspection rather than forcing a long unstructured scroll.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/browser-boundaries.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/narrow-result.png"
+      ],
+      "app": "inventory",
+      "source_checkpoint": "ff6c1bd0724a163942ba74cdfc516a047484c46e",
+      "disposition": "Root actual365-day paging reaches361–365 after24 Next activations, five rows and disabled Next; full rows remain inspectable/exportable by source."
+    },
+    {
+      "id": "INV-11",
+      "priority": "P2",
+      "requirement": "Improve — Preserve the complete run specification in a local record. Include all policy inputs, seed, event convention, and summary; optionally export the ledger. Students should be able to reproduce a classmate's result without retyping values from a screenshot.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/browser-boundaries.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/narrow-result.png",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/browser-save-restore.json"
+      ],
+      "app": "inventory",
+      "source_checkpoint": "ff6c1bd0724a163942ba74cdfc516a047484c46e",
+      "disposition": "Root actual five-case real-app generated-Blob/File-restore harness passed: complete assumptions/event/source/ledger, altered-run restore and exact re-save, malformed/string-type rejection preserving prior run, valid recovery. Test84a0 preceded chart-onlyff6c; model/restore/harness unchanged. Native disk save/picker and novice are not claimed."
+    },
+    {
+      "id": "INV-12",
+      "priority": "P2",
+      "requirement": "Verify — Test explanations at policy boundaries. Check initial zero stock, demand zero, order quantity below typical demand, lead time longer than the horizon, and inventory position exactly equal to the reorder point. Preserve N/A for zero-demand fill rate and demonstrate why it is not 100% evidence of good service.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/browser-boundaries.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/narrow-result.png"
+      ],
+      "app": "inventory",
+      "source_checkpoint": "ff6c1bd0724a163942ba74cdfc516a047484c46e",
+      "disposition": "Root actual six-case boundary transcript includes every requested boundary and explicit N/A/no-service-evidence warning; current13/13 browser suite."
+    },
+    {
+      "id": "INV-13",
+      "priority": "P3",
+      "requirement": "Improve — Use multiple replications as an advanced extension. Report variability across runs and distinguish it from daily variability inside one run. Keep the deterministic five-day example as the first lesson so simulation machinery does not hide the inventory mechanics.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/browser-boundaries.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/inventory/narrow-result.png"
+      ],
+      "app": "inventory",
+      "source_checkpoint": "ff6c1bd0724a163942ba74cdfc516a047484c46e",
+      "disposition": "Reviewed separate replication assignment distinguishes run-level from daily variation and keeps deterministic five-day lesson first; no replication engine added."
+    },
+    {
+      "id": "SALES-01",
+      "priority": "P1",
+      "requirement": "Observed — Do not present an invalid date range as zero sales. Reproduction: From October 3, 2026 and Through October 1, 2026. The app shows the correct validation alert but also $0 totals and “No sales match this view.” Suppress or clearly mark results invalid until the range is corrected; reserve zero/no-match results for a valid filter.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-imports.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-export-recovery.json"
+      ],
+      "app": "sales",
+      "source_checkpoint": "3734d1f1676267bd8ec44924941fcda1a198563a",
+      "disposition": "Root actual invalid reversed date interval hid totals/groups/rows/exports, retained identifiable source and offered recovery; Clear filters restored the valid view. A valid no-match state remained distinct."
+    },
+    {
+      "id": "SALES-02",
+      "priority": "P1",
+      "requirement": "Observed — Replace the three-row demo with a meaningful analytical sample. Retain the tiny three-row case as a hand-check preset, but add a modest synthetic dataset with time variation, differing margins, and at least one loss-making transaction/product. All current rows have the same 40% contribution rate, so there is little to discover.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-imports.json"
+      ],
+      "app": "sales",
+      "source_checkpoint": "3734d1f1676267bd8ec44924941fcda1a198563a",
+      "disposition": "Independent12-line sample totals2950/2350/600/220 with changing margins/two losses; current root46/46 browser model suite."
+    },
+    {
+      "id": "SALES-03",
+      "priority": "P1",
+      "requirement": "Observed — Remove the perfect product/region confounding in the teaching dataset. Current North rows are all Notebooks and the South row is a Pen. Include both products in both regions so students can compare within product or region and see why an aggregate difference need not be a regional effect.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-imports.json"
+      ],
+      "app": "sales",
+      "source_checkpoint": "3734d1f1676267bd8ec44924941fcda1a198563a",
+      "disposition": "Independent grouped totals and reviewed sample include both products in both regions; current root46/46 suite."
+    },
+    {
+      "id": "SALES-04",
+      "priority": "P1",
+      "requirement": "Improve — Give the dashboard an actual question. For example, “Which product-region combination contributes the most, and does the answer change after adjusting for volume?” Supply a worked answer using the richer sample and explain the limits of the available costs.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-imports.json"
+      ],
+      "app": "sales",
+      "source_checkpoint": "3734d1f1676267bd8ec44924941fcda1a198563a",
+      "disposition": "Reviewed prediction question, volume-adjusted worked answer and cost limitations; source delivery verified, novice task remains open."
+    },
+    {
+      "id": "SALES-05",
+      "priority": "P2",
+      "requirement": "Improve — Use consistent contribution terminology. “Contribution profit” is qualified below, but students encounter different names across this app, pricing, and the executive dashboard. Prefer “Contribution after product cost” here and explain which costs are absent; do not imply the same cost scope across all apps.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-imports.json"
+      ],
+      "app": "sales",
+      "source_checkpoint": "3734d1f1676267bd8ec44924941fcda1a198563a",
+      "disposition": "Independent full source review confirms consistent Contribution after product cost and absent-cost distinction."
+    },
+    {
+      "id": "SALES-06",
+      "priority": "P2",
+      "requirement": "Improve — Teach totals versus margins. Add a weighted contribution rate only if it serves the central comparison, and derive it from aggregate contribution/revenue. Include a dataset where the highest revenue group is not the highest contribution or rate group.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-imports.json"
+      ],
+      "app": "sales",
+      "source_checkpoint": "3734d1f1676267bd8ec44924941fcda1a198563a",
+      "disposition": "Independent600/2950 weighted rate and source group-per-unit comparison; model46/46 supports distinct revenue versus contribution leaders."
+    },
+    {
+      "id": "SALES-07",
+      "priority": "P2",
+      "requirement": "Improve — State the row grain and duplicate policy. The CSV has no transaction identifier. Explain whether identical rows may be separate legitimate sales and whether imports are summed without deduplication. Do not silently invent an identifier or remove duplicates based only on matching values.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-imports.json"
+      ],
+      "app": "sales",
+      "source_checkpoint": "3734d1f1676267bd8ec44924941fcda1a198563a",
+      "disposition": "Reviewed row-grain/duplicate policy and actual46-case browser suite includes duplicate summing regression."
+    },
+    {
+      "id": "SALES-08",
+      "priority": "P2",
+      "requirement": "Observed — Make the accepted 10,000-row size usable. Source renders every matching row directly into the DOM. Add simple pagination or a visible display limit with access to the complete filtered data. Measure a real maximum-size synthetic file before promising comfortable browser use.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-imports.json"
+      ],
+      "app": "sales",
+      "source_checkpoint": "3734d1f1676267bd8ec44924941fcda1a198563a",
+      "disposition": "Root actual10,000-row/unique-group import,50+50 DOM rows and56.7/132.5ms timings; full data available by source. No student-device comfort claim."
+    },
+    {
+      "id": "SALES-09",
+      "priority": "P2",
+      "requirement": "Improve — Add one comparison graphic or grouped summary. A compact contribution-by-product/region view would communicate a pattern the transaction table does not. Keep exact values in the table, and use native browser code to preserve the example's introductory scope.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-imports.json"
+      ],
+      "app": "sales",
+      "source_checkpoint": "3734d1f1676267bd8ec44924941fcda1a198563a",
+      "disposition": "Root actual delimiter-collision import retains separate Region/Product identities; reviewed exact grouped summary arithmetic and model46/46."
+    },
+    {
+      "id": "SALES-10",
+      "priority": "P2",
+      "requirement": "Improve — Make date coverage visible before filtering. Show the dataset's first/last date and explain that Through is inclusive. Offer a dataset-range reset; this reduces empty results caused by choosing dates outside a small sample.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-imports.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-export-recovery.json"
+      ],
+      "app": "sales",
+      "source_checkpoint": "3734d1f1676267bd8ec44924941fcda1a198563a",
+      "disposition": "Root actual linked12-row template import exposed its date range; inclusive September–October filters returned the exact two North/Pen rows. Clear filters recovered both reversed-date and valid no-match views."
+    },
+    {
+      "id": "SALES-11",
+      "priority": "P2",
+      "requirement": "Improve — Make no-match recovery specific. For North + Pen, show the active combination and a direct clear-filter action near the empty result. Keep the data-loaded state distinct from no dataset, rejected import, and invalid dates.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-imports.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-export-recovery.json"
+      ],
+      "app": "sales",
+      "source_checkpoint": "3734d1f1676267bd8ec44924941fcda1a198563a",
+      "disposition": "Root actual valid no-match named active filters and retained source identity; its direct clear action restored records. The invalid-date state and rejected-import retention were separately verified."
+    },
+    {
+      "id": "SALES-12",
+      "priority": "P2",
+      "requirement": "Improve — Add a local export of the current analytical view. Include matching rows and a simple summary with active filters and source identity. If export is deliberately omitted to keep this a starter, state that boundary in the lesson and make it the first extension exercise.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-imports.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-export-recovery.json"
+      ],
+      "app": "sales",
+      "source_checkpoint": "3734d1f1676267bd8ec44924941fcda1a198563a",
+      "disposition": "Root actual generated filtered CSV and JSON matched the same two rows:350 revenue,210 cost,140 contribution and35 units. JSON retained source/provenance, active filters, row grain, groups, units and limits. Authored Blob inspection does not claim native saving."
+    },
+    {
+      "id": "SALES-13",
+      "priority": "P2",
+      "requirement": "Verify — Run the actual CSV correction workflow with a novice. Download the template, add a row, import it, then introduce a malformed quote or invalid date and correct it. Confirm the old dataset remains identifiable after rejection, and that resetting the sample clears the relevant filters and errors.",
+      "status": "open",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-imports.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/walkthrough/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/walkthrough/OBSERVATION-FORM.md"
+      ],
+      "app": "sales",
+      "source_checkpoint": "3734d1f1676267bd8ec44924941fcda1a198563a",
+      "disposition": "Actual novice template/edit/import/malform/correct/reset task remains unobserved. The4/4 synthetic File/DataTransfer integration harness is not native-picker or novice evidence."
+    },
+    {
+      "id": "SALES-14",
+      "priority": "P3",
+      "requirement": "Improve — Use the returns explorer as the next assignment. Explain exactly what must change when one sale can have many return events: identifiers, row grain, aggregate-before-join logic, and cohort interpretation. This gives the simple dashboard a purposeful place in the collection.",
+      "status": "verified_local",
+      "evidence": [
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/COVERAGE.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/sales/browser-imports.json"
+      ],
+      "app": "sales",
+      "source_checkpoint": "3734d1f1676267bd8ec44924941fcda1a198563a",
+      "disposition": "Reviewed separate Common Goods assignment specifies IDs, event grain, aggregate-before-join and cohort/observation time; no returns system added."
+    }
+  ],
+  "updated": "2026-10-09",
+  "status_policy": {
+    "verified_local": "Narrow requirement supported by identified source/independent arithmetic and/or actual coordinator browser evidence. Teaching-source verification is not learner completion. This does not imply all-app readiness, accessibility, native-device testing or publication.",
+    "implemented_pending_verification": "Correction or task path implemented; required acceptance evidence remains incomplete. Not closed.",
+    "open": "Required actual human verification not performed; preparatory source/protocols do not close it."
+  },
+  "summary": {
+    "items": 126,
+    "by_status": {
+      "verified_local": 116,
+      "open": 4,
+      "implemented_pending_verification": 6
+    },
+    "publication": "No push or current live acceptance is established by this correction evidence index. Historical live revisions remain separate.",
+    "human_gates": "Actual screen-reader and uncoached novice evidence remains open. Authored synthetic input events/font doubling do not replace native picker, device zoom or human tasks."
+  }
+}

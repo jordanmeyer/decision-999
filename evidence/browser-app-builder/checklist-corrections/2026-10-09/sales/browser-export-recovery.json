@@ -1,0 +1,725 @@
+{
+  "scope": "Linked-template fetch, authored File/DataTransfer import and real generated Blob capture; native picker/save and human tasks not observed.",
+  "environment": {
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "appURL": "http://127.0.0.1:9733/app/",
+    "frameWidth": 1280,
+    "frameHeight": 843
+  },
+  "observations": [
+    {
+      "name": "Actual linked template has 12 rows and imports with exact source identity and totals",
+      "status": "PASS",
+      "observedAt": "2026-10-09T20:03:00.613Z",
+      "templateURL": "http://127.0.0.1:9733/app/template.csv",
+      "header": "date,region,product,quantity,unit_price,unit_cost",
+      "dataLines": 12,
+      "firstDataLine": "2026-08-01,North,Notebook,10,20,12",
+      "lastDataLine": "2026-10-04,South,Notebook,10,10,12",
+      "view": {
+        "status": "Loaded synthetic-template-review.csv.",
+        "sourceCount": "12 of 12 records · synthetic-template-review.csv",
+        "coverage": "synthetic-template-review.csv · 12 sales lines · 2026-08-01 through 2026-10-04. Through date is inclusive; Clear filters restores the full dataset range.",
+        "filters": {
+          "start": "",
+          "end": "",
+          "region": "",
+          "product": ""
+        },
+        "activeFilters": "No filters",
+        "revenue": "$2,950.00",
+        "cost": "$2,350.00",
+        "contribution": "$600.00",
+        "units": "220",
+        "filterError": null,
+        "importError": null,
+        "invalidResultVisible": false,
+        "validResultVisible": true,
+        "emptyVisible": false,
+        "emptyMessage": "No sales match No filters. Dataset synthetic-template-review.csv is still loaded.",
+        "rows": [
+          [
+            "2026-08-01",
+            "North",
+            "Notebook",
+            "10",
+            "$200.00",
+            "$120.00",
+            "$80.00"
+          ],
+          [
+            "2026-08-02",
+            "South",
+            "Pen",
+            "20",
+            "$200.00",
+            "$160.00",
+            "$40.00"
+          ],
+          [
+            "2026-08-03",
+            "North",
+            "Pen",
+            "10",
+            "$100.00",
+            "$60.00",
+            "$40.00"
+          ],
+          [
+            "2026-08-04",
+            "South",
+            "Notebook",
+            "5",
+            "$100.00",
+            "$60.00",
+            "$40.00"
+          ],
+          [
+            "2026-09-01",
+            "North",
+            "Notebook",
+            "20",
+            "$400.00",
+            "$280.00",
+            "$120.00"
+          ],
+          [
+            "2026-09-02",
+            "South",
+            "Pen",
+            "30",
+            "$300.00",
+            "$240.00",
+            "$60.00"
+          ],
+          [
+            "2026-09-03",
+            "North",
+            "Pen",
+            "15",
+            "$150.00",
+            "$90.00",
+            "$60.00"
+          ],
+          [
+            "2026-09-04",
+            "South",
+            "Notebook",
+            "10",
+            "$200.00",
+            "$120.00",
+            "$80.00"
+          ],
+          [
+            "2026-10-01",
+            "North",
+            "Notebook",
+            "30",
+            "$600.00",
+            "$660.00",
+            "−$60.00"
+          ],
+          [
+            "2026-10-02",
+            "South",
+            "Pen",
+            "40",
+            "$400.00",
+            "$320.00",
+            "$80.00"
+          ],
+          [
+            "2026-10-03",
+            "North",
+            "Pen",
+            "20",
+            "$200.00",
+            "$120.00",
+            "$80.00"
+          ],
+          [
+            "2026-10-04",
+            "South",
+            "Notebook",
+            "10",
+            "$100.00",
+            "$120.00",
+            "−$20.00"
+          ]
+        ],
+        "groups": [
+          [
+            "North",
+            "Pen",
+            "45",
+            "$450.00",
+            "$180.00",
+            "$4.00",
+            "40.0%"
+          ],
+          [
+            "South",
+            "Pen",
+            "90",
+            "$900.00",
+            "$180.00",
+            "$2.00",
+            "20.0%"
+          ],
+          [
+            "North",
+            "Notebook",
+            "60",
+            "$1,200.00",
+            "$140.00",
+            "$2.33",
+            "11.7%"
+          ],
+          [
+            "South",
+            "Notebook",
+            "25",
+            "$400.00",
+            "$100.00",
+            "$4.00",
+            "25.0%"
+          ]
+        ]
+      }
+    },
+    {
+      "name": "Filtered matching CSV and analytical JSON agree on rows, source, cents, filters, totals and group",
+      "status": "PASS",
+      "observedAt": "2026-10-09T20:03:00.616Z",
+      "view": {
+        "status": "Loaded synthetic-template-review.csv.",
+        "sourceCount": "2 of 12 records · synthetic-template-review.csv",
+        "coverage": "synthetic-template-review.csv · 12 sales lines · 2026-08-01 through 2026-10-04. Through date is inclusive; Clear filters restores the full dataset range.",
+        "filters": {
+          "start": "2026-09-01",
+          "end": "2026-10-31",
+          "region": "North",
+          "product": "Pen"
+        },
+        "activeFilters": "From: 2026-09-01 · Through (inclusive): 2026-10-31 · Region: North · Product: Pen",
+        "revenue": "$350.00",
+        "cost": "$210.00",
+        "contribution": "$140.00",
+        "units": "35",
+        "filterError": null,
+        "importError": null,
+        "invalidResultVisible": false,
+        "validResultVisible": true,
+        "emptyVisible": false,
+        "emptyMessage": "No sales match From: 2026-09-01 · Through (inclusive): 2026-10-31 · Region: North · Product: Pen. Dataset synthetic-template-review.csv is still loaded.",
+        "rows": [
+          [
+            "2026-09-03",
+            "North",
+            "Pen",
+            "15",
+            "$150.00",
+            "$90.00",
+            "$60.00"
+          ],
+          [
+            "2026-10-03",
+            "North",
+            "Pen",
+            "20",
+            "$200.00",
+            "$120.00",
+            "$80.00"
+          ]
+        ],
+        "groups": [
+          [
+            "North",
+            "Pen",
+            "35",
+            "$350.00",
+            "$140.00",
+            "$4.00",
+            "40.0%"
+          ]
+        ]
+      },
+      "exports": [
+        {
+          "name": "sales-matching-rows.csv",
+          "type": "text/csv",
+          "text": "date,region,product,quantity,unit_price,unit_cost\n\"2026-09-03\",\"North\",\"Pen\",\"15\",\"10.00\",\"6.00\"\n\"2026-10-03\",\"North\",\"Pen\",\"20\",\"10.00\",\"6.00\"\n"
+        },
+        {
+          "name": "sales-view-context-and-rows.json",
+          "type": "application/json",
+          "value": {
+            "format": "sales-lens-view-v1",
+            "source": "synthetic-template-review.csv",
+            "provenance": "Bundled samples are synthetic. A filename identifies uploaded data but does not verify its provenance; imported data is unverified.",
+            "filters": {
+              "start": "2026-09-01",
+              "end": "2026-10-31",
+              "region": "North",
+              "product": "Pen"
+            },
+            "units": "USD integer cents in price, cost, revenue and profit; quantity is whole units",
+            "summary": {
+              "revenue": 35000,
+              "cost": 21000,
+              "profit": 14000,
+              "units": 35
+            },
+            "groups": [
+              {
+                "region": "North",
+                "product": "Pen",
+                "revenue": 35000,
+                "cost": 21000,
+                "profit": 14000,
+                "units": 35
+              }
+            ],
+            "rows": [
+              {
+                "date": "2026-09-03",
+                "region": "North",
+                "product": "Pen",
+                "quantity": 15,
+                "price": 1000,
+                "cost": 600
+              },
+              {
+                "date": "2026-10-03",
+                "region": "North",
+                "product": "Pen",
+                "quantity": 20,
+                "price": 1000,
+                "cost": 600
+              }
+            ],
+            "limits": "Sales lines summed without deduplication. Contribution excludes overhead, taxes, shipping and returns. Descriptive totals, not causal evidence."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Reversed dates are invalid, not zero sales; actual Clear filters restores the imported dataset",
+      "status": "PASS",
+      "observedAt": "2026-10-09T20:03:00.617Z",
+      "invalid": {
+        "status": "Loaded synthetic-template-review.csv.",
+        "sourceCount": "Invalid filter; 12 source records remain loaded from synthetic-template-review.csv.",
+        "coverage": "synthetic-template-review.csv · 12 sales lines · 2026-08-01 through 2026-10-04. Through date is inclusive; Clear filters restores the full dataset range.",
+        "filters": {
+          "start": "2026-10-03",
+          "end": "2026-10-01",
+          "region": "North",
+          "product": "Pen"
+        },
+        "activeFilters": "From: 2026-10-03 · Through (inclusive): 2026-10-01 · Region: North · Product: Pen",
+        "revenue": "$200.00",
+        "cost": "$120.00",
+        "contribution": "$80.00",
+        "units": "20",
+        "filterError": "From date must be on or before through date.",
+        "importError": null,
+        "invalidResultVisible": true,
+        "validResultVisible": false,
+        "emptyVisible": false,
+        "emptyMessage": "No sales match From: 2026-10-03 · Through (inclusive): 2026-10-31 · Region: North · Product: Pen. Dataset synthetic-template-review.csv is still loaded.",
+        "rows": [
+          [
+            "2026-10-03",
+            "North",
+            "Pen",
+            "20",
+            "$200.00",
+            "$120.00",
+            "$80.00"
+          ]
+        ],
+        "groups": [
+          [
+            "North",
+            "Pen",
+            "20",
+            "$200.00",
+            "$80.00",
+            "$4.00",
+            "40.0%"
+          ]
+        ]
+      },
+      "recovered": {
+        "status": "Loaded synthetic-template-review.csv.",
+        "sourceCount": "12 of 12 records · synthetic-template-review.csv",
+        "coverage": "synthetic-template-review.csv · 12 sales lines · 2026-08-01 through 2026-10-04. Through date is inclusive; Clear filters restores the full dataset range.",
+        "filters": {
+          "start": "",
+          "end": "",
+          "region": "",
+          "product": ""
+        },
+        "activeFilters": "No filters",
+        "revenue": "$2,950.00",
+        "cost": "$2,350.00",
+        "contribution": "$600.00",
+        "units": "220",
+        "filterError": null,
+        "importError": null,
+        "invalidResultVisible": false,
+        "validResultVisible": true,
+        "emptyVisible": false,
+        "emptyMessage": "No sales match No filters. Dataset synthetic-template-review.csv is still loaded.",
+        "rows": [
+          [
+            "2026-08-01",
+            "North",
+            "Notebook",
+            "10",
+            "$200.00",
+            "$120.00",
+            "$80.00"
+          ],
+          [
+            "2026-08-02",
+            "South",
+            "Pen",
+            "20",
+            "$200.00",
+            "$160.00",
+            "$40.00"
+          ],
+          [
+            "2026-08-03",
+            "North",
+            "Pen",
+            "10",
+            "$100.00",
+            "$60.00",
+            "$40.00"
+          ],
+          [
+            "2026-08-04",
+            "South",
+            "Notebook",
+            "5",
+            "$100.00",
+            "$60.00",
+            "$40.00"
+          ],
+          [
+            "2026-09-01",
+            "North",
+            "Notebook",
+            "20",
+            "$400.00",
+            "$280.00",
+            "$120.00"
+          ],
+          [
+            "2026-09-02",
+            "South",
+            "Pen",
+            "30",
+            "$300.00",
+            "$240.00",
+            "$60.00"
+          ],
+          [
+            "2026-09-03",
+            "North",
+            "Pen",
+            "15",
+            "$150.00",
+            "$90.00",
+            "$60.00"
+          ],
+          [
+            "2026-09-04",
+            "South",
+            "Notebook",
+            "10",
+            "$200.00",
+            "$120.00",
+            "$80.00"
+          ],
+          [
+            "2026-10-01",
+            "North",
+            "Notebook",
+            "30",
+            "$600.00",
+            "$660.00",
+            "−$60.00"
+          ],
+          [
+            "2026-10-02",
+            "South",
+            "Pen",
+            "40",
+            "$400.00",
+            "$320.00",
+            "$80.00"
+          ],
+          [
+            "2026-10-03",
+            "North",
+            "Pen",
+            "20",
+            "$200.00",
+            "$120.00",
+            "$80.00"
+          ],
+          [
+            "2026-10-04",
+            "South",
+            "Notebook",
+            "10",
+            "$100.00",
+            "$120.00",
+            "−$20.00"
+          ]
+        ],
+        "groups": [
+          [
+            "North",
+            "Pen",
+            "45",
+            "$450.00",
+            "$180.00",
+            "$4.00",
+            "40.0%"
+          ],
+          [
+            "South",
+            "Pen",
+            "90",
+            "$900.00",
+            "$180.00",
+            "$2.00",
+            "20.0%"
+          ],
+          [
+            "North",
+            "Notebook",
+            "60",
+            "$1,200.00",
+            "$140.00",
+            "$2.33",
+            "11.7%"
+          ],
+          [
+            "South",
+            "Notebook",
+            "25",
+            "$400.00",
+            "$100.00",
+            "$4.00",
+            "25.0%"
+          ]
+        ]
+      }
+    },
+    {
+      "name": "Valid no-match scope is explained and its actual recovery button restores all imported rows",
+      "status": "PASS",
+      "observedAt": "2026-10-09T20:03:00.619Z",
+      "empty": {
+        "status": "Loaded synthetic-template-review.csv.",
+        "sourceCount": "0 of 12 records · synthetic-template-review.csv",
+        "coverage": "synthetic-template-review.csv · 12 sales lines · 2026-08-01 through 2026-10-04. Through date is inclusive; Clear filters restores the full dataset range.",
+        "filters": {
+          "start": "2027-01-01",
+          "end": "2027-12-31",
+          "region": "North",
+          "product": "Pen"
+        },
+        "activeFilters": "From: 2027-01-01 · Through (inclusive): 2027-12-31 · Region: North · Product: Pen",
+        "revenue": "$0.00",
+        "cost": "$0.00",
+        "contribution": "$0.00",
+        "units": "0",
+        "filterError": null,
+        "importError": null,
+        "invalidResultVisible": false,
+        "validResultVisible": true,
+        "emptyVisible": true,
+        "emptyMessage": "No sales match From: 2027-01-01 · Through (inclusive): 2027-12-31 · Region: North · Product: Pen. Dataset synthetic-template-review.csv is still loaded.",
+        "rows": [],
+        "groups": []
+      },
+      "recovered": {
+        "status": "Loaded synthetic-template-review.csv.",
+        "sourceCount": "12 of 12 records · synthetic-template-review.csv",
+        "coverage": "synthetic-template-review.csv · 12 sales lines · 2026-08-01 through 2026-10-04. Through date is inclusive; Clear filters restores the full dataset range.",
+        "filters": {
+          "start": "",
+          "end": "",
+          "region": "",
+          "product": ""
+        },
+        "activeFilters": "No filters",
+        "revenue": "$2,950.00",
+        "cost": "$2,350.00",
+        "contribution": "$600.00",
+        "units": "220",
+        "filterError": null,
+        "importError": null,
+        "invalidResultVisible": false,
+        "validResultVisible": true,
+        "emptyVisible": false,
+        "emptyMessage": "No sales match No filters. Dataset synthetic-template-review.csv is still loaded.",
+        "rows": [
+          [
+            "2026-08-01",
+            "North",
+            "Notebook",
+            "10",
+            "$200.00",
+            "$120.00",
+            "$80.00"
+          ],
+          [
+            "2026-08-02",
+            "South",
+            "Pen",
+            "20",
+            "$200.00",
+            "$160.00",
+            "$40.00"
+          ],
+          [
+            "2026-08-03",
+            "North",
+            "Pen",
+            "10",
+            "$100.00",
+            "$60.00",
+            "$40.00"
+          ],
+          [
+            "2026-08-04",
+            "South",
+            "Notebook",
+            "5",
+            "$100.00",
+            "$60.00",
+            "$40.00"
+          ],
+          [
+            "2026-09-01",
+            "North",
+            "Notebook",
+            "20",
+            "$400.00",
+            "$280.00",
+            "$120.00"
+          ],
+          [
+            "2026-09-02",
+            "South",
+            "Pen",
+            "30",
+            "$300.00",
+            "$240.00",
+            "$60.00"
+          ],
+          [
+            "2026-09-03",
+            "North",
+            "Pen",
+            "15",
+            "$150.00",
+            "$90.00",
+            "$60.00"
+          ],
+          [
+            "2026-09-04",
+            "South",
+            "Notebook",
+            "10",
+            "$200.00",
+            "$120.00",
+            "$80.00"
+          ],
+          [
+            "2026-10-01",
+            "North",
+            "Notebook",
+            "30",
+            "$600.00",
+            "$660.00",
+            "−$60.00"
+          ],
+          [
+            "2026-10-02",
+            "South",
+            "Pen",
+            "40",
+            "$400.00",
+            "$320.00",
+            "$80.00"
+          ],
+          [
+            "2026-10-03",
+            "North",
+            "Pen",
+            "20",
+            "$200.00",
+            "$120.00",
+            "$80.00"
+          ],
+          [
+            "2026-10-04",
+            "South",
+            "Notebook",
+            "10",
+            "$100.00",
+            "$120.00",
+            "−$20.00"
+          ]
+        ],
+        "groups": [
+          [
+            "North",
+            "Pen",
+            "45",
+            "$450.00",
+            "$180.00",
+            "$4.00",
+            "40.0%"
+          ],
+          [
+            "South",
+            "Pen",
+            "90",
+            "$900.00",
+            "$180.00",
+            "$2.00",
+            "20.0%"
+          ],
+          [
+            "North",
+            "Notebook",
+            "60",
+            "$1,200.00",
+            "$140.00",
+            "$2.33",
+            "11.7%"
+          ],
+          [
+            "South",
+            "Notebook",
+            "25",
+            "$400.00",
+            "$100.00",
+            "$4.00",
+            "25.0%"
+          ]
+        ]
+      }
+    }
+  ]
+}

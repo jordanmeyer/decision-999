@@ -1,0 +1,30 @@
+{
+  "source": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
+  "observations": [
+    {
+      "buttons": [
+        {
+          "disabled": false,
+          "text": "Copy scenario record"
+        },
+        {
+          "disabled": true,
+          "text": "Use current case as reference"
+        }
+      ],
+      "state": "pending",
+      "status": [
+        "Inputs changed. Calculate to update the result.",
+        ""
+      ]
+    },
+    {
+      "state": "comparison",
+      "text": "Assumptions, not a predicted demand response\nCase\tPrice / unit\tCost / unit\tUnits\tFixed cost\tResult\nReference\t$20.00\t$12.00\t63\t$500.00\t$4.00\nCurrent\t$20.00\t$12.00\t62\t$500.00\t-$4.00"
+    },
+    {
+      "state": "clipboard",
+      "text": "Notebook cost-coverage scenario (USD, one sales period)\nPrice/unit: $20.00; variable cost/unit: $12.00; assumed sold: 62; fixed costs: $500.00\n$8.00 contribution × 62 units − $500.00 fixed cost = -$4.00.\nMinimum non-loss whole quantity: 63\nTheoretical break-even: 62.50 units. Round up to cover costs with whole units.\nAssumed sales are 1 units below minimum whole-unit cost coverage. This sales cushion is an assumption, not predicted demand.\nNo demand response, taxes, unsold inventory or capacity modeled. Not a price recommendation.\nSource: http://127.0.0.1:9731/app/"
+    }
+  ]
+}

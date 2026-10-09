@@ -1,0 +1,50 @@
+
+> bab-example-presentation@0.0.0 test
+> node tests/model.test.js
+
+PASS — Board case independent revenue, cost, result and whole-unit hurdle
+PASS — Whole-kit boundary:33333 loses$24;33334 gains$48
+PASS — Board alternatives and funding match independent arithmetic
+PASS — Low demand defers; strong demand clears full launch
+PASS — Full-first counterexample:pilot dominates displayed economics, but explicit governance still selects full launch
+PASS — Stress policy includes the exact loss limit
+PASS — Zero base surplus fails the strictly positive gate
+PASS — Pilot whole kits and cents round explicitly
+PASS — One-cent contribution ceiling is exact
+PASS — Zero contribution positive fixed has no threshold
+PASS — Negative contribution positive fixed has no threshold
+PASS — Negative contribution and zero fixed:only0 avoids loss
+PASS — Zero margin and fixed:all volumes exactly break even
+PASS — Positive margin zero fixed minimum non-loss0
+PASS — Threshold may lie beyond supported quantity
+PASS — Supported maximum arithmetic stays exact
+PASS — Supported maximum loss stays exact
+PASS — Dollar parser uses exact cent components
+PASS — Invalid price "" rejected
+PASS — Invalid price "-1" rejected
+PASS — Invalid price "1e2" rejected
+PASS — Invalid price "1.001" rejected
+PASS — Invalid price "NaN" rejected
+PASS — Invalid price "Infinity" rejected
+PASS — Invalid price "1,000" rejected
+PASS — Invalid price "1000.01" rejected
+PASS — Invalid quantity "1.5" rejected
+PASS — Invalid quantity "-1" rejected
+PASS — Invalid quantity "1000001" rejected
+PASS — Invalid quantity "1e3" rejected
+PASS — Invalid quantity "" rejected
+PASS — All-zero inputs valid
+PASS — Upper-bound fixed cost accepted andnextcent rejected
+PASS — Baseline sensitivity quantities and two independent outputs
+PASS — Sensitivity bounded and includescurrent 0
+PASS — Sensitivity bounded and includescurrent 1
+PASS — Sensitivity bounded and includescurrent 2
+PASS — Sensitivity bounded and includescurrent 3
+PASS — Sensitivity bounded and includescurrent 4
+PASS — Sensitivity bounded and includescurrent 999998
+PASS — Sensitivity bounded and includescurrent 999999
+PASS — Sensitivity bounded and includescurrent 1000000
+PASS — Sensitivity never changes per-unit/fixed assumptions
+PASS — Money output exact including one cent/zero/maximum loss
+PASS — Decision record uses current inputs and edge semantics
+45/45 passed
