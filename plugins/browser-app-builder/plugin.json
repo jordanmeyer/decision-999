@@ -30,7 +30,7 @@
       }
     },
     "io.github.jordanmeyer": {
-      "label": "Pilot candidate · Instructor-built",
+      "label": "Pilot candidate \u00b7 Instructor-built",
       "audience": "MBA students building a self-contained decision tool, dashboard, or simulation with an agent.",
       "results": [
         {
@@ -50,25 +50,29 @@
           "label": "Earlier plain-app trials published and verified live"
         },
         {
-          "value": "3 of 10",
+          "value": "4 of 10",
           "label": "New recipe apps independently reviewed and verified live"
         }
       ],
-      "method": "Version 0.2.0 adds thirteen pinned library recipes exercised through individual browser checks and three synthetic combined fixtures on a configured Mac. Browser suites passed 10 presentation, 13 dashboard and 8 operations checks. Production preview, keyboard interactions, CSV import and narrow layout review exposed and corrected stylesheet, slide-sizing and file-input issues. These are maintainer-authored fixtures, not student outcomes or automatic Work-routing trials. The three linked live applications were built separately with version 0.1.1; their publication and corrected updates remain historical evidence. The ten-recipe campaign now has independently reviewed executive and uploaded-files dashboards plus a seasonal order simulator published through the managed workflow. The 13 executive, 31 uploads and 17 simulator browser checks and live reference calculations passed. Reviews corrected dialog focus, chart descriptions, production-only filter parsing and narrow-screen readability. Simulator review corrected returning-page chart lifecycle and maximum-value chart labels. Further campaign apps and specialist recipes remain in progress.",
+      "method": "Version 0.2.0 adds thirteen pinned library recipes exercised through individual browser checks and three synthetic combined fixtures on a configured Mac. Browser suites passed 10 presentation, 13 dashboard and 8 operations checks. Production preview, keyboard interactions, CSV import and narrow layout review exposed and corrected stylesheet, slide-sizing and file-input issues. These are maintainer-authored fixtures, not student outcomes or automatic Work-routing trials. The three linked live applications were built separately with version 0.1.1; their publication and corrected updates remain historical evidence. The ten-recipe campaign now has independently reviewed executive and uploaded-files dashboards plus a seasonal order simulator published through the managed workflow. The 13 executive, 31 uploads and 17 simulator browser checks and live reference calculations passed. Reviews corrected dialog focus, chart descriptions, production-only filter parsing and narrow-screen readability. Simulator review corrected returning-page chart lifecycle and maximum-value chart labels. The process model passed 37 browser checks, independent graph/import/keyboard checks, and live 471.5-to-370.5-minute routing comparisons; review corrected a non-finite assertion gap and long-label readability. Further campaign apps and specialist recipes remain in progress.",
       "limits": "Self-contained apps use bundled public/synthetic data or locally selected files. No backends, logins, external runtime APIs, remote AI, analytics, secret keys or remote fonts/scripts. Managed builds require compatible Node/npm and host file, shell and browser capabilities. Library approval covers the recorded versions/configurations, not arbitrary combinations. Work routing, clean-machine macOS/Windows and novice-student usability remain unverified. Browser checks do not certify a business model or full accessibility.",
       "screenshotAlt": [],
       "examples": [
         {
-          "label": "Executive operating dashboard · Mantine, ECharts, Tabulator",
+          "label": "Executive operating dashboard \u00b7 Mantine, ECharts, Tabulator",
           "url": "https://jordanmeyer.github.io/bab-example-executive/"
         },
         {
-          "label": "Sales and returns explorer · Papa Parse, Arquero, ECharts",
+          "label": "Sales and returns explorer \u00b7 Papa Parse, Arquero, ECharts",
           "url": "https://jordanmeyer.github.io/bab-example-uploads/"
         },
         {
-          "label": "Seasonal order simulator · jStat, seedrandom, ECharts",
+          "label": "Seasonal order simulator \u00b7 jStat, seedrandom, ECharts",
           "url": "https://jordanmeyer.github.io/bab-example-simulator/"
+        },
+        {
+          "label": "Approval process model \u00b7 React Flow",
+          "url": "https://jordanmeyer.github.io/bab-example-process/"
         },
         {
           "label": "Pricing calculator",
