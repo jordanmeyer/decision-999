@@ -1,0 +1,65 @@
+{
+  "started": "2026-10-09",
+  "apps": {
+    "executive": {
+      "stage": "planning",
+      "repository_proposed": "jordanmeyer/bab-example-executive",
+      "review": "pending",
+      "deployment": "pending"
+    },
+    "uploads": {
+      "stage": "planning",
+      "repository_proposed": "jordanmeyer/bab-example-uploads",
+      "review": "pending",
+      "deployment": "pending"
+    },
+    "simulator": {
+      "stage": "queued",
+      "repository_proposed": "jordanmeyer/bab-example-simulator",
+      "review": "pending",
+      "deployment": "pending"
+    },
+    "process": {
+      "stage": "queued",
+      "repository_proposed": "jordanmeyer/bab-example-process",
+      "review": "pending",
+      "deployment": "pending"
+    },
+    "roadmap": {
+      "stage": "queued",
+      "repository_proposed": "jordanmeyer/bab-example-roadmap",
+      "review": "pending",
+      "deployment": "pending"
+    },
+    "markets": {
+      "stage": "queued",
+      "repository_proposed": "jordanmeyer/bab-example-markets",
+      "review": "pending",
+      "deployment": "pending"
+    },
+    "sql": {
+      "stage": "queued",
+      "repository_proposed": "jordanmeyer/bab-example-sql",
+      "review": "pending",
+      "deployment": "pending"
+    },
+    "optimizer": {
+      "stage": "queued",
+      "repository_proposed": "jordanmeyer/bab-example-optimizer",
+      "review": "pending",
+      "deployment": "pending"
+    },
+    "presentation": {
+      "stage": "queued",
+      "repository_proposed": "jordanmeyer/bab-example-presentation",
+      "review": "pending",
+      "deployment": "pending"
+    },
+    "video": {
+      "stage": "queued",
+      "repository_proposed": "jordanmeyer/bab-example-video",
+      "review": "pending",
+      "deployment": "pending"
+    }
+  }
+}
