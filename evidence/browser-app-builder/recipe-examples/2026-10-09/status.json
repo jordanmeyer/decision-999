@@ -58,14 +58,15 @@
       "gallery_commit": "b8b2506c9842f1ec3dbee7f795ac9bff5c2b9d37"
     },
     "markets": {
-      "stage": "live verified; gallery pending",
+      "stage": "live verified and linked in gallery",
       "repository_proposed": "jordanmeyer/bab-example-markets",
       "review": "PASS",
       "deployment": "PASS",
       "reviewed_source": "5871ab6740e540e605778f0cea21adcc31b46a0c",
       "published_commit": "f822e18b8c1199996ef593f0395baedbbf2dccb0",
       "live_url": "https://jordanmeyer.github.io/bab-example-markets/",
-      "workflow": "https://github.com/jordanmeyer/bab-example-markets/actions/runs/37892896353"
+      "workflow": "https://github.com/jordanmeyer/bab-example-markets/actions/runs/37892896353",
+      "gallery_commit": "03e3861bb5adf1317cd6f687bcd5e110d3853f5e"
     },
     "sql": {
       "stage": "building",
@@ -74,10 +75,14 @@
       "deployment": "pending"
     },
     "optimizer": {
-      "stage": "building",
+      "stage": "live verified; gallery pending",
       "repository_proposed": "jordanmeyer/bab-example-optimizer",
-      "review": "pending",
-      "deployment": "pending"
+      "review": "PASS",
+      "deployment": "PASS",
+      "reviewed_source": "2e4eef40bf2091800e2f07c0144888c6b264f8ee",
+      "published_commit": "e23c930b353d4381b14db735efdf6122e535a832",
+      "workflow": "https://github.com/jordanmeyer/bab-example-optimizer/actions/runs/37894236996",
+      "live_url": "https://jordanmeyer.github.io/bab-example-optimizer/"
     },
     "presentation": {
       "stage": "queued",
@@ -86,7 +91,7 @@
       "deployment": "pending"
     },
     "video": {
-      "stage": "queued",
+      "stage": "agreed simulated plan; building silent two-template MP4 composer",
       "repository_proposed": "jordanmeyer/bab-example-video",
       "review": "pending",
       "deployment": "pending"

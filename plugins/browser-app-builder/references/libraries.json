@@ -345,7 +345,7 @@
       "id": "highs",
       "name": "HiGHS",
       "skill": "highs-browser-app",
-      "status": "candidate",
+      "status": "approved",
       "packages": {
         "highs": "1.15.3"
       },
@@ -359,7 +359,7 @@
           ]
         }
       },
-      "limitations": "Candidate: isolated browser probe passed; full application review pending. Local WASM in a dedicated worker, bounded solve time, explicit integrality and feasibility tolerances. Terminate/recreate worker for cancellation. A feasible incumbent is not proof of optimality."
+      "limitations": "Reviewed local WASM in a dedicated worker, bounded solve time, explicit integrality and feasibility tolerances. Terminate/recreate worker for cancellation. A feasible incumbent is not proof of optimality. Approved bounded three-product allocation configuration; arbitrary large models and every timeout/browser path are not certified."
     },
     {
       "id": "remotion",

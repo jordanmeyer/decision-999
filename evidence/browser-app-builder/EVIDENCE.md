@@ -105,3 +105,5 @@ Campaign continuation: [simulator](https://github.com/jordanmeyer/bab-example-si
 Roadmap review51a9c4c passed40 checks and independent calendar/DST/import/history review; exact publication7bce04a in run37892493308 and live Nov29→Dec2 delay passed. Leaflet local-GeoJSON configuration passed full market app review5871ab6 and the ordinary dependency checker after promotion; publication follows separately.
 
 Markets reviewed5871ab6 and publishedf822e18 through Actions37892896353. Live defaultGA67.50/TN67/NC61.75 and delivery$7→TN-only passed with22localgeometrypaths and clearlogs. The six campaign apps are configured-Mac evidence. Native-history follow-up updates for uploads81cbd711 and simulator6b25b8a were reviewed and verified live before any rerun interaction.
+
+The seventh campaign app, [Batch & Balance](https://jordanmeyer.github.io/bab-example-optimizer/), passed independent review of source2e4eef4,22browser checks and live Pages known answers after deploymente23c930. See campaign/optimizer records for independent enumeration, exact LP bounds, cancellation and observation limits.
