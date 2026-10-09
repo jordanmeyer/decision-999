@@ -23,3 +23,7 @@ Separate simplification pass: reviewed allapp/model/UI callers. No framework, ch
 Atf579934, actualaway/Backtest: duration7/releaseNov4/promiseDec10producedDec3/7buffer; afterreturnnativefieldsretained7/Nov4/Dec10whilefreshJSresultsresetNov29/2buffer. Initiallypreparedpageshowrender, then replacedbeforecheckpoint withnativeautocompleteoff onbothformsandchartview; this usesbrowserformpolicywithoutanextrarenderlifecycleowner. Actualrecheckrequired. Also rootindependentlyobservedinvalidcycle successstatusclaimingdatesrecalculated despitecorrecterrorpanel; commitstatusnow explicitlysaysdraftsavedforcorrection/results pausedforinvalidtask/projectupdates. Rechecksbelowwillrecordactualresults; no modelchanges.
 
 Actualfixedproductionrechecks: applied7dayduration/Nov4release/Dec10promise, selectedbaseline, navigatedaway/Back→formsreset5/blank/Dec1,viewcurrent andNov29/2buffer,consistent. Pending9dayunsavedinputaway/Back→5andNov29,consistent. Invalidnativecycle statusnow saysDraftsavedforcorrection/results pausedandmatchesalert/exportdisable. Noaddedpageshowhook: nativeautocompleteoffpassed.
+
+## Whitespace-only checkpoint
+
+Source `a6ab88f4442640b7efe6128d812e21603986c348` removes only a trailing blank line caught while importing the exact source snapshot into the gallery evidence. Rebuild passed with identical `index-Blm65-8K.js` and `index-BhmnrJFV.css`; model, plan, tests and runtime behavior are unchanged. Prior40 checks and independent UI evidence apply; reviewer independently confirmed applicability. Whitespace checks now pass.

@@ -50,11 +50,11 @@
           "label": "Earlier plain-app trials published and verified live"
         },
         {
-          "value": "5 of 10",
+          "value": "6 of 10",
           "label": "New recipe apps independently reviewed and verified live"
         }
       ],
-      "method": "Version 0.2.0 adds thirteen pinned library recipes exercised through individual browser checks and three synthetic combined fixtures on a configured Mac. Browser suites passed 10 presentation, 13 dashboard and 8 operations checks. Production preview, keyboard interactions, CSV import and narrow layout review exposed and corrected stylesheet, slide-sizing and file-input issues. These are maintainer-authored fixtures, not student outcomes or automatic Work-routing trials. The three linked live applications were built separately with version 0.1.1; their publication and corrected updates remain historical evidence. The ten-recipe campaign now has independently reviewed executive and uploaded-files dashboards plus a seasonal order simulator published through the managed workflow. The 13 executive, 31 uploads and 17 simulator browser checks and live reference calculations passed. Reviews corrected dialog focus, chart descriptions, production-only filter parsing and narrow-screen readability. Simulator review corrected returning-page chart lifecycle and maximum-value chart labels. The process model passed 37 browser checks, independent graph/import/keyboard checks, and live 471.5-to-370.5-minute routing comparisons; review corrected a non-finite assertion gap and long-label readability. The roadmap passed 40 checks and live dependency-delay examples; reviews corrected narrow chart display, invalid-draft messaging and returning-browser state. The same returning-browser check corrected native controls in the uploads and simulator apps. Further campaign apps and specialist recipes remain in progress.",
+      "method": "Version 0.2.0 adds thirteen pinned library recipes exercised through individual browser checks and three synthetic combined fixtures on a configured Mac. Browser suites passed 10 presentation, 13 dashboard and 8 operations checks. Production preview, keyboard interactions, CSV import and narrow layout review exposed and corrected stylesheet, slide-sizing and file-input issues. These are maintainer-authored fixtures, not student outcomes or automatic Work-routing trials. The three linked live applications were built separately with version 0.1.1; their publication and corrected updates remain historical evidence. The ten-recipe campaign now has independently reviewed executive and uploaded-files dashboards plus a seasonal order simulator published through the managed workflow. The 13 executive, 31 uploads and 17 simulator browser checks and live reference calculations passed. Reviews corrected dialog focus, chart descriptions, production-only filter parsing and narrow-screen readability. Simulator review corrected returning-page chart lifecycle and maximum-value chart labels. The process model passed 37 browser checks, independent graph/import/keyboard checks, and live 471.5-to-370.5-minute routing comparisons; review corrected a non-finite assertion gap and long-label readability. The roadmap passed 40 checks and live dependency-delay examples; reviews corrected narrow chart display, invalid-draft messaging and returning-browser state. The same returning-browser check corrected native controls in the uploads and simulator apps. The local Leaflet market screen passed 17 checks, independent scoring and public-geometry provenance review, and live ranking/gate checks. SQL, optimization, presentation and video apps remain in progress.",
       "limits": "Self-contained apps use bundled public/synthetic data or locally selected files. No backends, logins, external runtime APIs, remote AI, analytics, secret keys or remote fonts/scripts. Managed builds require compatible Node/npm and host file, shell and browser capabilities. Library approval covers the recorded versions/configurations, not arbitrary combinations. Work routing, clean-machine macOS/Windows and novice-student usability remain unverified. Browser checks do not certify a business model or full accessibility.",
       "screenshotAlt": [],
       "examples": [
@@ -77,6 +77,10 @@
         {
           "label": "Launch roadmap \u00b7 Frappe Gantt",
           "url": "https://jordanmeyer.github.io/bab-example-roadmap/"
+        },
+        {
+          "label": "Geographic market screen \u00b7 Leaflet",
+          "url": "https://jordanmeyer.github.io/bab-example-markets/"
         },
         {
           "label": "Pricing calculator",

@@ -23,7 +23,7 @@ The checklist includes four recipes beyond the current thirteen-library inventor
 - [x] Probabilistic simulator: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
 - [x] Interactive process model: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
 - [x] Roadmap/project plan: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
-- [ ] Geographic market analysis: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
+- [x] Geographic market analysis: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
 - [ ] SQL data explorer: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
 - [ ] Resource-allocation optimizer: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
 - [ ] Interactive analytical presentation: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
@@ -114,3 +114,5 @@ Campaign state and review evidence live under evidence/browser-app-builder/recip
 Revision note (2026-10-09): began the expanded ten-recipe goal, preserving prior completed expansion/review work, explicit all-ten scope and per-app independent review/publication requirement.
 
 Continuation: roadmap reviewed51a9c4c and live7bce04a; markets reviewed5871ab6, Leaflet local-GeoJSON configuration promoted and normal dependency checker passed. Native Back controls/results mismatch exposed in roadmap, markets, uploads and simulator; minimal fixes reviewed with pre-interaction checks and Evaluate guidance updated. SQL and optimizer implementations are underway.
+
+Markets publishedf822e18 with Actions37892896353 and live known answers. Simulator3ef9f4e and uploadsc0fae93 updates passed exact Actions and actual returning-browser controls/results checks. Roadmap source snapshot revealed a trailing blank line after its initial gallerycommit; correction/rebuild produces identical published assets, tracked as a whitespace-only follow-up.

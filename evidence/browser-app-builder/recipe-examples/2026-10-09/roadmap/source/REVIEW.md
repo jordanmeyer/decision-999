@@ -1,6 +1,6 @@
 # Independent review — Launch Ledger
 
-Reviewer: persistent independent recipe reviewer. Status: **PASS for source 51a9c4c965b25b26458fae425367ebebc6151da0**. Reviewer owns this file. The reviewer's CUA browser remained unavailable after documented recovery attempts; coordinator supplied an independent browser witness, separately from developer observations. The reviewer independently reviewed source/model and inspected saved rendered images.
+Reviewer: persistent independent recipe reviewer. Status: **PASS applies to source a6ab88f4442640b7efe6128d812e21603986c348**. Reviewer owns this file. The reviewer's CUA browser remained unavailable after documented recovery attempts; coordinator supplied an independent browser witness, separately from developer observations. The reviewer independently reviewed source/model and inspected saved rendered images.
 
 ## Round 1 — source af8465475b744f10223eda465214a83a5a34bcf2
 
@@ -40,3 +40,7 @@ The final independent pre-interaction history case applies duration7/releaseNove
 The independent320px maximum-horizon import gives December31,2025/730days/0buffer with root319/319 and a locally scrolling850px table inside273px. Keyboard ArrowRight scrolls the table121px. The390px default frame reports389/389. Root's inner-frame screenshot capture was intermittent; its retained image covers the narrow top only. Reviewer separately inspected actual developer-captured final images `/private/tmp/roadmap-final-320-chart.jpg` and `/private/tmp/roadmap-final-desktop.jpg`: the initial narrow view shows readable month/day headers, the first task and dependency branches, with useful table rows; desktop controls/metrics are legible and aligned. This closes the observed padding/header issues without implying those developer captures are independent root browser actions.
 
 All required findings are closed. No additional feature is necessary for the agreed calendar-day precedence model. Exact end boundaries, release constraints, float, promise buffer and lack of resource feasibility are clear. Host frame limits and the disclosed earlier transcript gap remain limitations, not hidden evidence. A normal clean build must remove ignored-dist review fixtures before publication; reviewed application source must remain unchanged.
+
+## Whitespace-only applicability — a6ab88f4442640b7efe6128d812e21603986c348 — PASS
+
+The coordinator's staged whitespace check caught an existing trailing blank line after the final statement in `app/app.js`; that failed check remains part of the record. Independently inspected the correction: it deletes only that final empty line. No application behavior, model, tests or PLAN changed. The coordinator reports a successful rebuild with unchanged `index-Blm65-8K.js` and `index-BhmnrJFV.css` assets. The prior source/UI PASS therefore applies to this checkpoint without repeating model or browser tests.

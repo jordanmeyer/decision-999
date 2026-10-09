@@ -38,6 +38,8 @@ New library examples, built through simulated planning and independent review:
 
 - [Launch roadmap](https://jordanmeyer.github.io/bab-example-roadmap/) — Frappe Gantt with dependency-based calendar calculations. [Source and review](https://github.com/jordanmeyer/bab-example-roadmap).
 
+- [Geographic market screen](https://jordanmeyer.github.io/bab-example-markets/) — Leaflet with local public boundaries and synthetic scoring assumptions. [Source and review](https://github.com/jordanmeyer/bab-example-markets).
+
 Earlier examples built with version 0.1.1 in automated trials with simulated student conversations and synthetic data; these demonstrate the original plain-JavaScript workflow:
 
 - [Pricing calculator](https://jordanmeyer.github.io/bab-trial-pricing-2026-10-08/)
@@ -50,4 +52,4 @@ Apps run in the browser using public/synthetic datasets or locally selected file
 
 The host must provide usable file, Git, preview, and browser capabilities. Managed apps need a compatible Node/npm installation, which Setup reuses or helps prepare. Plain apps use available preview capabilities. Installation does not grant tools, OS permissions, or GitHub access.
 
-This is a pilot candidate, not a verified no-touch onboarding promise. See the listing's evidence record for actual checks and outstanding Work, clean-machine, fresh-chat, and novice-student gates. The original plain-app publication and updates were verified on a configured Mac. The 0.2.0 library expansion has separate local browser and production-build evidence; the executive, uploads, simulator, process and roadmap examples now also verify managed GitHub Pages publication. Evaluation supports specific claims about tested cases; it does not certify a business model.
+This is a pilot candidate, not a verified no-touch onboarding promise. See the listing's evidence record for actual checks and outstanding Work, clean-machine, fresh-chat, and novice-student gates. The original plain-app publication and updates were verified on a configured Mac. The 0.2.0 library expansion has separate local browser and production-build evidence; the executive, uploads, simulator, process, roadmap and market examples now also verify managed GitHub Pages publication. Evaluation supports specific claims about tested cases; it does not certify a business model.

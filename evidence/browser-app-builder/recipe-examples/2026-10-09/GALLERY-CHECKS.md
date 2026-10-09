@@ -11,3 +11,5 @@ Published gallery verified at course commit `4cd8381977020d94d8a9316921e213e9622
 Third example: course commit86e3e7e, successful Actions run37891128760, actual live gallery shows3of10 and the simulator link. The fourth process link is prepared from its independently verified live deployment; publication verification follows below.
 
 Fourth example: course commit0d61dcf, Actions37891739298 succeeded; actual live gallery shows4of10 and the process link. Process report-only commit7a236ea also deployed successfully in37891600065. Later native-history checks reopened a bounded issue in uploads and simulator; fixes/re-review are tracked without erasing initial passed rounds.
+
+Fifth example: courseb8b2506, Actions37892802231 successful, actual livegallery5of10 with roadmap link verified. Its initial staged whitespace check found one existing trailing blank line in the exact roadmap source snapshot; it was mistakenly followed by commit rather than halted. Retained failure; a whitespace-only source/snapshot correction is underway. Subsequent staging commands stop on failed checks.

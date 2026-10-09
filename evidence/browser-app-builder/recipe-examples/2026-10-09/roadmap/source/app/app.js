@@ -79,4 +79,3 @@ $('import').addEventListener('change',async event=>{
 });
 $('notices').href=import.meta.env.BASE_URL+'THIRD-PARTY-NOTICES.txt';
 render();announce('Synthetic launch loaded. Every change stays in this tab until you export it.');
-

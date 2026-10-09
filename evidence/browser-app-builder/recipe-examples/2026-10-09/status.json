@@ -13,26 +13,26 @@
       "gallery_commit": "4cd8381977020d94d8a9316921e213e962235ecb"
     },
     "uploads": {
-      "stage": "live; bounded history follow-up in review",
+      "stage": "live verified and linked; history correction verified",
       "repository_proposed": "jordanmeyer/bab-example-uploads",
       "review": "PASS",
       "deployment": "PASS",
       "evaluated_source": "036710e852d77dea13973a026e87deb645d53f20",
-      "reviewed_source": "b64d85f7658a18602a9ad5877232d100069ac463",
-      "published_commit": "d50e59024f2b29ba66782e7be135d20e2bfb9a48",
+      "reviewed_source": "81cbd7110caef07f754d9b377e183dca4e17f5a7",
+      "published_commit": "c0fae93786ae58d249adb978065ec667a4375143",
       "live_url": "https://jordanmeyer.github.io/bab-example-uploads/",
-      "workflow": "https://github.com/jordanmeyer/bab-example-uploads/actions/runs/37888660919",
+      "workflow": "https://github.com/jordanmeyer/bab-example-uploads/actions/runs/37892426427",
       "gallery_commit": "4cd8381977020d94d8a9316921e213e962235ecb"
     },
     "simulator": {
-      "stage": "live; bounded history follow-up in review",
+      "stage": "live verified and linked; history correction verified",
       "repository_proposed": "jordanmeyer/bab-example-simulator",
       "review": "PASS",
       "deployment": "PASS",
-      "reviewed_source": "8dbb6ab30ef959c008e058169af41c561d41fc6a",
-      "published_commit": "c769e3f26b89358ccb96cae5c280b2eee5fc0608",
+      "reviewed_source": "6b25b8a6898a0575b5270406b1cff7df48f7c047",
+      "published_commit": "3ef9f4ebab82f7b641538a0035156c20b56d3a24",
       "live_url": "https://jordanmeyer.github.io/bab-example-simulator/",
-      "workflow": "https://github.com/jordanmeyer/bab-example-simulator/actions/runs/37890670831",
+      "workflow": "https://github.com/jordanmeyer/bab-example-simulator/actions/runs/37892737655",
       "gallery_commit": "86e3e7e7844b3d8d7648b29b41d34804423a22a4"
     },
     "process": {
@@ -47,21 +47,25 @@
       "gallery_commit": "0d61dcf"
     },
     "roadmap": {
-      "stage": "live verified; gallery pending",
+      "stage": "live verified and linked in gallery",
       "repository_proposed": "jordanmeyer/bab-example-roadmap",
       "review": "PASS",
       "deployment": "PASS",
       "reviewed_source": "51a9c4c965b25b26458fae425367ebebc6151da0",
       "published_commit": "7bce04a0965356a92bceb29d52756e5e9ae458d8",
       "live_url": "https://jordanmeyer.github.io/bab-example-roadmap/",
-      "workflow": "https://github.com/jordanmeyer/bab-example-roadmap/actions/runs/37892493308"
+      "workflow": "https://github.com/jordanmeyer/bab-example-roadmap/actions/runs/37892493308",
+      "gallery_commit": "b8b2506c9842f1ec3dbee7f795ac9bff5c2b9d37"
     },
     "markets": {
-      "stage": "review passed; publication preparation",
+      "stage": "live verified; gallery pending",
       "repository_proposed": "jordanmeyer/bab-example-markets",
       "review": "PASS",
-      "deployment": "pending",
-      "reviewed_source": "5871ab6740e540e605778f0cea21adcc31b46a0c"
+      "deployment": "PASS",
+      "reviewed_source": "5871ab6740e540e605778f0cea21adcc31b46a0c",
+      "published_commit": "f822e18b8c1199996ef593f0395baedbbf2dccb0",
+      "live_url": "https://jordanmeyer.github.io/bab-example-markets/",
+      "workflow": "https://github.com/jordanmeyer/bab-example-markets/actions/runs/37892896353"
     },
     "sql": {
       "stage": "building",
