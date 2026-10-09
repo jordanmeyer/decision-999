@@ -1,0 +1,63 @@
+[
+  {
+    "app": "executive",
+    "reviewed_source": "bc19eb40ba4ded2b141c13955cdea79e0bf406c4",
+    "changed_paths": [],
+    "dirty_paths": []
+  },
+  {
+    "app": "uploads",
+    "reviewed_source": "81cbd7110caef07f754d9b377e183dca4e17f5a7",
+    "changed_paths": [],
+    "dirty_paths": []
+  },
+  {
+    "app": "simulator",
+    "reviewed_source": "6b25b8a6898a0575b5270406b1cff7df48f7c047",
+    "changed_paths": [],
+    "dirty_paths": []
+  },
+  {
+    "app": "process",
+    "reviewed_source": "aca04afaa1046785df0f46b7f95dbc14fc5f556e",
+    "changed_paths": [],
+    "dirty_paths": []
+  },
+  {
+    "app": "roadmap",
+    "reviewed_source": "a6ab88f4442640b7efe6128d812e21603986c348",
+    "changed_paths": [],
+    "dirty_paths": [],
+    "note": "Compared accepted whitespace follow-up; original review retained in status.json."
+  },
+  {
+    "app": "markets",
+    "reviewed_source": "5871ab6740e540e605778f0cea21adcc31b46a0c",
+    "changed_paths": [],
+    "dirty_paths": []
+  },
+  {
+    "app": "sql",
+    "reviewed_source": "7a957523d776471eec7283311a562a9793d7f729",
+    "changed_paths": [],
+    "dirty_paths": []
+  },
+  {
+    "app": "optimizer",
+    "reviewed_source": "2e4eef40bf2091800e2f07c0144888c6b264f8ee",
+    "changed_paths": [],
+    "dirty_paths": []
+  },
+  {
+    "app": "presentation",
+    "reviewed_source": "f21d9f2b5eebd74ba33cfc34872629c73c1d9ad8",
+    "changed_paths": [],
+    "dirty_paths": []
+  },
+  {
+    "app": "video",
+    "reviewed_source": "287fed96c6f2afc3608170ce6cbefe618b992aeb",
+    "changed_paths": [],
+    "dirty_paths": []
+  }
+]

@@ -109,3 +109,7 @@ Markets reviewed5871ab6 and publishedf822e18 through Actions37892896353. Live de
 The seventh campaign app, [Batch & Balance](https://jordanmeyer.github.io/bab-example-optimizer/), passed independent review of source2e4eef4,22browser checks and live Pages known answers after deploymente23c930. See campaign/optimizer records for independent enumeration, exact LP bounds, cancellation and observation limits.
 
 The eighth campaign app, [Fulfillment Lab](https://jordanmeyer.github.io/bab-example-sql/), passed36 checks, independent review at7a957523 and livea2f6aa2 known joins. The retained JSON-extension failure, exact export, real timeout and host download-wait failure are documented separately in campaign/sql evidence.
+
+## Completed ten-recipe campaign —2026-10-09
+
+[Campaign evidence](recipe-examples/2026-10-09/README.md) contains ten original apps with actual simulated planning exchanges, independent persistent review/revision,268passing browser checks, exact source applicability and ten verified Pages deployments. Four specialist configurations join the original13: local Leaflet, bounded DuckDB-Wasm, worker HiGHS and controlled silent Remotion rendering. Five local video exports were independently decoded and reviewed; a further live export decoded and played. Remotion's disclosed telemetry is the explicitly authorized video-only exception. Host download automation was unreliable despite bounded tool timeouts and is not claimed as a reliable no-touch workflow. Clean-machine, actual Work and student-usability gaps remain.

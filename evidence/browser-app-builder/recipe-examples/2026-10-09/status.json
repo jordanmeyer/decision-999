@@ -51,11 +51,13 @@
       "repository_proposed": "jordanmeyer/bab-example-roadmap",
       "review": "PASS",
       "deployment": "PASS",
-      "reviewed_source": "51a9c4c965b25b26458fae425367ebebc6151da0",
+      "reviewed_source": "a6ab88f4442640b7efe6128d812e21603986c348",
       "published_commit": "7bce04a0965356a92bceb29d52756e5e9ae458d8",
       "live_url": "https://jordanmeyer.github.io/bab-example-roadmap/",
       "workflow": "https://github.com/jordanmeyer/bab-example-roadmap/actions/runs/37892493308",
-      "gallery_commit": "b8b2506c9842f1ec3dbee7f795ac9bff5c2b9d37"
+      "gallery_commit": "b8b2506c9842f1ec3dbee7f795ac9bff5c2b9d37",
+      "original_reviewed_source": "51a9c4c965b25b26458fae425367ebebc6151da0",
+      "review_note": "Whitespace-only follow-up independently accepted; identical production assets."
     },
     "markets": {
       "stage": "live verified and linked in gallery",
@@ -91,20 +93,25 @@
       "gallery_commit": "18b3562bcaa4d7af015211d12dfa777cdaf95716"
     },
     "presentation": {
-      "stage": "live verified; gallery pending",
+      "stage": "live verified and linked in gallery",
       "repository_proposed": "jordanmeyer/bab-example-presentation",
       "review": "PASS",
       "deployment": "PASS",
       "reviewed_source": "f21d9f2b5eebd74ba33cfc34872629c73c1d9ad8",
       "published_commit": "fda0419135322442ee7a0f28059a0bb22524f6e5",
       "workflow": "https://github.com/jordanmeyer/bab-example-presentation/actions/runs/37921873665",
-      "live_url": "https://jordanmeyer.github.io/bab-example-presentation/"
+      "live_url": "https://jordanmeyer.github.io/bab-example-presentation/",
+      "gallery_commit": "da449f8a7a4bdd6c852ab73aff2bfbe5c4b72771"
     },
     "video": {
-      "stage": "agreed simulated plan; building silent two-template MP4 composer",
+      "stage": "live verified; final gallery push pending",
       "repository_proposed": "jordanmeyer/bab-example-video",
-      "review": "pending",
-      "deployment": "pending"
+      "review": "PASS",
+      "deployment": "PASS",
+      "reviewed_source": "287fed96c6f2afc3608170ce6cbefe618b992aeb",
+      "published_commit": "a179981ec334857c7a9aca20281e8c22df819879",
+      "workflow": "https://github.com/jordanmeyer/bab-example-video/actions/runs/37922588673",
+      "live_url": "https://jordanmeyer.github.io/bab-example-video/"
     }
   }
 }

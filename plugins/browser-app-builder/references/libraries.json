@@ -365,7 +365,7 @@
       "id": "remotion",
       "name": "Remotion browser video",
       "skill": "remotion-browser-app",
-      "status": "candidate",
+      "status": "approved",
       "packages": {
         "remotion": "4.0.534",
         "@remotion/player": "4.0.534",
@@ -396,7 +396,7 @@
           ]
         }
       },
-      "limitations": "Candidate: isolated silent MP4 export/playback passed with optional audio encoders excluded by explicit Vite aliases; full application review remains unresolved. Controlled silent templates, WebCodecs capability checks and forced muted rendering. Audio export is unsupported; this configuration does not resolve audio-codec source obligations for other configurations. Remotion license eligibility must be established. User-approved video-only exception: render-event telemetry sends IP, origin, render type/status to Remotion, never video content. Disclose before rendering; no analytics elsewhere."
+      "limitations": "Reviewed silent H.264 MP4 profile: two controlled templates, bounded copy and dimensions, explicit WebCodecs capability checks and forced muted rendering. Optional AAC/MP3/FLAC encoders are excluded by Vite aliases plus a build-time module assertion. Five actual exports were decoded and reviewed; arbitrary compositions, browsers and audio are not certified. License eligibility must be established for the actual operator. App-owner acceptance and visitor disclosure are required for Remotion render-event telemetry (IP, origin, render type/status; no video content); the recorded exception applies only to the authorized video example. Preserve distributed licenses, supplemental provenance and exact unmodified Mediabunny source links."
     }
   ]
 }

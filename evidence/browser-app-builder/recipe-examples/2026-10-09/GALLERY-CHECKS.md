@@ -23,3 +23,11 @@ The first seventh-link Actions run37894480465 failed because this record itself 
 Corrected seventh-link commit18b3562bcaa4d7af015211d12dfa777cdaf95716 passed Actions37894587436. Actual livegallery shows7of10 andtheHiGHSallocationlink. Optimizer report-only61d6644 also passed Actions37894431038.
 
 Eighth gallery update2fae6f17b2aa4ab609c0f580870a0a4df8b76ec4: Actions37921552354completed/success. Actual reloaded live gallery showed8of10, sixteen approved recipes and the Fulfillment SQL explorer link at its verified Pages URL.
+
+Ninth gallery updateda449f8a7a4bdd6c852ab73aff2bfbe5c4b72771 passed Actions37922177070. Actual reloaded live listing showed9of10 and the analytical presentation link.
+
+## Final0.2.2 integration
+
+Actual local repository-path page contains all10newapp links plus3historical plain-app links,17approved recipes,268checks and10of10live. Final method copy was simplified while preserving evidence/limits. Desktop layout and a390CSSpx fixed frame were visually inspected; the actual narrow document measured389client/389scroll, and all links wrapped without horizontal overflow (gallery-narrow-final.png, gallery-links-narrow.png). The host viewport override reported1181CSSpx despite a390request, so it was reset and was not used as narrow evidence.
+
+Native keyboard Tab/Shift-Tab/Enter reached copy controls and actual clipboard text matched both the repository slug and two Codex installation commands. A locator-based activation initially left the observed clipboard stale despite a success message; native-key recheck succeeded. Console warnings/errors were empty. The temporary ignored review frame is removed by the final clean directory build. Independent integration reviewer found no blocking inconsistency in17inventory entries, all10links,268count or video licensing/telemetry boundaries.

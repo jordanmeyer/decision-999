@@ -17,7 +17,7 @@ The checklist includes four recipes beyond the current thirteen-library inventor
 - [x] Started independent executive and uploaded-file developers plus specialist feasibility research.
 - [x] Answered first realistic planning questions for executive and uploads; preserved exact messages for their transcripts.
 - [x] (2026-10-09) User explicitly approved a disclosed video-only Remotion render-telemetry exception; no exception for other apps.
-- [ ] Verify specialized package configurations, exact licenses and browser behavior.
+- [x] Verify specialized package configurations, exact licenses and browser behavior.
 - [x] Executive dashboard: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
 - [x] Uploaded-files dashboard: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
 - [x] Probabilistic simulator: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
@@ -27,7 +27,7 @@ The checklist includes four recipes beyond the current thirteen-library inventor
 - [x] SQL data explorer: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
 - [x] Resource-allocation optimizer: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
 - [x] Interactive analytical presentation: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
-- [ ] Downloadable product-video generator: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
+- [x] Downloadable product-video generator: plan, build, test, reviewer revisions/pass, publish, verify live, link plugin.
 - [ ] Verify complete gallery, all links, all deployments and exact review/evaluation checkpoints; run final repository/packaging checks.
 
 ## Surprises & Discoveries
@@ -55,7 +55,7 @@ Decision (2026-10-09): user explicitly allowed the Remotion video-only telemetry
 ## Outcomes & Retrospective
 
 
-Eight applications have passed independent review, exact-commit Pages deployment and live checks, and are linked in the deployed gallery. SQL was the eighth, with gallery commit2fae6f1 and successful Actions37921552354. Presentation final fixes pass the coordinator's actual browser checks; the persistent reviewer is completing acceptance. Video exports have been downloaded, decoded and played; remaining template and lifecycle checks are underway. Failed rounds remain in each record. status.json records separate reviewed, published and gallery commits. Completion requires all ten.
+All ten applications passed persistent independent review, exact-commit GitHub Pages deployment and live checks. Source checkpoints, actual simulated conversations, failed rounds, corrections and final verdicts are retained. The ten browser suites total268passing checks. Video has five independently decoded/reviewed local exports plus a decoded and played live export. Final plugin0.2.2 packages17approved configurations and all10links; final gallery publication is being verified. Browser download tools repeatedly ignored explicit timeout bounds; files were valid but unattended download automation remains a limitation. Clean-machine/Windows/Work/novice gates remain separate and unverified.
 
 ## Context and Orientation
 
@@ -124,3 +124,5 @@ Optimizer is live at the reviewed checkpoint with known answers955and23 and repo
 Eight apps are reviewed and live: SQL source7a957523 / publicationa2f6aa2 passed Actions37920646141 and actual known joins. Its normal approved-dependency check passed. The eighth gallery link is prepared. Presentation review is correcting a stale Reveal announcement and narrow maximum-money wrapping; video has a real decoded silent MP4 with remaining combinations and lifecycle checks. The browser download-event tool ignored explicit timeouts and stalled for hours; future media checks must use direct download inspection rather than that wait.
 
 Presentation passed independent review atf21d9f2 and live publicationfda0419 via Actions37921873665; ninth gallery update prepared. The reusable Reveal recipe now inherits the tested DOM-focus and current-announcement corrections.
+
+Decision2026-10-09: publish final reviewed campaign as plugin0.2.2 so installed clients can identify the completed recipe update. All ten live apps passed; final gallery verification remains the last delivery step.
