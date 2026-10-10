@@ -1,0 +1,385 @@
+line_id,sale_date,product,channel,units,unit_price_usd
+S0001,2026-01-03,Weekender tote,Paid social,23,89.00
+S0002,2026-01-09,Weekender tote,Paid social,22,89.00
+S0003,2026-01-15,Weekender tote,Paid social,21,89.00
+S0004,2026-01-21,Weekender tote,Paid social,20,89.00
+S0005,2026-01-03,Weekender tote,Organic search,21,89.00
+S0006,2026-01-09,Weekender tote,Organic search,20,89.00
+S0007,2026-01-15,Weekender tote,Organic search,19,89.00
+S0008,2026-01-21,Weekender tote,Organic search,18,89.00
+S0009,2026-01-03,Weekender tote,Email,7,89.00
+S0010,2026-01-09,Weekender tote,Email,6,89.00
+S0011,2026-01-15,Weekender tote,Email,17,89.00
+S0012,2026-01-21,Weekender tote,Email,16,89.00
+S0013,2026-01-03,Studio tumbler,Paid social,6,32.00
+S0014,2026-01-09,Studio tumbler,Paid social,17,32.00
+S0015,2026-01-15,Studio tumbler,Paid social,16,32.00
+S0016,2026-01-21,Studio tumbler,Paid social,15,32.00
+S0017,2026-01-03,Studio tumbler,Organic search,14,32.00
+S0018,2026-01-09,Studio tumbler,Organic search,13,32.00
+S0019,2026-01-15,Studio tumbler,Organic search,12,32.00
+S0020,2026-01-21,Studio tumbler,Organic search,11,32.00
+S0021,2026-01-03,Studio tumbler,Email,12,32.00
+S0022,2026-01-09,Studio tumbler,Email,11,32.00
+S0023,2026-01-15,Studio tumbler,Email,10,32.00
+S0024,2026-01-21,Studio tumbler,Email,9,32.00
+S0025,2026-01-03,Everyday tee,Paid social,11,28.00
+S0026,2026-01-09,Everyday tee,Paid social,10,28.00
+S0027,2026-01-15,Everyday tee,Paid social,9,28.00
+S0028,2026-01-21,Everyday tee,Paid social,8,28.00
+S0029,2026-01-03,Everyday tee,Organic search,19,28.00
+S0030,2026-01-09,Everyday tee,Organic search,18,28.00
+S0031,2026-01-15,Everyday tee,Organic search,17,28.00
+S0032,2026-01-21,Everyday tee,Organic search,16,28.00
+S0033,2026-01-03,Everyday tee,Email,17,28.00
+S0034,2026-01-09,Everyday tee,Email,16,28.00
+S0035,2026-01-15,Everyday tee,Email,15,28.00
+S0036,2026-01-21,Everyday tee,Email,14,28.00
+S0037,2026-01-03,Desk organizer,Paid social,16,54.00
+S0038,2026-01-09,Desk organizer,Paid social,15,54.00
+S0039,2026-01-15,Desk organizer,Paid social,14,54.00
+S0040,2026-01-21,Desk organizer,Paid social,13,54.00
+S0041,2026-01-03,Desk organizer,Organic search,12,54.00
+S0042,2026-01-09,Desk organizer,Organic search,11,54.00
+S0043,2026-01-15,Desk organizer,Organic search,22,54.00
+S0044,2026-01-21,Desk organizer,Organic search,21,54.00
+S0045,2026-01-03,Desk organizer,Email,10,54.00
+S0046,2026-01-09,Desk organizer,Email,9,54.00
+S0047,2026-01-15,Desk organizer,Email,8,54.00
+S0048,2026-01-21,Desk organizer,Email,7,54.00
+S0049,2026-02-03,Weekender tote,Paid social,19,89.00
+S0050,2026-02-09,Weekender tote,Paid social,18,89.00
+S0051,2026-02-15,Weekender tote,Paid social,17,89.00
+S0052,2026-02-21,Weekender tote,Paid social,28,89.00
+S0053,2026-02-03,Weekender tote,Organic search,16,89.00
+S0054,2026-02-09,Weekender tote,Organic search,15,89.00
+S0055,2026-02-15,Weekender tote,Organic search,14,89.00
+S0056,2026-02-21,Weekender tote,Organic search,13,89.00
+S0057,2026-02-03,Weekender tote,Email,14,89.00
+S0058,2026-02-09,Weekender tote,Email,13,89.00
+S0059,2026-02-15,Weekender tote,Email,12,89.00
+S0060,2026-02-21,Weekender tote,Email,11,89.00
+S0061,2026-02-03,Studio tumbler,Paid social,13,32.00
+S0062,2026-02-09,Studio tumbler,Paid social,12,32.00
+S0063,2026-02-15,Studio tumbler,Paid social,11,32.00
+S0064,2026-02-21,Studio tumbler,Paid social,10,32.00
+S0065,2026-02-03,Studio tumbler,Organic search,21,32.00
+S0066,2026-02-09,Studio tumbler,Organic search,20,32.00
+S0067,2026-02-15,Studio tumbler,Organic search,19,32.00
+S0068,2026-02-21,Studio tumbler,Organic search,18,32.00
+S0069,2026-02-03,Studio tumbler,Email,7,32.00
+S0070,2026-02-09,Studio tumbler,Email,6,32.00
+S0071,2026-02-15,Studio tumbler,Email,17,32.00
+S0072,2026-02-21,Studio tumbler,Email,16,32.00
+S0073,2026-02-03,Everyday tee,Paid social,6,28.00
+S0074,2026-02-09,Everyday tee,Paid social,17,28.00
+S0075,2026-02-15,Everyday tee,Paid social,16,28.00
+S0076,2026-02-21,Everyday tee,Paid social,15,28.00
+S0077,2026-02-03,Everyday tee,Organic search,14,28.00
+S0078,2026-02-09,Everyday tee,Organic search,13,28.00
+S0079,2026-02-15,Everyday tee,Organic search,12,28.00
+S0080,2026-02-21,Everyday tee,Organic search,11,28.00
+S0081,2026-02-03,Everyday tee,Email,12,28.00
+S0082,2026-02-09,Everyday tee,Email,11,28.00
+S0083,2026-02-15,Everyday tee,Email,10,28.00
+S0084,2026-02-21,Everyday tee,Email,9,28.00
+S0085,2026-02-03,Desk organizer,Paid social,11,54.00
+S0086,2026-02-09,Desk organizer,Paid social,10,54.00
+S0087,2026-02-15,Desk organizer,Paid social,9,54.00
+S0088,2026-02-21,Desk organizer,Paid social,8,54.00
+S0089,2026-02-03,Desk organizer,Organic search,19,54.00
+S0090,2026-02-09,Desk organizer,Organic search,18,54.00
+S0091,2026-02-15,Desk organizer,Organic search,17,54.00
+S0092,2026-02-21,Desk organizer,Organic search,16,54.00
+S0093,2026-02-03,Desk organizer,Email,17,54.00
+S0094,2026-02-09,Desk organizer,Email,16,54.00
+S0095,2026-02-15,Desk organizer,Email,15,54.00
+S0096,2026-02-21,Desk organizer,Email,14,54.00
+S0097,2026-03-03,Weekender tote,Paid social,26,89.00
+S0098,2026-03-09,Weekender tote,Paid social,25,89.00
+S0099,2026-03-15,Weekender tote,Paid social,24,89.00
+S0100,2026-03-21,Weekender tote,Paid social,23,89.00
+S0101,2026-03-03,Weekender tote,Organic search,11,89.00
+S0102,2026-03-09,Weekender tote,Organic search,22,89.00
+S0103,2026-03-15,Weekender tote,Organic search,21,89.00
+S0104,2026-03-21,Weekender tote,Organic search,20,89.00
+S0105,2026-03-03,Weekender tote,Email,9,89.00
+S0106,2026-03-09,Weekender tote,Email,8,89.00
+S0107,2026-03-15,Weekender tote,Email,7,89.00
+S0108,2026-03-21,Weekender tote,Email,6,89.00
+S0109,2026-03-03,Studio tumbler,Paid social,8,32.00
+S0110,2026-03-09,Studio tumbler,Paid social,7,32.00
+S0111,2026-03-15,Studio tumbler,Paid social,6,32.00
+S0112,2026-03-21,Studio tumbler,Paid social,17,32.00
+S0113,2026-03-03,Studio tumbler,Organic search,16,32.00
+S0114,2026-03-09,Studio tumbler,Organic search,15,32.00
+S0115,2026-03-15,Studio tumbler,Organic search,14,32.00
+S0116,2026-03-21,Studio tumbler,Organic search,13,32.00
+S0117,2026-03-03,Studio tumbler,Email,14,32.00
+S0118,2026-03-09,Studio tumbler,Email,13,32.00
+S0119,2026-03-15,Studio tumbler,Email,12,32.00
+S0120,2026-03-21,Studio tumbler,Email,11,32.00
+S0121,2026-03-03,Everyday tee,Paid social,13,28.00
+S0122,2026-03-09,Everyday tee,Paid social,12,28.00
+S0123,2026-03-15,Everyday tee,Paid social,11,28.00
+S0124,2026-03-21,Everyday tee,Paid social,10,28.00
+S0125,2026-03-03,Everyday tee,Organic search,21,28.00
+S0126,2026-03-09,Everyday tee,Organic search,20,28.00
+S0127,2026-03-15,Everyday tee,Organic search,19,28.00
+S0128,2026-03-21,Everyday tee,Organic search,18,28.00
+S0129,2026-03-03,Everyday tee,Email,7,28.00
+S0130,2026-03-09,Everyday tee,Email,6,28.00
+S0131,2026-03-15,Everyday tee,Email,17,28.00
+S0132,2026-03-21,Everyday tee,Email,16,28.00
+S0133,2026-03-03,Desk organizer,Paid social,6,54.00
+S0134,2026-03-09,Desk organizer,Paid social,17,54.00
+S0135,2026-03-15,Desk organizer,Paid social,16,54.00
+S0136,2026-03-21,Desk organizer,Paid social,15,54.00
+S0137,2026-03-03,Desk organizer,Organic search,14,54.00
+S0138,2026-03-09,Desk organizer,Organic search,13,54.00
+S0139,2026-03-15,Desk organizer,Organic search,12,54.00
+S0140,2026-03-21,Desk organizer,Organic search,11,54.00
+S0141,2026-03-03,Desk organizer,Email,12,54.00
+S0142,2026-03-09,Desk organizer,Email,11,54.00
+S0143,2026-03-15,Desk organizer,Email,10,54.00
+S0144,2026-03-21,Desk organizer,Email,9,54.00
+S0145,2026-04-03,Weekender tote,Paid social,22,89.00
+S0146,2026-04-09,Weekender tote,Paid social,21,89.00
+S0147,2026-04-15,Weekender tote,Paid social,20,89.00
+S0148,2026-04-21,Weekender tote,Paid social,19,89.00
+S0149,2026-04-03,Weekender tote,Organic search,18,89.00
+S0150,2026-04-09,Weekender tote,Organic search,17,89.00
+S0151,2026-04-15,Weekender tote,Organic search,16,89.00
+S0152,2026-04-21,Weekender tote,Organic search,15,89.00
+S0153,2026-04-03,Weekender tote,Email,16,89.00
+S0154,2026-04-09,Weekender tote,Email,15,89.00
+S0155,2026-04-15,Weekender tote,Email,14,89.00
+S0156,2026-04-21,Weekender tote,Email,13,89.00
+S0157,2026-04-03,Studio tumbler,Paid social,15,32.00
+S0158,2026-04-09,Studio tumbler,Paid social,14,32.00
+S0159,2026-04-15,Studio tumbler,Paid social,13,32.00
+S0160,2026-04-21,Studio tumbler,Paid social,12,32.00
+S0161,2026-04-03,Studio tumbler,Organic search,11,32.00
+S0162,2026-04-09,Studio tumbler,Organic search,22,32.00
+S0163,2026-04-15,Studio tumbler,Organic search,21,32.00
+S0164,2026-04-21,Studio tumbler,Organic search,20,32.00
+S0165,2026-04-03,Studio tumbler,Email,9,32.00
+S0166,2026-04-09,Studio tumbler,Email,8,32.00
+S0167,2026-04-15,Studio tumbler,Email,7,32.00
+S0168,2026-04-21,Studio tumbler,Email,6,32.00
+S0169,2026-04-03,Everyday tee,Paid social,8,28.00
+S0170,2026-04-09,Everyday tee,Paid social,7,28.00
+S0171,2026-04-15,Everyday tee,Paid social,6,28.00
+S0172,2026-04-21,Everyday tee,Paid social,17,28.00
+S0173,2026-04-03,Everyday tee,Organic search,16,28.00
+S0174,2026-04-09,Everyday tee,Organic search,15,28.00
+S0175,2026-04-15,Everyday tee,Organic search,14,28.00
+S0176,2026-04-21,Everyday tee,Organic search,13,28.00
+S0177,2026-04-03,Everyday tee,Email,14,28.00
+S0178,2026-04-09,Everyday tee,Email,13,28.00
+S0179,2026-04-15,Everyday tee,Email,12,28.00
+S0180,2026-04-21,Everyday tee,Email,11,28.00
+S0181,2026-04-03,Desk organizer,Paid social,13,54.00
+S0182,2026-04-09,Desk organizer,Paid social,12,54.00
+S0183,2026-04-15,Desk organizer,Paid social,11,54.00
+S0184,2026-04-21,Desk organizer,Paid social,10,54.00
+S0185,2026-04-03,Desk organizer,Organic search,21,54.00
+S0186,2026-04-09,Desk organizer,Organic search,20,54.00
+S0187,2026-04-15,Desk organizer,Organic search,19,54.00
+S0188,2026-04-21,Desk organizer,Organic search,18,54.00
+S0189,2026-04-03,Desk organizer,Email,7,54.00
+S0190,2026-04-09,Desk organizer,Email,6,54.00
+S0191,2026-04-15,Desk organizer,Email,17,54.00
+S0192,2026-04-21,Desk organizer,Email,16,54.00
+S0193,2026-05-03,Weekender tote,Paid social,29,89.00
+S0194,2026-05-09,Weekender tote,Paid social,28,89.00
+S0195,2026-05-15,Weekender tote,Paid social,27,89.00
+S0196,2026-05-21,Weekender tote,Paid social,26,89.00
+S0197,2026-05-03,Weekender tote,Organic search,13,89.00
+S0198,2026-05-09,Weekender tote,Organic search,12,89.00
+S0199,2026-05-15,Weekender tote,Organic search,11,89.00
+S0200,2026-05-21,Weekender tote,Organic search,22,89.00
+S0201,2026-05-03,Weekender tote,Email,11,89.00
+S0202,2026-05-09,Weekender tote,Email,10,89.00
+S0203,2026-05-15,Weekender tote,Email,9,89.00
+S0204,2026-05-21,Weekender tote,Email,8,89.00
+S0205,2026-05-03,Studio tumbler,Paid social,10,32.00
+S0206,2026-05-09,Studio tumbler,Paid social,9,32.00
+S0207,2026-05-15,Studio tumbler,Paid social,8,32.00
+S0208,2026-05-21,Studio tumbler,Paid social,7,32.00
+S0209,2026-05-03,Studio tumbler,Organic search,18,32.00
+S0210,2026-05-09,Studio tumbler,Organic search,17,32.00
+S0211,2026-05-15,Studio tumbler,Organic search,16,32.00
+S0212,2026-05-21,Studio tumbler,Organic search,15,32.00
+S0213,2026-05-03,Studio tumbler,Email,16,32.00
+S0214,2026-05-09,Studio tumbler,Email,15,32.00
+S0215,2026-05-15,Studio tumbler,Email,14,32.00
+S0216,2026-05-21,Studio tumbler,Email,13,32.00
+S0217,2026-05-03,Everyday tee,Paid social,15,28.00
+S0218,2026-05-09,Everyday tee,Paid social,14,28.00
+S0219,2026-05-15,Everyday tee,Paid social,13,28.00
+S0220,2026-05-21,Everyday tee,Paid social,12,28.00
+S0221,2026-05-03,Everyday tee,Organic search,11,28.00
+S0222,2026-05-09,Everyday tee,Organic search,22,28.00
+S0223,2026-05-15,Everyday tee,Organic search,21,28.00
+S0224,2026-05-21,Everyday tee,Organic search,20,28.00
+S0225,2026-05-03,Everyday tee,Email,9,28.00
+S0226,2026-05-09,Everyday tee,Email,8,28.00
+S0227,2026-05-15,Everyday tee,Email,7,28.00
+S0228,2026-05-21,Everyday tee,Email,6,28.00
+S0229,2026-05-03,Desk organizer,Paid social,8,54.00
+S0230,2026-05-09,Desk organizer,Paid social,7,54.00
+S0231,2026-05-15,Desk organizer,Paid social,6,54.00
+S0232,2026-05-21,Desk organizer,Paid social,17,54.00
+S0233,2026-05-03,Desk organizer,Organic search,16,54.00
+S0234,2026-05-09,Desk organizer,Organic search,15,54.00
+S0235,2026-05-15,Desk organizer,Organic search,14,54.00
+S0236,2026-05-21,Desk organizer,Organic search,13,54.00
+S0237,2026-05-03,Desk organizer,Email,14,54.00
+S0238,2026-05-09,Desk organizer,Email,13,54.00
+S0239,2026-05-15,Desk organizer,Email,12,54.00
+S0240,2026-05-21,Desk organizer,Email,11,54.00
+S0241,2026-06-03,Weekender tote,Paid social,25,89.00
+S0242,2026-06-09,Weekender tote,Paid social,24,89.00
+S0243,2026-06-15,Weekender tote,Paid social,23,89.00
+S0244,2026-06-21,Weekender tote,Paid social,22,89.00
+S0245,2026-06-03,Weekender tote,Organic search,20,89.00
+S0246,2026-06-09,Weekender tote,Organic search,19,89.00
+S0247,2026-06-15,Weekender tote,Organic search,18,89.00
+S0248,2026-06-21,Weekender tote,Organic search,17,89.00
+S0249,2026-06-03,Weekender tote,Email,6,89.00
+S0250,2026-06-09,Weekender tote,Email,17,89.00
+S0251,2026-06-15,Weekender tote,Email,16,89.00
+S0252,2026-06-21,Weekender tote,Email,15,89.00
+S0253,2026-06-03,Studio tumbler,Paid social,17,32.00
+S0254,2026-06-09,Studio tumbler,Paid social,16,32.00
+S0255,2026-06-15,Studio tumbler,Paid social,15,32.00
+S0256,2026-06-21,Studio tumbler,Paid social,14,32.00
+S0257,2026-06-03,Studio tumbler,Organic search,13,32.00
+S0258,2026-06-09,Studio tumbler,Organic search,12,32.00
+S0259,2026-06-15,Studio tumbler,Organic search,11,32.00
+S0260,2026-06-21,Studio tumbler,Organic search,22,32.00
+S0261,2026-06-03,Studio tumbler,Email,11,32.00
+S0262,2026-06-09,Studio tumbler,Email,10,32.00
+S0263,2026-06-15,Studio tumbler,Email,9,32.00
+S0264,2026-06-21,Studio tumbler,Email,8,32.00
+S0265,2026-06-03,Everyday tee,Paid social,10,28.00
+S0266,2026-06-09,Everyday tee,Paid social,9,28.00
+S0267,2026-06-15,Everyday tee,Paid social,8,28.00
+S0268,2026-06-21,Everyday tee,Paid social,7,28.00
+S0269,2026-06-03,Everyday tee,Organic search,18,28.00
+S0270,2026-06-09,Everyday tee,Organic search,17,28.00
+S0271,2026-06-15,Everyday tee,Organic search,16,28.00
+S0272,2026-06-21,Everyday tee,Organic search,15,28.00
+S0273,2026-06-03,Everyday tee,Email,16,28.00
+S0274,2026-06-09,Everyday tee,Email,15,28.00
+S0275,2026-06-15,Everyday tee,Email,14,28.00
+S0276,2026-06-21,Everyday tee,Email,13,28.00
+S0277,2026-06-03,Desk organizer,Paid social,15,54.00
+S0278,2026-06-09,Desk organizer,Paid social,14,54.00
+S0279,2026-06-15,Desk organizer,Paid social,13,54.00
+S0280,2026-06-21,Desk organizer,Paid social,12,54.00
+S0281,2026-06-03,Desk organizer,Organic search,11,54.00
+S0282,2026-06-09,Desk organizer,Organic search,22,54.00
+S0283,2026-06-15,Desk organizer,Organic search,21,54.00
+S0284,2026-06-21,Desk organizer,Organic search,20,54.00
+S0285,2026-06-03,Desk organizer,Email,9,54.00
+S0286,2026-06-09,Desk organizer,Email,8,54.00
+S0287,2026-06-15,Desk organizer,Email,7,54.00
+S0288,2026-06-21,Desk organizer,Email,6,54.00
+S0289,2026-07-03,Weekender tote,Paid social,20,89.00
+S0290,2026-07-09,Weekender tote,Paid social,19,89.00
+S0291,2026-07-15,Weekender tote,Paid social,30,89.00
+S0292,2026-07-21,Weekender tote,Paid social,29,89.00
+S0293,2026-07-03,Weekender tote,Organic search,15,89.00
+S0294,2026-07-09,Weekender tote,Organic search,14,89.00
+S0295,2026-07-15,Weekender tote,Organic search,13,89.00
+S0296,2026-07-21,Weekender tote,Organic search,12,89.00
+S0297,2026-07-03,Weekender tote,Email,13,89.00
+S0298,2026-07-09,Weekender tote,Email,12,89.00
+S0299,2026-07-15,Weekender tote,Email,11,89.00
+S0300,2026-07-21,Weekender tote,Email,10,89.00
+S0301,2026-07-03,Studio tumbler,Paid social,12,32.00
+S0302,2026-07-09,Studio tumbler,Paid social,11,32.00
+S0303,2026-07-15,Studio tumbler,Paid social,10,32.00
+S0304,2026-07-21,Studio tumbler,Paid social,9,32.00
+S0305,2026-07-03,Studio tumbler,Organic search,20,32.00
+S0306,2026-07-09,Studio tumbler,Organic search,19,32.00
+S0307,2026-07-15,Studio tumbler,Organic search,18,32.00
+S0308,2026-07-21,Studio tumbler,Organic search,17,32.00
+S0309,2026-07-03,Studio tumbler,Email,6,32.00
+S0310,2026-07-09,Studio tumbler,Email,17,32.00
+S0311,2026-07-15,Studio tumbler,Email,16,32.00
+S0312,2026-07-21,Studio tumbler,Email,15,32.00
+S0313,2026-07-03,Everyday tee,Paid social,17,28.00
+S0314,2026-07-09,Everyday tee,Paid social,16,28.00
+S0315,2026-07-15,Everyday tee,Paid social,15,28.00
+S0316,2026-07-21,Everyday tee,Paid social,14,28.00
+S0317,2026-07-03,Everyday tee,Organic search,13,28.00
+S0318,2026-07-09,Everyday tee,Organic search,12,28.00
+S0319,2026-07-15,Everyday tee,Organic search,11,28.00
+S0320,2026-07-21,Everyday tee,Organic search,22,28.00
+S0321,2026-07-03,Everyday tee,Email,11,28.00
+S0322,2026-07-09,Everyday tee,Email,10,28.00
+S0323,2026-07-15,Everyday tee,Email,9,28.00
+S0324,2026-07-21,Everyday tee,Email,8,28.00
+S0325,2026-07-03,Desk organizer,Paid social,10,54.00
+S0326,2026-07-09,Desk organizer,Paid social,9,54.00
+S0327,2026-07-15,Desk organizer,Paid social,8,54.00
+S0328,2026-07-21,Desk organizer,Paid social,7,54.00
+S0329,2026-07-03,Desk organizer,Organic search,18,54.00
+S0330,2026-07-09,Desk organizer,Organic search,17,54.00
+S0331,2026-07-15,Desk organizer,Organic search,16,54.00
+S0332,2026-07-21,Desk organizer,Organic search,15,54.00
+S0333,2026-07-03,Desk organizer,Email,16,54.00
+S0334,2026-07-09,Desk organizer,Email,15,54.00
+S0335,2026-07-15,Desk organizer,Email,14,54.00
+S0336,2026-07-21,Desk organizer,Email,13,54.00
+S0337,2026-08-03,Weekender tote,Paid social,28,89.00
+S0338,2026-08-09,Weekender tote,Paid social,27,89.00
+S0339,2026-08-15,Weekender tote,Paid social,26,89.00
+S0340,2026-08-21,Weekender tote,Paid social,25,89.00
+S0341,2026-08-03,Weekender tote,Organic search,22,89.00
+S0342,2026-08-09,Weekender tote,Organic search,21,89.00
+S0343,2026-08-15,Weekender tote,Organic search,20,89.00
+S0344,2026-08-21,Weekender tote,Organic search,19,89.00
+S0345,2026-08-03,Weekender tote,Email,8,89.00
+S0346,2026-08-09,Weekender tote,Email,7,89.00
+S0347,2026-08-15,Weekender tote,Email,6,89.00
+S0348,2026-08-21,Weekender tote,Email,17,89.00
+S0349,2026-08-03,Studio tumbler,Paid social,7,32.00
+S0350,2026-08-09,Studio tumbler,Paid social,6,32.00
+S0351,2026-08-15,Studio tumbler,Paid social,17,32.00
+S0352,2026-08-21,Studio tumbler,Paid social,16,32.00
+S0353,2026-08-03,Studio tumbler,Organic search,15,32.00
+S0354,2026-08-09,Studio tumbler,Organic search,14,32.00
+S0355,2026-08-15,Studio tumbler,Organic search,13,32.00
+S0356,2026-08-21,Studio tumbler,Organic search,12,32.00
+S0357,2026-08-03,Studio tumbler,Email,13,32.00
+S0358,2026-08-09,Studio tumbler,Email,12,32.00
+S0359,2026-08-15,Studio tumbler,Email,11,32.00
+S0360,2026-08-21,Studio tumbler,Email,10,32.00
+S0361,2026-08-03,Everyday tee,Paid social,12,28.00
+S0362,2026-08-09,Everyday tee,Paid social,11,28.00
+S0363,2026-08-15,Everyday tee,Paid social,10,28.00
+S0364,2026-08-21,Everyday tee,Paid social,9,28.00
+S0365,2026-08-03,Everyday tee,Organic search,20,28.00
+S0366,2026-08-09,Everyday tee,Organic search,19,28.00
+S0367,2026-08-15,Everyday tee,Organic search,18,28.00
+S0368,2026-08-21,Everyday tee,Organic search,17,28.00
+S0369,2026-08-03,Everyday tee,Email,6,28.00
+S0370,2026-08-09,Everyday tee,Email,17,28.00
+S0371,2026-08-15,Everyday tee,Email,16,28.00
+S0372,2026-08-21,Everyday tee,Email,15,28.00
+S0373,2026-08-03,Desk organizer,Paid social,17,54.00
+S0374,2026-08-09,Desk organizer,Paid social,16,54.00
+S0375,2026-08-15,Desk organizer,Paid social,15,54.00
+S0376,2026-08-21,Desk organizer,Paid social,14,54.00
+S0377,2026-08-03,Desk organizer,Organic search,13,54.00
+S0378,2026-08-09,Desk organizer,Organic search,12,54.00
+S0379,2026-08-15,Desk organizer,Organic search,11,54.00
+S0380,2026-08-21,Desk organizer,Organic search,22,54.00
+S0381,2026-08-03,Desk organizer,Email,11,54.00
+S0382,2026-08-09,Desk organizer,Email,10,54.00
+S0383,2026-08-15,Desk organizer,Email,9,54.00
+S0384,2026-08-21,Desk organizer,Email,8,54.00

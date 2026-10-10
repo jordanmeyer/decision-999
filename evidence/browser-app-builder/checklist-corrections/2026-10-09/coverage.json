@@ -492,15 +492,20 @@
       "id": "UPLOAD-12",
       "priority": "P2",
       "requirement": "Verify — Exercise the two-file import as a student task. Download both samples, inspect headers, introduce an unmatched return and an over-return, and verify rejection leaves the previous dataset and source identity intact. Then import a corrected pair. Prior evidence covers validation; this review did not repeat file selection.",
-      "status": "implemented_pending_verification",
+      "status": "verified_local",
       "evidence": [
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/COVERAGE.md",
         "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/browser-interactions.json",
-        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/browser-import-export.json"
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/browser-import-export.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/browser-native-files.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/native-fixtures/manifest.json",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/native-fixtures/README.md",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/native-over-return.png",
+        "evidence/browser-app-builder/checklist-corrections/2026-10-09/uploads/native-corrected-pair.png"
       ],
       "app": "uploads",
       "source_checkpoint": "3cc0f3e6fef0e426bd9d5614b5be99137791dbca",
-      "disposition": "Root actual six-case authored paired-file harness verified unmatched/over-return rejection retained prior values and filenames, then accepted a corrected pair. The full sample-download/header-edit/native workflow and student task remain unobserved; synthetic File/DataTransfer does not close them."
+      "disposition": "Root completed the actual live sample-download/header-inspection/native-file-selection workflow at published76f0b285 with unchanged app3cc0f3e6:384 sales/326 returns,291788 gross−51827 returned=239961 net. Unmatched MISSING and cumulative34>23 returned units each retained prior filenames/counts/totals; selecting corrected named files recovered the same valid totals and new identities. Exact downloaded fixtures, edits and independent arithmetic are retained. Agent-operated functional verification closes UPLOAD-12; it is not novice evidence and ALL-16 remains open. Header inspection, not header editing, is required."
     },
     {
       "id": "UPLOAD-13",
@@ -1867,9 +1872,9 @@
   "summary": {
     "items": 126,
     "by_status": {
-      "verified_local": 117,
+      "verified_local": 118,
       "open": 4,
-      "implemented_pending_verification": 5
+      "implemented_pending_verification": 4
     },
     "publication": "Exact pushed-SHA workflows and actual live follow-ups are tracked separately in publication.json. This index records local requirement verification and does not infer publication of a later source checkpoint.",
     "human_gates": "Actual screen-reader and uncoached novice evidence remains open. Authored synthetic input events/font doubling do not replace native picker, device zoom or human tasks."

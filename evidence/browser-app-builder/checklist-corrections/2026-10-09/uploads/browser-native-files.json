@@ -1,0 +1,52 @@
+{
+  "method": "Actual live download buttons and filechooser.setFiles using downloaded local synthetic CSV files; no File/DataTransfer harness or DOM event injection. CSV edits made through filesystem tools. Agent-operated functional workflow, not novice evidence.",
+  "url": "https://jordanmeyer.github.io/bab-example-uploads/",
+  "source": "3cc0f3e6fef0e426bd9d5614b5be99137791dbca",
+  "publishedCommit": "76f0b2857136d42d928636edb89555a95fee6242",
+  "observations": [
+    {
+      "case": "downloaded pair accepted",
+      "at": "2026-10-10T00:37:04.542Z",
+      "source": "Sales: common-goods-sales (1).csv (384 lines)\nReturns: downloaded-returns.csv (326 events)",
+      "status": "Imported 384 sales lines and 326 return events. All IDs matched. Files remain in this tab only.",
+      "totals": [
+        "$291,788",
+        "$51,827",
+        "$239,961"
+      ]
+    },
+    {
+      "case": "unmatched return rejected",
+      "at": "2026-10-10T00:37:29.300Z",
+      "source": "Sales: common-goods-sales (1).csv (384 lines)\nReturns: downloaded-returns.csv (326 events)",
+      "status": "returns: unmatched line_id “MISSING”. Import its sale too. Previous data is unchanged.",
+      "totals": [
+        "$291,788",
+        "$51,827",
+        "$239,961"
+      ]
+    },
+    {
+      "case": "over-return rejected",
+      "at": "2026-10-10T00:37:36.899Z",
+      "source": "Sales: common-goods-sales (1).csv (384 lines)\nReturns: downloaded-returns.csv (326 events)",
+      "status": "returns: “S0001” returns 34 units but sold 23. Previous data is unchanged.",
+      "totals": [
+        "$291,788",
+        "$51,827",
+        "$239,961"
+      ]
+    },
+    {
+      "case": "corrected pair accepted",
+      "at": "2026-10-10T00:38:00.158Z",
+      "source": "Sales: corrected-sales.csv (384 lines)\nReturns: corrected-returns.csv (326 events)",
+      "status": "Imported 384 sales lines and 326 return events. All IDs matched. Files remain in this tab only.",
+      "totals": [
+        "$291,788",
+        "$51,827",
+        "$239,961"
+      ]
+    }
+  ]
+}

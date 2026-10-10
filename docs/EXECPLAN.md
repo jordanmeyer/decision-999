@@ -21,7 +21,7 @@ Students should be able to follow each of the twelve listed applications from a 
 - [ ] Correct and evaluate pricing, inventory and original sales items.
 - [x] Independently reviewed all twelve revised apps and resolved source-review findings; later browser discoveries have their own repair records.
 - [x] Completed representative 319px/1439px and 200% text observations for the specified layout risks, including independent screenshot review and targeted repairs.
-- [ ] Complete actual screen-reader and physical-device tasks; retain unavailable capabilities as incomplete.
+- [ ] Complete actual screen-reader and physical-device tasks; retain unavailable capabilities as incomplete. The user assigned screen-reader checks to a person; VoiceOver remains unchanged.
 - [ ] Run real novice walkthroughs, record confusion and make needed corrections.
 - [x] Published all twelve reviewed correction builds to their existing repositories; verified successful Pages runs for each exact pushed commit, live known-answer interactions and static artifact integrity. Presentation received one ordinary note-only follow-up, also verified live after normal reload. Roadmap and Sales later received CSS-only readability corrections; their exact-commit Pages deployments and normal-URL reload checks passed and are tracked in the evidence index.
 - [ ] Update gallery, source snapshots and requirement evidence; complete repository checks and closure audit.
@@ -43,6 +43,8 @@ A returning browser initially reused the previous presentation HTML after the no
 
 The final layout pass found enlarged Roadmap dates colliding with the next column and narrow Sales dates breaking into fragments; enlarged Sales amounts also split their cents. Small CSS corrections passed narrow/enlarged retests and independent image review. A few mid-scroll screenshots showed transient repaint artifacts; settled captures resolved those separately from genuine defects. The local QA iframe needed an explicit revision marker to inspect rebuilt Roadmap assets; normal live reload was checked separately.
 
+The later actual download/chooser follow-up completed UPLOAD-12: both current samples were downloaded and their headers inspected; unmatched and excessive returns retained source identity and totals, then the corrected pair was accepted. This requirement specifies a functional student workflow, not a novice participant. ALL-16 still requires a real novice.
+
 ## Decision Log
 
 
@@ -52,10 +54,12 @@ Decision (2026-10-09): optional P3 improvements become scoped extension assignme
 
 Decision (2026-10-09): real novice and screen-reader requirements stay open until exact evidence exists. Agent roleplay, accessible DOM and keyboard checks cannot replace them. Continue independent implementation while arranging these checks.
 
+Decision (2026-10-09 local / 2026-10-10 UTC): the user explicitly assigned actual screen-reader checks to a person. Leave VoiceOver unchanged; do not treat browser snapshots as spoken-output evidence.
+
 ## Outcomes & Retrospective
 
 
-All twelve apps have source corrections and scoped local evidence. The coverage index tracks 126 requirements without modifying the original review: 117 verified locally, 5 implemented with verification pending and 4 open human requirements. It distinguishes specific verified facts from incomplete complete-task acceptance. Additional browser checks closed export, recovery, pricing orientation and named result-route gaps. The broader representative layout review also passed after correcting Roadmap date/type overlap and Sales fragmented dates and split metric amounts. Human/device checks remain explicit in the evidence index. All twelve current correction builds are deployed and have bounded live verification; no real novice/screen-reader pass is claimed. The user has agreed to arrange novice observations; the independently reviewed packet now links to the verified live apps and is in `evidence/browser-app-builder/checklist-corrections/2026-10-09/walkthrough/`.
+All twelve apps have source corrections and scoped local evidence. The coverage index tracks 126 requirements without modifying the original review: 118 verified locally, 4 implemented with verification pending and 4 open human requirements. It distinguishes specific verified facts from incomplete complete-task acceptance. Additional browser checks closed export, recovery, pricing orientation and named result-route gaps. The broader representative layout review also passed after correcting Roadmap date/type overlap and Sales fragmented dates and split metric amounts. The actual file-download/chooser rejection-and-correction workflow also passed, closing UPLOAD-12 without claiming novice learning. Human/device checks remain explicit in the evidence index. All twelve current correction builds are deployed and have bounded live verification; no real novice/screen-reader pass is claimed. The user has agreed to arrange novice observations; the independently reviewed packet now links to the verified live apps and is in `evidence/browser-app-builder/checklist-corrections/2026-10-09/walkthrough/`.
 
 ## Context and Orientation
 

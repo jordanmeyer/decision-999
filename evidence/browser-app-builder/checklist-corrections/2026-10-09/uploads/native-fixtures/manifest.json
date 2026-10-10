@@ -1,0 +1,42 @@
+{
+  "sales_headers": [
+    "line_id",
+    "sale_date",
+    "product",
+    "channel",
+    "units",
+    "unit_price_usd"
+  ],
+  "sales_lines": 384,
+  "returns_headers": [
+    "return_id",
+    "line_id",
+    "return_date",
+    "units"
+  ],
+  "return_events": 326,
+  "download_names": [
+    "common-goods-sales (1).csv",
+    "common-goods-returns (1).csv"
+  ],
+  "fixture_hashes": {
+    "downloaded-sales.csv": "d556ada729776bc4e90bcad94d8eb78cd36621aa7da37d9710a09eb0dd2e12cf",
+    "downloaded-returns.csv": "2bfb68d59b2b8c0e52d6ab11f248852798f3080b67ce2b7bb083873ac2fcddaa",
+    "unmatched-returns.csv": "73aaa849a082b04f43e48f7b52868d94aeb29e824178673f903646a84964505b",
+    "over-returns.csv": "63e74f43da9170c5ba2b9d37946063e4383e21cc1ec34fd211f6a66ba6eb7988",
+    "corrected-sales.csv": "d556ada729776bc4e90bcad94d8eb78cd36621aa7da37d9710a09eb0dd2e12cf",
+    "corrected-returns.csv": "2bfb68d59b2b8c0e52d6ab11f248852798f3080b67ce2b7bb083873ac2fcddaa"
+  },
+  "independent_expected": {
+    "gross_usd": "291788.00",
+    "returned_usd": "51827.00",
+    "net_usd": "239961.00",
+    "sold_units": 5452,
+    "returned_units": 834
+  },
+  "edits": {
+    "unmatched": "First return line_id changed from S0001 to MISSING; all other values retained.",
+    "over_return": "First return units changed from2 to24; remaining S0001 returns total10, so cumulative34 exceeds sold23.",
+    "correction": "Restore downloaded contents, save as corrected-sales.csv and corrected-returns.csv."
+  }
+}
