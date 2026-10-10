@@ -1,0 +1,477 @@
+[
+  {
+    "name": "Toggle preserves 2023 and identifies Women",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Women’s initial hover traces six uncertain rounds",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Women 2023 initially favors South Carolina at 64%",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2016: women’s source download",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2016: correct First Four visibility",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2016 initial: names fit",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "2016 last forecast: names fit",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "2016: timeline reaches actual final snapshot",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2016: forecast history renders",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2016 results: names fit",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "2016: champion matches women’s source",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2016: champion is centered on title stem",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2017: women’s source download",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2017: correct First Four visibility",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2017 initial: names fit",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "2017 last forecast: names fit",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "2017: timeline reaches actual final snapshot",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2017: forecast history renders",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2017 results: names fit",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "2017: champion matches women’s source",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2017: champion is centered on title stem",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2018: women’s source download",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2018: correct First Four visibility",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2018 initial: names fit",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "2018 last forecast: names fit",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "2018: timeline reaches actual final snapshot",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2018: forecast history renders",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2018 results: names fit",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "2018: champion matches women’s source",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2018: champion is centered on title stem",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2019: women’s source download",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2019: correct First Four visibility",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2019 initial: names fit",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "2019 last forecast: names fit",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "2019: timeline reaches actual final snapshot",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2019: forecast history renders",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2019 results: names fit",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "2019: champion matches women’s source",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2019: champion is centered on title stem",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2021: women’s source download",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2021: correct First Four visibility",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2021 initial: names fit",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "2021 last forecast: names fit",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "2021: timeline reaches actual final snapshot",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2021: forecast history renders",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2021 results: names fit",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "2021: champion matches women’s source",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2021: champion is centered on title stem",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2022: women’s source download",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2022: correct First Four visibility",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2022 initial: names fit",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "2022 last forecast: names fit",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "2022: timeline reaches actual final snapshot",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2022: forecast history renders",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2022 results: names fit",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "2022: champion matches women’s source",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2022: champion is centered on title stem",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2023: women’s source download",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2023: correct First Four visibility",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2023 initial: names fit",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "2023 last forecast: names fit",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "2023: timeline reaches actual final snapshot",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2023: forecast history renders",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2023 results: names fit",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "2023: champion matches women’s source",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2023: champion is centered on title stem",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2024: women’s source download",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2024: correct First Four visibility",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2024 initial: names fit",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "2024: results-only is explicit",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2024 results: names fit",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "2024: champion matches women’s source",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2024: champion is centered on title stem",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2025: women’s source download",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2025: correct First Four visibility",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2025 initial: names fit",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "2025: results-only is explicit",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2025 results: names fit",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "2025: champion matches women’s source",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2025: champion is centered on title stem",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2026: women’s source download",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2026: correct First Four visibility",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2026 initial: names fit",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "2026: results-only is explicit",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2026 results: names fit",
+    "pass": true,
+    "detail": []
+  },
+  {
+    "name": "2026: champion matches women’s source",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "2026: champion is centered on title stem",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Women 2020 has no invented tournament",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Men 2020 stays cancelled and switchable",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Men 2023 cache restores Houston favorite",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Competition switch stops playback and clears pins",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Women 2023 cache restores South Carolina",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Rapid gender/year changes settle on requested women’s year",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Phone toggle and page fit",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Phone Men switch preserves year/table",
+    "pass": true,
+    "detail": ""
+  }
+]

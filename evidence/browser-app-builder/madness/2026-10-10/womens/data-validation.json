@@ -1,0 +1,244 @@
+{
+  "retrievedOn": "2026-10-10",
+  "checks": [
+    "64 or 68 unique teams, one fewer bracket game",
+    "Correct field-size-specific round counts",
+    "All regional seeds and bracket orders",
+    "Actual Final Four region pairings",
+    "Winner/next-game topology and scores",
+    "Champions independently cross-checked against NCAA history",
+    "Every field team mapped per snapshot",
+    "All probabilities finite, bounded and monotonically decreasing",
+    "Per-snapshot round probability totals 64/32/16/8/4/2/1 within 0.000002",
+    "2020 cancelled and 2021 no-contest represented without scores"
+  ],
+  "years": [
+    {
+      "year": 2016,
+      "status": "validated",
+      "teams": 64,
+      "games": 63,
+      "playedGames": 63,
+      "roundCounts": [
+        0,
+        32,
+        16,
+        8,
+        4,
+        2,
+        1
+      ],
+      "snapshots": 10,
+      "earliestForecast": "2016-03-14",
+      "latestForecast": "2016-04-03",
+      "maximumRoundProbabilitySumError": 2.0000000766629e-08,
+      "championId": "41",
+      "championName": "Connecticut"
+    },
+    {
+      "year": 2017,
+      "status": "validated",
+      "teams": 64,
+      "games": 63,
+      "playedGames": 63,
+      "roundCounts": [
+        0,
+        32,
+        16,
+        8,
+        4,
+        2,
+        1
+      ],
+      "snapshots": 10,
+      "earliestForecast": "2017-03-12",
+      "latestForecast": "2017-03-31",
+      "maximumRoundProbabilitySumError": 4.998668146072305e-12,
+      "championId": "2579",
+      "championName": "South Carolina"
+    },
+    {
+      "year": 2018,
+      "status": "validated",
+      "teams": 64,
+      "games": 63,
+      "playedGames": 63,
+      "roundCounts": [
+        0,
+        32,
+        16,
+        8,
+        4,
+        2,
+        1
+      ],
+      "snapshots": 10,
+      "earliestForecast": "2018-03-12",
+      "latestForecast": "2018-03-30",
+      "maximumRoundProbabilitySumError": 5.002220859751105e-12,
+      "championId": "87",
+      "championName": "Notre Dame"
+    },
+    {
+      "year": 2019,
+      "status": "validated",
+      "teams": 64,
+      "games": 63,
+      "playedGames": 63,
+      "roundCounts": [
+        0,
+        32,
+        16,
+        8,
+        4,
+        2,
+        1
+      ],
+      "snapshots": 10,
+      "earliestForecast": "2019-03-17",
+      "latestForecast": "2019-04-05",
+      "maximumRoundProbabilitySumError": 5.000444502911705e-12,
+      "championId": "239",
+      "championName": "Baylor"
+    },
+    {
+      "year": 2020,
+      "status": "cancelled",
+      "games": 0,
+      "teams": 0,
+      "snapshots": 0
+    },
+    {
+      "year": 2021,
+      "status": "validated",
+      "teams": 64,
+      "games": 63,
+      "playedGames": 63,
+      "roundCounts": [
+        0,
+        32,
+        16,
+        8,
+        4,
+        2,
+        1
+      ],
+      "snapshots": 10,
+      "earliestForecast": "2021-03-14",
+      "latestForecast": "2021-04-02",
+      "maximumRoundProbabilitySumError": 3.0020430585864233e-12,
+      "championId": "24",
+      "championName": "Stanford"
+    },
+    {
+      "year": 2022,
+      "status": "validated",
+      "teams": 68,
+      "games": 67,
+      "playedGames": 67,
+      "roundCounts": [
+        4,
+        32,
+        16,
+        8,
+        4,
+        2,
+        1
+      ],
+      "snapshots": 12,
+      "earliestForecast": "2022-03-13",
+      "latestForecast": "2022-04-01",
+      "maximumRoundProbabilitySumError": 6.995293233558186e-12,
+      "championId": "2579",
+      "championName": "South Carolina"
+    },
+    {
+      "year": 2023,
+      "status": "validated",
+      "teams": 68,
+      "games": 67,
+      "playedGames": 67,
+      "roundCounts": [
+        4,
+        32,
+        16,
+        8,
+        4,
+        2,
+        1
+      ],
+      "snapshots": 12,
+      "earliestForecast": "2023-03-12",
+      "latestForecast": "2023-03-31",
+      "maximumRoundProbabilitySumError": 4.007461029686965e-12,
+      "championId": "99",
+      "championName": "Louisiana State"
+    },
+    {
+      "year": 2024,
+      "status": "validated",
+      "teams": 68,
+      "games": 67,
+      "playedGames": 67,
+      "roundCounts": [
+        4,
+        32,
+        16,
+        8,
+        4,
+        2,
+        1
+      ],
+      "snapshots": 0,
+      "earliestForecast": null,
+      "latestForecast": null,
+      "maximumRoundProbabilitySumError": 0,
+      "championId": "2579",
+      "championName": "South Carolina"
+    },
+    {
+      "year": 2025,
+      "status": "validated",
+      "teams": 68,
+      "games": 67,
+      "playedGames": 67,
+      "roundCounts": [
+        4,
+        32,
+        16,
+        8,
+        4,
+        2,
+        1
+      ],
+      "snapshots": 0,
+      "earliestForecast": null,
+      "latestForecast": null,
+      "maximumRoundProbabilitySumError": 0,
+      "championId": "41",
+      "championName": "UConn"
+    },
+    {
+      "year": 2026,
+      "status": "validated",
+      "teams": 68,
+      "games": 67,
+      "playedGames": 67,
+      "roundCounts": [
+        4,
+        32,
+        16,
+        8,
+        4,
+        2,
+        1
+      ],
+      "snapshots": 0,
+      "earliestForecast": null,
+      "latestForecast": null,
+      "maximumRoundProbabilitySumError": 0,
+      "championId": "26",
+      "championName": "UCLA"
+    }
+  ]
+}
