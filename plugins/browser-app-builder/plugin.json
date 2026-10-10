@@ -151,7 +151,7 @@
           "lesson": "Explore men’s tournament brackets from 2016–2026, separating original FiveThirtyEight forecasts through 2023 from T-Rank/log5 reconstructions for 2024–2026 and actual results.",
           "libraries": "ECharts",
           "preview": "madness/2026-10-09/desktop.png",
-          "previewAlt": "Tournament Atlas: the 2023 bracket with Houston’s route connected through its title forecast in a local production preview, October 9, 2026",
+          "previewAlt": "Tournament Atlas: the 2023 continuous bracket with distinct Final Four branches and Houston’s probability-scaled route in a local production preview, October 9, 2026",
           "walkthrough": "https://jordanmeyer.github.io/bab-example-madness/build-story.html"
         },
         {

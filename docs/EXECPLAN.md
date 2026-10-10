@@ -26,11 +26,18 @@ Create a Browser App Builder example recreating the useful interactions of the a
 - [x] Verified correction deployment `c8b7e81` with successful Actions run 38015656925 and returning-browser known-answer checks.
 - [x] Published gallery/evidence commit `7027598`, verified successful Actions run 38015993707 and the live image/count, and stopped all three owned preview/test processes. Temporary tabs were closed; the live app and gallery remain available.
 
+- [x] (2026-10-09) Reopened visual fidelity after the user rejected the central-card layout; independently measured the original SVG geometry, settled labels, and probability widths.
+- [x] Replace the card geometry with the original continuous bilateral bracket conventions.
+- [x] Independently inspect initial/late/results routes, low-probability widths, keyboard previews and responsive output.
+- [ ] Publish the corrected application and refreshed gallery evidence after verification.
+
 ## Surprises & Discoveries
 
 The original is a forecast explorer, not a bracket-picking simulator. Its timeline selects recorded forecasts. FiveThirtyEight stopped updating sports forecasts in June 2023. ESPN supplies later result facts but those are not probabilities. The 2021 Oregon–VCU game is a no-contest, and the 2018 LIU seed sentinel requires an evidenced correction. The user’s reference selects men. Archived daily forecasts do not have precise live timestamps.
 
 The new comparison review reproduced defects missed by the prior source/model review: hovering or focusing a team changed its regional route while leaving another team's title odds in the center; selected semifinal cards lost text contrast on hover. Regional connectors stopped before the Final Four. At 1280 × 720, the first bracket row began around y699, compared with roughly y419 in the archived original. These are rendered behavior and layout findings, separate from the numerical checks.
+
+The previous comparison pass was insufficient: connected cards still put Final Four and championship content in the same column, and repeated names/probabilities obscured the original diagram. Actual original inspection shows eleven shared round columns, four regional winners at quarter heights, two championship branches at the vertical midpoint, and a title display above their junction. Hover uses substantial probability-scaled bands (0.5 + 15√p pixels), not a thin colored trace. Initial internal slots are blank; only secured entrants receive internal name strips.
 
 ## Decision Log
 
@@ -39,6 +46,8 @@ The new comparison review reproduced defects missed by the prior source/model re
 2026-10-09: Develop in an isolated temporary application, then save the completed Git repository at `/Users/jordan/Projects/bab-example-madness`. Preserve course configuration/catalog edits. The user requested a replacement online model for later years. Use dated T-Rank Barthag ratings, neutral-court log5 pairwise probabilities, and exact opponent-weighted bracket propagation. Keep one pre-tournament snapshot per year; do not invent daily history. The reconstruction is neither a published T-Rank bracket forecast nor a continuation of FiveThirtyEight’s model.
 
 2026-10-09: Keep a transient bracket preview consistent through every round and title odds while preserving explicit team selection for the longer detail panel. Connect the final rounds, reduce introductory space, and expose actual dated forecast choices. Retain the existing data models, independently implemented code and Campus Designer styling; fidelity does not require copying publisher assets.
+
+2026-10-09: Restore the original continuous bracket topology, compact branch labels and separate probability annotations. Remove the central card layout and its content-measurement connectors. Keep data, replay/calendar and table behavior unchanged. Judge fidelity by actual reference comparisons, not by calculation checks or connected paths alone.
 
 ## Outcomes & Retrospective
 
@@ -65,6 +74,10 @@ Verify shared pure model functions and actual production-browser interactions. I
 Revise `app/main.js`, `app/style.css` and `app/index.html` in the application repository in response to the independent original-versus-recreation review. Hover and keyboard focus must show one consistent team's route and title probability; exiting the bracket preview must restore the selected team. Final-round connectors must make the regional winners' progress legible. Selected cards must retain readable hover/focus colors. Reduce the header/control stack and provide individually selectable recorded dates with honest time spacing. Any pure date/route logic introduced belongs in `app/model.js` with meaningful regression cases in `tests/cases.js`. Preserve data files and sources.
 
 The reviewer inspects the production preview at desktop and narrow widths after corrections, and reports remaining failures to the developer until the identified issues pass. Record findings, corrections and the exact source checkpoint under `evidence/browser-app-builder/madness/2026-10-09/fidelity-review/`. Run the existing calculation suite and browser checks, build with the locked dependencies, then push ordinary commits to the already authorized application repository. Verify the exact Actions deployment and live interactions. Refresh the gallery screenshot/evidence and publish those course changes only after the relevant repository checks pass, leaving unrelated local edits intact.
+
+### Original geometry correction
+
+Replace the independent regional/card layout with one shared coordinate system. Round labels, regional branch junctions, semifinal convergence, championship horizontal branches and title stem must agree. Use a probability width scale consistent across stages, place annotations outside thick bands, and show compact names only for known entrants (plus outer initial teams). Internal undecided branches remain accessible hover/focus targets without visible placeholders. Review upper/lower and left/right routes, tiny probabilities, late snapshots/results, and first-round play-in behavior. Retain the prior review as a failed visual acceptance round. New evidence lives under `evidence/browser-app-builder/madness/2026-10-09/geometry-review/`.
 
 ## Concrete Steps
 
@@ -95,3 +108,5 @@ Revision note (2026-10-09): Completed model substitution, independent audits, UI
 Revision note (2026-10-09, comparison review): Reopened UI work at the user's request after an independent rendered comparison found misleading partial preview state, hover contrast and fidelity defects. Prior numerical validation remains useful but does not establish that these interactions passed.
 
 Revision note (2026-10-09, corrected candidate): Six fidelity findings and a content-resize connector defect are fixed. The independent reviewer’s browser became unavailable during follow-up; their pass explicitly uses source review, independently inspected screenshots and coordinator-attributed interaction measurements. The final source checkpoint is `34bd4335e7c8297b5534e3ce2fa35b41db05a5d0`, with 74/74 checks and unchanged historical data.
+
+Revision note (original geometry): Source `40c6a1e` replaces cards with one bilateral coordinate tree and retains models/data. Independent actual-browser comparison passed after fixing most-likely targets and compact labels. Coordinator verified Results and actual 375px layouts. Clean 74/74 Node/browser checks and production build passed; publication `f8d1773` passed Actions run 38016901031 and returning-browser checks. Refreshed gallery source/image passed repository checks plus 1280px/375px rendering, keyboard and copy inspection; course publication remains pending.

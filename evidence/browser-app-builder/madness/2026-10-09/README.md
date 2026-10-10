@@ -8,9 +8,13 @@ A real user requested a recreation of the archived FiveThirtyEight tournament ex
 - [Plan](https://github.com/jordanmeyer/bab-example-madness/blob/main/PLAN.md)
 - [Evaluation](EVALUATION.md) and [first live deployment](DEPLOYMENT.md)
 
-## Comparison-review update
+## Current geometry correction
 
-At the user’s request, an independent reviewer compared the original and recreation in the browser. Six findings and a long-name connector regression were corrected. The [review record](fidelity-review/review.md) preserves failed rounds and ends in a bounded pass. Source checkpoint `34bd4335e7c8297b5534e3ce2fa35b41db05a5d0` passed 74/74 Node and browser checks; current assets are `main-DHFdrHeu.js` and `style-B25DorEd.css`. Historical data and model derivation are unchanged. [Correction evidence](fidelity-review/README.md) distinguishes direct browser checks, source review and screenshot inspection. Earlier results below describe the initial release.
+The user rejected the previous card layout. The [new original-geometry review](geometry-review/review.md) inspected the actual reference and corrected production candidate, including shared round columns, tapered probability routes and compact settled-team labels. Its bounded desktop pass follows two corrected intermediate failures. Clean source `40c6a1e` passed 74/74 Node/browser checks and a production build. [Current evidence](geometry-review/README.md) records coordinator Results/narrow observations separately.
+
+## Previous comparison-review update
+
+At the user’s request, an independent reviewer compared the original and recreation in the browser. Six findings and a long-name connector regression were corrected. The [review record](fidelity-review/review.md) preserves failed rounds and ends in a bounded pass. Source checkpoint `34bd4335e7c8297b5534e3ce2fa35b41db05a5d0` passed 74/74 Node and browser checks; that round’s assets were `main-DHFdrHeu.js` and `style-B25DorEd.css`. Historical data and model derivation are unchanged. [Correction evidence](fidelity-review/README.md) distinguishes direct browser checks, source review and screenshot inspection. Earlier results below describe the initial release.
 
 ## Coverage
 
