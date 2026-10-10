@@ -20,16 +20,25 @@ Create a Browser App Builder example recreating the useful interactions of the a
 - [x] User authorized publication. Saved durable source at `/Users/jordan/Projects/bab-example-madness`, published it, and verified exact-commit Actions success and live known answers.
 - [x] Prepared the gallery entry, validated the repository/package, and checked desktop/narrow rendering, keyboard links and copy feedback.
 - [x] Gallery commit `51220d0` deployed successfully; verified the live entry, target URL and library/model wording. Stopped all three owned preview/test processes.
+- [x] (2026-10-09) User requested a fresh comparison review of the original and live recreation; commissioned an independent reviewer with both URLs and the source.
+- [x] Corrected all six comparison findings and a long-name connector follow-up; independent source/image re-review passed, supported by coordinator browser interactions.
+- [x] Tested clean source `34bd433` with 74/74 Node/browser checks and a production build; pushed correction/report commit `c8b7e81`.
+- [x] Verified correction deployment `c8b7e81` with successful Actions run 38015656925 and returning-browser known-answer checks.
+- [ ] Publish refreshed gallery evidence and stop owned previews.
 
 ## Surprises & Discoveries
 
 The original is a forecast explorer, not a bracket-picking simulator. Its timeline selects recorded forecasts. FiveThirtyEight stopped updating sports forecasts in June 2023. ESPN supplies later result facts but those are not probabilities. The 2021 Oregon–VCU game is a no-contest, and the 2018 LIU seed sentinel requires an evidenced correction. The user’s reference selects men. Archived daily forecasts do not have precise live timestamps.
+
+The new comparison review reproduced defects missed by the prior source/model review: hovering or focusing a team changed its regional route while leaving another team's title odds in the center; selected semifinal cards lost text contrast on hover. Regional connectors stopped before the Final Four. At 1280 × 720, the first bracket row began around y699, compared with roughly y419 in the archived original. These are rendered behavior and layout findings, separate from the numerical checks.
 
 ## Decision Log
 
 2026-10-09: Reimplement independently using native HTML/SVG for the fixed bracket/table and approved ECharts for team forecast history. Do not copy publisher code, logos or proprietary fonts. Use canonical Campus Designer local fonts/colors.
 
 2026-10-09: Develop in an isolated temporary application, then save the completed Git repository at `/Users/jordan/Projects/bab-example-madness`. Preserve course configuration/catalog edits. The user requested a replacement online model for later years. Use dated T-Rank Barthag ratings, neutral-court log5 pairwise probabilities, and exact opponent-weighted bracket propagation. Keep one pre-tournament snapshot per year; do not invent daily history. The reconstruction is neither a published T-Rank bracket forecast nor a continuation of FiveThirtyEight’s model.
+
+2026-10-09: Keep a transient bracket preview consistent through every round and title odds while preserving explicit team selection for the longer detail panel. Connect the final rounds, reduce introductory space, and expose actual dated forecast choices. Retain the existing data models, independently implemented code and Campus Designer styling; fidelity does not require copying publisher assets.
 
 ## Outcomes & Retrospective
 
@@ -48,6 +57,12 @@ Finish source discovery and normalization. Check 68 teams, 67 game slots, next-g
 Build bilateral bracket, sortable heatmap table, year/snapshot controls and a selected-team history chart. Keyboard selection must match hover. Reset stale selection and playback on year changes. Forecast mode cannot expose future outcomes as known facts. Results mode shows actual outcomes and scores; unavailable probabilities remain unavailable. Narrow layouts retain a readable table or region view.
 
 Verify shared pure model functions and actual production-browser interactions. Independently review the app, correct findings and simplify unused concepts. Prepare concrete source/evaluation records before any final publication approval still needed.
+
+### Comparison correction milestone
+
+Revise `app/main.js`, `app/style.css` and `app/index.html` in the application repository in response to the independent original-versus-recreation review. Hover and keyboard focus must show one consistent team's route and title probability; exiting the bracket preview must restore the selected team. Final-round connectors must make the regional winners' progress legible. Selected cards must retain readable hover/focus colors. Reduce the header/control stack and provide individually selectable recorded dates with honest time spacing. Any pure date/route logic introduced belongs in `app/model.js` with meaningful regression cases in `tests/cases.js`. Preserve data files and sources.
+
+The reviewer inspects the production preview at desktop and narrow widths after corrections, and reports remaining failures to the developer until the identified issues pass. Record findings, corrections and the exact source checkpoint under `evidence/browser-app-builder/madness/2026-10-09/fidelity-review/`. Run the existing calculation suite and browser checks, build with the locked dependencies, then push ordinary commits to the already authorized application repository. Verify the exact Actions deployment and live interactions. Refresh the gallery screenshot/evidence and publish those course changes only after the relevant repository checks pass, leaving unrelated local edits intact.
 
 ## Concrete Steps
 
@@ -74,3 +89,7 @@ Deliver source, readable handoffs, attributed data, reproducible checks and revi
 Use managed Vite 8.3.4 and ECharts 6.1.0 with a lockfile, notices and local canonical fonts. Load static local JSON by year. Model functions are shared by UI and tests. Data ingestion is maintainer tooling, separate from the browser runtime.
 
 Revision note (2026-10-09): Completed model substitution, independent audits, UI corrections and live publication. The initial local narrow trial measured 727 CSS pixels; a subsequent foreground live check verified 375 × 900 CSS pixels. Physical touch, screen-reader and novice checks remain unverified. The persisted-pageshow handler was reviewed, but the actual Back trial loaded a fresh document. Unrelated featured-order and generated-catalog edits remain uncommitted.
+
+Revision note (2026-10-09, comparison review): Reopened UI work at the user's request after an independent rendered comparison found misleading partial preview state, hover contrast and fidelity defects. Prior numerical validation remains useful but does not establish that these interactions passed.
+
+Revision note (2026-10-09, corrected candidate): Six fidelity findings and a content-resize connector defect are fixed. The independent reviewer’s browser became unavailable during follow-up; their pass explicitly uses source review, independently inspected screenshots and coordinator-attributed interaction measurements. The final source checkpoint is `34bd4335e7c8297b5534e3ce2fa35b41db05a5d0`, with 74/74 checks and unchanged historical data.

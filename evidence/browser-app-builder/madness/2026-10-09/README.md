@@ -8,6 +8,10 @@ A real user requested a recreation of the archived FiveThirtyEight tournament ex
 - [Plan](https://github.com/jordanmeyer/bab-example-madness/blob/main/PLAN.md)
 - [Evaluation](EVALUATION.md) and [first live deployment](DEPLOYMENT.md)
 
+## Comparison-review update
+
+At the user’s request, an independent reviewer compared the original and recreation in the browser. Six findings and a long-name connector regression were corrected. The [review record](fidelity-review/review.md) preserves failed rounds and ends in a bounded pass. Source checkpoint `34bd4335e7c8297b5534e3ce2fa35b41db05a5d0` passed 74/74 Node and browser checks; current assets are `main-DHFdrHeu.js` and `style-B25DorEd.css`. Historical data and model derivation are unchanged. [Correction evidence](fidelity-review/README.md) distinguishes direct browser checks, source review and screenshot inspection. Earlier results below describe the initial release.
+
 ## Coverage
 
 The men’s tournaments 2016–2026 are all selectable. Seven played years through 2023 retain 83 genuine FiveThirtyEight daily snapshots. The three later years use frozen pre-tournament T-Rank Barthag ratings, the documented neutral-court log5 formula, and exact propagation over possible opponents. They have one distinctly labeled initial reconstruction each; no later forecast history is invented. All ten played years have actual results separately, and 2020 explains cancellation.

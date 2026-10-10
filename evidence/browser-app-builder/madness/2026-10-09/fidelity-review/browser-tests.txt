@@ -1,0 +1,78 @@
+Tournament Atlas checks
+
+74/74 checks passed
+
+PASS Every year 2016–2026 is available once
+PASS 2016: complete field and round structure
+PASS 2016: winners advance through correct regional/semifinal topology
+PASS 2016: champion matches independent title record
+PASS 2016: probabilities are complete, bounded and cumulative
+PASS 2016: First Four shares one Round-of-64 berth
+PASS 2017: complete field and round structure
+PASS 2017: winners advance through correct regional/semifinal topology
+PASS 2017: champion matches independent title record
+PASS 2017: probabilities are complete, bounded and cumulative
+PASS 2017: First Four shares one Round-of-64 berth
+PASS 2018: complete field and round structure
+PASS 2018: winners advance through correct regional/semifinal topology
+PASS 2018: champion matches independent title record
+PASS 2018: probabilities are complete, bounded and cumulative
+PASS 2018: First Four shares one Round-of-64 berth
+PASS 2019: complete field and round structure
+PASS 2019: winners advance through correct regional/semifinal topology
+PASS 2019: champion matches independent title record
+PASS 2019: probabilities are complete, bounded and cumulative
+PASS 2019: First Four shares one Round-of-64 berth
+PASS 2020 cancellation has no invented field, games or probabilities
+PASS 2021: complete field and round structure
+PASS 2021: winners advance through correct regional/semifinal topology
+PASS 2021: champion matches independent title record
+PASS 2021: probabilities are complete, bounded and cumulative
+PASS 2021: First Four shares one Round-of-64 berth
+PASS 2022: complete field and round structure
+PASS 2022: winners advance through correct regional/semifinal topology
+PASS 2022: champion matches independent title record
+PASS 2022: probabilities are complete, bounded and cumulative
+PASS 2022: First Four shares one Round-of-64 berth
+PASS 2023: complete field and round structure
+PASS 2023: winners advance through correct regional/semifinal topology
+PASS 2023: champion matches independent title record
+PASS 2023: probabilities are complete, bounded and cumulative
+PASS 2023: First Four shares one Round-of-64 berth
+PASS 2024: complete field and round structure
+PASS 2024: winners advance through correct regional/semifinal topology
+PASS 2024: champion matches independent title record
+PASS 2024: probabilities are complete, bounded and cumulative
+PASS 2024: First Four shares one Round-of-64 berth
+PASS 2025: complete field and round structure
+PASS 2025: winners advance through correct regional/semifinal topology
+PASS 2025: champion matches independent title record
+PASS 2025: probabilities are complete, bounded and cumulative
+PASS 2025: First Four shares one Round-of-64 berth
+PASS 2026: complete field and round structure
+PASS 2026: winners advance through correct regional/semifinal topology
+PASS 2026: champion matches independent title record
+PASS 2026: probabilities are complete, bounded and cumulative
+PASS 2026: First Four shares one Round-of-64 berth
+PASS 2016 Kansas source probabilities retain exact precision
+PASS 2018 Villanova initial and post-semifinal title probabilities match source
+PASS 2021 Gonzaga initial and post-semifinal probabilities match source
+PASS 2023 Houston initial favorite becomes eliminated in archived history
+PASS 2021 Oregon–VCU is advancement without an invented score
+PASS 2018 LIU seed correction retains its real First Four slot
+PASS Formatting never turns uncertain values into certainty or elimination
+PASS Real tiny 2021 title chances stay nonzero in accessible percentages
+PASS Near certainty stays distinct from an achieved stage without extending ordinary precision
+PASS An initial favorite is not a known regional winner
+PASS First regional branch contains seeds1/16/8/9 including play-in contenders
+PASS Result paths distinguish champion from no-contest advancement
+PASS Probability sorting uses precision hidden by whole-percent labels
+PASS Replay preserves real calendar gaps instead of equal snapshot spacing
+PASS Replay snaps unavailable dates to a genuine forecast and handles one-snapshot years
+PASS Log5 known answers, symmetry and complementarity
+PASS Equal-strength bracket gives exact fair-coin advancement for ordinary and First Four teams
+PASS One stronger team has a hand-calculated probability through all possible opponents
+PASS Reconstructed forecasts cannot read known game results
+PASS 2024: reconstruction is a single pre-tournament snapshot with distinct attribution
+PASS 2025: reconstruction is a single pre-tournament snapshot with distinct attribution
+PASS 2026: reconstruction is a single pre-tournament snapshot with distinct attribution

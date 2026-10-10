@@ -1,0 +1,17 @@
+# Original-versus-recreation review
+
+On October 9, 2026, the user reported several issues in the recreated dashboard and requested an independent subagent comparison followed by corrections.
+
+The reviewer received the [archived original](https://web.archive.org/web/20240411121651/https://projects.fivethirtyeight.com/madness-2015/index.html#mens), [live recreation](https://jordanmeyer.github.io/bab-example-madness/), and application source at commit `ad38899dbf15f5919913d8a110c66caa37b8811b`. They opened and interacted with both rendered applications. This review supplements the earlier numerical and source checks; their passing results did not establish visual fidelity.
+
+The review identified inconsistent transient team previews, selected-card hover contrast, disconnected final rounds, excessive header space, inadequate date choices and equal-spaced history dates. All six were corrected. Follow-up review caught lower paths behind the title card and connectors failing to follow resized long-name cards; both were corrected before the final pass. Historical data and probability derivation are unchanged.
+
+`before-desktop.png` and `before-hover.png` preserve the baseline. `first-correction-desktop.png` preserves the still-obscured lower paths. The full-page capture named `first-correction-pinned.png` restored the pinned team while capturing and is not evidence of an Alabama transient preview. `preview-viewport.png` preserves the actual focused Alabama route and 16.176% title chance; DOM checks before and after capture confirmed Houston remained pinned. `after-desktop.png`, `corrected-hover.png`, `history-calendar.png` and `phone-table.png` show the corresponding corrected states. Some captures precede the final content-resize fix; exact final measurements are in the review record.
+
+Current source checkpoint: `34bd4335e7c8297b5534e3ce2fa35b41db05a5d0`. Production build and **74/74 Node/browser cases** passed. Current main asset: `main-DHFdrHeu.js`; CSS: `style-B25DorEd.css`. The final long-name test measured title top and both connecting endpoints at exactly y 577.8203125 relative to the bracket. No observed console errors/warnings. At 375 × 900 CSS pixels, body width remained 375; table width 343 and pinned names 138 left room for horizontally scrollable data. The first desktop team row moved from approximately 699 to 486px.
+
+Read [the independent review and bounded pass](review.md) and [visible browser results](browser-tests.txt). The reviewer interacted with both original pages; their follow-up browser context became unavailable, so final review explicitly combines source inspection, independent capture inspection and coordinator-attributed browser measurements.
+
+The review does not establish actual screen-reader speech, novice usability or physical phone touch behavior.
+
+Published correction/report commit `c8b7e81e98b9542fa41b9e35234a743ca73c9197` passed [Actions run 38015656925](https://github.com/jordanmeyer/bab-example-madness/actions/runs/38015656925). A returning browser loaded the new JavaScript and passed live preview, later-model/result and cancellation checks. `live-bracket.png` is the actual corrected public application.
