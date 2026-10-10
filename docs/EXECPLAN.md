@@ -18,7 +18,7 @@ Make the published Tournament Atlas behave like the requested original across al
 - [x] Independent review passes all 21 findings: 112 states, all years/four desktop widths, 11,168 label measurements with zero clips, plus phone and actual interactions.
 - [x] Clean source `7ffc82d` passes 80/80 Node/browser checks and production build; all existing data facts compare identical.
 - [x] Published app `0ed4442`; exact Actions run 38019734396 succeeded and returning-browser assets, known odds, clean rest and Results were verified.
-- [ ] Refreshed gallery evidence and completed build/check/Claude validation plus desktop/narrow keyboard/copy checks; gallery publication remains.
+- [x] Published gallery `25787bd`; exact Actions run 38019844930 succeeded. The live image, link and 80-check wording were verified after the build/check/Claude and desktop/narrow keyboard/copy checks.
 - [x] Recorded bounded review outcomes and stopped all four owned preview/test processes.
 
 ## Surprises & Discoveries
@@ -40,7 +40,7 @@ The current working tree includes unrelated featured-order changes in `site/conf
 ## Outcomes & Retrospective
 
 
-Data/model support is implemented with 80/80 Node checks. Independent whole-file comparison confirms all existing facts and probabilities are unchanged after removing only new label metadata and explanatory prose. The UI and all 21 requested corrections have an independent bounded pass. Final app publication `0ed4442` passed its exact Actions run and live checks. Source `8f9147c` adds only a separately reviewed removal of a duplicate Winner label; the broader matrix remains attributed to `7ffc82d`. Gallery publication remains. Prior reports remain historical evidence, including their insufficient acceptance scope.
+Data/model support is implemented with 80/80 Node checks. Independent whole-file comparison confirms all existing facts and probabilities are unchanged after removing only new label metadata and explanatory prose. The UI and all 21 requested corrections have an independent bounded pass. Final app publication `0ed4442` passed its exact Actions run and live checks. Source `8f9147c` adds only a separately reviewed removal of a duplicate Winner label; the broader matrix remains attributed to `7ffc82d`. Gallery `25787bd` also passed its exact Actions run and live image/link/count inspection. All requested corrections are complete; actual reduced-motion execution, screen-reader, touch-device and novice checks remain explicitly unperformed. Prior reports remain historical evidence, including their insufficient acceptance scope.
 
 ## Context and Orientation
 
@@ -123,3 +123,5 @@ Revision note (2026-10-09): Reopened the correction against the user’s broader
 Revision note (checklist candidate): Expanded rendered acceptance found and corrected control-stack height, inaccurate Results model badges, no-pin browser restoration and First Four pressed-state cleanup. Final source is `7ffc82d`, with 80/80 Node/browser checks and a 112-state independent review.
 
 Revision note (publication): Final app source follow-up `8f9147c` and report commit `0ed4442` are live, with returning-browser `main-DKaVtwEg.js` and the corrected champion label verified. The course build initially caught an evidence link escaping its publication boundary; its explicit source URL passes checks. All owned servers are stopped.
+
+Revision note (completion): Gallery `25787bd` passed run 38019844930. The live preview loads the corrected 1280 × 1376 image and 80-check wording with the correct app link. All requested work is complete and all owned temporary processes/tabs are closed. A badly scaled gallery screenshot was omitted in favor of recorded DOM geometry; the independently captured app phone image remains. Unrelated user configuration/catalog changes and files are preserved.
