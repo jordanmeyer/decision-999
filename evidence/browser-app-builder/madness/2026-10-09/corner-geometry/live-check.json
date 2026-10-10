@@ -1,0 +1,63 @@
+{
+  "joins": [
+    {
+      "rx": "7.0395px",
+      "ry": "7.69738px",
+      "stage": "2"
+    },
+    {
+      "rx": "6.31618px",
+      "ry": "7.0395px",
+      "stage": "3"
+    },
+    {
+      "rx": "5.29737px",
+      "ry": "6.31618px",
+      "stage": "4"
+    },
+    {
+      "rx": "4.39145px",
+      "ry": "5.29737px",
+      "stage": "5"
+    },
+    {
+      "rx": "3.26647px",
+      "ry": "4.39145px",
+      "stage": "6"
+    }
+  ],
+  "paths": [
+    {
+      "cap": "butt",
+      "stage": "1",
+      "width": "15.3948px"
+    },
+    {
+      "cap": "butt",
+      "stage": "2",
+      "width": "14.079px"
+    },
+    {
+      "cap": "butt",
+      "stage": "3",
+      "width": "12.6324px"
+    },
+    {
+      "cap": "butt",
+      "stage": "4",
+      "width": "10.5947px"
+    },
+    {
+      "cap": "butt",
+      "stage": "5",
+      "width": "8.78291px"
+    },
+    {
+      "cap": "butt",
+      "stage": "6",
+      "width": "6.53293px"
+    }
+  ],
+  "pin": "",
+  "team": "Alabama"
+}

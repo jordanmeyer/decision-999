@@ -21,12 +21,19 @@ Make the published Tournament Atlas behave like the requested original across al
 - [x] Published gallery `25787bd`; exact Actions run 38019844930 succeeded. The live image, link and 80-check wording were verified after the build/check/Claude and desktop/narrow keyboard/copy checks.
 - [x] Recorded bounded review outcomes and stopped all four owned preview/test processes.
 
+- [x] (2026-10-09, corner follow-up) Reproduced the user’s enlarged screenshot: round caps create bulges where consecutive rounds have unequal widths. Prior corner acceptance is rejected.
+- [x] Replaced circular caps with width-matched ellipse geometry and synchronized growth/shrink, including interrupted dashes.
+- [x] Actual browser 16/16 rendering regressions pass: 30 seams across six teams, negative control, animation/interruption/retirement. Independent source and enlarged Alabama visual review found no blocker; other orientations are coordinator raster evidence.
+- [x] Published `6766f11`; exact Actions run 38021951772 succeeded. Returning browser loaded `main-Dl6dz9Jv.js`/`style-DH0Cp_SR.css` and verified an unpinned Alabama hover with five matched corner radii.
+
 ## Surprises & Discoveries
 
 
 The previous numerical tests and bounded visual passes missed clipping in nine of ten years, completed-round probability bands, inconsistent results identity and distorted SVG scaling. The reviewer measured the reference’s fixed 1004px drawing and 12px names. The new acceptance therefore checks every year and several viewports, with late forecasts and Results in addition to initial snapshots.
 
 The current working tree includes unrelated featured-order changes in `site/config.json` and generated catalogs, an untracked `.claude/` folder and another review document. Preserve these. The application lives outside the course workspace and requires the host’s filesystem permission for edits and Git operations.
+
+Round caps are geometrically wrong at a width change: their horizontal radius comes from the wider incoming stroke and protrudes beyond the narrower outgoing stroke. The earlier normal-scale visual check failed to reject this visible defect. Enlarged rendered evidence is now required.
 
 ## Decision Log
 
@@ -37,8 +44,12 @@ The current working tree includes unrelated featured-order changes in `site/conf
 
 2026-10-09: Separate implementation ownership from independent review. Do not call a source-only or one-season pass a full rendered pass. Human screen-reader, physical touch and novice usability remain unverified; the user previously reserved screen-reader checks for a person.
 
+2026-10-09, corner follow-up: Keep flat segment ends and add a full ellipse whose horizontal radius is half the outgoing width and vertical radius half the incoming width. The other three quarters of the ellipse lie inside the strokes, so no clipping or direction branches are needed. Each axis must follow the corresponding stroke during animation, and the join stays hidden until the incoming dash reaches it. This rounds the edge without an overhang or changes to probabilities.
+
 ## Outcomes & Retrospective
 
+
+The corner correction at app commit `a58ed7b` is rejected by the user’s enlarged screenshot. It is now replaced by source `58d7cdd`, with 16 rendered regression checks, an enlarged visual review and verified publication `6766f11`. Earlier numerical/layout evidence remains historical and does not establish acceptable corners.
 
 Data/model support is implemented with 80/80 Node checks. Independent whole-file comparison confirms all existing facts and probabilities are unchanged after removing only new label metadata and explanatory prose. The UI and all 21 requested corrections have an independent bounded pass. Final app publication `0ed4442` passed its exact Actions run and live checks. Source `8f9147c` adds only a separately reviewed removal of a duplicate Winner label; the broader matrix remains attributed to `7ffc82d`. Gallery `25787bd` also passed its exact Actions run and live image/link/count inspection. All requested corrections are complete; actual reduced-motion execution, screen-reader, touch-device and novice checks remain explicitly unperformed. Prior reports remain historical evidence, including their insufficient acceptance scope.
 
@@ -74,6 +85,13 @@ Merge year/mode/view controls into a compact row. Put snapshot status inside the
 The independent reviewer compares the reference and candidate, covers all 21 items, and reports remaining defects directly to the developers for correction. Inspect all years 2016–2026, desktop widths 1024, 1217, 1280 and 1680, and phone width 375. Include late snapshots, Results, First Four, playback, keyboard and pinned/rest states. Save actual measurements and screenshots under `evidence/browser-app-builder/madness/2026-10-09/checklist-review/`; retain failed rounds.
 
 After meaningful source tests and browser tests pass, build production output and verify it under the repository URL path. Inspect all changes, create a clean source checkpoint, update application evaluation and publication records, and push ordinary commits to main. Verify the exact GitHub Actions commit and live known answers, labels, clean state and new assets in a returning browser. Refresh the gallery image and evidence wording, run course validation, and push only related course files. Preserve unrelated generated-catalog and configuration edits.
+
+### Milestone 4: Width-aware route corners
+
+
+In the sibling app's `app/main.js`, replace circular end caps at connections between stage paths with an ellipse whose other three quarters overlap the existing strokes. For a horizontal incoming path of width A and a vertical outgoing path of width B, the corner extends B/2 horizontally and A/2 vertically from the centerline intersection. The full ellipse works in all four directions without mirrored formulas. Keep the existing rounded internal elbows and restore flat caps in `app/style.css`. A corner exists only when both adjacent stages are drawn; no completed round may reappear.
+
+Animate each corner radius with its adjacent stroke width so it stays within both edges during growth and shrink. Inspect the actual enlarged Alabama 99%→82%→65% transitions shown by the user, Maryland's sharp drop, mirrored and upward bends, Houston's title stem and tiny First Four routes. Use existing production preview on localhost:9742; save rendered evidence under `evidence/browser-app-builder/madness/2026-10-09/corner-geometry/`. Preserve the failed prior report, explicitly supersede it, and obtain independent geometric and browser review. Run meaningful regression checks and the build; no test that merely asserts CSS spelling. Publish only after those checks, then verify the exact Actions run and enlarged live output.
 
 ## Concrete Steps
 
@@ -125,3 +143,9 @@ Revision note (checklist candidate): Expanded rendered acceptance found and corr
 Revision note (publication): Final app source follow-up `8f9147c` and report commit `0ed4442` are live, with returning-browser `main-DKaVtwEg.js` and the corrected champion label verified. The course build initially caught an evidence link escaping its publication boundary; its explicit source URL passes checks. All owned servers are stopped.
 
 Revision note (completion): Gallery `25787bd` passed run 38019844930. The live preview loads the corrected 1280 × 1376 image and 80-check wording with the correct app link. All requested work is complete and all owned temporary processes/tabs are closed. A badly scaled gallery screenshot was omitted in favor of recorded DOM geometry; the independently captured app phone image remains. Unrelated user configuration/catalog changes and files are preserved.
+
+Revision note (corner rejection): Reopened acceptance after the user demonstrated visible cap bulges. Replace the one-line workaround with correct unequal-width geometry and enlarged verification. No data/model or gallery redesign is in scope.
+
+Revision note (corner candidate): Source `58d7cdd` passed 16 rendered checks, the 80-case numerical suite and production packaging. The earlier round-cap pass is explicitly rejected in application evidence. Report release `6766f11` is pushed; exact deployment and live verification remain pending.
+
+Revision note (corner completion): The exact Pages run succeeded; live assets, an actual unpinned hover and both radii at all five Alabama seams match the reviewed build. Enlarged evidence and the failed prior acceptance are preserved. This correction is complete within its recorded browser/review limits.
