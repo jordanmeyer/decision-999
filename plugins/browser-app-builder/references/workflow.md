@@ -29,15 +29,17 @@ Read the actual project before acting. Create each record only when there is som
 | Artifact | Owner and contents |
 | --- | --- |
 | `SETUP.md` | Setup: capabilities, verified tool invocations, preview/test URLs and how to restart them, gaps. No secrets or unnecessary machine details. |
-| `PLAN.md` | Plan: opening request, requirement coverage and agreed deferrals, purpose, inputs/outputs, model, teaching/default cases, acceptance; identify pending choices. |
+| `PLAN.md` | Plan: opening request, requirement coverage and agreed deferrals, purpose, inputs/outputs, applicable model, representative tasks, acceptance; identify pending choices. |
 | `README.md` | Build: what the app does, usage, data sources/licenses, preview and limits; Deploy adds public URLs. |
-| `DECISIONS.md` | Any stage: significant student decisions, rationale, and resulting change. No chat dump. |
+| `DECISIONS.md` | Any stage: current significant student decisions and preferences, rationale, and resulting change; mark earlier decisions superseded when corrected or retracted. No chat dump. |
 | `EVALUATION.md` | Evaluate: tested commit, relevant paths, cases, expected/observed results, failures/fixes, tools, limitations. |
 | `DEPLOYMENT.md` | Deploy: repository, live URL, evaluated and published commits, verification, update steps. |
 
 `app/` contains application source (directly publishable for plain apps; compiled by Vite for managed apps); `tests/` contains the browser test page and fixtures. `.github/workflows/` holds publishing instructions. `dist/` is generated publishing output, never authored source. Keep local input storage outside `app/` and out of Git.
 
 If a plan is missing or a consequential decision is unresolved, use [Plan](../skills/plan-browser-app/SKILL.md). If a prerequisite is missing, use [Setup](../skills/setup-browser-app/SKILL.md). Existing files are not permission to replace them. Missing capabilities stop only dependent work.
+
+For revisions, read the relevant settled decisions and preserve them outside the requested change. Apply the student's latest correction where it supersedes an earlier choice. A scoped edit within the agreed plan does not require another planning interview.
 
 Make meaningful commits after inspecting staged content. Document material scope/model changes and ask the student to settle them. Report what exists, what was actually checked, and what remains; a local preview is not a deployment and installation is not workflow validation.
 

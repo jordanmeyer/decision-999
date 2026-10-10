@@ -15,15 +15,15 @@ Narrow the first version to one useful task. A dashboard can filter bundled data
 
 Preserve the opening brief before narrowing it. For each consequential requested capability, record the planned behavior and a check, or an explicit student-approved deferral with its reason. A new title or smaller example must not silently change the audience, decision scale or lesson. Ask about real tradeoffs; do not steer the student into dropping difficult requirements merely to finish. Consult the relevant [decision-model guidance](../../references/decision-models.md) after choosing recipes.
 
-Choose a first-load scenario that makes the intended decision visible. Record what the user should learn, an independently expected result, and one meaningful input change that changes the evidence or recommendation. Synthetic data should include plausible variation and counterexamples; keep tiny hand-check fixtures separate from a substantial default dataset. Do not engineer every row to expose the same answer. For uncertainty or capacity limits, test a case where the constraint actually matters.
+Choose an initial state and a representative task with an observable expected outcome. For a teaching or decision-support app, also record the intended lesson or decision and a meaningful counterfactual. Do not impose a learning objective on an unrelated application. Synthetic data should include plausible variation and counterexamples; keep tiny hand-check fixtures separate from a substantial default dataset. Do not engineer every row to expose the same answer. For uncertainty or capacity limits, test a case where the constraint actually matters.
 
 Write `PLAN.md` with:
 
 - Intended user, problem, input/output, and smallest useful version.
-- Opening brief and coverage of its consequential requests, including explicitly agreed deferrals; one-line learning objective and default/counterfactual decision cases.
+- Opening brief and coverage of its consequential requests, including explicitly agreed deferrals; representative tasks and, where applicable, learning objective and default/counterfactual decision cases.
 - Included behavior and explicit exclusions; data origin and rights.
-- Model/formulas in plain language, units, assumptions, rounding, and invalid-input behavior.
-- Independently derived example answers and their derivation/source. For a stochastic model, define seed behavior, deterministic limits, and suitable accuracy tolerances.
+- Expected task outcomes; for calculations, model/formulas in plain language, units, assumptions, rounding, and invalid-input behavior.
+- For calculations, independently derived example answers and their derivation/source. For a stochastic model, define seed behavior, deterministic limits, and suitable accuracy tolerances.
 - Main interactions, empty/error states, and desktop/narrow/keyboard acceptance.
 - Whether edits update results immediately or require an atomic Apply/Run step. Prefer immediate updates for cheap calculations; explain pending changes when submission is necessary.
 - Agreed decisions, remaining questions, and student corrections.
