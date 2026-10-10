@@ -1,0 +1,26 @@
+25/25 rendered checks passed
+PASS Animation prerequisites: actual browser enables motion
+PASS Alabama animation at 0 ms: radii track adjacent widths; no detached joins
+PASS Alabama animation at 100 ms: radii track adjacent widths; no detached joins
+PASS Alabama animation at 200 ms: radii track adjacent widths; no detached joins
+PASS Alabama animation at 400 ms: radii track adjacent widths; no detached joins
+PASS Alabama animation at 700 ms: radii track adjacent widths; no detached joins
+PASS Alabama animation at 1000 ms: radii track adjacent widths; no detached joins
+PASS Team 333: one continuous drawing front from name to title
+PASS Team 2305: one continuous drawing front from name to title
+PASS Team 161: one continuous drawing front from name to title
+PASS Alabama: rasterized settled corners stay within the next band, without notches (including title)
+PASS Maryland: rasterized settled corners stay within the next band, without notches (including title)
+PASS Kansas: rasterized settled corners stay within the next band, without notches (including title)
+PASS Arizona: rasterized settled corners stay within the next band, without notches (including title)
+PASS Houston: rasterized settled corners stay within the next band, without notches (including title)
+PASS Fairleigh Dickinson: rasterized settled corners stay within the next band, without notches (including title)
+PASS Team 333: unboxed text connects to the first highlighted route
+PASS Team 120: unboxed text connects to the first highlighted route
+PASS Team 2305: unboxed text connects to the first highlighted route
+PASS Team 248: unboxed text connects to the first highlighted route
+PASS Team 161: unboxed text connects to the first highlighted route
+PASS Rapid team change preserves partial widths and dashes; hidden joins do not retire visibly
+PASS Retiring junctions shrink with both adjacent paths at 0/100/300/600 ms
+PASS Late forecast connector starts beside the resolved advancing team
+PASS Clearing selection removes every retired path and corner
