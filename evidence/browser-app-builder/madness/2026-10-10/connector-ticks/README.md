@@ -1,0 +1,9 @@
+# Keep matching short connector ticks — 2026-10-10
+
+User requested retaining the small horizontal ticks beside names in filled rounds, matching those beside the opening-round names. Regional and finalist slots now have the same 4px terminal segments leading into the next vertical junction. The horizontal line across each filled label area remains absent.
+
+Source checkpoint: 09d7087. Deployment payload: 6b4a7d6. Existing design checks now verify terminal positions and 4px lengths at actual filled-slot edges on both sides, alongside the absence of crossing lines: 140/140 pass across ten played seasons and 2,984 rendered labels. Existing route checks: 25/25. Production build passes with the existing bundle-size warning. March 17, 2023 production preview visually confirms the requested matching brackets. No data, calculation, dependency, spacing or font changes.
+
+Reproduce with Node 22.19.0 in the app repository: `npm run test:browser -- --port 9741`, open `/tests/design-review.html` and `/tests/route-rendering.html` at localhost:9741. For production, `npm run build`, `npm run preview -- --port 9742`; open `http://localhost:9742/bab-example-madness/`. Choose 2023 and March 17 (Home, then four ArrowRight presses on the timeline). Inspect the ticks alongside filled names, then later forecasts and Results. Configured Mac/in-app-browser evidence only.
+
+[Pages run 38027475263](https://github.com/jordanmeyer/bab-example-madness/actions/runs/38027475263) succeeded for the recorded payload. Returning live browser loaded main-BP5-s1NM.js and showed 96 terminal ticks on March 17: 64 opening slots plus 32 filled Round-of-32 slots. Screenshot: live.jpg. No live console errors observed. The local resizing harness emitted its previously observed ResizeObserver warning while all assertions completed.
