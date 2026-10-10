@@ -1,0 +1,325 @@
+{
+  "build": [
+    "http://localhost:9742/bab-example-madness/assets/main-DQGqCqRq.js"
+  ],
+  "sourceCheckpoint": "7ffc82d2df7e702bd3c3bf367c39e2537636e2f5",
+  "pointer": [
+    {
+      "center": "Alabama",
+      "hovered": [
+        "bracket-tree"
+      ],
+      "pin": false,
+      "selectedStage": "2",
+      "state": "outside-to-blank-A"
+    },
+    {
+      "active": 0,
+      "center": "",
+      "pin": false,
+      "state": "blank-to-outside-A"
+    },
+    {
+      "center": "Creighton",
+      "hovered": [
+        "bracket-tree"
+      ],
+      "pin": false,
+      "selectedStage": "2",
+      "state": "outside-to-blank-B"
+    },
+    {
+      "active": 0,
+      "center": "",
+      "pin": false,
+      "state": "blank-to-outside-B"
+    }
+  ],
+  "keyboard": [
+    {
+      "center": "Alabama",
+      "emphasis": "99%",
+      "focused": "Round of 32 · South. Most likely entrant: Alabama · 98.602%. Enter pins this team; arrow keys move between slots.",
+      "pin": false,
+      "round": "1",
+      "state": "arrow-right"
+    },
+    {
+      "chip": "Pinned: Alabama ×",
+      "detail": "Alabama",
+      "state": "enter-pin"
+    },
+    {
+      "focused": "Texas A&M-Corpus Christi54%",
+      "insideTree": false,
+      "state": "tab-leaves-tree"
+    },
+    {
+      "active": 0,
+      "center": "",
+      "chipHidden": true,
+      "detailHidden": true,
+      "state": "escape"
+    }
+  ],
+  "animationIn": [
+    {
+      "dash": "0.839333px",
+      "rendered": "2.47343px",
+      "stage": "1",
+      "target": "15.3948"
+    },
+    {
+      "dash": "1px",
+      "rendered": "0px",
+      "stage": "2",
+      "target": "14.079"
+    },
+    {
+      "dash": "1px",
+      "rendered": "0px",
+      "stage": "3",
+      "target": "12.6324"
+    },
+    {
+      "dash": "1px",
+      "rendered": "0px",
+      "stage": "4",
+      "target": "10.5947"
+    },
+    {
+      "dash": "1px",
+      "rendered": "0px",
+      "stage": "5",
+      "target": "8.78291"
+    },
+    {
+      "dash": "1px",
+      "rendered": "0px",
+      "stage": "6",
+      "target": "6.53293"
+    }
+  ],
+  "animationOut": [
+    {
+      "rendered": "14.4769px",
+      "stage": "1",
+      "target": "15.3357"
+    },
+    {
+      "rendered": "12.2323px",
+      "stage": "2",
+      "target": "12.6576"
+    },
+    {
+      "rendered": "9.63046px",
+      "stage": "3",
+      "target": "9.86727"
+    },
+    {
+      "rendered": "7.11916px",
+      "stage": "4",
+      "target": "7.25458"
+    },
+    {
+      "rendered": "4.95467px",
+      "stage": "5",
+      "target": "5.03151"
+    },
+    {
+      "rendered": "3.78937px",
+      "stage": "6",
+      "target": "3.83898"
+    }
+  ],
+  "firstFour": {
+    "before": {
+      "bg": "rgb(229, 229, 229)",
+      "fg": "rgb(38, 38, 38)",
+      "text": "16SEMO / AMCC"
+    },
+    "after": {
+      "bg": "rgb(243, 242, 241)",
+      "clipped": false,
+      "fg": "rgb(38, 38, 38)",
+      "text": "16Texas A&M-CC",
+      "weight": "700"
+    }
+  },
+  "bold": [
+    {
+      "clips": 0,
+      "names": [
+        {
+          "font": "700 12px / 14.4px Arial, sans-serif",
+          "name": "SF Austin",
+          "scroll": 56,
+          "weight": "700",
+          "width": 56
+        }
+      ],
+      "pin": "Pinned: Stephen F. Austin ×",
+      "year": "2016"
+    },
+    {
+      "clips": 0,
+      "names": [
+        {
+          "font": "700 12px / 14.4px Arial, sans-serif",
+          "name": "UNC Greensboro",
+          "scroll": 97,
+          "weight": "700",
+          "width": 97
+        }
+      ],
+      "pin": "Pinned: North Carolina-Greensboro ×",
+      "year": "2018"
+    },
+    {
+      "clips": 0,
+      "names": [
+        {
+          "font": "700 12px / 14.4px Arial, sans-serif",
+          "name": "Northwestern",
+          "scroll": 77,
+          "weight": "700",
+          "width": 77
+        }
+      ],
+      "pin": "Pinned: Northwestern ×",
+      "year": "2023"
+    }
+  ],
+  "late": {
+    "date": "Mar 19, 2023. Predictions through March 19 games",
+    "labels": [
+      {
+        "stage": "3",
+        "text": "79%"
+      },
+      {
+        "stage": "4",
+        "text": "51%"
+      },
+      {
+        "stage": "5",
+        "text": "38%"
+      }
+    ],
+    "routes": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "selectedStrips": [
+      {
+        "bg": "rgb(243, 242, 241)",
+        "fg": "rgb(38, 38, 38)",
+        "round": "0",
+        "text": "1Houston"
+      },
+      {
+        "bg": "rgb(243, 242, 241)",
+        "fg": "rgb(38, 38, 38)",
+        "round": "1",
+        "text": "HOU"
+      },
+      {
+        "bg": "rgb(243, 242, 241)",
+        "fg": "rgb(38, 38, 38)",
+        "round": "2",
+        "text": "HOU"
+      }
+    ],
+    "title": "Houston"
+  },
+  "results": {
+    "labels": 0,
+    "paths": 0,
+    "status": "Eliminated in Sweet 16",
+    "strips": [
+      {
+        "eliminated": false,
+        "round": "0"
+      },
+      {
+        "eliminated": false,
+        "round": "1"
+      },
+      {
+        "eliminated": true,
+        "round": "2"
+      }
+    ],
+    "title": "Houston"
+  },
+  "playback": {
+    "playbackHover": {
+      "active": 0,
+      "center": "",
+      "pin": false,
+      "play": "Pause tournament"
+    },
+    "firstMs": 596,
+    "secondMs": 1122,
+    "intervalMs": 526
+  },
+  "phone": {
+    "bodyWidth": 375,
+    "contrast": {
+      "count": 476,
+      "failures": [],
+      "min": 4.794553641069554,
+      "sample": [
+        {
+          "bg": "rgb(199, 206, 222)",
+          "fg": "rgb(0, 0, 0)",
+          "p": "22.085%",
+          "ratio": 13.3117307524258,
+          "text": "22%"
+        },
+        {
+          "bg": "rgb(152, 165, 194)",
+          "fg": "rgb(0, 0, 0)",
+          "p": "40.656%",
+          "ratio": 8.496141798668958,
+          "text": "41%"
+        },
+        {
+          "bg": "rgb(177, 186, 209)",
+          "fg": "rgb(0, 0, 0)",
+          "p": "30.862%",
+          "ratio": 10.81367442544241,
+          "text": "31%"
+        },
+        {
+          "bg": "rgb(140, 154, 187)",
+          "fg": "rgb(0, 0, 0)",
+          "p": "45.291%",
+          "ratio": 7.454901503835812,
+          "text": "45%"
+        }
+      ]
+    },
+    "firstRowY": 503.0546875,
+    "headers": [
+      "Team",
+      "Win title",
+      "Round of 64",
+      "Round of 32",
+      "Sweet 16",
+      "Elite Eight",
+      "Final Four",
+      "Final"
+    ],
+    "scrollWidth": 570,
+    "tableWidth": 353,
+    "viewport": 375
+  },
+  "unavailable": {
+    "before": "11",
+    "after": "11"
+  },
+  "console": []
+}

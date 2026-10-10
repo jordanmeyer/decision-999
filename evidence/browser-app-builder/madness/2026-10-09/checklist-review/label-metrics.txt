@@ -1,0 +1,1 @@
+["paired": ("SEMO / AMCC", 80.888671875), "bracketName": ("UNC Greensboro", 97.34765625), "superShortName": ("GWEB", 37.330078125)]

@@ -8,6 +8,10 @@ A real user requested a recreation of the archived FiveThirtyEight tournament ex
 - [Plan](https://github.com/jordanmeyer/bab-example-madness/blob/main/PLAN.md)
 - [Evaluation](EVALUATION.md) and [first live deployment](DEPLOYMENT.md)
 
+## Complete fidelity checklist correction
+
+The user’s 21-item review supersedes the earlier bounded geometry acceptance. [Independent re-review](checklist-review/review.md) passes all requested corrections across all years, four desktop widths, late forecasts, Results and a 375px phone check. Source `7ffc82d` passed 80/80 Node/browser checks and a clean production build. [Current evidence](checklist-review/README.md) preserves the 112-state matrix, 11,168 measured labels, numerical-data preservation, failed correction rounds and limits. Earlier reports below remain historical.
+
 ## Current geometry correction
 
 The user rejected the previous card layout. The [new original-geometry review](geometry-review/review.md) inspected the actual reference and corrected production candidate, including shared round columns, tapered probability routes and compact settled-team labels. Its bounded desktop pass follows two corrected intermediate failures. Clean source `40c6a1e` passed 74/74 Node/browser checks and a production build. [Current evidence](geometry-review/README.md) records coordinator Results/narrow observations separately.

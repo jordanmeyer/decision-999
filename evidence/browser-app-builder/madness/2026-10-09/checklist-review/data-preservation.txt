@@ -1,0 +1,12 @@
+2016: identical after removing bracketName/superShortName and the revised explanatory forecastNote
+2017: identical after removing bracketName/superShortName and the revised explanatory forecastNote
+2018: identical after removing bracketName/superShortName and the revised explanatory forecastNote
+2019: identical after removing bracketName/superShortName and the revised explanatory forecastNote
+2020: identical after removing bracketName/superShortName and the revised explanatory forecastNote
+2021: identical after removing bracketName/superShortName and the revised explanatory forecastNote
+2022: identical after removing bracketName/superShortName and the revised explanatory forecastNote
+2023: identical after removing bracketName/superShortName and the revised explanatory forecastNote
+2024: identical after removing bracketName/superShortName and the revised explanatory forecastNote
+2025: identical after removing bracketName/superShortName and the revised explanatory forecastNote
+2026: identical after removing bracketName/superShortName and the revised explanatory forecastNote
+All existing source fields, games, probabilities, ratings, dates, joins, sources and corrections are identical to 6f98ed0.

@@ -1,0 +1,2247 @@
+{
+  "build": [
+    "http://localhost:9742/bab-example-madness/assets/main-DQGqCqRq.js"
+  ],
+  "measurements": [
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2016Pre-tournament predictions",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 4, 2016 championship game; forecast unavailable",
+      "width": 1024,
+      "year": "2016"
+    },
+    {
+      "state": "late",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 126,
+      "pin": false,
+      "status": "Men’s · 2016Predictions through April 2 games",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 4, 2016 championship game; forecast unavailable",
+      "width": 1024,
+      "year": "2016"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2016Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 4, 2016 championship game; forecast unavailable",
+      "width": 1024,
+      "year": "2016"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2017Pre-tournament predictions",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 3, 2017 championship game; forecast unavailable",
+      "width": 1024,
+      "year": "2017"
+    },
+    {
+      "state": "late",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 126,
+      "pin": false,
+      "status": "Men’s · 2017Predictions through April 1 games",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 3, 2017 championship game; forecast unavailable",
+      "width": 1024,
+      "year": "2017"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2017Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 3, 2017 championship game; forecast unavailable",
+      "width": 1024,
+      "year": "2017"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2018Pre-tournament predictions",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 2, 2018 championship game; forecast unavailable",
+      "width": 1024,
+      "year": "2018"
+    },
+    {
+      "state": "late",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 126,
+      "pin": false,
+      "status": "Men’s · 2018Predictions through March 31 games",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 2, 2018 championship game; forecast unavailable",
+      "width": 1024,
+      "year": "2018"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2018Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 2, 2018 championship game; forecast unavailable",
+      "width": 1024,
+      "year": "2018"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2019Pre-tournament predictions",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 8, 2019 championship game; forecast unavailable",
+      "width": 1024,
+      "year": "2019"
+    },
+    {
+      "state": "late",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 126,
+      "pin": false,
+      "status": "Men’s · 2019Predictions through April 6 games",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 8, 2019 championship game; forecast unavailable",
+      "width": 1024,
+      "year": "2019"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2019Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 8, 2019 championship game; forecast unavailable",
+      "width": 1024,
+      "year": "2019"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": true,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2019Completed tournament results",
+      "svg": {
+        "height": 0,
+        "preserve": null,
+        "width": 0
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 8, 2019 championship game; forecast unavailable",
+      "width": 1024,
+      "year": "2020"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2021Pre-tournament predictions",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 5, 2021 championship game; forecast unavailable",
+      "width": 1024,
+      "year": "2021"
+    },
+    {
+      "state": "late",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 126,
+      "pin": false,
+      "status": "Men’s · 2021Predictions through April 3 games",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 5, 2021 championship game; forecast unavailable",
+      "width": 1024,
+      "year": "2021"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2021Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 5, 2021 championship game; forecast unavailable",
+      "width": 1024,
+      "year": "2021"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2022Pre-tournament predictions",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 4, 2022 championship game; forecast unavailable",
+      "width": 1024,
+      "year": "2022"
+    },
+    {
+      "state": "late",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 126,
+      "pin": false,
+      "status": "Men’s · 2022Predictions through April 2 games",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 4, 2022 championship game; forecast unavailable",
+      "width": 1024,
+      "year": "2022"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2022Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 4, 2022 championship game; forecast unavailable",
+      "width": 1024,
+      "year": "2022"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2023Pre-tournament predictions",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 3, 2023 championship game; forecast unavailable",
+      "width": 1024,
+      "year": "2023"
+    },
+    {
+      "state": "late",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 126,
+      "pin": false,
+      "status": "Men’s · 2023Predictions through April 1 games",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 3, 2023 championship game; forecast unavailable",
+      "width": 1024,
+      "year": "2023"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2023Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 3, 2023 championship game; forecast unavailable",
+      "width": 1024,
+      "year": "2023"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2024Pre-tournament predictionsReconstructed model",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 8, 2024 championship game; forecast unavailable",
+      "width": 1024,
+      "year": "2024"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2024Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 8, 2024 championship game; forecast unavailable",
+      "width": 1024,
+      "year": "2024"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2025Pre-tournament predictionsReconstructed model",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 7, 2025 championship game; forecast unavailable",
+      "width": 1024,
+      "year": "2025"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2025Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 7, 2025 championship game; forecast unavailable",
+      "width": 1024,
+      "year": "2025"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2026Pre-tournament predictionsReconstructed model",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 6, 2026 championship game; forecast unavailable",
+      "width": 1024,
+      "year": "2026"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2026Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 6, 2026 championship game; forecast unavailable",
+      "width": 1024,
+      "year": "2026"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2016Pre-tournament predictions",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 4, 2016 championship game; forecast unavailable",
+      "width": 1217,
+      "year": "2016"
+    },
+    {
+      "state": "late",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 126,
+      "pin": false,
+      "status": "Men’s · 2016Predictions through April 2 games",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 4, 2016 championship game; forecast unavailable",
+      "width": 1217,
+      "year": "2016"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2016Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 4, 2016 championship game; forecast unavailable",
+      "width": 1217,
+      "year": "2016"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2017Pre-tournament predictions",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 3, 2017 championship game; forecast unavailable",
+      "width": 1217,
+      "year": "2017"
+    },
+    {
+      "state": "late",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 126,
+      "pin": false,
+      "status": "Men’s · 2017Predictions through April 1 games",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 3, 2017 championship game; forecast unavailable",
+      "width": 1217,
+      "year": "2017"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2017Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 3, 2017 championship game; forecast unavailable",
+      "width": 1217,
+      "year": "2017"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2018Pre-tournament predictions",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 2, 2018 championship game; forecast unavailable",
+      "width": 1217,
+      "year": "2018"
+    },
+    {
+      "state": "late",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 126,
+      "pin": false,
+      "status": "Men’s · 2018Predictions through March 31 games",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 2, 2018 championship game; forecast unavailable",
+      "width": 1217,
+      "year": "2018"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2018Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 2, 2018 championship game; forecast unavailable",
+      "width": 1217,
+      "year": "2018"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2019Pre-tournament predictions",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 8, 2019 championship game; forecast unavailable",
+      "width": 1217,
+      "year": "2019"
+    },
+    {
+      "state": "late",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 126,
+      "pin": false,
+      "status": "Men’s · 2019Predictions through April 6 games",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 8, 2019 championship game; forecast unavailable",
+      "width": 1217,
+      "year": "2019"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2019Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 8, 2019 championship game; forecast unavailable",
+      "width": 1217,
+      "year": "2019"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": true,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2019Completed tournament results",
+      "svg": {
+        "height": 0,
+        "preserve": null,
+        "width": 0
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 8, 2019 championship game; forecast unavailable",
+      "width": 1217,
+      "year": "2020"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2021Pre-tournament predictions",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 5, 2021 championship game; forecast unavailable",
+      "width": 1217,
+      "year": "2021"
+    },
+    {
+      "state": "late",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 126,
+      "pin": false,
+      "status": "Men’s · 2021Predictions through April 3 games",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 5, 2021 championship game; forecast unavailable",
+      "width": 1217,
+      "year": "2021"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2021Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 5, 2021 championship game; forecast unavailable",
+      "width": 1217,
+      "year": "2021"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2022Pre-tournament predictions",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 4, 2022 championship game; forecast unavailable",
+      "width": 1217,
+      "year": "2022"
+    },
+    {
+      "state": "late",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 126,
+      "pin": false,
+      "status": "Men’s · 2022Predictions through April 2 games",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 4, 2022 championship game; forecast unavailable",
+      "width": 1217,
+      "year": "2022"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2022Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 4, 2022 championship game; forecast unavailable",
+      "width": 1217,
+      "year": "2022"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2023Pre-tournament predictions",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 3, 2023 championship game; forecast unavailable",
+      "width": 1217,
+      "year": "2023"
+    },
+    {
+      "state": "late",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 126,
+      "pin": false,
+      "status": "Men’s · 2023Predictions through April 1 games",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 3, 2023 championship game; forecast unavailable",
+      "width": 1217,
+      "year": "2023"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2023Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 3, 2023 championship game; forecast unavailable",
+      "width": 1217,
+      "year": "2023"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2024Pre-tournament predictionsReconstructed model",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 8, 2024 championship game; forecast unavailable",
+      "width": 1217,
+      "year": "2024"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2024Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 8, 2024 championship game; forecast unavailable",
+      "width": 1217,
+      "year": "2024"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2025Pre-tournament predictionsReconstructed model",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 7, 2025 championship game; forecast unavailable",
+      "width": 1217,
+      "year": "2025"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2025Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 7, 2025 championship game; forecast unavailable",
+      "width": 1217,
+      "year": "2025"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2026Pre-tournament predictionsReconstructed model",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 6, 2026 championship game; forecast unavailable",
+      "width": 1217,
+      "year": "2026"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2026Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 6, 2026 championship game; forecast unavailable",
+      "width": 1217,
+      "year": "2026"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2016Pre-tournament predictions",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 4, 2016 championship game; forecast unavailable",
+      "width": 1280,
+      "year": "2016"
+    },
+    {
+      "state": "late",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 126,
+      "pin": false,
+      "status": "Men’s · 2016Predictions through April 2 games",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 4, 2016 championship game; forecast unavailable",
+      "width": 1280,
+      "year": "2016"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2016Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 4, 2016 championship game; forecast unavailable",
+      "width": 1280,
+      "year": "2016"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2017Pre-tournament predictions",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 3, 2017 championship game; forecast unavailable",
+      "width": 1280,
+      "year": "2017"
+    },
+    {
+      "state": "late",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 126,
+      "pin": false,
+      "status": "Men’s · 2017Predictions through April 1 games",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 3, 2017 championship game; forecast unavailable",
+      "width": 1280,
+      "year": "2017"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2017Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 3, 2017 championship game; forecast unavailable",
+      "width": 1280,
+      "year": "2017"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2018Pre-tournament predictions",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 2, 2018 championship game; forecast unavailable",
+      "width": 1280,
+      "year": "2018"
+    },
+    {
+      "state": "late",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 126,
+      "pin": false,
+      "status": "Men’s · 2018Predictions through March 31 games",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 2, 2018 championship game; forecast unavailable",
+      "width": 1280,
+      "year": "2018"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2018Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 2, 2018 championship game; forecast unavailable",
+      "width": 1280,
+      "year": "2018"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2019Pre-tournament predictions",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 8, 2019 championship game; forecast unavailable",
+      "width": 1280,
+      "year": "2019"
+    },
+    {
+      "state": "late",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 126,
+      "pin": false,
+      "status": "Men’s · 2019Predictions through April 6 games",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 8, 2019 championship game; forecast unavailable",
+      "width": 1280,
+      "year": "2019"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2019Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 8, 2019 championship game; forecast unavailable",
+      "width": 1280,
+      "year": "2019"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": true,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2019Completed tournament results",
+      "svg": {
+        "height": 0,
+        "preserve": null,
+        "width": 0
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 8, 2019 championship game; forecast unavailable",
+      "width": 1280,
+      "year": "2020"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2021Pre-tournament predictions",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 5, 2021 championship game; forecast unavailable",
+      "width": 1280,
+      "year": "2021"
+    },
+    {
+      "state": "late",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 126,
+      "pin": false,
+      "status": "Men’s · 2021Predictions through April 3 games",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 5, 2021 championship game; forecast unavailable",
+      "width": 1280,
+      "year": "2021"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2021Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 5, 2021 championship game; forecast unavailable",
+      "width": 1280,
+      "year": "2021"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2022Pre-tournament predictions",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 4, 2022 championship game; forecast unavailable",
+      "width": 1280,
+      "year": "2022"
+    },
+    {
+      "state": "late",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 126,
+      "pin": false,
+      "status": "Men’s · 2022Predictions through April 2 games",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 4, 2022 championship game; forecast unavailable",
+      "width": 1280,
+      "year": "2022"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2022Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 4, 2022 championship game; forecast unavailable",
+      "width": 1280,
+      "year": "2022"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2023Pre-tournament predictions",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 3, 2023 championship game; forecast unavailable",
+      "width": 1280,
+      "year": "2023"
+    },
+    {
+      "state": "late",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 126,
+      "pin": false,
+      "status": "Men’s · 2023Predictions through April 1 games",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 3, 2023 championship game; forecast unavailable",
+      "width": 1280,
+      "year": "2023"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2023Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 3, 2023 championship game; forecast unavailable",
+      "width": 1280,
+      "year": "2023"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2024Pre-tournament predictionsReconstructed model",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 8, 2024 championship game; forecast unavailable",
+      "width": 1280,
+      "year": "2024"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2024Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 8, 2024 championship game; forecast unavailable",
+      "width": 1280,
+      "year": "2024"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2025Pre-tournament predictionsReconstructed model",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 7, 2025 championship game; forecast unavailable",
+      "width": 1280,
+      "year": "2025"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2025Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 7, 2025 championship game; forecast unavailable",
+      "width": 1280,
+      "year": "2025"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2026Pre-tournament predictionsReconstructed model",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 6, 2026 championship game; forecast unavailable",
+      "width": 1280,
+      "year": "2026"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2026Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 6, 2026 championship game; forecast unavailable",
+      "width": 1280,
+      "year": "2026"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2016Pre-tournament predictions",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 4, 2016 championship game; forecast unavailable",
+      "width": 1680,
+      "year": "2016"
+    },
+    {
+      "state": "late",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 126,
+      "pin": false,
+      "status": "Men’s · 2016Predictions through April 2 games",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 4, 2016 championship game; forecast unavailable",
+      "width": 1680,
+      "year": "2016"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2016Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 4, 2016 championship game; forecast unavailable",
+      "width": 1680,
+      "year": "2016"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2017Pre-tournament predictions",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 3, 2017 championship game; forecast unavailable",
+      "width": 1680,
+      "year": "2017"
+    },
+    {
+      "state": "late",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 126,
+      "pin": false,
+      "status": "Men’s · 2017Predictions through April 1 games",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 3, 2017 championship game; forecast unavailable",
+      "width": 1680,
+      "year": "2017"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2017Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 3, 2017 championship game; forecast unavailable",
+      "width": 1680,
+      "year": "2017"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2018Pre-tournament predictions",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 2, 2018 championship game; forecast unavailable",
+      "width": 1680,
+      "year": "2018"
+    },
+    {
+      "state": "late",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 126,
+      "pin": false,
+      "status": "Men’s · 2018Predictions through March 31 games",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 2, 2018 championship game; forecast unavailable",
+      "width": 1680,
+      "year": "2018"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2018Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 2, 2018 championship game; forecast unavailable",
+      "width": 1680,
+      "year": "2018"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2019Pre-tournament predictions",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 8, 2019 championship game; forecast unavailable",
+      "width": 1680,
+      "year": "2019"
+    },
+    {
+      "state": "late",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 126,
+      "pin": false,
+      "status": "Men’s · 2019Predictions through April 6 games",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 8, 2019 championship game; forecast unavailable",
+      "width": 1680,
+      "year": "2019"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2019Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 8, 2019 championship game; forecast unavailable",
+      "width": 1680,
+      "year": "2019"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": true,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2019Completed tournament results",
+      "svg": {
+        "height": 0,
+        "preserve": null,
+        "width": 0
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 8, 2019 championship game; forecast unavailable",
+      "width": 1680,
+      "year": "2020"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2021Pre-tournament predictions",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 5, 2021 championship game; forecast unavailable",
+      "width": 1680,
+      "year": "2021"
+    },
+    {
+      "state": "late",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 126,
+      "pin": false,
+      "status": "Men’s · 2021Predictions through April 3 games",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 5, 2021 championship game; forecast unavailable",
+      "width": 1680,
+      "year": "2021"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2021Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 5, 2021 championship game; forecast unavailable",
+      "width": 1680,
+      "year": "2021"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2022Pre-tournament predictions",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 4, 2022 championship game; forecast unavailable",
+      "width": 1680,
+      "year": "2022"
+    },
+    {
+      "state": "late",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 126,
+      "pin": false,
+      "status": "Men’s · 2022Predictions through April 2 games",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 4, 2022 championship game; forecast unavailable",
+      "width": 1680,
+      "year": "2022"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2022Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 4, 2022 championship game; forecast unavailable",
+      "width": 1680,
+      "year": "2022"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2023Pre-tournament predictions",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 3, 2023 championship game; forecast unavailable",
+      "width": 1680,
+      "year": "2023"
+    },
+    {
+      "state": "late",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 126,
+      "pin": false,
+      "status": "Men’s · 2023Predictions through April 1 games",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 3, 2023 championship game; forecast unavailable",
+      "width": 1680,
+      "year": "2023"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2023Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 3, 2023 championship game; forecast unavailable",
+      "width": 1680,
+      "year": "2023"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2024Pre-tournament predictionsReconstructed model",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 8, 2024 championship game; forecast unavailable",
+      "width": 1680,
+      "year": "2024"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2024Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 8, 2024 championship game; forecast unavailable",
+      "width": 1680,
+      "year": "2024"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2025Pre-tournament predictionsReconstructed model",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 7, 2025 championship game; forecast unavailable",
+      "width": 1680,
+      "year": "2025"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2025Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 7, 2025 championship game; forecast unavailable",
+      "width": 1680,
+      "year": "2025"
+    },
+    {
+      "state": "initial",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team most likely to get there.",
+      "clipped": [],
+      "mode": "forecast",
+      "named": 64,
+      "pin": false,
+      "status": "Men’s · 2026Pre-tournament predictionsReconstructed model",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 6, 2026 championship game; forecast unavailable",
+      "width": 1680,
+      "year": "2026"
+    },
+    {
+      "state": "results",
+      "bracket": true,
+      "cancelled": false,
+      "center": "Hover over each slot to see the team that reached it.",
+      "clipped": [],
+      "mode": "results",
+      "named": 127,
+      "pin": false,
+      "status": "Men’s · 2026Completed tournament results",
+      "svg": {
+        "height": 1024,
+        "preserve": null,
+        "width": 1004
+      },
+      "tabStops": 1,
+      "unavailable": "Apr 6, 2026 championship game; forecast unavailable",
+      "width": 1680,
+      "year": "2026"
+    }
+  ]
+}

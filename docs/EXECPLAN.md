@@ -1,114 +1,125 @@
-# Recreate the archived tournament forecast explorer
+# Correct the Tournament Atlas fidelity checklist
 
-This living ExecPlan follows `~/.codex/PLANS.md`. The previous checklist plan, with its unresolved human/device gates intact, is preserved in `docs/plans/2026-10-09-example-checklist-incomplete.md`.
+This living ExecPlan follows `~/.codex/PLANS.md`. The completed earlier work is preserved in `docs/plans/2026-10-09-madness-geometry.md`. The user’s new acceptance checklist is `docs/MADNESS-REVIEW.md`.
 
 ## Purpose / Big Picture
 
-Create a Browser App Builder example recreating the useful interactions of the archived FiveThirtyEight 2015 men’s tournament dashboard. Include every year 2016–2026, a four-region bracket, probability table and genuine forecast history where available. Clearly distinguish actual results from predictions and explain the cancelled 2020 tournament.
+
+Make the published Tournament Atlas behave like the requested original across all ten played tournaments, not merely the previously inspected 2023 screen. Visitors should see a clean bracket, explore the nearest slot with the pointer or keyboard, understand dates and results accurately, and read every team label. All 21 review findings must receive an explicit verified outcome or an honest remaining limitation.
 
 ## Progress
 
-- [x] (2026-10-09) Inspected the actual original in the browser and commissioned independent source/data research.
-- [x] Preserved the incomplete previous plan and unrelated working-tree changes.
-- [x] Created an isolated application and verified Node 22.19.0/npm 10.9.3.
-- [x] Located complete result records for ten played years and archived forecast CSVs for 2016–2023 excluding 2020.
-- [x] User requested another probability model. Verified pre-tournament T-Rank ratings and implemented a separately labeled log5 reconstruction for 2024–2026.
-- [x] Normalize, attribute and independently check source data: 670 scheduled games, 39,508 original probabilities, and 1,428 reconstructed probabilities.
-- [x] Implement bracket, table, snapshot controls and team-history chart.
-- [x] Final 72/72 Node and browser checks passed; production interactions, repository base path, desktop and narrow layouts inspected.
-- [x] Independent source/model review passed after six corrections; the final formatting, regional-navigation and publication-link delta also passed.
-- [x] User authorized publication. Saved durable source at `/Users/jordan/Projects/bab-example-madness`, published it, and verified exact-commit Actions success and live known answers.
-- [x] Prepared the gallery entry, validated the repository/package, and checked desktop/narrow rendering, keyboard links and copy feedback.
-- [x] Gallery commit `51220d0` deployed successfully; verified the live entry, target URL and library/model wording. Stopped all three owned preview/test processes.
-- [x] (2026-10-09) User requested a fresh comparison review of the original and live recreation; commissioned an independent reviewer with both URLs and the source.
-- [x] Corrected all six comparison findings and a long-name connector follow-up; independent source/image re-review passed, supported by coordinator browser interactions.
-- [x] Tested clean source `34bd433` with 74/74 Node/browser checks and a production build; pushed correction/report commit `c8b7e81`.
-- [x] Verified correction deployment `c8b7e81` with successful Actions run 38015656925 and returning-browser known-answer checks.
-- [x] Published gallery/evidence commit `7027598`, verified successful Actions run 38015993707 and the live image/count, and stopped all three owned preview/test processes. Temporary tabs were closed; the live app and gallery remain available.
 
-- [x] (2026-10-09) Reopened visual fidelity after the user rejected the central-card layout; independently measured the original SVG geometry, settled labels, and probability widths.
-- [x] Replace the card geometry with the original continuous bilateral bracket conventions.
-- [x] Independently inspect initial/late/results routes, low-probability widths, keyboard previews and responsive output.
-- [x] Publish the corrected application and refreshed gallery evidence after verification.
+- [x] (2026-10-09) Read the complete user review, current source, prior evidence, canonical design references and plan requirements.
+- [x] Archived the completed geometry plan without overwriting an archive; preserved unrelated configuration/catalog edits.
+- [x] Assigned separate UI and data/model work, plus an independent reviewer responsible for the expanded browser matrix.
+- [x] Implemented canonical labels for 680 team records, evidence-derived snapshot status and pure model regressions; 80/80 Node checks passed.
+- [x] Corrected geometry, pointer/rest/pin behavior, route rendering, results, timeline and responsive controls.
+- [x] Independent review passes all 21 findings: 112 states, all years/four desktop widths, 11,168 label measurements with zero clips, plus phone and actual interactions.
+- [x] Clean source `7ffc82d` passes 80/80 Node/browser checks and production build; all existing data facts compare identical.
+- [x] Published app `0ed4442`; exact Actions run 38019734396 succeeded and returning-browser assets, known odds, clean rest and Results were verified.
+- [ ] Refreshed gallery evidence and completed build/check/Claude validation plus desktop/narrow keyboard/copy checks; gallery publication remains.
+- [x] Recorded bounded review outcomes and stopped all four owned preview/test processes.
 
 ## Surprises & Discoveries
 
-The original is a forecast explorer, not a bracket-picking simulator. Its timeline selects recorded forecasts. FiveThirtyEight stopped updating sports forecasts in June 2023. ESPN supplies later result facts but those are not probabilities. The 2021 Oregon–VCU game is a no-contest, and the 2018 LIU seed sentinel requires an evidenced correction. The user’s reference selects men. Archived daily forecasts do not have precise live timestamps.
 
-The new comparison review reproduced defects missed by the prior source/model review: hovering or focusing a team changed its regional route while leaving another team's title odds in the center; selected semifinal cards lost text contrast on hover. Regional connectors stopped before the Final Four. At 1280 × 720, the first bracket row began around y699, compared with roughly y419 in the archived original. These are rendered behavior and layout findings, separate from the numerical checks.
+The previous numerical tests and bounded visual passes missed clipping in nine of ten years, completed-round probability bands, inconsistent results identity and distorted SVG scaling. The reviewer measured the reference’s fixed 1004px drawing and 12px names. The new acceptance therefore checks every year and several viewports, with late forecasts and Results in addition to initial snapshots.
 
-The previous comparison pass was insufficient: connected cards still put Final Four and championship content in the same column, and repeated names/probabilities obscured the original diagram. Actual original inspection shows eleven shared round columns, four regional winners at quarter heights, two championship branches at the vertical midpoint, and a title display above their junction. Hover uses substantial probability-scaled bands (0.5 + 15√p pixels), not a thin colored trace. Initial internal slots are blank; only secured entrants receive internal name strips.
+The current working tree includes unrelated featured-order changes in `site/config.json` and generated catalogs, an untracked `.claude/` folder and another review document. Preserve these. The application lives outside the course workspace and requires the host’s filesystem permission for edits and Git operations.
 
 ## Decision Log
 
-2026-10-09: Reimplement independently using native HTML/SVG for the fixed bracket/table and approved ECharts for team forecast history. Do not copy publisher code, logos or proprietary fonts. Use canonical Campus Designer local fonts/colors.
 
-2026-10-09: Develop in an isolated temporary application, then save the completed Git repository at `/Users/jordan/Projects/bab-example-madness`. Preserve course configuration/catalog edits. The user requested a replacement online model for later years. Use dated T-Rank Barthag ratings, neutral-court log5 pairwise probabilities, and exact opponent-weighted bracket propagation. Keep one pre-tournament snapshot per year; do not invent daily history. The reconstruction is neither a published T-Rank bracket forecast nor a continuation of FiveThirtyEight’s model.
+2026-10-09: Use the user’s 21-item review as the correction scope. Preserve existing data/model boundaries and deliberate differences: men only, no logos, navy routes, separate Results, keyboard access, sticky table names and clearly labeled later-year reconstructions.
 
-2026-10-09: Keep a transient bracket preview consistent through every round and title odds while preserving explicit team selection for the longer detail panel. Connect the final rounds, reduce introductory space, and expose actual dated forecast choices. Retain the existing data models, independently implemented code and Campus Designer styling; fidelity does not require copying publisher assets.
+2026-10-09: Use one fixed 1004px coordinate system, canonical generated short labels and a single accessible date control. These remove inconsistent layouts and duplicate control ownership. A continuous white-to-navy numerical table scale implements the user’s explicit direction; branding colors remain unchanged.
 
-2026-10-09: Restore the original continuous bracket topology, compact branch labels and separate probability annotations. Remove the central card layout and its content-measurement connectors. Keep data, replay/calendar and table behavior unchanged. Judge fidelity by actual reference comparisons, not by calculation checks or connected paths alone.
+2026-10-09: Separate implementation ownership from independent review. Do not call a source-only or one-season pass a full rendered pass. Human screen-reader, physical touch and novice usability remain unverified; the user previously reserved screen-reader checks for a person.
 
 ## Outcomes & Retrospective
 
-The application and later-year model are implemented. An independent calculation reproduced all 1,428 reconstructed probabilities within floating-point precision. Source/model review passed after six corrections. Final checks passed 72/72 in Node and the browser. Relevant source checkpoint `2f44204` was published in `77e6e40`; a report-only follow-up `659f9d1` also deployed successfully. Live original/reconstructed probabilities, actual results, cancellation, source and build-story links were verified. The gallery change is live with successful exact-commit Actions verification. No actual screen-reader or novice-usability pass is claimed.
 
-The requested comparison correction is complete. Six original findings and the long-name connector follow-up are fixed and independently re-reviewed. Clean source `34bd433` passed 74/74 Node/browser checks; correction deployment `c8b7e81` and report follow-up `09a22ac` both succeeded. Gallery `7027598` deployed successfully and the live page loads the 1280 × 1040 connected-bracket preview with the updated 74-check wording. Human accessibility and novice/device gates remain outside the bounded pass. The lesson is that source/model tests did not replace a rendered comparison with the requested reference.
-
-The original-geometry correction supersedes the earlier card-layout acceptance. Independent actual-browser comparison passed the continuous tree, line-width encoding, name placement and probability placement after two follow-up fixes. Source `40c6a1e` passed 74/74 checks; application `f8d1773` and gallery `fbcb0b9` deployed successfully and were verified live. No model/data changes were made.
+Data/model support is implemented with 80/80 Node checks. Independent whole-file comparison confirms all existing facts and probabilities are unchanged after removing only new label metadata and explanatory prose. The UI and all 21 requested corrections have an independent bounded pass. Final app publication `0ed4442` passed its exact Actions run and live checks. Source `8f9147c` adds only a separately reviewed removal of a duplicate Winner label; the broader matrix remains attributed to `7ffc82d`. Gallery publication remains. Prior reports remain historical evidence, including their insufficient acceptance scope.
 
 ## Context and Orientation
 
-Course root: `/Users/jordan/Projects/decision-999`. Read Browser App Builder Setup/Plan/Build/Evaluate and the canonical Campus Designer references. App source lives in `app/`; browser cases in `tests/`; ignored build output in `dist/`. Evidence belongs in `evidence/browser-app-builder/madness/2026-10-09/`. Data research is in `/private/tmp/bab-madness-research/`; normalized delivery in `/private/tmp/bab-madness-data/`.
 
-A forecast has seven cumulative probabilities: reach Round of 64, Round of 32, Sweet 16, Elite Eight, Final Four, title game, and champion. Game rounds run 0(First Four) through 6(titlegame). Use each year’s actual semifinal pairing and shared First Four bracket slots. Exact source URLs, licenses, dates and corrections accompany normalized data. Do not copy large raw publisher scripts into course evidence.
+Course repository: `/Users/jordan/Projects/decision-999`. Application repository: `/Users/jordan/Projects/bab-example-madness`, initially clean at `6f98ed0`. Authorized live application: `https://jordanmeyer.github.io/bab-example-madness/`. User authorization covers ordinary corrective commits to that repository and the gallery.
+
+`app/main.js` owns rendering and interactions, `app/style.css` their presentation, and `app/index.html` the control structure. `app/model.js` contains calculation helpers shared with `tests/cases.js`; `tests/run.mjs` runs those cases in Node, and `tests/index.html` runs them in a browser. `data-preparation/` and `scripts/derive-forecasts.mjs` generate the bundled `app/public/data/` JSON files. Preserve every existing probability, game score and result. A probability vector records seven cumulative stages from reaching the Round of 64 through winning the title; 0 and 1 represent impossible and already secured stages.
+
+Data covers 83 archived FiveThirtyEight snapshots for 2016–2019 and 2021–2023, cancellation in 2020, and one explicitly labeled T-Rank/log5 pre-tournament reconstruction in each of 2024–2026. A reconstruction computes advancement from frozen team-strength ratings and is not a publisher forecast. Dependencies remain locked Vite 8.3.4 and ECharts 6.1.0. Use existing Node 22.19.0/npm 10.9.3, local fonts and static same-origin assets.
 
 ## Plan of Work
 
-Finish source discovery and normalization. Check 68 teams, 67 game slots, next-game links, champions, region pairings, probability bounds and round totals. Preserve no-contest status and original daily snapshot dates. Bundle data for same-origin runtime use.
 
-Build bilateral bracket, sortable heatmap table, year/snapshot controls and a selected-team history chart. Keyboard selection must match hover. Reset stale selection and playback on year changes. Forecast mode cannot expose future outcomes as known facts. Results mode shows actual outcomes and scores; unavailable probabilities remain unavailable. Narrow layouts retain a readable table or region view.
+### Milestone 1: Canonical data presentation
 
-Verify shared pure model functions and actual production-browser interactions. Independently review the app, correct findings and simplify unused concepts. Prepare concrete source/evaluation records before any final publication approval still needed.
 
-### Comparison correction milestone
+Generate per-team bracket and paired-slot abbreviations in data preparation rather than UI maps. Keep display fields deterministic and check every year’s labels at the narrowest actual bracket size. Derive snapshot status from certainty in recorded probability vectors and matching completed game records, keeping daily precision honest. Add meaningful model cases for completed stages, per-slot losses, result descriptions and metadata. Compare the delivered data against the starting revision after removing only new presentation metadata; probabilities and results must remain identical.
 
-Revise `app/main.js`, `app/style.css` and `app/index.html` in the application repository in response to the independent original-versus-recreation review. Hover and keyboard focus must show one consistent team's route and title probability; exiting the bracket preview must restore the selected team. Final-round connectors must make the regional winners' progress legible. Selected cards must retain readable hover/focus colors. Reduce the header/control stack and provide individually selectable recorded dates with honest time spacing. Any pure date/route logic introduced belongs in `app/model.js` with meaningful regression cases in `tests/cases.js`. Preserve data files and sources.
+### Milestone 2: Correct the visualization
 
-The reviewer inspects the production preview at desktop and narrow widths after corrections, and reports remaining failures to the developer until the identified issues pass. Record findings, corrections and the exact source checkpoint under `evidence/browser-app-builder/madness/2026-10-09/fidelity-review/`. Run the existing calculation suite and browser checks, build with the locked dependencies, then push ordinary commits to the already authorized application repository. Verify the exact Actions deployment and live interactions. Refresh the gallery screenshot/evidence and publish those course changes only after the relevant repository checks pass, leaving unrelated local edits intact.
 
-### Original geometry correction
+Use a fixed centered 1004px SVG and matching HTML coordinates. Start every year with no selected team; provide a central instruction. Whole-bracket pointer movement selects the nearest precomputed slot; click or Enter pins, Escape clears, and leaving an unpinned preview returns to the clean state. Use one roving keyboard tab stop with arrows navigating slots/rounds. Build accessible labels during render and skip redundant route updates.
 
-Replace the independent regional/card layout with one shared coordinate system. Round labels, regional branch junctions, semifinal convergence, championship horizontal branches and title stem must agree. Use a probability width scale consistent across stages, place annotations outside thick bands, and show compact names only for known entrants (plus outer initial teams). Internal undecided branches remain accessible hover/focus targets without visible placeholders. Review upper/lower and left/right routes, tiny probabilities, late snapshots/results, and first-round play-in behavior. Retain the prior review as a failed visual acceptance round. New evidence lives under `evidence/browser-app-builder/madness/2026-10-09/geometry-review/`.
+Draw route bands and percentages only for unresolved probabilities strictly between zero and one. Grow/shrink stages with the requested staggered timing and respect reduced motion. Use light highlighted name strips, dark text and a larger bold probability for the pointed stage. Unresolved First Four strips are gray, replacing the pair with the previewed team’s name during preview. Results identity follows the previewed team and indicates its actual finish; dim only the slot where a team was eliminated.
+
+Merge year/mode/view controls into a compact row. Put snapshot status inside the bracket and a visible pinned-team chip nearby. Replace redundant timeline widgets with one accessible track, available-date ticks, selected round text and a disabled final-date tick when no archived snapshot exists. Replay every 500ms with hover suspended. Respond to resizing unless the visitor explicitly chose a view. At 1024px the fixed bracket must fit; on phones the table puts title odds beside the short name, folds seed into name and removes unhelpful columns. Keep all text at least 10px and names 12px. Use a continuous monotonic probability heat scale with measured readable foreground contrast.
+
+### Milestone 3: Verify and publish
+
+
+The independent reviewer compares the reference and candidate, covers all 21 items, and reports remaining defects directly to the developers for correction. Inspect all years 2016–2026, desktop widths 1024, 1217, 1280 and 1680, and phone width 375. Include late snapshots, Results, First Four, playback, keyboard and pinned/rest states. Save actual measurements and screenshots under `evidence/browser-app-builder/madness/2026-10-09/checklist-review/`; retain failed rounds.
+
+After meaningful source tests and browser tests pass, build production output and verify it under the repository URL path. Inspect all changes, create a clean source checkpoint, update application evaluation and publication records, and push ordinary commits to main. Verify the exact GitHub Actions commit and live known answers, labels, clean state and new assets in a returning browser. Refresh the gallery image and evidence wording, run course validation, and push only related course files. Preserve unrelated generated-catalog and configuration edits.
 
 ## Concrete Steps
 
-In the app folder, install the exact approved packages once, then use `npm ci`, `npm run build`, `npm run test:browser -- --port 9741` and `npm run preview -- --port 9742`. Run the plugin dependency checker. Record real URLs and stop only owned servers. A maintainer-only data ingestion script may use existing Python; the generated app does not require Python.
 
-Inspect staged files, make an ordinary local source checkpoint with the previously approved course Git attribution, and record evaluation applicability. If gallery files change, run `python3 scripts/build.py`, `python3 scripts/check.py`, `claude plugin validate .` and `git diff --check`. Preserve unrelated edits.
+Run application commands from `/Users/jordan/Projects/bab-example-madness` with the existing Node directory on PATH:
+
+    PATH=/Users/jordan/.nvm/versions/node/v22.19.0/bin:$PATH node tests/run.mjs
+    PATH=/Users/jordan/.nvm/versions/node/v22.19.0/bin:$PATH npm run build
+    PATH=/Users/jordan/.nvm/versions/node/v22.19.0/bin:$PATH npm run test:browser -- --port 9741
+    PATH=/Users/jordan/.nvm/versions/node/v22.19.0/bin:$PATH npm run preview -- --port 9742
+
+Open `http://localhost:9741/tests/` and `http://localhost:9742/bab-example-madness/`. The existing suite starts at 74 passing checks; record the actual new count rather than assuming it. Stop only the processes started for this task.
+
+Run from the course root after evidence/listing changes:
+
+    python3 scripts/build.py
+    python3 scripts/check.py
+    claude plugin validate .
+    git diff --check
+
+Preview the generated gallery at desktop and narrow widths, including its links and copy control. Use ordinary staged-file inspection and commits, never broad staging of unrelated edits.
 
 ## Validation and Acceptance
 
-Select all years 2016–2026; 2020 must clear stale content. Check First Four, Oregon–VCU no-contest, LIU seed correction, real champions and year-specific pairings. Probabilities lie in [0,1], decrease across later rounds, and sum approximately to 64/32/16/8/4/2/1 allowing source rounding. Verify named values independently from source CSVs.
 
-Test numeric sorting, exact probability tooltips, playback stop/reset, team selection, chart resizing, back navigation, desktop/narrow rendering and same-origin assets. Production preview must work under `/bab-example-madness/`. Local checks do not establish live deployment, actual screen-reader speech, novice usability or phone touch behavior.
+The initial bracket has no route or automatic favorite. Pointer movement over blank space previews the nearest slot. A pin is visible and Escape clears it. Late Houston snapshots contain no completed-round bands or 100% labels; Results center identity follows the same team as the strips. Check full measured text bounds in all played years and selected/bold states. A 1004px tree stays undistorted at every desktop width, with the bracket initially visible at 1024px. The phone table presents title odds without an initial horizontal scroll, and its first team appears well before the bottom of an 812px viewport.
+
+Keyboard Tab enters and exits the bracket in one stop; arrows traverse slots and stages. The single timeline moves through available dates, marks an unavailable title date, plays at 500ms and reports actual completed games from the data. Heat intensity is monotonic and text contrast remains readable. Pure tests and browser results agree. Preserve Houston’s initial 2023 title chance 0.22085016963, known champions, all 39,508 original probabilities and all 1,428 reconstructed probabilities. Exact deployment success and live behavior must be observed before calling publication complete.
 
 ## Idempotence and Recovery
 
-Preserve existing examples, archives, settings and history. Retain failed rounds and correction evidence. Data downloads occur during development, with no visitor-side external requests. Failed retrieval must leave prior data intact. Inspect/reuse an authorized repository on deployment retry.
+
+Preserve existing history, archives, user edits and trial repositories. Keep failed review rounds. Correct with ordinary edits and commits; do not rewrite history. If a deployment fails, inspect its exact run before retrying. The app remains entirely static, with no dependency or external-service expansion. Keep generated bundles and dependency directories out of course evidence. Do not claim human or device tests that were not performed.
 
 ## Artifacts and Notes
 
-Deliver source, readable handoffs, attributed data, reproducible checks and review/browser evidence. Reference inspection: `/private/tmp/bab-madness-reference.md`. User reference: https://web.archive.org/web/20240411121651/https://projects.fivethirtyeight.com/madness-2015/index.html#mens.
+
+Primary review: `docs/MADNESS-REVIEW.md`. Reference: `https://web.archive.org/web/20240411121651/https://projects.fivethirtyeight.com/madness-2015/index.html#mens`. Prior geometry evidence is preserved under `evidence/browser-app-builder/madness/2026-10-09/geometry-review/`. New independent reviewer scratch report: `/private/tmp/madness-checklist-review.md`.
 
 ## Interfaces and Dependencies
 
-Use managed Vite 8.3.4 and ECharts 6.1.0 with a lockfile, notices and local canonical fonts. Load static local JSON by year. Model functions are shared by UI and tests. Data ingestion is maintainer tooling, separate from the browser runtime.
 
-Revision note (2026-10-09): Completed model substitution, independent audits, UI corrections and live publication. The initial local narrow trial measured 727 CSS pixels; a subsequent foreground live check verified 375 × 900 CSS pixels. Physical touch, screen-reader and novice checks remain unverified. The persisted-pageshow handler was reviewed, but the actual Back trial loaded a fresh document. Unrelated featured-order and generated-catalog edits remain uncommitted.
+No new runtime dependencies. Canonical generated team labels and snapshot metadata are consumed by UI and tests. Native HTML/SVG handles the bracket and table; ECharts remains responsible only for selected-team forecast history. Production Vite output is the only Pages artifact. Application handoffs remain readable Markdown and identify evaluated and published revisions separately.
 
-Revision note (2026-10-09, comparison review): Reopened UI work at the user's request after an independent rendered comparison found misleading partial preview state, hover contrast and fidelity defects. Prior numerical validation remains useful but does not establish that these interactions passed.
+Revision note (2026-10-09): Reopened the correction against the user’s broader fidelity checklist because previous one-season visual acceptance missed systemic behavior and layout defects.
 
-Revision note (2026-10-09, corrected candidate): Six fidelity findings and a content-resize connector defect are fixed. The independent reviewer’s browser became unavailable during follow-up; their pass explicitly uses source review, independently inspected screenshots and coordinator-attributed interaction measurements. The final source checkpoint is `34bd4335e7c8297b5534e3ce2fa35b41db05a5d0`, with 74/74 checks and unchanged historical data.
+Revision note (checklist candidate): Expanded rendered acceptance found and corrected control-stack height, inaccurate Results model badges, no-pin browser restoration and First Four pressed-state cleanup. Final source is `7ffc82d`, with 80/80 Node/browser checks and a 112-state independent review.
 
-Revision note (original geometry): Source `40c6a1e` replaces cards with one bilateral coordinate tree and retains models/data. Independent actual-browser comparison passed after fixing most-likely targets and compact labels. Coordinator verified Results and actual 375px layouts. Clean 74/74 Node/browser checks and production build passed; publication `f8d1773` passed Actions run 38016901031 and returning-browser checks. Refreshed gallery source/image passed repository checks plus 1280px/375px rendering, keyboard and copy inspection; course commit `fbcb0b9` passed Actions run 38017160406 and its live image/link were verified. App report follow-up `6f98ed0` also deployed successfully. All four owned preview/test processes were stopped; temporary tabs were closed.
+Revision note (publication): Final app source follow-up `8f9147c` and report commit `0ed4442` are live, with returning-browser `main-DKaVtwEg.js` and the corrected champion label verified. The course build initially caught an evidence link escaping its publication boundary; its explicit source URL passes checks. All owned servers are stopped.
