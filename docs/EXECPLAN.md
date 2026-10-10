@@ -24,7 +24,7 @@ Create a Browser App Builder example recreating the useful interactions of the a
 - [x] Corrected all six comparison findings and a long-name connector follow-up; independent source/image re-review passed, supported by coordinator browser interactions.
 - [x] Tested clean source `34bd433` with 74/74 Node/browser checks and a production build; pushed correction/report commit `c8b7e81`.
 - [x] Verified correction deployment `c8b7e81` with successful Actions run 38015656925 and returning-browser known-answer checks.
-- [ ] Publish refreshed gallery evidence and stop owned previews.
+- [x] Published gallery/evidence commit `7027598`, verified successful Actions run 38015993707 and the live image/count, and stopped all three owned preview/test processes. Temporary tabs were closed; the live app and gallery remain available.
 
 ## Surprises & Discoveries
 
@@ -43,6 +43,8 @@ The new comparison review reproduced defects missed by the prior source/model re
 ## Outcomes & Retrospective
 
 The application and later-year model are implemented. An independent calculation reproduced all 1,428 reconstructed probabilities within floating-point precision. Source/model review passed after six corrections. Final checks passed 72/72 in Node and the browser. Relevant source checkpoint `2f44204` was published in `77e6e40`; a report-only follow-up `659f9d1` also deployed successfully. Live original/reconstructed probabilities, actual results, cancellation, source and build-story links were verified. The gallery change is live with successful exact-commit Actions verification. No actual screen-reader or novice-usability pass is claimed.
+
+The requested comparison correction is complete. Six original findings and the long-name connector follow-up are fixed and independently re-reviewed. Clean source `34bd433` passed 74/74 Node/browser checks; correction deployment `c8b7e81` and report follow-up `09a22ac` both succeeded. Gallery `7027598` deployed successfully and the live page loads the 1280 × 1040 connected-bracket preview with the updated 74-check wording. Human accessibility and novice/device gates remain outside the bounded pass. The lesson is that source/model tests did not replace a rendered comparison with the requested reference.
 
 ## Context and Orientation
 
