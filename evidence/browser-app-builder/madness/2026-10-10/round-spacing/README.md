@@ -1,0 +1,11 @@
+# Reclaim opening-column whitespace — 2026-10-10
+
+User requested fitting the opening-round columns to the longest name and distributing recovered width across the other rounds. The app measures its existing displayed labels in loaded 600-weight Open Sans, retaining seed, gap and padding space. It includes First Four winner when play-in qualification is still uncertain. Coordinates update with the snapshot, so unresolved placeholders retain enough room without reserving it after the names are known.
+
+Source checkpoint: 8029793. Deployment payload: c18bb0e. Both bracket halves mirror the same coordinates. On March 17, 2023, the opening columns shrink from 128px to 111px. The recovered 17px adds 3.4px to each of five subsequent horizontal segments. Left boundaries observed in production preview: 121, 196.4, 271.8, 347.2, 422.6, 502. Round headers and finalist slots are derived from those coordinates; the title-game center stays fixed.
+
+Existing layout checks: 140/140, measuring 2,984 labels across ten played seasons, initial/final forecasts and Results, and 375px layout. Route checks: 25/25, including corners, team-name attachment, continuous drawing and late-round starts. Production build passes with its existing bundle-size warning. No data, calculation, dependency, font or name changes. March 17 production preview was visually inspected.
+
+Reproduce with Node 22.19.0 in the app repository: `npm run test:browser -- --port 9741`, then `/tests/design-review.html` and `/tests/route-rendering.html` at localhost:9741. For production, `npm run build`, `npm run preview -- --port 9742`, then `http://localhost:9742/bab-example-madness/`. Choose 2023; focus the timeline, Home then four ArrowRight presses for March 17. Compare opening widths and the five downstream gaps on both sides. Configured Mac and in-app browser evidence only.
+
+[Pages run 38027258219](https://github.com/jordanmeyer/bab-example-madness/actions/runs/38027258219) succeeded for the recorded payload. Returning live browser loaded main-CGH7BXF4.js and confirmed the same 111px opening width and downstream coordinates on March 17. Screenshot: live.jpg. No live console errors observed. The local resizing harness emitted its previously observed ResizeObserver undelivered-notifications warning while all assertions completed.
