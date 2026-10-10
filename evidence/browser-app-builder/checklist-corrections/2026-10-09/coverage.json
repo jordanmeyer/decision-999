@@ -650,7 +650,7 @@
       ],
       "app": "simulator",
       "source_checkpoint": "0f0fd7441ba10190fd5de4f4e2db9926aee86932",
-      "disposition": "Visible initialization/running/duplicate-start source is implemented and reviewed. Root observed an89ms run on the configured Mac; intended-student-hardware responsiveness remains unavailable and is not closed by that timing."
+      "disposition": "Visible initialization/running/duplicate-start behavior is implemented and reviewed. Root observed an89ms run on this configured Mac; it has not been established as intended student hardware. The requirement does not demand student ownership, a novice operator or a particular cold/warm protocol."
     },
     {
       "id": "SIM-15",
@@ -759,7 +759,7 @@
       ],
       "app": "process",
       "source_checkpoint": "ee5a30024747779677ef30dfea33bf8fae58bf32",
-      "disposition": "Root actual authored developer form cycle passed add/connect/10–90 shares/680 capacity, named loop/Undo, generated JSON Blob export and synthetic File/DataTransfer reimport; exact six-node/six-route model and separate baseline retained. Required novice observation and native keyboard/pointer equivalence remain open."
+      "disposition": "Root authored developer form cycle passed add/connect/10–90 shares/680 capacity, named loop/Undo, generated JSON Blob export and synthetic File/DataTransfer reimport; exact six-node/six-route model and separate baseline retained. The explicit novice attempt and complete keyboard-form/pointer task coverage remain open. No separate native file-picker mandate is added to this requirement."
     },
     {
       "id": "PROC-13",
@@ -993,7 +993,7 @@
       ],
       "app": "markets",
       "source_checkpoint": "03c8bb4ad7e56a0849f4529ebb407ed376225b9e",
-      "disposition": "Root actual319 desktop-keyboard Enable movement→map ArrowRight pans; Escape stops/returns toggle focus; Zoom In, West Virginia native selection and Hide/Show retention passed. Physical-touch map/page navigation is still unobserved; this requirement is not closed by keyboard evidence."
+      "disposition": "Root actual319 desktop-keyboard Enable movement→map ArrowRight pans; Escape stops/returns toggle focus; Zoom In, West Virginia native selection and Hide/Show retention passed. Touch map/page-navigation behavior remains unobserved. The requirement is the relevant touch behavior, not a particular physical-device ownership condition; desktop resizing and synthetic events do not establish it."
     },
     {
       "id": "MKT-13",
@@ -1445,7 +1445,7 @@
       ],
       "app": "pricing",
       "source_checkpoint": "7475b8bb130036fa77115b001c5c0fbec5e179f3",
-      "disposition": "Root actual319px result-link Enter focuses results-title at viewport top and edits retain quantity focus; separate200% route also works. Physical mobile-keyboard-open usability remains unobserved, so the requirement stays pending."
+      "disposition": "Root actual319px result-link Enter focuses results-title at viewport top and edits retain quantity focus; the separate200% route also works. Usability with an actual mobile keyboard open remains unobserved. The checklist does not mandate device ownership, but desktop frames do not establish mobile-keyboard behavior."
     },
     {
       "id": "PRICE-10",

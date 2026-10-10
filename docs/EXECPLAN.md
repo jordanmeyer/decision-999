@@ -21,7 +21,7 @@ Students should be able to follow each of the twelve listed applications from a 
 - [ ] Correct and evaluate pricing, inventory and original sales items.
 - [x] Independently reviewed all twelve revised apps and resolved source-review findings; later browser discoveries have their own repair records.
 - [x] Completed representative 319px/1439px and 200% text observations for the specified layout risks, including independent screenshot review and targeted repairs.
-- [ ] Complete actual screen-reader and physical-device tasks; retain unavailable capabilities as incomplete. The user assigned screen-reader checks to a person; VoiceOver remains unchanged.
+- [ ] Complete actual screen-reader and target-browser/hardware tasks; retain unavailable capabilities as incomplete. The user assigned screen-reader checks to a person; VoiceOver remains unchanged.
 - [ ] Run real novice walkthroughs, record confusion and make needed corrections.
 - [x] Published all twelve reviewed correction builds to their existing repositories; verified successful Pages runs for each exact pushed commit, live known-answer interactions and static artifact integrity. Presentation received one ordinary note-only follow-up, also verified live after normal reload. Roadmap and Sales later received CSS-only readability corrections; their exact-commit Pages deployments and normal-URL reload checks passed and are tracked in the evidence index.
 - [ ] Update gallery, source snapshots and requirement evidence; complete repository checks and closure audit.
@@ -55,6 +55,8 @@ Decision (2026-10-09): optional P3 improvements become scoped extension assignme
 Decision (2026-10-09): real novice and screen-reader requirements stay open until exact evidence exists. Agent roleplay, accessible DOM and keyboard checks cannot replace them. Continue independent implementation while arranging these checks.
 
 Decision (2026-10-09 local / 2026-10-10 UTC): the user explicitly assigned actual screen-reader checks to a person. Leave VoiceOver unchanged; do not treat browser snapshots as spoken-output evidence.
+
+Decision (2026-10-09 local / 2026-10-10 UTC): preserve the exact remaining verification scope. Simulator timing requires representative intended hardware, not student ownership or a novice operator. Mobile tasks require actual touch/mobile-keyboard behavior, not a mandated device model. Current tools and observations do not establish those capabilities.
 
 ## Outcomes & Retrospective
 
