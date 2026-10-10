@@ -1,0 +1,23 @@
+{
+  "evaluated_source": "72fb26c2b55b93f87c4f810a90398b85b28ee27f",
+  "published_commit": "e1ea45770ee0816f265316d5750c55f6158cd846",
+  "workflow": "https://github.com/jordanmeyer/bab-example-madness/actions/runs/38024158838",
+  "conclusion": "success",
+  "live_url": "https://jordanmeyer.github.io/bab-example-madness/",
+  "returning_browser": {
+    "script": "main-CfqeVjX3.js",
+    "css": "style-B90lqaW9.css",
+    "observed_width": 1194,
+    "leaders": [
+      "Houston 22%",
+      "Alabama 16%",
+      "Texas 8%",
+      "Purdue 5%",
+      "Kansas 5%"
+    ],
+    "results": "Connecticut 76\u201359 San Diego State",
+    "pinned_initial_alabama": "16%",
+    "captured_errors_warnings": []
+  },
+  "gallery_local_preview": "Browser reported ERR_BLOCKED_BY_CLIENT for localhost:8000; gallery verification will use the authorized public deployment. No browser protection changed."
+}

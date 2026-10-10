@@ -150,8 +150,8 @@
           "problem": "How does a favorite become a champion?",
           "lesson": "Explore men’s tournament brackets from 2016–2026, separating original FiveThirtyEight forecasts through 2023 from T-Rank/log5 reconstructions for 2024–2026 and actual results.",
           "libraries": "ECharts",
-          "preview": "madness/2026-10-09/desktop.png",
-          "previewAlt": "Tournament Atlas: corrected fixed-width 2023 bracket, explicit Houston pin, distinct Final Four branches and probability-scaled route; local production preview, October 9, 2026",
+          "preview": "madness/2026-10-10/design-review/desktop.jpg",
+          "previewAlt": "Tournament Atlas: centered 2023 bracket with printed team names, calendar round bands and ranked title chances; verified production preview, October 10, 2026",
           "walkthrough": "https://jordanmeyer.github.io/bab-example-madness/build-story.html"
         },
         {

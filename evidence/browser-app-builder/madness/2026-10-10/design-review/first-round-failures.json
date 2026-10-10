@@ -1,0 +1,1109 @@
+{
+  "results": [
+    {
+      "name": "2016 initial: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2016 last: visible team labels fit",
+      "pass": false,
+      "detail": [
+        {
+          "name": "Texas A&M",
+          "round": "1",
+          "width": 64.0859375,
+          "slot": 64
+        },
+        {
+          "name": "Notre Dame",
+          "round": "1",
+          "width": 70.8046875,
+          "slot": 64
+        },
+        {
+          "name": "Notre Dame",
+          "round": "2",
+          "width": 70.8046875,
+          "slot": 64
+        },
+        {
+          "name": "Notre Dame",
+          "round": "3",
+          "width": 68.515625,
+          "slot": 64
+        },
+        {
+          "name": "Middle Tenn.",
+          "round": "1",
+          "width": 72.609375,
+          "slot": 64
+        }
+      ]
+    },
+    {
+      "name": "2016 results: visible team labels fit",
+      "pass": false,
+      "detail": [
+        {
+          "name": "Texas A&M",
+          "round": "1",
+          "width": 64.0859375,
+          "slot": 64
+        },
+        {
+          "name": "Notre Dame",
+          "round": "1",
+          "width": 70.8046875,
+          "slot": 64
+        },
+        {
+          "name": "Notre Dame",
+          "round": "2",
+          "width": 70.8046875,
+          "slot": 64
+        },
+        {
+          "name": "Notre Dame",
+          "round": "3",
+          "width": 68.515625,
+          "slot": 64
+        },
+        {
+          "name": "Middle Tenn.",
+          "round": "1",
+          "width": 72.609375,
+          "slot": 64
+        }
+      ]
+    },
+    {
+      "name": "2016: championship score shown at rest",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2016: advanced Results slots have score or no-contest tooltip",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2017 initial: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2017 last: visible team labels fit",
+      "pass": false,
+      "detail": [
+        {
+          "name": "Northwestern",
+          "round": "1",
+          "width": 77.8359375,
+          "slot": 64
+        },
+        {
+          "name": "Notre Dame",
+          "round": "1",
+          "width": 68.515625,
+          "slot": 64
+        },
+        {
+          "name": "West Virginia",
+          "round": "1",
+          "width": 75.890625,
+          "slot": 64
+        },
+        {
+          "name": "St. Mary's (CA)",
+          "round": "1",
+          "width": 79.1953125,
+          "slot": 64
+        },
+        {
+          "name": "West Virginia",
+          "round": "2",
+          "width": 72.625,
+          "slot": 64
+        },
+        {
+          "name": "Middle Tenn.",
+          "round": "1",
+          "width": 72.609375,
+          "slot": 64
+        },
+        {
+          "name": "Rhode Island",
+          "round": "1",
+          "width": 72.65625,
+          "slot": 64
+        }
+      ]
+    },
+    {
+      "name": "2017 results: visible team labels fit",
+      "pass": false,
+      "detail": [
+        {
+          "name": "Northwestern",
+          "round": "1",
+          "width": 77.8359375,
+          "slot": 64
+        },
+        {
+          "name": "Notre Dame",
+          "round": "1",
+          "width": 68.515625,
+          "slot": 64
+        },
+        {
+          "name": "West Virginia",
+          "round": "1",
+          "width": 75.890625,
+          "slot": 64
+        },
+        {
+          "name": "St. Mary's (CA)",
+          "round": "1",
+          "width": 79.1953125,
+          "slot": 64
+        },
+        {
+          "name": "West Virginia",
+          "round": "2",
+          "width": 72.625,
+          "slot": 64
+        },
+        {
+          "name": "Middle Tenn.",
+          "round": "1",
+          "width": 72.609375,
+          "slot": 64
+        },
+        {
+          "name": "Rhode Island",
+          "round": "1",
+          "width": 72.65625,
+          "slot": 64
+        }
+      ]
+    },
+    {
+      "name": "2017: championship score shown at rest",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2017: advanced Results slots have score or no-contest tooltip",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2018 initial: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2018 last: visible team labels fit",
+      "pass": false,
+      "detail": [
+        {
+          "name": "Texas A&M",
+          "round": "1",
+          "width": 64.0859375,
+          "slot": 64
+        },
+        {
+          "name": "Loyola Chicago",
+          "round": "1",
+          "width": 86.484375,
+          "slot": 64
+        },
+        {
+          "name": "Loyola Chicago",
+          "round": "2",
+          "width": 86.484375,
+          "slot": 64
+        },
+        {
+          "name": "Loyola Chicago",
+          "round": "3",
+          "width": 86.484375,
+          "slot": 64
+        },
+        {
+          "name": "Loyola Chicago",
+          "round": "4",
+          "width": 83.625,
+          "slot": 64
+        },
+        {
+          "name": "West Virginia",
+          "round": "1",
+          "width": 75.890625,
+          "slot": 64
+        },
+        {
+          "name": "Texas Tech",
+          "round": "1",
+          "width": 63.5,
+          "slot": 64
+        },
+        {
+          "name": "West Virginia",
+          "round": "2",
+          "width": 72.625,
+          "slot": 64
+        },
+        {
+          "name": "Texas Tech",
+          "round": "2",
+          "width": 63.5,
+          "slot": 64
+        },
+        {
+          "name": "Rhode Island",
+          "round": "1",
+          "width": 72.65625,
+          "slot": 64
+        }
+      ]
+    },
+    {
+      "name": "2018 results: visible team labels fit",
+      "pass": false,
+      "detail": [
+        {
+          "name": "Texas A&M",
+          "round": "1",
+          "width": 64.0859375,
+          "slot": 64
+        },
+        {
+          "name": "Loyola Chicago",
+          "round": "1",
+          "width": 86.484375,
+          "slot": 64
+        },
+        {
+          "name": "Loyola Chicago",
+          "round": "2",
+          "width": 86.484375,
+          "slot": 64
+        },
+        {
+          "name": "Loyola Chicago",
+          "round": "3",
+          "width": 86.484375,
+          "slot": 64
+        },
+        {
+          "name": "Loyola Chicago",
+          "round": "4",
+          "width": 83.625,
+          "slot": 64
+        },
+        {
+          "name": "West Virginia",
+          "round": "1",
+          "width": 75.890625,
+          "slot": 64
+        },
+        {
+          "name": "Texas Tech",
+          "round": "1",
+          "width": 63.5,
+          "slot": 64
+        },
+        {
+          "name": "West Virginia",
+          "round": "2",
+          "width": 72.625,
+          "slot": 64
+        },
+        {
+          "name": "Texas Tech",
+          "round": "2",
+          "width": 63.5,
+          "slot": 64
+        },
+        {
+          "name": "Rhode Island",
+          "round": "1",
+          "width": 72.65625,
+          "slot": 64
+        }
+      ]
+    },
+    {
+      "name": "2018: championship score shown at rest",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2018: advanced Results slots have score or no-contest tooltip",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2019 initial: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2019 last: visible team labels fit",
+      "pass": false,
+      "detail": [
+        {
+          "name": "Washington",
+          "round": "1",
+          "width": 66.5859375,
+          "slot": 64
+        },
+        {
+          "name": "Virginia Tech",
+          "round": "1",
+          "width": 74.3203125,
+          "slot": 64
+        },
+        {
+          "name": "Virginia Tech",
+          "round": "2",
+          "width": 71.265625,
+          "slot": 64
+        },
+        {
+          "name": "Texas Tech",
+          "round": "1",
+          "width": 63.5,
+          "slot": 64
+        },
+        {
+          "name": "Texas Tech",
+          "round": "2",
+          "width": 63.5,
+          "slot": 64
+        },
+        {
+          "name": "Texas Tech",
+          "round": "3",
+          "width": 63.5,
+          "slot": 64
+        },
+        {
+          "name": "Texas Tech",
+          "round": "4",
+          "width": 63.5,
+          "slot": 64
+        }
+      ]
+    },
+    {
+      "name": "2019 results: visible team labels fit",
+      "pass": false,
+      "detail": [
+        {
+          "name": "Washington",
+          "round": "1",
+          "width": 66.5859375,
+          "slot": 64
+        },
+        {
+          "name": "Virginia Tech",
+          "round": "1",
+          "width": 74.3203125,
+          "slot": 64
+        },
+        {
+          "name": "Virginia Tech",
+          "round": "2",
+          "width": 71.265625,
+          "slot": 64
+        },
+        {
+          "name": "Texas Tech",
+          "round": "1",
+          "width": 63.5,
+          "slot": 64
+        },
+        {
+          "name": "Texas Tech",
+          "round": "2",
+          "width": 63.5,
+          "slot": 64
+        },
+        {
+          "name": "Texas Tech",
+          "round": "3",
+          "width": 63.5,
+          "slot": 64
+        },
+        {
+          "name": "Texas Tech",
+          "round": "4",
+          "width": 63.5,
+          "slot": 64
+        }
+      ]
+    },
+    {
+      "name": "2019: championship score shown at rest",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2019: advanced Results slots have score or no-contest tooltip",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2021 initial: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2021 last: visible team labels fit",
+      "pass": false,
+      "detail": [
+        {
+          "name": "North Texas",
+          "round": "1",
+          "width": 67.9296875,
+          "slot": 64
+        },
+        {
+          "name": "Oral Roberts",
+          "round": "1",
+          "width": 73.1953125,
+          "slot": 64
+        },
+        {
+          "name": "Oral Roberts",
+          "round": "2",
+          "width": 70.6640625,
+          "slot": 64
+        },
+        {
+          "name": "Loyola Chicago",
+          "round": "1",
+          "width": 86.484375,
+          "slot": 64
+        },
+        {
+          "name": "Oklahoma St.",
+          "round": "1",
+          "width": 74.8203125,
+          "slot": 64
+        },
+        {
+          "name": "West Virginia",
+          "round": "1",
+          "width": 72.625,
+          "slot": 64
+        },
+        {
+          "name": "Loyola Chicago",
+          "round": "2",
+          "width": 83.625,
+          "slot": 64
+        },
+        {
+          "name": "Abilene Chr.",
+          "round": "1",
+          "width": 67.921875,
+          "slot": 64
+        }
+      ]
+    },
+    {
+      "name": "2021 results: visible team labels fit",
+      "pass": false,
+      "detail": [
+        {
+          "name": "North Texas",
+          "round": "1",
+          "width": 67.9296875,
+          "slot": 64
+        },
+        {
+          "name": "Oral Roberts",
+          "round": "1",
+          "width": 73.1953125,
+          "slot": 64
+        },
+        {
+          "name": "Oral Roberts",
+          "round": "2",
+          "width": 70.6640625,
+          "slot": 64
+        },
+        {
+          "name": "Loyola Chicago",
+          "round": "1",
+          "width": 86.484375,
+          "slot": 64
+        },
+        {
+          "name": "Oklahoma St.",
+          "round": "1",
+          "width": 74.8203125,
+          "slot": 64
+        },
+        {
+          "name": "West Virginia",
+          "round": "1",
+          "width": 72.625,
+          "slot": 64
+        },
+        {
+          "name": "Loyola Chicago",
+          "round": "2",
+          "width": 83.625,
+          "slot": 64
+        },
+        {
+          "name": "Abilene Chr.",
+          "round": "1",
+          "width": 67.921875,
+          "slot": 64
+        }
+      ]
+    },
+    {
+      "name": "2021: championship score shown at rest",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2021: advanced Results slots have score or no-contest tooltip",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2022 initial: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2022 last: visible team labels fit",
+      "pass": false,
+      "detail": [
+        {
+          "name": "Providence",
+          "round": "1",
+          "width": 64.5234375,
+          "slot": 64
+        },
+        {
+          "name": "New Mexico St.",
+          "round": "1",
+          "width": 85.125,
+          "slot": 64
+        },
+        {
+          "name": "Notre Dame",
+          "round": "1",
+          "width": 68.515625,
+          "slot": 64
+        },
+        {
+          "name": "Texas Tech",
+          "round": "1",
+          "width": 63.5,
+          "slot": 64
+        },
+        {
+          "name": "St. Mary's (CA)",
+          "round": "1",
+          "width": 79.1953125,
+          "slot": 64
+        }
+      ]
+    },
+    {
+      "name": "2022 results: visible team labels fit",
+      "pass": false,
+      "detail": [
+        {
+          "name": "Providence",
+          "round": "1",
+          "width": 64.5234375,
+          "slot": 64
+        },
+        {
+          "name": "New Mexico St.",
+          "round": "1",
+          "width": 85.125,
+          "slot": 64
+        },
+        {
+          "name": "Notre Dame",
+          "round": "1",
+          "width": 68.515625,
+          "slot": 64
+        },
+        {
+          "name": "Texas Tech",
+          "round": "1",
+          "width": 63.5,
+          "slot": 64
+        },
+        {
+          "name": "St. Mary's (CA)",
+          "round": "1",
+          "width": 79.1953125,
+          "slot": 64
+        }
+      ]
+    },
+    {
+      "name": "2022: championship score shown at rest",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2022: advanced Results slots have score or no-contest tooltip",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2023 initial: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2023 last: visible team labels fit",
+      "pass": false,
+      "detail": [
+        {
+          "name": "Florida Atlantic",
+          "round": "1",
+          "width": 87.796875,
+          "slot": 64
+        },
+        {
+          "name": "Florida Atlantic",
+          "round": "2",
+          "width": 87.796875,
+          "slot": 64
+        },
+        {
+          "name": "Florida Atlantic",
+          "round": "3",
+          "width": 87.796875,
+          "slot": 64
+        },
+        {
+          "name": "Florida Atlantic",
+          "round": "4",
+          "width": 83.484375,
+          "slot": 64
+        },
+        {
+          "name": "St. Mary's (CA)",
+          "round": "1",
+          "width": 79.1953125,
+          "slot": 64
+        },
+        {
+          "name": "Northwestern",
+          "round": "1",
+          "width": 77.8359375,
+          "slot": 64
+        }
+      ]
+    },
+    {
+      "name": "2023 results: visible team labels fit",
+      "pass": false,
+      "detail": [
+        {
+          "name": "Florida Atlantic",
+          "round": "1",
+          "width": 87.796875,
+          "slot": 64
+        },
+        {
+          "name": "Florida Atlantic",
+          "round": "2",
+          "width": 87.796875,
+          "slot": 64
+        },
+        {
+          "name": "Florida Atlantic",
+          "round": "3",
+          "width": 87.796875,
+          "slot": 64
+        },
+        {
+          "name": "Florida Atlantic",
+          "round": "4",
+          "width": 83.484375,
+          "slot": 64
+        },
+        {
+          "name": "St. Mary's (CA)",
+          "round": "1",
+          "width": 79.1953125,
+          "slot": 64
+        },
+        {
+          "name": "Northwestern",
+          "round": "1",
+          "width": 77.8359375,
+          "slot": 64
+        }
+      ]
+    },
+    {
+      "name": "2023: championship score shown at rest",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2023: advanced Results slots have score or no-contest tooltip",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2024 initial: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2024 last: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2024 results: visible team labels fit",
+      "pass": false,
+      "detail": [
+        {
+          "name": "James Madison",
+          "round": "1",
+          "width": 84.703125,
+          "slot": 64
+        },
+        {
+          "name": "Northwestern",
+          "round": "1",
+          "width": 77.8359375,
+          "slot": 64
+        },
+        {
+          "name": "Washington St.",
+          "round": "1",
+          "width": 83.71875,
+          "slot": 64
+        },
+        {
+          "name": "Grand Canyon",
+          "round": "1",
+          "width": 80.296875,
+          "slot": 64
+        }
+      ]
+    },
+    {
+      "name": "2024: championship score shown at rest",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2024: advanced Results slots have score or no-contest tooltip",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2025 initial: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2025 last: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2025 results: visible team labels fit",
+      "pass": false,
+      "detail": [
+        {
+          "name": "New Mexico",
+          "round": "1",
+          "width": 68,
+          "slot": 64
+        },
+        {
+          "name": "Colorado St.",
+          "round": "1",
+          "width": 68.2890625,
+          "slot": 64
+        },
+        {
+          "name": "Texas Tech",
+          "round": "1",
+          "width": 63.5,
+          "slot": 64
+        },
+        {
+          "name": "Texas Tech",
+          "round": "2",
+          "width": 63.5,
+          "slot": 64
+        }
+      ]
+    },
+    {
+      "name": "2025: championship score shown at rest",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2025: advanced Results slots have score or no-contest tooltip",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2026 initial: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2026 last: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2026 results: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2026: championship score shown at rest",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2026: advanced Results slots have score or no-contest tooltip",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Initial leaders match independent archived values",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Initial selected probability is rounded; no one-point chart",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Detail precedes First Four",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Eliminated center describes the loss without a giant zero",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Multiple snapshots produce a chart",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Rows stay compact",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Probability cells use solid published colors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Reached stages are unfilled",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2024: single forecast replaces dead timeline",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2025: single forecast replaces dead timeline",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2026: single forecast replaces dead timeline",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Cancelled controls are neutral",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "All potential narrow names have a reviewed fitting label",
+      "pass": false,
+      "detail": {
+        "St. Joseph's": 65,
+        "UNC Wilmington": 96,
+        "Texas A&M": 64,
+        "CSU Bakersfield": 91,
+        "Austin Peay": 68,
+        "South Dakota St.": 96,
+        "UNC Asheville": 81,
+        "Providence": 65,
+        "Chattanooga": 75,
+        "Stony Brook": 70,
+        "Notre Dame": 71,
+        "West Virginia": 76,
+        "Texas Tech": 63,
+        "Middle Tenn.": 75,
+        "Northwestern": 81,
+        "St. Mary's (CA)": 82,
+        "North Dakota": 79,
+        "Mt. St. Mary's": 78,
+        "New Orleans": 75,
+        "Virginia Tech": 74,
+        "New Mexico St.": 88,
+        "Wake Forest": 72,
+        "N. Kentucky": 70,
+        "NC Central": 62,
+        "Rhode Island": 75,
+        "Oklahoma St.": 78,
+        "Jacksonville St.": 85,
+        "UNC Greensboro": 98,
+        "Loyola Chicago": 86,
+        "Georgia St.": 63,
+        "LIU Brooklyn": 74,
+        "St. Bonaventure": 93,
+        "CSU Fullerton": 79,
+        "Pennsylvania": 76,
+        "Charleston": 63,
+        "Gardner-Webb": 85,
+        "Mississippi": 63,
+        "Old Dominion": 80,
+        "Washington": 69,
+        "Northeastern": 78,
+        "Abilene Chr.": 70,
+        "North Dakota St.": 97,
+        "Prairie View": 69,
+        "St. John's (NY)": 80,
+        "North Texas": 70,
+        "Oral Roberts": 73,
+        "Georgia Tech": 75,
+        "Morehead St.": 77,
+        "Cleveland St.": 74,
+        "E. Washington": 82,
+        "Grand Canyon": 83,
+        "Georgetown": 71,
+        "Texas A&M-CC": 83,
+        "Colorado St.": 70,
+        "San Francisco": 79,
+        "SE Missouri St.": 84,
+        "Florida Atlantic": 88,
+        "Kennesaw St.": 77,
+        "James Madison": 88,
+        "W. Kentucky": 72,
+        "Washington St.": 87,
+        "New Mexico": 70,
+        "Long Beach St.": 84,
+        "Alabama St.": 69,
+        "UC San Diego": 77,
+        "American U.": 71,
+        "Robert Morris": 80,
+        "SIU Edwardsville": 95,
+        "Cal Baptist": 62,
+        "South Florida": 77,
+        "Miami (OH)": 65,
+        "Santa Clara": 66,
+        "Tennessee St.": 79
+      }
+    }
+  ],
+  "measurements": 2984,
+  "missing": {
+    "St. Joseph's": 65,
+    "UNC Wilmington": 96,
+    "Texas A&M": 64,
+    "CSU Bakersfield": 91,
+    "Austin Peay": 68,
+    "South Dakota St.": 96,
+    "UNC Asheville": 81,
+    "Providence": 65,
+    "Chattanooga": 75,
+    "Stony Brook": 70,
+    "Notre Dame": 71,
+    "West Virginia": 76,
+    "Texas Tech": 63,
+    "Middle Tenn.": 75,
+    "Northwestern": 81,
+    "St. Mary's (CA)": 82,
+    "North Dakota": 79,
+    "Mt. St. Mary's": 78,
+    "New Orleans": 75,
+    "Virginia Tech": 74,
+    "New Mexico St.": 88,
+    "Wake Forest": 72,
+    "N. Kentucky": 70,
+    "NC Central": 62,
+    "Rhode Island": 75,
+    "Oklahoma St.": 78,
+    "Jacksonville St.": 85,
+    "UNC Greensboro": 98,
+    "Loyola Chicago": 86,
+    "Georgia St.": 63,
+    "LIU Brooklyn": 74,
+    "St. Bonaventure": 93,
+    "CSU Fullerton": 79,
+    "Pennsylvania": 76,
+    "Charleston": 63,
+    "Gardner-Webb": 85,
+    "Mississippi": 63,
+    "Old Dominion": 80,
+    "Washington": 69,
+    "Northeastern": 78,
+    "Abilene Chr.": 70,
+    "North Dakota St.": 97,
+    "Prairie View": 69,
+    "St. John's (NY)": 80,
+    "North Texas": 70,
+    "Oral Roberts": 73,
+    "Georgia Tech": 75,
+    "Morehead St.": 77,
+    "Cleveland St.": 74,
+    "E. Washington": 82,
+    "Grand Canyon": 83,
+    "Georgetown": 71,
+    "Texas A&M-CC": 83,
+    "Colorado St.": 70,
+    "San Francisco": 79,
+    "SE Missouri St.": 84,
+    "Florida Atlantic": 88,
+    "Kennesaw St.": 77,
+    "James Madison": 88,
+    "W. Kentucky": 72,
+    "Washington St.": 87,
+    "New Mexico": 70,
+    "Long Beach St.": 84,
+    "Alabama St.": 69,
+    "UC San Diego": 77,
+    "American U.": 71,
+    "Robert Morris": 80,
+    "SIU Edwardsville": 95,
+    "Cal Baptist": 62,
+    "South Florida": 77,
+    "Miami (OH)": 65,
+    "Santa Clara": 66,
+    "Tennessee St.": 79
+  }
+}
