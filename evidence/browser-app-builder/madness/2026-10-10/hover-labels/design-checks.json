@@ -1,0 +1,584 @@
+{
+  "results": [
+    {
+      "name": "2016: narrow labels identify distinct teams",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2016: final day has full centered shading and label",
+      "pass": true,
+      "detail": {
+        "bandWidth": 38.5390625,
+        "dayWidth": 38.54575892857143,
+        "labelOffset": -0.0078125
+      }
+    },
+    {
+      "name": "2016: calendar click selects snapshot 0",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2016: calendar click selects snapshot 6",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2016: calendar click selects snapshot 11",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2016 initial: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2016 last: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2016 results: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2016: championship score shown at rest",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2016: advanced Results slots have score or no-contest tooltip",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2017: narrow labels identify distinct teams",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2017: final day has full centered shading and label",
+      "pass": true,
+      "detail": {
+        "bandWidth": 36.8671875,
+        "dayWidth": 36.86967329545455,
+        "labelOffset": -0.0078125
+      }
+    },
+    {
+      "name": "2017: calendar click selects snapshot 0",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2017: calendar click selects snapshot 6",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2017: calendar click selects snapshot 11",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2017 initial: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2017 last: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2017 results: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2017: championship score shown at rest",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2017: advanced Results slots have score or no-contest tooltip",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2018: narrow labels identify distinct teams",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2018: final day has full centered shading and label",
+      "pass": true,
+      "detail": {
+        "bandWidth": 38.5390625,
+        "dayWidth": 38.54575892857143,
+        "labelOffset": -0.0078125
+      }
+    },
+    {
+      "name": "2018: calendar click selects snapshot 0",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2018: calendar click selects snapshot 6",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2018: calendar click selects snapshot 11",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2018 initial: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2018 last: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2018 results: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2018: championship score shown at rest",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2018: advanced Results slots have score or no-contest tooltip",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2019: narrow labels identify distinct teams",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2019: final day has full centered shading and label",
+      "pass": true,
+      "detail": {
+        "bandWidth": 36.8671875,
+        "dayWidth": 36.86967329545455,
+        "labelOffset": -0.0078125
+      }
+    },
+    {
+      "name": "2019: calendar click selects snapshot 0",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2019: calendar click selects snapshot 6",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2019: calendar click selects snapshot 11",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2019 initial: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2019 last: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2019 results: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2019: championship score shown at rest",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2019: advanced Results slots have score or no-contest tooltip",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2021: narrow labels identify distinct teams",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2021: final day has full centered shading and label",
+      "pass": true,
+      "detail": {
+        "bandWidth": 36.8671875,
+        "dayWidth": 36.86967329545455,
+        "labelOffset": -0.0078125
+      }
+    },
+    {
+      "name": "2021: calendar click selects snapshot 0",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2021: calendar click selects snapshot 5",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2021: calendar click selects snapshot 10",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2021 initial: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2021 last: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2021 results: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2021: championship score shown at rest",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2021: advanced Results slots have score or no-contest tooltip",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2022: narrow labels identify distinct teams",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2022: final day has full centered shading and label",
+      "pass": true,
+      "detail": {
+        "bandWidth": 36.8671875,
+        "dayWidth": 36.86967329545455,
+        "labelOffset": -0.0078125
+      }
+    },
+    {
+      "name": "2022: calendar click selects snapshot 0",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2022: calendar click selects snapshot 6",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2022: calendar click selects snapshot 11",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2022 initial: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2022 last: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2022 results: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2022: championship score shown at rest",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2022: advanced Results slots have score or no-contest tooltip",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2023: narrow labels identify distinct teams",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2023: final day has full centered shading and label",
+      "pass": true,
+      "detail": {
+        "bandWidth": 36.8671875,
+        "dayWidth": 36.86967329545455,
+        "labelOffset": -0.0078125
+      }
+    },
+    {
+      "name": "2023: calendar click selects snapshot 0",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2023: calendar click selects snapshot 6",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2023: calendar click selects snapshot 11",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2023 initial: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2023 last: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2023 results: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2023: championship score shown at rest",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2023: advanced Results slots have score or no-contest tooltip",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2024: narrow labels identify distinct teams",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2024 initial: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2024 last: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2024 results: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2024: championship score shown at rest",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2024: advanced Results slots have score or no-contest tooltip",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2025: narrow labels identify distinct teams",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2025 initial: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2025 last: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2025 results: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2025: championship score shown at rest",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2025: advanced Results slots have score or no-contest tooltip",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2026: narrow labels identify distinct teams",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2026 initial: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2026 last: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2026 results: visible team labels fit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "2026: championship score shown at rest",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2026: advanced Results slots have score or no-contest tooltip",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Rounded-zero active forecast never exposes a future loss",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Ranked center clears championship slot",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Printed names are vertically centered on bracket connections",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Blank canvas still previews nearest slot",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Arrow navigation retains one bracket tab stop",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Initial leaders match independent archived values",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Initial selected probability is rounded; no one-point chart",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Detail precedes First Four",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Eliminated center describes the loss without a giant zero",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Multiple snapshots produce a chart",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Rows stay compact",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Probability cells use solid published colors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Reached stages are unfilled",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2024: single forecast replaces dead timeline",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2025: single forecast replaces dead timeline",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "2026: single forecast replaces dead timeline",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Cancelled controls are neutral",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "1024px explorer and bracket share both edges",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Phone page does not overflow horizontally",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Phone table has no internal vertical scroll",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Phone visible labels meet 12px floor",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "All potential narrow names have a reviewed fitting label",
+      "pass": true,
+      "detail": {}
+    }
+  ],
+  "measurements": 2984,
+  "missing": {}
+}
