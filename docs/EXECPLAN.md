@@ -70,3 +70,5 @@ Revision note: replaces the completed fidelity plan with the user's current Camp
 Implementation note: the first rendered trial caught narrow Open Sans labels; visual inspection also caught hairlines crossing names and a phone story-header wrap. All were corrected. A source probability of zero can belong to an active team (2016 FDU), so the archive’s alive flag now governs elimination copy. No data file changed.
 
 Completion note: app Actions 38024158838 and documentation follow-up 38024324410 succeeded; gallery Actions 38024355680 succeeded. Returning-browser assets and live known answers were checked. Local gallery preview was browser-client blocked; live gallery verification completed without changing any protection.
+
+Follow-up (2026-10-10): corrected the user-reported clipped Final calendar band by including complete endpoint days and sharing the range with click snapping. App source b2685ee; deployed payload 85b1b87; Actions 38024791317 succeeded. Design regression 110/110 and data/model checks 80/80. Returning live browser confirms centered Apr 3/Final. Evidence: `evidence/browser-app-builder/madness/2026-10-10/timeline-final/`.
