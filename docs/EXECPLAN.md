@@ -19,7 +19,7 @@ Create a Browser App Builder example recreating the useful interactions of the a
 - [x] Independent source/model review passed after six corrections; the final formatting, regional-navigation and publication-link delta also passed.
 - [x] User authorized publication. Saved durable source at `/Users/jordan/Projects/bab-example-madness`, published it, and verified exact-commit Actions success and live known answers.
 - [x] Prepared the gallery entry, validated the repository/package, and checked desktop/narrow rendering, keyboard links and copy feedback.
-- [ ] Push gallery changes and verify the live directory entry.
+- [x] Gallery commit `51220d0` deployed successfully; verified the live entry, target URL and library/model wording. Stopped all three owned preview/test processes.
 
 ## Surprises & Discoveries
 
@@ -33,7 +33,7 @@ The original is a forecast explorer, not a bracket-picking simulator. Its timeli
 
 ## Outcomes & Retrospective
 
-The application and later-year model are implemented. An independent calculation reproduced all 1,428 reconstructed probabilities within floating-point precision. Source/model review passed after six corrections. Final checks passed 72/72 in Node and the browser. Relevant source checkpoint `2f44204` was published in `77e6e40`; a report-only follow-up `659f9d1` also deployed successfully. Live original/reconstructed probabilities, actual results, cancellation, source and build-story links were verified. The gallery change is locally ready. No actual screen-reader or novice-usability pass is claimed.
+The application and later-year model are implemented. An independent calculation reproduced all 1,428 reconstructed probabilities within floating-point precision. Source/model review passed after six corrections. Final checks passed 72/72 in Node and the browser. Relevant source checkpoint `2f44204` was published in `77e6e40`; a report-only follow-up `659f9d1` also deployed successfully. Live original/reconstructed probabilities, actual results, cancellation, source and build-story links were verified. The gallery change is live with successful exact-commit Actions verification. No actual screen-reader or novice-usability pass is claimed.
 
 ## Context and Orientation
 
@@ -73,4 +73,4 @@ Deliver source, readable handoffs, attributed data, reproducible checks and revi
 
 Use managed Vite 8.3.4 and ECharts 6.1.0 with a lockfile, notices and local canonical fonts. Load static local JSON by year. Model functions are shared by UI and tests. Data ingestion is maintainer tooling, separate from the browser runtime.
 
-Revision note (2026-10-09): Completed model substitution, independent audits, UI corrections and live publication. Browser minimum viewport at existing zoom limited the narrow trial to 727 CSS pixels; phone-width, screen-reader and novice checks remain unverified. The persisted-pageshow handler was reviewed, but the actual Back trial loaded a fresh document. Unrelated featured-order and generated-catalog edits remain uncommitted.
+Revision note (2026-10-09): Completed model substitution, independent audits, UI corrections and live publication. The initial local narrow trial measured 727 CSS pixels; a subsequent foreground live check verified 375 × 900 CSS pixels. Physical touch, screen-reader and novice checks remain unverified. The persisted-pageshow handler was reviewed, but the actual Back trial loaded a fresh document. Unrelated featured-order and generated-catalog edits remain uncommitted.

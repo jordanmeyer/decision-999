@@ -20,7 +20,7 @@ The application’s relevant source checkpoint is `2f44204`; implementation is `
 
 Live checks verified 2023 Houston’s 22.085% title chance, 2026 Michigan’s separate 17.762% reconstruction, Michigan’s actual 69–63 title win over UConn, the cancellation state, source link, and build-story page. Browser logs showed no errors/warnings during representative interactions. A returning-browser reload after the documentation deployment loaded the expected `main-CeFH68Bc.js`, rendered Houston’s 22.085% original forecast, and logged no errors/warnings. No changed-JavaScript cache update is claimed.
 
-The configured browser rendered at 1439 CSS pixels and a narrow 727 pixels. Its existing zoom/minimum viewport prevented a genuine phone-width test. Actual screen-reader speech, phone touch, novice usability, clean-machine setup, Windows, and predictive calibration remain outside this evidence.
+Local review rendered at 1439 and 727 CSS pixels. A later foreground live-site check measured a genuine 375 × 900 CSS-pixel viewport: no body overflow, a default table with keyboard horizontal scrolling, and selection-driven regional navigation. This is browser emulation; actual screen-reader speech, physical phone touch, novice usability, clean-machine setup, Windows, and predictive calibration remain outside this evidence.
 
 ## Reproduce
 
@@ -40,3 +40,7 @@ Local durable source: `/Users/jordan/Projects/bab-example-madness`. Only generat
 - [Observed same-origin asset inventory](observed-assets.json)
 
 The screenshots are actual rendered output. Source review and observed assets do not prove arbitrary JavaScript cannot transmit information. These are configured-machine results, not student outcomes.
+
+## Gallery publication and cleanup
+
+Gallery commit `51220d0637258302b32838c6dc0308f5c1fe4b7a` passed https://github.com/jordanmeyer/decision-999/actions/runs/38014329974. The live plugin page contains Tournament Atlas with the correct application link, ECharts library label, model distinction, screenshot, and build-story route. Local keyboard traversal reached the walkthrough and the install copy button displayed “Copied.” Existing featured-order changes and unrelated files were preserved without being committed. Owned test, application-preview, and directory-preview processes were stopped.
