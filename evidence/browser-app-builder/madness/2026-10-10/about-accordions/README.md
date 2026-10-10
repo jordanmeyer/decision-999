@@ -11,3 +11,5 @@ Production preview checks on this configured Mac: all three native details secti
 Returning live browser loaded `main-a4Zjbbto.js`, confirmed all three full-width collapsed sections, absent heading/footer and no console errors. Screenshot: `live-accordions.jpg`. Credits remain in the evidence and sources sections. The separate build-story page is unchanged. Temporary server/tab stopped; viewport override reset.
 
 Reproduce at https://jordanmeyer.github.io/bab-example-madness/: select Data & methods, open each section with Enter and close with Space, then inspect at 375px. This is browser interaction evidence, not a screen-reader or novice-user test.
+
+Follow-up: removed the two internal accordion dividers, retaining the line above Reading the evidence. Commit `6caee5c7668bd0b282372ad9ff5b07fe0eeb19b0`; Pages run `38027946578` succeeded. Build/whitespace checks and local visual inspection passed. Returning live browser confirms the last two borders are 0px; screenshot `live-no-inner-dividers.jpg`.
