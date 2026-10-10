@@ -42,6 +42,8 @@ Nine examples built through simulated planning and independent review, then revi
 - [Fulfillment Lab · fulfillment SQL explorer](https://jordanmeyer.github.io/bab-example-sql/) — DuckDB-Wasm and ECharts with exact values, related tables and a join-grain lesson. [Source and review](https://github.com/jordanmeyer/bab-example-sql).
 - [Desk / Day · interactive analytical presentation](https://jordanmeyer.github.io/bab-example-presentation/) — reveal.js with a board-scale launch/pilot/defer decision, live assumptions, charts and a copyable decision record. [Source and review](https://github.com/jordanmeyer/bab-example-presentation).
 
+[Tournament Atlas](https://jordanmeyer.github.io/bab-example-madness/) is a separate example from a real user request, using historical men’s tournament data from 2016–2026. Original FiveThirtyEight forecasts through 2023 are distinguished from T-Rank/log5 reconstructions for 2024–2026 and actual results; 2020 is an explicit cancellation. ECharts supports the forecast-history view. Its 72 data/model checks and independent review are separate from the nine-example totals. [How this was built](https://jordanmeyer.github.io/bab-example-madness/build-story.html) · [Source and review](https://github.com/jordanmeyer/bab-example-madness).
+
 Earlier examples built with version 0.1.1 in automated trials with simulated student conversations and synthetic data; these demonstrate the original plain-JavaScript workflow:
 
 - [Pricing calculator](https://jordanmeyer.github.io/bab-trial-pricing-2026-10-08/)

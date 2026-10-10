@@ -1,0 +1,244 @@
+{
+  "retrievedOn": "2026-10-09",
+  "checks": [
+    "68 unique teams and 67 bracket games per played year",
+    "4/32/16/8/4/2/1 round counts",
+    "All regional seeds and bracket orders",
+    "Actual Final Four region pairings",
+    "Winner/next-game topology and scores",
+    "Champions independently cross-checked against NCAA history",
+    "68 mapped teams per snapshot",
+    "All probabilities finite, bounded and monotonically decreasing",
+    "Per-snapshot round probability totals 64/32/16/8/4/2/1 within 0.000002",
+    "2020 cancelled and 2021 no-contest represented without scores"
+  ],
+  "years": [
+    {
+      "year": 2016,
+      "status": "validated",
+      "teams": 68,
+      "games": 67,
+      "playedGames": 67,
+      "roundCounts": [
+        4,
+        32,
+        16,
+        8,
+        4,
+        2,
+        1
+      ],
+      "snapshots": 12,
+      "earliestForecast": "2016-03-14",
+      "latestForecast": "2016-04-02",
+      "maximumRoundProbabilitySumError": 4.000000064507958e-08,
+      "championId": "222",
+      "championName": "Villanova"
+    },
+    {
+      "year": 2017,
+      "status": "validated",
+      "teams": 68,
+      "games": 67,
+      "playedGames": 67,
+      "roundCounts": [
+        4,
+        32,
+        16,
+        8,
+        4,
+        2,
+        1
+      ],
+      "snapshots": 12,
+      "earliestForecast": "2017-03-12",
+      "latestForecast": "2017-04-01",
+      "maximumRoundProbabilitySumError": 5.000444502911705e-12,
+      "championId": "153",
+      "championName": "North Carolina"
+    },
+    {
+      "year": 2018,
+      "status": "validated",
+      "teams": 68,
+      "games": 67,
+      "playedGames": 67,
+      "roundCounts": [
+        4,
+        32,
+        16,
+        8,
+        4,
+        2,
+        1
+      ],
+      "snapshots": 12,
+      "earliestForecast": "2018-03-12",
+      "latestForecast": "2018-03-31",
+      "maximumRoundProbabilitySumError": 3.999467423909664e-12,
+      "championId": "222",
+      "championName": "Villanova"
+    },
+    {
+      "year": 2019,
+      "status": "validated",
+      "teams": 68,
+      "games": 67,
+      "playedGames": 67,
+      "roundCounts": [
+        4,
+        32,
+        16,
+        8,
+        4,
+        2,
+        1
+      ],
+      "snapshots": 12,
+      "earliestForecast": "2019-03-17",
+      "latestForecast": "2019-04-06",
+      "maximumRoundProbabilitySumError": 6.005862474012247e-12,
+      "championId": "258",
+      "championName": "Virginia"
+    },
+    {
+      "year": 2020,
+      "status": "cancelled",
+      "games": 0,
+      "teams": 0,
+      "snapshots": 0
+    },
+    {
+      "year": 2021,
+      "status": "validated",
+      "teams": 68,
+      "games": 67,
+      "playedGames": 66,
+      "roundCounts": [
+        4,
+        32,
+        16,
+        8,
+        4,
+        2,
+        1
+      ],
+      "snapshots": 11,
+      "earliestForecast": "2021-03-14",
+      "latestForecast": "2021-04-03",
+      "maximumRoundProbabilitySumError": 4.0002445800269015e-12,
+      "championId": "239",
+      "championName": "Baylor"
+    },
+    {
+      "year": 2022,
+      "status": "validated",
+      "teams": 68,
+      "games": 67,
+      "playedGames": 67,
+      "roundCounts": [
+        4,
+        32,
+        16,
+        8,
+        4,
+        2,
+        1
+      ],
+      "snapshots": 12,
+      "earliestForecast": "2022-03-13",
+      "latestForecast": "2022-04-02",
+      "maximumRoundProbabilitySumError": 4.000355602329364e-12,
+      "championId": "2305",
+      "championName": "Kansas"
+    },
+    {
+      "year": 2023,
+      "status": "validated",
+      "teams": 68,
+      "games": 67,
+      "playedGames": 67,
+      "roundCounts": [
+        4,
+        32,
+        16,
+        8,
+        4,
+        2,
+        1
+      ],
+      "snapshots": 12,
+      "earliestForecast": "2023-03-12",
+      "latestForecast": "2023-04-01",
+      "maximumRoundProbabilitySumError": 4.000355602329364e-12,
+      "championId": "41",
+      "championName": "Connecticut"
+    },
+    {
+      "year": 2024,
+      "status": "validated",
+      "teams": 68,
+      "games": 67,
+      "playedGames": 67,
+      "roundCounts": [
+        4,
+        32,
+        16,
+        8,
+        4,
+        2,
+        1
+      ],
+      "snapshots": 0,
+      "earliestForecast": null,
+      "latestForecast": null,
+      "maximumRoundProbabilitySumError": 0,
+      "championId": "41",
+      "championName": "UConn"
+    },
+    {
+      "year": 2025,
+      "status": "validated",
+      "teams": 68,
+      "games": 67,
+      "playedGames": 67,
+      "roundCounts": [
+        4,
+        32,
+        16,
+        8,
+        4,
+        2,
+        1
+      ],
+      "snapshots": 0,
+      "earliestForecast": null,
+      "latestForecast": null,
+      "maximumRoundProbabilitySumError": 0,
+      "championId": "57",
+      "championName": "Florida"
+    },
+    {
+      "year": 2026,
+      "status": "validated",
+      "teams": 68,
+      "games": 67,
+      "playedGames": 67,
+      "roundCounts": [
+        4,
+        32,
+        16,
+        8,
+        4,
+        2,
+        1
+      ],
+      "snapshots": 0,
+      "earliestForecast": null,
+      "latestForecast": null,
+      "maximumRoundProbabilitySumError": 0,
+      "championId": "130",
+      "championName": "Michigan"
+    }
+  ]
+}

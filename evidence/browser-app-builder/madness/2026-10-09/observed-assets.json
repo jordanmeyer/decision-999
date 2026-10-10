@@ -1,0 +1,106 @@
+{
+  "summary": {
+    "byKind": {
+      "font": 3,
+      "image": 0,
+      "other": 3,
+      "script": 1,
+      "stylesheet": 1,
+      "video": 0
+    },
+    "inlineSvgCount": 5,
+    "totalCount": 8
+  },
+  "assets": [
+    {
+      "kind": "stylesheet",
+      "url": "http://127.0.0.1:9742/bab-example-madness/assets/style-CRd2vHWo.css",
+      "sources": [
+        {
+          "kind": "resource",
+          "property": "link"
+        },
+        {
+          "kind": "attribute",
+          "nodeId": 15296,
+          "property": "href"
+        }
+      ]
+    },
+    {
+      "kind": "script",
+      "url": "http://127.0.0.1:9742/bab-example-madness/assets/main-CeFH68Bc.js",
+      "sources": [
+        {
+          "kind": "resource",
+          "property": "script"
+        },
+        {
+          "kind": "attribute",
+          "nodeId": 15295,
+          "property": "src"
+        }
+      ]
+    },
+    {
+      "kind": "font",
+      "url": "http://127.0.0.1:9742/bab-example-madness/assets/eb-garamond-400-BkAyYjUB.ttf",
+      "sources": [
+        {
+          "kind": "resource",
+          "property": "css"
+        }
+      ]
+    },
+    {
+      "kind": "font",
+      "url": "http://127.0.0.1:9742/bab-example-madness/assets/open-sans-400-BCdjR_up.ttf",
+      "sources": [
+        {
+          "kind": "resource",
+          "property": "css"
+        }
+      ]
+    },
+    {
+      "kind": "font",
+      "url": "http://127.0.0.1:9742/bab-example-madness/assets/open-sans-600-8xi7cHyI.ttf",
+      "sources": [
+        {
+          "kind": "resource",
+          "property": "css"
+        }
+      ]
+    },
+    {
+      "kind": "other",
+      "url": "http://127.0.0.1:9742/bab-example-madness/data/index.json",
+      "sources": [
+        {
+          "kind": "resource",
+          "property": "fetch"
+        }
+      ]
+    },
+    {
+      "kind": "other",
+      "url": "http://127.0.0.1:9742/bab-example-madness/data/2023.json",
+      "sources": [
+        {
+          "kind": "resource",
+          "property": "fetch"
+        }
+      ]
+    },
+    {
+      "kind": "other",
+      "url": "http://127.0.0.1:9742/bab-example-madness/data/2026.json",
+      "sources": [
+        {
+          "kind": "resource",
+          "property": "fetch"
+        }
+      ]
+    }
+  ]
+}

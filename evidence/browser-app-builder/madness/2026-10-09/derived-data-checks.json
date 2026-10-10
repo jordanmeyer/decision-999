@@ -1,0 +1,168 @@
+{
+  "checks": [
+    "Frozen ratings predate First Four",
+    "68 distinct mapped teams",
+    "Four two-team First Four slots",
+    "Exact probability propagation across all possible opponents",
+    "Bounded finite monotonically decreasing cumulative probabilities",
+    "Seven round totals 64/32/16/8/4/2/1 within 1e-10"
+  ],
+  "years": [
+    {
+      "year": 2024,
+      "date": "2024-03-18",
+      "teams": 68,
+      "totals": [
+        64,
+        32,
+        15.999999999999998,
+        7.999999999999999,
+        3.9999999999999996,
+        1.9999999999999993,
+        0.9999999999999989
+      ],
+      "topFive": [
+        {
+          "id": "248",
+          "name": "Houston",
+          "championshipProbability": 0.27992116113278265
+        },
+        {
+          "id": "41",
+          "name": "UConn",
+          "championshipProbability": 0.15852177808798376
+        },
+        {
+          "id": "2509",
+          "name": "Purdue",
+          "championshipProbability": 0.12469388041008593
+        },
+        {
+          "id": "66",
+          "name": "Iowa State",
+          "championshipProbability": 0.07845364012079423
+        },
+        {
+          "id": "12",
+          "name": "Arizona",
+          "championshipProbability": 0.07144432564817182
+        }
+      ],
+      "source": {
+        "name": "Bart Torvik T-Rank Time Machine",
+        "url": "https://barttorvik.com/timemachine/team_results/20240318_team_results.json.gz",
+        "sha256": "23d4195749664de3597273ec1c4b2e32997a9d1a22e773c57d2707ce19a04c2e",
+        "decodedSha256": "6eb4d006994bfc701d381b5315bc5fc14d9b490053d8bbd3a4128221d6c47b8e",
+        "retrievedOn": "2026-10-09",
+        "field": "Zero-based column 8: Barthag",
+        "originalTeamCount": 362,
+        "methodUrl": "https://adamcwisports.blogspot.com/p/every-possession-counts.html",
+        "bulkDataGuideUrl": "https://adamcwisports.blogspot.com/p/data.html"
+      }
+    },
+    {
+      "year": 2025,
+      "date": "2025-03-17",
+      "teams": 68,
+      "totals": [
+        64,
+        32,
+        15.999999999999996,
+        8.000000000000002,
+        3.999999999999998,
+        1.9999999999999991,
+        1
+      ],
+      "topFive": [
+        {
+          "id": "248",
+          "name": "Houston",
+          "championshipProbability": 0.22068079292737497
+        },
+        {
+          "id": "150",
+          "name": "Duke",
+          "championshipProbability": 0.20211444090574246
+        },
+        {
+          "id": "2",
+          "name": "Auburn",
+          "championshipProbability": 0.15593019803266056
+        },
+        {
+          "id": "57",
+          "name": "Florida",
+          "championshipProbability": 0.11784759201795109
+        },
+        {
+          "id": "333",
+          "name": "Alabama",
+          "championshipProbability": 0.04517659091476106
+        }
+      ],
+      "source": {
+        "name": "Bart Torvik T-Rank Time Machine",
+        "url": "https://barttorvik.com/timemachine/team_results/20250317_team_results.json.gz",
+        "sha256": "90d5dd51eab7fae31bb311a7be4d20adb5b525dd80bcdc974d37a18a8be7e086",
+        "decodedSha256": "3352bc0863b7534588b1fce79d8689640fec0b0ff5fb4c0c5b37f501fbcf443b",
+        "retrievedOn": "2026-10-09",
+        "field": "Zero-based column 8: Barthag",
+        "originalTeamCount": 364,
+        "methodUrl": "https://adamcwisports.blogspot.com/p/every-possession-counts.html",
+        "bulkDataGuideUrl": "https://adamcwisports.blogspot.com/p/data.html"
+      }
+    },
+    {
+      "year": 2026,
+      "date": "2026-03-16",
+      "teams": 68,
+      "totals": [
+        64,
+        31.99999999999999,
+        15.999999999999996,
+        8.000000000000002,
+        4.000000000000001,
+        2,
+        1.0000000000000004
+      ],
+      "topFive": [
+        {
+          "id": "150",
+          "name": "Duke",
+          "championshipProbability": 0.20185604793690198
+        },
+        {
+          "id": "130",
+          "name": "Michigan",
+          "championshipProbability": 0.1776214874885687
+        },
+        {
+          "id": "12",
+          "name": "Arizona",
+          "championshipProbability": 0.14932259787582958
+        },
+        {
+          "id": "57",
+          "name": "Florida",
+          "championshipProbability": 0.09271007024717776
+        },
+        {
+          "id": "248",
+          "name": "Houston",
+          "championshipProbability": 0.06993195308102028
+        }
+      ],
+      "source": {
+        "name": "Bart Torvik T-Rank Time Machine",
+        "url": "https://barttorvik.com/timemachine/team_results/20260316_team_results.json.gz",
+        "sha256": "91121969cc7fd1813b40939f04d05ff1051428363effed4216232bbd780b709f",
+        "decodedSha256": "e20a06ebd3fce19a00ced5d4f546e67a21a943196d2c812b28e1a5c2591ba4ce",
+        "retrievedOn": "2026-10-09",
+        "field": "Zero-based column 8: Barthag",
+        "originalTeamCount": 365,
+        "methodUrl": "https://adamcwisports.blogspot.com/p/every-possession-counts.html",
+        "bulkDataGuideUrl": "https://adamcwisports.blogspot.com/p/data.html"
+      }
+    }
+  ]
+}

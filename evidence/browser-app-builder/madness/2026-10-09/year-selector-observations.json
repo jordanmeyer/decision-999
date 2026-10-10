@@ -1,0 +1,101 @@
+[
+  {
+    "cancelledVisible": false,
+    "coverage": "Archived forecasts & results",
+    "playDisabled": false,
+    "selectedTeam": "Kansas",
+    "snapshot": "Mar 14, 2016 · Initial forecast",
+    "workspaceVisible": true,
+    "year": "2016"
+  },
+  {
+    "cancelledVisible": false,
+    "coverage": "Archived forecasts & results",
+    "playDisabled": false,
+    "selectedTeam": "Villanova",
+    "snapshot": "Mar 12, 2017 · Initial forecast",
+    "workspaceVisible": true,
+    "year": "2017"
+  },
+  {
+    "cancelledVisible": false,
+    "coverage": "Archived forecasts & results",
+    "playDisabled": false,
+    "selectedTeam": "Villanova",
+    "snapshot": "Mar 12, 2018 · Initial forecast",
+    "workspaceVisible": true,
+    "year": "2018"
+  },
+  {
+    "cancelledVisible": false,
+    "coverage": "Archived forecasts & results",
+    "playDisabled": false,
+    "selectedTeam": "Duke",
+    "snapshot": "Mar 17, 2019 · Initial forecast",
+    "workspaceVisible": true,
+    "year": "2019"
+  },
+  {
+    "cancelledVisible": true,
+    "coverage": "Cancelled · no tournament",
+    "playDisabled": false,
+    "selectedTeam": "Duke",
+    "snapshot": "Mar 17, 2019 · Initial forecast",
+    "workspaceVisible": false,
+    "year": "2020"
+  },
+  {
+    "cancelledVisible": false,
+    "coverage": "Archived forecasts & results",
+    "playDisabled": false,
+    "selectedTeam": "Gonzaga",
+    "snapshot": "Mar 14, 2021 · Initial forecast",
+    "workspaceVisible": true,
+    "year": "2021"
+  },
+  {
+    "cancelledVisible": false,
+    "coverage": "Archived forecasts & results",
+    "playDisabled": false,
+    "selectedTeam": "Gonzaga",
+    "snapshot": "Mar 13, 2022 · Initial forecast",
+    "workspaceVisible": true,
+    "year": "2022"
+  },
+  {
+    "cancelledVisible": false,
+    "coverage": "Archived forecasts & results",
+    "playDisabled": false,
+    "selectedTeam": "Houston",
+    "snapshot": "Mar 12, 2023 · Initial forecast",
+    "workspaceVisible": true,
+    "year": "2023"
+  },
+  {
+    "cancelledVisible": false,
+    "coverage": "Reconstructed forecast & results",
+    "playDisabled": true,
+    "selectedTeam": "Houston",
+    "snapshot": "Mar 18, 2024 · Initial forecast",
+    "workspaceVisible": true,
+    "year": "2024"
+  },
+  {
+    "cancelledVisible": false,
+    "coverage": "Reconstructed forecast & results",
+    "playDisabled": true,
+    "selectedTeam": "Houston",
+    "snapshot": "Mar 17, 2025 · Initial forecast",
+    "workspaceVisible": true,
+    "year": "2025"
+  },
+  {
+    "cancelledVisible": false,
+    "coverage": "Reconstructed forecast & results",
+    "playDisabled": true,
+    "selectedTeam": "Duke",
+    "snapshot": "Mar 16, 2026 · Initial forecast",
+    "workspaceVisible": true,
+    "year": "2026"
+  }
+]

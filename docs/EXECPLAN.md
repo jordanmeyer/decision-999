@@ -1,117 +1,76 @@
-# Correct the re-reviewed example-app checklist
+# Recreate the archived tournament forecast explorer
 
-This living ExecPlan follows `~/.codex/PLANS.md`. Maintain Progress, Surprises & Discoveries, Decision Log and Outcomes & Retrospective. The completed prior revision is archived in `docs/plans/2026-10-09-browser-app-builder-live-revisions.md`.
+This living ExecPlan follows `~/.codex/PLANS.md`. The previous checklist plan, with its unresolved human/device gates intact, is preserved in `docs/plans/2026-10-09-example-checklist-incomplete.md`.
 
 ## Purpose / Big Picture
 
-
-Students should be able to follow each of the twelve listed applications from a prediction through an observable result and a justified limitation. Correct every remaining requirement in `evidence/browser-app-builder/reviews/2026-10-09-example-app-checklist.md`, including confirmed defects, bounded teaching exercises, actual interaction checks and explicit optional-extension assignments. Preserve useful current behavior and the distinction between automatic checks and learning evidence from a real novice.
+Create a Browser App Builder example recreating the useful interactions of the archived FiveThirtyEight 2015 men’s tournament dashboard. Include every year 2016–2026, a four-region bracket, probability table and genuine forecast history where available. Clearly distinguish actual results from predictions and explain the cancelled 2020 tournament.
 
 ## Progress
 
-
-- [x] (2026-10-09) Read the revised checklist and captured all 126 unique requirements in `evidence/browser-app-builder/checklist-corrections/2026-10-09/coverage.json` without altering the user-authored review.
-- [x] Assigned three developers to nine library apps; coordinator owns three original trials and cross-app verification.
-- [x] Asked the user to arrange real novice participation; the user agreed. Prepared and independently reviewed twelve answer-free participant sheets, facilitator answers and a blank observation form. No participant sessions have occurred.
-- [x] Implemented the twelve apps' bounded corrections and obtained independent source reviews. Current production-browser follow-up continues below.
-- [x] Ran current browser model suites: executive14, uploads35, SQL47, simulator24, optimizer27, presentation45, process39, roadmap52, markets27, pricing27, inventory13 and sales46 checks. Later UI-only fixes have separate targeted observations; these counts are not blanket acceptance.
-- [ ] Correct and evaluate executive, uploads and SQL items.
-- [ ] Correct and evaluate simulator, optimizer and presentation items.
-- [ ] Correct and evaluate process, roadmap and markets items.
-- [ ] Correct and evaluate pricing, inventory and original sales items.
-- [x] Independently reviewed all twelve revised apps and resolved source-review findings; later browser discoveries have their own repair records.
-- [x] Completed representative 319px/1439px and 200% text observations for the specified layout risks, including independent screenshot review and targeted repairs.
-- [ ] Complete actual screen-reader and target-browser/hardware tasks; retain unavailable capabilities as incomplete. The user assigned screen-reader checks to a person; VoiceOver remains unchanged.
-- [ ] Run real novice walkthroughs, record confusion and make needed corrections.
-- [x] Published all twelve reviewed correction builds to their existing repositories; verified successful Pages runs for each exact pushed commit, live known-answer interactions and static artifact integrity. Presentation received one ordinary note-only follow-up, also verified live after normal reload. Roadmap and Sales later received CSS-only readability corrections; their exact-commit Pages deployments and normal-URL reload checks passed and are tracked in the evidence index.
-- [ ] Update gallery, source snapshots and requirement evidence; complete repository checks and closure audit.
+- [x] (2026-10-09) Inspected the actual original in the browser and commissioned independent source/data research.
+- [x] Preserved the incomplete previous plan and unrelated working-tree changes.
+- [x] Created an isolated application and verified Node 22.19.0/npm 10.9.3.
+- [x] Located complete result records for ten played years and archived forecast CSVs for 2016–2023 excluding 2020.
+- [x] User requested another probability model. Verified pre-tournament T-Rank ratings and implemented a separately labeled log5 reconstruction for 2024–2026.
+- [x] Normalize, attribute and independently check source data: 670 scheduled games, 39,508 original probabilities, and 1,428 reconstructed probabilities.
+- [x] Implement bracket, table, snapshot controls and team-history chart.
+- [x] Final 72/72 Node and browser checks passed; production interactions, repository base path, desktop and narrow layouts inspected.
+- [x] Independent source/model review passed after six corrections; the final formatting, regional-navigation and publication-link delta also passed.
+- [x] User authorized publication. Saved durable source at `/Users/jordan/Projects/bab-example-madness`, published it, and verified exact-commit Actions success and live known answers.
+- [x] Prepared the gallery entry, validated the repository/package, and checked desktop/narrow rendering, keyboard links and copy feedback.
+- [ ] Push gallery changes and verify the live directory entry.
 
 ## Surprises & Discoveries
 
-
-The current review is newer than the completed nine-app revision: it contains 126 open items across twelve apps (15 P1, 101 P2 and 10 P3). Prior 285 passing checks do not establish these requirements. Roadmap sign-off does not gate subsequent work, a returns matrix loses keyboard focus, and original sales shows valid-looking zero totals during an invalid date range.
-
-The course has unrelated edits in `site/config.json`, generated catalogs and local review drafts. Preserve them and publish only intended changes. Applications are separate Git repositories, not source files inside the plugin.
-
-Actual browser follow-up exposed additional defects: Executive's detail Escape reached two modal handlers; Presentation's slide engine intercepted local result links; Simulator's flat loss curve produced excessive axis ticks; and enlarged Market controls clipped inside a fixed sidebar. All four passed targeted repair checks. Inventory also needed an actual-width chart so narrow labels stayed legible; its narrow and enlarged retests passed. Keep failed rounds in the per-app evidence.
-
-Authored same-origin browser harnesses exercised real imports, exports and database/solver workers. Uploads passed six paired-import/export cases. SQL passed five export/recovery cases and its real eight-second timeout (8002.4ms), followed by reset and a successful query. Optimizer's actual busy-edit path invalidated its old allocation and solved the edited assumptions. These checks do not establish native save-dialog behavior or novice performance.
-
-The current browser rounds the requested 320px frames to 319 CSS pixels and 1440px frames to 1439. Evidence records actual dimensions. Separate 200% text checks enlarge computed fonts in authored QA frames; they are not physical-device or OS-zoom observations. Native file-picker tooling was slow, so automated File/DataTransfer cases are explicitly distinguished from the one observed native Sales import.
-
-A returning browser initially reused the previous presentation HTML after the note-only follow-up. Ordinary reload retrieved the corrected note without a cache-busting query. Save this observation rather than claiming navigation alone always updates a running app. The note now explains that its Lower/Stronger presets restore the board-case costs; hidden Reveal announcement text remains suppressed, which is DOM evidence rather than a speech test.
-
-The final layout pass found enlarged Roadmap dates colliding with the next column and narrow Sales dates breaking into fragments; enlarged Sales amounts also split their cents. Small CSS corrections passed narrow/enlarged retests and independent image review. A few mid-scroll screenshots showed transient repaint artifacts; settled captures resolved those separately from genuine defects. The local QA iframe needed an explicit revision marker to inspect rebuilt Roadmap assets; normal live reload was checked separately.
-
-The later actual download/chooser follow-up completed UPLOAD-12: both current samples were downloaded and their headers inspected; unmatched and excessive returns retained source identity and totals, then the corrected pair was accepted. This requirement specifies a functional student workflow, not a novice participant. ALL-16 still requires a real novice.
+The original is a forecast explorer, not a bracket-picking simulator. Its timeline selects recorded forecasts. FiveThirtyEight stopped updating sports forecasts in June 2023. ESPN supplies later result facts but those are not probabilities. The 2021 Oregon–VCU game is a no-contest, and the 2018 LIU seed sentinel requires an evidenced correction. The user’s reference selects men. Archived daily forecasts do not have precise live timestamps.
 
 ## Decision Log
 
+2026-10-09: Reimplement independently using native HTML/SVG for the fixed bracket/table and approved ECharts for team forecast history. Do not copy publisher code, logos or proprietary fonts. Use canonical Campus Designer local fonts/colors.
 
-Decision (2026-10-09): implement original trial corrections using plain JavaScript while retaining original-trial provenance. The goal covers their named requirements; substituting separate newer trials would not satisfy it.
-
-Decision (2026-10-09): optional P3 improvements become scoped extension assignments with assumptions and validation requirements. The checklist explicitly asks to keep shipped examples small.
-
-Decision (2026-10-09): real novice and screen-reader requirements stay open until exact evidence exists. Agent roleplay, accessible DOM and keyboard checks cannot replace them. Continue independent implementation while arranging these checks.
-
-Decision (2026-10-09 local / 2026-10-10 UTC): the user explicitly assigned actual screen-reader checks to a person. Leave VoiceOver unchanged; do not treat browser snapshots as spoken-output evidence.
-
-Decision (2026-10-09 local / 2026-10-10 UTC): preserve the exact remaining verification scope. Simulator timing requires representative intended hardware, not student ownership or a novice operator. Mobile tasks require actual touch/mobile-keyboard behavior, not a mandated device model. Current tools and observations do not establish those capabilities.
+2026-10-09: Develop in an isolated temporary application, then save the completed Git repository at `/Users/jordan/Projects/bab-example-madness`. Preserve course configuration/catalog edits. The user requested a replacement online model for later years. Use dated T-Rank Barthag ratings, neutral-court log5 pairwise probabilities, and exact opponent-weighted bracket propagation. Keep one pre-tournament snapshot per year; do not invent daily history. The reconstruction is neither a published T-Rank bracket forecast nor a continuation of FiveThirtyEight’s model.
 
 ## Outcomes & Retrospective
 
-
-All twelve apps have source corrections and scoped local evidence. The coverage index tracks 126 requirements without modifying the original review: 118 verified locally, 4 implemented with verification pending and 4 open human requirements. It distinguishes specific verified facts from incomplete complete-task acceptance. Additional browser checks closed export, recovery, pricing orientation and named result-route gaps. The broader representative layout review also passed after correcting Roadmap date/type overlap and Sales fragmented dates and split metric amounts. The actual file-download/chooser rejection-and-correction workflow also passed, closing UPLOAD-12 without claiming novice learning. Human/device checks remain explicit in the evidence index. All twelve current correction builds are deployed and have bounded live verification; no real novice/screen-reader pass is claimed. The user has agreed to arrange novice observations; the independently reviewed packet now links to the verified live apps and is in `evidence/browser-app-builder/checklist-corrections/2026-10-09/walkthrough/`.
+The application and later-year model are implemented. An independent calculation reproduced all 1,428 reconstructed probabilities within floating-point precision. Source/model review passed after six corrections. Final checks passed 72/72 in Node and the browser. Relevant source checkpoint `2f44204` was published in `77e6e40`; a report-only follow-up `659f9d1` also deployed successfully. Live original/reconstructed probabilities, actual results, cancellation, source and build-story links were verified. The gallery change is locally ready. No actual screen-reader or novice-usability pass is claimed.
 
 ## Context and Orientation
 
+Course root: `/Users/jordan/Projects/decision-999`. Read Browser App Builder Setup/Plan/Build/Evaluate and the canonical Campus Designer references. App source lives in `app/`; browser cases in `tests/`; ignored build output in `dist/`. Evidence belongs in `evidence/browser-app-builder/madness/2026-10-09/`. Data research is in `/private/tmp/bab-madness-research/`; normalized delivery in `/private/tmp/bab-madness-data/`.
 
-Course root is `/Users/jordan/Projects/decision-999`. The authoritative review supplies every requirement and reproduction. `evidence/browser-app-builder/checklist-corrections/2026-10-09/coverage.json` preserves its exact requirement text, source digest, status and evidence. Add sanitized per-app records below that directory. Do not change review content to redefine success.
-
-Nine library repositories are `/private/tmp/bab-recipe-examples-2026-10-09/<slug>`: executive, uploads, simulator, process, roadmap, markets, sql, optimizer and presentation. Remotes are `git@github.com:jordanmeyer/bab-example-<slug>.git`; live URLs are `https://jordanmeyer.github.io/bab-example-<slug>/`. Original trials are under `/Users/jordan/Projects/browser-app-builder-trials/2026-10-08/<slug>` for pricing, inventory and sales. Clone their existing remotes into `/private/tmp/bab-checklist-originals-2026-10-09/<slug>` to preserve original work folders. Trial remote/Pages names are `bab-trial-<slug>-2026-10-08`.
-
-Each app has app source, browser tests, plan/evaluation records and a main-branch Pages workflow. Library apps use locked Node/npm/Vite. Originals remain HTML/CSS/JavaScript. A source checkpoint is a Git commit recording exact application, tests, configuration and model evaluated. Documentation-only follow-ups retain applicability only after relevant-path comparison.
+A forecast has seven cumulative probabilities: reach Round of 64, Round of 32, Sweet 16, Elite Eight, Final Four, title game, and champion. Game rounds run 0(First Four) through 6(titlegame). Use each year’s actual semifinal pairing and shared First Four bracket slots. Exact source URLs, licenses, dates and corrections accompany normalized data. Do not copy large raw publisher scripts into course evidence.
 
 ## Plan of Work
 
+Finish source discovery and normalization. Check 68 teams, 67 game slots, next-game links, champions, region pairings, probability bounds and round totals. Preserve no-contest status and original daily snapshot dates. Bundle data for same-origin runtime use.
 
-First correct concrete model/state failures and high-priority lessons. Roadmap sign-off and completion must follow one dependency rule. Invalid sales filters must hide or mark results invalid. Upload selection must preserve focus; export grouping must match its label. Market size cannot be called company revenue. Presentation must explain its full-first policy beside the outcome. Preserve reproductions and add regressions for real boundaries.
+Build bilateral bracket, sortable heatmap table, year/snapshot controls and a selected-team history chart. Keyboard selection must match hover. Reset stale selection and playback on year changes. Forecast mode cannot expose future outcomes as known facts. Results mode shows actual outcomes and scores; unavailable probabilities remain unavailable. Narrow layouts retain a readable table or region view.
 
-Next finish teaching paths. Put prediction, specified control changes, answer derivation and a limitation in each public BUILD-STORY or walkthrough, linked concisely from the app. Add the requested small comparison, context-preserving export and nearby save/result actions. Originals gain bounded lessons, varied samples and state fixes without frameworks. P3 tasks are assignments, not claimed implemented features.
-
-Then inspect complete browser tasks using independent expected values and production output. Developers own ports 9701–9706, 9711–9716 and 9721–9726; coordinator uses 9731–9733. Avoid global viewport changes during parallel work. Same-origin authored layout harnesses may prove 320px and 200% text reflow, with the mechanism recorded; they do not prove physical keyboard or screen-reader behavior. Reserve exclusive browser/OS access for actual VoiceOver tasks if available. Prepare novice tasks without answers visible and collect uncoached observations from a real participant.
-
-Finally independently review, correct, checkpoint and push each app to its existing authorized destination. Wait for successful Actions tied to exact commits and observe live known results. Retain failures. Update gallery descriptions/previews where needed; preserve historical campaign records and save current snapshots tied to commits. Audit all 126 items against direct evidence before closing the goal. Missing human evidence keeps those items open.
+Verify shared pure model functions and actual production-browser interactions. Independently review the app, correct findings and simplify unused concepts. Prepare concrete source/evaluation records before any final publication approval still needed.
 
 ## Concrete Steps
 
+In the app folder, install the exact approved packages once, then use `npm ci`, `npm run build`, `npm run test:browser -- --port 9741` and `npm run preview -- --port 9742`. Run the plugin dependency checker. Record real URLs and stop only owned servers. A maintainer-only data ingestion script may use existing Python; the generated app does not require Python.
 
-Inspect Git status, remotes and applicable AGENTS files before edits. Preserve local identity/remotes; never force-push. Library apps use recorded Node/npm, the plugin dependency checker, `npm run build` and existing browser tests, then production at the repository base path. Originals run `tests/index.html` through a loopback static server with an existing host runtime; maintainer preview does not become a student dependency.
-
-Pricing acceptance includes $8 × 100 − $500 = $300; 62 units gives −$4 and 63 gives $4. Ten-cent contribution covers $100 at 1000 units. Zero/nonpositive contribution needs distinct explanations. Inventory follows the delayed-delivery ledger and exact on-order position before orders; compared policies see the same demand. Sales distinguishes invalid dates from valid empty filters, retains the tiny $390/$234/$156 fixture and adds independently summed varied data with a loss-making row. Maximum-size data needs bounded visible rows and complete export access.
-
-Course checks are `python3 scripts/build.py`, `python3 scripts/check.py`, `claude plugin validate .` and `git diff --check`. Validate a staged publication snapshot with committed site configuration so unrelated featured ordering stays local. Inspect desktop/narrow gallery and keyboard/copy behavior if its UI changes. Stop only owned servers.
+Inspect staged files, make an ordinary local source checkpoint with the previously approved course Git attribution, and record evaluation applicability. If gallery files change, run `python3 scripts/build.py`, `python3 scripts/check.py`, `claude plugin validate .` and `git diff --check`. Preserve unrelated edits.
 
 ## Validation and Acceptance
 
+Select all years 2016–2026; 2020 must clear stale content. Check First Four, Oregon–VCU no-contest, LIU seed correction, real champions and year-specific pairings. Probabilities lie in [0,1], decrease across later rounds, and sum approximately to 64/32/16/8/4/2/1 allowing source rounding. Verify named values independently from source CSVs.
 
-Every coverage requirement needs source location, reproduction or exercise, observed outcome, evaluated commit and live verification where applicable. Tests establish only covered behavior. Screen-reader announcements require an actual reader; novice learning requires a real person. If solver limit states cannot be induced, retain the checklist qualification and distinguish simulated adapter evidence. Do not claim physical-device testing from desktop emulation.
-
-Final audit inspects current files and remote state rather than relying on assertions. Checks cover known answers, invalid recovery, export context, source/configuration freshness, desktop/narrow/enlarged rendering and named keyboard tasks. Keep local-only runtime and supported libraries.
+Test numeric sorting, exact probability tooltips, playback stop/reset, team selection, chart resizing, back navigation, desktop/narrow rendering and same-origin assets. Production preview must work under `/bab-example-madness/`. Local checks do not establish live deployment, actual screen-reader speech, novice usability or phone touch behavior.
 
 ## Idempotence and Recovery
 
-
-Use ordinary revisions; preserve failures, user drafts and history. Never reset existing folders. Deployment retries reuse repositories. Failed imports preserve prior datasets; edited drafts use the bounded recovery requested by the checklist. Never retain personal imports, secrets, dependency trees or generated bundles in course evidence.
+Preserve existing examples, archives, settings and history. Retain failed rounds and correction evidence. Data downloads occur during development, with no visitor-side external requests. Failed retrieval must leave prior data intact. Inspect/reuse an authorized repository on deployment retry.
 
 ## Artifacts and Notes
 
-
-Deliver corrected live applications, public teaching walkthroughs, extension assignments, per-ID coverage, reproduced failures/corrections, reviewed checkpoints and deployment evidence. Identify pending participant/accessibility evidence instead of replacing it with simulations.
+Deliver source, readable handoffs, attributed data, reproducible checks and review/browser evidence. Reference inspection: `/private/tmp/bab-madness-reference.md`. User reference: https://web.archive.org/web/20240411121651/https://projects.fivethirtyeight.com/madness-2015/index.html#mens.
 
 ## Interfaces and Dependencies
 
+Use managed Vite 8.3.4 and ECharts 6.1.0 with a lockfile, notices and local canonical fonts. Load static local JSON by year. Model functions are shared by UI and tests. Data ingestion is maintainer tooling, separate from the browser runtime.
 
-Keep existing model functions and architecture unless a correction needs change. UI and browser tests call the same models. Maintain local synthetic data, repository paths, licenses and canonical Campus Designer guidance. No Remotion or telemetry exception is reintroduced.
-
-Revision note (2026-10-09): replaced the completed live-revision plan because the goal references a newer 126-item review including three original apps and human verification gates.
+Revision note (2026-10-09): Completed model substitution, independent audits, UI corrections and live publication. Browser minimum viewport at existing zoom limited the narrow trial to 727 CSS pixels; phone-width, screen-reader and novice checks remain unverified. The persisted-pageshow handler was reviewed, but the actual Back trial loaded a fresh document. Unrelated featured-order and generated-catalog edits remain uncommitted.
