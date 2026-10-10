@@ -7,3 +7,5 @@ To reproduce, download both current samples, inspect their headers, then choose 
 The recorded run used the downloaded Sales filename and a renamed copy of the downloaded Returns file for its initial pair. Corrected files contain the original downloaded bytes under new names. See ../browser-native-files.json for exact outcomes and timestamps. This was agent-operated verification; no novice or screen-reader session is claimed.
 
 The browser download listener and one early file-selection call took far longer than their requested timeouts. Later chooser operations used completion handles and were checked before submission. An attempted role=alert selector did not match because validation uses the existing status region; the visible status text was then read and recorded. These are automation observations, not application calculation failures.
+
+The downloaded CSVs retain their original CRLF line endings so the recorded byte hashes stay reproducible. The local Git attribute permits CR at line end while retaining ordinary trailing-space and blank-line checks.
