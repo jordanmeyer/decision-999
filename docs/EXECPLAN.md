@@ -29,7 +29,7 @@ Create a Browser App Builder example recreating the useful interactions of the a
 - [x] (2026-10-09) Reopened visual fidelity after the user rejected the central-card layout; independently measured the original SVG geometry, settled labels, and probability widths.
 - [x] Replace the card geometry with the original continuous bilateral bracket conventions.
 - [x] Independently inspect initial/late/results routes, low-probability widths, keyboard previews and responsive output.
-- [ ] Publish the corrected application and refreshed gallery evidence after verification.
+- [x] Publish the corrected application and refreshed gallery evidence after verification.
 
 ## Surprises & Discoveries
 
@@ -54,6 +54,8 @@ The previous comparison pass was insufficient: connected cards still put Final F
 The application and later-year model are implemented. An independent calculation reproduced all 1,428 reconstructed probabilities within floating-point precision. Source/model review passed after six corrections. Final checks passed 72/72 in Node and the browser. Relevant source checkpoint `2f44204` was published in `77e6e40`; a report-only follow-up `659f9d1` also deployed successfully. Live original/reconstructed probabilities, actual results, cancellation, source and build-story links were verified. The gallery change is live with successful exact-commit Actions verification. No actual screen-reader or novice-usability pass is claimed.
 
 The requested comparison correction is complete. Six original findings and the long-name connector follow-up are fixed and independently re-reviewed. Clean source `34bd433` passed 74/74 Node/browser checks; correction deployment `c8b7e81` and report follow-up `09a22ac` both succeeded. Gallery `7027598` deployed successfully and the live page loads the 1280 × 1040 connected-bracket preview with the updated 74-check wording. Human accessibility and novice/device gates remain outside the bounded pass. The lesson is that source/model tests did not replace a rendered comparison with the requested reference.
+
+The original-geometry correction supersedes the earlier card-layout acceptance. Independent actual-browser comparison passed the continuous tree, line-width encoding, name placement and probability placement after two follow-up fixes. Source `40c6a1e` passed 74/74 checks; application `f8d1773` and gallery `fbcb0b9` deployed successfully and were verified live. No model/data changes were made.
 
 ## Context and Orientation
 
@@ -109,4 +111,4 @@ Revision note (2026-10-09, comparison review): Reopened UI work at the user's re
 
 Revision note (2026-10-09, corrected candidate): Six fidelity findings and a content-resize connector defect are fixed. The independent reviewer’s browser became unavailable during follow-up; their pass explicitly uses source review, independently inspected screenshots and coordinator-attributed interaction measurements. The final source checkpoint is `34bd4335e7c8297b5534e3ce2fa35b41db05a5d0`, with 74/74 checks and unchanged historical data.
 
-Revision note (original geometry): Source `40c6a1e` replaces cards with one bilateral coordinate tree and retains models/data. Independent actual-browser comparison passed after fixing most-likely targets and compact labels. Coordinator verified Results and actual 375px layouts. Clean 74/74 Node/browser checks and production build passed; publication `f8d1773` passed Actions run 38016901031 and returning-browser checks. Refreshed gallery source/image passed repository checks plus 1280px/375px rendering, keyboard and copy inspection; course publication remains pending.
+Revision note (original geometry): Source `40c6a1e` replaces cards with one bilateral coordinate tree and retains models/data. Independent actual-browser comparison passed after fixing most-likely targets and compact labels. Coordinator verified Results and actual 375px layouts. Clean 74/74 Node/browser checks and production build passed; publication `f8d1773` passed Actions run 38016901031 and returning-browser checks. Refreshed gallery source/image passed repository checks plus 1280px/375px rendering, keyboard and copy inspection; course commit `fbcb0b9` passed Actions run 38017160406 and its live image/link were verified. App report follow-up `6f98ed0` also deployed successfully. All four owned preview/test processes were stopped; temporary tabs were closed.
