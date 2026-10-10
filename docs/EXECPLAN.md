@@ -13,7 +13,7 @@ Unify the published Tournament Atlas around the Campus Designer typography and p
 - [x] Browser design checks 82/82, including 2,984 rendered labels and an active rounded-zero forecast regression.
 - [x] Inspected desktop/phone, Results, late forecast, 2020, 2025 and story; data 80/80 and route rendering 16/16 passed.
 - [x] Published `e1ea457`; Actions 38024158838 succeeded and the returning browser verified the new assets, known odds and championship score.
-- [ ] Record checklist outcomes and update relevant gallery evidence; preserve unrelated edits.
+- [x] Recorded all 32 checklist outcomes and failed rounds; gallery `fde5b49` deployed and passed desktop/narrow, keyboard and copy checks. Unrelated edits preserved; owned servers/tabs cleaned up.
 
 ## Surprises & Discoveries
 
@@ -29,7 +29,7 @@ The previous literal reproduction of FiveThirtyEight conflicts with the current 
 
 ## Outcomes & Retrospective
 
-The application is corrected and verified live. Gallery publication and final evidence handoff are in progress. Screen-reader, physical touch and novice usability remain human checks; no automated run establishes those.
+The application and gallery are corrected and verified live. Source `72fb26c` passes 82 design/interaction, 80 data/model and 16 route-rendering checks. The evidence folder records all 32 requested outcomes, failures, actual screenshots and exact deployments. No data/model/dependency changes were needed. Screen-reader, physical touch and novice usability remain human checks; no automated run establishes those.
 
 ## Context and Orientation
 
@@ -68,3 +68,5 @@ No new runtime or library. Continue native HTML/CSS/JavaScript, local Open Sans 
 Revision note: replaces the completed fidelity plan with the user's current Campus Designer acceptance checklist.
 
 Implementation note: the first rendered trial caught narrow Open Sans labels; visual inspection also caught hairlines crossing names and a phone story-header wrap. All were corrected. A source probability of zero can belong to an active team (2016 FDU), so the archive’s alive flag now governs elimination copy. No data file changed.
+
+Completion note: app Actions 38024158838 and documentation follow-up 38024324410 succeeded; gallery Actions 38024355680 succeeded. Returning-browser assets and live known answers were checked. Local gallery preview was browser-client blocked; live gallery verification completed without changing any protection.

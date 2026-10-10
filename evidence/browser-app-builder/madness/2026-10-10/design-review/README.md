@@ -57,4 +57,4 @@ Reduced-motion instant scrolling is source-reviewed; actual preference emulation
 | About | Stacked disclosures/prose in a 65ch column. |
 | Footer | Source credit, license link and affiliation disclaimer. |
 
-Publication results are recorded in `deployment.json` after verifying the exact Actions commit and returning live browser. Historical review evidence remains in its original dated folders.
+Publication results are recorded in `deployment.json`: app `e1ea457` and documentation-only follow-up `7af8ced` both deployed successfully; returning live assets and known odds/score passed. Gallery `fde5b49` deployed successfully, with the new image loaded at 1152px and 375px; keyboard focus, the copy button’s “Copied” state and no phone page overflow were verified. Local gallery navigation was blocked by the browser client, so these gallery observations use the authorized live deployment. All three owned preview servers were stopped and temporary tabs closed. Historical review evidence remains in its original dated folders.

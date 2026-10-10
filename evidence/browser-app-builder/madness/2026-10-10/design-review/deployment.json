@@ -19,5 +19,23 @@
     "pinned_initial_alabama": "16%",
     "captured_errors_warnings": []
   },
-  "gallery_local_preview": "Browser reported ERR_BLOCKED_BY_CLIENT for localhost:8000; gallery verification will use the authorized public deployment. No browser protection changed."
+  "gallery_local_preview": "Browser reported ERR_BLOCKED_BY_CLIENT for localhost:8000; gallery verification will use the authorized public deployment. No browser protection changed.",
+  "documentation_followup": {
+    "commit": "7af8ced70722829f23f009c5ea01144fdb91a0fb",
+    "workflow": "https://github.com/jordanmeyer/bab-example-madness/actions/runs/38024324410",
+    "conclusion": "success",
+    "application_source_changed": false
+  },
+  "gallery": {
+    "commit": "fde5b49addb6c64fe6ede348a78107fb9d016d60",
+    "workflow": "https://github.com/jordanmeyer/decision-999/actions/runs/38024355680",
+    "conclusion": "success",
+    "live_image": "https://jordanmeyer.github.io/decision-999/plugins/browser-app-builder/example-9.jpg",
+    "desktop_width": 1152,
+    "phone_width": 375,
+    "image_loaded": true,
+    "keyboard_focus": "How this was built",
+    "copy_button_result": "Copied",
+    "phone_page_overflow": false
+  }
 }
