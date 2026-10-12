@@ -62,6 +62,7 @@ img { display: block; max-width: 100%; height: auto; }
 .hero-eyebrow, .kicker, .section-head .kicker { display: flex; align-items: center; gap: 0.75rem; font: 600 0.75rem/1.4 var(--sans); letter-spacing: 0.12em; text-transform: uppercase; }
 .hero-eyebrow::before, .kicker::before { content: ""; flex: none; width: 1.5rem; height: 2px; background: currentColor; }
 .hero-eyebrow { color: var(--dandelion); }
+.app-platform .hero .hero-eyebrow { font-size: 1rem; }
 .kicker, .section-head .kicker { margin-bottom: 0.75rem; color: var(--navy); }
 .kicker::before { background: var(--copper); }
 .hero-search { display: flex; max-width: 34rem; margin-top: 2.25rem; }

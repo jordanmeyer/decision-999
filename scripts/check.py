@@ -80,6 +80,9 @@ with tempfile.TemporaryDirectory() as temporary, redirect_stdout(io.StringIO()):
     escaped = (root / 'dist/apps/index.html').read_text()
     assert '&lt;App &amp; example&gt;' in escaped and '&lt;script&gt;unsafe&lt;/script&gt;' in escaped
     assert '/alternate/apps/' in escaped and '/alternate/plugin-platform/' not in escaped
+    redirect = (root / 'dist/plugins/browser-app-builder/index.html').read_text()
+    assert 'content="0; url=/alternate/plugins/web-application-builder/"' in redirect
+    assert '/alternate/plugins/web-application-builder/' in Page(redirect).urls
     app_registry.write_text(app_records)
     inventory = root / BUILDER / 'references/libraries.json'
     saved_inventory = inventory.read_text()
