@@ -195,7 +195,6 @@ img { display: block; max-width: 100%; height: auto; }
 .why-section { padding-block: var(--section); }
 .why-section h2 { margin-bottom: 2.5rem; }
 .band { padding-block: var(--section); background: var(--quiet); }
-#process { background: var(--white); }
 .band h2 { margin-bottom: 2rem; }
 .columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
 .columns > div { border-top: 2px solid var(--navy); padding-top: 1.25rem; }
