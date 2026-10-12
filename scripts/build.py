@@ -519,17 +519,17 @@ def build(root=ROOT, base=None):
                       for c, label, n in chips),
         cards='\n        '.join(card(p, base, f' data-category="{escape(p["ui"]["category"])}" data-search="{searchable(p)}"') for p in plugins)),
         config['url'] + 'plugins/'))
-    # Keep the published builder URL useful after the plugin rename.
+    # Send the old builder URL to the active app platform.
     redirect = dist / 'plugins/browser-app-builder/index.html'
     redirect.parent.mkdir(parents=True)
     redirect.write_text(f'''<!doctype html>
 <html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Web Application Builder</title>
-<link rel="canonical" href="{config['url']}plugins/web-application-builder/">
-<meta http-equiv="refresh" content="0; url={base}plugins/web-application-builder/">
-<p><a href="{base}plugins/web-application-builder/">Continue to Web Application Builder</a></p>
+<title>{escape(config['name'])}</title>
+<link rel="canonical" href="{config['url']}">
+<meta http-equiv="refresh" content="0; url={base}">
+<p><a href="{base}">Continue to {escape(config['name'])}</a></p>
 </html>
 ''', encoding='utf-8')
     pages.append(redirect)
