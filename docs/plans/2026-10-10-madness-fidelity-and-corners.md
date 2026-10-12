@@ -82,7 +82,7 @@ Merge year/mode/view controls into a compact row. Put snapshot status inside the
 ### Milestone 3: Verify and publish
 
 
-The independent reviewer compares the reference and candidate, covers all 21 items, and reports remaining defects directly to the developers for correction. Inspect all years 2016–2026, desktop widths 1024, 1217, 1280 and 1680, and phone width 375. Include late snapshots, Results, First Four, playback, keyboard and pinned/rest states. Save actual measurements and screenshots under `evidence/browser-app-builder/madness/2026-10-09/checklist-review/`; retain failed rounds.
+The independent reviewer compares the reference and candidate, covers all 21 items, and reports remaining defects directly to the developers for correction. Inspect all years 2016–2026, desktop widths 1024, 1217, 1280 and 1680, and phone width 375. Include late snapshots, Results, First Four, playback, keyboard and pinned/rest states. Save actual measurements and screenshots under `evidence/web-application-builder/madness/2026-10-09/checklist-review/`; retain failed rounds.
 
 After meaningful source tests and browser tests pass, build production output and verify it under the repository URL path. Inspect all changes, create a clean source checkpoint, update application evaluation and publication records, and push ordinary commits to main. Verify the exact GitHub Actions commit and live known answers, labels, clean state and new assets in a returning browser. Refresh the gallery image and evidence wording, run course validation, and push only related course files. Preserve unrelated generated-catalog and configuration edits.
 
@@ -91,7 +91,7 @@ After meaningful source tests and browser tests pass, build production output an
 
 In the sibling app's `app/main.js`, replace circular end caps at connections between stage paths with an ellipse whose other three quarters overlap the existing strokes. For a horizontal incoming path of width A and a vertical outgoing path of width B, the corner extends B/2 horizontally and A/2 vertically from the centerline intersection. The full ellipse works in all four directions without mirrored formulas. Keep the existing rounded internal elbows and restore flat caps in `app/style.css`. A corner exists only when both adjacent stages are drawn; no completed round may reappear.
 
-Animate each corner radius with its adjacent stroke width so it stays within both edges during growth and shrink. Inspect the actual enlarged Alabama 99%→82%→65% transitions shown by the user, Maryland's sharp drop, mirrored and upward bends, Houston's title stem and tiny First Four routes. Use existing production preview on localhost:9742; save rendered evidence under `evidence/browser-app-builder/madness/2026-10-09/corner-geometry/`. Preserve the failed prior report, explicitly supersede it, and obtain independent geometric and browser review. Run meaningful regression checks and the build; no test that merely asserts CSS spelling. Publish only after those checks, then verify the exact Actions run and enlarged live output.
+Animate each corner radius with its adjacent stroke width so it stays within both edges during growth and shrink. Inspect the actual enlarged Alabama 99%→82%→65% transitions shown by the user, Maryland's sharp drop, mirrored and upward bends, Houston's title stem and tiny First Four routes. Use existing production preview on localhost:9742; save rendered evidence under `evidence/web-application-builder/madness/2026-10-09/corner-geometry/`. Preserve the failed prior report, explicitly supersede it, and obtain independent geometric and browser review. Run meaningful regression checks and the build; no test that merely asserts CSS spelling. Publish only after those checks, then verify the exact Actions run and enlarged live output.
 
 ## Concrete Steps
 
@@ -129,7 +129,7 @@ Preserve existing history, archives, user edits and trial repositories. Keep fai
 ## Artifacts and Notes
 
 
-Primary review: `docs/MADNESS-REVIEW.md`. Reference: `https://web.archive.org/web/20240411121651/https://projects.fivethirtyeight.com/madness-2015/index.html#mens`. Prior geometry evidence is preserved under `evidence/browser-app-builder/madness/2026-10-09/geometry-review/`. New independent reviewer scratch report: `/private/tmp/madness-checklist-review.md`.
+Primary review: `docs/MADNESS-REVIEW.md`. Reference: `https://web.archive.org/web/20240411121651/https://projects.fivethirtyeight.com/madness-2015/index.html#mens`. Prior geometry evidence is preserved under `evidence/web-application-builder/madness/2026-10-09/geometry-review/`. New independent reviewer scratch report: `/private/tmp/madness-checklist-review.md`.
 
 ## Interfaces and Dependencies
 

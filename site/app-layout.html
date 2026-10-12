@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>${title}</title>
+  <meta name="description" content="${description}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="${title}">
+  <meta property="og:description" content="${description}">
+  <meta property="og:url" content="${url}">${image}
+  <meta name="theme-color" content="#012169">
+  <link rel="stylesheet" href="${base}style.css?v=${css}">
+  <script src="${base}main.js?v=${js}" defer></script>
+</head>
+<body id="top" class="app-platform">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <a class="brand" href="${base}">${name}</a>
+      <nav aria-label="Main">${nav}</nav>
+    </div>
+  </header>
+  <main id="main">
+${content}
+  </main>
+  <footer class="footer">
+    <div class="wrap footer-main">
+      <div class="footer-brand">
+        <p class="kicker">${tagline}</p>
+        <a class="brand" href="${base}">${name}</a>
+        <p>${summary}</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <div><h2>Explore</h2><a href="${base}">Home</a><a href="${base}apps/">Examples</a><a href="${base}build/">Build your own</a></div>
+        <div><h2>Featured</h2>${featured}</div>
+        <div><h2>Project</h2><a href="https://github.com/${repo}">Source on GitHub</a><a href="https://github.com/${repo}/tree/main/plugins/web-application-builder">Web Application Builder source</a></div>
+      </nav>
+    </div>
+    <div class="wrap footer-base">
+      <p class="colophon"><span class="swatches" aria-hidden="true"></span>
+        <span>Built with the <a href="${base}build/">Web Application Builder</a> plugin.</span></p>
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+  </footer>
+  <p id="copy-status" class="sr-only" role="status"></p>
+</body>
+</html>

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "madness",
+    "name": "NCAA Tournament Forecasts",
+    "description": "Compare men’s and women’s tournament forecasts across years and sources, and follow how each team’s chances change as games are played.",
+    "category": "Data exploration",
+    "libraries": "ECharts",
+    "url": "https://jordanmeyer.github.io/bab-example-madness/",
+    "repository": "https://github.com/jordanmeyer/bab-example-madness",
+    "preview": "evidence/browser-app-platform/2026-10-11/madness-2026-duke.jpg",
+    "previewAlt": "2026 men’s NCAA tournament bracket with Duke highlighted: Ken Pomeroy’s opening forecast gives Duke a 21% title chance.",
+    "data": "Public historical data"
+  },
+  {
+    "id": "executive",
+    "name": "Stillwater Coffee",
+    "description": "Separate sales growth from contribution, then inspect store costs and evidence in the board briefing.",
+    "category": "Dashboards",
+    "libraries": "Mantine · ECharts",
+    "url": "https://jordanmeyer.github.io/bab-example-executive/",
+    "repository": "https://github.com/jordanmeyer/bab-example-executive",
+    "preview": "evidence/web-application-builder/gallery/executive.jpg",
+    "previewAlt": "Stillwater Coffee: revised live application, October 9, 2026",
+    "data": "Synthetic data"
+  },
+  {
+    "id": "uploads",
+    "name": "Common Goods",
+    "description": "Follow a gross-sales lead erased by returns, then compare sales cohorts and product–channel combinations.",
+    "category": "Dashboards",
+    "libraries": "Papa Parse · Arquero · ECharts",
+    "url": "https://jordanmeyer.github.io/bab-example-uploads/",
+    "repository": "https://github.com/jordanmeyer/bab-example-uploads",
+    "preview": "evidence/web-application-builder/gallery/uploads.jpg",
+    "previewAlt": "Common Goods: revised live application, October 9, 2026",
+    "data": "Synthetic data"
+  },
+  {
+    "id": "simulator",
+    "name": "Seasonal order lab",
+    "description": "Compare the expected-profit curve with a binding downside limit and see why the preferred order quantity changes.",
+    "category": "Simulation",
+    "libraries": "jStat · seedrandom · ECharts",
+    "url": "https://jordanmeyer.github.io/bab-example-simulator/",
+    "repository": "https://github.com/jordanmeyer/bab-example-simulator",
+    "preview": "evidence/web-application-builder/gallery/simulator.jpg",
+    "previewAlt": "Seasonal order lab: revised live application, October 9, 2026",
+    "data": "Synthetic data"
+  },
+  {
+    "id": "process",
+    "name": "Approval Studio",
+    "description": "Change approval routing and compare nominal time with the workload that keeps Finance over capacity.",
+    "category": "Operations",
+    "libraries": "React Flow",
+    "url": "https://jordanmeyer.github.io/bab-example-process/",
+    "repository": "https://github.com/jordanmeyer/bab-example-process",
+    "preview": "evidence/web-application-builder/gallery/process.jpg",
+    "previewAlt": "Approval Studio: revised live application, October 9, 2026",
+    "data": "Synthetic data"
+  },
+  {
+    "id": "roadmap",
+    "name": "Launch Ledger",
+    "description": "Separate dependency dates from team capacity; test delays, resource overload and zero-duration milestones.",
+    "category": "Operations",
+    "libraries": "Frappe Gantt",
+    "url": "https://jordanmeyer.github.io/bab-example-roadmap/",
+    "repository": "https://github.com/jordanmeyer/bab-example-roadmap",
+    "preview": "evidence/web-application-builder/gallery/roadmap.jpg",
+    "previewAlt": "Launch Ledger: revised live application, October 9, 2026",
+    "data": "Synthetic data"
+  },
+  {
+    "id": "markets",
+    "name": "Replenish",
+    "description": "Inspect how eligibility rules and weighted scores alter the shortlist, then challenge the ranking with sensitivity checks.",
+    "category": "Market analysis",
+    "libraries": "Leaflet",
+    "url": "https://jordanmeyer.github.io/bab-example-markets/",
+    "repository": "https://github.com/jordanmeyer/bab-example-markets",
+    "preview": "evidence/web-application-builder/gallery/markets.jpg",
+    "previewAlt": "Replenish: revised live application, October 9, 2026",
+    "data": "Synthetic data"
+  },
+  {
+    "id": "sql",
+    "name": "Fulfillment Lab",
+    "description": "Start with simple SQL on 2,400 orders, then trace how shipment events can double-count order value.",
+    "category": "Data exploration",
+    "libraries": "DuckDB-Wasm · ECharts",
+    "url": "https://jordanmeyer.github.io/bab-example-sql/",
+    "repository": "https://github.com/jordanmeyer/bab-example-sql",
+    "preview": "evidence/web-application-builder/gallery/sql.jpg",
+    "previewAlt": "Fulfillment Lab: revised live application, October 9, 2026",
+    "data": "Synthetic data"
+  },
+  {
+    "id": "optimizer",
+    "name": "Batch & Balance",
+    "description": "Re-solve whole-batch production with an extra hour, then compare integer choices with a fractional bound.",
+    "category": "Operations",
+    "libraries": "HiGHS",
+    "url": "https://jordanmeyer.github.io/bab-example-optimizer/",
+    "repository": "https://github.com/jordanmeyer/bab-example-optimizer",
+    "preview": "evidence/web-application-builder/gallery/optimizer.jpg",
+    "previewAlt": "Batch & Balance: revised live application, October 9, 2026",
+    "data": "Synthetic data"
+  },
+  {
+    "id": "presentation",
+    "name": "Desk / Day",
+    "description": "Change demand during the presentation and compare base profit, stress losses and the funding commitment.",
+    "category": "Presentations",
+    "libraries": "reveal.js",
+    "url": "https://jordanmeyer.github.io/bab-example-presentation/",
+    "repository": "https://github.com/jordanmeyer/bab-example-presentation",
+    "preview": "evidence/web-application-builder/gallery/presentation.jpg",
+    "previewAlt": "Desk / Day: revised live application, October 9, 2026",
+    "data": "Synthetic data"
+  }
+]

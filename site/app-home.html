@@ -1,0 +1,52 @@
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="hero-eyebrow">DIY Applications</p>
+          <h1>Build apps for problems you&nbsp;know.</h1>
+          <p class="lead">The proposed MBA course turns real work problems into web applications. Explore the examples, inspect their code, and build your own with the Web Application Builder plugin.</p>
+          <form class="hero-search" action="${base}apps/" role="search">
+            <label for="hero-q" class="sr-only">Search apps</label>
+            <input id="hero-q" name="q" type="search" placeholder="Search apps" autocomplete="off">
+            <button type="submit">Search</button>
+          </form>
+          <p class="hero-links"><a href="${base}apps/">Browse all apps</a><a href="${base}build/">Start building</a></p>
+          <ul class="hero-proof">
+            <li>${count} working examples</li>
+            <li>Open in your browser</li>
+            <li>Source on GitHub</li>
+          </ul>
+        </div>
+        ${demo}
+      </div>
+    </section>
+    <section id="apps" class="wrap catalog" aria-labelledby="apps-title">
+      <div class="section-head">
+        <div><p class="kicker">The collection</p><h2 id="apps-title">Featured</h2></div>
+        <p>Maintainer-built examples with public or synthetic data. <a href="${base}apps/">See all apps</a></p>
+      </div>
+      <div class="cards">
+        ${cards}
+      </div>
+    </section>
+    <section id="process" class="band" aria-labelledby="made-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="kicker">The process</p><h2 id="made-title">From problem to published app</h2></div>
+        </div>
+        <ol class="process">
+          <li><h3>Starts with a real problem</h3><p>Choose a task you know firsthand. Identify its users, their decisions, and concrete examples of a useful result.</p></li>
+          <li><h3>Built through conversation</h3><p>Describe the application in plain language. The agent handles implementation while you review the interface, calculations and behavior.</p></li>
+          <li><h3>Tested and reviewed</h3><p>Check known answers, realistic cases, keyboard use and narrow screens. Have the app reviewed and revise it before publication.</p></li>
+          <li><h3>Published with its limits</h3><p>Publish the working app and GitHub source with its assumptions, testing evidence and remaining limitations. Use only public or synthetic data.</p></li>
+        </ol>
+      </div>
+    </section>
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="wrap split">
+        <h2 id="cta-title">Try an example. See how it works.</h2>
+        <div>
+          <p>The examples run in your browser. Each links to its GitHub repository so you can inspect the implementation.</p>
+          <p class="actions"><a class="button light" href="${base}apps/">Browse the apps</a></p>
+        </div>
+      </div>
+    </section>

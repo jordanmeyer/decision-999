@@ -4,7 +4,7 @@ This living ExecPlan follows `~/.codex/PLANS.md`. The previous checklist plan, w
 
 ## Purpose / Big Picture
 
-Create a Browser App Builder example recreating the useful interactions of the archived FiveThirtyEight 2015 men’s tournament dashboard. Include every year 2016–2026, a four-region bracket, probability table and genuine forecast history where available. Clearly distinguish actual results from predictions and explain the cancelled 2020 tournament.
+Create a Web Application Builder example recreating the useful interactions of the archived FiveThirtyEight 2015 men’s tournament dashboard. Include every year 2016–2026, a four-region bracket, probability table and genuine forecast history where available. Clearly distinguish actual results from predictions and explain the cancelled 2020 tournament.
 
 ## Progress
 
@@ -59,7 +59,7 @@ The original-geometry correction supersedes the earlier card-layout acceptance. 
 
 ## Context and Orientation
 
-Course root: `/Users/jordan/Projects/decision-999`. Read Browser App Builder Setup/Plan/Build/Evaluate and the canonical Campus Designer references. App source lives in `app/`; browser cases in `tests/`; ignored build output in `dist/`. Evidence belongs in `evidence/browser-app-builder/madness/2026-10-09/`. Data research is in `/private/tmp/bab-madness-research/`; normalized delivery in `/private/tmp/bab-madness-data/`.
+Course root: `/Users/jordan/Projects/decision-999`. Read Web Application Builder Setup/Plan/Build/Evaluate and the canonical Campus Designer references. App source lives in `app/`; browser cases in `tests/`; ignored build output in `dist/`. Evidence belongs in `evidence/web-application-builder/madness/2026-10-09/`. Data research is in `/private/tmp/bab-madness-research/`; normalized delivery in `/private/tmp/bab-madness-data/`.
 
 A forecast has seven cumulative probabilities: reach Round of 64, Round of 32, Sweet 16, Elite Eight, Final Four, title game, and champion. Game rounds run 0(First Four) through 6(titlegame). Use each year’s actual semifinal pairing and shared First Four bracket slots. Exact source URLs, licenses, dates and corrections accompany normalized data. Do not copy large raw publisher scripts into course evidence.
 
@@ -75,11 +75,11 @@ Verify shared pure model functions and actual production-browser interactions. I
 
 Revise `app/main.js`, `app/style.css` and `app/index.html` in the application repository in response to the independent original-versus-recreation review. Hover and keyboard focus must show one consistent team's route and title probability; exiting the bracket preview must restore the selected team. Final-round connectors must make the regional winners' progress legible. Selected cards must retain readable hover/focus colors. Reduce the header/control stack and provide individually selectable recorded dates with honest time spacing. Any pure date/route logic introduced belongs in `app/model.js` with meaningful regression cases in `tests/cases.js`. Preserve data files and sources.
 
-The reviewer inspects the production preview at desktop and narrow widths after corrections, and reports remaining failures to the developer until the identified issues pass. Record findings, corrections and the exact source checkpoint under `evidence/browser-app-builder/madness/2026-10-09/fidelity-review/`. Run the existing calculation suite and browser checks, build with the locked dependencies, then push ordinary commits to the already authorized application repository. Verify the exact Actions deployment and live interactions. Refresh the gallery screenshot/evidence and publish those course changes only after the relevant repository checks pass, leaving unrelated local edits intact.
+The reviewer inspects the production preview at desktop and narrow widths after corrections, and reports remaining failures to the developer until the identified issues pass. Record findings, corrections and the exact source checkpoint under `evidence/web-application-builder/madness/2026-10-09/fidelity-review/`. Run the existing calculation suite and browser checks, build with the locked dependencies, then push ordinary commits to the already authorized application repository. Verify the exact Actions deployment and live interactions. Refresh the gallery screenshot/evidence and publish those course changes only after the relevant repository checks pass, leaving unrelated local edits intact.
 
 ### Original geometry correction
 
-Replace the independent regional/card layout with one shared coordinate system. Round labels, regional branch junctions, semifinal convergence, championship horizontal branches and title stem must agree. Use a probability width scale consistent across stages, place annotations outside thick bands, and show compact names only for known entrants (plus outer initial teams). Internal undecided branches remain accessible hover/focus targets without visible placeholders. Review upper/lower and left/right routes, tiny probabilities, late snapshots/results, and first-round play-in behavior. Retain the prior review as a failed visual acceptance round. New evidence lives under `evidence/browser-app-builder/madness/2026-10-09/geometry-review/`.
+Replace the independent regional/card layout with one shared coordinate system. Round labels, regional branch junctions, semifinal convergence, championship horizontal branches and title stem must agree. Use a probability width scale consistent across stages, place annotations outside thick bands, and show compact names only for known entrants (plus outer initial teams). Internal undecided branches remain accessible hover/focus targets without visible placeholders. Review upper/lower and left/right routes, tiny probabilities, late snapshots/results, and first-round play-in behavior. Retain the prior review as a failed visual acceptance round. New evidence lives under `evidence/web-application-builder/madness/2026-10-09/geometry-review/`.
 
 ## Concrete Steps
 

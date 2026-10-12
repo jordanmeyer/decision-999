@@ -1,0 +1,40 @@
+    <div data-directory="app">
+      <section class="page-hero">
+        <div class="wrap">
+          <p class="hero-eyebrow">The collection</p>
+          <h1>Apps</h1>
+          <p class="lead">Example web applications with links to the live app and its GitHub source. These are maintainer-built examples, not student submissions.</p>
+          <label class="search directory-search" hidden><span class="sr-only">Search apps</span><input type="search" placeholder="Search apps" autocomplete="off"><kbd aria-hidden="true">/</kbd></label>
+          <ul class="hero-proof">
+            <li>Open in your browser</li>
+            <li>Public or synthetic data</li>
+            <li>Source on GitHub</li>
+          </ul>
+        </div>
+      </section>
+      <section class="wrap directory" aria-label="Plugin directory">
+        <div class="toolbar">
+          <div class="chips" role="group" aria-label="Filter by category" hidden>${chips}</div>
+          <p class="result-count" role="status">${count}</p>
+        </div>
+        <div class="directory-grid">
+          ${cards}
+          <div class="card-more" data-more>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="1.5"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+            <h3>Build an app of your own</h3>
+            <p>Start with a problem you understand. The course guides you through planning, building, testing and publication.</p>
+            <a class="text-link" href="${base}#process">See the process</a>
+          </div>
+        </div>
+        <p class="empty" hidden>No apps match. <button type="button" class="link-button" data-clear>Clear the search</button></p>
+      </section>
+    </div>
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="wrap split">
+        <h2 id="cta-title">Create your own browser app.</h2>
+        <div>
+          <p>Web Application Builder guides the work in your AI agent. Visitors only need a browser to use the finished app.</p>
+          <p class="actions"><a class="button light" href="${base}build/">Get Web Application Builder</a></p>
+        </div>
+      </div>
+    </section>

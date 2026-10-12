@@ -17,18 +17,6 @@
       "category": "Design"
     },
     {
-      "name": "grill-me",
-      "source": {
-        "source": "local",
-        "path": "./plugins/grill-me"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Planning"
-    },
-    {
       "name": "create-your-own",
       "source": {
         "source": "local",
@@ -41,10 +29,22 @@
       "category": "Development"
     },
     {
-      "name": "browser-app-builder",
+      "name": "grill-me",
       "source": {
         "source": "local",
-        "path": "./plugins/browser-app-builder"
+        "path": "./plugins/grill-me"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Planning"
+    },
+    {
+      "name": "web-application-builder",
+      "source": {
+        "source": "local",
+        "path": "./plugins/web-application-builder"
       },
       "policy": {
         "installation": "AVAILABLE",

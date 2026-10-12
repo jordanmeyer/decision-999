@@ -7,7 +7,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
-from build import ROOT, BUILDER, build, catalogs, designer_files, load, read_json
+from build import ROOT, BUILDER, Page, build, catalogs, designer_files, load, load_apps, read_json
 
 designer = ROOT / BUILDER / 'skills/campus-designer'
 assert {p.relative_to(designer): p.read_bytes() for p in designer.rglob('*') if p.is_file()} == designer_files(ROOT), \
@@ -46,6 +46,41 @@ with tempfile.TemporaryDirectory() as temporary, redirect_stdout(io.StringIO()):
     for folder in ('plugins', 'site', 'evidence'):
         shutil.copytree(ROOT / folder, root / folder)
     build(root)  # without the sibling source project or any committed catalog
+    app_registry = root / 'site/apps.json'
+    app_records = app_registry.read_text()
+    app_page = (root / 'dist/apps/index.html').read_text()
+    app_home = (root / 'dist/index.html').read_text()
+    assert 'data-directory' not in app_home
+    assert app_home.count('class="card app-card"') == 2
+    assert not (root / 'dist/course').exists()
+    for route in ('apps', 'build'):
+        assert f'/decision-999/{route}/' in Page(app_home).urls
+        assert (root / f'dist/{route}/index.html').is_file()
+    for route in ('index.html', 'apps/index.html', 'build/index.html'):
+        assert not any(url.startswith(('/decision-999/plugin-platform/', '/decision-999/plugins/', '/decision-999/about/', '/decision-999/install/', '/decision-999/course/'))
+                       for url in Page((root / 'dist' / route).read_text()).urls)
+    assert app_page.count('class="card app-card"') == len(load_apps(root))
+    assert 'Plugins for AI agents' in (root / 'dist/plugin-platform/index.html').read_text()
+    assert 'data-directory="app"' in app_page and 'data-directory="app"' not in (root / 'dist/plugins/index.html').read_text()
+    urls = Page(app_page).urls
+    for app in load_apps(root):
+        assert app['url'] in urls and app['repository'] in urls
+        assert (root / 'dist/apps' / (app['id'] + Path(app['preview']).suffix)).read_bytes() == (root / app['preview']).read_bytes()
+    edit(app_registry, lambda apps: apps[0].update(repository='javascript:alert(1)'))
+    rejects(root, 'absolute HTTPS URL')
+    app_registry.write_text(app_records)
+    edit(app_registry, lambda apps: apps[0].update(preview='../outside.jpg'))
+    rejects(root, 'preview must be an image inside')
+    app_registry.write_text(app_records)
+    edit(app_registry, lambda apps: apps[1].update(id=apps[0]['id']))
+    rejects(root, 'app IDs must be unique')
+    app_registry.write_text(app_records)
+    edit(app_registry, lambda apps: apps[0].update(name='<App & example>', description='<script>unsafe</script>'))
+    build(root, base='/alternate/')
+    escaped = (root / 'dist/apps/index.html').read_text()
+    assert '&lt;App &amp; example&gt;' in escaped and '&lt;script&gt;unsafe&lt;/script&gt;' in escaped
+    assert '/alternate/apps/' in escaped and '/alternate/plugin-platform/' not in escaped
+    app_registry.write_text(app_records)
     inventory = root / BUILDER / 'references/libraries.json'
     saved_inventory = inventory.read_text()
     edit(inventory, lambda data: data['libraries'][0]['packages'].update(echarts='^6.0.0'))
@@ -89,8 +124,8 @@ with tempfile.TemporaryDirectory() as temporary, redirect_stdout(io.StringIO()):
     rejects(root, 'example walkthrough needs an absolute HTTPS url')
     app_manifest.write_text(app_original)
     build(root)
-    assert (root / 'dist/plugins/browser-app-builder/example-0.jpg').read_bytes() == (root / 'evidence/browser-app-builder/gallery/executive.jpg').read_bytes()
-    assert not (root / 'dist/plugins/browser-app-builder/source').exists()  # previews do not publish the evidence tree
+    assert (root / 'dist/plugins/web-application-builder/example-0.jpg').read_bytes() == (root / 'evidence/web-application-builder/gallery/executive.jpg').read_bytes()
+    assert not (root / 'dist/plugins/web-application-builder/source').exists()  # previews do not publish the evidence tree
     skill.write_text(instructions + '\n[outside](../../../../README.md)\n', encoding='utf-8')
     rejects(root, 'is missing or leaves')
     skill.write_text(instructions, encoding='utf-8')
@@ -99,13 +134,14 @@ with tempfile.TemporaryDirectory() as temporary, redirect_stdout(io.StringIO()):
     build(root)
     listed = (root / 'dist/plugins/index.html').read_text(encoding='utf-8')
     assert listed.count('class="card"') == len(load(ROOT, config)) + 1 and 'Second Example' in listed
-    assert 'Second Example' not in (root / 'dist/index.html').read_text(encoding='utf-8')  # the home page shows featured plugins only
+    assert 'Second Example' not in (root / 'dist/plugin-platform/index.html').read_text(encoding='utf-8')  # preserved home shows featured plugins only
+    assert 'Second Example' not in (root / 'dist/index.html').read_text(encoding='utf-8')  # plugin additions do not enter the app gallery
     page = (root / 'dist/plugins/second-example/index.html').read_text(encoding='utf-8')
     assert 'Version 2.3.4' in page and all(f'<li>Student {letter}</li>' in page for letter in 'ABCDE')
     assert '>Student A' not in listed  # team members are named on the listing page, not the card
     assert 'class="wrap shots"' not in page and listed.count('class="card-prompt"') >= 1  # no screenshot: the card shows a request
     for catalog in ('.agents/plugins/marketplace.json', '.claude-plugin/marketplace.json'):
-        assert [p['name'] for p in read_json(root / catalog)['plugins']][-1] == 'second-example'
+        assert [p['name'] for p in read_json(root / catalog)['plugins']].count('second-example') == 1
     # The scaffold's output must be held back by the build until its listing text is written.
     sample = root / 'drafts/meeting-brief'
     sample.mkdir(parents=True)
@@ -113,5 +149,5 @@ with tempfile.TemporaryDirectory() as temporary, redirect_stdout(io.StringIO()):
     subprocess.run([sys.executable, ROOT / 'plugins/create-your-own/skills/create-your-own/scripts/new_plugin.py',
                     'drafts/meeting-brief', '--developer', 'Test'], cwd=root, check=True, capture_output=True)
     rejects(root, 'meeting-brief/plugin.json: fill in interface.shortDescription')
-print('Passed: catalogs and bundled designer current, stale designer resources replaced, clean build, missing listing text, escaping screenshot and skill link, automatic second listing with its team and no screenshots, '
+print('Passed: app gallery links, escaping, preview containment, unique IDs, alternate base and preserved plugin platform; catalogs and bundled designer current, stale designer resources replaced, clean build, missing listing text, escaping screenshot and skill link, automatic second listing with its team and no screenshots, '
       'scaffolded plugin held until its listing is written.')

@@ -15,20 +15,20 @@
       "category": "Design"
     },
     {
-      "name": "grill-me",
-      "source": "./plugins/grill-me",
-      "description": "Get grilled on your idea until every design decision is settled.",
-      "category": "Planning"
-    },
-    {
       "name": "create-your-own",
       "source": "./plugins/create-your-own",
       "description": "The scaffolding our students use to turn an SOP into a tested plugin that works across AI apps.",
       "category": "Development"
     },
     {
-      "name": "browser-app-builder",
-      "source": "./plugins/browser-app-builder",
+      "name": "grill-me",
+      "source": "./plugins/grill-me",
+      "description": "Get grilled on your idea until every design decision is settled.",
+      "category": "Planning"
+    },
+    {
+      "name": "web-application-builder",
+      "source": "./plugins/web-application-builder",
       "description": "Plan, build, evaluate, and publish a browser app. No coding experience is required.",
       "category": "Development"
     }

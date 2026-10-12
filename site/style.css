@@ -143,6 +143,7 @@ img { display: block; max-width: 100%; height: auto; }
 .page-hero .search input { border: 0; padding-block: 1rem; }
 .mark { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--ink); font: 600 0.9375rem/1 var(--sans); }
 .install-group { padding-block: var(--section); }
+.install-heading > p { flex-basis: 100%; max-width: none; }
 .host-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--hatteras); }
 .host-name { line-height: 0; }
 .host-name .mark { line-height: 1; }
@@ -194,6 +195,7 @@ img { display: block; max-width: 100%; height: auto; }
 .why-section { padding-block: var(--section); }
 .why-section h2 { margin-bottom: 2.5rem; }
 .band { padding-block: var(--section); background: var(--quiet); }
+#process { background: var(--white); }
 .band h2 { margin-bottom: 2rem; }
 .columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
 .columns > div { border-top: 2px solid var(--navy); padding-top: 1.25rem; }
@@ -318,3 +320,7 @@ img { display: block; max-width: 100%; height: auto; }
   .logos { display: grid; flex-basis: 100%; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem 1.5rem; }
   .logos img { height: 1.25rem; max-width: 100%; object-fit: contain; object-position: left center; }
 }
+
+/* App cards retain the original directory layout and show the full evidence summary. */
+.app-card .summary { display: block; overflow: visible; }
+.app-card .card-shot img { object-fit: contain; }

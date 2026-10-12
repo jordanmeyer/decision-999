@@ -1,0 +1,38 @@
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="hero-eyebrow">Build an app</p>
+        <h1>Install the plugin</h1>
+        <p class="lead">Add the catalog to your AI agent, then install Web Application Builder.<br>Use it to plan, build, test and publish a browser application.</p>
+        <div class="compat-inner">
+          <h2 class="compat-title">Compatible with</h2>
+          <ul class="logos">${logos}</ul>
+        </div>
+      </div>
+    </section>
+    <section class="wrap install-group" aria-labelledby="catalog-title">
+      <div class="section-head install-heading">
+        <div><p class="kicker">One-time setup</p><h2 id="catalog-title">Add the catalog and install the builder</h2></div>
+        <p>Choose your AI agent below. The commands install ${example} from the catalog.</p>
+      </div>
+      ${catalog}
+    </section>
+    <section class="band" aria-labelledby="folder-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="kicker">Folder installation</p><h2 id="folder-title">Install the builder from its folder</h2></div>
+          <p>For these agents, point the plugin installer at the Web Application Builder folder below. Follow the setup guide for your agent.</p>
+        </div>
+        <div class="folder-command">${folder}</div>
+        <ul class="folder-apps">${folder_apps}</ul>
+        <p class="fine">Steps for Claude Code and the Codex CLI are tested; the rest follow each app’s documentation. Logos are trademarks of their owners. An app listed here can load the plugin format; that does not mean its maker endorses this collection.</p>
+      </div>
+    </section>
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="wrap split">
+        <h2 id="cta-title">Start with a problem you know.</h2>
+        <div>
+          <p>Ask Web Application Builder to help plan your application. Describe its users, the task, and how you will check the result.</p>
+          <p class="actions"><a class="button light" href="${base}apps/">Explore the apps</a></p>
+        </div>
+      </div>
+    </section>

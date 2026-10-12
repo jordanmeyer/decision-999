@@ -18,7 +18,7 @@ SCHEMA = 'https://agent-plugins.org/schemas/1.0.0/plugin.schema.json'
 INTERFACE = ('displayName', 'shortDescription', 'longDescription', 'developerName', 'category')
 LISTING = ('label', 'audience', 'limits', 'method')
 DESIGNER = Path('plugins/campus-designer/skills/campus-designer')
-BUILDER = Path('plugins/browser-app-builder')
+BUILDER = Path('plugins/web-application-builder')
 WINDOW_BAR = '<div class="window-bar" aria-hidden="true"><span></span><span></span><span></span></div>'
 
 
@@ -99,7 +99,7 @@ def load(root, config):
     for file in sorted((root / 'plugins').glob('*/plugin.json')):
         package, manifest, where = file.parent, read_json(file), f'plugins/{file.parent.name}/plugin.json'
         name = manifest.get('name')
-        if package.name == 'browser-app-builder':
+        if package.name == 'web-application-builder':
             inventory = read_json(package / 'references/libraries.json')
             entries = inventory['libraries']
             require(len({entry['id'] for entry in entries}) == len(entries), 'Duplicate library ID')
@@ -187,6 +187,52 @@ def catalogs(config, plugins):
         files[f"plugins/{p['name']}/.claude-plugin/plugin.json"] = {
             k: m[k] for k in ('name', 'version', 'description', 'author', 'homepage', 'repository', 'license', 'keywords') if k in m}
     return {path: json.dumps(value, indent=2, ensure_ascii=False) + '\n' for path, value in files.items()}
+
+
+def load_apps(root):
+    """Curated browser apps are independent of installable plugin manifests."""
+    apps = read_json(root / 'site/apps.json')
+    require(isinstance(apps, list) and apps, 'site/apps.json: add at least one app')
+    ids = set()
+    for app in apps:
+        require(all(text(app.get(k)) for k in ('id', 'name', 'description', 'category', 'libraries', 'url',
+                                              'repository', 'preview', 'previewAlt', 'data')),
+                'site/apps.json: incomplete app listing')
+        require(re.fullmatch(r'[a-z0-9]+(-[a-z0-9]+)*', app['id']) and app['id'] not in ids,
+                'site/apps.json: app IDs must be unique lowercase slugs')
+        ids.add(app['id'])
+        for key in ('url', 'repository'):
+            url = urlsplit(app[key])
+            require(url.scheme == 'https' and url.netloc and not url.username and not url.password,
+                    f'site/apps.json: {key} must be an absolute HTTPS URL without credentials')
+            if key == 'repository':
+                require(url.netloc == 'github.com' and re.fullmatch(r'/[\w.-]+/[\w.-]+/?', url.path)
+                        and not url.query and not url.fragment, 'site/apps.json: repository must identify a GitHub repository')
+        preview = root / app['preview']
+        require(any(inside(preview, root / folder) for folder in ('site/assets', 'evidence'))
+                and preview.is_file() and preview.suffix in ('.png', '.jpg'),
+                'site/apps.json: preview must be an image inside site/assets or evidence')
+    return apps
+
+
+def app_preview(app, base, root):
+    version = hashlib.sha256((root / app['preview']).read_bytes()).hexdigest()[:8]
+    return f'{base}apps/{app["id"]}{Path(app["preview"]).suffix}?v={version}'
+
+
+def app_card(app, base, root):
+    words = ' '.join(app[k] for k in ('name', 'description', 'category', 'libraries', 'data')).lower()
+    preview = app_preview(app, base, root)
+    return f'''<article class="card app-card" data-category="{escape(app['category'])}" data-search="{escape(words)}">
+          <a class="card-shot" href="{escape(app['url'])}" tabindex="-1" aria-hidden="true"><img src="{preview}" alt="{escape(app['previewAlt'])}" loading="lazy" width="720" height="450"></a>
+          <div class="card-body">
+            <p class="label">{escape(app['category'])}</p>
+            <h3>{escape(app['name'])}</h3>
+            <p class="summary">{escape(app['description'])}</p>
+            <p class="card-actions"><a class="button small" href="{escape(app['url'])}" aria-label="Open {escape(app['name'])}">Open app</a>
+            <a class="text-link" href="{escape(app['repository'])}" aria-label="{escape(app['name'])} on GitHub">GitHub</a></p>
+          </div>
+        </article>'''
 
 
 def png_size(path):
@@ -373,6 +419,7 @@ def build(root=ROOT, base=None):
     require(re.fullmatch(r'/(?:[\w.-]+/)*', base), 'Base must be an absolute directory path')
     bundle_designer(root)
     plugins = load(root, config)
+    apps = load_apps(root)
     clients = load_clients(root)
     for path, content in catalogs(config, plugins).items():
         (root / path).parent.mkdir(parents=True, exist_ok=True)
@@ -383,40 +430,65 @@ def build(root=ROOT, base=None):
     shutil.copytree(root / 'site/assets', dist / 'assets')
     for name in ('style.css', 'main.js'):
         shutil.copy2(root / 'site' / name, dist / name)
-    layout, home, detail, setup, directory, about = (Template((root / f'site/{name}.html').read_text(encoding='utf-8'))
-                                                     for name in ('layout', 'home', 'plugin', 'install', 'plugins', 'about'))
+    layout, home, detail, setup, directory, about, app_layout, app_home, app_directory, app_setup = (
+        Template((root / f'site/{name}.html').read_text(encoding='utf-8'))
+        for name in ('layout', 'home', 'plugin', 'install', 'plugins', 'about', 'app-layout', 'app-home', 'apps', 'app-build'))
     # Content hashes bust browser caches (GitHub Pages serves max-age=600) whenever the CSS or JavaScript changes.
     versions = {k: hashlib.sha256((root / f'site/{name}').read_bytes()).hexdigest()[:8] for k, name in (('css', 'style.css'), ('js', 'main.js'))}
-    shared = {k: escape(config[k]) for k in ('name', 'repo', 'tagline')} | {'base': base, 'summary': escape(config['description'])} | versions
+    shared = {k: escape(config[k]) for k in ('name', 'repo', 'tagline')} | {'base': base, 'home': base + 'plugin-platform/', 'summary': escape(config['description'])} | versions
     shared['featured'] = ''.join(f'<a href="{base}plugins/{p["name"]}/">{escape(p["ui"]["displayName"])}</a>'
                                  for p in plugins if p['name'] in config['featured'])
 
-    def write(path, title, description, content, url, image=''):
+    def write(path, title, description, content, url, image='', app_page=False):
         """Render a page; the header marks the section the page belongs to (page itself, or a listing inside it)."""
         parts = path.relative_to(dist).parts
+        navigation = [('apps', 'Examples'), ('build', 'Build your own')] if app_page else NAV
         nav = ''.join(f'<a href="{base}{key}/"' + (f' aria-current="{"page" if len(parts) == 2 else "true"}"' if parts[0] == key else '')
-                      + f'>{label}</a>' for key, label in NAV)
+                      + f'>{label}</a>' for key, label in navigation)
+        page_shared = shared | ({'tagline': escape(config['appPlatform']['tagline']), 'summary': escape(config['appPlatform']['description']),
+            'featured': ''.join(f'<a href="{escape(a["url"])}">{escape(a["name"])}</a>' for a in apps[:2])} if app_page else {})
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(layout.substitute(shared, title=escape(title), description=escape(description), content=content, url=url, nav=nav,
+        path.write_text((app_layout if app_page else layout).substitute(page_shared, title=escape(title), description=escape(description), content=content, url=url, nav=nav,
                                           image=f'\n  <meta property="og:image" content="{image}">' if image else ''), encoding='utf-8')
         return path
 
     featured = [c for c in clients if c.get('featured')]
     strip = ''.join(f'<li>{logo(c, base, 24, c["name"])}</li>' for c in featured)
-    pages = [write(dist / 'index.html', f"{config['name']} · {config['tagline']}", config['description'],
+    pages = [write(dist / 'plugin-platform/index.html', f"{config['name']} · {config['tagline']}", config['description'],
                    home.substitute(shared, cards='\n        '.join(card(p, base) for p in plugins if p['name'] in config['featured']),
                                    logos=strip, demo=demo(next(p for p in plugins if p['shots']), base),
                                    more=len(clients) - len(featured), apps=len(clients)),
-                   config['url'])]
-    example = plugins[0]
-    pages.append(write(dist / 'install/index.html', f"Install · {config['name']}", f"Install the {config['name']} plugins in your AI agent.",
-                       setup.substitute(shared, example=escape(example['ui']['displayName']), logos=strip,
+                   config['url'] + 'plugin-platform/')]
+    (dist / 'apps').mkdir()
+    for app in apps:
+        shutil.copy2(root / app['preview'], dist / 'apps' / f"{app['id']}{Path(app['preview']).suffix}")
+    categories = sorted({a['category'] for a in apps})
+    app_chips = [('', 'All', len(apps))] + [(c, c, sum(a['category'] == c for a in apps)) for c in categories]
+    app_config = config['appPlatform']
+    preview = apps[0]
+    app_demo = f'''<a href="{escape(preview['url'])}"><img src="{app_preview(preview, base, root)}" alt="{escape(preview['previewAlt'])}" width="720"></a>'''
+    pages.append(write(dist / 'index.html', f"{config['name']} · {app_config['tagline']}", app_config['description'],
+        app_home.substitute(shared, count=len(apps), cards='\n'.join(app_card(a, base, root) for a in apps[:2]),
+                            demo=app_demo),
+        config['url'], app_page=True))
+    pages.append(write(dist / 'apps/index.html', f"Apps · {config['name']}", app_config['description'],
+        app_directory.substitute(shared, count=f'{len(apps)} apps', cards='\n'.join(app_card(a, base, root) for a in apps),
+            chips=''.join(f'<button type="button" data-category="{escape(c)}" aria-pressed="{str(not c).lower()}">{escape(label)} <span>{n}</span></button>'
+                          for c, label, n in app_chips)),
+        config['url'] + 'apps/', app_page=True))
+    for route, template, example, title, description, app_page in [
+        ('install', setup, plugins[0], 'Install', f"Install the {config['name']} plugins in your AI agent.", False),
+        ('build', app_setup, next(p for p in plugins if p['name'] == 'web-application-builder'), 'Build an app',
+         'Install Web Application Builder to plan, build, evaluate and publish a browser application.', True),
+    ]:
+        pages.append(write(dist / route / 'index.html', f"{title} · {config['name']}", description,
+                       template.substitute(shared, example=escape(example['ui']['displayName']), logos=strip,
                                         catalog=hosts([c for c in clients if not c.get('folder')], config, base, example['name'], guide=True),
                                         folder=command([f"https://github.com/{config['repo']}/tree/main/plugins/{example['name']}"], 'the plugin folder', 'Plugin folder'),
                                         folder_apps=''.join(
                                             f'<li id="{c["slug"]}">{mark(c, base, 28)}<a class="text-link" href="{c["guide"]}" '
                                             f'aria-label="{escape(c["name"])} setup guide">Setup guide</a></li>' for c in clients if c.get('folder'))),
-                       config['url'] + 'install/'))
+                       config['url'] + route + '/', app_page=app_page))
     for plugin in plugins:
         folder = dist / 'plugins' / plugin['name']
         folder.mkdir(parents=True)

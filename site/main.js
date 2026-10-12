@@ -3,6 +3,7 @@ const directory = document.querySelector('[data-directory]');
 if (directory) {
   const search = directory.querySelector('input'), chips = [...directory.querySelectorAll('.chips button')];
   const cards = [...directory.querySelectorAll('.card')], count = directory.querySelector('.result-count');
+  const noun = directory.dataset.directory || 'plugin', more = directory.querySelector('[data-more]');
   let category = '';
   const update = () => {
     const terms = search.value.toLowerCase().split(/\s+/).filter(Boolean);
@@ -11,9 +12,9 @@ if (directory) {
       card.hidden = !((!category || card.dataset.category === category) && terms.every(term => card.dataset.search.includes(term)));
       shown += !card.hidden;
     }
-    count.textContent = `${shown} plugin${shown === 1 ? '' : 's'}`;
+    count.textContent = `${shown} ${noun}${shown === 1 ? '' : 's'}`;
     directory.querySelector('.empty').hidden = shown > 0;
-    directory.querySelector('[data-more]').hidden = Boolean(category || terms.length);
+    if (more) more.hidden = Boolean(category || terms.length);
     // Keep the search and category in the address, so Back, reload and shared links show the same results.
     const url = new URL(location.href);
     for (const [key, value] of [['q', search.value.trim()], ['category', category]]) {
@@ -30,13 +31,21 @@ if (directory) {
   search.addEventListener('input', update);
   directory.querySelector('[data-clear]').addEventListener('click', () => { search.value = ''; choose(''); search.focus(); });
   addEventListener('keydown', event => {
-    if (event.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) { event.preventDefault(); search.focus(); }
+    if (event.key === '/' && !event.ctrlKey && !event.metaKey && !event.altKey &&
+        !document.activeElement.isContentEditable && !['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) {
+      event.preventDefault(); search.focus();
+    }
   });
   directory.querySelector('.directory-search').hidden = false;
   directory.querySelector('.chips').hidden = false;
-  const params = new URLSearchParams(location.search), saved = params.get('category') || '';
-  search.value = params.get('q') || '';
-  choose(chips.some(chip => chip.dataset.category === saved) ? saved : '');
+  const restore = () => {
+    const params = new URLSearchParams(location.search), saved = params.get('category') || '';
+    search.value = params.get('q') || '';
+    choose(chips.some(chip => chip.dataset.category === saved) ? saved : '');
+  };
+  restore();
+  addEventListener('pageshow', restore);
+  addEventListener('popstate', restore);
 }
 for (const button of document.querySelectorAll('[data-copy]')) {
   button.hidden = false;

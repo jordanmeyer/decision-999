@@ -1,16 +1,16 @@
 # Correct the re-reviewed example-app checklist
 
-This living ExecPlan follows `~/.codex/PLANS.md`. Maintain Progress, Surprises & Discoveries, Decision Log and Outcomes & Retrospective. The completed prior revision is archived in `docs/plans/2026-10-09-browser-app-builder-live-revisions.md`.
+This living ExecPlan follows `~/.codex/PLANS.md`. Maintain Progress, Surprises & Discoveries, Decision Log and Outcomes & Retrospective. The completed prior revision is archived in `docs/plans/2026-10-09-web-application-builder-live-revisions.md`.
 
 ## Purpose / Big Picture
 
 
-Students should be able to follow each of the twelve listed applications from a prediction through an observable result and a justified limitation. Correct every remaining requirement in `evidence/browser-app-builder/reviews/2026-10-09-example-app-checklist.md`, including confirmed defects, bounded teaching exercises, actual interaction checks and explicit optional-extension assignments. Preserve useful current behavior and the distinction between automatic checks and learning evidence from a real novice.
+Students should be able to follow each of the twelve listed applications from a prediction through an observable result and a justified limitation. Correct every remaining requirement in `evidence/web-application-builder/reviews/2026-10-09-example-app-checklist.md`, including confirmed defects, bounded teaching exercises, actual interaction checks and explicit optional-extension assignments. Preserve useful current behavior and the distinction between automatic checks and learning evidence from a real novice.
 
 ## Progress
 
 
-- [x] (2026-10-09) Read the revised checklist and captured all 126 unique requirements in `evidence/browser-app-builder/checklist-corrections/2026-10-09/coverage.json` without altering the user-authored review.
+- [x] (2026-10-09) Read the revised checklist and captured all 126 unique requirements in `evidence/web-application-builder/checklist-corrections/2026-10-09/coverage.json` without altering the user-authored review.
 - [x] Assigned three developers to nine library apps; coordinator owns three original trials and cross-app verification.
 - [x] Asked the user to arrange real novice participation; the user agreed. Prepared and independently reviewed twelve answer-free participant sheets, facilitator answers and a blank observation form. No participant sessions have occurred.
 - [x] Implemented the twelve apps' bounded corrections and obtained independent source reviews. Current production-browser follow-up continues below.
@@ -61,14 +61,14 @@ Decision (2026-10-09 local / 2026-10-10 UTC): preserve the exact remaining verif
 ## Outcomes & Retrospective
 
 
-All twelve apps have source corrections and scoped local evidence. The coverage index tracks 126 requirements without modifying the original review: 118 verified locally, 4 implemented with verification pending and 4 open human requirements. It distinguishes specific verified facts from incomplete complete-task acceptance. Additional browser checks closed export, recovery, pricing orientation and named result-route gaps. The broader representative layout review also passed after correcting Roadmap date/type overlap and Sales fragmented dates and split metric amounts. The actual file-download/chooser rejection-and-correction workflow also passed, closing UPLOAD-12 without claiming novice learning. Human/device checks remain explicit in the evidence index. All twelve current correction builds are deployed and have bounded live verification; no real novice/screen-reader pass is claimed. The user has agreed to arrange novice observations; the independently reviewed packet now links to the verified live apps and is in `evidence/browser-app-builder/checklist-corrections/2026-10-09/walkthrough/`.
+All twelve apps have source corrections and scoped local evidence. The coverage index tracks 126 requirements without modifying the original review: 118 verified locally, 4 implemented with verification pending and 4 open human requirements. It distinguishes specific verified facts from incomplete complete-task acceptance. Additional browser checks closed export, recovery, pricing orientation and named result-route gaps. The broader representative layout review also passed after correcting Roadmap date/type overlap and Sales fragmented dates and split metric amounts. The actual file-download/chooser rejection-and-correction workflow also passed, closing UPLOAD-12 without claiming novice learning. Human/device checks remain explicit in the evidence index. All twelve current correction builds are deployed and have bounded live verification; no real novice/screen-reader pass is claimed. The user has agreed to arrange novice observations; the independently reviewed packet now links to the verified live apps and is in `evidence/web-application-builder/checklist-corrections/2026-10-09/walkthrough/`.
 
 ## Context and Orientation
 
 
-Course root is `/Users/jordan/Projects/decision-999`. The authoritative review supplies every requirement and reproduction. `evidence/browser-app-builder/checklist-corrections/2026-10-09/coverage.json` preserves its exact requirement text, source digest, status and evidence. Add sanitized per-app records below that directory. Do not change review content to redefine success.
+Course root is `/Users/jordan/Projects/decision-999`. The authoritative review supplies every requirement and reproduction. `evidence/web-application-builder/checklist-corrections/2026-10-09/coverage.json` preserves its exact requirement text, source digest, status and evidence. Add sanitized per-app records below that directory. Do not change review content to redefine success.
 
-Nine library repositories are `/private/tmp/bab-recipe-examples-2026-10-09/<slug>`: executive, uploads, simulator, process, roadmap, markets, sql, optimizer and presentation. Remotes are `git@github.com:jordanmeyer/bab-example-<slug>.git`; live URLs are `https://jordanmeyer.github.io/bab-example-<slug>/`. Original trials are under `/Users/jordan/Projects/browser-app-builder-trials/2026-10-08/<slug>` for pricing, inventory and sales. Clone their existing remotes into `/private/tmp/bab-checklist-originals-2026-10-09/<slug>` to preserve original work folders. Trial remote/Pages names are `bab-trial-<slug>-2026-10-08`.
+Nine library repositories are `/private/tmp/bab-recipe-examples-2026-10-09/<slug>`: executive, uploads, simulator, process, roadmap, markets, sql, optimizer and presentation. Remotes are `git@github.com:jordanmeyer/bab-example-<slug>.git`; live URLs are `https://jordanmeyer.github.io/bab-example-<slug>/`. Original trials are under `/Users/jordan/Projects/web-application-builder-trials/2026-10-08/<slug>` for pricing, inventory and sales. Clone their existing remotes into `/private/tmp/bab-checklist-originals-2026-10-09/<slug>` to preserve original work folders. Trial remote/Pages names are `bab-trial-<slug>-2026-10-08`.
 
 Each app has app source, browser tests, plan/evaluation records and a main-branch Pages workflow. Library apps use locked Node/npm/Vite. Originals remain HTML/CSS/JavaScript. A source checkpoint is a Git commit recording exact application, tests, configuration and model evaluated. Documentation-only follow-ups retain applicability only after relevant-path comparison.
 
