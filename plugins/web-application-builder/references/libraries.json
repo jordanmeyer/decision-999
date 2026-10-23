@@ -1,14 +1,17 @@
 {
-  "checked": "2026-10-09",
+  "checked": "2026-10-23",
   "runtime": {
-    "node": "22.19.0",
-    "npm": "10.9.3"
+    "node": "24.22.1",
+    "npm": "11.19.1"
   },
   "tooling": {
     "vite": "8.3.4",
     "@vitejs/plugin-react": "6.1.2",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "typescript": "5.9.3",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0"
   },
   "overrides": {
     "katex": "0.19.0"
@@ -361,5 +364,12 @@
       },
       "limitations": "Reviewed local WASM in a dedicated worker, bounded solve time, explicit integrality and feasibility tolerances. Terminate/recreate worker for cancellation. A feasible incumbent is not proof of optimality. Approved bounded three-product allocation configuration; arbitrary large models and every timeout/browser path are not certified."
     }
+  ],
+  "devTools": [
+    "vite",
+    "@vitejs/plugin-react",
+    "typescript",
+    "@types/react",
+    "@types/react-dom"
   ]
 }

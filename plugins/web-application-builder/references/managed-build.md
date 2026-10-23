@@ -1,24 +1,43 @@
 # Managed application builds
 
-Use this path for new apps selecting an approved library. Plain apps with native browser features retain the existing starter. Read [selection](library-selection.md), [inventory](libraries.json) and [workflow](workflow.md). Do not migrate existing apps merely because this path exists.
+Every new app uses the [Vite + React + TypeScript starter](../assets/managed-starter/), from simple pages to complex tools. Optional libraries vary; the baseline does not. Existing apps retain their recorded architecture, dependencies, runtime and commands unless migration is explicitly requested. The plain starter is retained for existing-app reference, not new projects. Read [selection](library-selection.md), [inventory](libraries.json) and [workflow](workflow.md).
 
-## Setup
+## New-project setup
 
-Inspect first, then add missing files from [managed starter](../assets/managed-starter/). Preserve conflicts and ask only about consequential replacements. Reuse compatible Node/npm from host tools or PATH. The inventory records the tested pair; record the actual pair in SETUP.md and `.node-version`. Check current [official Node downloads](https://nodejs.org/en/download): use an architecture-appropriate official macOS package or Windows MSI only when needed, with student-handled OS prompts. Do not replace an unrelated installation or add Homebrew, WSL or Python. If the host blocks npm’s default cache, use an explicitly writable temporary cache (`npm ci --cache /verified/writable/path`); do not change global cache ownership or bypass a device restriction. Record the actual invocation. Verify `node --version` and `npm --version` in fresh commands; blocked setup leaves planning available.
+Inspect the destination first. Copy the managed starter only into a new app directory, preserving planning/host files and resolving collisions. Its two platform entrypoints share `scripts/project.mjs`; `scripts/toolchain.json` pins official archive names and SHA-256 hashes. `.node-version` records the same Node version for CI. Do not select latest versions or replace these files in an existing project.
 
-Use the tested Node version for evaluation and CI; a different compatible version needs a new recorded toolchain check. Do not blindly upgrade an existing project. The starter disables dependency lifecycle scripts in `.npmrc`; the approved recipes do not need them. Do not disable this setting to cure an unexplained install failure.
+Use `bash app.sh setup` on macOS or `powershell.exe -NoProfile -File .\app.ps1 setup` on Windows. Subsequent commands replace `setup` with the operation below. Windows targets the built-in PowerShell 5.1; do not install PowerShell 7 or alter execution policy to bypass a block. The macOS bootstrap uses built-in shell/download/archive utilities. Archives are selected for macOS ARM64/x64 or Windows ARM64/x64; platform support claims require actual trials, not the existence of an archive. Native Windows execution remains an unverified release gate until recorded evidence says otherwise.
 
-The starter contains Vite only. Add exactly the selected library packages and required peers from the inventory using `npm install --save-exact package@version`. Application libraries and runtime peers (including React/React DOM) belong in `dependencies`; only Vite and its React plugin belong in `devDependencies`. The dependency check rejects other placements because the notice collector excludes development-only packages. Keep npm-generated package-lock.json; use `npm ci` thereafter. When selecting Mermaid, first add the inventory's KaTeX override. Read the lockfile diff and `npm audit` results; do not run `npm audit fix --force` automatically. Approval of direct packages does not approve arbitrary lockfile changes or imported remote code.
+Setup verifies the archive before extracting it, stages downloads under `.toolchain/`, and reuses the pinned private runtime on later runs. Retry `setup` after a network interruption; failed staging is removed on ordinary exit. After a hard termination, inspect and remove only abandoned `.toolchain/download.*` staging before retrying. If an incomplete final runtime directory exists, inspect/remove that owned directory before setup; never fall back to a system installer. The project runner verifies Node/npm versions and scopes npm configuration, caches, logs, temporary files and optional Playwright browser downloads to `.toolchain/`. It does not edit user npm files, shell profiles or global PATH. Corporate network/certificate restrictions must be resolved through permitted configuration, never by disabling TLS verification.
 
-Run `node /absolute/installed/plugin/scripts/check-dependencies.mjs /absolute/project` after dependency changes and before evaluation. Review transitive changes/installation scripts and retain licenses. It rejects unknown direct packages, version ranges, stale direct lockfile entries and non-registry sources; it does not certify package behavior.
+Run servers in agent-owned foreground sessions and stop those sessions before setup, dependency changes or cleanup. Use another explicit port for a conflict. `clean` refuses while a recorded project command is alive, removes only `node_modules/`, `dist/` and `.toolchain/`, and preserves source, lockfiles and generated license notices. The Windows launcher removes the private runtime after Node exits. The agent must not kill unknown processes to free a port. Git, account access and browser automation are separate capabilities; missing ones remain recorded gaps.
 
-## React when needed
+This is project-local provisioning, not a security sandbox: installed/build code runs with host-granted permissions. Do not promise that arbitrary code cannot write elsewhere. Exclude `.toolchain/`, `node_modules/` and `dist/` from source and submission archives. Student visitors need no Node installation.
 
-For React Flow or Mantine add inventory-pinned React/React DOM and required peers, plus `@vitejs/plugin-react` as a development dependency. In vite.config.js import `react from '@vitejs/plugin-react'` and add `plugins: [react()]` to the returned object. Use `.jsx` for JSX files. Do not add TypeScript or a UI framework to a plain form.
+## Commands and dependency changes
+
+| Operation | Purpose |
+| --- | --- |
+| `setup` | Provision the pinned runtime if absent, then `npm ci` from the lockfile |
+| `add package@version` | Add exact approved packages; use `--save-dev` only for approved development tools |
+| `dev` | Foreground localhost development preview; accepts Vite flags such as `--port` |
+| `test:browser` | Serve project-root browser tests; starting the server is not a passing test |
+| `typecheck` | Check application and test TypeScript without emitting files |
+| `build` | Typecheck, retain notices, then build static `dist/` |
+| `preview` | Foreground localhost preview of the production build |
+| `clean` | Remove generated tooling/output after stopping owned sessions |
+
+The baseline includes React/React DOM, Vite, its React plugin, TypeScript and React types. Add only optional packages and required peers from the inventory through `add`; use locked `setup` thereafter. The inventory's `devTools` identifies authoring packages; runtime libraries and peers belong in `dependencies` so their notices are retained. Keep npm-generated package-lock.json. For Mermaid set the approved KaTeX override before adding it. Review lockfile and audit output; never run forced audit fixes or enable lifecycle scripts to cure an unexplained failure. Approved direct packages do not approve arbitrary transitive changes.
+
+Run the installed plugin's `scripts/check-dependencies.mjs /absolute/project` with the project's private Node after dependency changes and before evaluation. It checks roles, exact approved pins, companion packages and registry lockfile entries, not package behavior. Record exact runtime/commands in SETUP.md. For existing managed apps use their verified runtime and package commands without replacing their toolchain; `.npmrc` continues to disable dependency lifecycle scripts.
+
+## React and TypeScript
+
+Use `.tsx` for components and `.ts` for application logic. Keep business calculations independent of React so tests import the same model. The starter already configures React and strict no-emit typechecking; Vite transpilation alone is not the typecheck. Do not introduce a router, global store, Mantine or charts unless the task needs them. Keep existing JavaScript library adapters as integrations; type application boundaries rather than weakening the whole project to silence errors.
 
 ## Commands and assets
 
-`npm run dev` serves app source; `npm run test:browser` serves project-root `/tests/`; `npm run build` writes only production app output to dist; `npm run preview` serves that output. Both servers bind loopback. Record actual URLs, ports and restart commands. After edits confirm the served module reflects current source; if a host misses filesystem change events, restart that preview before evaluating. A test HTML page imports the application's real modules and shows loading, pass and failure states.
+The launcher uses the corresponding package/Vite commands: development serves `app/`, test mode serves project-root `/tests/`, build writes production output to `dist/`, and preview serves that output. CI uses the same `npm run build`, including typecheck. Both servers bind loopback. Record actual URLs, ports and restart commands. After edits confirm the served module reflects current source; if a host misses filesystem change events, restart that preview before evaluating. A test HTML page imports the application's real modules and shows loading, pass and failure states.
 
 For the Duke default, copy canonical designer `duke-tokens.css`, `duke-fonts.css` and its adjacent `fonts/` directory into `app/theme/` (already present in the starter), then selected [theme adapters](../assets/library-themes/). For an explicitly chosen independent identity, adapt project theme copies and consumers under [shared design](workflow.md#shared-design), retaining required font licenses and notice inputs. Import vendor base CSS before adapters. Copy required public assets under app/public, using `import.meta.env.BASE_URL` when constructing their URLs. No remote assets or server routes. Frappe Gantt's CSS is copied from its installed dist/frappe-gantt.css because its package export map does not expose that subpath; retain its notice.
 

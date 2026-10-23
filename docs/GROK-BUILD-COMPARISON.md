@@ -1,6 +1,6 @@
 # Web Application Builder compared with the Grok Build reference suite
 
-**Decision report — October 23, 2026. Design-guidance implementation is recorded in §1.2; other recommendations remain proposals unless explicitly noted.**
+**Decision report — October 23, 2026. Design-guidance implementation is recorded in §1.2 and the new-app environment in §1.3; other recommendations remain proposals unless explicitly noted.**
 
 This report compares our Web Application Builder 0.2.3 with the business-app-relevant parts of `grok-build-og`. Its purpose is to define changes another agent could implement **after approval**, not to authorize those changes. The 56 recommendations have stable IDs, explicit boundaries, dependencies, and acceptance criteria. Removing a recommendation does not authorize a substitute.
 
@@ -22,7 +22,7 @@ The single-baseline requirement is settled. Its proposed implementation and expe
 
 ### 1.1 Agreed decisions — October 23, 2026
 
-**Status: direction approved; implementation deferred.** The user has committed to the uniform application environment below and explicitly requested documentation only. This records planned changes to **A01, A02, A07, W02 and M02**; it does not authorize plugin edits or approve the remaining recommendations.
+**Status at this decision: direction approved; implementation deferred. Implementation subsequently authorized and recorded in §1.3.** The user committed to the uniform application environment below and explicitly requested documentation only. This records planned changes to **A01, A02, A07, W02 and M02**; it does not authorize plugin edits or approve the remaining recommendations.
 
 - **One baseline for every new app:** Vite + React + TypeScript, from simple pages and dashboards to complex tools. Keep optional features proportional to the task. Existing applications are not automatically migrated.
 - **Local development on macOS and Windows:** the desktop agent handles setup, dependencies, preview, verification and builds. The observed Edu cloud restrictions mean that cloud execution is not our required student environment; this is not a claim that every cloud environment is incapable of running the workflow.
@@ -39,7 +39,15 @@ Provisioning references: [official portable Node distributions](https://nodejs.o
 
 The user subsequently authorized the discussed design changes. Web Application Builder 0.2.4 adds one product-design reference routed through Plan, Build and Evaluate, with task-based composition, semantic-role guidance, control/state patterns and observable review criteria. Shared workflow now owns identity selection: Duke remains the default; explicitly chosen independent identities retain general accessibility, factual and rendered checks. Library recipes consistently apply that choice. Campus Designer 0.3.3 clarifies its authority without removing its existing rules; its builder copy remains generated.
 
-This implements D01's guidance separation and a bounded guidance subset of D02–D08/W04. It does not complete the proposed reusable component specimens, executable semantic-token system, analytical integration trials or all acceptance criteria for those recommendations. No Grok files, aesthetic constants or alternative component stack were imported into the plugin. The uniform framework and project-contained toolchain in §1.1 remain planned, not implemented. Validation scope is recorded in `evidence/web-application-builder/2026-10-23-product-design/REVIEW.md`.
+This implements D01's guidance separation and a bounded guidance subset of D02–D08/W04. It does not complete the proposed reusable component specimens, executable semantic-token system, analytical integration trials or all acceptance criteria for those recommendations. No Grok files, aesthetic constants or alternative component stack were imported into the plugin. At that checkpoint the uniform framework and project-contained toolchain in §1.1 remained planned; their subsequent implementation is recorded in §1.3. Validation scope is recorded in `evidence/web-application-builder/2026-10-23-product-design/REVIEW.md`.
+
+### 1.3 Uniform new-app environment implementation — October 23, 2026
+
+The user authorized implementation for new apps only, after committing all prior work as `1ef3863`. Web Application Builder 0.3.0 now provides one Vite/React/TypeScript starter, typechecking in the production build, macOS and Windows PowerShell launchers, and one shared command runner. Official portable Node 24.22.1/npm 11.19.1 is pinned with reviewed archive hashes; runtime, npm cache and temporary files stay under the project's ignored `.toolchain/`. Setup, package additions, foreground previews and cleanup share that environment. No global runtime, package manager or permanent PATH change is introduced. Existing apps and the legacy plain starter are unchanged.
+
+This implements the selected baseline and local provisioning portions of A01/A02/A07/W02. Optional libraries remain optional; this does not complete every recommendation or acceptance criterion attached to those IDs. The implementation deliberately omits a shared runtime cache, migration engine, daemon, extra component framework and automated system-tool installation.
+
+The disposable-project integration trial passed on macOS ARM64 with Node removed from PATH, including checksum rejection, runtime reuse, locked dependencies, typecheck failure, prefixed production preview, occupied ports, active-session protection, cleanup and recreation. Desktop and 390px/320px keyboard/rendering checks passed. Native Windows, Intel Mac, clean-account/device-policy trials, interrupted-transfer testing and student usability remain release gates; a Mac/Windows CI workflow is added but has not run remotely. Windows scripts respect execution policy and may be blocked on managed devices. Configuration containment is not a sandbox or proof that arbitrary dependency code cannot write elsewhere. Reproduction details and limits: `evidence/web-application-builder/2026-10-23-uniform-environment/REVIEW.md`.
 
 ## 2. Constraints, evidence, and terminology
 
@@ -51,7 +59,7 @@ This implements D01's guidance separation and a bounded guidance subset of D02�
 - **Decisions and attribution stay in the deliverable.** The source repository and portable submission package contain the complete relevant record, including superseded decisions and failure/fix history. A link to a vanished conversation or plugin installation is insufficient.
 - **Grading must distinguish student judgment from agent work.** Evidence supports assessment; it cannot prove intellectual effort merely by counting activity.
 - **Publication must remain truthful.** No fabricated approvals, data, tests, contributions, usage claims, endorsements, or institutional affiliation. Sensitive imports and credentials never become public source/history.
-- **Approval is scoped.** The original analysis changed only this report. The subsequently authorized design-guidance implementation is recorded in §1.2; it does not authorize the remaining proposals.
+- **Approval is scoped.** The original analysis changed only this report. The subsequently authorized design-guidance and new-app environment implementations are recorded in §1.2–1.3; they do not authorize the remaining proposals.
 
 “Package” in this report means a **self-contained source/submission package**, plus a deliberately smaller website publication. All decision and attribution records remain in the former. A concise public About/build record can appear in the latter. This preserves the current separation between repository evidence and `dist/` without losing information needed for grading. If the faculty wants the complete record visible from the website too, make that a separate explicit publication decision; do not silently expose raw conversations or machine details.
 

@@ -1,6 +1,6 @@
 ---
 name: mantine-browser-app
-description: Build consistent React forms, controls and layouts with Mantine. Use when a React application needs a component library; avoid adding React just for a simple native form.
+description: Build consistent React forms, controls and layouts with Mantine. Use when a React application needs a component library; keep simple forms on native controls within the common React baseline.
 ---
 
 # Mantine for browser apps

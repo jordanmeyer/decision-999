@@ -1,0 +1,29 @@
+name: Check new-app environment
+
+on:
+  pull_request:
+    paths:
+      - 'plugins/web-application-builder/**'
+      - 'scripts/check-app-environment.py'
+      - '.github/workflows/check-app-environment.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'plugins/web-application-builder/**'
+      - 'scripts/check-app-environment.py'
+      - '.github/workflows/check-app-environment.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bootstrap:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - run: python3 scripts/check-app-environment.py

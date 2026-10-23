@@ -1,6 +1,6 @@
 # Select only what the application needs
 
-Plan and Build read this guide even if the host has not implicitly loaded a library skill. Select from the approved entries in [libraries.json](libraries.json), then read those skills. Record purpose, selected library IDs, reasons and plain/managed build mode in PLAN.md. Skill descriptions aid discovery; they are not a deterministic invocation engine.
+Plan and Build read this guide even if the host has not implicitly loaded a library skill. Select from the approved entries in [libraries.json](libraries.json), then read those skills. Record purpose, selected library IDs, reasons and existing build mode or the uniform new-app baseline in PLAN.md. Skill descriptions aid discovery; they are not a deterministic invocation engine.
 
 | Student need | Skill |
 | --- | --- |
@@ -21,11 +21,11 @@ Plan and Build read this guide even if the host has not implicitly loaded a libr
 | Optimize a constrained production or resource-allocation model | [HiGHS](../skills/highs-browser-app/SKILL.md) |
 | Explore substantial local datasets with real SQL joins and aggregations | [DuckDB-Wasm](../skills/duckdb-browser-app/SKILL.md) |
 
-A simple calculator needs none of these. Prefer one charting library and one table component. React Flow means editable nodes; Mermaid means text-authored explanations. vis-timeline displays events; Frappe Gantt displays scheduled tasks. Mantine follows a justified React choice, not every form request. Statistics and animation need a stated purpose.
+A simple calculator needs none of these optional libraries; it still uses the common Vite/React/TypeScript starter. Prefer one charting library and one table component. React Flow means editable nodes; Mermaid means text-authored explanations. vis-timeline displays events; Frappe Gantt displays scheduled tasks. Mantine is optional for substantial forms; React is already part of the new-app baseline. Statistics and animation need a stated purpose.
 
 “Live analytical presentation” suggests reveal.js and, when useful, ECharts. Ask whether “live” means local interactive scenarios or externally refreshed data. The latter exceeds this pilot; offer a bundled example or local file import. Do not infer remote APIs from the phrase.
 
-New library apps use the [managed build](managed-build.md). Plain native apps retain the minimal starter. Direct skill invocation does not invent plan agreement, replace existing work, or authorize publication. If an entry is still candidate/blocked, explain the gap and use an approved alternative only if it fits the student's task. Libraries absent from the inventory require maintainer review; do not install them opportunistically.
+Every new app uses the [managed build](managed-build.md). Existing plain and managed apps retain their recorded setup unless migration is requested. Direct skill invocation does not invent plan agreement, replace existing work, or authorize publication. If an entry is still candidate/blocked, explain the gap and use an approved alternative only if it fits the student's task. Libraries absent from the inventory require maintainer review; do not install them opportunistically.
 
 
 MapLibre/deck.gl, D3/Plotly/Vega/p5/Three and spreadsheet engines remain outside the approved set. Use ECharts or Leaflet when they satisfy the actual requirement; do not silently substitute when they do not. Approval is configuration-specific and does not promise arbitrary library combinations.

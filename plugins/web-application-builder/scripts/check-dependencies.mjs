@@ -9,7 +9,7 @@ for (const lib of inventory.libraries.filter(lib => lib.status === 'approved')) 
 for (const field of ['dependencies', 'devDependencies', 'optionalDependencies', 'peerDependencies']) {
   for (const [name, version] of Object.entries(pkg[field] || {})) {
     if (allowed[name] !== version) throw Error(`Unapproved dependency: ${name}@${version}`);
-    const expected = ['vite', '@vitejs/plugin-react'].includes(name) ? 'devDependencies' : 'dependencies';
+    const expected = inventory.devTools.includes(name) ? 'devDependencies' : 'dependencies';
     if (field !== expected) throw Error(`${name} must be in ${expected} so runtime notices are retained`);
   }
 }

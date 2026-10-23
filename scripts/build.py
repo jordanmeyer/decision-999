@@ -111,8 +111,14 @@ def load(root, config):
                     require(re.fullmatch(r'\d+\.\d+\.\d+', version), 'Library versions must be exact stable releases')
                 require(all(item['expression'] and item['files'] for item in entry['licenses'].values()), 'Library license evidence is missing')
             starter = read_json(package / 'assets/managed-starter/package.json')
-            require(starter['devDependencies'] == {'vite': inventory['tooling']['vite']}, 'Managed starter tooling is stale')
+            require(starter['devDependencies'] == {key: inventory['tooling'][key] for key in inventory['devTools']}, 'Managed starter tooling is stale')
+            require(starter['dependencies'] == {key: inventory['tooling'][key] for key in ('react', 'react-dom')}, 'Managed starter React versions are stale')
             require((package / 'assets/managed-starter/.node-version').read_text().strip() == inventory['runtime']['node'], 'Managed starter Node version is stale')
+            runtime = read_json(package / 'assets/managed-starter/scripts/toolchain.json')
+            require({key: runtime[key] for key in ('node', 'npm')} == inventory['runtime'], 'Portable runtime versions are stale')
+            for target, extension in (('darwin-arm64', 'tar.gz'), ('darwin-x64', 'tar.gz'), ('win-arm64', 'zip'), ('win-x64', 'zip')):
+                archive = runtime['artifacts'][target]
+                require(archive['file'] == f"node-v{runtime['node']}-{target}.{extension}" and re.fullmatch(r'[0-9a-f]{64}', archive['sha256']), 'Invalid portable runtime artifact')
         require(manifest.get('$schema') == SCHEMA, f'{where}: $schema must be {SCHEMA}')
         require(name == package.name and re.fullmatch(r'[a-z0-9]+(-[a-z0-9]+)*', name), f'{where}: name must be lowercase-hyphenated and match its folder')
         require(re.fullmatch(r'\d+\.\d+\.\d+', manifest.get('version', '')), f'{where}: version must be x.y.z')

@@ -1,6 +1,6 @@
 # Web Application Builder
 
-Version 0.2.4 · Instructor-built pilot candidate.
+Version 0.3.0 · Instructor-built pilot candidate.
 
 Turn a problem you understand into a self-contained browser application, with a saved plan, local revision history, calculation evidence, and a GitHub Pages publishing workflow. Your agent handles the files and commands; you make the product and model decisions. No coding experience is required.
 
@@ -18,13 +18,13 @@ You can resume in a fresh chat with the same project files. Setup preserves exis
 
 ## Included
 
-Five [workflow skills](references/workflow.md), sixteen approved [library skills](references/library-selection.md), plain and managed starters, GitHub Pages workflows, and the bundled [Campus Designer](skills/campus-designer/SKILL.md). The shared [product-design reference](references/product-design.md) guides task layout, controls, states and review. Campus Designer supplies the default Duke identity; an explicitly chosen independent identity uses adapted project themes with the same accessibility and data-truth checks. Version 0.2.4 updates design guidance; existing example results below remain evidence for their recorded versions.
+Five [workflow skills](references/workflow.md), sixteen approved [library skills](references/library-selection.md), a uniform Vite/React/TypeScript starter for new apps, legacy starter reference, GitHub Pages workflows, and the bundled [Campus Designer](skills/campus-designer/SKILL.md). The shared [product-design reference](references/product-design.md) guides task layout, controls, states and review. Campus Designer supplies the default Duke identity; an explicitly chosen independent identity uses adapted project themes with the same accessibility and data-truth checks. Version 0.3.0 adds the uniform new-app environment and contained local setup; existing examples remain evidence for their recorded versions.
 
 Describe what you need: “an interactive analytical presentation,” “an editable process diagram,” or “a dashboard for a local CSV.” Plan and Build select the smallest useful set of approved libraries. Local mapping, bounded SQL exploration and worker-based optimization are approved for the reviewed configurations.
 
 Approved libraries cover charts, diagrams, timelines, schedules, tables, React controls, slides, animation, CSV, data transformation, statistics, and reproducible randomness.
 
-Library apps use an agent-managed Node/npm/Vite build. Your agent prepares the tools and commands; visitors receive a self-contained static app. Simple apps can still use native browser features without Node. Approved versions are pinned, bundled locally, and shipped with their license notices.
+Every new app uses Vite, React and TypeScript, including simple forms and dashboards. The agent provisions a pinned private Node/npm runtime inside the project and handles builds/previews through the included macOS or Windows launcher. Runtime, caches and temporary files stay under ignored `.toolchain/`; no global Node installation or permanent PATH change is required. Existing apps keep their recorded architecture and setup. Visitors receive a static browser app. Approved versions are pinned, bundled locally, and shipped with their license notices.
 
 Planning preserves your original brief and makes important scope choices explicit. Evaluation checks whether the opening scenario teaches the intended decision, as well as whether the calculations are correct.
 
@@ -54,6 +54,6 @@ Earlier examples built with version 0.1.1 in automated trials with simulated stu
 
 Apps run in the browser using public/synthetic datasets or locally selected files. No backends, logins, external APIs, remote AI, analytics, or secret keys. Local imports remain in the browser and never become committed fixtures. Published source and history must contain only public/synthetic material, apart from explicitly approved author attribution.
 
-The host must provide usable file, Git, preview, and browser capabilities. Managed apps need a compatible Node/npm installation, which Setup reuses or helps prepare. Plain apps use available preview capabilities. Installation does not grant tools, OS permissions, or GitHub access.
+The host must provide usable file, Git, preview, and browser capabilities. New apps use project-local Node/npm; existing apps retain their verified runtime/preview capabilities. Git and browser tools are discovered separately, without silent system installs. Windows PowerShell 5.1 execution policies and managed-device restrictions are respected. Installation does not grant tools, OS permissions, or GitHub access.
 
-This is a pilot candidate, not a verified no-touch onboarding promise. See the listing's evidence record for actual checks and outstanding Work, clean-machine, fresh-chat, and novice-student gates. The original plain-app publication and updates were verified on a configured Mac. The 0.2.0 library expansion has separate local browser and production-build evidence; the executive, uploads, simulator, process, roadmap, market, SQL, optimization and presentation examples now also verify managed GitHub Pages publication. Evaluation supports specific claims about tested cases; it does not certify a business model.
+This is a pilot candidate, not a verified no-touch onboarding promise. Portable archives cover macOS and Windows ARM64/x64, but the new setup has local macOS ARM64 evidence only; clean Windows and other architectures remain release gates. See [local setup](references/managed-build.md) for commands, recovery and containment limits. See the listing's evidence record for actual checks and outstanding Work, clean-machine, fresh-chat, and novice-student gates. The original plain-app publication and updates were verified on a configured Mac. The 0.2.0 library expansion has separate local browser and production-build evidence; the executive, uploads, simulator, process, roadmap, market, SQL, optimization and presentation examples now also verify managed GitHub Pages publication. Evaluation supports specific claims about tested cases; it does not certify a business model.
