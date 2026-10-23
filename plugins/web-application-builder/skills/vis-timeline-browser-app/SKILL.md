@@ -24,7 +24,7 @@ const timeline = new Timeline(element, [{ id: 1, content: label,
 
 Wrap the container with bab-timeline. Use the standalone entry but install the required peers from the inventory. Document local-calendar versus UTC instants; do not parse date-only strings inconsistently. Imported labels become text nodes. Destroy the instance on teardown.
 
-Visual libraries use the relevant [theme assets](../../assets/library-themes/) with the bundled [Campus Designer](../campus-designer/SKILL.md). Generated paths above are relative to the student's app, not the installed plugin.
+Visual libraries follow [shared identity selection](../../references/workflow.md#shared-design); the supplied [theme assets](../../assets/library-themes/) implement the Duke default. Generated paths above are relative to the student's app, not the installed plugin.
 
 ## Verify
 

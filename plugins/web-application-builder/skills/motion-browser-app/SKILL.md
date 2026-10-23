@@ -16,9 +16,9 @@ const playback = animate(element, { transform: ['translateY(8px)', 'translateY(0
   { duration: reduced ? 0 : 0.2 });
 ```
 
-Animate position or size rather than fading Duke blue. Use shared base.css. Stop playback on teardown. Calculate simulation results independently of frames, then animate the result. Honor changed reduced-motion preferences during long sessions.
+When using Duke blue, animate position or size rather than fading it. Keep the selected app theme and its reduced-motion rules. Stop playback on teardown. Calculate simulation results independently of frames, then animate the result. Honor changed reduced-motion preferences during long sessions.
 
-Visual libraries use the relevant [theme assets](../../assets/library-themes/) with the bundled [Campus Designer](../campus-designer/SKILL.md). Generated paths above are relative to the student's app, not the installed plugin.
+Visual libraries follow [shared identity selection](../../references/workflow.md#shared-design); the supplied [theme assets](../../assets/library-themes/) implement the Duke default. Generated paths above are relative to the student's app, not the installed plugin.
 
 ## Verify
 

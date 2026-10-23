@@ -23,9 +23,9 @@ function App() {
 }
 ```
 
-Use the React setup. Load canonical tokens/base.css before calling the theme factory. The adapter uses published solid colors, not generated Duke-blue tints. Label inputs and errors, use controlled values when filters drive charts, and import only needed controls. No remote fonts.
+Use the React setup. For the supplied Duke adapter, load canonical tokens/base.css before calling the theme factory; it uses published solid colors, not generated Duke-blue tints. An independent identity adapts the project theme and factory together under shared design. Label inputs and errors, use controlled values when filters drive charts, and import only needed controls. No remote fonts.
 
-Visual libraries use the relevant [theme assets](../../assets/library-themes/) with the bundled [Campus Designer](../campus-designer/SKILL.md). Generated paths above are relative to the student's app, not the installed plugin.
+Visual libraries follow [shared identity selection](../../references/workflow.md#shared-design); the supplied [theme assets](../../assets/library-themes/) implement the Duke default. Generated paths above are relative to the student's app, not the installed plugin.
 
 ## Verify
 

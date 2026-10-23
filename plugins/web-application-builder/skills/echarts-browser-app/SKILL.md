@@ -23,7 +23,7 @@ chart.setOption({ aria: { enabled: true }, tooltip: { renderMode: 'richText' },
 
 Use echarts.js and tokens.js. The adapter preserves bar/pie/scatter fills in emphasis and selection, prevents blur fading, and disables line emphasis color lifting. Keep these settings when customizing series; other series types need explicit solid interaction styles and a rendered-state check. Give the chart a measured height. Use a ResizeObserver to resize it; resize again when a containing slide/view becomes visible. Dispose the chart and observer on teardown. Provide a text/table equivalent with units and non-color labels. Avoid HTML tooltip formatters for imported strings.
 
-Visual libraries use the relevant [theme assets](../../assets/library-themes/) with the bundled [Campus Designer](../campus-designer/SKILL.md). Generated paths above are relative to the student's app, not the installed plugin.
+Visual libraries follow [shared identity selection](../../references/workflow.md#shared-design); the supplied [theme assets](../../assets/library-themes/) implement the Duke default. Generated paths above are relative to the student's app, not the installed plugin.
 
 Choose round, readable tick steps and precision appropriate to the decision; reserve exact values for tooltips or the table. Avoid incidental decimal ticks such as 12.2K when a nearby round interval communicates the same scale. Recheck label collisions after resizing and on extreme inputs.
 

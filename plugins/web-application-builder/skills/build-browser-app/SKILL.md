@@ -1,6 +1,6 @@
 ---
 name: build-browser-app
-description: Build or revise a self-contained browser app from a student's agreed PLAN.md, using the bundled Campus Designer for Duke styling. Use for implementation, preview, and fixes before evaluation.
+description: Build or revise a self-contained browser app from a student's agreed PLAN.md, using task-driven product design and the selected visual identity. Use for implementation, preview, and fixes before evaluation.
 ---
 
 # Build the planned app
@@ -9,9 +9,9 @@ Read [library selection](../../references/library-selection.md), load the chosen
 
 ## Design with the bundled skill
 
-Read and apply [Campus Designer](../campus-designer/SKILL.md), formerly Duke Designer. Read its [identity](../campus-designer/references/identity.md), [color](../campus-designer/references/color.md), [typography](../campus-designer/references/typography.md), [web](../campus-designer/references/web.md), and [review](../campus-designer/references/review.md) references before designing or revising the interface. Use the packaged resources even when the separate designer plugin is not installed.
+Read [product design](../../references/product-design.md) before interface work and apply the plan's task/layout and [identity choice](../../references/workflow.md#shared-design). Use its component/state patterns with the project's existing controls; do not introduce a second component system for appearance.
 
-Give applications a shared Duke look through unchanged Duke blues, recommended typography, and clear layout. Keep the content's purpose primary. Use the canonical bundled EB Garamond/Open Sans CSS and font files with their published fallback stacks and license notices; no CDN fonts. Verify loaded faces, not just computed family names. Do not add Duke logos, seals, unit identities, or endorsement claims without authorization. Record font substitutions in the README.
+For the default Duke identity, read and apply [Campus Designer](../campus-designer/SKILL.md), including [identity](../campus-designer/references/identity.md), [color](../campus-designer/references/color.md), [typography](../campus-designer/references/typography.md), [web](../campus-designer/references/web.md) and [review](../campus-designer/references/review.md). For an explicitly selected independent identity, use the general web/accessibility and factual/rendered checks without imposing Duke palette or typography. Use the packaged references even when the separate designer plugin is not installed. Keep brand requirements, product defaults and accessibility obligations distinct.
 
 ## Implement and verify
 
@@ -35,4 +35,4 @@ For plain applications, `app/` is already publishable; do not add a build script
 
 ## Managed applications
 
-When the plan selects approved libraries, follow [managed build](../../references/managed-build.md). Confirm package versions and required peers against the inventory, run the packaged dependency check, and preserve the lockfile. Copy canonical designer tokens, local font bundle and only selected theme adapters. Do not duplicate palette definitions or import a stock theme over them. Build production output and inspect it separately from development. Record the commands, dependency reasons and license notices in README.md; include config, lockfile and generated notices before the evaluated checkpoint.
+When the plan selects approved libraries, follow [managed build](../../references/managed-build.md). Confirm package versions and required peers against the inventory, run the packaged dependency check, and preserve the lockfile. Prepare local fonts and only selected theme adapters under [shared identity selection](../../references/workflow.md#shared-design). Keep palette ownership in the app theme; do not import a stock theme over the selected identity. Build production output and inspect it separately from development. Record the commands, dependency reasons and license notices in README.md; include config, lockfile and generated notices before the evaluated checkpoint.

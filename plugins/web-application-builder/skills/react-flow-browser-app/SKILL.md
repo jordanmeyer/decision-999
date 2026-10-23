@@ -28,7 +28,7 @@ function Diagram() {
 
 Use the React setup and react-flow.css. Keep structural vendor CSS. Maintain model rules outside diagram rendering; drawing a connection does not validate a business process. Provide ordinary buttons or forms for essential edits as a keyboard alternative.
 
-Visual libraries use the relevant [theme assets](../../assets/library-themes/) with the bundled [Campus Designer](../campus-designer/SKILL.md). Generated paths above are relative to the student's app, not the installed plugin.
+Visual libraries follow [shared identity selection](../../references/workflow.md#shared-design); the supplied [theme assets](../../assets/library-themes/) implement the Duke default. Generated paths above are relative to the student's app, not the installed plugin.
 
 ## Verify
 

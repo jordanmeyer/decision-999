@@ -32,6 +32,6 @@ Before saving a worked example, calculate it from the stated inputs and reconcil
 
 For example, price 20, unit cost 12, quantity 100, and fixed cost 500 yield profit `(20 − 12) × 100 − 500 = 300`. Continuous break-even is `500 / 8 = 62.5`, or 63 whole units. Ask how zero contribution margin should be explained. These are examples of checkable cases, not required features in unrelated apps.
 
-Use the bundled designer's shared Duke visual direction as the default, without institutional endorsement or remote assets. Do not turn planning into a pixel specification; capture visual preferences that affect the student's task.
+Read [product design](../../references/product-design.md) and record the main question, first useful screen, primary action, nearby evidence and device/density constraints in PLAN.md. Apply [shared identity selection](../../references/workflow.md#shared-design): Duke is the default; preserve an explicitly chosen independent or existing identity. Capture visual preferences that affect the task without turning planning into a pixel specification.
 
 Show the plan in plain language and incorporate the student's agreement or corrections. Mark unresolved material choices rather than guessing agreement. Record important choices in `DECISIONS.md`. Hand off to [Build](../build-browser-app/SKILL.md) with the saved artifact; the next chat must not need this conversation.

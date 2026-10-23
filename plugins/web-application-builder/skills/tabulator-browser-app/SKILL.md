@@ -22,7 +22,7 @@ const table = new TabulatorFull(element, { data: rows, layout: 'fitColumns',
 
 Give the element class bab-table. Use local data and plaintext formatters for imported strings; do not configure AJAX. Wait for tableBuilt before calling filter/update APIs. Use a text totals summary and accessible controls outside the table. Destroy the instance on teardown.
 
-Visual libraries use the relevant [theme assets](../../assets/library-themes/) with the bundled [Campus Designer](../campus-designer/SKILL.md). Generated paths above are relative to the student's app, not the installed plugin.
+Visual libraries follow [shared identity selection](../../references/workflow.md#shared-design); the supplied [theme assets](../../assets/library-themes/) implement the Duke default. Generated paths above are relative to the student's app, not the installed plugin.
 
 ## Verify
 

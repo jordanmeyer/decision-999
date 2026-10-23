@@ -25,7 +25,7 @@ The pinned version registers document listeners and provides no destroy method. 
 
 Copy dist/frappe-gantt.css from the installed package into app/vendor; its export map does not expose a CSS import. Use a bab-gantt wrapper. Start with read-only visualization and accessible date controls outside it. Validate date changes in the model before refreshing. Avoid untrusted task names/HTML; show imported descriptions separately with textContent. Do not infer a feasible schedule from a diagram.
 
-Visual libraries use the relevant [theme assets](../../assets/library-themes/) with the bundled [Campus Designer](../campus-designer/SKILL.md). Generated paths above are relative to the student's app, not the installed plugin.
+Visual libraries follow [shared identity selection](../../references/workflow.md#shared-design); the supplied [theme assets](../../assets/library-themes/) implement the Duke default. Generated paths above are relative to the student's app, not the installed plugin.
 
 ## Verify
 

@@ -19,7 +19,7 @@ const first = random(); // documented reference: 0.9282578795792454
 
 Create one local generator per run using an explicit string seed; never call Math.seedrandom or replace Math.random. Reset before repeat runs, record seed and sampling method, and keep calculations independent of animation. This is not cryptographic randomness.
 
-Visual libraries use the relevant [theme assets](../../assets/library-themes/) with the bundled [Campus Designer](../campus-designer/SKILL.md). Generated paths above are relative to the student's app, not the installed plugin.
+Visual libraries follow [shared identity selection](../../references/workflow.md#shared-design); the supplied [theme assets](../../assets/library-themes/) implement the Duke default. Generated paths above are relative to the student's app, not the installed plugin.
 
 ## Verify
 

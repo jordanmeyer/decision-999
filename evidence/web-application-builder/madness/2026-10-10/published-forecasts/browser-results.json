@@ -1,0 +1,330 @@
+[
+  {
+    "name": "mens 2016: original snapshot count",
+    "pass": true
+  },
+  {
+    "name": "mens 2016: 5712 displayed probabilities match published snapshots",
+    "pass": true
+  },
+  {
+    "name": "mens 2016: published label",
+    "pass": true
+  },
+  {
+    "name": "mens 2016: other source is reconstructed",
+    "pass": true
+  },
+  {
+    "name": "mens 2016: archive survives switching",
+    "pass": true
+  },
+  {
+    "name": "mens 2016: results remain available",
+    "pass": true
+  },
+  {
+    "name": "mens 2017: original snapshot count",
+    "pass": true
+  },
+  {
+    "name": "mens 2017: 5712 displayed probabilities match published snapshots",
+    "pass": true
+  },
+  {
+    "name": "mens 2017: published label",
+    "pass": true
+  },
+  {
+    "name": "mens 2017: other source is reconstructed",
+    "pass": true
+  },
+  {
+    "name": "mens 2017: archive survives switching",
+    "pass": true
+  },
+  {
+    "name": "mens 2017: results remain available",
+    "pass": true
+  },
+  {
+    "name": "mens 2018: original snapshot count",
+    "pass": true
+  },
+  {
+    "name": "mens 2018: 5712 displayed probabilities match published snapshots",
+    "pass": true
+  },
+  {
+    "name": "mens 2018: published label",
+    "pass": true
+  },
+  {
+    "name": "mens 2018: other source is reconstructed",
+    "pass": true
+  },
+  {
+    "name": "mens 2018: archive survives switching",
+    "pass": true
+  },
+  {
+    "name": "mens 2018: results remain available",
+    "pass": true
+  },
+  {
+    "name": "mens 2019: original snapshot count",
+    "pass": true
+  },
+  {
+    "name": "mens 2019: 5712 displayed probabilities match published snapshots",
+    "pass": true
+  },
+  {
+    "name": "mens 2019: published label",
+    "pass": true
+  },
+  {
+    "name": "mens 2019: other source is reconstructed",
+    "pass": true
+  },
+  {
+    "name": "mens 2019: archive survives switching",
+    "pass": true
+  },
+  {
+    "name": "mens 2019: results remain available",
+    "pass": true
+  },
+  {
+    "name": "mens 2021: original snapshot count",
+    "pass": true
+  },
+  {
+    "name": "mens 2021: 5236 displayed probabilities match published snapshots",
+    "pass": true
+  },
+  {
+    "name": "mens 2021: published label",
+    "pass": true
+  },
+  {
+    "name": "mens 2021: other source is reconstructed",
+    "pass": true
+  },
+  {
+    "name": "mens 2021: archive survives switching",
+    "pass": true
+  },
+  {
+    "name": "mens 2021: results remain available",
+    "pass": true
+  },
+  {
+    "name": "mens 2022: original snapshot count",
+    "pass": true
+  },
+  {
+    "name": "mens 2022: 5712 displayed probabilities match published snapshots",
+    "pass": true
+  },
+  {
+    "name": "mens 2022: published label",
+    "pass": true
+  },
+  {
+    "name": "mens 2022: other source is reconstructed",
+    "pass": true
+  },
+  {
+    "name": "mens 2022: archive survives switching",
+    "pass": true
+  },
+  {
+    "name": "mens 2022: results remain available",
+    "pass": true
+  },
+  {
+    "name": "mens 2023: original snapshot count",
+    "pass": true
+  },
+  {
+    "name": "mens 2023: 5712 displayed probabilities match published snapshots",
+    "pass": true
+  },
+  {
+    "name": "mens 2023: published label",
+    "pass": true
+  },
+  {
+    "name": "mens 2023: other source is reconstructed",
+    "pass": true
+  },
+  {
+    "name": "mens 2023: archive survives switching",
+    "pass": true
+  },
+  {
+    "name": "mens 2023: results remain available",
+    "pass": true
+  },
+  {
+    "name": "womens 2016: original snapshot count",
+    "pass": true
+  },
+  {
+    "name": "womens 2016: 4480 displayed probabilities match published snapshots",
+    "pass": true
+  },
+  {
+    "name": "womens 2016: published label",
+    "pass": true
+  },
+  {
+    "name": "womens 2016: results remain available",
+    "pass": true
+  },
+  {
+    "name": "womens 2017: original snapshot count",
+    "pass": true
+  },
+  {
+    "name": "womens 2017: 4480 displayed probabilities match published snapshots",
+    "pass": true
+  },
+  {
+    "name": "womens 2017: published label",
+    "pass": true
+  },
+  {
+    "name": "womens 2017: other source is reconstructed",
+    "pass": true
+  },
+  {
+    "name": "womens 2017: archive survives switching",
+    "pass": true
+  },
+  {
+    "name": "womens 2017: results remain available",
+    "pass": true
+  },
+  {
+    "name": "womens 2018: original snapshot count",
+    "pass": true
+  },
+  {
+    "name": "womens 2018: 4480 displayed probabilities match published snapshots",
+    "pass": true
+  },
+  {
+    "name": "womens 2018: published label",
+    "pass": true
+  },
+  {
+    "name": "womens 2018: other source is reconstructed",
+    "pass": true
+  },
+  {
+    "name": "womens 2018: archive survives switching",
+    "pass": true
+  },
+  {
+    "name": "womens 2018: results remain available",
+    "pass": true
+  },
+  {
+    "name": "womens 2019: original snapshot count",
+    "pass": true
+  },
+  {
+    "name": "womens 2019: 4480 displayed probabilities match published snapshots",
+    "pass": true
+  },
+  {
+    "name": "womens 2019: published label",
+    "pass": true
+  },
+  {
+    "name": "womens 2019: other source is reconstructed",
+    "pass": true
+  },
+  {
+    "name": "womens 2019: archive survives switching",
+    "pass": true
+  },
+  {
+    "name": "womens 2019: results remain available",
+    "pass": true
+  },
+  {
+    "name": "womens 2021: original snapshot count",
+    "pass": true
+  },
+  {
+    "name": "womens 2021: 4480 displayed probabilities match published snapshots",
+    "pass": true
+  },
+  {
+    "name": "womens 2021: published label",
+    "pass": true
+  },
+  {
+    "name": "womens 2021: other source is reconstructed",
+    "pass": true
+  },
+  {
+    "name": "womens 2021: archive survives switching",
+    "pass": true
+  },
+  {
+    "name": "womens 2021: results remain available",
+    "pass": true
+  },
+  {
+    "name": "womens 2022: original snapshot count",
+    "pass": true
+  },
+  {
+    "name": "womens 2022: 5712 displayed probabilities match published snapshots",
+    "pass": true
+  },
+  {
+    "name": "womens 2022: published label",
+    "pass": true
+  },
+  {
+    "name": "womens 2022: other source is reconstructed",
+    "pass": true
+  },
+  {
+    "name": "womens 2022: archive survives switching",
+    "pass": true
+  },
+  {
+    "name": "womens 2022: results remain available",
+    "pass": true
+  },
+  {
+    "name": "womens 2023: original snapshot count",
+    "pass": true
+  },
+  {
+    "name": "womens 2023: 5712 displayed probabilities match published snapshots",
+    "pass": true
+  },
+  {
+    "name": "womens 2023: published label",
+    "pass": true
+  },
+  {
+    "name": "womens 2023: other source is reconstructed",
+    "pass": true
+  },
+  {
+    "name": "womens 2023: archive survives switching",
+    "pass": true
+  },
+  {
+    "name": "womens 2023: results remain available",
+    "pass": true
+  }
+]

@@ -23,6 +23,6 @@ label.textContent = market.name;
 marker.bindPopup(label);
 ```
 
-Derive solid colors and locally bundled typography from [Campus Designer](../campus-designer/SKILL.md). Use non-color cues for selected/shortlisted markets and a linked keyboard-accessible table or select. If blue is used for fill, keep it opaque; choose another published color rather than fading Duke blue. Preserve Leaflet structural CSS and attribution controls. Resize after a hidden panel becomes visible; remove map/listeners when the containing view is destroyed.
+Follow [shared identity selection](../../references/workflow.md#shared-design) for colors and locally bundled typography. Use non-color cues for selected/shortlisted markets and a linked keyboard-accessible table or select. For Duke-blue fills, keep them opaque and choose another published color when needed. Preserve Leaflet structural CSS and attribution controls. Resize after a hidden panel becomes visible; remove map/listeners when the containing view is destroyed.
 
 Verify geographic coordinate order (GeoJSON longitude, latitude), independent scoring/ranking examples, ties and zero-weight behavior. Exercise map/table selection, zoom, keyboard alternative, narrow layout and hidden-to-visible resize. Inspect local asset paths and requests under the actual Pages prefix. Record observed behavior through [Evaluate](../evaluate-browser-app/SKILL.md); a map is not a forecast or a validated site-selection model.

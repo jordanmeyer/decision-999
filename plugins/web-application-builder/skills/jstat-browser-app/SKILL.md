@@ -20,7 +20,7 @@ const variance = jStat.variance([2, 4, 6], true); // sample variance: 4
 
 Document sample versus population conventions, units and supported input domains. Use deterministic functions by default; simulation random draws come from a local approved seedrandom instance and explicitly justified transforms, not hidden global random state.
 
-Visual libraries use the relevant [theme assets](../../assets/library-themes/) with the bundled [Campus Designer](../campus-designer/SKILL.md). Generated paths above are relative to the student's app, not the installed plugin.
+Visual libraries follow [shared identity selection](../../references/workflow.md#shared-design); the supplied [theme assets](../../assets/library-themes/) implement the Duke default. Generated paths above are relative to the student's app, not the installed plugin.
 
 ## Verify
 

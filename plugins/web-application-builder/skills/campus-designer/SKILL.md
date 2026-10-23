@@ -18,6 +18,10 @@ Turn the requested content into purposeful, recognizably Duke work. Use the proj
 5. Inspect the actual output at intended sizes, use the [review checklist](references/review.md), and correct defects. Distinguish visual inspection from source review. If rendering or interaction testing is unavailable, say exactly what remains unverified.
 6. Deliver the artifact with a short account of design choices, checks performed, and remaining asset, approval, or access limitations. Continue independent work when an optional resource is missing; stop only the affected work when essential evidence or authorization is absent.
 
+## Scope with application builders
+
+This skill owns Duke identity guidance and remains usable on its own. A calling application builder may supply task-specific layouts, component/state patterns and verification commands. Use those alongside this skill without treating them as Duke requirements. General accessibility, factual accuracy and rendered-review practices remain useful for independent identities; Duke palette, typography and mark compliance apply when Duke identity is selected. Do not impose Duke branding on an explicitly independent project merely because this skill is bundled.
+
 ## Authority labels
 
 References distinguish **Duke rule** (explicit requirement/prohibition), **Duke recommendation** (advice, suggested use or example), **Skill default** (reversible implementation choice), and **General accessibility practice** (not a distinct Duke visual-brand rule). Source-specific scope matters. Do not upgrade “should” to a mandatory policy or turn an example into the only permitted design.

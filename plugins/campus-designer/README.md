@@ -1,6 +1,8 @@
 # Campus Designer
 
-Version 0.3.2. The complete `campus-designer` skill: Duke's public brand guidance for webpages, presentations, documents, and visual materials. It is an independent, instructor-built example. It is not an official Duke tool and grants no permission to use Duke marks.
+Version 0.3.3. The complete `campus-designer` skill: Duke's public brand guidance for webpages, presentations, documents, and visual materials. It is an independent, instructor-built example. It is not an official Duke tool and grants no permission to use Duke marks.
+
+Version 0.3.3 clarifies how application builders combine product guidance with Duke identity rules. Existing brand, accessibility and review guidance is retained.
 
 ## Install
 

@@ -21,7 +21,7 @@ if (parsed.errors.length) throw Error(parsed.errors.map(error => error.message).
 
 Read File.text() only after checking size. Preserve the current valid dataset until all rows validate. Treat amounts as explicit currency units; do not blindly coerce empty strings to zero. Use text renderers for imported fields. Never set download:true or pass a remote URL. For CSV exports protect spreadsheet formula-prefixed fields.
 
-Visual libraries use the relevant [theme assets](../../assets/library-themes/) with the bundled [Campus Designer](../campus-designer/SKILL.md). Generated paths above are relative to the student's app, not the installed plugin.
+Visual libraries follow [shared identity selection](../../references/workflow.md#shared-design); the supplied [theme assets](../../assets/library-themes/) implement the Duke default. Generated paths above are relative to the student's app, not the installed plugin.
 
 ## Verify
 

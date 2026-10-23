@@ -1,6 +1,6 @@
 # Web Application Builder
 
-Version 0.2.3 · Instructor-built pilot candidate.
+Version 0.2.4 · Instructor-built pilot candidate.
 
 Turn a problem you understand into a self-contained browser application, with a saved plan, local revision history, calculation evidence, and a GitHub Pages publishing workflow. Your agent handles the files and commands; you make the product and model decisions. No coding experience is required.
 
@@ -18,7 +18,7 @@ You can resume in a fresh chat with the same project files. Setup preserves exis
 
 ## Included
 
-Five [workflow skills](references/workflow.md), sixteen approved [library skills](references/library-selection.md), plain and managed starters, GitHub Pages workflows, and the bundled [Campus Designer](skills/campus-designer/SKILL.md). Build applies its Duke colors, typography, and review guidance through library-specific themes.
+Five [workflow skills](references/workflow.md), sixteen approved [library skills](references/library-selection.md), plain and managed starters, GitHub Pages workflows, and the bundled [Campus Designer](skills/campus-designer/SKILL.md). The shared [product-design reference](references/product-design.md) guides task layout, controls, states and review. Campus Designer supplies the default Duke identity; an explicitly chosen independent identity uses adapted project themes with the same accessibility and data-truth checks. Version 0.2.4 updates design guidance; existing example results below remain evidence for their recorded versions.
 
 Describe what you need: “an interactive analytical presentation,” “an editable process diagram,” or “a dashboard for a local CSV.” Plan and Build select the smallest useful set of approved libraries. Local mapping, bounded SQL exploration and worker-based optimization are approved for the reviewed configurations.
 

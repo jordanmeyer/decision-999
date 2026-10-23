@@ -19,7 +19,7 @@ element.innerHTML = svg; // Only SVG returned by strict Mermaid, not raw importe
 
 Use mermaid.js/tokens.js and the inventory KaTeX override. Keep securityLevel strict, htmlLabels false, authored diagram definitions and unique render IDs. No external image/icon packs or click links. Never concatenate CSV text into diagram source; show imported data separately as text. Catch parse errors and preserve the last valid diagram.
 
-Visual libraries use the relevant [theme assets](../../assets/library-themes/) with the bundled [Campus Designer](../campus-designer/SKILL.md). Generated paths above are relative to the student's app, not the installed plugin.
+Visual libraries follow [shared identity selection](../../references/workflow.md#shared-design); the supplied [theme assets](../../assets/library-themes/) implement the Duke default. Generated paths above are relative to the student's app, not the installed plugin.
 
 ## Verify
 

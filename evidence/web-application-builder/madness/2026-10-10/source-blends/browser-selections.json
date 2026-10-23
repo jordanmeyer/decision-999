@@ -1,0 +1,240 @@
+[
+  {
+    "cancelled": false,
+    "gender": "mens",
+    "heading": "Mar 14, 2016 · Initial forecast",
+    "options": [
+      "kenpom",
+      "fivethirtyeight",
+      "average"
+    ],
+    "year": "2016"
+  },
+  {
+    "cancelled": false,
+    "gender": "mens",
+    "heading": "Mar 12, 2017 · Initial forecast",
+    "options": [
+      "kenpom",
+      "espn",
+      "fivethirtyeight",
+      "average"
+    ],
+    "year": "2017"
+  },
+  {
+    "cancelled": false,
+    "gender": "mens",
+    "heading": "Mar 12, 2018 · Initial forecast",
+    "options": [
+      "kenpom",
+      "torvik",
+      "fivethirtyeight",
+      "average"
+    ],
+    "year": "2018"
+  },
+  {
+    "cancelled": false,
+    "gender": "mens",
+    "heading": "Mar 17, 2019 · Initial forecast",
+    "options": [
+      "kenpom",
+      "torvik",
+      "fivethirtyeight",
+      "average",
+      "ensemble"
+    ],
+    "year": "2019"
+  },
+  {
+    "cancelled": true,
+    "gender": "mens",
+    "heading": "Mar 17, 2019 · Initial forecast",
+    "options": [
+      "No forecasts"
+    ],
+    "year": "2020"
+  },
+  {
+    "cancelled": false,
+    "gender": "mens",
+    "heading": "Mar 14, 2021 · Initial forecast",
+    "options": [
+      "kenpom",
+      "torvik",
+      "fivethirtyeight",
+      "average",
+      "ensemble"
+    ],
+    "year": "2021"
+  },
+  {
+    "cancelled": false,
+    "gender": "mens",
+    "heading": "Mar 13, 2022 · Initial forecast",
+    "options": [
+      "kenpom",
+      "torvik",
+      "fivethirtyeight",
+      "average",
+      "ensemble"
+    ],
+    "year": "2022"
+  },
+  {
+    "cancelled": false,
+    "gender": "mens",
+    "heading": "Mar 12, 2023 · Initial forecast",
+    "options": [
+      "kenpom",
+      "torvik",
+      "fivethirtyeight",
+      "average",
+      "ensemble"
+    ],
+    "year": "2023"
+  },
+  {
+    "cancelled": false,
+    "gender": "mens",
+    "heading": "Mar 18, 2024 · Initial forecast",
+    "options": [
+      "kenpom",
+      "torvik",
+      "average",
+      "ensemble"
+    ],
+    "year": "2024"
+  },
+  {
+    "cancelled": false,
+    "gender": "mens",
+    "heading": "Mar 17, 2025 · Initial forecast",
+    "options": [
+      "kenpom",
+      "torvik",
+      "numberfire",
+      "average"
+    ],
+    "year": "2025"
+  },
+  {
+    "cancelled": false,
+    "gender": "mens",
+    "heading": "Mar 16, 2026 · Initial forecast",
+    "options": [
+      "kenpom",
+      "torvik",
+      "average",
+      "ensemble"
+    ],
+    "year": "2026"
+  },
+  {
+    "cancelled": false,
+    "gender": "womens",
+    "heading": "Mar 14, 2016 · Initial forecast",
+    "options": [
+      "fivethirtyeight"
+    ],
+    "year": "2016"
+  },
+  {
+    "cancelled": false,
+    "gender": "womens",
+    "heading": "Mar 12, 2017 · Initial forecast",
+    "options": [
+      "fivethirtyeight",
+      "ensemble"
+    ],
+    "year": "2017"
+  },
+  {
+    "cancelled": false,
+    "gender": "womens",
+    "heading": "Mar 12, 2018 · Initial forecast",
+    "options": [
+      "fivethirtyeight",
+      "ensemble"
+    ],
+    "year": "2018"
+  },
+  {
+    "cancelled": false,
+    "gender": "womens",
+    "heading": "Mar 17, 2019 · Initial forecast",
+    "options": [
+      "fivethirtyeight",
+      "ensemble"
+    ],
+    "year": "2019"
+  },
+  {
+    "cancelled": true,
+    "gender": "womens",
+    "heading": "Mar 17, 2019 · Initial forecast",
+    "options": [
+      "No forecasts"
+    ],
+    "year": "2020"
+  },
+  {
+    "cancelled": false,
+    "gender": "womens",
+    "heading": "Mar 14, 2021 · Initial forecast",
+    "options": [
+      "fivethirtyeight",
+      "ensemble"
+    ],
+    "year": "2021"
+  },
+  {
+    "cancelled": false,
+    "gender": "womens",
+    "heading": "Mar 13, 2022 · Initial forecast",
+    "options": [
+      "fivethirtyeight",
+      "ensemble"
+    ],
+    "year": "2022"
+  },
+  {
+    "cancelled": false,
+    "gender": "womens",
+    "heading": "Mar 12, 2023 · Initial forecast",
+    "options": [
+      "fivethirtyeight",
+      "ensemble"
+    ],
+    "year": "2023"
+  },
+  {
+    "cancelled": false,
+    "gender": "womens",
+    "heading": "Mar 19, 2024 · Initial forecast",
+    "options": [
+      "silver"
+    ],
+    "year": "2024"
+  },
+  {
+    "cancelled": false,
+    "gender": "womens",
+    "heading": "Mar 18, 2025 · Initial forecast",
+    "options": [
+      "torvik"
+    ],
+    "year": "2025"
+  },
+  {
+    "cancelled": false,
+    "gender": "womens",
+    "heading": "Mar 17, 2026 · Initial forecast",
+    "options": [
+      "torvik",
+      "ensemble"
+    ],
+    "year": "2026"
+  }
+]
