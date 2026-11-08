@@ -6,12 +6,12 @@ import subprocess
 import sys
 import tempfile
 
-ROOT = Path(__file__).resolve().parents[3]
-PACKAGE = ROOT / 'plugins/web-application-builder'
+EVIDENCE = Path(__file__).resolve().parent
+FROZEN = EVIDENCE / 'reproduction'
 trials = Path(sys.argv[1]).resolve()
 for name in ('presentation', 'dashboard', 'operations'):
     project = trials / name
-    checker = ['node', str(PACKAGE / 'scripts/check-dependencies.mjs'), str(project)]
+    checker = ['node', str(FROZEN / 'scripts/check-dependencies.mjs'), str(project)]
     assert subprocess.run(checker, capture_output=True).returncode == 0
     package = project / 'package.json'
     original = package.read_bytes()
@@ -25,8 +25,8 @@ for name in ('presentation', 'dashboard', 'operations'):
         package.write_bytes(original)
     for field in ('devDependencies', 'optionalDependencies', 'peerDependencies'):
         data = json.loads(original)
-        name = next(iter(data['dependencies']))
-        data.setdefault(field, {})[name] = data['dependencies'].pop(name)
+        dependency = next(iter(data['dependencies']))
+        data.setdefault(field, {})[dependency] = data['dependencies'].pop(dependency)
         try:
             package.write_text(json.dumps(data))
             rejected = subprocess.run(checker, capture_output=True, text=True)
@@ -44,7 +44,9 @@ for name in ('presentation', 'dashboard', 'operations'):
 
 with tempfile.TemporaryDirectory() as temporary:
     project = Path(temporary)
-    shutil.copytree(PACKAGE / 'assets/managed-starter', project, dirs_exist_ok=True)
+    shutil.copytree(FROZEN / 'starter', project, dirs_exist_ok=True)
+    for filename in ('package.json', 'package-lock.json'):
+        shutil.copy2(EVIDENCE / 'presentation' / filename, project / filename)
     def git(*args):
         return subprocess.run(['git', *args], cwd=project, capture_output=True, text=True)
     assert git('init', '-b', 'main').returncode == 0

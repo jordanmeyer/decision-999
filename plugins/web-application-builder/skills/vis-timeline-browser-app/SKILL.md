@@ -11,15 +11,25 @@ For project roadmaps, read [resources and milestones](../../references/decision-
 
 ## Usage pattern
 
-```js
+Read [React and TypeScript integration](../../references/react-libraries.md). Copy this standalone example into `app/recipes/vis-timeline.tsx`. Install the inventory’s development type packages and copy any listed declarations before typechecking.
+
+```tsx
+import { useEffect, useRef } from 'react';
 import { Timeline } from 'vis-timeline/standalone';
 import 'vis-timeline/styles/vis-timeline-graph2d.css';
-import './theme/vis-timeline.css';
-const label = document.createElement('span');
-label.textContent = 'Launch';
-const timeline = new Timeline(element, [{ id: 1, content: label,
-  start: new Date(2026, 0, 5), end: new Date(2026, 0, 8) }],
-  { start: new Date(2026, 0, 1), end: new Date(2026, 0, 15), showCurrentTime: false });
+
+export function Example() {
+  const host = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const timeline = new Timeline(host.current!, [{ id: 1, content: 'Launch preparation',
+      start: new Date(2026, 0, 5), end: new Date(2026, 0, 8) }], {
+      start: new Date(2026, 0, 1), end: new Date(2026, 0, 15), showCurrentTime: false,
+      template: item => { const label = document.createElement('span'); label.textContent = item.content; return label; } });
+    return () => timeline.destroy();
+  }, []);
+  return <section className="bab-timeline"><div ref={host} />
+    <p>Preparation: January 5–7, 2026, ending at midnight January 8 in local time.</p></section>;
+}
 ```
 
 Wrap the container with bab-timeline. Use the standalone entry but install the required peers from the inventory. Document local-calendar versus UTC instants; do not parse date-only strings inconsistently. Imported labels become text nodes. Destroy the instance on teardown.

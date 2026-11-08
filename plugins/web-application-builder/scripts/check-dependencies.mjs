@@ -5,18 +5,22 @@ const inventory = JSON.parse(await readFile(new URL('../references/libraries.jso
 const project = resolve(process.argv[2] || '.');
 const pkg = JSON.parse(await readFile(resolve(project, 'package.json'), 'utf8'));
 const allowed = { ...inventory.tooling };
-for (const lib of inventory.libraries.filter(lib => lib.status === 'approved')) Object.assign(allowed, lib.packages, lib.peers);
+const devTools = new Set(inventory.devTools);
+for (const lib of inventory.libraries.filter(lib => lib.status === 'approved')) {
+  Object.assign(allowed, lib.packages, lib.peers, lib.devPackages);
+  for (const name of Object.keys(lib.devPackages || {})) devTools.add(name);
+}
 for (const field of ['dependencies', 'devDependencies', 'optionalDependencies', 'peerDependencies']) {
   for (const [name, version] of Object.entries(pkg[field] || {})) {
     if (allowed[name] !== version) throw Error(`Unapproved dependency: ${name}@${version}`);
-    const expected = inventory.devTools.includes(name) ? 'devDependencies' : 'dependencies';
+    const expected = devTools.has(name) ? 'devDependencies' : 'dependencies';
     if (field !== expected) throw Error(`${name} must be in ${expected} so runtime notices are retained`);
   }
 }
 const direct = { ...pkg.dependencies, ...pkg.devDependencies, ...pkg.optionalDependencies, ...pkg.peerDependencies };
 for (const lib of inventory.libraries) {
   if (!Object.keys(lib.packages).some(name => name in direct)) continue;
-  for (const [name, version] of Object.entries({ ...lib.packages, ...lib.peers })) {
+  for (const [name, version] of Object.entries({ ...lib.packages, ...lib.peers, ...(direct.typescript ? lib.devPackages : {}) })) {
     if (direct[name] !== version) throw Error(`Missing approved companion: ${name}@${version}`);
   }
 }

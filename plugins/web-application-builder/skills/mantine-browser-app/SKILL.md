@@ -11,19 +11,27 @@ For an executive dashboard or board briefing, read [the decision-model guidance]
 
 ## Usage pattern
 
-```js
+Read [React and TypeScript integration](../../references/react-libraries.md). Copy this standalone example into `app/recipes/mantine.tsx`. Install the inventory’s development type packages and copy any listed declarations before typechecking.
+
+```tsx
+import { useState } from 'react';
 import { MantineProvider, Button } from '@mantine/core';
 import '@mantine/core/styles.css';
-import './theme/mantine.css';
-import { mantineTheme } from './theme/mantine.js';
-function App() {
-  return <MantineProvider theme={mantineTheme()} forceColorScheme="light">
-    <Button onClick={() => console.log('Selected')}>Apply scenario</Button>
+
+export function Example() {
+  const [applied, setApplied] = useState(false);
+  return <MantineProvider forceColorScheme="light" theme={{
+    fontFamily: 'var(--duke-font-body)', primaryColor: 'duke', primaryShade: 6,
+    colors: { duke: ['#E2E6ED', '#E2E6ED', '#E2E6ED', '#00539B', '#00539B',
+      '#00539B', '#012169', '#012169', '#012169', '#012169'] } }}>
+    <Button onClick={() => setApplied(true)} styles={{ root: {
+      '--button-hover': '#00539B' } }}>Apply scenario</Button>
+    <p role="status">{applied ? 'Scenario applied.' : 'Scenario ready.'}</p>
   </MantineProvider>;
 }
 ```
 
-Use the React setup. For the supplied Duke adapter, load canonical tokens/base.css before calling the theme factory; it uses published solid colors, not generated Duke-blue tints. An independent identity adapts the project theme and factory together under shared design. Label inputs and errors, use controlled values when filters drive charts, and import only needed controls. No remote fonts.
+For the supplied Duke adapter, load canonical tokens/base.css before calling the theme factory; it uses published solid colors, not generated Duke-blue tints. An independent identity adapts the project theme and factory together under shared design. Label inputs and errors, use controlled values when filters drive charts, and import only needed controls. No remote fonts.
 
 Visual libraries follow [shared identity selection](../../references/workflow.md#shared-design); the supplied [theme assets](../../assets/library-themes/) implement the Duke default. Generated paths above are relative to the student's app, not the installed plugin.
 

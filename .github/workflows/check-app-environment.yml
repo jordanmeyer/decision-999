@@ -5,12 +5,14 @@ on:
     paths:
       - 'plugins/web-application-builder/**'
       - 'scripts/check-app-environment.py'
+      - 'scripts/check-library-recipes.py'
       - '.github/workflows/check-app-environment.yml'
   push:
     branches: [main]
     paths:
       - 'plugins/web-application-builder/**'
       - 'scripts/check-app-environment.py'
+      - 'scripts/check-library-recipes.py'
       - '.github/workflows/check-app-environment.yml'
   workflow_dispatch:
 
@@ -27,3 +29,4 @@ jobs:
     steps:
       - uses: actions/checkout@v7.0.1
       - run: python3 scripts/check-app-environment.py
+      - run: python3 scripts/check-library-recipes.py

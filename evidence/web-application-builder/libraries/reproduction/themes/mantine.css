@@ -1,0 +1,3 @@
+.mantine-Button-root { opacity: 1; }
+.mantine-Button-root[data-disabled] { background: var(--duke-hatteras); color: var(--duke-graphite); opacity: 1; }
+.mantine-Input-input { color: var(--duke-cast-iron); }

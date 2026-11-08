@@ -11,9 +11,19 @@ For sales/returns analysis, read [uploaded sales and returns](../../references/d
 
 ## Usage pattern
 
-```js
+Read [React and TypeScript integration](../../references/react-libraries.md). Copy this standalone example into `app/recipes/arquero.ts`. Install the inventory’s development type packages and copy any listed declarations before typechecking.
+
+```ts
 import * as aq from 'arquero';
-const totals = aq.from(rows).rollup({ revenue: aq.op.sum('revenue'), cost: aq.op.sum('cost') }).object();
+
+type Sale = { region: string; revenue: number; cost: number };
+export function summarizeSales(rows: Sale[], region: string) {
+  const selected = rows.filter(row => row.region === region);
+  if (!selected.length) return { revenue: 0, cost: 0 };
+  const totals = aq.from(selected).rollup({
+    revenue: aq.op.sum('revenue'), cost: aq.op.sum('cost') });
+  return { revenue: Number(totals.get('revenue', 0)), cost: Number(totals.get('cost', 0)) };
+}
 ```
 
 Use authored expressions only. Validate typed input before constructing the table and define empty-result behavior. Keep exact currency accounting in bounded integer cents; do not assume grouping solves rounding or overflow. Do not compile expressions supplied through CSV. For authored filters that close over local variables, use `aq.escape(d => ...)`; minification can rename lexical variables while `.params({ name })` keys stay unchanged, breaking parsed expressions only in production. Verify the production filter with nonempty and empty results.

@@ -11,14 +11,38 @@ For executive or uploaded-data dashboards, read the matching [decision-model gui
 
 ## Usage pattern
 
-```js
+Read [React and TypeScript integration](../../references/react-libraries.md). Copy this standalone example into `app/recipes/echarts.tsx`. Install the inventory’s development type packages and copy any listed declarations before typechecking.
+
+```tsx
+import { useEffect, useRef } from 'react';
 import * as echarts from 'echarts';
-import { echartsTheme } from './theme/echarts.js';
-await document.fonts.ready;
-const chart = echarts.init(element, echartsTheme());
-chart.setOption({ aria: { enabled: true }, tooltip: { renderMode: 'richText' },
-  xAxis: { type: 'category', data: ['Revenue', 'Cost'] }, yAxis: { type: 'value' },
-  series: [{ type: 'bar', data: [390, 234] }] });
+
+export function Example() {
+  const host = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const element = host.current!;
+    let disposed = false;
+    let chart: echarts.ECharts | undefined;
+    const observer = new ResizeObserver(() => chart?.resize());
+    void document.fonts.ready.then(() => {
+      if (disposed) return;
+      const css = getComputedStyle(element);
+      chart = echarts.init(element);
+      chart.setOption({ animation: false, aria: { enabled: true },
+        textStyle: { fontFamily: css.fontFamily },
+        tooltip: { renderMode: 'richText' },
+        xAxis: { type: 'category', data: ['Revenue', 'Cost'] },
+        yAxis: { type: 'value', name: 'Dollars' },
+        series: [{ type: 'bar', data: [390, 234],
+          itemStyle: { color: css.getPropertyValue('--duke-navy-blue').trim() },
+          emphasis: { disabled: true }, blur: { itemStyle: { opacity: 1 } } }] });
+      observer.observe(element);
+    });
+    return () => { disposed = true; observer.disconnect(); chart?.dispose(); };
+  }, []);
+  return <section><div ref={host} style={{ height: 280 }} />
+    <p>Revenue: $390. Cost: $234. Synthetic example.</p></section>;
+}
 ```
 
 Use echarts.js and tokens.js. The adapter preserves bar/pie/scatter fills in emphasis and selection, prevents blur fading, and disables line emphasis color lifting. Keep these settings when customizing series; other series types need explicit solid interaction styles and a rendered-state check. Give the chart a measured height. Use a ResizeObserver to resize it; resize again when a containing slide/view becomes visible. Dispose the chart and observer on teardown. Provide a text/table equivalent with units and non-color labels. Avoid HTML tooltip formatters for imported strings.

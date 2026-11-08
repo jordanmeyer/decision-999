@@ -11,16 +11,33 @@ For weighted market screens, read [market ranking and sensitivity](../../referen
 
 Use a real Leaflet map with locally bundled GeoJSON or licensed local geographic assets. A useful map needs geographic context and a legend, not merely disconnected dots. Explain synthetic attributes separately from actual geographic boundaries. Remote tiles, geocoding, routing services and visitor location requests are outside this configuration. Use circle markers or locally bundled icons; no default CDN icon paths.
 
-```js
+
+Read [React and TypeScript integration](../../references/react-libraries.md). Copy this standalone example into `app/recipes/leaflet.tsx`. Install the inventory’s development type packages and copy any listed declarations before typechecking.
+
+```tsx
+import { useEffect, useRef } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-const map = L.map('map', { scrollWheelZoom: false }).setView([35.8, -79], 7);
-const layer = L.geoJSON(localMarkets, { style: feature => marketStyle(feature) }).addTo(map);
-map.fitBounds(layer.getBounds());
-// Imported names are text, not popup HTML.
-const label = document.createElement('span');
-label.textContent = market.name;
-marker.bindPopup(label);
+
+export function Example() {
+  const host = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const element = host.current!;
+    const map = L.map(element, { scrollWheelZoom: false });
+    const navy = getComputedStyle(element).getPropertyValue('--duke-navy-blue').trim();
+    const region = L.polygon([[35.7, -79.2], [35.9, -79.2], [35.9, -78.9], [35.7, -78.9]],
+      { color: navy, fillColor: navy, fillOpacity: 1 }).addTo(map);
+    const label = document.createElement('span');
+    label.textContent = 'Synthetic region: score 72';
+    region.bindPopup(label);
+    map.fitBounds(region.getBounds());
+    const observer = new ResizeObserver(() => map.invalidateSize());
+    observer.observe(element);
+    return () => { observer.disconnect(); map.remove(); };
+  }, []);
+  return <section><div ref={host} style={{ height: 280 }} aria-label="Synthetic region map" />
+    <p>Fictional boundary and score for integration checking only: 72 points.</p></section>;
+}
 ```
 
 Follow [shared identity selection](../../references/workflow.md#shared-design) for colors and locally bundled typography. Use non-color cues for selected/shortlisted markets and a linked keyboard-accessible table or select. For Duke-blue fills, keep them opaque and choose another published color when needed. Preserve Leaflet structural CSS and attribution controls. Resize after a hidden panel becomes visible; remove map/listeners when the containing view is destroyed.

@@ -1,66 +1,87 @@
-# Uniform new-app starter and contained local setup
+# Verify library recipes against the React/TypeScript starter
 
-This living plan follows `~/.codex/PLANS.md`. The design plan is preserved at `docs/plans/2026-10-23-product-design.md`. Rollback checkpoint before implementation: `1ef3863`.
+This living plan follows `~/.codex/PLANS.md`. The completed environment plan is preserved in `docs/plans/2026-10-23-uniform-environment.md`. Starting source revision: `7b3b795`.
 
 ## Purpose / Big Picture
 
-Every new app uses Vite, React and TypeScript, with a private pinned Node/npm runtime and caches inside its project. Agents perform setup, build and preview without global installations or permanent environment changes. Existing apps keep their recorded source, dependencies and commands. Visitors continue receiving static browser assets.
+An agent following an approved library recipe should produce an app that passes the current strict TypeScript build and initializes correctly inside React. Maintainers must also reproduce historical library evidence without mixing it with a newer starter. The user requested fixes for missing library declarations and broken historical reproduction, updated recipes, and validation for the current starter. This work does not publish the site, migrate student apps, or claim novice/platform outcomes.
 
 ## Progress
 
-- [x] (2026-10-23) Committed all current work before implementation as 1ef3863; preserved original reference bytes.
-- [x] (2026-10-23) Inspected starter, dependency checker, setup/evaluation/deployment instructions and official runtime artifacts.
-- [x] (2026-10-23) Implemented one new-app starter and macOS/Windows bootstraps with a shared command runner.
-- [x] (2026-10-23) Updated workflow routing, inventory, version and release metadata without changing existing apps.
-- [x] (2026-10-23) Passed macOS ARM64 provisioning/build/lifecycle integration checks and desktop/390px/320px browser checks; recorded native Windows and clean-account limits.
-- [x] (2026-10-23) Reviewed and simplified ownership, regenerated catalogs, validated repository/plugin; implementation is committed separately from the rollback checkpoint.
+- [x] (2026-11-08) Read project rules, prior plan and current starter; split typing, historical reproduction and recipe work among independent agents.
+- [x] (2026-11-08) Added approved type dependencies and narrow declarations; focused compiler/policy checks pass and existing JavaScript fixtures remain accepted.
+- [x] (2026-11-08) Froze historical reproduction inputs from 1ef3863; fresh preparation, three locked builds and historical boundary checks pass.
+- [x] (2026-11-08) Updated all sixteen recipes with standalone typed examples, shared React ownership guidance, and bounded worker lifetimes.
+- [x] (2026-11-08) Added a current-starter check compiling documented examples, executing twelve model assertions, and testing dependency policy and publication assets; added it to Mac/Windows CI.
+- [x] (2026-11-08) Inspected all twelve visual integrations, selected repeated mounts/hide-show, worker results/cancellation, keyboard behavior and production output at desktop/320px.
+- [x] (2026-11-08) Final repository/package and production-build checks pass; patch version, generated catalogs, simplification and bounded evidence are finalized for the ordinary commit.
 
 ## Surprises & Discoveries
 
-Current managed setup uses system installers and the starter has Vite only. The existing dependency checker treats all non-Vite dependencies as runtime libraries, so TypeScript/type-package placement must be explicit. Existing managed apps and CI already rely on their own package scripts; do not overwrite them. This host is macOS ARM64 and has no Windows PowerShell available. npm rejects using the same path for user and global config; the runner now uses two empty project-local files. Node reports Windows as win32 while its archive directories use win; review corrected the mapping. Lock generation must run from the real project directory rather than a symlinked --prefix path.
+The review reproduced TS7016 (missing declarations) for approved Papa Parse, Leaflet, seedrandom and jStat imports. Installing a type package then failed the approved dependency checker. Frappe Gantt and Tabulator also need declarations. Historical preparation copied the current starter and deleted a file removed by the React migration; later configuration changes also assumed the old starter. React StrictMode repeats initialization/cleanup in development, exposing resource lifecycle problems in imperative library examples.
+
+Compilation also exposed changed React Flow connection types, Reveal's scroll-threshold declaration and the timeline's content declaration. Source review found pending Reveal initialization cleanup and missing-node/direction handling in the Flow summary. Browser review found Gantt opened on empty dates before the task; selecting its start and reusing the existing theme adapter fixed the view. Development file-watching retained stale modules on this host; restarting the owned preview established current source. A temporary 1.5-second worker-start delay made HiGHS cancellation observable, then was removed before the final production build.
 
 ## Decision Log
 
-2026-10-23: Use the existing managed-starter directory for new projects, retaining the plain starter for existing-app maintenance only. Keep React/Vite pins already approved and add pinned TypeScript/types. Use official portable Node 24.22.1 archives with checked-in SHA-256 hashes. npm ships with that archive. No shared cache, version manager, Docker, new component library or general migration engine.
+2026-11-08: Keep package versions in `references/libraries.json`. Optional per-library `devPackages` records type-only development packages; `declarations` names bundled narrow declaration files. Require companion types only for TypeScript projects. A declaration describes an external JavaScript API; it must not replace checking with unrestricted `any`.
 
-2026-10-23: Use two small platform entrypoints (`app.sh`, `app.ps1`) for provisioning, then one Node command runner for project-local environment and commands. Servers remain foreground processes managed by the agent's terminal session; no daemon or global process-killing command. Cleanup checks active owned commands and deletes only generated paths.
+2026-11-08: Freeze historical preparation resources from pre-migration revision `1ef3863` inside the evidence directory. Preserve original fixture sources, lockfiles and reported outcomes. Current-release checks remain separate.
+
+2026-11-08: Compile examples extracted from actual library skills rather than maintain a second recipe implementation. Validation is maintainer tooling. Pure model operations stay outside React; visual examples demonstrate resource creation/update/cleanup. The common starter and optional-library boundary remain intact.
+
+2026-11-08: Put Frappe Gantt in a same-origin iframe so its document owns listeners that the pinned library cannot destroy. Keep one frame during ordinary view switches; unmount disposes the document. Reuse the canonical theme adapter inside the frame. Compile and run the same twelve pure-model assertions in Node and the browser using existing Vite; no new testing dependency is needed.
 
 ## Outcomes & Retrospective
 
-Implemented Web Application Builder 0.3.0 with one typed starter, project-local portable runtime, two small bootstraps and one shared runner. Existing apps, legacy plain starter and gallery source are unchanged from 1ef3863. macOS ARM64 integration checks pass with system Node removed from PATH; repository checks and plugin validation pass. The browser readiness interaction works at desktop and 390px/320px widths with no horizontal overflow and local fonts loaded. Native Windows, Intel Mac, clean-account/device-policy, interrupted-transfer and student trials remain release gates. The new Mac/Windows CI workflow has not run remotely. See the review record for exact checks and limits; implementing a platform script does not establish its validation.
+Implemented Web Application Builder 0.3.1. All sixteen documented examples compile and bundle with the private current runtime; twelve known-answer checks pass in Node and browser. Type-only dependencies and narrow declarations preserve strict checking and existing JavaScript apps. Historical preparation and all three frozen builds pass independently of the mutable starter. Current production worker/WASM paths, ordinary visual lifetimes and selected cancellation/recovery behavior were observed. Native Windows, Intel Mac, clean-device, full listener instrumentation and student validation remain explicitly unverified; no publication or existing-app migration occurred.
 
 ## Context and Orientation
 
-Repository root is `/Users/jordan/Projects/decision-999`. `plugins/web-application-builder/assets/managed-starter/` is copied into new app roots. The plugin's `references/libraries.json` owns approved dependency pins; the generated project owns its package manifest/lockfile and runtime manifest. `scripts/check-dependencies.mjs` checks dependency roles and lockfile provenance. `assets/pages-managed.yml` builds new apps in CI. Skill instructions route existing projects to their recorded workflow. Canonical designer files are generated into starters by `scripts/build.py`.
+Repository root: `/Users/jordan/Projects/decision-999`. `plugins/web-application-builder/references/libraries.json` owns supported versions and dependency roles. Its `scripts/check-dependencies.mjs` rejects unsupported manifests and lockfiles. `assets/managed-starter/` supplies React, Vite, TypeScript and private Node/npm launchers for new apps. Each `skills/<library>-browser-app/SKILL.md` is an installed recipe. `scripts/build.py` validates inventory and generates catalogs; `scripts/check.py` checks repository boundaries in temporary copies. `evidence/web-application-builder/libraries/` holds historical JavaScript fixtures.
 
 ## Plan of Work
 
-Add a typed React entry and App component, strict no-emit typecheck, and React Vite configuration. Keep the small existing readiness screen and meaningful interaction. Add portable-runtime launchers and one shared command script; keep caches, logs and temporary files under ignored `.toolchain/`. Pin archive names/checksums in one JSON manifest and reuse its runtime version for `.node-version`. Provision only on explicit setup, download via HTTPS, verify before extraction, stage before renaming and recover interrupted downloads by replacing only setup staging. Do not change user npm settings, global PATH or execution policy.
+Extend inventory and checker with type-only companions and narrow declarations. Update build validation to understand those fields without putting every optional type in the starter. Explain selected-recipe typing in managed-build guidance.
 
-Update setup to choose the common starter only for new projects, preserve existing apps, and avoid automatic Git/system installs. Update planning/library guidance so optional packages vary but the new-app framework does not. Add typecheck to build so publication cannot skip it. Maintain runtime notices and extend approved tooling roles. Record actual verification without claiming cross-platform certification.
+Freeze historical build configuration, theme assets, notices and dependency policy. Preparation must use only frozen resources and recorded fixture source/lockfiles, independent of the current starter.
+
+Replace incomplete JavaScript snippets with self-contained typed examples. A shared React reference explains effects, cleanup and asynchronous work. Workers retain local assets and cancellation. The new maintainer script extracts examples into a disposable current starter, installs exact selected dependencies, copies declarations/notices, then runs policy checks, strict compilation and production build. CI invokes the same check. Browser inspection establishes rendering/interaction separately.
+
+Update the patch release and evidence index, regenerate manifests, review surrounding code and callers, and delete redundant policy or scaffolding. Never commit downloaded runtimes, dependencies or generated site output.
 
 ## Milestones
 
-First prove portable setup and a clean typed production build in a temporary project with spaces in its name. Next update all instruction paths and packaging so agents consistently use the launcher while existing apps stay untouched. Finally exercise failure boundaries and foreground lifecycle, inspect desktop/narrow/keyboard rendering, and run repository checks.
+First, all previously failing imports and other untyped recipes compile while missing, misplaced or unapproved type dependencies still fail. Second, all three historical fixtures prepare and build independently of current plugin files. Third, all sixteen documented examples compile in the current baseline and lifecycle-sensitive examples work in the browser. Finally, bounded evidence and repository checks support the release.
 
 ## Concrete Steps
 
-Run setup in a temporary copy with `bash app.sh setup`, then `bash app.sh build` and `bash app.sh dev`. On Windows the corresponding entry is `powershell.exe -NoProfile -File .\app.ps1 setup`; obey device script policy. Commands use the runtime inside that project. Run `python3 scripts/build.py`, `python3 scripts/check.py`, relevant new boundary tests, `claude plugin validate .` and `git diff --check` in the repository. Run all runtime installs in temporary app copies, never inside installable starter assets.
+From the repository root run:
+
+    python3 scripts/check.py
+    python3 scripts/check-app-environment.py
+    python3 scripts/check-library-recipes.py
+    python3 evidence/web-application-builder/check.py
+    python3 evidence/web-application-builder/libraries/prepare.py /private/tmp/builder-historical-reproduction
+    claude plugin validate .
+    git diff --check
+
+The recipe script supports a new named destination for retaining an app for browser inspection. Build the three historical fixtures using their documented locked-install commands, then run their checker. Generate catalogs with `python3 scripts/build.py`; narrowly scoped filesystem permission may be required for protected catalog metadata.
 
 ## Validation and Acceptance
 
-Test a new project without Node on PATH, with spaces, a restarted setup, corrupt download checksum, wrong runtime version, failed typecheck and an occupied preview port. Verify generated output uses a repository prefix and includes React and font notices. Confirm runtime/cache/temp locations stay local, active command cleanup is refused, stopped cleanup preserves app source and lockfile, and setup works again. Use browser tools for the actual interaction at desktop/narrow widths and keyboard focus. Existing app source and example evidence remain unchanged. Test Windows execution only if a real Windows host is available; otherwise record it as an outstanding release gate and add automated Windows CI coverage without claiming a run.
+Compile the actual sixteen recipes with strict TypeScript enabled. Removing a required type companion or placing it in the wrong role must fail. Unsupported dependencies and stale locks must still fail. Production assets include local workers/WASM and notices where selected. Verify independent known answers, visible useful output, mount/unmount recovery and asynchronous cleanup. Historical preparation produces all three directories and their locked builds pass. These checks do not certify business models, accessibility or novice usability.
 
 ## Idempotence and Recovery
 
-Do not overwrite existing apps or merge starter files blindly. Setup retries replace only owned staging; runtime reuse checks pinned versions. No system changes or external publication. The checkpoint commit remains available; use a new corrective commit rather than destructive history rewriting if rollback is requested.
+Use temporary or explicitly new fixture directories; refuse existing output destinations. Keep runtime/cache/dependencies in disposable projects. Never install into shipped starter assets. Stop owned previews before cleanup. Preserve existing apps and historical fixture sources. Use ordinary commits, never reset or rewrite unrelated history.
 
 ## Artifacts and Notes
 
-Record outputs and checks in `evidence/web-application-builder/2026-10-23-uniform-environment/`. Do not commit downloaded runtime, npm cache, node_modules or generated site output. The previous 1ef3863 checkpoint includes pre-existing research and evidence intentionally requested by the user.
+Record commands, versions, results and limits in `evidence/web-application-builder/2026-11-08-react-recipes/`. Skill snippets are the source for current compilation checks. Historical reproduction inputs retain provenance. No generated apps, runtime caches, node_modules or dist are committed.
 
 ## Interfaces and Dependencies
 
-New projects expose setup, add, dev, test:browser, typecheck, build, preview and clean through the platform launcher. Vite/React/TypeScript are pinned; other libraries remain optional. Git and browser capabilities are independent host prerequisites. No sandbox claim: dependency/build code retains the host-granted permissions.
+Existing inventory `packages`, `peers`, `tooling` and `devTools` keep their meanings. Optional `devPackages` adds exact type dependencies; optional `declarations` names `.d.ts` files under `assets/types/`. The checker owns role policy. Each recipe exports a component or useful operation; multi-file worker examples name their companion file. The Python maintainer check uses the standard library for orchestration and the shipped private runtime for TypeScript/Vite work.
 
-Revision note: Updated after implementation and local verification to record completed work, discovered defects, fixes and outstanding platform release gates.
+Revision note: Replaced the completed environment plan with this requested work, preserving the earlier plan. Updated after compilation, independent review and browser checks to record implementation choices, corrected failures and actual remaining limits.

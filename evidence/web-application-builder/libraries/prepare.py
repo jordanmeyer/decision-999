@@ -3,9 +3,8 @@ from pathlib import Path
 import shutil
 import sys
 
-ROOT = Path(__file__).resolve().parents[3]
-PACKAGE = ROOT / 'plugins/web-application-builder'
 EVIDENCE = Path(__file__).resolve().parent
+FROZEN = EVIDENCE / 'reproduction'
 destination = Path(sys.argv[1]).resolve()
 destination.mkdir(parents=True, exist_ok=False)
 groups = {'presentation': ['reveal', 'echarts', 'jstat', 'seedrandom'],
@@ -13,22 +12,19 @@ groups = {'presentation': ['reveal', 'echarts', 'jstat', 'seedrandom'],
           'operations': ['react-flow', 'mermaid', 'vis-timeline', 'frappe-gantt', 'motion']}
 for name, ids in groups.items():
     project = destination / name
-    shutil.copytree(PACKAGE / 'assets/managed-starter', project)
+    shutil.copytree(FROZEN / 'starter', project)
     for folder in ('app', 'tests'):
         shutil.copytree(EVIDENCE / name / folder, project / folder, dirs_exist_ok=True)
     for file in ('package.json', 'package-lock.json'):
         shutil.copy2(EVIDENCE / name / file, project / file)
-    (project / 'app/app.js').unlink()
     theme = project / 'app/theme'
-    theme.mkdir(exist_ok=True)
-    shutil.copy2(PACKAGE / 'skills/campus-designer/assets/duke-tokens.css', theme)
     assets = {'tokens.js', 'base.css'}
     for key in ids:
-        assets.update(f.name for f in (PACKAGE / 'assets/library-themes').glob(key + '.*'))
+        assets.update(f.name for f in (FROZEN / 'themes').glob(key + '.*'))
     for file in assets:
-        shutil.copy2(PACKAGE / 'assets/library-themes' / file, theme)
+        shutil.copy2(FROZEN / 'themes' / file, theme)
     (project / 'licenses').mkdir()
-    for file in (PACKAGE / 'assets/license-notices').iterdir():
+    for file in (FROZEN / 'licenses').iterdir():
         if ('seedrandom' in file.name and 'seedrandom' in ids) or ('react-remove' in file.name and 'mantine' in ids):
             shutil.copy2(file, project / 'licenses')
     config = (project / 'vite.config.js').read_text().replace("const base = '/';", "const base = '/library-trial/';")

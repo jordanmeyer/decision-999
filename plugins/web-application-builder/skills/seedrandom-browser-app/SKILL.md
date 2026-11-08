@@ -11,10 +11,17 @@ For inventory decisions, read [the model guidance](../../references/decision-mod
 
 ## Usage pattern
 
-```js
+Read [React and TypeScript integration](../../references/react-libraries.md). Copy this standalone example into `app/recipes/seedrandom.ts`. Install the inventory’s development type packages and copy any listed declarations before typechecking.
+
+```ts
 import seedrandom from 'seedrandom';
-const random = seedrandom('hello.');
-const first = random(); // documented reference: 0.9282578795792454
+
+export function seededDraws(seed: string, count: number): number[] {
+  if (!Number.isInteger(count) || count < 0 || count > 100_000)
+    throw Error('Draw count must be an integer from 0 to 100,000.');
+  const random = seedrandom(seed);
+  return Array.from({ length: count }, () => random());
+}
 ```
 
 Create one local generator per run using an explicit string seed; never call Math.seedrandom or replace Math.random. Reset before repeat runs, record seed and sampling method, and keep calculations independent of animation. This is not cryptographic randomness.

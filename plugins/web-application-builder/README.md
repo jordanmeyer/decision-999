@@ -1,6 +1,6 @@
 # Web Application Builder
 
-Version 0.3.0 · Instructor-built pilot candidate.
+Version 0.3.1 · Instructor-built pilot candidate.
 
 Turn a problem you understand into a self-contained browser application, with a saved plan, local revision history, calculation evidence, and a GitHub Pages publishing workflow. Your agent handles the files and commands; you make the product and model decisions. No coding experience is required.
 
@@ -18,11 +18,11 @@ You can resume in a fresh chat with the same project files. Setup preserves exis
 
 ## Included
 
-Five [workflow skills](references/workflow.md), sixteen approved [library skills](references/library-selection.md), a uniform Vite/React/TypeScript starter for new apps, legacy starter reference, GitHub Pages workflows, and the bundled [Campus Designer](skills/campus-designer/SKILL.md). The shared [product-design reference](references/product-design.md) guides task layout, controls, states and review. Campus Designer supplies the default Duke identity; an explicitly chosen independent identity uses adapted project themes with the same accessibility and data-truth checks. Version 0.3.0 adds the uniform new-app environment and contained local setup; existing examples remain evidence for their recorded versions.
+Five [workflow skills](references/workflow.md), sixteen approved [library skills](references/library-selection.md), a uniform Vite/React/TypeScript starter for new apps, legacy starter reference, GitHub Pages workflows, and the bundled [Campus Designer](skills/campus-designer/SKILL.md). The shared [product-design reference](references/product-design.md) guides task layout, controls, states and review. Campus Designer supplies the default Duke identity; an explicitly chosen independent identity uses adapted project themes with the same accessibility and data-truth checks. Version 0.3.0 introduced the uniform new-app environment and contained local setup. Version 0.3.1 adds typed examples, selected-library type dependencies, React lifecycle guidance and current-starter recipe checks; existing applications remain evidence for their recorded versions.
 
 Describe what you need: “an interactive analytical presentation,” “an editable process diagram,” or “a dashboard for a local CSV.” Plan and Build select the smallest useful set of approved libraries. Local mapping, bounded SQL exploration and worker-based optimization are approved for the reviewed configurations.
 
-Approved libraries cover charts, diagrams, timelines, schedules, tables, React controls, slides, animation, CSV, data transformation, statistics, and reproducible randomness.
+Approved libraries cover charts, diagrams, timelines, schedules, tables, React controls, slides, animation, CSV, data transformation, statistics, and reproducible randomness. The [React integration reference](references/react-libraries.md) explains typed examples, asynchronous cleanup and worker cancellation. These examples demonstrate integrations; they are not evaluated business applications.
 
 Every new app uses Vite, React and TypeScript, including simple forms and dashboards. The agent provisions a pinned private Node/npm runtime inside the project and handles builds/previews through the included macOS or Windows launcher. Runtime, caches and temporary files stay under ignored `.toolchain/`; no global Node installation or permanent PATH change is required. Existing apps keep their recorded architecture and setup. Visitors receive a static browser app. Approved versions are pinned, bundled locally, and shipped with their license notices.
 

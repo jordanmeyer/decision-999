@@ -1,10 +1,18 @@
 # Web Application Builder evidence
 
-Instructor-built pilot candidate, checked October 8, 2026. Results below cover local packaging, maintainer-authored fixtures, and an independent instruction review. They are not student workflow outcomes, ChatGPT Work installation results, or claims of statistical/business-model accuracy.
+Instructor-built pilot candidate. Evidence is version-specific; component checks and maintainer simulations do not establish student outcomes or general business-model accuracy.
+
+| Release | Scope | Record |
+| --- | --- | --- |
+| 0.3.1 | Current React/TypeScript recipes, dependency/type boundaries, local browser operations and repaired historical reproduction | [November 8 recipe checks](2026-11-08-react-recipes/README.md) |
+| 0.3.0 | macOS ARM64 private-runtime setup and starter interaction; no complete business-app trial | [October 23 environment review](2026-10-23-uniform-environment/REVIEW.md) |
+| 0.2.3 | Nine revised applications, 285 browser cases and verified live deployments from simulated planning | [Live revision record](live-revisions/2026-10-09/README.md) |
+
+Native Windows, Intel Mac, clean-device, actual Work routing and novice-student gates remain open. The sections below preserve historical packaging, fixture and instruction-review records beginning October 8, 2026.
 
 ## Environment and initial probe
 
-Local Codex session on macOS; Git 2.50.1 (Apple Git-155), Codex CLI 0.145.0, Claude Code 2.1.86, and the Codex in-app browser. The system's existing Python preview server was reused for these maintainer checks; nothing was installed. Generated apps and plugin instructions do not require Python or Node. The optional skill-author validator could not run because PyYAML was absent from both the system and bundled Python environments. Repository and Claude validation ran separately as recorded below.
+The original 0.1.x checks used a local Codex session on macOS; Git 2.50.1 (Apple Git-155), Codex CLI 0.145.0, Claude Code 2.1.86, and the Codex in-app browser. The system's existing Python preview server was reused for those maintainer checks; nothing was installed. Those plain applications did not require Python or Node; current new projects use the private Node runtime described above. The optional skill-author validator could not run because PyYAML was absent from both the system and bundled Python environments. Repository and Claude validation ran separately as recorded below.
 
 A disposable module probe computed `(20 - 12) * 100 - 500` and visibly reported `PASS: browser module and calculation` for the expected value 300. This established local module preview before package implementation; it does not prove student Work access.
 

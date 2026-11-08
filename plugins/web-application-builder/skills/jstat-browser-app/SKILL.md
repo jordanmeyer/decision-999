@@ -11,11 +11,16 @@ For a single-period inventory simulator, read [inventory decisions](../../refere
 
 ## Usage pattern
 
-```js
+Read [React and TypeScript integration](../../references/react-libraries.md). Copy this standalone example into `app/recipes/jstat.ts`. Install the inventory’s development type packages and copy any listed declarations before typechecking.
+
+```ts
 import stats from 'jstat';
-const { jStat } = stats;
-const mean = jStat.mean([2, 4, 6]);
-const variance = jStat.variance([2, 4, 6], true); // sample variance: 4
+
+export function sampleSummary(values: number[]) {
+  if (values.length < 2 || values.some(value => !Number.isFinite(value)))
+    throw Error('Provide at least two finite observations.');
+  return { mean: stats.jStat.mean(values), variance: stats.jStat.variance(values, true) };
+}
 ```
 
 Document sample versus population conventions, units and supported input domains. Use deterministic functions by default; simulation random draws come from a local approved seedrandom instance and explicitly justified transforms, not hidden global random state.

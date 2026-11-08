@@ -9,12 +9,34 @@ Read [selection](../../references/library-selection.md), [workflow](../../refere
 
 ## Usage pattern
 
-```js
+Read [React and TypeScript integration](../../references/react-libraries.md). Copy this standalone example into `app/recipes/mermaid.tsx`. Install the inventory’s development type packages and copy any listed declarations before typechecking.
+
+```tsx
+import { useEffect, useRef, useState } from 'react';
 import mermaid from 'mermaid';
-import { mermaidTheme } from './theme/mermaid.js';
-mermaid.initialize(mermaidTheme());
-const { svg } = await mermaid.render('process-diagram', 'flowchart LR; A[Order] --> B[Ship]');
-element.innerHTML = svg; // Only SVG returned by strict Mermaid, not raw imported HTML.
+
+let renderId = 0;
+export function Example() {
+  const host = useRef<HTMLDivElement>(null);
+  const [error, setError] = useState('');
+  useEffect(() => {
+    const element = host.current!;
+    let disposed = false;
+    void document.fonts.ready.then(async () => {
+      if (disposed) return;
+      const css = getComputedStyle(element);
+      mermaid.initialize({ startOnLoad: false, securityLevel: 'strict', theme: 'base',
+        flowchart: { htmlLabels: false }, themeVariables: {
+          fontFamily: css.fontFamily, primaryColor: '#E2E6ED', primaryTextColor: '#262626',
+          primaryBorderColor: '#012169', lineColor: '#012169' } });
+      const { svg } = await mermaid.render(`process-${++renderId}`, 'flowchart LR; A[Order] --> B[Ship]');
+      if (!disposed) element.innerHTML = svg;
+    }).catch((reason: unknown) => { if (!disposed) setError(String(reason)); });
+    return () => { disposed = true; element.replaceChildren(); };
+  }, []);
+  return <section><div ref={host} /><p>Process: Order, then Ship.</p>
+    {error && <p role="alert">Diagram could not render: {error}</p>}</section>;
+}
 ```
 
 Use mermaid.js/tokens.js and the inventory KaTeX override. Keep securityLevel strict, htmlLabels false, authored diagram definitions and unique render IDs. No external image/icon packs or click links. Never concatenate CSV text into diagram source; show imported data separately as text. Catch parse errors and preserve the last valid diagram.

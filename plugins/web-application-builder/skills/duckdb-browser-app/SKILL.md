@@ -11,23 +11,56 @@ For learning explorers, read [SQL learning paths and units](../../references/dec
 
 Bundle the EH WASM and browser worker locally using Vite asset URLs. This single-thread configuration does not require cross-origin isolation headers unavailable on ordinary Pages. Do not copy CDN initialization examples or enable extension downloads.
 
-```js
+Read [React and TypeScript integration](../../references/react-libraries.md). This standalone `app/recipes/duckdb.tsx` example queries authored synthetic rows in a native read-only transaction. It has no editable SQL or imported files; add those only with the checks below. Each run owns a worker, a hard deadline and cancellation.
+
+```tsx
+import { useEffect, useRef, useState } from 'react';
 import * as duckdb from '@duckdb/duckdb-wasm';
 import wasmUrl from '@duckdb/duckdb-wasm/dist/duckdb-eh.wasm?url';
 import workerUrl from '@duckdb/duckdb-wasm/dist/duckdb-browser-eh.worker.js?url';
-const db = new duckdb.AsyncDuckDB(new duckdb.VoidLogger(), new Worker(workerUrl));
-await db.instantiate(wasmUrl);
-await db.open({ maximumThreads: 1 });
-const connection = await db.connect();
-// Register the app's controlled local input before exposing editable SQL.
-await db.registerFileText('local.csv', validatedCsvText);
-await connection.query(`
-  SET autoinstall_known_extensions=false;
-  SET autoload_known_extensions=false;
-  SET allowed_paths=['local.csv'];
-  SET enable_external_access=false;
-  SET lock_configuration=true;
-`);
+
+export function Example() {
+  const [run, setRun] = useState(0);
+  const [status, setStatus] = useState('Ready.');
+  const [pending, setPending] = useState(false);
+  const cancel = useRef<() => void>(() => {});
+  useEffect(() => {
+    if (!run) return;
+    const db = new duckdb.AsyncDuckDB(new duckdb.VoidLogger(), new Worker(workerUrl));
+    let disposed = false;
+    const stop = () => { disposed = true; cancel.current = () => {}; clearTimeout(deadline); void db.terminate(); };
+    const deadline = window.setTimeout(() => { stop(); setPending(false); setStatus('Deadline reached. Run again to retry.'); }, 10_000);
+    cancel.current = () => { stop(); setPending(false); setStatus('Cancelled. Run again to retry.'); };
+    setPending(true);
+    setStatus('Querying…');
+    void (async () => {
+      await db.instantiate(wasmUrl);
+      if (disposed) return;
+      await db.open({ maximumThreads: 1 });
+      if (disposed) return;
+      const connection = await db.connect();
+      if (disposed) return;
+      await connection.query(`SET autoinstall_known_extensions=false;
+        SET autoload_known_extensions=false; SET enable_external_access=false;
+        SET lock_configuration=true; BEGIN TRANSACTION READ ONLY;`);
+      if (disposed) return;
+      const result = await connection.query(`SELECT SUM(revenue) AS revenue
+        FROM (VALUES (240), (150)) AS sales(revenue)`);
+      if (disposed) return;
+      const revenue = String(result.getChild('revenue')!.get(0));
+      await connection.query('ROLLBACK');
+      if (disposed) return;
+      await connection.close();
+      if (disposed) return;
+      setPending(false);
+      setStatus(`Revenue: ${revenue}. Synthetic rows: 240 + 150.`);
+      stop();
+    })().catch((error: unknown) => { if (!disposed) { setPending(false); setStatus(`Query failed: ${error}`); stop(); } });
+    return stop;
+  }, [run]);
+  return <section><button disabled={pending} onClick={() => setRun(value => value + 1)}>Run local query</button>
+    <button disabled={!pending} onClick={() => cancel.current()}>Cancel query</button><p role="status">{status}</p></section>;
+}
 ```
 
 Before exposing editable SQL, turn off known-extension installation/loading and external access, allow only the fixed local input filenames the app actually needs, and lock configuration. Verify these database settings reject remote reads, extension loading and attempts to re-enable access; a regex filter is not a substitute. Register visitor file contents under controlled local names, never treat their filename or SQL text as a URL. Validate type/schema and import size; replace data transactionally.

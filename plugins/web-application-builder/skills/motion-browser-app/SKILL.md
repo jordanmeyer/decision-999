@@ -9,11 +9,27 @@ Read [selection](../../references/library-selection.md), [workflow](../../refere
 
 ## Usage pattern
 
-```js
+Read [React and TypeScript integration](../../references/react-libraries.md). Copy this standalone example into `app/recipes/motion.tsx`. Install the inventory’s development type packages and copy any listed declarations before typechecking.
+
+```tsx
+import { useEffect, useRef, useState } from 'react';
 import { animate } from 'motion';
-const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-const playback = animate(element, { transform: ['translateY(8px)', 'translateY(0px)'] },
-  { duration: reduced ? 0 : 0.2 });
+
+export function Example() {
+  const result = useRef<HTMLParagraphElement>(null);
+  const [quantity, setQuantity] = useState(100);
+  useEffect(() => {
+    const element = result.current!;
+    const preference = matchMedia('(prefers-reduced-motion: reduce)');
+    const playback = animate(element, { transform: ['translateY(8px)', 'translateY(0px)'] },
+      { duration: preference.matches ? 0 : 0.2 });
+    const stop = () => { playback.stop(); element.style.transform = 'none'; };
+    preference.addEventListener('change', stop);
+    return () => { preference.removeEventListener('change', stop); stop(); };
+  }, [quantity]);
+  return <section><button onClick={() => setQuantity(value => value + 10)}>Add ten units</button>
+    <p ref={result}>Profit: ${8 * quantity - 500}</p></section>;
+}
 ```
 
 When using Duke blue, animate position or size rather than fading it. Keep the selected app theme and its reduced-motion rules. Stop playback on teardown. Calculate simulation results independently of frames, then animate the result. Honor changed reduced-motion preferences during long sessions.

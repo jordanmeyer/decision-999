@@ -11,13 +11,34 @@ For operating ledgers and uploaded-data analysis, read the matching [dashboard g
 
 ## Usage pattern
 
-```js
+Read [React and TypeScript integration](../../references/react-libraries.md). Copy this standalone example into `app/recipes/tabulator.tsx`. Install the inventory’s development type packages and copy any listed declarations before typechecking.
+
+```tsx
+import { useEffect, useRef } from 'react';
 import { TabulatorFull } from 'tabulator-tables';
 import 'tabulator-tables/dist/css/tabulator.min.css';
-import './theme/tabulator.css';
-const table = new TabulatorFull(element, { data: rows, layout: 'fitColumns',
-  columns: [{ title: 'Region', field: 'region', formatter: 'plaintext' },
-    { title: 'Revenue', field: 'revenue', sorter: 'number' }] });
+
+export function Example() {
+  const host = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const element = document.createElement('div');
+    host.current!.append(element);
+    let disposed = false;
+    let table: TabulatorFull | undefined;
+    // Defer creation beyond StrictMode's immediate setup/cleanup probe.
+    queueMicrotask(() => {
+      if (disposed) return;
+      table = new TabulatorFull(element, { data: [
+        { region: 'North', revenue: 240 }, { region: '<b>South</b>', revenue: 150 }],
+        layout: 'fitColumns', columns: [
+          { title: 'Region', field: 'region', formatter: 'plaintext' },
+          { title: 'Revenue ($)', field: 'revenue', sorter: 'number' }] });
+      table.on('tableBuilt', () => { if (disposed) table?.destroy(); });
+    });
+    return () => { disposed = true; table?.destroy(); element.remove(); };
+  }, []);
+  return <section className="bab-table"><div ref={host} /><p>Total revenue: $390.</p></section>;
+}
 ```
 
 Give the element class bab-table. Use local data and plaintext formatters for imported strings; do not configure AJAX. Wait for tableBuilt before calling filter/update APIs. Use a text totals summary and accessible controls outside the table. Destroy the instance on teardown.

@@ -20,7 +20,7 @@ From the course repository, choose a destination that does not exist:
 
     python3 evidence/web-application-builder/libraries/prepare.py /private/tmp/bab-library-reproduction
 
-The Python command is maintainer tooling, not a student prerequisite. It copies the shipped starter, selected theme assets, canonical tokens, fixtures and frozen lockfiles. For each generated project run:
+The Python command is maintainer tooling, not a student prerequisite. It combines the preserved fixtures and lockfiles with [frozen pre-migration build/theme inputs](reproduction/README.md). It does not copy the current React/TypeScript starter. Use the recorded Node 22.19.0/npm 10.9.3 environment for the historical reproduction; current new-app validation is a separate check. For each generated project run:
 
     npm ci
     npm run build
@@ -39,7 +39,7 @@ Run the boundary checks from the course repository:
     python3 evidence/web-application-builder/check.py
     python3 evidence/web-application-builder/libraries/check.py /private/tmp/bab-library-reproduction
 
-The managed checks execute the shipped dependency checker, reject an unapproved direct package, inspect actual production output and repository-prefix assets, and exercise report-only commits, six managed source/configuration changes, opposing staged/working changes and untracked license source. The earlier plain-path checks also pass. The fixture generator refuses an existing destination instead of overwriting it. A second fresh generation and all three locked builds passed. This sandbox blocks writes to the default npm cache: the reproduction used `npm ci --cache /private/tmp/bab-npm-cache`. The initial default-cache attempt failed with EPERM; no cache ownership or global configuration was changed.
+The managed checks execute the frozen historical dependency checker, reject an unapproved direct package, inspect actual production output and repository-prefix assets, and exercise report-only commits, six managed source/configuration changes, opposing staged/working changes and untracked license source. The earlier plain-path checks also pass. The fixture generator refuses an existing destination instead of overwriting it. A second fresh generation and all three locked builds passed in the original trial. This sandbox blocks writes to the default npm cache: the reproduction used `npm ci --cache /private/tmp/bab-npm-cache`. The initial default-cache attempt failed with EPERM; no cache ownership or global configuration was changed.
 
 ## Observed failures and corrections
 
@@ -68,3 +68,11 @@ Production output contains only index.html, built assets and THIRD-PARTY-NOTICES
 The local 0.2.0 package installed successfully in isolated Codex and Claude configurations, with all **19** skills present: five workflow skills, Campus Designer and thirteen library skills. This demonstrates CLI installation/discovery, not automatic Work invocation. Both Claude validators, directory generation and repository boundary checks pass. The initial gallery review displayed version 0.2.0 and 30 results at desktop and narrow widths (updated to 31 after review corrections); keyboard activation of the copy control reported success. Trial preview servers were stopped afterward.
 
 No new repository or live managed deployment was created. GitHub Actions execution, returning-browser updates on Pages, actual ChatGPT Work routing/handoffs, clean-machine macOS/Windows setup, and novice usability remain unverified. Existing version 0.1.1 live examples retain their own historical evidence.
+
+## Reproduction repair — November 8, 2026
+
+The uniform React/TypeScript starter broke this historical generator: it tried to delete the removed `app/app.js` and add a React configuration already present in the new starter. Preparation now uses only the [frozen pre-migration inputs](reproduction/README.md) and the existing fixtures. Historical source, lockfiles, browser results and reported counts are unchanged. The historical dependency boundary check uses the matching frozen policy; it does not certify current library approval.
+
+Fresh preparation, locked installs and all three production builds passed on macOS with Node 22.19.0/npm 10.9.3 and a disposable npm cache. Operations used the documented Frappe stylesheet-copy step before its successful build. `libraries/check.py` passed dependency rejection, published notices/assets, repository-prefix and Git freshness boundaries. Browser interactions and historical screenshots were not re-evaluated in this repair.
+
+The current audit of the frozen operations lock reports one vulnerable transitive package, DOMPurify, including critical advisory [GHSA-cg2g-xh64-v4q7](https://github.com/advisories/GHSA-cg2g-xh64-v4q7), high advisory [GHSA-mrv2-3pqr-j5jr](https://github.com/advisories/GHSA-mrv2-3pqr-j5jr), and low advisory [GHSA-c6gr-qvv4-5v3f](https://github.com/advisories/GHSA-c6gr-qvv4-5v3f). This is a new audit result, not a correction to the original recorded audit. The lock remains frozen for reproduction; do not use it as a dependency baseline for new applications. No application-specific exploitability claim or deployment was made.

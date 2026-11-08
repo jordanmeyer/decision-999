@@ -89,6 +89,12 @@ with tempfile.TemporaryDirectory() as temporary, redirect_stdout(io.StringIO()):
     edit(inventory, lambda data: data['libraries'][0]['packages'].update(echarts='^6.0.0'))
     rejects(root, 'Library versions must be exact stable releases')
     inventory.write_text(saved_inventory)
+    edit(inventory, lambda data: data['libraries'][0].update(devPackages={'@types/example': '^1.0.0'}))
+    rejects(root, 'Library versions must be exact stable releases')
+    inventory.write_text(saved_inventory)
+    edit(inventory, lambda data: data['libraries'][0].update(declarations=['missing.d.ts']))
+    rejects(root, 'Library type declaration is missing or invalid')
+    inventory.write_text(saved_inventory)
     edit(inventory, lambda data: data['libraries'][0].update(skill='missing-library-skill'))
     rejects(root, 'Library skill is missing')
     inventory.write_text(saved_inventory)
@@ -152,5 +158,14 @@ with tempfile.TemporaryDirectory() as temporary, redirect_stdout(io.StringIO()):
     subprocess.run([sys.executable, ROOT / 'plugins/create-your-own/skills/create-your-own/scripts/new_plugin.py',
                     'drafts/meeting-brief', '--developer', 'Test'], cwd=root, check=True, capture_output=True)
     rejects(root, 'meeting-brief/plugin.json: fill in interface.shortDescription')
+    # Historical evidence must prepare without borrowing the current starter.
+    shutil.rmtree(root / BUILDER / 'assets/managed-starter')
+    historical = root / 'historical-libraries'
+    preparation = root / 'evidence/web-application-builder/libraries/prepare.py'
+    result = subprocess.run([sys.executable, preparation, historical], capture_output=True, text=True)
+    assert result.returncode == 0, result.stderr
+    assert all((historical / name / 'app/index.html').is_file() for name in ('presentation', 'dashboard', 'operations'))
+    result = subprocess.run([sys.executable, preparation, historical], capture_output=True)
+    assert result.returncode != 0, 'Historical preparation must not overwrite an existing project'
 print('Passed: app gallery links, escaping, preview containment, unique IDs, alternate base and preserved plugin platform; catalogs and bundled designer current, stale designer resources replaced, clean build, missing listing text, escaping screenshot and skill link, automatic second listing with its team and no screenshots, '
-      'scaffolded plugin held until its listing is written.')
+      'scaffolded plugin held until its listing is written; exact type pins, declaration resources, independent historical preparation and overwrite refusal.')

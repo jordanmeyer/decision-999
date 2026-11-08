@@ -1,5 +1,5 @@
 {
-  "checked": "2026-10-23",
+  "checked": "2026-11-08",
   "runtime": {
     "node": "24.22.1",
     "npm": "11.19.1"
@@ -102,6 +102,9 @@
         "frappe-gantt": "1.2.2"
       },
       "peers": {},
+      "declarations": [
+        "frappe-gantt.d.ts"
+      ],
       "documentation": "https://docs.frappe.io/gantt/introduction",
       "licenses": {
         "frappe-gantt": {
@@ -122,6 +125,9 @@
         "tabulator-tables": "6.6.1"
       },
       "peers": {},
+      "devPackages": {
+        "@types/tabulator-tables": "6.3.6"
+      },
       "documentation": "https://tabulator.info/docs/6.3",
       "licenses": {
         "tabulator-tables": {
@@ -233,6 +239,9 @@
         "papaparse": "5.7.0"
       },
       "peers": {},
+      "devPackages": {
+        "@types/papaparse": "5.5.2"
+      },
       "documentation": "https://www.papaparse.com/docs",
       "licenses": {
         "papaparse": {
@@ -273,6 +282,9 @@
         "jstat": "1.9.6"
       },
       "peers": {},
+      "declarations": [
+        "jstat.d.ts"
+      ],
       "documentation": "https://jstat.github.io/",
       "licenses": {
         "jstat": {
@@ -293,6 +305,9 @@
         "seedrandom": "3.0.5"
       },
       "peers": {},
+      "devPackages": {
+        "@types/seedrandom": "3.0.8"
+      },
       "documentation": "https://github.com/davidbau/seedrandom",
       "licenses": {
         "seedrandom": {
@@ -313,6 +328,9 @@
         "leaflet": "1.9.4"
       },
       "peers": {},
+      "devPackages": {
+        "@types/leaflet": "1.9.22"
+      },
       "documentation": "https://leafletjs.com/reference.html",
       "licenses": {
         "leaflet": {

@@ -107,8 +107,11 @@ def load(root, config):
                 require(entry['status'] in ('approved', 'candidate', 'blocked'), 'Invalid library status')
                 require(re.fullmatch(r'[a-z0-9]+(-[a-z0-9]+)*', entry['skill'])
                         and (package / 'skills' / entry['skill'] / 'SKILL.md').is_file(), 'Library skill is missing')
-                for version in (entry['packages'] | entry['peers']).values():
+                for version in (entry['packages'] | entry['peers'] | entry.get('devPackages', {})).values():
                     require(re.fullmatch(r'\d+\.\d+\.\d+', version), 'Library versions must be exact stable releases')
+                for declaration in entry.get('declarations', []):
+                    require(Path(declaration).name == declaration and declaration.endswith('.d.ts')
+                            and (package / 'assets/types' / declaration).is_file(), 'Library type declaration is missing or invalid')
                 require(all(item['expression'] and item['files'] for item in entry['licenses'].values()), 'Library license evidence is missing')
             starter = read_json(package / 'assets/managed-starter/package.json')
             require(starter['devDependencies'] == {key: inventory['tooling'][key] for key in inventory['devTools']}, 'Managed starter tooling is stale')
