@@ -11,12 +11,12 @@ This example responds to a real user request to recreate the useful interactions
 - [Plan and model boundaries](https://github.com/jordanmeyer/bab-example-madness/blob/main/PLAN.md)
 - [Evaluation and failed rounds](https://github.com/jordanmeyer/bab-example-madness/blob/main/EVALUATION.md)
 - [Deployment record](https://github.com/jordanmeyer/bab-example-madness/blob/main/DEPLOYMENT.md)
-- [Complete 21-item fidelity checklist review](../madness/2026-10-09/checklist-review/review.md)
-- [Earlier original geometry review](../madness/2026-10-09/geometry-review/review.md)
-- [Previous comparison round](../madness/2026-10-09/fidelity-review/review.md)
-- [Independent source and interaction review](../madness/2026-10-09/bab-madness-app-review.md)
-- [Independent model review](../madness/2026-10-09/bab-madness-derived-review.md)
-- [Reproduction review](../madness/2026-10-09/bab-madness-reproduction-review.md)
+- [Complete 21-item fidelity checklist review](https://github.com/jordanmeyer/decision-999/blob/bb8a885e1ab306a803588e5e15683de27e131fae/evidence/web-application-builder/madness/2026-10-09/checklist-review/review.md)
+- [Earlier original geometry review](https://github.com/jordanmeyer/decision-999/blob/bb8a885e1ab306a803588e5e15683de27e131fae/evidence/web-application-builder/madness/2026-10-09/geometry-review/review.md)
+- [Previous comparison round](https://github.com/jordanmeyer/decision-999/blob/bb8a885e1ab306a803588e5e15683de27e131fae/evidence/web-application-builder/madness/2026-10-09/fidelity-review/review.md)
+- [Independent source and interaction review](https://github.com/jordanmeyer/decision-999/blob/bb8a885e1ab306a803588e5e15683de27e131fae/evidence/web-application-builder/madness/2026-10-09/bab-madness-app-review.md)
+- [Independent model review](https://github.com/jordanmeyer/decision-999/blob/bb8a885e1ab306a803588e5e15683de27e131fae/evidence/web-application-builder/madness/2026-10-09/bab-madness-derived-review.md)
+- [Reproduction review](https://github.com/jordanmeyer/decision-999/blob/bb8a885e1ab306a803588e5e15683de27e131fae/evidence/web-application-builder/madness/2026-10-09/bab-madness-reproduction-review.md)
 
 ## Data and interpretation
 
@@ -28,6 +28,6 @@ Recipe library: Apache ECharts. Native HTML/SVG supplies the bracket and sortabl
 
 ## Evidence and limits
 
-The current local suite passed 80/80 checks in Node and the browser. The user’s complete fidelity checklist reopened the earlier one-season acceptance. Independent review now covers 112 states across all years and four desktop widths, with 11,168 named-strip measurements and zero clipping, plus 375px phone output and pointer/keyboard/replay interactions. All 21 corrections receive a bounded pass. Failed rounds and explicit limits, including source-only reduced-motion review, remain in the [current record](../madness/2026-10-09/checklist-review/README.md).
+The current local suite passed 80/80 checks in Node and the browser. The user’s complete fidelity checklist reopened the earlier one-season acceptance. Independent review now covers 112 states across all years and four desktop widths, with 11,168 named-strip measurements and zero clipping, plus 375px phone output and pointer/keyboard/replay interactions. All 21 corrections receive a bounded pass. Failed rounds and explicit limits, including source-only reduced-motion review, remain in the [current record](https://github.com/jordanmeyer/decision-999/blob/bb8a885e1ab306a803588e5e15683de27e131fae/evidence/web-application-builder/madness/2026-10-09/checklist-review/README.md).
 
 The gallery preview is an actual local production screenshot of the 2023 continuous bracket with Houston’s probability-scaled title route, captured on October 9, 2026. GitHub Actions succeeded for the published commit, and live checks verified both model sources, the 2026 title result, cancellation, and build-story/source links. The source repository's deployment record identifies the exact commit and observations. Configured-Mac observations do not certify model calibration, full accessibility, phone-device behavior, clean-machine installation, or novice usability. These results are separate from the earlier nine-app synthetic campaign and its 285-check total.

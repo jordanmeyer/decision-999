@@ -6,18 +6,6 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["scripts/serve.py"],
       "port": 8000
-    },
-    {
-      "name": "madness",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["--prefix", "/Users/jordan/Projects/bab-example-madness", "run", "dev", "--", "--port", "5183"],
-      "port": 5183
-    },
-    {
-      "name": "madness-tests",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["--prefix", "/Users/jordan/Projects/bab-example-madness", "run", "test:browser", "--", "--port", "9741"],
-      "port": 9741
     }
   ]
 }

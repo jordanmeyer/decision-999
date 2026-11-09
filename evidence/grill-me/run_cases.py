@@ -6,6 +6,8 @@ import tempfile
 
 HERE = Path(__file__).resolve().parent
 PLUGIN = HERE.parents[1] / 'plugins/grill-me'
+destination = HERE.parents[1] / 'archive/runs/grill-me'
+destination.mkdir(parents=True, exist_ok=True)
 print(subprocess.check_output(['claude', '--version'], text=True).strip(), flush=True)
 with tempfile.TemporaryDirectory() as scratch:
     for name in ('frontier', 'branch', 'confirmation'):
@@ -19,7 +21,7 @@ with tempfile.TemporaryDirectory() as scratch:
         # Keep the answer and reported model, not session IDs or local account metadata.
         record = {key: output[key] for key in ('result', 'is_error', 'modelUsage') if key in output}
         record['exit_code'] = result.returncode
-        (HERE / f'{name}-run.json').write_text(json.dumps(record, indent=2, ensure_ascii=False) + '\n')
+        (destination / f'{name}-run.json').write_text(json.dumps(record, indent=2, ensure_ascii=False) + '\n')
         print(f'{name}: exit {result.returncode}', flush=True)
         if result.returncode:
             print(result.stderr or output.get('result', ''), flush=True)

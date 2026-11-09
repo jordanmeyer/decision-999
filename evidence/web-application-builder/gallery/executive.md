@@ -10,6 +10,6 @@ An instructor-run example with synthetic data and a recorded simulated planning 
 - [Evaluation, failed rounds and observed results](https://github.com/jordanmeyer/bab-example-executive/blob/main/EVALUATION.md)
 - [Independent review](https://github.com/jordanmeyer/bab-example-executive/blob/main/REVIEW.md)
 - [Exact deployment record](https://github.com/jordanmeyer/bab-example-executive/blob/main/DEPLOYMENT.md)
-- [Reproducible revision evidence](../live-revisions/2026-10-09/executive/REVISION.md)
+- [Reproducible revision evidence](https://github.com/jordanmeyer/decision-999/blob/bb8a885e1ab306a803588e5e15683de27e131fae/evidence/web-application-builder/live-revisions/2026-10-09/executive/REVISION.md)
 
 Recipe libraries: Mantine · ECharts. Campus Designer provides the shared visual direction and licensed local fonts. These configured-Mac trials establish the recorded behaviors, not a certified business model, universal accessibility or student usability.

@@ -24,5 +24,7 @@ with tempfile.TemporaryDirectory() as scratch:
         assert cached.read_bytes() == (ROOT / 'plugins/grill-me/skills/grill-me/SKILL.md').read_bytes()
         log.append(f'{app}: cached skill matches the packaged skill byte for byte.\n')
     output = '\n'.join(line.rstrip() for line in log if line.strip()).rstrip().replace(str(Path(scratch).resolve()), '$TMP').replace(scratch, '$TMP').replace(str(ROOT), '$REPO') + '\n'
-(ROOT / 'evidence/grill-me/install-test.txt').write_text(output)
+destination = ROOT / 'archive/runs/grill-me'
+destination.mkdir(parents=True, exist_ok=True)
+(destination / 'install-test.txt').write_text(output)
 print(output)

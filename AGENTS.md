@@ -10,6 +10,8 @@ The site is an employer-facing directory where MBA students point recruiters to 
 
 `plugins/<name>/plugin.json` (Agent Plugins format) is the only registry and holds each listing. Keep `plugins/<name>/` to what an install needs; review records and example output belong in `evidence/<name>/`. `scripts/build.py` generates `.agents/plugins/marketplace.json`, `.claude-plugin/marketplace.json` and `plugins/<name>/.claude-plugin/plugin.json`; commit them and never edit them by hand. Listing evidence must come from runs anyone can reproduce; never invent results, students, endorsements or adoption.
 
+Keep `evidence/` to active listing summaries, published assets and required validation inputs. Archive historical reviews, completed plans, copied app snapshots and external research under gitignored `archive/`; preserve citations to their original Git revisions. No build, validation or installation may depend on the local archive. Keep only active plans in `docs/EXECPLAN.md`; move them into the archive when completed.
+
 Build and validate with `python3 scripts/build.py` and `python3 scripts/check.py`. Preview with `python3 scripts/serve.py`. Run `claude plugin validate .` after catalog changes. Only `dist/` is deployed. Inspect desktop/narrow output and keyboard/copy behavior after UI changes. Tests should address real boundaries, not mirror trivial implementation. Review surrounding code and make a separate simplification pass.
 
 For significant changes maintain `docs/EXECPLAN.md` according to `~/.codex/PLANS.md`. Preserve the sibling source. Never copy credentials, caches, or generated site output into this repository. Deploy only main, using GitHub Actions and ordinary commits.

@@ -1,2 +1,0 @@
-140/140 passed · 2984 rendered labels
-25/25 rendered checks passed

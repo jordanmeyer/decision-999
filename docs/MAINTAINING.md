@@ -14,7 +14,7 @@ This guide is for the course team maintaining the curated collection of MBA stud
 
 Optional `examples` in the listing extension contains `label` and absolute HTTPS `url` pairs, shown as “Try the apps” beneath the overview. Link only observed, working examples and identify simulated or synthetic content in the description. For a worked example add `preview` (a .jpg/.png path relative to its evidence folder), `previewAlt`, `problem`, `lesson`, `libraries`, and an HTTPS `walkthrough` URL. The app name stays in `label`; lead with the business question in `problem`. Preview files stay outside the install package and only those selected files are copied to the website. Keep screenshots/version claims historical when instructions improve without rebuilding the app.
 
-**Evidence.** Support each result with inspectable sources and a documented method. Put `EVIDENCE.md` in `evidence/<name>/` with the original task, date, tools/versions, checks, failures and limits; the listing links to it. An optional `evidence/<name>/example.html`, a real self-contained output, appears on the listing as “Open the full page.” distinguish a reusable restatement prompt from the exact task or transcript. New evaluations can use cases/scripts in `evals/`. Existing iterative reviews can preserve source artifacts, reports, exact reviewed hashes and browser reproduction scripts in the same folder. Keep original failed rounds and label final passes after revisions accurately. Reproduce checks in a scratch copy so historical records stay intact. Report metrics appropriate to the work; never invent cost, time, accuracy, consistency or first-attempt results. State explicitly when these were not measured.
+**Evidence.** Support each result with inspectable sources and a documented method. Put `EVIDENCE.md` in `evidence/<name>/` with the original task, date, tools/versions, checks, failures and limits; the listing links to it. An optional `evidence/<name>/example.html`, a real self-contained output, appears on the listing as “Open the full page.” distinguish a reusable restatement prompt from the exact task or transcript. Keep current reproducible cases/scripts and required fixtures here. Move historical review outputs and copied app snapshots into ignored `archive/`, preserving public citations at their original Git revision. Keep original failed rounds and label final passes after revisions accurately. Reproduce checks in a scratch copy so historical records stay intact. Report metrics appropriate to the work; never invent cost, time, accuracy, consistency or first-attempt results. State explicitly when these were not measured.
 
 **Data.** Use public, synthetic, or explicitly approved data only. Never include employer, client, patient, or other confidential material. This repository is public, and its history keeps everything ever committed.
 
@@ -26,13 +26,13 @@ To update a plugin, bump its `version`, repeat checks affected by the change, an
 
 ## Browser applications
 
-Web Application Builder is a separate instructor-built pilot for independent student app repositories. Its five workflow skills cover Setup, Plan, Build, Evaluate, and Deploy; plain applications need no Python/Node installation; approved library applications use an agent-managed Node/npm/Vite build. The directory's Python commands remain maintainer tooling only. Preserve the existing Create Your Own plugin path for plugin authors.
+Web Application Builder is a separate instructor-built pilot for independent student app repositories. Its five workflow skills cover Setup, Plan, Build, Evaluate, and Deploy. New applications use the managed React/TypeScript starter and private Node/npm/Vite runtime; the plain starter remains for existing applications and boundary checks. The directory's Python commands remain maintainer tooling only. Preserve the existing Create Your Own plugin path for plugin authors.
 
 `plugins/web-application-builder/skills/campus-designer/` is generated from `plugins/campus-designer/skills/campus-designer/` by `scripts/build.py`. Edit only the canonical designer, then rebuild and commit the generated copy with the catalogs. `scripts/check.py` rejects a stale copy and verifies regeneration removes obsolete resources. Build invokes this packaged designer directly, so students do not need another plugin. Public brand guidance supplies styling, not affiliation or mark authorization.
 
-Run `python3 evidence/web-application-builder/check.py` for Git freshness and app-only publication boundaries. Browser fixtures and reproduction instructions live in `evidence/web-application-builder/`. Distinguish those maintainer checks from actual Work installation, fresh-chat student trials, clean-machine setup, and live deployment. Keep unsupported release gates explicit in the listing and ExecPlan. No public app submission flow is introduced.
+Run `python3 evidence/web-application-builder/check.py` for Git freshness and app-only publication boundaries. Browser fixtures and reproduction instructions live in `evidence/web-application-builder/`. Distinguish those maintainer checks from actual Work installation, fresh-chat student trials, clean-machine setup, and live deployment. Keep unsupported release gates explicit in the listing and evidence summary. No public app submission flow is introduced.
 
-### Approved browser libraries (0.2.0)
+### Approved browser libraries
 
 `references/libraries.json` within Web Application Builder owns exact library/peer versions and approval status. Library skills read that inventory rather than repeating version numbers. Validate new versions in isolation and in affected combinations; inspect peer requirements, resolved lockfiles, licenses, install scripts and advisories. Do not automatically upgrade student projects. The dependency checker runs through the installed plugin and rejects unapproved direct packages and unsupported lockfile sources. It is not a JavaScript security analyzer.
 
@@ -40,17 +40,24 @@ The managed starter uses project-local npm dependencies and ignored build output
 
 Reproduce the three synthetic library fixtures with `evidence/web-application-builder/libraries/prepare.py` in a new scratch folder, follow that evidence README's install/build/browser commands, then run its `check.py` with the scratch root. Preserve failures and distinguish isolated CLI installation (19 skills) from actual Work selection. Update listing evidence and limitations with dependency changes. No new live deployment destination is implied by a local library update.
 
-## Reviewed recipe examples
+## Current recipe validation
 
-Web Application Builder 0.2.3 includes 16 pinned configurations. The nine examples and their exact simulated planning, source, evaluation, persistent-review rounds and live publication records are under `evidence/web-application-builder/recipe-examples/2026-10-09/`. Each `source/` snapshot reproduces its separate GitHub repository with its own lockfile. Do not treat the source snapshots as installed plugin content or copy their built output into the directory.
+Run `python3 scripts/check-app-environment.py` for private-runtime setup/build/recovery and `python3 scripts/check-library-recipes.py` for the sixteen documented React/TypeScript recipes, model assertions, type companions and package-policy boundaries. These checks use disposable external project directories. See [validation commands](VALIDATION.md) for interactive review and historical fixture checks.
 
-Before updating an approved dependency, inspect the recorded limitations and rerun the affected source/production/browser checks. Local Leaflet needs bundled geometry; DuckDB's reviewed EH profile disables external access and uses native read-only query preparation; HiGHS runs bounded models in a cancellable worker.
-
-Keep canonical dependency checks and source/PLAN applicability separate from rendered behavior and live deployment checks.
-
+The nine published examples have their own repositories, linked from `site/apps.json` and the gallery walkthroughs. Historical source snapshots, simulated planning conversations and review rounds are cited at their original Git revision from `evidence/web-application-builder/EVIDENCE.md`. Before changing an approved dependency, inspect its limitations and rerun the affected source/production/browser checks. Keep source/plan applicability separate from rendered behavior and live deployment checks.
 
 ## Improving Web Application Builder from output review
 
 Fix recurring causes at their owner: stages for brief coverage and handoffs; `references/decision-models.md` for conditional model/teaching behavior; canonical Campus Designer for typography, composition and controls; library adapters for actual widget settings. Do not silently patch or reclassify historical examples. Track each review item to its owner and distinguish preventive guidance from verified output changes. Forward-test substantial instruction changes using a fresh agent and a realistic request that does not reveal the desired correction.
 
 Both starters receive canonical tokens, local font CSS and licensed font files during the directory build. Edit the canonical assets, then regenerate. Managed notices include the two font licenses; inspect actual loaded faces and emitted assets when changing typography.
+
+## Repository organization
+
+`plugins/` contains everything needed for independent installs; canonical and generated copies of design assets are intentional. `site/`, `scripts/`, `.github/` and the generated host catalogs support the website and validation. `evidence/` retains listing summaries, published examples/previews, licenses and required reproducible check inputs. `docs/` contains current maintenance and validation instructions.
+
+Historical reviews, completed or superseded plans, course research, the Grok comparison/reference and copied application snapshots are held in local `archive/2026-11-09-cleanup/`, preserving original paths and a SHA-256 inventory. `/archive/` is gitignored and absent from fresh clones. Original tracked records remain in revision `bb8a885e1ab306a803588e5e15683de27e131fae`; retrieve them from Git when reproducing a historical review. Links in active evidence records use that immutable revision. Archive links become remotely available when the containing commits are pushed; local Git already has them.
+
+Keep generated runs under ignored `archive/runs/` or an external scratch directory. The Grill Me runners write new transcripts under `archive/runs/grill-me/`. Archive completed execution plans; create `docs/EXECPLAN.md` only while significant work is active. Avoid adding historical output back into `evidence/` merely because a check generated it. Retain failed rounds and exact source revisions in the archive before curating a new evidence summary.
+
+Deleting `dist/` is safe; the build recreates it. Do not deduplicate assets that an installed plugin, standalone example or frozen validation fixture needs. Archiving changes the current source tree; it does not shrink existing Git history. No build or check may depend on the local archive.
