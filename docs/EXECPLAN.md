@@ -21,7 +21,7 @@ You can see it working by creating an empty folder, running the setup command in
 - [x] (2026-11-11) Confirmed the working tree was clean and equal to `origin/main` at commit `40b5061` ("Archive historical research and retain lean plugin website sources"). No "pre-reorg commit" was needed; `40b5061` is the pre-reorganisation baseline.
 - [x] (2026-11-11) Wrote this plan from the design discussion with Jordan.
 - [x] (2026-11-11) Jordan approved the design decisions and asked that every step needing him move to a final milestone, and that a Claude Opus 5.5 session carry out the implementation. Plan revised.
-- [ ] Milestone 1: local prototypes for the technical unknowns.
+- [x] (2026-11-11 14:05) Milestone 1: all five prototypes passed in `/private/tmp/bwai/m1/`; no fallback was needed. Results are under `Surprises & Discoveries`.
 - [ ] Milestone 2: the starter and the local half of the tool (setup, new, dev, add, plan-check, check).
 - [ ] Milestone 3: the GitHub and team commands, tested against a local stand-in for GitHub.
 - [ ] Milestone 4: seven skills and three references, inside the size budget.
@@ -35,6 +35,21 @@ You can see it working by creating an empty folder, running the setup command in
 
 ## Surprises & Discoveries
 
+- Observation (prototype 1): the downloaded `gh` writes a device identifier to `~/.local/state/gh/device-id` even with `GH_CONFIG_DIR` set, which breaks "nothing outside the course folder".
+  Evidence: after `gh --version` and `gh auth status` with only `GH_CONFIG_DIR` set, `find ~/.local -newer marker` listed `~/.local/state/gh`. With `XDG_STATE_HOME`, `XDG_CACHE_HOME` and `XDG_DATA_HOME` also pointed inside the test folder, the same commands wrote only `home/state/gh/device-id` inside it. The archive's SHA-256 (`d700207e…c062`) matched the digest GitHub publishes for `gh_2.103.3_macOS_arm64.zip`. The first, unredirected run left `~/.local/state/gh/device-id` on this Mac; it is harmless and was not removed.
+
+- Observation (prototype 2): Playwright's browser host publishes no checksums, so the browser's pinned SHA-256 is the one this Mac computed at first download.
+  Evidence: `https://cdn.playwright.dev/builds/cft/156.0.8078.4/mac-arm64/chrome-headless-shell-mac-arm64.zip` (Chrome Headless Shell 156, the revision `playwright-core` 1.64.1 expects) hashed to `94e4337b…b53d`, 104 MB. Launched by path, it produced `desktop.png`, `mobile.png` and a 1200 by 630 `card.png` with EB Garamond and Open Sans loaded. A page that threw an error, linked a Google Fonts stylesheet, referenced a missing image and had a 900-pixel-wide block was reported for the error, the outside request, the 404 and sideways scrolling on the phone size; an empty `#root` was reported as blank.
+
+- Observation (prototype 3): `node --test tests/` treats the folder name as a file and fails; a file pattern works.
+  Evidence: with `"test": "node --test tests/*.test.ts"`, one passing and one deliberately wrong test printed `ℹ pass 1`, `ℹ fail 1` and exit status 1, while `tsc --noEmit` passed and `vite build` bundled an `App.tsx` that imports `./model.ts`.
+
+- Observation (prototype 4): `base: './'` plus `VITE_SITE_URL` works under any repository folder.
+  Evidence: `dist/` copied to `serve/some-repository/` and served by `python3 -m http.server`; every request for the page, script, stylesheet and both fonts returned 200, and the page carried `<meta property="og:image" content="http://127.0.0.1:8791/some-repository/card.png">`, which returned `200 image/png`. (Port 8765 was taken by another program on this Mac; any free port works.)
+
+- Observation (prototype 5): projects in a course folder whose name has spaces share one download cache.
+  Evidence: in `/private/tmp/bwai/m1/Build with AI/`, with `npm_config_cache` set to `.toolchain/npm-cache`, the first project's `npm ci --prefer-offline` filled the 18 MB cache and the second project's `npm ci --offline` (which fails if anything is missing from the cache) added all 26 packages; both built.
+
 - Observation: the existing GitHub publishing evidence does not cover a student's machine.
   Evidence: the hand-made example repository at `/Users/jordan/Projects/bab-example-madness` pushes over SSH (`origin git@github.com:jordanmeyer/bab-example-madness.git`) using a key already on this Mac, which also has Apple's developer tools, a global Node and Homebrew Python. A student starts with none of these.
 
@@ -46,6 +61,18 @@ You can see it working by creating an empty folder, running the setup command in
 
 
 ## Decision Log
+
+- Decision: `setup` downloads the headless browser itself, from the same address Playwright uses, verifies it against a checksum recorded in `tool/toolchain.json`, and launches it by path (`executablePath`); Playwright's own installer is not used.
+  Rationale: Playwright's installer verifies nothing and its folder layout is an internal detail. One download-and-verify routine then serves `gh` and the browser alike.
+  Date/Author: 2026-11-11, Claude (implementation).
+
+- Decision: `playwright-core` 1.64.1 (released 2026-10-14) rather than 1.65.0 (released 2026-11-05), and `gh` 2.103.3 (2026-10-26).
+  Rationale: prefer releases that have been public for a few weeks; both were the newest such releases on 2026-11-11.
+  Date/Author: 2026-11-11, Claude.
+
+- Decision: add `@types/node` 24.19.2 to the starter's development dependencies, and set `allowImportingTsExtensions`, `erasableSyntaxOnly` and `resolveJsonModule` in its `tsconfig.json`.
+  Rationale: the known-answer test imports `node:test` and must type-check; Node runs TypeScript only when imports name the `.ts` file and the code uses no TypeScript-only runtime syntax, and these settings make the type check enforce exactly that. This is the one change to the starter's dependency list.
+  Date/Author: 2026-11-11, Claude (from prototype 3).
 
 - Decision: seven skills named `setup`, `resume`, `ideate`, `plan`, `build`, `iterate`, `ship`.
   Rationale: one per course stage. Setup moved to pre-work so class 1 can be about the resume; ideation was added because the co-developer wanted class 1 less intimidating; "deploy" no longer describes week 5 because publishing happens from the first session.
