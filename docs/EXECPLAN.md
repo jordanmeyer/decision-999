@@ -25,7 +25,7 @@ You can see it working by creating an empty folder, running the setup command in
 - [x] (2026-11-11 14:40) Milestone 2: starter, launchers and the local commands (`setup`, `new`, `dev`, `add`, `plan-check`, `check`), with the one-line skip in `scripts/build.py` and the first version of the rewritten `scripts/check.py` (catalog currency plus the size budget). The acceptance transcript is under `Artifacts and Notes`. All fourteen commands were written in this milestone because they share helpers; Milestone 3 tests the GitHub and team half.
 - [x] (2026-11-11 14:20) Milestone 3: the GitHub and team commands, tested against a bare repository with `COURSE_OFFLINE=1`. Testing found and fixed four faults: teammates' regenerated screenshots and card conflicted on every merge; two journal entries in one minute overwrote each other; `start` clipped the first unsaved file name; and after `clone --own` old journal entries satisfied `publish`. Transcript under `Artifacts and Notes`.
 - [ ] Milestone 3, remaining: the real `signin` start (one-time code from GitHub, then cancelled) was not run. This session's permission rules refused to start a GitHub device sign-in, so `signin` was exercised against a stand-in `gh` that prints GitHub's code lines; the real call moves to Milestone 6, step 1.
-- [ ] Milestone 4: seven skills and three references, inside the size budget.
+- [x] (2026-11-11 14:35) Milestone 4: seven skills, three references and the student README (Assignment 0); `scripts/check.py` now also checks skill front matter, the seven default prompts, every link, that every `course <command>` named in the guidance exists in the tool, and that the plan skill and `plan-check` use the same eight questions. Guidance 2,425 of 2,500 words; tool 467 of 600 lines.
 - [ ] Milestone 5: simulated end-to-end rehearsal on this Mac.
 - [ ] Milestone 6, step 1 (with Jordan): real GitHub sign-in and publish.
 - [ ] Milestone 6, step 2 (with Jordan): ChatGPT Work run in a fresh macOS user account.
@@ -111,6 +111,26 @@ You can see it working by creating an empty folder, running the setup command in
   Rationale: the fixed file name format has minute resolution; finishing a merge right after a session overwrote the earlier entry.
   Date/Author: 2026-11-11, Claude (found in Milestone 3 testing).
 
+- Decision: the guidance names tool commands as `course <command>`, defined once in `references/conversation.md` as `bash course.sh <command>` on a Mac and `powershell -NoProfile -File .\course.ps1 <command>` on Windows.
+  Rationale: one platform-neutral spelling saves words in every skill and lets `scripts/check.py` find each command named in a code span.
+  Date/Author: 2026-11-11, Claude.
+
+- Decision: `build` takes the plan's address with the invocation (`$build <owner>/<name>`); without it the agent tells the student to start again that way rather than asking.
+  Rationale: the plan requires that `build` ask nothing, but `clone` needs the address.
+  Date/Author: 2026-11-11, Claude.
+
+- Decision: `plan-check` requires each of the eight questions, word for word without its number, as a `##` heading; `scripts/check.py` fails if the plan skill's list and the tool's list differ.
+  Rationale: the questions then live in two places that cannot drift, and the plan file reads as questions and answers.
+  Date/Author: 2026-11-11, Claude.
+
+- Decision: `ship` lets a second teammate skip to the publish step when the README already holds a teammate's answers, so each student can run `$ship` once for their own copy (`publish --mine`).
+  Rationale: every student needs a personal copy, but only one should rewrite the shared README.
+  Date/Author: 2026-11-11, Claude.
+
+- Decision: the plugin README names no repository or marketplace; it points to the course's install page.
+  Rationale: `AGENTS.md` keeps the site name, repository, marketplace name and URL only in `site/config.json`; the install page that carries them is rebuilt in Milestone 6.
+  Date/Author: 2026-11-11, Claude.
+
 - Decision: add `@types/node` 24.19.2 to the starter's development dependencies, and set `allowImportingTsExtensions`, `erasableSyntaxOnly` and `resolveJsonModule` in its `tsconfig.json`.
   Rationale: the known-answer test imports `node:test` and must type-check; Node runs TypeScript only when imports name the `.ts` file and the code uses no TypeScript-only runtime syntax, and these settings make the type check enforce exactly that. This is the one change to the starter's dependency list.
   Date/Author: 2026-11-11, Claude (from prototype 3).
@@ -195,6 +215,8 @@ Milestone 1 (2026-11-11): every technical unknown worked as designed; no fallbac
 Milestone 2 (2026-11-11): a student-shaped run with no Node on `PATH` sets up, creates a project and passes the check in about two minutes, most of it the 104 MB browser download. The whole tool, including the GitHub and team commands, came to 455 lines against the 600-line target.
 
 Milestone 3 (2026-11-11): two clones of one stand-in repository publish in turn, overlapping edits stop with the file named, and both names appear in the history. The fixes it forced brought the tool to 467 lines. Everything in `tool/github.mjs` beyond identity and the offline switch is still unrun against GitHub.
+
+Milestone 4 (2026-11-11): the guidance fits in 2,425 words with every plan item present, so no cut was needed. The largest pieces are the shared conversation rules (349 words) and the plan skill (284), which carries the eight questions verbatim.
 
 
 ## Context and Orientation
@@ -567,6 +589,17 @@ Milestone 3 acceptance, observed 2026-11-11 with `COURSE_OFFLINE=1`. Two course 
     (the stand-in received: auth login --web --hostname github.com --git-protocol https --scopes workflow; it was then stopped)
 
 After a passing `check`, nothing new appeared under `~/.config`, `~/.cache`, `~/.local`, `~/.npm` or `~/Library/Caches`.
+
+Milestone 4 acceptance, observed 2026-11-11:
+
+    $ python3 scripts/check.py
+    guidance: 2,425 of 2,500 words
+    tool: 467 of 600 lines
+    7 skills, 3 references, all links and commands resolve
+    $ claude plugin validate .
+    ✔ Validation passed
+
+Word counts by file: setup 230, resume 174, ideate 176, plan 284, build 153, iterate 266, ship 251, conversation 349, design 286, scope 256. Five uses of "never" remain, each a rule this plan specifies. Changing one plan question by a word, naming a missing command, or breaking a link each made `scripts/check.py` fail with the cause.
 
 Out of scope: verifying Windows (Jordan will test later; the Windows launcher and every command are still written), Canvas, grading scripts, AI features inside student apps, and the move to a fresh repository.
 
