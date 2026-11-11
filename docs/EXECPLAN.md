@@ -23,7 +23,8 @@ You can see it working by creating an empty folder, running the setup command in
 - [x] (2026-11-11) Jordan approved the design decisions and asked that every step needing him move to a final milestone, and that a Claude Opus 5.5 session carry out the implementation. Plan revised.
 - [x] (2026-11-11 14:05) Milestone 1: all five prototypes passed in `/private/tmp/bwai/m1/`; no fallback was needed. Results are under `Surprises & Discoveries`.
 - [x] (2026-11-11 14:40) Milestone 2: starter, launchers and the local commands (`setup`, `new`, `dev`, `add`, `plan-check`, `check`), with the one-line skip in `scripts/build.py` and the first version of the rewritten `scripts/check.py` (catalog currency plus the size budget). The acceptance transcript is under `Artifacts and Notes`. All fourteen commands were written in this milestone because they share helpers; Milestone 3 tests the GitHub and team half.
-- [ ] Milestone 3: the GitHub and team commands, tested against a local stand-in for GitHub.
+- [x] (2026-11-11 14:20) Milestone 3: the GitHub and team commands, tested against a bare repository with `COURSE_OFFLINE=1`. Testing found and fixed four faults: teammates' regenerated screenshots and card conflicted on every merge; two journal entries in one minute overwrote each other; `start` clipped the first unsaved file name; and after `clone --own` old journal entries satisfied `publish`. Transcript under `Artifacts and Notes`.
+- [ ] Milestone 3, remaining: the real `signin` start (one-time code from GitHub, then cancelled) was not run. This session's permission rules refused to start a GitHub device sign-in, so `signin` was exercised against a stand-in `gh` that prints GitHub's code lines; the real call moves to Milestone 6, step 1.
 - [ ] Milestone 4: seven skills and three references, inside the size budget.
 - [ ] Milestone 5: simulated end-to-end rehearsal on this Mac.
 - [ ] Milestone 6, step 1 (with Jordan): real GitHub sign-in and publish.
@@ -97,6 +98,18 @@ You can see it working by creating an empty folder, running the setup command in
 - Decision: the rewritten `scripts/check.py` keeps only the two checks that still matter while old and new plugins coexist (the committed catalogs and the bundled Campus Designer copy are current) and drops the old directory-site boundary tests.
   Rationale: the plan replaces `scripts/check.py` with validation of the new plugin. The build code those tests exercised is unchanged on this branch apart from the one skip line, the tests remain at commit `40b5061`, and Milestone 6 removes that code.
   Date/Author: 2026-11-11, Claude.
+
+- Decision: when `publish` merges a teammate's work, conflicts in the files `check` regenerates (`process/screenshots/`, `app/public/card.png`, `app/public/THIRD-PARTY-NOTICES.txt`) are settled by keeping this student's copy; only other files stop the merge.
+  Rationale: every `check` rewrites the screenshots and card, so without this any two teammates' sessions conflicted on binary files nobody can combine by hand. The next `check` regenerates them from the merged app.
+  Date/Author: 2026-11-11, Claude (found in Milestone 3 testing).
+
+- Decision: `clone --own` renames the source remote to `template` instead of deleting it, and `publish` treats `template/main` as already published until the student's own copy exists.
+  Rationale: with the remote deleted, `publish` saw the whole inherited history as unpublished and accepted the teammates' old journal entries as this session's. The `template` remote also records where the copy came from.
+  Date/Author: 2026-11-11, Claude (found in Milestone 3 testing).
+
+- Decision: a second journal entry for the same skill, student and minute is saved with a `-2` (then `-3` …) suffix.
+  Rationale: the fixed file name format has minute resolution; finishing a merge right after a session overwrote the earlier entry.
+  Date/Author: 2026-11-11, Claude (found in Milestone 3 testing).
 
 - Decision: add `@types/node` 24.19.2 to the starter's development dependencies, and set `allowImportingTsExtensions`, `erasableSyntaxOnly` and `resolveJsonModule` in its `tsconfig.json`.
   Rationale: the known-answer test imports `node:test` and must type-check; Node runs TypeScript only when imports name the `.ts` file and the code uses no TypeScript-only runtime syntax, and these settings make the type check enforce exactly that. This is the one change to the starter's dependency list.
@@ -180,6 +193,8 @@ You can see it working by creating an empty folder, running the setup command in
 Milestone 1 (2026-11-11): every technical unknown worked as designed; no fallback was adopted. The one surprise, `gh` writing outside its configuration folder, is handled by pointing three more environment values into the course folder.
 
 Milestone 2 (2026-11-11): a student-shaped run with no Node on `PATH` sets up, creates a project and passes the check in about two minutes, most of it the 104 MB browser download. The whole tool, including the GitHub and team commands, came to 455 lines against the 600-line target.
+
+Milestone 3 (2026-11-11): two clones of one stand-in repository publish in turn, overlapping edits stop with the file named, and both names appear in the history. The fixes it forced brought the tool to 467 lines. Everything in `tool/github.mjs` beyond identity and the offline switch is still unrun against GitHub.
 
 
 ## Context and Orientation
@@ -490,6 +505,66 @@ Milestone 2 acceptance, observed 2026-11-11 in `/private/tmp/bwai/m2/Build with 
     STOP there is no library named left-pad-typo-xyz
     $ bash course.sh add demo papaparse
     OK added papaparse 5.7.1 (MIT, first published 2014, 25,749,219 downloads last week)
+
+Milestone 3 acceptance, observed 2026-11-11 with `COURSE_OFFLINE=1`. Two course folders, `m3/alice/Build with AI` (`COURSE_USER=alice`) and `m3/bob/Build with AI` (`COURSE_USER=bob`), share a bare repository `m3/github/demo.git` standing in for GitHub:
+
+    alice$ bash course.sh new demo && git -C demo remote add origin …/github/demo.git
+    alice$ bash course.sh publish demo -m "First page"
+    STOP no journal entry for this session
+    alice$ bash course.sh check demo; … | bash course.sh journal demo --skill setup
+    alice$ bash course.sh publish demo -m "First page"
+    OK pushed (offline: live site not checked)
+    $ git --git-dir=github/demo.git log --format='%h %an <%ae> %s' main
+    216617d alice <alice@users.noreply.github.com> First page
+    58eac5f alice <alice@users.noreply.github.com> Start demo from the course starter
+    bob$ bash course.sh clone …/github/demo.git --as demo
+    OK copied …/github/demo.git into demo
+    bob$ printf '## Asked for …## Changed …' | bash course.sh journal demo --skill iterate
+    STOP the journal entry is missing: Questions and answers, Checked
+    (alice changes README.md and publishes; bob, without fetching, changes app/model.ts)
+    bob$ bash course.sh publish demo -m "Clarify the model comment"
+    OK pushed (offline: live site not checked)
+    $ git --git-dir=github/demo.git log --graph --format='%h %an %s' main
+    *   f577dfa bob Merge remote-tracking branch 'origin/main'
+    |\
+    | * cb3cbec alice Write the README
+    * | 6767c71 bob Clarify the model comment
+    |/
+    * 216617d alice First page
+    alice$ (edits app/theme/base.css after check)  bash course.sh publish demo -m "Alice tagline"
+    STOP the app changed since the last check: run check first
+    (alice and bob both change the tagline line in app/site.json; alice publishes first)
+    bob$ bash course.sh publish demo -m "Bob tagline"
+    STOP a teammate changed the same lines in: app/site.json
+    (the card and screenshots, also changed by both, were settled automatically)
+    bob$ (combines both taglines by hand) check, journal, publish
+    OK pushed (offline: live site not checked)
+    (a second overlap in README.md; bob runs check, journal and publish without removing Git's markers)
+    STOP finish combining a teammate's changes in: README.md
+    bob$ bash course.sh start demo          (after editing app/model.ts and adding a backlog file)
+    OK unsaved changes kept; teammates' work will be combined at publish
+    OK live at (not published yet)
+    OK journal: 2026-11-11-1416-iterate-bob
+    OK journal: 2026-11-11-1416-iterate-bob-2
+    OK journal: 2026-11-11-1416-iterate-bob-3
+    OK open: 2026-11-11-total-wrong
+    OK unsaved: app/model.ts, process/backlog/
+    bob$ bash course.sh undo demo
+    OK every change since the session started is gone
+    (git status is empty; app/model.ts matches its committed text; the backlog file is gone)
+    alice$ bash course.sh invite demo bob carol
+    OK offline: did not invite bob
+    OK offline: did not invite carol
+    alice$ bash course.sh clone …/github/demo.git --as demo-prototype --own
+    alice$ bash course.sh publish demo-prototype -m x
+    STOP no journal entry for this session
+    (after adding an empty bare repository as origin, check, journal, publish: the prototype's history continues the team's commits)
+
+`signin` against a stand-in `gh` (a shell script that fails `auth status` and, for `auth login`, prints GitHub's two device-code lines and then waits):
+
+    $ bash course.sh signin
+    OK open https://github.com/login/device and enter the code ABCD-1234; run signin again after clicking Authorize
+    (the stand-in received: auth login --web --hostname github.com --git-protocol https --scopes workflow; it was then stopped)
 
 After a passing `check`, nothing new appeared under `~/.config`, `~/.cache`, `~/.local`, `~/.npm` or `~/Library/Caches`.
 
