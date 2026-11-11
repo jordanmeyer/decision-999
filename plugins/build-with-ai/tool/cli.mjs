@@ -1,0 +1,256 @@
+// The course tool. Run it through course.sh (macOS) or course.ps1 (Windows) from the course folder.
+// Every command prints lines beginning OK or STOP, and exits non-zero after STOP.
+import { spawnSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
+import { cpSync, existsSync, mkdirSync, readFileSync, readdirSync, renameSync, rmSync, writeFileSync } from 'node:fs';
+import { basename, dirname, join, relative } from 'node:path';
+import { setTimeout as sleep } from 'node:timers/promises';
+import { fileURLToPath } from 'node:url';
+import { course, env, installed, offline, pins, toolchain, unpacked } from './env.mjs';
+import * as github from './github.mjs';
+
+const here = dirname(fileURLToPath(import.meta.url));
+const windows = process.platform === 'win32';
+const npmCli = join(dirname(process.execPath), windows ? '' : '../lib', 'node_modules/npm/bin/npm-cli.js');
+const [command, target, ...rest] = process.argv.slice(2);
+const flag = name => rest.includes(name) ? rest[rest.indexOf(name) + 1] : undefined;
+const ok = text => console.log(`OK ${text}`);
+function stop(text, detail) {
+  if (detail?.trim()) console.log(detail.trim());
+  console.log(`STOP ${text}`);
+  process.exit(1);
+}
+function run(program, args, { cwd = course, fail, extra } = {}) {
+  const result = spawnSync(program, args, { cwd, env: { ...env, ...extra }, encoding: 'utf8', maxBuffer: 1 << 26 });
+  if (result.status !== 0 && fail) stop(fail, `${result.stdout ?? ''}${result.stderr ?? result.error ?? ''}`);
+  return result;
+}
+const git = (dir, ...args) => run('git', args, { cwd: dir, fail: `git ${args[0]} failed` }).stdout.trim();
+const npm = (dir, args, fail) => run(process.execPath, [npmCli, ...args], { cwd: dir, fail });
+const plural = (count, word) => `${count} ${word}${count === 1 ? '' : 's'}`;
+const has = (dir, ref) => !run('git', ['rev-parse', '--verify', '-q', ref], { cwd: dir }).status;
+const hasRemote = (dir, remote) => !run('git', ['remote', 'get-url', remote], { cwd: dir }).status;
+
+function project() {
+  if (!/^[a-z0-9][a-z0-9-]*$/.test(target ?? '')) stop('name the project in lowercase letters, digits and hyphens');
+  return join(course, target);
+}
+function existing() {
+  const dir = project();
+  if (!existsSync(join(dir, '.git'))) stop(`there is no project named ${target} in this folder`);
+  return dir;
+}
+function identify(dir) {
+  const me = github.identity();
+  git(dir, 'config', 'user.name', me.name);
+  git(dir, 'config', 'user.email', me.email);
+}
+// The app as it stands, without process/, so a journal entry written after check does not count as an edit.
+function fingerprint(dir) {
+  const extra = { GIT_INDEX_FILE: join(dir, '.git/course-index') };
+  run('git', ['add', '-A'], { cwd: dir, extra });
+  const tree = run('git', ['write-tree'], { cwd: dir, extra }).stdout.trim();
+  return git(dir, 'ls-tree', tree).split('\n').filter(line => !line.endsWith('\tprocess')).join('\n');
+}
+// Merge teammates' published work; on overlapping edits, leave the conflict in place for the agent to combine.
+function combine(dir) {
+  if (!has(dir, 'origin/main') || !run('git', ['merge', '--no-edit', '-q', 'origin/main'], { cwd: dir }).status) return;
+  stop(`a teammate changed the same lines in: ${git(dir, 'diff', '--name-only', '--diff-filter=U').split('\n').join(', ')}`);
+}
+
+async function download(kind) {
+  if (existsSync(installed(kind))) return;
+  const { url, sha256 } = pins[kind];
+  const response = await fetch(url);
+  if (!response.ok) stop(`could not download ${basename(url)} (${response.status}); check the internet connection and run setup again`);
+  const bytes = Buffer.from(await response.arrayBuffer());
+  if (createHash('sha256').update(bytes).digest('hex') !== sha256) stop(`${basename(url)} did not match its checksum; nothing was installed`);
+  const stage = join(toolchain, `download-${kind}`);
+  rmSync(stage, { recursive: true, force: true });
+  mkdirSync(stage, { recursive: true });
+  writeFileSync(join(stage, 'archive.zip'), bytes);
+  run(windows ? join(process.env.SystemRoot, 'System32/tar.exe') : 'tar', ['-xf', 'archive.zip'], { cwd: stage, fail: `could not unpack ${basename(url)}` });
+  rmSync(join(stage, 'archive.zip'));
+  rmSync(unpacked(kind), { recursive: true, force: true });
+  renameSync(stage, unpacked(kind));
+}
+
+async function setup() {
+  if (run('git', ['--version']).status) {
+    if (windows) stop('Git is missing: install Git for Windows from https://git-scm.com/download/win, then run setup again');
+    run('xcode-select', ['--install']);
+    console.log('Waiting for Apple\'s developer tools: click Install in the dialog that just opened.');
+    while (run('git', ['--version']).status) await sleep(15000);
+  }
+  ok(`${run('git', ['--version']).stdout.trim().replace('git version', 'git')} found`);
+  ok(`Node ${process.versions.node} ready`);
+  if (here !== join(toolchain, 'tool')) {
+    for (const name of ['tool', 'starter']) rmSync(join(toolchain, name), { recursive: true, force: true });
+    cpSync(here, join(toolchain, 'tool'), { recursive: true, filter: path => basename(path) !== 'node_modules' });
+    cpSync(join(here, '../starter'), join(toolchain, 'starter'), { recursive: true });
+    for (const name of ['course.sh', 'course.ps1']) cpSync(join(here, '..', name), join(course, name));
+  }
+  await download('gh');
+  ok('GitHub tool ready');
+  await download('browser');
+  npm(join(toolchain, 'tool'), ['ci', '--prefer-offline'], 'could not install the browser library');
+  ok('browser for checks ready');
+}
+
+async function create() {
+  const dir = project();
+  if (existsSync(dir)) stop(`${target} already exists`);
+  cpSync(join(here, '../starter'), dir, { recursive: true });
+  npm(dir, ['ci', '--prefer-offline'], 'could not install the project libraries');
+  git(dir, 'init', '-q', '-b', 'main');
+  identify(dir);
+  git(dir, 'add', '-A');
+  git(dir, 'commit', '-q', '-m', `Start ${target} from the course starter`);
+  ok(`created ${target}`);
+}
+
+async function clone() {
+  const folder = flag('--as') ?? basename(target ?? '').replace(/\.git$/, '');
+  const dir = join(course, folder);
+  if (!folder || existsSync(dir)) stop(folder ? `${folder} already exists` : 'name the repository to copy, as owner/name');
+  git(course, 'clone', '-q', offline ? target : github.accept(target), dir);
+  identify(dir);
+  if (rest.includes('--own')) git(dir, 'remote', 'remove', 'origin');
+  npm(dir, ['ci', '--prefer-offline'], 'could not install the project libraries');
+  ok(`copied ${target} into ${folder}`);
+}
+
+async function invite() {
+  const dir = existing();
+  if (!rest.length) stop('name the GitHub usernames to invite');
+  for (const user of rest) {
+    if (!offline) github.invite(dir, user);
+    ok(offline ? `offline: did not invite ${user}` : `invited ${user}; they accept by running clone`);
+  }
+}
+
+async function start() {
+  const dir = existing();
+  const unsaved = git(dir, 'status', '--porcelain');
+  if (hasRemote(dir, 'origin')) {
+    git(dir, 'fetch', '-q', 'origin');
+    if (!unsaved) combine(dir);
+    ok(unsaved ? 'unsaved changes kept; teammates\' work will be combined at publish' : 'teammates\' published work is included');
+  }
+  ok(`live at ${github.address(dir) ?? '(not published yet)'}`);
+  const folder = sub => existsSync(join(dir, 'process', sub)) ? readdirSync(join(dir, 'process', sub)).filter(name => name.endsWith('.md')).sort() : [];
+  for (const name of folder('journal').slice(-3)) ok(`journal: ${name}`);
+  for (const name of folder('backlog').filter(name => /^status: open/m.test(readFileSync(join(dir, 'process/backlog', name), 'utf8')))) ok(`open: ${name}`);
+  ok(unsaved ? `unsaved: ${unsaved.split('\n').map(line => line.slice(3)).join(', ')}` : 'nothing unsaved');
+}
+
+async function dev() {
+  spawnSync(process.execPath, ['node_modules/vite/bin/vite.js'], { cwd: existing(), env, stdio: 'inherit' });
+}
+
+// Add a library only if it is permissively licensed, at least a year old and widely used.
+async function add() {
+  const dir = existing(), name = rest[0];
+  if (!name) stop('name the library to add');
+  const info = await fetch(`https://registry.npmjs.org/${name.replace('/', '%2f')}`).then(r => r.ok ? r.json() : undefined);
+  if (!info?.['dist-tags']) stop(`there is no library named ${name}`);
+  const version = info['dist-tags'].latest, licence = info.versions[version].license ?? info.license;
+  const downloads = (await fetch(`https://api.npmjs.org/downloads/point/last-week/${name}`).then(r => r.json())).downloads ?? 0;
+  if (!/^(MIT|ISC|0BSD|Apache-2\.0|BSD-[23]-Clause)$/.test(licence)) stop(`${name} has the licence ${licence}; only MIT, Apache-2.0, BSD or ISC are allowed`);
+  if (Date.now() - Date.parse(info.time.created) < 365 * 864e5) stop(`${name} was first published less than a year ago`);
+  if (downloads < 10000) stop(`${name} had ${downloads} downloads last week; at least 10,000 are needed`);
+  npm(dir, ['install', '--prefer-offline', `${name}@${version}`], `could not add ${name}`);
+  ok(`added ${name} ${version} (${licence}, first published ${info.time.created.slice(0, 4)}, ${downloads.toLocaleString('en')} downloads last week)`);
+}
+
+async function undo() {
+  const dir = existing();
+  git(dir, 'reset', '-q', '--hard');
+  git(dir, 'clean', '-q', '-fd');
+  ok('every change since the session started is gone');
+}
+
+const questions = [
+  'Who exactly uses this, and at what moment in their work?',
+  'What do they do today instead, and what does that cost them?',
+  'What will they do differently after using it?',
+  'What goes in and what comes out, and where does the data come from?',
+  'Give one realistic input and the answer you would expect, worked by hand.',
+  'What would a plausible but wrong result look like, and how would the user notice?',
+  'What is deliberately left out of the first version?',
+  'How will you know it worked, in terms someone could observe?',
+];
+async function planCheck() {
+  const file = join(existing(), 'process/plan.md');
+  if (!existsSync(file)) stop('there is no plan yet');
+  const text = readFileSync(file, 'utf8').trim();
+  const sections = Object.fromEntries(text.split(/^## /m).slice(1).map(part => [part.split('\n')[0].trim(), part.split('\n').slice(1).join('\n').trim()]));
+  const missing = [...questions, 'Technical notes'].filter(heading => !sections[heading]);
+  if (missing.length) stop(`the plan has no answer under: ${missing.join(' | ')}`);
+  if (!/^Approved by \S.* on \d{4}-\d{2}-\d{2}$/.test(text.split('\n').at(-1).trim())) stop('the plan does not end with "Approved by <name> on <YYYY-MM-DD>"');
+  ok('the plan answers all eight questions and is approved');
+}
+
+async function check() {
+  const dir = existing();
+  npm(dir, ['run', 'typecheck'], 'the type check found errors');
+  ok('types');
+  const tests = run(process.execPath, [npmCli, 'test'], { cwd: dir });
+  const count = key => Number(tests.stdout.match(new RegExp(`^ℹ ${key} (\\d+)`, 'm'))?.[1] ?? 0);
+  if (tests.status) stop(`${plural(count('fail'), 'test')} failed`, tests.stdout + tests.stderr);
+  ok(`${plural(count('pass'), 'test')} passed`);
+  npm(dir, ['run', 'build'], 'the build failed');
+  ok('built');
+  const problems = await (await import('./check.mjs')).pages(dir);
+  if (problems.length) stop(problems.join('\nSTOP '));
+  ok('desktop and phone pages show content, no errors');
+  writeFileSync(join(dir, '.git/course-checked'), fingerprint(dir));
+  ok('screenshots and share card saved');
+}
+
+async function journal() {
+  const dir = target === 'ideas' ? join(course, 'ideas/journal') : join(existing(), 'process/journal');
+  const skill = flag('--skill');
+  if (!skill) stop('say which skill this session used, with --skill');
+  const text = readFileSync(0, 'utf8').trim();
+  const missing = ['Asked for', 'Questions and answers', 'Changed', 'Checked'].filter(part => !new RegExp(`^## ${part}[ \\t]*\\n\\s*(?!#)\\S`, 'm').test(text));
+  if (missing.length) stop(`the journal entry is missing: ${missing.join(', ')}`);
+  const me = github.identity(), [date, time] = new Date().toLocaleString('sv').split(' ');
+  const file = join(dir, `${date}-${time.slice(0, 5).replace(':', '')}-${skill}-${me.login}.md`);
+  mkdirSync(dir, { recursive: true });
+  writeFileSync(file, `# ${skill}, ${date} ${time.slice(0, 5)}\n\nAuthor: ${me.name} (${me.login})\nWorking alongside: ${flag('--with') ?? 'nobody'}\n\n${text}\n`);
+  ok(`journal entry saved as ${relative(course, file)}`);
+}
+
+async function publish() {
+  const dir = existing(), message = flag('-m');
+  if (!message) stop('describe what changed, in plain words, with -m');
+  const journals = git(dir, 'status', '--porcelain', '--', 'process/journal') + git(dir, 'log', has(dir, 'origin/main') ? 'origin/main..HEAD' : 'HEAD', '--format=', '--name-only', '--', 'process/journal');
+  if (!journals) stop('no journal entry for this session');
+  const checked = join(dir, '.git/course-checked');
+  if (!existsSync(checked) || readFileSync(checked, 'utf8') !== fingerprint(dir)) stop('the app changed since the last check: run check first');
+  if (git(dir, 'status', '--porcelain')) {
+    git(dir, 'add', '-A');
+    const markers = run('git', ['diff', '--cached', '--check'], { cwd: dir }).stdout.match(/^[^:\n]+(?=:\d+: leftover conflict marker)/gm);
+    if (markers) stop(`finish combining a teammate's changes in: ${[...new Set(markers)].join(', ')}`);
+    git(dir, 'commit', '-q', '-m', message);
+  }
+  if (hasRemote(dir, 'origin')) {
+    git(dir, 'fetch', '-q', 'origin');
+    combine(dir);
+  }
+  const commit = git(dir, 'rev-parse', 'HEAD');
+  for (const remote of rest.includes('--mine') ? ['origin', 'mine'] : ['origin']) {
+    if (!hasRemote(dir, remote)) offline ? stop('this project has no copy on GitHub yet') : github.create(dir, remote);
+    run('git', ['push', '-q', remote, 'main'], { cwd: dir, fail: 'a teammate published at the same moment: run publish again' });
+    ok(offline ? 'pushed (offline: live site not checked)' : `live at ${await github.live(dir, remote, commit)}`);
+  }
+}
+
+async function signin() { ok(await github.signin()); }
+async function signout() { github.signout(); ok('signed out of GitHub'); }
+
+const commands = { setup, signin, signout, new: create, clone, invite, start, dev, add, undo, 'plan-check': planCheck, check, journal, publish };
+if (!Object.hasOwn(commands, command ?? '')) stop(`choose a command: ${Object.keys(commands).join(', ')}`);
+try { await commands[command](); }
+catch (error) { stop(error.message); }

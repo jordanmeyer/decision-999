@@ -22,7 +22,7 @@ You can see it working by creating an empty folder, running the setup command in
 - [x] (2026-11-11) Wrote this plan from the design discussion with Jordan.
 - [x] (2026-11-11) Jordan approved the design decisions and asked that every step needing him move to a final milestone, and that a Claude Opus 5.5 session carry out the implementation. Plan revised.
 - [x] (2026-11-11 14:05) Milestone 1: all five prototypes passed in `/private/tmp/bwai/m1/`; no fallback was needed. Results are under `Surprises & Discoveries`.
-- [ ] Milestone 2: the starter and the local half of the tool (setup, new, dev, add, plan-check, check).
+- [x] (2026-11-11 14:40) Milestone 2: starter, launchers and the local commands (`setup`, `new`, `dev`, `add`, `plan-check`, `check`), with the one-line skip in `scripts/build.py` and the first version of the rewritten `scripts/check.py` (catalog currency plus the size budget). The acceptance transcript is under `Artifacts and Notes`. All fourteen commands were written in this milestone because they share helpers; Milestone 3 tests the GitHub and team half.
 - [ ] Milestone 3: the GitHub and team commands, tested against a local stand-in for GitHub.
 - [ ] Milestone 4: seven skills and three references, inside the size budget.
 - [ ] Milestone 5: simulated end-to-end rehearsal on this Mac.
@@ -68,6 +68,34 @@ You can see it working by creating an empty folder, running the setup command in
 
 - Decision: `playwright-core` 1.64.1 (released 2026-10-14) rather than 1.65.0 (released 2026-11-05), and `gh` 2.103.3 (2026-10-26).
   Rationale: prefer releases that have been public for a few weeks; both were the newest such releases on 2026-11-11.
+  Date/Author: 2026-11-11, Claude.
+
+- Decision: the Milestone 2 acceptance runs with `COURSE_OFFLINE=1`.
+  Rationale: `new` sets the project's commit name and GitHub's private email address from the student's GitHub sign-in, so outside offline mode it needs `signin` first, as the `setup` skill does. Offline, the identity comes from `COURSE_USER` (default `student`).
+  Date/Author: 2026-11-11, Claude.
+
+- Decision: `signin` starts GitHub's one-time-code sign-in as a background process, prints the code and address, and returns at once; running `signin` again reports "signed in as …".
+  Rationale: the agent must stay free to open the address in its browser while the student types the code and clicks Authorize. A command that blocked until authorization would leave it unable to do so.
+  Date/Author: 2026-11-11, Claude.
+
+- Decision: `check` records a fingerprint of the project (the Git tree of every file outside `process/`, computed with a separate index so the student's staging area is untouched) in `.git/course-checked`; `publish` refuses unless the current fingerprint matches. `publish` finds "a journal entry for this session" as an uncommitted file in `process/journal/` or one committed but not yet pushed.
+  Rationale: no state files beyond one inside `.git/`, and `publish` can be re-run after a failure part-way (for example a failed push after the commit) without demanding a second journal entry.
+  Date/Author: 2026-11-11, Claude.
+
+- Decision: `publish` combines teammates' work with an ordinary merge, not a rebase, and on overlapping edits leaves the merge in progress with Git's conflict markers in the named files. It refuses to commit while any marker remains.
+  Rationale: one merge leaves one thing to finish; the agent edits the files, runs `check`, writes the journal entry and runs `publish` again, which completes the merge. A rebase could stop once per commit.
+  Date/Author: 2026-11-11, Claude.
+
+- Decision: `undo` discards uncommitted changes and new files (`git reset --hard`, `git clean -fd`); because nothing is committed between `start` and `publish`, that is exactly "everything since the session started".
+  Rationale: no session state to store.
+  Date/Author: 2026-11-11, Claude.
+
+- Decision: the share card is the top 1200 by 630 pixels of the app itself, captured during `check`, not a separately designed image.
+  Rationale: it shows the real product with its name and tagline in Duke styling and needs no second template.
+  Date/Author: 2026-11-11, Claude.
+
+- Decision: the rewritten `scripts/check.py` keeps only the two checks that still matter while old and new plugins coexist (the committed catalogs and the bundled Campus Designer copy are current) and drops the old directory-site boundary tests.
+  Rationale: the plan replaces `scripts/check.py` with validation of the new plugin. The build code those tests exercised is unchanged on this branch apart from the one skip line, the tests remain at commit `40b5061`, and Milestone 6 removes that code.
   Date/Author: 2026-11-11, Claude.
 
 - Decision: add `@types/node` 24.19.2 to the starter's development dependencies, and set `allowImportingTsExtensions`, `erasableSyntaxOnly` and `resolveJsonModule` in its `tsconfig.json`.
@@ -149,7 +177,9 @@ You can see it working by creating an empty folder, running the setup command in
 
 ## Outcomes & Retrospective
 
-Nothing has been implemented. This section is filled in at the end of each milestone.
+Milestone 1 (2026-11-11): every technical unknown worked as designed; no fallback was adopted. The one surprise, `gh` writing outside its configuration folder, is handled by pointing three more environment values into the course folder.
+
+Milestone 2 (2026-11-11): a student-shaped run with no Node on `PATH` sets up, creates a project and passes the check in about two minutes, most of it the 104 MB browser download. The whole tool, including the GitHub and team commands, came to 455 lines against the 600-line target.
 
 
 ## Context and Orientation
@@ -431,6 +461,37 @@ Current size, for comparison at the end:
     88             occurrences of "do not" or "never" in the workflow guidance
 
 Size budget: 2,500 words across `plugins/build-with-ai/skills/*/SKILL.md` and `plugins/build-with-ai/references/*.md`; a 600-line target across `plugins/build-with-ai/tool/*.mjs`, `course.sh` and `course.ps1`. The first estimate for the tool is about 650 lines. If the target is missed, the plan records which command costs how many lines so Jordan can choose between raising the number and cutting a command.
+
+Milestone 2 acceptance, observed 2026-11-11 in `/private/tmp/bwai/m2/Build with AI/` through `env -i HOME="$HOME" PATH=/usr/bin:/bin COURSE_OFFLINE=1 bash course.sh …` (no Node, Homebrew or nvm on `PATH`):
+
+    $ bash /Users/jordan/Projects/decision-999/plugins/build-with-ai/course.sh setup
+    OK git 2.50.1 (Apple Git-155) found
+    OK Node 24.22.1 ready
+    OK GitHub tool ready
+    OK browser for checks ready
+    $ bash course.sh new demo
+    OK created demo
+    $ bash course.sh check demo
+    OK types
+    OK 1 test passed
+    OK built
+    OK desktop and phone pages show content, no errors
+    OK screenshots and share card saved
+    $ # tests/model.test.ts edited to expect 11
+    $ bash course.sh check demo          (the failing assertion is printed first)
+    STOP 1 test failed                   (exit status 1)
+    $ # a Google Fonts <link> added to app/index.html
+    $ bash course.sh check demo
+    OK types
+    OK 1 test passed
+    OK built
+    STOP the page requested another website: https://fonts.googleapis.com/css2?family=Roboto
+    $ bash course.sh add demo left-pad-typo-xyz
+    STOP there is no library named left-pad-typo-xyz
+    $ bash course.sh add demo papaparse
+    OK added papaparse 5.7.1 (MIT, first published 2014, 25,749,219 downloads last week)
+
+After a passing `check`, nothing new appeared under `~/.config`, `~/.cache`, `~/.local`, `~/.npm` or `~/Library/Caches`.
 
 Out of scope: verifying Windows (Jordan will test later; the Windows launcher and every command are still written), Canvas, grading scripts, AI features inside student apps, and the move to a fresh repository.
 

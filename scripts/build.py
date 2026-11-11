@@ -97,6 +97,7 @@ def load(root, config):
     """Read and validate every plugin manifest. The manifests are the only registry."""
     plugins = []
     for file in sorted((root / 'plugins').glob('*/plugin.json')):
+        if file.parent.name == 'build-with-ai': continue  # the course plugin is not a directory listing
         package, manifest, where = file.parent, read_json(file), f'plugins/{file.parent.name}/plugin.json'
         name = manifest.get('name')
         if package.name == 'web-application-builder':

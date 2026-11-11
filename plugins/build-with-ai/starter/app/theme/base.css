@@ -1,0 +1,31 @@
+/* Duke styling for ordinary HTML elements. Keep fonts/*-license.txt beside the fonts. */
+@import "./duke-tokens.css";
+@import "./duke-fonts.css";
+:root { color-scheme: light; color: var(--duke-cast-iron); background: var(--duke-whisper-gray); font: 400 1rem/1.6 var(--duke-font-body); font-variant-numeric: lining-nums tabular-nums; }
+* { box-sizing: border-box; }
+body { margin: 0; border-top: 8px solid var(--duke-navy-blue); }
+main { max-width: 64rem; margin: 0 auto; padding: clamp(1.5rem, 5vw, 4rem) 1.25rem; }
+h1, h2, h3 { color: var(--duke-navy-blue); font-family: var(--duke-font-heading); font-weight: 400; line-height: 1.15; text-wrap: balance; }
+h1 { font-size: clamp(2.25rem, 6vw, 3.75rem); margin: 0 0 .5rem; }
+h2 { font-size: clamp(1.5rem, 3.5vw, 2.25rem); margin: 2.5rem 0 .75rem; }
+h3 { font-size: 1.35rem; margin: 1.5rem 0 .5rem; }
+p, li { max-width: 68ch; }
+.lead { font-size: 1.2rem; color: var(--duke-graphite); }
+b, strong, th, label { font-weight: 600; }
+a { color: var(--duke-royal-blue); text-underline-offset: .15em; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { min-height: 44px; padding: .6rem 1.1rem; color: var(--duke-white); background: var(--duke-navy-blue); border: 2px solid var(--duke-navy-blue); cursor: pointer; }
+button:hover { background: var(--duke-royal-blue); border-color: var(--duke-royal-blue); }
+button.secondary { color: var(--duke-navy-blue); background: var(--duke-white); }
+button:disabled { color: var(--duke-graphite); background: var(--duke-hatteras); border-color: var(--duke-granite); cursor: not-allowed; }
+label { display: block; margin: 1rem 0 .35rem; }
+input, select, textarea { width: 100%; max-width: 24rem; min-height: 44px; padding: .5rem .65rem; background: var(--duke-white); border: 1px solid var(--duke-graphite); }
+:focus-visible { outline: 3px solid var(--duke-royal-blue); outline-offset: 3px; }
+table { border-collapse: collapse; width: 100%; background: var(--duke-white); }
+th, td { padding: .5rem .75rem; border-bottom: 1px solid var(--duke-limestone); text-align: left; }
+td.number, th.number { text-align: right; }
+.card { background: var(--duke-white); border: 1px solid var(--duke-limestone); padding: 1.25rem 1.5rem; margin: 1rem 0; }
+.answer { font: 400 clamp(2rem, 5vw, 3rem)/1.1 var(--duke-font-heading); color: var(--duke-navy-blue); }
+.grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+.scroll { overflow-x: auto; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }

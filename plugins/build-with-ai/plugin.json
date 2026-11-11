@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "build-with-ai",
+  "version": "1.0.0",
+  "description": "The Build with AI course helper: plan, build, check and publish a browser app one session at a time, in plain language.",
+  "author": {
+    "name": "Jordan Meyer"
+  },
+  "homepage": "https://jordanmeyer.github.io/decision-999/",
+  "repository": "https://github.com/jordanmeyer/decision-999",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Build with AI",
+        "shortDescription": "Turn a business problem into a published web app, one class session at a time.",
+        "longDescription": "One command per course stage asks you the questions that matter about your product while the agent does all technical work the same way for everyone. Every session ends with a live page on GitHub Pages, a journal entry in your own words and a saved version in your project's history.",
+        "developerName": "Jordan Meyer",
+        "category": "Development",
+        "defaultPrompt": [
+          "$setup Get my course folder ready and publish my first page.",
+          "$resume Turn my placeholder page into my resume website.",
+          "$ideate Help me find two project ideas from my own experience.",
+          "$plan Turn my chosen idea into a plan.",
+          "$build Build the prototype from our team's plan.",
+          "$iterate Improve our app from the latest feedback.",
+          "$ship Finish our app and prepare the pitch."
+        ],
+        "screenshots": []
+      }
+    }
+  }
+}

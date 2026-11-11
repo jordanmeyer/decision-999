@@ -1,0 +1,66 @@
+{
+  "darwin-arm64": {
+    "node": {
+      "url": "https://nodejs.org/dist/v24.22.1/node-v24.22.1-darwin-arm64.tar.gz",
+      "sha256": "89c682593d76cd44233fa53b1563264e7de9cbb189cad169135c5b4fadfbc0a7"
+    },
+    "gh": {
+      "url": "https://github.com/cli/cli/releases/download/v2.103.3/gh_2.103.3_macOS_arm64.zip",
+      "sha256": "d700207eae9ae98fe2b89535c2c087c07823d4628c56364695a5a07ef311c062",
+      "bin": "gh_2.103.3_macOS_arm64/bin/gh"
+    },
+    "browser": {
+      "url": "https://cdn.playwright.dev/builds/cft/156.0.8078.4/mac-arm64/chrome-headless-shell-mac-arm64.zip",
+      "sha256": "94e4337b70cbc5638f0935fbc46b9f242bc7416f657e3fbe924baf348404b53d",
+      "bin": "chrome-headless-shell-mac-arm64/chrome-headless-shell"
+    }
+  },
+  "darwin-x64": {
+    "node": {
+      "url": "https://nodejs.org/dist/v24.22.1/node-v24.22.1-darwin-x64.tar.gz",
+      "sha256": "d132557e7ee2b85af08b0c8c34338e65c6430f2238d01f727728ef42dc83b035"
+    },
+    "gh": {
+      "url": "https://github.com/cli/cli/releases/download/v2.103.3/gh_2.103.3_macOS_amd64.zip",
+      "sha256": "a2f86418f4350ae6e9ec60d5000bdf7665728436946a97fc27fe50e6ae752682",
+      "bin": "gh_2.103.3_macOS_amd64/bin/gh"
+    },
+    "browser": {
+      "url": "https://cdn.playwright.dev/builds/cft/156.0.8078.4/mac-x64/chrome-headless-shell-mac-x64.zip",
+      "sha256": "8a9e4a32ba5b1a796f8b16d01896e355cf6662544d9743296394fd999d782331",
+      "bin": "chrome-headless-shell-mac-x64/chrome-headless-shell"
+    }
+  },
+  "win32-x64": {
+    "node": {
+      "url": "https://nodejs.org/dist/v24.22.1/node-v24.22.1-win-x64.zip",
+      "sha256": "d2046d28c2c3dcd211ac5145c0bf30e2047ef9dfb306693c8c6e2eccd8b95fa5"
+    },
+    "gh": {
+      "url": "https://github.com/cli/cli/releases/download/v2.103.3/gh_2.103.3_windows_amd64.zip",
+      "sha256": "98d0cfa794721665d7973dd728c78aff7bd836d58f10f6d7a03568eccb0a22e0",
+      "bin": "bin/gh.exe"
+    },
+    "browser": {
+      "url": "https://cdn.playwright.dev/builds/cft/156.0.8078.4/win64/chrome-headless-shell-win64.zip",
+      "sha256": "5af4c82cf4b351ec4bad4c71dcf938af14fccea8a0eb0d5c2a7b49ccc922698c",
+      "bin": "chrome-headless-shell-win64/chrome-headless-shell.exe"
+    }
+  },
+  "win32-arm64": {
+    "node": {
+      "url": "https://nodejs.org/dist/v24.22.1/node-v24.22.1-win-arm64.zip",
+      "sha256": "a0c807319fede24c4a0d8f84564c82a619bd313b16b10c007c383c2609e99171"
+    },
+    "gh": {
+      "url": "https://github.com/cli/cli/releases/download/v2.103.3/gh_2.103.3_windows_arm64.zip",
+      "sha256": "197211c98687d7770ac331fe8a3b6c198c389108c1536cdbedf659fe4703e484",
+      "bin": "bin/gh.exe"
+    },
+    "browser": {
+      "url": "https://cdn.playwright.dev/builds/cft/156.0.8078.4/win64/chrome-headless-shell-win64.zip",
+      "sha256": "5af4c82cf4b351ec4bad4c71dcf938af14fccea8a0eb0d5c2a7b49ccc922698c",
+      "bin": "chrome-headless-shell-win64/chrome-headless-shell.exe"
+    }
+  }
+}

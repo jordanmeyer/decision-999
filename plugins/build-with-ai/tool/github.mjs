@@ -1,0 +1,93 @@
+// Every call to GitHub goes through here. COURSE_OFFLINE=1 skips them all, for testing against a local stand-in.
+import { spawn, spawnSync } from 'node:child_process';
+import { existsSync, openSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { basename, join } from 'node:path';
+import { setTimeout as sleep } from 'node:timers/promises';
+import { env, installed, offline, toolchain } from './env.mjs';
+
+const call = (args, cwd) => spawnSync(installed('gh'), args, { cwd, env, encoding: 'utf8' });
+function gh(...args) {
+  const result = call(args);
+  if (result.status) throw Error(/auth login/.test(result.stderr) ? 'not signed in to GitHub: run signin' : `GitHub said: ${result.stderr.trim()}`);
+  return result.stdout.trim();
+}
+const identityFile = join(toolchain, 'identity.json');
+const repository = (dir, remote) => spawnSync('git', ['remote', 'get-url', remote], { cwd: dir, encoding: 'utf8' }).stdout.match(/github\.com[/:](.+?)(\.git)?\s*$/)?.[1];
+
+// Start GitHub's one-time-code sign-in in the background and print the code; the student enters it and clicks Authorize.
+export async function signin() {
+  if (offline) return 'offline: not signed in';
+  if (!call(['auth', 'status']).status) return `signed in to GitHub as ${identity().login}`;
+  const log = join(toolchain, 'signin.log');
+  writeFileSync(log, '');
+  spawn(installed('gh'), ['auth', 'login', '--web', '--hostname', 'github.com', '--git-protocol', 'https', '--scopes', 'workflow'],
+    { env: { ...env, GH_BROWSER: 'none' }, detached: true, stdio: ['ignore', openSync(log, 'a'), openSync(log, 'a')] }).unref();
+  for (let i = 0; i < 30; i++) {
+    await sleep(500);
+    const code = readFileSync(log, 'utf8').match(/code: (\S+)/)?.[1];
+    if (code) return `open https://github.com/login/device and enter the code ${code}; run signin again after clicking Authorize`;
+  }
+  throw Error(`GitHub sign-in did not start: ${readFileSync(log, 'utf8').trim()}`);
+}
+
+export function signout() {
+  if (!offline) call(['auth', 'logout', '--hostname', 'github.com']);
+  rmSync(identityFile, { force: true });
+}
+
+// The commit name and GitHub's private address, so a student's email never appears in public history.
+export function identity() {
+  if (offline) { const login = process.env.COURSE_USER || 'student'; return { login, name: login, email: `${login}@users.noreply.github.com` }; }
+  if (!existsSync(identityFile)) {
+    const [login, id, name] = gh('api', 'user', '--jq', '.login, .id, .name').split('\n');
+    writeFileSync(identityFile, JSON.stringify({ login, name: name || login, email: `${id}+${login}@users.noreply.github.com` }));
+  }
+  return JSON.parse(readFileSync(identityFile, 'utf8'));
+}
+
+// Accept a pending invitation to a teammate's repository and return its address.
+export function accept(full) {
+  const id = gh('api', 'user/repository_invitations', '--jq', `.[] | select(.repository.full_name | ascii_downcase == "${full.toLowerCase()}") | .id`);
+  if (id) gh('api', '-X', 'PATCH', `user/repository_invitations/${id}`);
+  return `https://github.com/${full}.git`;
+}
+
+export function invite(dir, user) {
+  gh('api', '-X', 'PUT', `repos/${repository(dir, 'origin')}/collaborators/${user}`, '-f', 'permission=push');
+}
+
+// Use the student's repository of this name, creating it if needed, as the given remote.
+export function create(dir, remote) {
+  const { login } = identity(), name = basename(dir), full = `${login}/${name}`;
+  const { tagline } = JSON.parse(readFileSync(join(dir, 'app/site.json'), 'utf8'));
+  if (call(['repo', 'view', full]).status) gh('repo', 'create', full, '--public', '--description', tagline, '--homepage', `https://${login.toLowerCase()}.github.io/${name}/`);
+  spawnSync('git', ['remote', 'add', remote, `https://github.com/${full}.git`], { cwd: dir });
+}
+
+export function address(dir) {
+  const full = !offline && repository(dir, 'origin');
+  return full ? call(['api', `repos/${full}/pages`, '--jq', '.html_url']).stdout.trim() || undefined : undefined;
+}
+
+// Turn on Pages if needed, wait for the publishing workflow, then for the live page to carry this commit.
+export async function live(dir, remote, commit) {
+  const full = repository(dir, remote);
+  if (call(['api', `repos/${full}/pages`]).status) {
+    gh('api', '-X', 'POST', `repos/${full}/pages`, '-f', 'build_type=workflow');
+    gh('workflow', 'run', 'pages.yml', '-R', full, '--ref', 'main');
+  }
+  let run;
+  for (let i = 0; i < 60 && !run; i++) {
+    await sleep(5000);
+    run = gh('run', 'list', '-R', full, '--commit', commit, '--json', 'databaseId,createdAt', '--jq', 'max_by(.createdAt).databaseId // empty');
+  }
+  if (!run) throw Error(`the publishing workflow did not start: see https://github.com/${full}/actions`);
+  if (call(['run', 'watch', run, '-R', full, '--exit-status']).status)
+    throw Error(`the publishing workflow failed: https://github.com/${full}/actions/runs/${run}\n${call(['run', 'view', run, '-R', full, '--log-failed']).stdout.split('\n').slice(-30).join('\n')}`);
+  const url = gh('api', `repos/${full}/pages`, '--jq', '.html_url');
+  for (let i = 0; i < 60; i++) {
+    if ((await fetch(url, { cache: 'no-store' }).then(r => r.text(), () => '')).includes(`<meta name="build" content="${commit}">`)) return url;
+    await sleep(5000);
+  }
+  throw Error(`${url} still shows an older version after five minutes`);
+}
