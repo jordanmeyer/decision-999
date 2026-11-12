@@ -13,7 +13,9 @@ Read [the conversation rules](../../references/conversation.md) and [what fits](
 2. Who does it, and how often?
 3. What does it cost today, in time, money or mistakes?
 4. What data would it need, and could you share it?
-5. Does it fit what a browser app can do? If not, ask: "How could it be reshaped to fit?"
+5. What should the app give that person, and when?
+6. How would you know it helped, in terms someone could observe?
+7. Does it fit what a browser app can do? If not, ask: "How could it be reshaped to fit?"
 
 When the student is stuck, tell them two examples from the project list and ask: "Which is closest to something you have seen?"
 

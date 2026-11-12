@@ -120,10 +120,18 @@ async function create() {
 async function clone() {
   const folder = flag('--as') ?? basename(target ?? '').replace(/\.git$/, '');
   const dir = join(course, folder);
-  if (!folder || existsSync(dir)) stop(folder ? `${folder} already exists` : 'name the repository to copy, as owner/name');
-  git(course, 'clone', '-q', offline ? target : github.accept(target), dir);
-  identify(dir);
-  if (rest.includes('--own')) git(dir, 'remote', 'rename', 'origin', 'template');
+  if (!folder) stop('name the repository to copy, as owner/name');
+  const own = rest.includes('--own'), source = github.accept(target);
+  if (existsSync(dir)) {
+    // The plan's author adopting a prototype built from that plan: move the plan's folder forward to it.
+    if (!own || run('git', ['fetch', '-q', source, 'main'], { cwd: dir }).status || run('git', ['merge', '-q', '--ff-only', 'FETCH_HEAD'], { cwd: dir }).status)
+      stop(`${folder} already exists`);
+    if (!hasRemote(dir, 'template')) git(dir, 'remote', 'add', 'template', source);
+  } else {
+    git(course, 'clone', '-q', source, dir);
+    identify(dir);
+    if (own) git(dir, 'remote', 'rename', 'origin', 'template');
+  }
   npm(dir, ['ci', '--prefer-offline'], 'could not install the project libraries');
   ok(`copied ${target} into ${folder}`);
 }
@@ -253,7 +261,7 @@ async function publish() {
   }
   const commit = git(dir, 'rev-parse', 'HEAD');
   for (const remote of rest.includes('--mine') ? ['origin', 'mine'] : ['origin']) {
-    if (!hasRemote(dir, remote)) offline ? stop('this project has no copy on GitHub yet') : github.create(dir, remote);
+    if (!hasRemote(dir, remote)) offline && !process.env.COURSE_GITHUB ? stop('this project has no copy on GitHub yet') : github.create(dir, remote);
     run('git', ['push', '-q', remote, 'main'], { cwd: dir, fail: 'a teammate published at the same moment: run publish again' });
     ok(offline ? 'pushed (offline: live site not checked)' : `live at ${await github.live(dir, remote, commit)}`);
   }

@@ -26,7 +26,7 @@ You can see it working by creating an empty folder, running the setup command in
 - [x] (2026-11-11 14:20) Milestone 3: the GitHub and team commands, tested against a bare repository with `COURSE_OFFLINE=1`. Testing found and fixed four faults: teammates' regenerated screenshots and card conflicted on every merge; two journal entries in one minute overwrote each other; `start` clipped the first unsaved file name; and after `clone --own` old journal entries satisfied `publish`. Transcript under `Artifacts and Notes`.
 - [ ] Milestone 3, remaining: the real `signin` start (one-time code from GitHub, then cancelled) was not run. This session's permission rules refused to start a GitHub device sign-in, so `signin` was exercised against a stand-in `gh` that prints GitHub's code lines; the real call moves to Milestone 6, step 1.
 - [x] (2026-11-11 14:35) Milestone 4: seven skills, three references and the student README (Assignment 0); `scripts/check.py` now also checks skill front matter, the seven default prompts, every link, that every `course <command>` named in the guidance exists in the tool, and that the plan skill and `plan-check` use the same eight questions. Guidance 2,425 of 2,500 words; tool 467 of 600 lines.
-- [ ] Milestone 5: simulated end-to-end rehearsal on this Mac.
+- [x] (2026-11-11 19:50) Milestone 5: every skill rehearsed in order with a simulated student, on one invented project (Bake Planner), with `COURSE_OFFLINE=1` and the `COURSE_GITHUB` stand-in. Transcripts with assessments are in `archive/runs/2026-11-11-rehearsal/` (`1-setup.md` to `8-ship.md`). Four faults were found and fixed: the offline stand-in, two missing `ideate` questions, the `plan` tagline, and `clone --own` colliding with the plan folder. Guidance 2,451 of 2,500 words; tool 479 of 600 lines.
 - [ ] Milestone 6, step 1 (with Jordan): real GitHub sign-in and publish.
 - [ ] Milestone 6, step 2 (with Jordan): ChatGPT Work run in a fresh macOS user account.
 - [ ] Milestone 6, step 3 (with Jordan): rebuild Tournament Atlas through the new plugin.
@@ -59,6 +59,21 @@ You can see it working by creating an empty folder, running the setup command in
 
 - Observation: Apple's developer tools, which supply `git` on a Mac, are large.
   Evidence: `du -sh /Library/Developer/CommandLineTools` reports 1.9G on this machine.
+
+- Observation (Milestone 5): offline mode alone could not carry a project past its first page, because `publish` and `clone` needed a GitHub repository that does not exist offline. This is why `tool/cli.mjs` and `tool/github.mjs` gained the `COURSE_GITHUB` stand-in (Decision Log).
+  Evidence: before the change, `publish resume` with `COURSE_OFFLINE=1` printed `STOP this project has no copy on GitHub yet`. With `COURSE_GITHUB=/private/tmp/bwai/m5/github`, `publish` created `sam-rivera/resume.git` there and pushed. Later `clone sam-rivera/bake-planner --as bake-planner-prototype --own` copied from that folder.
+
+- Observation (Milestone 5): the `ideate` skill's five questions did not produce two of the four headings the idea file needs, "Intended output" and "Success criteria", so the course agent made up two questions of its own and reported the gap.
+  Evidence: `archive/runs/2026-11-11-rehearsal/3-ideate-attempt-1.md`. After questions 5 ("What should the app give that person, and when?") and 6 ("How would you know it helped, in terms someone could observe?") were added, the repeat (`3-ideate.md`) filled all four headings in the student's words.
+
+- Observation (Milestone 5): `plan` copied the answer to question 3 into `app/site.json` word for word, so the site's tagline read "They'd open Bake Planner and bake the numbers it shows…".
+  Evidence: `bake-planner/app/site.json` after `4-plan.md`. Now the read-back includes a one-line tagline drawn from that answer, the student approves it, and the approved line is written.
+
+- Observation (Milestone 5): when the team chooses the plan author's own prototype, `clone <owner>/<name>-prototype --as <name> --own` stopped with "already exists", because the plan session had created that folder.
+  Evidence: `6-iterate.md`; the course agent fast-forwarded the plan folder by hand. Now `clone --own` fast-forwards an existing folder when the source continues its history, and adds the source as `template`. Checked: `clone-test` adopted its prototype's commit and kept `origin`; without `--own`, or from an unrelated source, it still prints `STOP clone-test already exists`.
+
+- Observation (Milestone 5): agents occasionally attached example answers to a question ("how much is thrown away or how often do they sell out?", "like what a manager reads on the croissant card"). They never suggested an answer when the student asked for an opinion. Every agent made technical choices itself, as the conversation rules say, and handed product choices back.
+  Evidence: assessments at the end of `3-ideate.md`, `6-iterate.md`, `7-iterate-2.md` and `8-ship.md`. The slips were left in the transcripts; no wording change was made, because the rule ("never suggest an answer") is already explicit.
 
 
 ## Decision Log
@@ -134,6 +149,22 @@ You can see it working by creating an empty folder, running the setup command in
 - Decision: add `@types/node` 24.19.2 to the starter's development dependencies, and set `allowImportingTsExtensions`, `erasableSyntaxOnly` and `resolveJsonModule` in its `tsconfig.json`.
   Rationale: the known-answer test imports `node:test` and must type-check; Node runs TypeScript only when imports name the `.ts` file and the code uses no TypeScript-only runtime syntax, and these settings make the type check enforce exactly that. This is the one change to the starter's dependency list.
   Date/Author: 2026-11-11, Claude (from prototype 3).
+
+- Decision: offline, `COURSE_GITHUB=<folder>` makes a folder of bare repositories, `<folder>/<owner>/<name>.git`, stand in for GitHub. `publish` creates the student's stand-in repository there as it would on GitHub, and `clone` and accepting an invitation resolve `owner/name` to it.
+  Rationale: the plan's Milestone 5 setting, "`COURSE_OFFLINE=1` and a bare repository standing in for GitHub", could not be reached through the skills. Offline, `publish` stopped with "this project has no copy on GitHub yet" and `clone owner/name` had nothing to copy, so every session after `setup` would have needed remotes made by hand outside the conversation. The stand-in code stays in `tool/github.mjs` with the other GitHub calls.
+  Date/Author: 2026-11-11, Claude (found in Milestone 5).
+
+- Decision: the Milestone 5 rehearsal used three agents: a course agent started fresh for each skill, one student agent kept for the whole course, and the coordinating session relaying each message verbatim. From `ideate` on, the coordinator waited for each reply inside one turn, and the student was told to keep replies to one or two sentences. The student agent got each session's facts (persona, ideas, worked example, feedback) and its once-per-session behaviours (one vague answer, one opinion request, one early stop) only on its side; the course agent saw only the skill and the files.
+  Rationale: cost, at the request of the session that wrote this plan. Ending a turn after every relayed message woke the reviewing session each time. Direct messaging between two subagents was not available (a subagent's reply returns to the session that started it), so the coordinator relayed messages without ending its turn instead.
+  Date/Author: 2026-11-11, Claude, with the plan's author.
+
+- Decision: in the rehearsal, `ship` wrote `process/pitch-starter.md` (one section per slide, with `REWRITE:` notes) in place of `process/pitch-starter.pptx`.
+  Rationale: the simulated agent has no PowerPoint ability. The slide list and notes were tested; the `.pptx` output moves to Milestone 6, step 2 (ChatGPT Work).
+  Date/Author: 2026-11-11, Claude.
+
+- Decision: after a fix that did not touch the questions or how the agent reacts to answers, only the affected step was checked rather than the whole skill being rehearsed again. This applied to the `plan` tagline (read-back wording) and to `clone --own` (checked at the command level). `ideate`, whose questions changed, was rehearsed again in full. A second `iterate` session (week 5) covered the vague answer, opinion request and early stop that the first `iterate` session never triggered.
+  Rationale: the acceptance points (one question at a time, no suggested answers, a challenged vague answer, the early stop) depend on the questions and the conversation rules, which neither fix changed. A full repeat would have cost a long rehearsal to retest one line.
+  Date/Author: 2026-11-11, Claude.
 
 - Decision: seven skills named `setup`, `resume`, `ideate`, `plan`, `build`, `iterate`, `ship`.
   Rationale: one per course stage. Setup moved to pre-work so class 1 can be about the resume; ideation was added because the co-developer wanted class 1 less intimidating; "deploy" no longer describes week 5 because publishing happens from the first session.
@@ -217,6 +248,8 @@ Milestone 2 (2026-11-11): a student-shaped run with no Node on `PATH` sets up, c
 Milestone 3 (2026-11-11): two clones of one stand-in repository publish in turn, overlapping edits stop with the file named, and both names appear in the history. The fixes it forced brought the tool to 467 lines. Everything in `tool/github.mjs` beyond identity and the offline switch is still unrun against GitHub.
 
 Milestone 4 (2026-11-11): the guidance fits in 2,425 words with every plan item present, so no cut was needed. The largest pieces are the shared conversation rules (349 words) and the plan skill (284), which carries the eight questions verbatim.
+
+Milestone 5 (2026-11-11): the prose produced the intended conversations. Agents asked one question at a time, challenged vague answers, handed product choices back, made technical ones themselves, and named the open question when the student tried to leave. `build` asked nothing. The faults were in coverage, not tone: two questions `ideate` lacked, a tagline copied verbatim, and two tool gaps (no offline stand-in for GitHub, and the plan author adopting their own prototype). Fixing them added 26 words of guidance and 12 lines of tool. These are simulations between AI agents, so they show the guidance is followable, not that students will follow it; the `.pptx` pitch starter and every real GitHub call remain for Milestone 6.
 
 
 ## Context and Orientation
@@ -601,12 +634,39 @@ Milestone 4 acceptance, observed 2026-11-11:
 
 Word counts by file: setup 230, resume 174, ideate 176, plan 284, build 153, iterate 266, ship 251, conversation 349, design 286, scope 256. Five uses of "never" remain, each a rule this plan specifies. Changing one plan question by a word, naming a missing command, or breaking a link each made `scripts/check.py` fail with the cause.
 
+Milestone 5 acceptance, observed 2026-11-11 in `/private/tmp/bwai/m5/Build with AI/` through a wrapper running `env -i HOME="$HOME" PATH=/usr/bin:/bin COURSE_OFFLINE=1 COURSE_GITHUB=/private/tmp/bwai/m5/github COURSE_USER=sam-rivera`. Transcripts (simulations, not evidence about students) are in the ignored `archive/runs/2026-11-11-rehearsal/`:
+
+    skill      transcript             one at a time  vague answer challenged  opinion handed back  early stop named
+    setup      1-setup.md             yes            no opening               no opening           no opening
+    resume     2-resume.md            yes            yes                      yes (twice)          yes
+    ideate     3-ideate.md (repeat)   yes, one slip  yes                      yes                  yes
+    plan       4-plan.md              yes            yes                      technical, decided   yes
+    build      5-build.md             no questions asked
+    iterate    6-iterate.md           yes            yes (phone report)       not triggered        not triggered
+    iterate    7-iterate-2.md         yes            yes                      technical, done      yes
+    ship       8-ship.md              yes            yes                      yes                  yes
+
+    $ bash course.sh plan-check bake-planner
+    OK the plan answers all eight questions and is approved
+    $ bash course.sh check bake-planner
+    OK 4 tests passed
+    OK built
+    OK desktop and phone pages show content, no errors
+    OK screenshots and share card saved
+
+Journal entries, one or more per stage: `resume/process/journal/` holds `…1425-setup…` and `…1430-resume…`; `ideas/journal/` holds `…1915-ideate…` (the pause) and `…1920-ideate…`; `bake-planner/process/journal/` holds `…1926-plan…`, `…1930-build…`, `…1933-iterate…`, `…1936-iterate…`, `…1941-iterate…` and `…1946-ship…`. The stand-in `sam-rivera/bake-planner.git` ends at the ship commit `3598602`, with `LICENSE` (MIT, naming the team), the value sentence as the tagline, and a nine-slide `process/pitch-starter.md` with a `REWRITE:` note on each slide.
+
+    $ python3 scripts/check.py
+    guidance: 2,451 of 2,500 words
+    tool: 479 of 600 lines
+    7 skills, 3 references, all links and commands resolve
+
 Out of scope: verifying Windows (Jordan will test later; the Windows launcher and every command are still written), Canvas, grading scripts, AI features inside student apps, and the move to a fresh repository.
 
 
 ## Interfaces and Dependencies
 
-The tool is invoked as `bash course.sh <command> [arguments]` on macOS and `powershell.exe -NoProfile -File .\course.ps1 <command> [arguments]` on Windows, always from the course folder. Commands at the end of Milestone 3: `setup`, `signin`, `signout`, `new`, `clone`, `invite`, `start`, `dev`, `add`, `undo`, `plan-check`, `check`, `journal`, `publish`. The environment value `COURSE_OFFLINE=1` makes every command skip its calls to `gh`, for testing without a GitHub sign-in.
+The tool is invoked as `bash course.sh <command> [arguments]` on macOS and `powershell.exe -NoProfile -File .\course.ps1 <command> [arguments]` on Windows, always from the course folder. Commands at the end of Milestone 3: `setup`, `signin`, `signout`, `new`, `clone`, `invite`, `start`, `dev`, `add`, `undo`, `plan-check`, `check`, `journal`, `publish`. The environment value `COURSE_OFFLINE=1` makes every command skip its calls to `gh`, for testing without a GitHub sign-in. With it, `COURSE_GITHUB=<folder>` makes bare repositories at `<folder>/<owner>/<name>.git` stand in for GitHub repositories, and `COURSE_USER` sets the offline login.
 
 Pinned downloads, each with a SHA-256 checksum in `plugins/build-with-ai/tool/toolchain.json`: Node 24.22.1 with npm 11.19.1 (already pinned in the existing starter), the GitHub command-line program, and the headless browser used by `playwright-core`. The starter's own dependencies stay as they are: `react`, `react-dom`, `vite`, `@vitejs/plugin-react`, `typescript` and the two React type packages.
 
@@ -625,3 +685,5 @@ The published page must contain `<meta name="build" content="<commit>">`, which 
 Revision note, 2026-11-11: initial version, written after the design discussion between Jordan Meyer and Claude. It records the agreed decisions and resolves the open team-repository question with the `-prototype` naming scheme, which Jordan has not yet reviewed.
 
 Revision note, 2026-11-11 (second): at Jordan's request, every step that needs him (the real GitHub sign-in and publish, the ChatGPT Work run in a fresh account, and the Tournament Atlas rebuild) moved into a single final milestone, followed by retirement and hand-off. Milestones 1 to 5 became agent-only: the GitHub prototype shrank to a download check, the relative-address prototype is served locally, and the team commands are tested against a bare repository with `COURSE_OFFLINE=1`. The Decision Log records this and that a Claude Opus 5.5 session implements Milestones 1 to 5.
+
+Revision note, 2026-11-11 (third): Milestones 1 to 5 were carried out. Recorded in `Progress`, `Surprises & Discoveries`, `Decision Log`, `Outcomes & Retrospective` and `Artifacts and Notes`. The Milestone 5 findings changed `skills/ideate` (two questions), `skills/plan` (tagline read-back) and the tool (`COURSE_GITHUB` stand-in; `clone --own` adopting an existing plan folder). The rehearsal method was changed to an in-turn relay with short student replies, and two fixes were checked step by step rather than by a full repeat; both are in the Decision Log.

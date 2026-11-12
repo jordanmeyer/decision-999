@@ -12,6 +12,8 @@ function gh(...args) {
   return result.stdout.trim();
 }
 const identityFile = join(toolchain, 'identity.json');
+// Offline, a folder of bare repositories named <owner>/<name>.git (COURSE_GITHUB) can stand in for GitHub.
+const standIn = full => join(process.env.COURSE_GITHUB, `${full}.git`);
 const repository = (dir, remote) => spawnSync('git', ['remote', 'get-url', remote], { cwd: dir, encoding: 'utf8' }).stdout.match(/github\.com[/:](.+?)(\.git)?\s*$/)?.[1];
 
 // Start GitHub's one-time-code sign-in in the background and print the code; the student enters it and clicks Authorize.
@@ -47,6 +49,7 @@ export function identity() {
 
 // Accept a pending invitation to a teammate's repository and return its address.
 export function accept(full) {
+  if (offline) return process.env.COURSE_GITHUB ? standIn(full) : full;
   const id = gh('api', 'user/repository_invitations', '--jq', `.[] | select(.repository.full_name | ascii_downcase == "${full.toLowerCase()}") | .id`);
   if (id) gh('api', '-X', 'PATCH', `user/repository_invitations/${id}`);
   return `https://github.com/${full}.git`;
@@ -60,8 +63,9 @@ export function invite(dir, user) {
 export function create(dir, remote) {
   const { login } = identity(), name = basename(dir), full = `${login}/${name}`;
   const { tagline } = JSON.parse(readFileSync(join(dir, 'app/site.json'), 'utf8'));
-  if (call(['repo', 'view', full]).status) gh('repo', 'create', full, '--public', '--description', tagline, '--homepage', `https://${login.toLowerCase()}.github.io/${name}/`);
-  spawnSync('git', ['remote', 'add', remote, `https://github.com/${full}.git`], { cwd: dir });
+  if (offline) spawnSync('git', ['init', '-q', '--bare', '-b', 'main', standIn(full)]);
+  else if (call(['repo', 'view', full]).status) gh('repo', 'create', full, '--public', '--description', tagline, '--homepage', `https://${login.toLowerCase()}.github.io/${name}/`);
+  spawnSync('git', ['remote', 'add', remote, offline ? standIn(full) : `https://github.com/${full}.git`], { cwd: dir });
 }
 
 export function address(dir) {

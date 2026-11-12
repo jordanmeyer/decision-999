@@ -22,9 +22,9 @@ Read [the conversation rules](../../references/conversation.md) and [what fits](
 
 1. Run `course new <name>`, with the app's name in lowercase words joined by hyphens.
 2. Write `process/plan.md` with each question above as a `##` heading, word for word without its number, and the student's answer beneath it.
-3. Read the plan back and ask: "Does this say what you mean? Say 'approved', or tell me what to change."
+3. Read the plan back with a one-line tagline drawn from the answer to question 3, and ask: "Does this say what you mean? Say 'approved', or tell me what to change."
 4. Add a `## Technical notes` section for the building agent: screens, calculations and libraries. End the file with `Approved by <student's name> on <YYYY-MM-DD>`.
-5. Run `course plan-check <name>`, put the app's name and the answer to question 3 in `app/site.json` as the name and tagline, and end the session.
+5. Run `course plan-check <name>`, put the app's name and the approved tagline in `app/site.json`, and end the session.
 
 ## The student sees
 
