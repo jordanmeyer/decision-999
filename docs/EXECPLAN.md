@@ -28,7 +28,7 @@ You can see it working by creating an empty folder, running the setup command in
 - [x] (2026-11-11 14:35) Milestone 4: seven skills, three references and the student README (Assignment 0); `scripts/check.py` now also checks skill front matter, the seven default prompts, every link, that every `course <command>` named in the guidance exists in the tool, and that the plan skill and `plan-check` use the same eight questions. Guidance 2,425 of 2,500 words; tool 467 of 600 lines.
 - [x] (2026-11-11 19:50) Milestone 5: every skill rehearsed in order with a simulated student, on one invented project (Bake Planner), with `COURSE_OFFLINE=1` and the `COURSE_GITHUB` stand-in. Transcripts with assessments are in `archive/runs/2026-11-11-rehearsal/` (`1-setup.md` to `8-ship.md`). Four faults were found and fixed: the offline stand-in, two missing `ideate` questions, the `plan` tagline, and `clone --own` colliding with the plan folder. Guidance 2,451 of 2,500 words; tool 479 of 600 lines.
 - [x] (2026-11-12) Review fixes on `reorg` (seventeen items from the plan author's review). Tool: the plan author can join a teammate's repository, `undo` keeps `process/`, `publish` can be rerun after the push, the course folder's launcher works from inside a project, `plan-check` needs real technical notes, `setup` waits on `xcode-select -p`, and `publish` stops on an unrelated repository of the same name. GitHub code (to verify in Milestone 6 step 1): Pages turned on at creation, the dispatched run followed when Pages had to be turned on late, a failed run rerun, accounts without a display name. Catalogs now list `build-with-ai`. Guidance: resume reads the student's resume first, iterate and ship ask who is working alongside, questions are asked bare, the plan opener asks one thing at a time, ideate says whether the idea fits. README: course folder in the home folder. New `scripts/rehearse.py` asserts nine offline scenarios and passes; against the previous commit it fails at `undo`. Guidance 2,493 of 2,500 words; tool 502 of 600 lines.
-- [ ] Milestone 6, step 1 (with Jordan): real GitHub sign-in and publish, including the review changes marked "to verify in Milestone 6 step 1".
+- [x] (2026-11-12) Milestone 6, step 1 (with Jordan): real GitHub sign-in and first publish passed. Remaining from this step: `invite`, `clone` with a pending invitation and `publish --mine` to a different account, which need a second GitHub account.
 - [ ] Milestone 6, step 2 (with Jordan): ChatGPT Work run in a fresh macOS user account.
 - [ ] Milestone 6, step 3 (with Jordan): rebuild Tournament Atlas through the new plugin.
 - [ ] Milestone 6, step 4 (needs Jordan's go-ahead): retire the old plugins, evidence, scripts and directory pages.
@@ -105,6 +105,8 @@ You can see it working by creating an empty folder, running the setup command in
 - Observation (review): the Claude and Codex catalogs did not list `build-with-ai`, so neither app could install it from the marketplace. The plan told Milestone 2 to skip the plugin in `scripts/build.py`'s `load()`; that skipped the catalogs as well as the directory listing.
   Evidence: `.agents/plugins/marketplace.json` and `.claude-plugin/marketplace.json` before and after `python3 scripts/build.py`; `claude plugin validate .` and `claude plugin validate plugins/build-with-ai` pass.
 
+- Observation (Milestone 6 step 1): the first real `signin` stopped with "GitHub sign-in did not start" although it had started, because `gh` 2.103.3 prints the code as `One-time code (XXXX-XXXX) copied to clipboard`, not `code: XXXX-XXXX` as the fake `gh` used in Milestone 3 did. `gh` also overwrites the clipboard with the code.
+  Evidence: `.toolchain/signin.log` in the Milestone 6 course folder. `tool/github.mjs` now matches the code in either form. The from-scratch `setup` before it (no Node on `PATH`, real downloads) passed in one run and left a 458 MB `.toolchain`.
 
 ## Decision Log
 
@@ -301,6 +303,10 @@ You can see it working by creating an empty folder, running the setup command in
   Rationale: the plan already named this script under "Maintainer tooling and site"; the review found it missing. A second simulated teammate shares the first one's toolchain through a symbolic link.
   Date/Author: 2026-11-12, reviewer and Claude Opus 5.5.
 
+- Decision: merge `reorg` into `main` and push before Milestone 6 is finished, reversing "leave `main` alone until validation".
+  Rationale: Jordan's test Mac is a separate machine, and the real student route is installing from the marketplace, which is the GitHub repository's catalog on `main`. That catalog must list `build-with-ai` for the test to use the same steps students will. The push redeploys the public site, but its pages do not change: the course plugin is in the catalogs without being a directory listing, and the old plugins are untouched. Retirement of the old material still waits for Jordan's go-ahead.
+  Date/Author: 2026-11-12, Jordan.
+
 
 ## Outcomes & Retrospective
 
@@ -316,6 +322,8 @@ Milestone 5 (2026-11-11): the prose produced the intended conversations. Agents 
 
 Review (2026-11-12): the reviewer found five tool faults by running the team flow offline, four more by reading the GitHub code, a catalog gap and six wording gaps. The Milestone 5 rehearsal had missed them because it followed one student through the happy path; the faults sat in reruns, in the second teammate's view and in starting from the wrong folder. `scripts/rehearse.py` now covers those paths offline, and fails at `undo` on the previous commit. The fixes cost 23 lines of tool (502 of 600) and 42 words of guidance (2,493 of 2,500), which leaves almost no room for further guidance without cutting.
 
+
+Milestone 6, step 1 (2026-11-12): against real GitHub, as `jordanmeyer`, a from-scratch course folder went from `setup` to a live page with one fix (the one-time-code pattern, see `Surprises & Discoveries`). `publish` took 54 seconds and printed `OK live at https://jordanmeyer.github.io/bwai-test-site/`. The live page carried `<meta name="build" content="f5cfc015…">`, equal to the pushed commit, and an absolute share-card address that returned `200 image/png`. There was exactly one workflow run, the push's, and it succeeded on its first attempt, so turning Pages on before the first push works and the dispatch fallback was not needed. The commit author was `Jordan Meyer <ID+jordanmeyer@users.noreply.github.com>`. The sign-in holds the permissions `gist, read:org, repo, workflow`; its token is in the macOS keychain under `gh:github.com`, with none in `.toolchain/gh/hosts.yml`. `git config --global --list` was unchanged and `~/.config/gh` was not created. A second `publish` with nothing new printed the live address again. Not exercised, for lack of a second account: `invite`, accepting an invitation in `clone`, and `publish --mine` to another account. The public test repository `jordanmeyer/bwai-test-site` was left in place for Jordan to delete.
 
 ## Context and Orientation
 

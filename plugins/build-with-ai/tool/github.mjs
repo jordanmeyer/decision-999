@@ -26,7 +26,7 @@ export async function signin() {
     { env: { ...env, GH_BROWSER: 'none' }, detached: true, stdio: ['ignore', openSync(log, 'a'), openSync(log, 'a')] }).unref();
   for (let i = 0; i < 30; i++) {
     await sleep(500);
-    const code = readFileSync(log, 'utf8').match(/code: (\S+)/)?.[1];
+    const code = readFileSync(log, 'utf8').match(/code\W+([A-Z0-9]{4}-[A-Z0-9]{4})/)?.[1];
     if (code) return `open https://github.com/login/device and enter the code ${code}; run signin again after clicking Authorize`;
   }
   throw Error(`GitHub sign-in did not start: ${readFileSync(log, 'utf8').trim()}`);
