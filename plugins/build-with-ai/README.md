@@ -12,6 +12,8 @@ The course helper for Build with AI. You talk with ChatGPT about your product; i
 
 Setup ends with the address of your first live page. Submit it for Assignment 0.
 
+If ChatGPT says it cannot run commands at all, restart your computer and try again. If setup still stops, email your instructor the report it gives you.
+
 ## Only you can do these
 
 ChatGPT handles everything else, but these four steps are yours:

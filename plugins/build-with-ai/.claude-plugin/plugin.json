@@ -1,6 +1,6 @@
 {
   "name": "build-with-ai",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The Build with AI course helper: plan, build, check and publish a browser app one session at a time, in plain language.",
   "author": {
     "name": "Jordan Meyer"

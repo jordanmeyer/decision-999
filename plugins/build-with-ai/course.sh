@@ -9,10 +9,10 @@ url=$(/usr/bin/plutil -extract "darwin-$arch.node.url" raw -o - "$tool/toolchain
 sha=$(/usr/bin/plutil -extract "darwin-$arch.node.sha256" raw -o - "$tool/toolchain.json")
 runtime="$PWD/.toolchain/$(basename "$url" .tar.gz)"
 if [ ! -x "$runtime/bin/node" ]; then
-  mkdir -p .toolchain
+  mkdir -p .toolchain || { echo 'STOP this folder cannot be written to: choose a folder inside your home folder'; exit 1; }
   stage=$(mktemp -d "$PWD/.toolchain/download.XXXXXX")
   trap 'rm -rf "$stage"' EXIT
-  /usr/bin/curl -fsSL --proto '=https' "$url" -o "$stage/node.tar.gz"
+  /usr/bin/curl -fsSL --proto '=https' "$url" -o "$stage/node.tar.gz" || { echo 'STOP could not download Node: check the internet connection and run setup again'; exit 1; }
   [ "$(/usr/bin/shasum -a 256 "$stage/node.tar.gz" | cut -d' ' -f1)" = "$sha" ] || { echo 'STOP the Node download did not match its checksum'; exit 1; }
   /usr/bin/tar -xzf "$stage/node.tar.gz" -C "$stage"
   mv "$stage/$(basename "$runtime")" "$runtime"

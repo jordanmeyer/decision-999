@@ -2,8 +2,9 @@
 // Every command prints lines beginning OK or STOP, and exits non-zero after STOP.
 import { spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
-import { cpSync, existsSync, mkdirSync, readFileSync, readdirSync, renameSync, rmSync, writeFileSync } from 'node:fs';
-import { basename, dirname, join, relative } from 'node:path';
+import { accessSync, constants, cpSync, existsSync, mkdirSync, readFileSync, readdirSync, renameSync, rmSync, statfsSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { basename, dirname, join, relative, sep } from 'node:path';
 import { setTimeout as sleep } from 'node:timers/promises';
 import { fileURLToPath } from 'node:url';
 import { course, env, installed, offline, pins, toolchain, unpacked } from './env.mjs';
@@ -69,8 +70,8 @@ function combine(dir) {
 async function download(kind) {
   if (existsSync(installed(kind))) return;
   const { url, sha256 } = pins[kind];
-  const response = await fetch(url);
-  if (!response.ok) stop(`could not download ${basename(url)} (${response.status}); check the internet connection and run setup again`);
+  const response = await fetch(url).catch(() => undefined);
+  if (!response?.ok) stop(`could not download ${basename(url)}: check the internet connection (some guest Wi-Fi blocks downloads) and run setup again`);
   const bytes = Buffer.from(await response.arrayBuffer());
   if (createHash('sha256').update(bytes).digest('hex') !== sha256) stop(`${basename(url)} did not match its checksum; nothing was installed`);
   const stage = join(toolchain, `download-${kind}`);
@@ -83,7 +84,19 @@ async function download(kind) {
   renameSync(stage, unpacked(kind));
 }
 
+// Say plainly, before any download, the conditions that otherwise fail later in confusing ways.
+function preflight() {
+  for (const dir of new Set([tmpdir(), windows ? tmpdir() : '/tmp'])) {
+    try { accessSync(dir, constants.W_OK); }
+    catch { stop(`the temporary folder ${dir} is missing or cannot be written: restart the computer and run setup again; if it stops here again, the computer needs repair by its administrator`); }
+  }
+  const { bavail, bsize } = statfsSync(course), free = bavail * bsize / 1e9;
+  if (free < 3) stop(`only ${free.toFixed(1)} GB of disk space is free; setup needs 3 GB`);
+  if (/[\\/](Documents|Desktop|OneDrive[^\\/]*|Mobile Documents)[\\/]/i.test(course + sep)) ok('note: this folder is inside one that iCloud or OneDrive may sync; if setup is slow, move it to your home folder');
+}
+
 async function setup() {
+  preflight();
   // On a Mac, git is a stub until Apple's developer tools are installed, and running it reopens Apple's dialog.
   if (!windows && run('xcode-select', ['-p']).status) {
     run('xcode-select', ['--install']);

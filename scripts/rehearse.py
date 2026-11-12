@@ -17,9 +17,9 @@ github, home = tmp / 'github', tmp / 'home'
 home.mkdir()
 
 
-def course(folder, user, *words, cwd=None, stdin=None, stops=None):
+def course(folder, user, *words, cwd=None, stdin=None, stops=None, extra=None):
     """Run one course command as user; stops= expects a STOP containing that text."""
-    env = {'HOME': str(home), 'PATH': '/usr/bin:/bin', 'COURSE_OFFLINE': '1', 'COURSE_GITHUB': str(github), 'COURSE_USER': user}
+    env = {'HOME': str(home), 'PATH': '/usr/bin:/bin', 'COURSE_OFFLINE': '1', 'COURSE_GITHUB': str(github), 'COURSE_USER': user, **(extra or {})}
     launcher = PLUGIN / 'course.sh' if words[0] == 'setup' else folder / 'course.sh'
     result = subprocess.run(['sh', str(launcher), *words], cwd=cwd or folder, env=env, input=stdin, capture_output=True, text=True)
     out = result.stdout + result.stderr
@@ -42,6 +42,8 @@ alice, bob = tmp / 'alice/Build with AI', tmp / 'bob/Build with AI'
 alice.mkdir(parents=True)
 if args.toolchain:
     shutil.copytree(args.toolchain, alice / '.toolchain', symlinks=True, ignore=shutil.ignore_patterns('tool', 'starter', 'identity.json'))
+course(alice, 'alice', 'setup', extra={'TMPDIR': str(tmp / 'missing')}, stops='temporary folder')
+print('ok setup stops when the temporary folder is missing')
 course(alice, 'alice', 'setup')
 bob.mkdir(parents=True)
 (bob / '.toolchain').symlink_to(alice / '.toolchain')

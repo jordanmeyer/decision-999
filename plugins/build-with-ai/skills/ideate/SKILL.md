@@ -5,7 +5,7 @@ description: Build with AI week 1 homework. Find two project ideas in the studen
 
 # Ideate
 
-Read [the conversation rules](../../references/conversation.md) and [what fits](../../references/scope.md).
+Read [the conversation rules](../../references/conversation.md) and [what fits](../../references/scope.md). Say once: "Use invented or public data, never an employer's."
 
 ## Ask, for each of two ideas
 

@@ -19,7 +19,8 @@ if (!(Test-Path $node)) {
         if ((Get-FileHash "$stage/node.zip" -Algorithm SHA256).Hash.ToLowerInvariant() -ne $pin.sha256) { Write-Output 'STOP the Node download did not match its checksum'; exit 1 }
         Expand-Archive -LiteralPath "$stage/node.zip" -DestinationPath $stage
         Move-Item -LiteralPath (Join-Path $stage (Split-Path $runtime -Leaf)) -Destination $runtime
-    } finally { Remove-Item -LiteralPath $stage -Recurse -Force }
+    } catch { Write-Output "STOP could not download and unpack Node ($($_.Exception.Message)): check the internet connection and run setup again"; exit 1 }
+    finally { Remove-Item -LiteralPath $stage -Recurse -Force }
 }
 Push-Location $root
 try { & $node (Join-Path $tool 'cli.mjs') @args } finally { Pop-Location }

@@ -107,6 +107,8 @@ You can see it working by creating an empty folder, running the setup command in
 
 - Observation (Milestone 6 step 1): the first real `signin` stopped with "GitHub sign-in did not start" although it had started, because `gh` 2.103.3 prints the code as `One-time code (XXXX-XXXX) copied to clipboard`, not `code: XXXX-XXXX` as the fake `gh` used in Milestone 3 did. `gh` also overwrites the clipboard with the code.
   Evidence: `.toolchain/signin.log` in the Milestone 6 course folder. `tool/github.mjs` now matches the code in either form. The from-scratch `setup` before it (no Node on `PATH`, real downloads) passed in one run and left a 458 MB `.toolchain`.
+- Observation (Milestone 6 step 2): the first `$setup` in ChatGPT Work on Jordan's test Mac failed before any course code ran, with "No such file or directory (os error 2)" from the app's own command runner. The cause was a missing system temporary folder, `/private/tmp`, on that Mac, not anything in the plugin. An earlier guess, that the agent had assumed a course-folder path, was wrong; the wording change it prompted ("the course folder, which is this project's working folder whatever its name") stays because nothing had defined the term. The agent also opened GitHub in a separate browser, so `setup` and the preview rule now name the in-app browser.
+  Evidence: the agent's own diagnosis from the app logs on the test Mac. When the app cannot run commands, nothing in the plugin can run, and the skill's existing "email your instructor this report" path is what the student sees; it produced a usable report here. For the cases the tool can see, `setup` now starts with a preflight: it stops with a specific line when a temporary folder is missing or unwritable or when less than 3 GB of disk is free, notes when the course folder sits inside Documents, Desktop or OneDrive, and reports a failed download as a connection problem. `scripts/rehearse.py` covers the missing-temporary-folder stop.
 
 ## Decision Log
 
@@ -307,6 +309,9 @@ You can see it working by creating an empty folder, running the setup command in
   Rationale: Jordan's test Mac is a separate machine, and the real student route is installing from the marketplace, which is the GitHub repository's catalog on `main`. That catalog must list `build-with-ai` for the test to use the same steps students will. The push redeploys the public site, but its pages do not change: the course plugin is in the catalogs without being a directory listing, and the old plugins are untouched. Retirement of the old material still waits for Jordan's go-ahead.
   Date/Author: 2026-11-12, Jordan.
 
+- Decision: the reminder not to use an employer's real data is said only in `ideate` and `plan`, not in every session.
+  Rationale: in Jordan's test run the agent appended it to `setup`, where the only content is the student's own name. Only ideation and planning decide what data a project uses.
+  Date/Author: 2026-11-12, Jordan.
 
 ## Outcomes & Retrospective
 
