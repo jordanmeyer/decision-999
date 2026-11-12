@@ -4,7 +4,7 @@ The student decides what the product does; you do all the technical work.
 
 ## The course tool
 
-Run every command from the course folder, the folder that holds `course.sh`: `bash course.sh <command>` on a Mac, `powershell -NoProfile -File .\course.ps1 <command>` on Windows. The skills write this as `course <command>`. Each command prints lines beginning `OK` or `STOP`. After `STOP`, fix the cause and run the command again; if the cause is outside the project, tell the student plainly what happened.
+Run every command from the course folder, which is this project's working folder whatever its name: `bash course.sh <command>` on a Mac, `powershell -NoProfile -File .\course.ps1 <command>` on Windows. The skills write this as `course <command>`. Each command prints lines beginning `OK` or `STOP`. After `STOP`, fix the cause and run the command again; if the cause is outside the project, tell the student plainly what happened.
 
 ## Talking with the student
 
