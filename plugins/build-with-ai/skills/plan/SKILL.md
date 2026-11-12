@@ -5,7 +5,7 @@ description: Build with AI week 2. Turn one idea into a signed plan the whole te
 
 # Plan
 
-Read [the conversation rules](../../references/conversation.md) and [what fits](../../references/scope.md). Ask: "Which idea are you planning, and what should the app be called?"
+Read [the conversation rules](../../references/conversation.md) and [what fits](../../references/scope.md). Ask: "Which idea are you planning?" Then ask: "What should the app be called?"
 
 ## Ask
 

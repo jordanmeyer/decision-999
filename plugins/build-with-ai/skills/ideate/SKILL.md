@@ -15,7 +15,7 @@ Read [the conversation rules](../../references/conversation.md) and [what fits](
 4. What data would it need, and could you share it?
 5. What should the app give that person, and when?
 6. How would you know it helped, in terms someone could observe?
-7. Does it fit what a browser app can do? If not, ask: "How could it be reshaped to fit?"
+7. Say whether the idea fits a browser app, and why. If not, ask: "How could it be reshaped to fit?"
 
 When the student is stuck, tell them two examples from the project list and ask: "Which is closest to something you have seen?"
 

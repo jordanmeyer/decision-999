@@ -21,6 +21,12 @@
       "category": "Development"
     },
     {
+      "name": "build-with-ai",
+      "source": "./plugins/build-with-ai",
+      "description": "Turn a business problem into a published web app, one class session at a time.",
+      "category": "Development"
+    },
+    {
       "name": "grill-me",
       "source": "./plugins/grill-me",
       "description": "Get grilled on your idea until every design decision is settled.",

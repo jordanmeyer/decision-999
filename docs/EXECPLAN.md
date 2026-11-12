@@ -27,7 +27,8 @@ You can see it working by creating an empty folder, running the setup command in
 - [ ] Milestone 3, remaining: the real `signin` start (one-time code from GitHub, then cancelled) was not run. This session's permission rules refused to start a GitHub device sign-in, so `signin` was exercised against a stand-in `gh` that prints GitHub's code lines; the real call moves to Milestone 6, step 1.
 - [x] (2026-11-11 14:35) Milestone 4: seven skills, three references and the student README (Assignment 0); `scripts/check.py` now also checks skill front matter, the seven default prompts, every link, that every `course <command>` named in the guidance exists in the tool, and that the plan skill and `plan-check` use the same eight questions. Guidance 2,425 of 2,500 words; tool 467 of 600 lines.
 - [x] (2026-11-11 19:50) Milestone 5: every skill rehearsed in order with a simulated student, on one invented project (Bake Planner), with `COURSE_OFFLINE=1` and the `COURSE_GITHUB` stand-in. Transcripts with assessments are in `archive/runs/2026-11-11-rehearsal/` (`1-setup.md` to `8-ship.md`). Four faults were found and fixed: the offline stand-in, two missing `ideate` questions, the `plan` tagline, and `clone --own` colliding with the plan folder. Guidance 2,451 of 2,500 words; tool 479 of 600 lines.
-- [ ] Milestone 6, step 1 (with Jordan): real GitHub sign-in and publish.
+- [x] (2026-11-12) Review fixes on `reorg` (seventeen items from the plan author's review). Tool: the plan author can join a teammate's repository, `undo` keeps `process/`, `publish` can be rerun after the push, the course folder's launcher works from inside a project, `plan-check` needs real technical notes, `setup` waits on `xcode-select -p`, and `publish` stops on an unrelated repository of the same name. GitHub code (to verify in Milestone 6 step 1): Pages turned on at creation, the dispatched run followed when Pages had to be turned on late, a failed run rerun, accounts without a display name. Catalogs now list `build-with-ai`. Guidance: resume reads the student's resume first, iterate and ship ask who is working alongside, questions are asked bare, the plan opener asks one thing at a time, ideate says whether the idea fits. README: course folder in the home folder. New `scripts/rehearse.py` asserts nine offline scenarios and passes; against the previous commit it fails at `undo`. Guidance 2,493 of 2,500 words; tool 502 of 600 lines.
+- [ ] Milestone 6, step 1 (with Jordan): real GitHub sign-in and publish, including the review changes marked "to verify in Milestone 6 step 1".
 - [ ] Milestone 6, step 2 (with Jordan): ChatGPT Work run in a fresh macOS user account.
 - [ ] Milestone 6, step 3 (with Jordan): rebuild Tournament Atlas through the new plugin.
 - [ ] Milestone 6, step 4 (needs Jordan's go-ahead): retire the old plugins, evidence, scripts and directory pages.
@@ -73,7 +74,36 @@ You can see it working by creating an empty folder, running the setup command in
   Evidence: `6-iterate.md`; the course agent fast-forwarded the plan folder by hand. Now `clone --own` fast-forwards an existing folder when the source continues its history, and adds the source as `template`. Checked: `clone-test` adopted its prototype's commit and kept `origin`; without `--own`, or from an unrelated source, it still prints `STOP clone-test already exists`.
 
 - Observation (Milestone 5): agents occasionally attached example answers to a question ("how much is thrown away or how often do they sell out?", "like what a manager reads on the croissant card"). They never suggested an answer when the student asked for an opinion. Every agent made technical choices itself, as the conversation rules say, and handed product choices back.
-  Evidence: assessments at the end of `3-ideate.md`, `6-iterate.md`, `7-iterate-2.md` and `8-ship.md`. The slips were left in the transcripts; no wording change was made, because the rule ("never suggest an answer") is already explicit.
+  Evidence: assessments at the end of `3-ideate.md`, `6-iterate.md`, `7-iterate-2.md` and `8-ship.md`. The slips were left in the transcripts; no wording change was made, because the rule ("never suggest an answer") is already explicit. The review (2026-11-12) judged that rule too weak; see the Decision Log.
+
+- Observation (review, 2026-11-12): when the team chose a teammate's prototype, the plan's author could not join, because their plan folder already had the project's name. Alice had `rp` (their plan repository); Bob published `bob/rp`; Alice's `course clone bob/rp` printed `STOP rp already exists`.
+  Evidence: reproduced offline by the reviewer. Now `clone` without `--own` fast-forwards the existing folder when the source continues its history, renames its `origin` to `mine` and makes the source `origin`. `scripts/rehearse.py` checks that Alice's next `publish rp` reaches `bob/rp` and `publish rp --mine` reaches `alice/rp`, with no forced push.
+
+- Observation (review): `undo` ran `git reset --hard` and `git clean -fd`, so it also deleted backlog items saved earlier in the same session.
+  Evidence: `scripts/rehearse.py` run against commit `b9699db` fails at its `undo` assertion. `undo` now restores and cleans everything except `process/`.
+
+- Observation (review): `publish` could not be rerun after a failure past the push (for example the live check timing out). The rerun found `origin/main` equal to `HEAD`, so no journal entry was newer than the published history, and it printed `STOP no journal entry for this session`.
+  Evidence: reproduced offline by the reviewer; `scripts/rehearse.py` now publishes twice in a row. When nothing is uncommitted and `origin/main` already equals `HEAD`, `publish` skips the journal and check gates and goes straight to pushing and checking the live site, for `--mine` too.
+
+- Observation (review): the course folder's `course.sh` only worked when run from the course folder. From inside a project, `/usr/bin/plutil` failed with "couldn't be opened", because the launcher looked for `.toolchain/tool` under the current folder and `env.mjs` takes the course folder from it.
+  Evidence: reproduced by the reviewer. Now a launcher whose own folder has no `tool/` treats its own folder as the course folder (`cd` in `course.sh`; `Push-Location` in `course.ps1`, which is unrun). `scripts/rehearse.py` runs `sh ../course.sh start rp` from inside `rp`.
+
+- Observation (review): `plan-check` passed with an empty "Technical notes" section, because the closing approval line was read as that section's content.
+  Evidence: reproduced by the reviewer and by `scripts/rehearse.py`. The approval line is now taken off before the sections are read.
+
+- Observation (review): `github.create` adopted any existing repository of the same name, and a failed push blamed "a teammate published at the same moment". A student with an older, unrelated repository of that name would have seen a misleading retry loop.
+  Evidence: `scripts/rehearse.py` places an unrelated commit in the stand-in `alice/other.git`; `publish other` now prints `STOP GitHub already has a repository alice/other with different work: rename this project's folder and publish again`. The push failure now reads `GitHub did not accept the push to <remote>: run publish again`. Online, the same check fetches over HTTPS with the course sign-in: to verify in Milestone 6 step 1.
+
+- Observation (review, read rather than run): the first `publish` pushed before Pages was turned on, so the push's workflow run failed; `live` then turned Pages on and dispatched a second run, but chose the run with `max_by(.createdAt)` over every run for the commit, which can pick the failed one. Now `create` tries to turn Pages on right after creating the repository, before the first push; `live` turns it on only as a fallback and then follows the `workflow_dispatch` run. To verify in Milestone 6 step 1, including whether GitHub accepts `build_type=workflow` on an empty repository.
+
+- Observation (review, read): `identity()` asked `gh` for `.login, .id, .name`, which prints `null` for an account without a display name, so commits would have been signed "null". Now `(.name // "")`, which falls back to the login. To verify in Milestone 6 step 1 with an account that has no name.
+
+- Observation (review, read): on a Mac without developer tools, `setup` polled `git --version` every 15 seconds, and every run of Apple's `git` stub may reopen the install dialog. `setup` now checks and polls `xcode-select -p`, and runs `git` only afterwards. It also treats a `git` that cannot start at all (exit status `null` on Windows) as missing, which the old `.status` test did not. This path cannot be tested here, and a fresh macOS user account does not reach it either, because the developer tools are installed for the whole machine; Milestone 6 step 2 now asks for one Mac without them.
+
+- Observation (review, recorded only): when teammates publish seconds apart, GitHub cancels the older queued Pages run, so the earlier `publish` reports a failed or cancelled workflow (or a page still showing a different version) although the site already shows the newer, combined work. Left as is: the message points to the Actions page, and running `publish` again reports the live site. `live` reruns a run that failed but never one that was cancelled, so an older commit is never deployed over a newer one.
+
+- Observation (review): the Claude and Codex catalogs did not list `build-with-ai`, so neither app could install it from the marketplace. The plan told Milestone 2 to skip the plugin in `scripts/build.py`'s `load()`; that skipped the catalogs as well as the directory listing.
+  Evidence: `.agents/plugins/marketplace.json` and `.claude-plugin/marketplace.json` before and after `python3 scripts/build.py`; `claude plugin validate .` and `claude plugin validate plugins/build-with-ai` pass.
 
 
 ## Decision Log
@@ -239,6 +269,39 @@ You can see it working by creating an empty folder, running the setup command in
   Date/Author: 2026-11-11, Jordan.
 
 
+- Decision (review, 2026-11-12): after the plan author joins a teammate's repository, their plan repository stays reachable as the remote `mine`, so `publish --mine` in `ship` pushes their own copy to the repository they already have, as a fast-forward.
+  Rationale: the alternative, a second `alice/<name>` repository under another name, would leave the plan's repository behind and give them two addresses.
+  Date/Author: 2026-11-12, reviewer (Claude, plan author session) and Claude Opus 5.5.
+
+- Decision (review): `undo` keeps everything in `process/` and discards only app changes since the last save. Its message now says the notes and backlog are kept.
+  Rationale: a session saves backlog items before making the change it may discard; the journal and screenshots in `process/` are rewritten by the session's end anyway.
+  Date/Author: 2026-11-12, reviewer.
+
+- Decision (review): a `publish` rerun after a completed push skips the session gates only when nothing is uncommitted and `origin/main` already equals `HEAD`; anything else goes through the journal and check gates as before. When the push went through but the earlier workflow run failed, `live` reruns that run (`gh run rerun`), which keeps the run's identity and avoids choosing between runs again; `live` waits ten seconds before watching it so the new attempt has replaced the failed one (to verify in Milestone 6 step 1). A cancelled run is not rerun.
+  Rationale: the reviewer asked for the gate skip. The rerun was added because otherwise a second `publish` after a failed workflow would find and report the same failed run; rerunning a cancelled run could deploy an older commit over a teammate's newer one.
+  Date/Author: 2026-11-12, reviewer (skip) and Claude Opus 5.5 (rerun).
+
+- Decision (review): the course folder's launcher always works in its own folder; the plugin's launcher (used only for `setup`) still works in the current folder.
+  Rationale: agents sometimes run commands from inside a project; the tool's paths all derive from the course folder.
+  Date/Author: 2026-11-12, reviewer.
+
+- Decision (review): `publish` refuses an existing GitHub repository of the project's name only when it holds history unrelated to the project (no common ancestor). A related repository is used, as before.
+  Rationale: rerunning `publish` after `create` succeeded and the push failed, and `publish --mine` by a repository's own owner, must keep working.
+  Date/Author: 2026-11-12, reviewer and Claude Opus 5.5.
+
+- Decision (review): `build-with-ai` is listed in both marketplace catalogs; only the directory-listing and evidence validation in `scripts/build.py` skip it, and `scripts/check.py` keeps validating it. This reverses the plan's Milestone 2 instruction.
+  Rationale: the catalogs are how students install the plugin.
+  Date/Author: 2026-11-12, reviewer.
+
+- Decision (review): guidance wording. Questions are asked bare, with no examples, options, "such as" or suggested answer; challenging a vague answer with a concrete follow-up stays. `resume` asks the student to add their resume and any work samples to the course folder, or attach them, and reads them before the questions (the course folder is never published; only the project folder is). `iterate` and `ship` ask "Who is working with you today?" first, which the journal's `--with` records. The `plan` opener asks the idea and the name as two questions. `ideate` question 7 now has the agent say whether the idea fits a browser app and why, and asks how to reshape it if not. The `$build` default prompt shows `<owner>/<name>`. The README puts the course folder in the home folder, not Documents or Desktop, which iCloud or OneDrive may sync. Together these brought the guidance from 2,451 to 2,493 words.
+  Rationale: the Milestone 5 transcripts showed example answers attached to questions, the resume session building from memory, and `--with` never used.
+  Date/Author: 2026-11-12, reviewer.
+
+- Decision (review): `scripts/rehearse.py` runs the offline scenarios in a temporary folder outside the repository, with `--toolchain` to copy an existing `.toolchain` instead of downloading 200 MB. It is maintainer tooling, so it is outside the 600-line tool budget, and it is not run by `scripts/check.py` because it needs the toolchain.
+  Rationale: the plan already named this script under "Maintainer tooling and site"; the review found it missing. A second simulated teammate shares the first one's toolchain through a symbolic link.
+  Date/Author: 2026-11-12, reviewer and Claude Opus 5.5.
+
+
 ## Outcomes & Retrospective
 
 Milestone 1 (2026-11-11): every technical unknown worked as designed; no fallback was adopted. The one surprise, `gh` writing outside its configuration folder, is handled by pointing three more environment values into the course folder.
@@ -250,6 +313,8 @@ Milestone 3 (2026-11-11): two clones of one stand-in repository publish in turn,
 Milestone 4 (2026-11-11): the guidance fits in 2,425 words with every plan item present, so no cut was needed. The largest pieces are the shared conversation rules (349 words) and the plan skill (284), which carries the eight questions verbatim.
 
 Milestone 5 (2026-11-11): the prose produced the intended conversations. Agents asked one question at a time, challenged vague answers, handed product choices back, made technical ones themselves, and named the open question when the student tried to leave. `build` asked nothing. The faults were in coverage, not tone: two questions `ideate` lacked, a tagline copied verbatim, and two tool gaps (no offline stand-in for GitHub, and the plan author adopting their own prototype). Fixing them added 26 words of guidance and 12 lines of tool. These are simulations between AI agents, so they show the guidance is followable, not that students will follow it; the `.pptx` pitch starter and every real GitHub call remain for Milestone 6.
+
+Review (2026-11-12): the reviewer found five tool faults by running the team flow offline, four more by reading the GitHub code, a catalog gap and six wording gaps. The Milestone 5 rehearsal had missed them because it followed one student through the happy path; the faults sat in reruns, in the second teammate's view and in starting from the wrong folder. `scripts/rehearse.py` now covers those paths offline, and fails at `undo` on the previous commit. The fixes cost 23 lines of tool (502 of 600) and 42 words of guidance (2,493 of 2,500), which leaves almost no room for further guidance without cutting.
 
 
 ## Context and Orientation
@@ -387,7 +452,7 @@ The README the agent writes never mentions recruiters or the course. It contains
 
 ### Maintainer tooling and site
 
-The current site build treats every folder under `plugins/` as a directory listing: `load()` in `scripts/build.py` reads each `plugins/*/plugin.json` and requires listing fields and an `evidence/<name>/EVIDENCE.md` record. So that the existing site keeps building while old and new plugins sit side by side, Milestone 2 adds one line to that loop that skips `build-with-ai`; the retirement step of Milestone 6 removes the listing rules altogether.
+The current site build treats every folder under `plugins/` as a directory listing: `load()` in `scripts/build.py` reads each `plugins/*/plugin.json` and requires listing fields and an `evidence/<name>/EVIDENCE.md` record. So that the existing site keeps building while old and new plugins sit side by side, Milestone 2 adds one line to that loop that skips `build-with-ai` (corrected in the review: the skip covers only the listing and evidence validation, and the plugin stays in both catalogs); the retirement step of Milestone 6 removes the listing rules altogether.
 
 Rewrite `scripts/check.py` to validate the new plugin: skill front matter, links that resolve, every command named in a skill exists in the tool, and the size budget. Add `scripts/rehearse.py`, which creates a temporary course folder outside the repository with Node removed from `PATH` and runs `setup`, `new`, `check`. These replace `scripts/check-app-environment.py`, `scripts/check-library-recipes.py` and `evidence/web-application-builder/check.py` in the retirement step of Milestone 6.
 
@@ -463,7 +528,7 @@ Everything before this milestone is done by an agent alone. This milestone gathe
 
 Step 1, real GitHub (about ten minutes of Jordan's time). In a temporary course folder, without `COURSE_OFFLINE`, run `setup`, then `signin` (Jordan clicks Authorize in the browser), `new bwai-test-site`, write a journal entry, and `publish`. Acceptance: `publish` prints a live address; the page at that address carries the pushed commit in its build tag; fetching the page shows a share-card tag with an absolute address that returns an image; `git config --global --list` is unchanged from before the test; and `~/.config/gh` was not created. If Jordan has a second GitHub account or a helper, also test `invite`, `clone` with a pending invitation, and `publish --mine`; otherwise record these as untested. The calls in `tool/github.mjs` were written without being run, so expect corrections here.
 
-Step 2, ChatGPT Work. Jordan installs the plugin in ChatGPT Work from the `reorg` branch and runs `$setup` and `$resume` in a fresh macOS user account, which has no Node, no SSH key and no saved GitHub sign-in. Acceptance: a live resume page, a journal entry in `resume/process/journal/`, and no files created outside the course folder. Jordan also confirms that `$plan` and `$build` invoke this plugin's skills and not something else of the same name; if they collide, the skills are renamed with a course prefix.
+Step 2, ChatGPT Work. Jordan installs the plugin in ChatGPT Work from the `reorg` branch and runs `$setup` and `$resume` in a fresh macOS user account, which has no Node, no SSH key and no saved GitHub sign-in. Acceptance: a live resume page, a journal entry in `resume/process/journal/`, and no files created outside the course folder. Jordan also confirms that `$plan` and `$build` invoke this plugin's skills and not something else of the same name; if they collide, the skills are renamed with a course prefix. A fresh user account does not test `setup` on a Mac without Apple's developer tools, because those tools are installed for the whole machine: try `setup` once on a Mac where `xcode-select -p` fails, and confirm that the install dialog opens once and `setup` continues after it finishes.
 
 Step 3, Tournament Atlas. Jordan runs `$plan`, `$build`, `$iterate` and `$ship` as the student to produce a new repository, `tournament-atlas`, so the weekly demonstration looks exactly like a student project. The existing application at `/Users/jordan/Projects/bab-example-madness` is the reference: `app/style.css` carries over nearly unchanged, `app/model.js` becomes `app/model.ts`, and the rendering in `app/main.js` moves into React components. The iterate journal entries say plainly that the layout was ported from the earlier hand-tuned version at its commit. The old repository and its live site stay untouched until Jordan switches the gallery link in `site/apps.json`. Acceptance: the new site matches the old one side by side at desktop and phone sizes for the 2023 bracket, and its repository has `process/plan.md`, journal entries for each stage, and passing known-answer tests ported from the old `tests/` folder.
 
@@ -507,14 +572,14 @@ Two people working on one project can each publish in turn, and the repository h
 
 Pasting a published address into a link-preview tool shows the project's name, description and Duke-styled card.
 
-`python3 scripts/check.py` reports guidance at or under 2,500 words and the tool at or near 600 lines.
+`python3 scripts/check.py` reports guidance at or under 2,500 words and the tool at or near 600 lines. `python3 scripts/rehearse.py --toolchain <course folder>/.toolchain` prints `rehearsal passed`.
 
 The repository contains one plugin, and Jordan can read every file in it without help.
 
 
 ## Idempotence and Recovery
 
-Every tool command checks the current state before acting: `setup` skips downloads that already verify, `new` refuses an existing folder, `publish` reuses an existing repository and never forces a push. An interrupted download is removed and retried on the next run.
+Every tool command checks the current state before acting: `setup` skips downloads that already verify, `new` refuses an existing folder, `publish` reuses an existing repository only when it shares the project's history, never forces a push, and can be run again after a failure past the push. An interrupted download is removed and retried on the next run.
 
 Work on the `reorg` branch can be abandoned with `git switch main`. Everything Milestone 6 deletes remains recoverable with `git show 40b5061:<path>` and in the local `archive/` folder.
 
@@ -687,3 +752,5 @@ Revision note, 2026-11-11: initial version, written after the design discussion 
 Revision note, 2026-11-11 (second): at Jordan's request, every step that needs him (the real GitHub sign-in and publish, the ChatGPT Work run in a fresh account, and the Tournament Atlas rebuild) moved into a single final milestone, followed by retirement and hand-off. Milestones 1 to 5 became agent-only: the GitHub prototype shrank to a download check, the relative-address prototype is served locally, and the team commands are tested against a bare repository with `COURSE_OFFLINE=1`. The Decision Log records this and that a Claude Opus 5.5 session implements Milestones 1 to 5.
 
 Revision note, 2026-11-11 (third): Milestones 1 to 5 were carried out. Recorded in `Progress`, `Surprises & Discoveries`, `Decision Log`, `Outcomes & Retrospective` and `Artifacts and Notes`. The Milestone 5 findings changed `skills/ideate` (two questions), `skills/plan` (tagline read-back) and the tool (`COURSE_GITHUB` stand-in; `clone --own` adopting an existing plan folder). The rehearsal method was changed to an in-turn relay with short student replies, and two fixes were checked step by step rather than by a full repeat; both are in the Decision Log.
+
+Revision note, 2026-11-12: the plan author's review of Milestones 1 to 5 was worked through on `reorg`. Each fault is in `Surprises & Discoveries`, each choice in the `Decision Log`, and the whole in `Progress` and `Outcomes & Retrospective`. Milestone 6 step 1 now also verifies the GitHub changes made without a sign-in, and step 2 adds a Mac without developer tools. The plan's Milestone 2 instruction to skip `build-with-ai` in `scripts/build.py` was corrected.

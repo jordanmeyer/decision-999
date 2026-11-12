@@ -29,6 +29,18 @@
       "category": "Development"
     },
     {
+      "name": "build-with-ai",
+      "source": {
+        "source": "local",
+        "path": "./plugins/build-with-ai"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Development"
+    },
+    {
       "name": "grill-me",
       "source": {
         "source": "local",

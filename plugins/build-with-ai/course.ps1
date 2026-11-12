@@ -1,15 +1,17 @@
-# Run the course tool from the course folder. The first run downloads a private, checksum-verified Node.
+# Run the course tool. The first run downloads a private, checksum-verified Node.
+# From the plugin (setup) it works in the current folder; the course folder's copy always works in its own folder.
 $ErrorActionPreference = 'Stop'
 $ProgressPreference = 'SilentlyContinue'
+$root = $PWD.Path
 $tool = Join-Path $PSScriptRoot 'tool'
-if (!(Test-Path (Join-Path $tool 'cli.mjs'))) { $tool = Join-Path $PWD '.toolchain/tool' }
+if (!(Test-Path (Join-Path $tool 'cli.mjs'))) { $root = $PSScriptRoot; $tool = Join-Path $root '.toolchain/tool' }
 $arch = if ($env:PROCESSOR_ARCHITEW6432) { $env:PROCESSOR_ARCHITEW6432 } else { $env:PROCESSOR_ARCHITECTURE }
 $arch = @{ AMD64 = 'x64'; ARM64 = 'arm64' }[$arch]
 $pin = (Get-Content (Join-Path $tool 'toolchain.json') -Raw | ConvertFrom-Json)."win32-$arch".node
-$runtime = Join-Path $PWD ('.toolchain/' + [IO.Path]::GetFileNameWithoutExtension($pin.url))
+$runtime = Join-Path $root ('.toolchain/' + [IO.Path]::GetFileNameWithoutExtension($pin.url))
 $node = Join-Path $runtime 'node.exe'
 if (!(Test-Path $node)) {
-    $stage = Join-Path $PWD ('.toolchain/download.' + [guid]::NewGuid())
+    $stage = Join-Path $root ('.toolchain/download.' + [guid]::NewGuid())
     New-Item -ItemType Directory -Path $stage -Force | Out-Null
     try {
         [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -19,5 +21,6 @@ if (!(Test-Path $node)) {
         Move-Item -LiteralPath (Join-Path $stage (Split-Path $runtime -Leaf)) -Destination $runtime
     } finally { Remove-Item -LiteralPath $stage -Recurse -Force }
 }
-& $node (Join-Path $tool 'cli.mjs') @args
+Push-Location $root
+try { & $node (Join-Path $tool 'cli.mjs') @args } finally { Pop-Location }
 exit $LASTEXITCODE

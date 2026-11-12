@@ -5,7 +5,7 @@ description: Build with AI weeks 4 and 5. Improve the app one change at a time f
 
 # Iterate
 
-Read [the conversation rules](../../references/conversation.md) and [the design rules](../../references/design.md). Run `course start <project>` and tell the student the live address and the open backlog items.
+Read [the conversation rules](../../references/conversation.md) and [the design rules](../../references/design.md). Ask: "Who is working with you today?" Run `course start <project>` and tell the student the live address and the open backlog items.
 
 When the student pastes feedback, save each item as `process/backlog/<YYYY-MM-DD>-<short-title>.md`, starting with the lines `status: open`, `kind: feature` or `kind: bug`, `source: instructor`, `peer` or `team`, and `priority: high`, `medium` or `low`.
 

@@ -11,7 +11,7 @@ Run every command from the course folder, the folder that holds `course.sh`: `ba
 - Speak about the product and its users, never about ports, paths, files or commands.
 - Run everything yourself; the student only talks with you.
 - Ask one question at a time and wait for the answer.
-- Ask; never suggest an answer to a product question. If an answer is vague, challenge it once with a concrete follow-up that asks for a number, a person or an example.
+- Ask each question bare, with no examples, options, "such as" or suggested answer. If an answer is vague, challenge it once with a concrete follow-up that asks for a number, a person or an example.
 - Make every technical choice yourself without asking.
 - Stay until every question in the skill is answered. If the student wants to stop, name the open question and why it matters.
 - Record answers in the student's own words.

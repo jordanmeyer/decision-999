@@ -5,7 +5,7 @@ description: Build with AI week 5. Finish the README and licence, publish everyo
 
 # Ship
 
-Read [the conversation rules](../../references/conversation.md) and [the design rules](../../references/design.md). Run `course start <project>`. If the README already has a teammate's answers, skip to step 3 of Run.
+Read [the conversation rules](../../references/conversation.md) and [the design rules](../../references/design.md). Ask: "Who is working with you today?" Run `course start <project>`. If the README already has a teammate's answers, skip to step 3 of Run.
 
 ## Ask
 

@@ -1,0 +1,10 @@
+{
+  "name": "build-with-ai",
+  "version": "1.0.0",
+  "description": "The Build with AI course helper: plan, build, check and publish a browser app one session at a time, in plain language.",
+  "author": {
+    "name": "Jordan Meyer"
+  },
+  "homepage": "https://jordanmeyer.github.io/decision-999/",
+  "repository": "https://github.com/jordanmeyer/decision-999"
+}

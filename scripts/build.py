@@ -97,7 +97,6 @@ def load(root, config):
     """Read and validate every plugin manifest. The manifests are the only registry."""
     plugins = []
     for file in sorted((root / 'plugins').glob('*/plugin.json')):
-        if file.parent.name == 'build-with-ai': continue  # the course plugin is not a directory listing
         package, manifest, where = file.parent, read_json(file), f'plugins/{file.parent.name}/plugin.json'
         name = manifest.get('name')
         if package.name == 'web-application-builder':
@@ -126,8 +125,11 @@ def load(root, config):
         require(manifest.get('$schema') == SCHEMA, f'{where}: $schema must be {SCHEMA}')
         require(name == package.name and re.fullmatch(r'[a-z0-9]+(-[a-z0-9]+)*', name), f'{where}: name must be lowercase-hyphenated and match its folder')
         require(re.fullmatch(r'\d+\.\d+\.\d+', manifest.get('version', '')), f'{where}: version must be x.y.z')
-        require(manifest.get('homepage') == f"{config['url']}plugins/{name}/", f'{where}: homepage must be its listing page')
         ui = get(manifest, 'extensions', 'com.openai', 'interface', where=where)
+        if name == 'build-with-ai':  # the course plugin is in the catalogs but is not a directory listing; scripts/check.py validates it
+            plugins.append({'name': name, 'manifest': manifest, 'ui': ui})
+            continue
+        require(manifest.get('homepage') == f"{config['url']}plugins/{name}/", f'{where}: homepage must be its listing page')
         ext = config['extension']
         listing = get(manifest, 'extensions', ext, where=where)
         for key in INTERFACE:
@@ -428,12 +430,13 @@ def build(root=ROOT, base=None):
     base = base or urlsplit(config['url']).path
     require(re.fullmatch(r'/(?:[\w.-]+/)*', base), 'Base must be an absolute directory path')
     bundle_designer(root)
-    plugins = load(root, config)
+    everything = load(root, config)
     apps = load_apps(root)
     clients = load_clients(root)
-    for path, content in catalogs(config, plugins).items():
+    for path, content in catalogs(config, everything).items():
         (root / path).parent.mkdir(parents=True, exist_ok=True)
         (root / path).write_text(content, encoding='utf-8')
+    plugins = [p for p in everything if 'listing' in p]
 
     dist = root / 'dist'
     shutil.rmtree(dist, ignore_errors=True)

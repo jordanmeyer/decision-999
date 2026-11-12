@@ -5,7 +5,7 @@ The course helper for Build with AI. You talk with ChatGPT about your product; i
 ## Assignment 0
 
 1. Install the ChatGPT Work desktop app and sign in with your university account.
-2. Create a folder named `Build with AI` in your Documents folder.
+2. Create a folder named `Build with AI` in your home folder, not in Documents or Desktop, which iCloud or OneDrive may sync.
 3. In ChatGPT, create a project that works only in that folder.
 4. Install the Build with AI plugin from the link on the course's install page.
 5. In that project, type `$setup` and follow the conversation.

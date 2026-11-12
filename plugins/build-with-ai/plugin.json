@@ -21,7 +21,7 @@
           "$resume Turn my placeholder page into my resume website.",
           "$ideate Help me find two project ideas from my own experience.",
           "$plan Turn my chosen idea into a plan.",
-          "$build Build the prototype from our team's plan.",
+          "$build Build the prototype from our team's plan at <owner>/<name>.",
           "$iterate Improve our app from the latest feedback.",
           "$ship Finish our app and prepare the pitch."
         ],

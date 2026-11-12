@@ -5,7 +5,7 @@ description: Build with AI week 1. Turn the placeholder page into the student's 
 
 # Resume
 
-Read [the conversation rules](../../references/conversation.md) and [the design rules](../../references/design.md). Run `course start resume`.
+Read [the conversation rules](../../references/conversation.md) and [the design rules](../../references/design.md). Run `course start resume`. Tell the student: "Add your resume and any work samples to the course folder, or attach them here." Read them before asking.
 
 ## Ask
 

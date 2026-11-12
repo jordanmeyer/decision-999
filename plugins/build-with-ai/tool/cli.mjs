@@ -84,13 +84,15 @@ async function download(kind) {
 }
 
 async function setup() {
-  if (run('git', ['--version']).status) {
-    if (windows) stop('Git is missing: install Git for Windows from https://git-scm.com/download/win, then run setup again');
+  // On a Mac, git is a stub until Apple's developer tools are installed, and running it reopens Apple's dialog.
+  if (!windows && run('xcode-select', ['-p']).status) {
     run('xcode-select', ['--install']);
     console.log('Waiting for Apple\'s developer tools: click Install in the dialog that just opened.');
-    while (run('git', ['--version']).status) await sleep(15000);
+    while (run('xcode-select', ['-p']).status) await sleep(15000);
   }
-  ok(`${run('git', ['--version']).stdout.trim().replace('git version', 'git')} found`);
+  const version = run('git', ['--version']);
+  if (version.status !== 0) stop(windows ? 'Git is missing: install Git for Windows from https://git-scm.com/download/win, then run setup again' : 'Git did not start: restart the Mac and run setup again');
+  ok(`${version.stdout.trim().replace('git version', 'git')} found`);
   ok(`Node ${process.versions.node} ready`);
   if (here !== join(toolchain, 'tool')) {
     for (const name of ['tool', 'starter']) rmSync(join(toolchain, name), { recursive: true, force: true });
@@ -123,10 +125,15 @@ async function clone() {
   if (!folder) stop('name the repository to copy, as owner/name');
   const own = rest.includes('--own'), source = github.accept(target);
   if (existsSync(dir)) {
-    // The plan's author adopting a prototype built from that plan: move the plan's folder forward to it.
-    if (!own || run('git', ['fetch', '-q', source, 'main'], { cwd: dir }).status || run('git', ['merge', '-q', '--ff-only', 'FETCH_HEAD'], { cwd: dir }).status)
+    // The plan's author joining or adopting a prototype built from that plan: move the plan's folder forward to it.
+    if (run('git', ['fetch', '-q', source, 'main'], { cwd: dir }).status || run('git', ['merge', '-q', '--ff-only', 'FETCH_HEAD'], { cwd: dir }).status)
       stop(`${folder} already exists`);
-    if (!hasRemote(dir, 'template')) git(dir, 'remote', 'add', 'template', source);
+    if (own) { if (!hasRemote(dir, 'template')) git(dir, 'remote', 'add', 'template', source); }
+    else if (run('git', ['remote', 'get-url', 'origin'], { cwd: dir }).stdout.trim() !== source) {
+      if (hasRemote(dir, 'origin')) git(dir, 'remote', 'rename', 'origin', 'mine');  // publish --mine still reaches the plan's repository
+      git(dir, 'remote', 'add', 'origin', source);
+    }
+    git(dir, 'fetch', '-q', own ? 'template' : 'origin');
   } else {
     git(course, 'clone', '-q', source, dir);
     identify(dir);
@@ -181,9 +188,10 @@ async function add() {
 
 async function undo() {
   const dir = existing();
-  git(dir, 'reset', '-q', '--hard');
-  git(dir, 'clean', '-q', '-fd');
-  ok('every change since the session started is gone');
+  // Keep process/: backlog items and notes saved earlier in the session stay.
+  git(dir, 'restore', '-q', '--source=HEAD', '--staged', '--worktree', '--', '.', ':!process');
+  git(dir, 'clean', '-q', '-fd', '--', '.', ':!process');
+  ok('every change to the app since the last publish is gone; notes and backlog are kept');
 }
 
 const questions = [
@@ -199,11 +207,11 @@ const questions = [
 async function planCheck() {
   const file = join(existing(), 'process/plan.md');
   if (!existsSync(file)) stop('there is no plan yet');
-  const text = readFileSync(file, 'utf8').trim();
-  const sections = Object.fromEntries(text.split(/^## /m).slice(1).map(part => [part.split('\n')[0].trim(), part.split('\n').slice(1).join('\n').trim()]));
+  const lines = readFileSync(file, 'utf8').trim().split('\n'), approval = lines.pop().trim();
+  const sections = Object.fromEntries(lines.join('\n').split(/^## /m).slice(1).map(part => [part.split('\n')[0].trim(), part.split('\n').slice(1).join('\n').trim()]));
   const missing = [...questions, 'Technical notes'].filter(heading => !sections[heading]);
   if (missing.length) stop(`the plan has no answer under: ${missing.join(' | ')}`);
-  if (!/^Approved by \S.* on \d{4}-\d{2}-\d{2}$/.test(text.split('\n').at(-1).trim())) stop('the plan does not end with "Approved by <name> on <YYYY-MM-DD>"');
+  if (!/^Approved by \S.* on \d{4}-\d{2}-\d{2}$/.test(approval)) stop('the plan does not end with "Approved by <name> on <YYYY-MM-DD>"');
   ok('the plan answers all eight questions and is approved');
 }
 
@@ -244,25 +252,27 @@ async function journal() {
 async function publish() {
   const dir = existing(), message = flag('-m');
   if (!message) stop('describe what changed, in plain words, with -m');
-  const published = ['origin/main', 'template/main'].find(ref => has(dir, ref));
-  const journals = git(dir, 'status', '--porcelain', '--', 'process/journal') + git(dir, 'log', published ? `${published}..HEAD` : 'HEAD', '--format=', '--name-only', '--', 'process/journal');
-  if (!journals) stop('no journal entry for this session');
-  const checked = join(dir, '.git/course-checked');
-  if (!existsSync(checked) || readFileSync(checked, 'utf8') !== fingerprint(dir)) stop('the app changed since the last check: run check first');
-  if (git(dir, 'status', '--porcelain')) {
-    git(dir, 'add', '-A');
-    const markers = run('git', ['diff', '--cached', '--check'], { cwd: dir }).stdout.match(/^[^:\n]+(?=:\d+: leftover conflict marker)/gm);
-    if (markers) stop(`finish combining a teammate's changes in: ${[...new Set(markers)].join(', ')}`);
-    git(dir, 'commit', '-q', '-m', message);
-  }
-  if (hasRemote(dir, 'origin')) {
-    git(dir, 'fetch', '-q', 'origin');
-    combine(dir);
+  if (hasRemote(dir, 'origin')) git(dir, 'fetch', '-q', 'origin');
+  // A rerun after the push went through but the live check stopped: skip the session gates and only push and check again.
+  const retry = !git(dir, 'status', '--porcelain') && has(dir, 'origin/main') && git(dir, 'rev-parse', 'origin/main') === git(dir, 'rev-parse', 'HEAD');
+  if (!retry) {
+    const published = ['origin/main', 'template/main'].find(ref => has(dir, ref));
+    const journals = git(dir, 'status', '--porcelain', '--', 'process/journal') + git(dir, 'log', published ? `${published}..HEAD` : 'HEAD', '--format=', '--name-only', '--', 'process/journal');
+    if (!journals) stop('no journal entry for this session');
+    const checked = join(dir, '.git/course-checked');
+    if (!existsSync(checked) || readFileSync(checked, 'utf8') !== fingerprint(dir)) stop('the app changed since the last check: run check first');
+    if (git(dir, 'status', '--porcelain')) {
+      git(dir, 'add', '-A');
+      const markers = run('git', ['diff', '--cached', '--check'], { cwd: dir }).stdout.match(/^[^:\n]+(?=:\d+: leftover conflict marker)/gm);
+      if (markers) stop(`finish combining a teammate's changes in: ${[...new Set(markers)].join(', ')}`);
+      git(dir, 'commit', '-q', '-m', message);
+    }
+    if (hasRemote(dir, 'origin')) combine(dir);
   }
   const commit = git(dir, 'rev-parse', 'HEAD');
   for (const remote of rest.includes('--mine') ? ['origin', 'mine'] : ['origin']) {
     if (!hasRemote(dir, remote)) offline && !process.env.COURSE_GITHUB ? stop('this project has no copy on GitHub yet') : github.create(dir, remote);
-    run('git', ['push', '-q', remote, 'main'], { cwd: dir, fail: 'a teammate published at the same moment: run publish again' });
+    run('git', ['push', '-q', remote, 'main'], { cwd: dir, fail: `GitHub did not accept the push to ${remote}: run publish again` });
     ok(offline ? 'pushed (offline: live site not checked)' : `live at ${await github.live(dir, remote, commit)}`);
   }
 }
